@@ -1,0 +1,15 @@
+openai
+numpy
+scipy
+scikit-learn
+umap-learn
+matplotlib
+pydantic
+hydra-core
+omegaconf
+tqdm
+tenacity
+python-dotenv
+redis
+pyvis
+networkx

@@ -1,0 +1,1059 @@
+[
+  {
+    "iteration": 0,
+    "archive_size": 91,
+    "cell_coverage": 0.1525,
+    "total_failed_gen": 0,
+    "total_failed_interest": 0
+  },
+  {
+    "iteration": 1,
+    "archive_size": 92,
+    "cell_coverage": 0.1575,
+    "total_failed_gen": 0,
+    "total_failed_interest": 0
+  },
+  {
+    "iteration": 2,
+    "archive_size": 93,
+    "cell_coverage": 0.1525,
+    "total_failed_gen": 0,
+    "total_failed_interest": 0
+  },
+  {
+    "iteration": 3,
+    "archive_size": 94,
+    "cell_coverage": 0.1625,
+    "total_failed_gen": 0,
+    "total_failed_interest": 0
+  },
+  {
+    "iteration": 4,
+    "archive_size": 95,
+    "cell_coverage": 0.165,
+    "total_failed_gen": 0,
+    "total_failed_interest": 0
+  },
+  {
+    "iteration": 5,
+    "archive_size": 96,
+    "cell_coverage": 0.1525,
+    "total_failed_gen": 0,
+    "total_failed_interest": 0
+  },
+  {
+    "iteration": 6,
+    "archive_size": 97,
+    "cell_coverage": 0.16,
+    "total_failed_gen": 0,
+    "total_failed_interest": 0
+  },
+  {
+    "iteration": 7,
+    "archive_size": 98,
+    "cell_coverage": 0.145,
+    "total_failed_gen": 0,
+    "total_failed_interest": 0
+  },
+  {
+    "iteration": 8,
+    "archive_size": 99,
+    "cell_coverage": 0.1475,
+    "total_failed_gen": 0,
+    "total_failed_interest": 0
+  },
+  {
+    "iteration": 11,
+    "archive_size": 100,
+    "cell_coverage": 0.1425,
+    "total_failed_gen": 0,
+    "total_failed_interest": 2
+  },
+  {
+    "iteration": 12,
+    "archive_size": 101,
+    "cell_coverage": 0.1475,
+    "total_failed_gen": 0,
+    "total_failed_interest": 2
+  },
+  {
+    "iteration": 14,
+    "archive_size": 102,
+    "cell_coverage": 0.16,
+    "total_failed_gen": 0,
+    "total_failed_interest": 3
+  },
+  {
+    "iteration": 16,
+    "archive_size": 103,
+    "cell_coverage": 0.1625,
+    "total_failed_gen": 0,
+    "total_failed_interest": 4
+  },
+  {
+    "iteration": 17,
+    "archive_size": 104,
+    "cell_coverage": 0.1575,
+    "total_failed_gen": 0,
+    "total_failed_interest": 4
+  },
+  {
+    "iteration": 18,
+    "archive_size": 105,
+    "cell_coverage": 0.17,
+    "total_failed_gen": 0,
+    "total_failed_interest": 4
+  },
+  {
+    "iteration": 19,
+    "archive_size": 106,
+    "cell_coverage": 0.1625,
+    "total_failed_gen": 0,
+    "total_failed_interest": 4
+  },
+  {
+    "iteration": 20,
+    "archive_size": 107,
+    "cell_coverage": 0.1625,
+    "total_failed_gen": 0,
+    "total_failed_interest": 4
+  },
+  {
+    "iteration": 21,
+    "archive_size": 108,
+    "cell_coverage": 0.165,
+    "total_failed_gen": 0,
+    "total_failed_interest": 4
+  },
+  {
+    "iteration": 22,
+    "archive_size": 109,
+    "cell_coverage": 0.1675,
+    "total_failed_gen": 0,
+    "total_failed_interest": 4
+  },
+  {
+    "iteration": 24,
+    "archive_size": 110,
+    "cell_coverage": 0.1675,
+    "total_failed_gen": 0,
+    "total_failed_interest": 5
+  },
+  {
+    "iteration": 25,
+    "archive_size": 111,
+    "cell_coverage": 0.1775,
+    "total_failed_gen": 0,
+    "total_failed_interest": 5
+  },
+  {
+    "iteration": 26,
+    "archive_size": 112,
+    "cell_coverage": 0.175,
+    "total_failed_gen": 0,
+    "total_failed_interest": 5
+  },
+  {
+    "iteration": 27,
+    "archive_size": 113,
+    "cell_coverage": 0.185,
+    "total_failed_gen": 0,
+    "total_failed_interest": 5
+  },
+  {
+    "iteration": 28,
+    "archive_size": 114,
+    "cell_coverage": 0.1725,
+    "total_failed_gen": 0,
+    "total_failed_interest": 5
+  },
+  {
+    "iteration": 29,
+    "archive_size": 115,
+    "cell_coverage": 0.1925,
+    "total_failed_gen": 0,
+    "total_failed_interest": 5
+  },
+  {
+    "iteration": 30,
+    "archive_size": 116,
+    "cell_coverage": 0.19,
+    "total_failed_gen": 0,
+    "total_failed_interest": 5
+  },
+  {
+    "iteration": 32,
+    "archive_size": 117,
+    "cell_coverage": 0.185,
+    "total_failed_gen": 0,
+    "total_failed_interest": 6
+  },
+  {
+    "iteration": 34,
+    "archive_size": 118,
+    "cell_coverage": 0.1875,
+    "total_failed_gen": 0,
+    "total_failed_interest": 7
+  },
+  {
+    "iteration": 36,
+    "archive_size": 119,
+    "cell_coverage": 0.1925,
+    "total_failed_gen": 0,
+    "total_failed_interest": 8
+  },
+  {
+    "iteration": 37,
+    "archive_size": 120,
+    "cell_coverage": 0.1825,
+    "total_failed_gen": 0,
+    "total_failed_interest": 8
+  },
+  {
+    "iteration": 38,
+    "archive_size": 121,
+    "cell_coverage": 0.195,
+    "total_failed_gen": 0,
+    "total_failed_interest": 8
+  },
+  {
+    "iteration": 39,
+    "archive_size": 122,
+    "cell_coverage": 0.2,
+    "total_failed_gen": 0,
+    "total_failed_interest": 8
+  },
+  {
+    "iteration": 40,
+    "archive_size": 123,
+    "cell_coverage": 0.1775,
+    "total_failed_gen": 0,
+    "total_failed_interest": 8
+  },
+  {
+    "iteration": 41,
+    "archive_size": 124,
+    "cell_coverage": 0.185,
+    "total_failed_gen": 0,
+    "total_failed_interest": 8
+  },
+  {
+    "iteration": 42,
+    "archive_size": 125,
+    "cell_coverage": 0.1925,
+    "total_failed_gen": 0,
+    "total_failed_interest": 8
+  },
+  {
+    "iteration": 44,
+    "archive_size": 126,
+    "cell_coverage": 0.1775,
+    "total_failed_gen": 0,
+    "total_failed_interest": 9
+  },
+  {
+    "iteration": 45,
+    "archive_size": 127,
+    "cell_coverage": 0.19,
+    "total_failed_gen": 0,
+    "total_failed_interest": 9
+  },
+  {
+    "iteration": 46,
+    "archive_size": 128,
+    "cell_coverage": 0.1975,
+    "total_failed_gen": 0,
+    "total_failed_interest": 9
+  },
+  {
+    "iteration": 47,
+    "archive_size": 129,
+    "cell_coverage": 0.1925,
+    "total_failed_gen": 0,
+    "total_failed_interest": 9
+  },
+  {
+    "iteration": 48,
+    "archive_size": 130,
+    "cell_coverage": 0.2,
+    "total_failed_gen": 0,
+    "total_failed_interest": 9
+  },
+  {
+    "iteration": 49,
+    "archive_size": 131,
+    "cell_coverage": 0.1975,
+    "total_failed_gen": 0,
+    "total_failed_interest": 9
+  },
+  {
+    "iteration": 50,
+    "archive_size": 132,
+    "cell_coverage": 0.2,
+    "total_failed_gen": 0,
+    "total_failed_interest": 9
+  },
+  {
+    "iteration": 51,
+    "archive_size": 133,
+    "cell_coverage": 0.1975,
+    "total_failed_gen": 0,
+    "total_failed_interest": 9
+  },
+  {
+    "iteration": 52,
+    "archive_size": 134,
+    "cell_coverage": 0.1925,
+    "total_failed_gen": 0,
+    "total_failed_interest": 9
+  },
+  {
+    "iteration": 53,
+    "archive_size": 135,
+    "cell_coverage": 0.2,
+    "total_failed_gen": 0,
+    "total_failed_interest": 9
+  },
+  {
+    "iteration": 55,
+    "archive_size": 136,
+    "cell_coverage": 0.205,
+    "total_failed_gen": 0,
+    "total_failed_interest": 10
+  },
+  {
+    "iteration": 56,
+    "archive_size": 137,
+    "cell_coverage": 0.1975,
+    "total_failed_gen": 0,
+    "total_failed_interest": 10
+  },
+  {
+    "iteration": 57,
+    "archive_size": 138,
+    "cell_coverage": 0.19,
+    "total_failed_gen": 0,
+    "total_failed_interest": 10
+  },
+  {
+    "iteration": 58,
+    "archive_size": 139,
+    "cell_coverage": 0.1975,
+    "total_failed_gen": 0,
+    "total_failed_interest": 10
+  },
+  {
+    "iteration": 60,
+    "archive_size": 140,
+    "cell_coverage": 0.1975,
+    "total_failed_gen": 0,
+    "total_failed_interest": 11
+  },
+  {
+    "iteration": 61,
+    "archive_size": 141,
+    "cell_coverage": 0.1925,
+    "total_failed_gen": 0,
+    "total_failed_interest": 11
+  },
+  {
+    "iteration": 62,
+    "archive_size": 142,
+    "cell_coverage": 0.205,
+    "total_failed_gen": 0,
+    "total_failed_interest": 11
+  },
+  {
+    "iteration": 63,
+    "archive_size": 143,
+    "cell_coverage": 0.21,
+    "total_failed_gen": 0,
+    "total_failed_interest": 11
+  },
+  {
+    "iteration": 64,
+    "archive_size": 144,
+    "cell_coverage": 0.205,
+    "total_failed_gen": 0,
+    "total_failed_interest": 11
+  },
+  {
+    "iteration": 65,
+    "archive_size": 145,
+    "cell_coverage": 0.2125,
+    "total_failed_gen": 0,
+    "total_failed_interest": 11
+  },
+  {
+    "iteration": 66,
+    "archive_size": 146,
+    "cell_coverage": 0.2075,
+    "total_failed_gen": 0,
+    "total_failed_interest": 11
+  },
+  {
+    "iteration": 67,
+    "archive_size": 147,
+    "cell_coverage": 0.2075,
+    "total_failed_gen": 0,
+    "total_failed_interest": 11
+  },
+  {
+    "iteration": 68,
+    "archive_size": 148,
+    "cell_coverage": 0.2025,
+    "total_failed_gen": 0,
+    "total_failed_interest": 11
+  },
+  {
+    "iteration": 70,
+    "archive_size": 149,
+    "cell_coverage": 0.205,
+    "total_failed_gen": 0,
+    "total_failed_interest": 12
+  },
+  {
+    "iteration": 71,
+    "archive_size": 150,
+    "cell_coverage": 0.2025,
+    "total_failed_gen": 0,
+    "total_failed_interest": 12
+  },
+  {
+    "iteration": 72,
+    "archive_size": 151,
+    "cell_coverage": 0.21,
+    "total_failed_gen": 0,
+    "total_failed_interest": 12
+  },
+  {
+    "iteration": 73,
+    "archive_size": 152,
+    "cell_coverage": 0.2125,
+    "total_failed_gen": 0,
+    "total_failed_interest": 12
+  },
+  {
+    "iteration": 74,
+    "archive_size": 153,
+    "cell_coverage": 0.2325,
+    "total_failed_gen": 0,
+    "total_failed_interest": 12
+  },
+  {
+    "iteration": 75,
+    "archive_size": 154,
+    "cell_coverage": 0.2325,
+    "total_failed_gen": 0,
+    "total_failed_interest": 12
+  },
+  {
+    "iteration": 76,
+    "archive_size": 155,
+    "cell_coverage": 0.225,
+    "total_failed_gen": 0,
+    "total_failed_interest": 12
+  },
+  {
+    "iteration": 78,
+    "archive_size": 156,
+    "cell_coverage": 0.225,
+    "total_failed_gen": 0,
+    "total_failed_interest": 13
+  },
+  {
+    "iteration": 79,
+    "archive_size": 157,
+    "cell_coverage": 0.23,
+    "total_failed_gen": 0,
+    "total_failed_interest": 13
+  },
+  {
+    "iteration": 80,
+    "archive_size": 158,
+    "cell_coverage": 0.2325,
+    "total_failed_gen": 0,
+    "total_failed_interest": 13
+  },
+  {
+    "iteration": 81,
+    "archive_size": 159,
+    "cell_coverage": 0.2275,
+    "total_failed_gen": 0,
+    "total_failed_interest": 13
+  },
+  {
+    "iteration": 82,
+    "archive_size": 160,
+    "cell_coverage": 0.2175,
+    "total_failed_gen": 0,
+    "total_failed_interest": 13
+  },
+  {
+    "iteration": 85,
+    "archive_size": 161,
+    "cell_coverage": 0.2175,
+    "total_failed_gen": 0,
+    "total_failed_interest": 15
+  },
+  {
+    "iteration": 86,
+    "archive_size": 162,
+    "cell_coverage": 0.215,
+    "total_failed_gen": 0,
+    "total_failed_interest": 15
+  },
+  {
+    "iteration": 87,
+    "archive_size": 163,
+    "cell_coverage": 0.22,
+    "total_failed_gen": 0,
+    "total_failed_interest": 15
+  },
+  {
+    "iteration": 88,
+    "archive_size": 164,
+    "cell_coverage": 0.2225,
+    "total_failed_gen": 0,
+    "total_failed_interest": 15
+  },
+  {
+    "iteration": 89,
+    "archive_size": 165,
+    "cell_coverage": 0.2225,
+    "total_failed_gen": 0,
+    "total_failed_interest": 15
+  },
+  {
+    "iteration": 90,
+    "archive_size": 166,
+    "cell_coverage": 0.2275,
+    "total_failed_gen": 0,
+    "total_failed_interest": 15
+  },
+  {
+    "iteration": 91,
+    "archive_size": 167,
+    "cell_coverage": 0.2325,
+    "total_failed_gen": 0,
+    "total_failed_interest": 15
+  },
+  {
+    "iteration": 93,
+    "archive_size": 168,
+    "cell_coverage": 0.235,
+    "total_failed_gen": 0,
+    "total_failed_interest": 16
+  },
+  {
+    "iteration": 94,
+    "archive_size": 169,
+    "cell_coverage": 0.235,
+    "total_failed_gen": 0,
+    "total_failed_interest": 16
+  },
+  {
+    "iteration": 97,
+    "archive_size": 170,
+    "cell_coverage": 0.235,
+    "total_failed_gen": 0,
+    "total_failed_interest": 18
+  },
+  {
+    "iteration": 98,
+    "archive_size": 171,
+    "cell_coverage": 0.245,
+    "total_failed_gen": 0,
+    "total_failed_interest": 18
+  },
+  {
+    "iteration": 99,
+    "archive_size": 172,
+    "cell_coverage": 0.245,
+    "total_failed_gen": 0,
+    "total_failed_interest": 18
+  },
+  {
+    "iteration": 100,
+    "archive_size": 173,
+    "cell_coverage": 0.235,
+    "total_failed_gen": 0,
+    "total_failed_interest": 18
+  },
+  {
+    "iteration": 101,
+    "archive_size": 174,
+    "cell_coverage": 0.2475,
+    "total_failed_gen": 0,
+    "total_failed_interest": 18
+  },
+  {
+    "iteration": 102,
+    "archive_size": 175,
+    "cell_coverage": 0.2475,
+    "total_failed_gen": 0,
+    "total_failed_interest": 18
+  },
+  {
+    "iteration": 103,
+    "archive_size": 176,
+    "cell_coverage": 0.245,
+    "total_failed_gen": 0,
+    "total_failed_interest": 18
+  },
+  {
+    "iteration": 104,
+    "archive_size": 177,
+    "cell_coverage": 0.2525,
+    "total_failed_gen": 0,
+    "total_failed_interest": 18
+  },
+  {
+    "iteration": 105,
+    "archive_size": 178,
+    "cell_coverage": 0.2525,
+    "total_failed_gen": 0,
+    "total_failed_interest": 18
+  },
+  {
+    "iteration": 106,
+    "archive_size": 179,
+    "cell_coverage": 0.26,
+    "total_failed_gen": 0,
+    "total_failed_interest": 18
+  },
+  {
+    "iteration": 110,
+    "archive_size": 180,
+    "cell_coverage": 0.255,
+    "total_failed_gen": 0,
+    "total_failed_interest": 21
+  },
+  {
+    "iteration": 112,
+    "archive_size": 181,
+    "cell_coverage": 0.25,
+    "total_failed_gen": 0,
+    "total_failed_interest": 22
+  },
+  {
+    "iteration": 113,
+    "archive_size": 182,
+    "cell_coverage": 0.25,
+    "total_failed_gen": 0,
+    "total_failed_interest": 22
+  },
+  {
+    "iteration": 115,
+    "archive_size": 183,
+    "cell_coverage": 0.2575,
+    "total_failed_gen": 0,
+    "total_failed_interest": 23
+  },
+  {
+    "iteration": 116,
+    "archive_size": 184,
+    "cell_coverage": 0.25,
+    "total_failed_gen": 0,
+    "total_failed_interest": 23
+  },
+  {
+    "iteration": 118,
+    "archive_size": 185,
+    "cell_coverage": 0.2525,
+    "total_failed_gen": 0,
+    "total_failed_interest": 24
+  },
+  {
+    "iteration": 119,
+    "archive_size": 186,
+    "cell_coverage": 0.2525,
+    "total_failed_gen": 0,
+    "total_failed_interest": 24
+  },
+  {
+    "iteration": 120,
+    "archive_size": 187,
+    "cell_coverage": 0.2475,
+    "total_failed_gen": 0,
+    "total_failed_interest": 24
+  },
+  {
+    "iteration": 121,
+    "archive_size": 188,
+    "cell_coverage": 0.255,
+    "total_failed_gen": 0,
+    "total_failed_interest": 24
+  },
+  {
+    "iteration": 122,
+    "archive_size": 189,
+    "cell_coverage": 0.265,
+    "total_failed_gen": 0,
+    "total_failed_interest": 24
+  },
+  {
+    "iteration": 123,
+    "archive_size": 190,
+    "cell_coverage": 0.2625,
+    "total_failed_gen": 0,
+    "total_failed_interest": 24
+  },
+  {
+    "iteration": 124,
+    "archive_size": 191,
+    "cell_coverage": 0.265,
+    "total_failed_gen": 0,
+    "total_failed_interest": 24
+  },
+  {
+    "iteration": 127,
+    "archive_size": 192,
+    "cell_coverage": 0.2625,
+    "total_failed_gen": 0,
+    "total_failed_interest": 26
+  },
+  {
+    "iteration": 129,
+    "archive_size": 193,
+    "cell_coverage": 0.265,
+    "total_failed_gen": 0,
+    "total_failed_interest": 27
+  },
+  {
+    "iteration": 130,
+    "archive_size": 194,
+    "cell_coverage": 0.265,
+    "total_failed_gen": 0,
+    "total_failed_interest": 27
+  },
+  {
+    "iteration": 131,
+    "archive_size": 195,
+    "cell_coverage": 0.2625,
+    "total_failed_gen": 0,
+    "total_failed_interest": 27
+  },
+  {
+    "iteration": 132,
+    "archive_size": 196,
+    "cell_coverage": 0.2675,
+    "total_failed_gen": 0,
+    "total_failed_interest": 27
+  },
+  {
+    "iteration": 137,
+    "archive_size": 197,
+    "cell_coverage": 0.265,
+    "total_failed_gen": 0,
+    "total_failed_interest": 31
+  },
+  {
+    "iteration": 138,
+    "archive_size": 198,
+    "cell_coverage": 0.2625,
+    "total_failed_gen": 0,
+    "total_failed_interest": 31
+  },
+  {
+    "iteration": 139,
+    "archive_size": 199,
+    "cell_coverage": 0.26,
+    "total_failed_gen": 0,
+    "total_failed_interest": 31
+  },
+  {
+    "iteration": 140,
+    "archive_size": 200,
+    "cell_coverage": 0.2625,
+    "total_failed_gen": 0,
+    "total_failed_interest": 31
+  },
+  {
+    "iteration": 141,
+    "archive_size": 201,
+    "cell_coverage": 0.27,
+    "total_failed_gen": 0,
+    "total_failed_interest": 31
+  },
+  {
+    "iteration": 142,
+    "archive_size": 202,
+    "cell_coverage": 0.27,
+    "total_failed_gen": 0,
+    "total_failed_interest": 31
+  },
+  {
+    "iteration": 145,
+    "archive_size": 203,
+    "cell_coverage": 0.275,
+    "total_failed_gen": 0,
+    "total_failed_interest": 33
+  },
+  {
+    "iteration": 148,
+    "archive_size": 204,
+    "cell_coverage": 0.27,
+    "total_failed_gen": 0,
+    "total_failed_interest": 35
+  },
+  {
+    "iteration": 149,
+    "archive_size": 205,
+    "cell_coverage": 0.2775,
+    "total_failed_gen": 0,
+    "total_failed_interest": 35
+  },
+  {
+    "iteration": 150,
+    "archive_size": 206,
+    "cell_coverage": 0.28,
+    "total_failed_gen": 0,
+    "total_failed_interest": 35
+  },
+  {
+    "iteration": 151,
+    "archive_size": 207,
+    "cell_coverage": 0.28,
+    "total_failed_gen": 0,
+    "total_failed_interest": 35
+  },
+  {
+    "iteration": 152,
+    "archive_size": 208,
+    "cell_coverage": 0.285,
+    "total_failed_gen": 0,
+    "total_failed_interest": 35
+  },
+  {
+    "iteration": 153,
+    "archive_size": 209,
+    "cell_coverage": 0.2825,
+    "total_failed_gen": 0,
+    "total_failed_interest": 35
+  },
+  {
+    "iteration": 154,
+    "archive_size": 210,
+    "cell_coverage": 0.27,
+    "total_failed_gen": 0,
+    "total_failed_interest": 35
+  },
+  {
+    "iteration": 155,
+    "archive_size": 211,
+    "cell_coverage": 0.2775,
+    "total_failed_gen": 0,
+    "total_failed_interest": 35
+  },
+  {
+    "iteration": 156,
+    "archive_size": 212,
+    "cell_coverage": 0.2725,
+    "total_failed_gen": 0,
+    "total_failed_interest": 35
+  },
+  {
+    "iteration": 157,
+    "archive_size": 213,
+    "cell_coverage": 0.2725,
+    "total_failed_gen": 0,
+    "total_failed_interest": 35
+  },
+  {
+    "iteration": 159,
+    "archive_size": 214,
+    "cell_coverage": 0.275,
+    "total_failed_gen": 0,
+    "total_failed_interest": 36
+  },
+  {
+    "iteration": 160,
+    "archive_size": 215,
+    "cell_coverage": 0.28,
+    "total_failed_gen": 0,
+    "total_failed_interest": 36
+  },
+  {
+    "iteration": 161,
+    "archive_size": 216,
+    "cell_coverage": 0.275,
+    "total_failed_gen": 0,
+    "total_failed_interest": 36
+  },
+  {
+    "iteration": 162,
+    "archive_size": 217,
+    "cell_coverage": 0.2825,
+    "total_failed_gen": 0,
+    "total_failed_interest": 36
+  },
+  {
+    "iteration": 164,
+    "archive_size": 218,
+    "cell_coverage": 0.29,
+    "total_failed_gen": 0,
+    "total_failed_interest": 37
+  },
+  {
+    "iteration": 165,
+    "archive_size": 219,
+    "cell_coverage": 0.29,
+    "total_failed_gen": 0,
+    "total_failed_interest": 37
+  },
+  {
+    "iteration": 166,
+    "archive_size": 220,
+    "cell_coverage": 0.285,
+    "total_failed_gen": 0,
+    "total_failed_interest": 37
+  },
+  {
+    "iteration": 167,
+    "archive_size": 221,
+    "cell_coverage": 0.29,
+    "total_failed_gen": 0,
+    "total_failed_interest": 37
+  },
+  {
+    "iteration": 168,
+    "archive_size": 222,
+    "cell_coverage": 0.2975,
+    "total_failed_gen": 0,
+    "total_failed_interest": 37
+  },
+  {
+    "iteration": 169,
+    "archive_size": 223,
+    "cell_coverage": 0.2975,
+    "total_failed_gen": 0,
+    "total_failed_interest": 37
+  },
+  {
+    "iteration": 170,
+    "archive_size": 224,
+    "cell_coverage": 0.295,
+    "total_failed_gen": 0,
+    "total_failed_interest": 37
+  },
+  {
+    "iteration": 172,
+    "archive_size": 225,
+    "cell_coverage": 0.2975,
+    "total_failed_gen": 0,
+    "total_failed_interest": 38
+  },
+  {
+    "iteration": 174,
+    "archive_size": 226,
+    "cell_coverage": 0.305,
+    "total_failed_gen": 0,
+    "total_failed_interest": 39
+  },
+  {
+    "iteration": 175,
+    "archive_size": 227,
+    "cell_coverage": 0.3075,
+    "total_failed_gen": 0,
+    "total_failed_interest": 39
+  },
+  {
+    "iteration": 179,
+    "archive_size": 228,
+    "cell_coverage": 0.3,
+    "total_failed_gen": 0,
+    "total_failed_interest": 42
+  },
+  {
+    "iteration": 182,
+    "archive_size": 229,
+    "cell_coverage": 0.305,
+    "total_failed_gen": 0,
+    "total_failed_interest": 44
+  },
+  {
+    "iteration": 183,
+    "archive_size": 230,
+    "cell_coverage": 0.3125,
+    "total_failed_gen": 0,
+    "total_failed_interest": 44
+  },
+  {
+    "iteration": 184,
+    "archive_size": 231,
+    "cell_coverage": 0.3025,
+    "total_failed_gen": 0,
+    "total_failed_interest": 44
+  },
+  {
+    "iteration": 185,
+    "archive_size": 232,
+    "cell_coverage": 0.305,
+    "total_failed_gen": 0,
+    "total_failed_interest": 44
+  },
+  {
+    "iteration": 186,
+    "archive_size": 233,
+    "cell_coverage": 0.305,
+    "total_failed_gen": 0,
+    "total_failed_interest": 44
+  },
+  {
+    "iteration": 187,
+    "archive_size": 234,
+    "cell_coverage": 0.31,
+    "total_failed_gen": 0,
+    "total_failed_interest": 44
+  },
+  {
+    "iteration": 190,
+    "archive_size": 235,
+    "cell_coverage": 0.31,
+    "total_failed_gen": 0,
+    "total_failed_interest": 46
+  },
+  {
+    "iteration": 192,
+    "archive_size": 236,
+    "cell_coverage": 0.3125,
+    "total_failed_gen": 0,
+    "total_failed_interest": 47
+  },
+  {
+    "iteration": 195,
+    "archive_size": 237,
+    "cell_coverage": 0.3075,
+    "total_failed_gen": 0,
+    "total_failed_interest": 49
+  },
+  {
+    "iteration": 196,
+    "archive_size": 238,
+    "cell_coverage": 0.305,
+    "total_failed_gen": 0,
+    "total_failed_interest": 49
+  },
+  {
+    "iteration": 197,
+    "archive_size": 239,
+    "cell_coverage": 0.31,
+    "total_failed_gen": 0,
+    "total_failed_interest": 49
+  },
+  {
+    "iteration": 198,
+    "archive_size": 240,
+    "cell_coverage": 0.3225,
+    "total_failed_gen": 0,
+    "total_failed_interest": 49
+  },
+  {
+    "iteration": 199,
+    "archive_size": 241,
+    "cell_coverage": 0.32,
+    "total_failed_gen": 0,
+    "total_failed_interest": 49
+  }
+]

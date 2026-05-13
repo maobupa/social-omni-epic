@@ -1,0 +1,21 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Secrets
+.env
+
+# macOS
+.DS_Store
+
+# Large data artifacts (regenerable from scripts/extract_sotopia_seeds.py
+# and the cmu-lti/sotopia HuggingFace dataset)
+data/sotopia_seeds/dump.rdb
+data/sotopia_episodes_v1.csv
+data/sotopia_episodes_v1.jsonl
+
+# (output/ is tracked so figures and archive checkpoints travel with the repo)

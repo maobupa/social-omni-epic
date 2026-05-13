@@ -1,0 +1,33 @@
+model: "gpt-4o"
+temperature: 1.0
+
+iterations: 200
+checkpoint_every: 25
+checkpoint_dir: "output/run_001"
+
+seed_data_dir: "data/sotopia_seeds"
+episodes_path: "data/sotopia_episodes_v1.jsonl"
+restrict_to_episodes_v1: true     # filter ~884 envs down to canonical ~90
+seed_limit: null                  # null = no cap
+use_fallback_seeds_if_missing: true
+
+task_generator:
+  num_examples: 3
+  num_failed_examples: 1
+  max_retries: 3
+  example_strategy: "knn"      # "knn" (OMNI-EPIC default), "diverse", or "farthest"
+  show_existing_types: true    # show LLM the set of existing interaction_types each iter
+
+moi:
+  num_examples: 5
+  min_archive_size: 10
+
+use_archive: true
+enable_moi: true
+
+random_seed: 42
+
+hydra:
+  run:
+    dir: ${checkpoint_dir}
+  output_subdir: hydra

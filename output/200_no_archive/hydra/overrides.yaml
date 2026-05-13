@@ -1,0 +1,3 @@
+- use_archive=false
+- enable_moi=false
+- checkpoint_dir=output/200_no_archive

@@ -1,0 +1,22 @@
+{
+  "coverages": {
+    "full": 0.6,
+    "no_moi": 0.55,
+    "no_archive": 0.53
+  },
+  "pca_explained_variance_ratio": [
+    0.09247199778467301,
+    0.05731149863543185
+  ],
+  "n_scenarios_used": {
+    "full": 241,
+    "no_moi": 241,
+    "no_archive": 241
+  },
+  "n_scenarios_raw": {
+    "full": 241,
+    "no_moi": 290,
+    "no_archive": 290
+  },
+  "equal_size_mode": true
+}

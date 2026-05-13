@@ -1,0 +1,18 @@
+metric,full,no_moi,no_archive
+num_nodes,290,290,290
+num_edges,600,600,600
+num_seeds,90,90,90
+num_generated,151,200,200
+num_failed_moi,49,0,0
+weakly_connected_components,1,2,78
+num_orphans,0,0,0
+branching_factor,3.191,2.956,4.412
+leaf_count,102,87,154
+backbone_count,188,203,136
+max_chain_depth,3,2,4
+median_chain_depth,1,1.0,3.0
+top_seed_fanout,47,66,196
+fanout_gini,0.424,0.458,0.318
+mean_dist_to_nearest_seed,0.3809,0.3746,0.4107
+mean_dist_to_parent,0.4325,0.4317,0.2494
+provenance,recorded,recorded,k-NN inferred

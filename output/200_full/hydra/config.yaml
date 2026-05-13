@@ -1,0 +1,22 @@
+model: gpt-4o
+temperature: 1.0
+iterations: 200
+checkpoint_every: 25
+checkpoint_dir: output/200_full
+seed_data_dir: data/sotopia_seeds
+episodes_path: data/sotopia_episodes_v1.jsonl
+restrict_to_episodes_v1: true
+seed_limit: null
+use_fallback_seeds_if_missing: true
+task_generator:
+  num_examples: 3
+  num_failed_examples: 1
+  max_retries: 3
+  example_strategy: knn
+  show_existing_types: true
+moi:
+  num_examples: 5
+  min_archive_size: 10
+use_archive: true
+enable_moi: true
+random_seed: 42
