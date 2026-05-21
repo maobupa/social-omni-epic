@@ -19,3 +19,6 @@ data/sotopia_episodes_v1.csv
 data/sotopia_episodes_v1.jsonl
 
 # (output/ is tracked so figures and archive checkpoints travel with the repo)
+
+# Per-episode transcripts are bulky; keep only the baseline_scores.json summary
+output/baseline/transcripts/

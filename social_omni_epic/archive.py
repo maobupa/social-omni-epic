@@ -18,6 +18,9 @@ class Archive:
     def add_failed_interestingness(self, scenario: SocialScenario):
         self.state.failed_interestingness.append(scenario)
 
+    def add_failed_task(self, scenario: SocialScenario):
+        self.state.failed_tasks.append(scenario)
+
     def get_successful_embeddings(self) -> list[list[float]]:
         return [s.embedding for s in self.state.successful if s.embedding is not None]
 

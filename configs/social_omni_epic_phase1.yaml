@@ -1,0 +1,56 @@
+# Unified config for main_phase1.py.
+# Switch behavior with: python main_phase1.py run_mode=phase0
+#                       python main_phase1.py run_mode=phase1_no_memory
+#                       python main_phase1.py run_mode=phase1
+run_mode: "phase1"     # phase0 | phase1_no_memory | phase1
+
+model: "gpt-4.1"
+temperature: 1.0
+
+# Episode-time models (only used when run_mode != phase0)
+learner_model: "gpt-4.1-mini"
+partner_model: "gpt-4.1-mini"
+evaluator_model: "gpt-5.2"
+
+iterations: 200
+checkpoint_every: 25
+random_seed: 42
+checkpoint_dir: "output/phase1_full"
+archive_from_ckpt: null   # e.g. "output/run_001/archive_latest.json"
+
+# Episode controls
+goal_threshold: 7.0
+max_turns: 20
+
+# Seed loading (same as Phase 0)
+seed_data_dir: "data/sotopia_seeds"
+episodes_path: "data/sotopia_episodes_v1.jsonl"
+restrict_to_episodes_v1: true
+seed_limit: null
+use_fallback_seeds_if_missing: false
+
+task_generator:
+  num_examples: 3
+  num_failed_examples: 1
+  max_retries: 3
+  example_strategy: "knn"
+  show_existing_types: true
+
+moi:
+  num_examples: 5
+  min_archive_size: 10
+
+use_archive: true
+enable_moi: true
+
+memory:
+  enabled: true               # only meaningful in phase1
+  retrieval_enabled: true
+  retrieval_top_k: 3
+  skill_profile_enabled: true
+  skill_profile_update_every: 10
+
+hydra:
+  run:
+    dir: ${checkpoint_dir}
+  output_subdir: hydra

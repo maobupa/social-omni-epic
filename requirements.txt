@@ -1,4 +1,8 @@
 openai
+# Sotopia pinned to a specific commit on main (8 commits past v0.1.5).
+# We need post-0.1.5 changes: LLMAgent/agenerate_action `custom_template`
+# support and the local (no-Redis) storage backend.
+sotopia @ git+https://github.com/sotopia-lab/sotopia.git@a0aaafb440e570e5e61b7c44a44e5e417c545383
 numpy
 scipy
 scikit-learn

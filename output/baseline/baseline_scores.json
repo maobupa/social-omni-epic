@@ -1,0 +1,29 @@
+[
+  {
+    "scenario_id": "53483eb6-ef77-49b2-8762-32ebd5d31d57",
+    "scenario": "One person is selling a brand new 64GB Samsung Galaxy S8 in Midnight Black for $650, while another person is in the market to purchase it. Here\\'s what the seller has to say about the item: \"I have 6 ",
+    "learner_scores": {
+      "believability": 9.0,
+      "relationship": 2.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": -3.0,
+      "goal": 3.0,
+      "overall_score": 2.2857142857142856
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": -2.0,
+      "goal": 4.0,
+      "overall_score": 2.2857142857142856
+    },
+    "progress_score": 0.41999999999999993,
+    "solved": false,
+    "num_turns": 21
+  }
+]

@@ -1,4 +1,4 @@
-model: "gpt-4o"
+model: "gpt-4.1"
 temperature: 1.0
 
 iterations: 200

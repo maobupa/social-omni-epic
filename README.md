@@ -1,9 +1,13 @@
-# social-omni-epic (Phase 0)
+# social-omni-epic
 
-Open-ended social scenario generation with simulated learning. Adapts the
-OMNI-EPIC loop to Sotopia-style social scenarios. Phase 0 runs generation only —
-no actual agent execution — to show the generation pipeline produces an
-ever-expanding, diverse space of scenarios.
+Open-ended social scenario generation with in-context learning. Adapts the
+OMNI-EPIC loop to Sotopia-style social scenarios.
+
+- **Phase 0** (`main.py`): generation only — no agent execution. Shows the
+  generation pipeline produces an ever-expanding, diverse space of scenarios.
+- **Phase 1** (`main_phase1.py`): runs real two-agent Sotopia episodes,
+  evaluates them on the 7 Sotopia dimensions, and feeds an in-context-learning
+  memory (retrieval bank + skill profile) back into the learner agent.
 
 ## Setup
 
@@ -11,6 +15,13 @@ ever-expanding, diverse space of scenarios.
 uv venv
 uv pip install -r requirements.txt
 ```
+
+`requirements.txt` pins Sotopia to a specific GitHub commit (8 commits past
+the `v0.1.5` tag — PyPI's `0.1.5` lacks features we need). **No Redis and no
+`sotopia install` are required:** `social_omni_epic/__init__.py` sets
+`SOTOPIA_STORAGE_BACKEND=local` before any sotopia import, which makes
+Sotopia's profile classes plain Pydantic models. The local `../sotopia/`
+checkout, if present, is only a dev-time reference and is not needed at runtime.
 
 ### API key
 
@@ -178,12 +189,24 @@ RUN=output/run_001
 .venv/bin/python analysis/plot_lineage.py --archive $RUN/archive_latest.json --closest_only --spread 3.0
 .venv/bin/python analysis/plot_lineage.py --archive $RUN/archive_latest.json --closest_only --physics
 
-# Shared-UMAP across multiple runs so positions are visually comparable
-.venv/bin/python analysis/plot_lineage.py \
-    --archive output/200_full/archive_latest.json --closest_only --spread 2.5 \
-    --shared_with output/200_no_moi/archive_latest.json,output/200_no_archive/archive_latest.json \
-    --out output/200_full/lineage_closest_shared.html
-# (run the same command three times, swapping which path is the --archive)
+# Shared-UMAP across conditions so positions are pixel-identical & comparable.
+# ONE command generates all three HTMLs. It pools every scenario across the
+# given conditions, dedupes by embedding text (the 90 shared seeds collapse to
+# one point each), re-embeds each unique text exactly once, fits UMAP a single
+# time, then writes one HTML per condition reusing those exact coordinates.
+# Needs OPENAI_API_KEY (auto-loaded from .env) for the one re-embed pass.
+# Each HTML is written as lineage_closest_shared.html in its archive's dir.
+.venv/bin/python analysis/plot_lineage_compare.py \
+    --condition full=output/200_full/archive_latest.json \
+    --condition no_moi=output/200_no_moi/archive_latest.json \
+    --condition no_archive=output/200_no_archive/archive_latest.json
+# Add/remove --condition LABEL=path to change what's compared.
+# --out_name NAME changes the filename; --spread 2.5 for more breathing room.
+#
+# NOTE: do NOT use `plot_lineage.py --shared_with` for cross-condition
+# comparison — it re-fits UMAP per HTML on a differently-ordered union with a
+# per-run rescale, so the same scenario lands at different pixels per HTML.
+# Use plot_lineage_compare.py (above) instead.
 
 # Cell-occupancy heatmaps (all / seeds-only / generated-only)
 .venv/bin/python analysis/plot_diversity_grid.py --archive $RUN/archive_latest.json --grid_size 10
@@ -330,40 +353,164 @@ Two pitfalls to keep in mind when comparing the three ablation runs:
 Comparing `metrics.json` and `scenario_space.png` across these three runs is
 the core paper figure.
 
+## Phase 1: real episodes + in-context learning
+
+`main_phase1.py` is the Phase 1 entry point. It reuses the Phase 0
+generate → embed → MoI pipeline, then runs an actual two-agent Sotopia
+episode for each accepted scenario, evaluates it, and (optionally) updates an
+in-context-learning memory that is injected into the learner agent's prompt.
+
+### Run modes
+
+A single `run_mode` flag controls behavior:
+
+| `run_mode`         | episodes? | memory? | purpose                                            |
+| ------------------ | --------- | ------- | -------------------------------------------------- |
+| `phase0`           | no        | no      | generation only — same as `main.py`                |
+| `phase1_no_memory` | yes       | no      | real episodes, no ICL — the ablation               |
+| `phase1`           | yes       | yes     | full system: episodes + retrieval bank + skill profile |
+
+```bash
+# Phase 0 (sotopia imports are lazy-skipped in this mode)
+uv run python main_phase1.py run_mode=phase0 checkpoint_dir=output/p0
+
+# Phase 1 ablation: real episodes, no memory
+uv run python main_phase1.py run_mode=phase1_no_memory checkpoint_dir=output/p1_nomem
+
+# Full Phase 1
+uv run python main_phase1.py run_mode=phase1 checkpoint_dir=output/p1_full
+
+# Resume from an existing Phase 0 archive instead of re-seeding
+uv run python main_phase1.py run_mode=phase1 \
+    archive_from_ckpt=output/run_001/archive_latest.json
+```
+
+Defaults are in `configs/social_omni_epic_phase1.yaml`: 200 iterations,
+learner `gpt-4.1-mini`, partner `gpt-4.1-mini`, evaluator `gpt-5.2`
+(cheap-but-capable agents, stronger judge). The scenario-generation FM is
+separate — `model` (default `gpt-4.1`) drives task generation, MoI, and the
+memory summaries.
+
+### Learner / partner / evaluator
+
+Each episode has three LLM roles:
+- **learner** (`learner_model`) — agent 1, the agent we are training. Memory
+  is injected only into this agent's prompt.
+- **partner** (`partner_model`) — agent 2, a vanilla Sotopia agent.
+- **evaluator** (`evaluator_model`) — reads the finished joint transcript and
+  scores the 7 Sotopia dimensions **separately for each agent**.
+
+### Scoring
+
+One evaluator LLM call reads the shared transcript and returns per-agent
+7-dimension scores: `believability, relationship, knowledge, secret,
+social_rules, financial_and_material_benefits, goal`. Ranges differ
+(believability/knowledge/goal 0–10; relationship & financial −5..5; secret &
+social_rules −10..0). `overall_score` is the mean of the seven.
+
+`SuccessDetector` derives two things from the learner's scores:
+- `is_solved` — binary, `goal >= goal_threshold` (default 7.0).
+- `progress_score` — a `[0,1]` learning signal blending goal/relationship/
+  knowledge. Its slope over time (`learning_progress`) biases which scenario
+  types get generated next.
+
+### Memory (the in-context learning)
+
+Two artifacts accumulate across iterations, both in `checkpoint_dir`:
+- `retrieval_bank.json` — one entry per past episode: scenario embedding plus
+  an FM-written 3–5 sentence "what worked / what failed" lesson. Each new
+  iteration retrieves the top-`retrieval_top_k` most similar past lessons.
+- `social_skills.md` — a living skill profile, rewritten by the FM every
+  `skill_profile_update_every` episodes from the accumulated bank.
+
+Both are concatenated and spliced into the learner's action-generation
+template (`memory_agent.py`).
+
+### Experiments
+
+```bash
+# Experiment 1 — baseline: vanilla learner on all 90 canonical seeds, no memory
+# (model flags shown are the defaults; omit them to use the defaults)
+uv run python -m experiments.baseline \
+    --learner-model gpt-4.1-mini --partner-model gpt-4.1-mini \
+    --evaluator-model gpt-5.2 --output-dir output/baseline
+
+# Experiment 3 — post-training: same 90 seeds, learner armed with the memory
+# from a completed Phase 1 run
+uv run python -m experiments.evaluate_with_memory \
+    --bank output/p1_full/retrieval_bank.json \
+    --skills output/p1_full/social_skills.md \
+    --output-dir output/post_training_eval
+
+# Both are resumable (skip scenario_ids already in the output JSON) and accept
+# --seed-limit N for quick smoke tests, e.g. --seed-limit 1.
+```
+
+### Phase 1 output files
+
+In addition to the Phase 0 outputs, a Phase 1 run writes to `checkpoint_dir`:
+
+| file / dir                   | contents |
+| ---------------------------- | -------- |
+| `metrics_phase1.json`        | per-iteration time series: goal/relationship/knowledge/overall scores, `progress`, `learning_progress`, `solved`, archive & memory sizes, turn count |
+| `transcripts/iter_NNNN.json` | full episode record per iteration: transcript, per-agent 7-dim scores, evaluator reasoning |
+| `retrieval_bank.json`        | the ICL retrieval bank (`phase1` mode only) |
+| `social_skills.md`           | the ICL skill profile (`phase1` mode only) |
+
+The experiment scripts likewise write `transcripts/<scenario_id>.json`
+alongside their score JSON.
+
 ## Project layout
 
 ```
 social-omni-epic/
-├── configs/social_omni_epic.yaml   # Hydra defaults; all flags overridable from CLI
+├── configs/
+│   ├── social_omni_epic.yaml        # Phase 0 Hydra defaults
+│   └── social_omni_epic_phase1.yaml # Phase 1 Hydra defaults (run_mode, models, memory)
 ├── data/
-│   ├── sotopia_seeds/              # extracted from dump.rdb (gitignored binary)
-│   └── sotopia_episodes_v1.jsonl   # from HF cmu-lti/sotopia (gitignored)
-├── social_omni_epic/               # the Python package
-│   ├── data_models.py              # AgentProfile, SocialScenario (Pydantic, Sotopia-compatible)
-│   ├── fm.py                       # OpenAI wrapper with retry/backoff
-│   ├── task_generator.py           # archive-conditioned generation + example selection
-│   ├── model_of_interestingness.py # MoI judge
-│   ├── embedding_utils.py          # cosine retrieval + PCA cell-coverage metric
-│   ├── validation.py               # schema checks for generated JSON
-│   ├── archive.py                  # archive state + checkpointing
-│   └── seeds.py                    # Sotopia → SocialScenario adapter
+│   ├── sotopia_seeds/               # extracted from dump.rdb (gitignored binary)
+│   └── sotopia_episodes_v1.jsonl    # from HF cmu-lti/sotopia (gitignored)
+├── social_omni_epic/                # the Python package
+│   ├── __init__.py                  # forces SOTOPIA_STORAGE_BACKEND=local (no Redis)
+│   ├── data_models.py               # AgentProfile, SocialScenario (Pydantic, Sotopia-compatible)
+│   ├── fm.py                        # OpenAI wrapper with retry/backoff
+│   ├── task_generator.py            # archive-conditioned generation + example selection
+│   ├── model_of_interestingness.py  # MoI judge
+│   ├── embedding_utils.py           # cosine retrieval + PCA cell-coverage metric
+│   ├── validation.py                # schema checks for generated JSON
+│   ├── archive.py                   # archive state + checkpointing
+│   ├── seeds.py                     # Sotopia → SocialScenario adapter
+│   ├── sotopia_bridge.py            # SocialScenario → Sotopia EnvironmentProfile/AgentProfile
+│   ├── memory_agent.py              # memory injection into the learner's prompt template
+│   ├── episode_runner.py            # runs one Sotopia episode + 7-dimension evaluation
+│   ├── memory.py                    # RetrievalBank + SkillProfile (in-context learning)
+│   └── success_detector.py          # goal threshold + progress / learning-progress signal
+├── experiments/
+│   ├── baseline.py                  # Experiment 1: vanilla learner on the 90 seeds
+│   └── evaluate_with_memory.py      # Experiment 3: post-training eval with ICL memory
 ├── analysis/
-│   ├── compute_metrics.py          # archive summary stats
-│   ├── visualize_embedding.py      # UMAP + diversity-over-time plots
-│   └── inspect_pairs.py            # per-scenario audit: generated + prompt examples
+│   ├── compute_metrics.py           # archive summary stats
+│   ├── visualize_embedding.py       # UMAP + diversity-over-time plots
+│   └── inspect_pairs.py             # per-scenario audit: generated + prompt examples
 ├── scripts/
-│   └── extract_sotopia_seeds.py    # dump.rdb → JSONL via short-lived Docker
-└── main.py                         # the Hydra-entry loop
+│   └── extract_sotopia_seeds.py     # dump.rdb → JSONL via short-lived Docker
+├── main.py                          # Phase 0 entry loop
+└── main_phase1.py                   # Phase 1 entry loop (run_mode = phase0/phase1_no_memory/phase1)
 ```
 
-## Phase 1 transition notes
+## How we use Sotopia (notes for maintainers)
 
-Our `SocialScenario` uses Sotopia's exact field names. To run real agent
-interactions, the next steps will be:
+Phase 1 uses Sotopia as a library — episode environment, agents, and the
+7-dimension evaluation rubric — but **not** its storage or its episode/eval
+orchestration, because the pinned commit has two bugs on the interactive path:
 
-1. `pip install sotopia` and either start Redis or set `SOTOPIA_STORAGE_BACKEND=local`
-2. Adapter: `SocialScenario → EnvironmentProfile + AgentProfile.save()` (~20-line function)
-3. For each archived scenario, call `sotopia.run_async_server(...)` and collect `EpisodeLog`
-4. Feed evaluation scores into the archive (replaces simulated-success in step 5 of the main loop)
+1. `ParallelSotopiaEnv.astep` computes evaluation scores but discards them
+   (`complete_rating` is hardcoded to `0`), so `arun_one_episode`'s rewards
+   are always zero.
+2. `EpisodeLLMEvaluator.__acall__` indexes a dict with an int and the
+   resulting `KeyError` is silently swallowed, yielding empty ratings.
 
-No schema changes required.
+`episode_runner.py` therefore runs the turn loop itself and evaluates by
+calling `agenerate(EvaluationForAgents[SotopiaDimensions])` directly — the
+same LLM call and rubric Sotopia uses, minus its broken reduction code. If
+you bump the pinned Sotopia commit, re-check both behaviors.

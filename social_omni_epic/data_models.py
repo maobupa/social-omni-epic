@@ -34,6 +34,8 @@ class SocialScenario(BaseModel):
     embedding: Optional[list[float]] = None
     parent_example_ids: list[str] = []   # ids of archive entries used as prompt examples
     moi_reasoning: str = ""              # MoI judge's explanation (for accepted scenarios)
+    goal_score: Optional[float] = None   # learner's GOAL dim from the episode (Phase 1)
+    progress_score: Optional[float] = None  # weighted progress from learner_scores
 
     def to_text_for_embedding(self) -> str:
         parts = [

@@ -102,6 +102,32 @@ def hover_html(s: dict) -> str:
     return "<br>".join(title)
 
 
+_PROFILE_FIELDS = [
+    "first_name", "last_name", "age", "gender_identity", "occupation",
+    "mbti", "big_five", "moral_values", "schwartz_portrait_value",
+    "decision_making_style", "public_info", "secret",
+]
+
+
+def scenario_detail(s: dict, label: str) -> dict:
+    """Full (untruncated) per-node payload for the click-to-open popup."""
+    profiles = []
+    for p in (s.get("agent_profiles") or []):
+        profiles.append({k: p.get(k) for k in _PROFILE_FIELDS})
+    return {
+        "label": label,
+        "iteration": s.get("iteration", "?"),
+        "source": s.get("source", ""),
+        "interaction_type": s.get("interaction_type", ""),
+        "tag": s.get("tag", ""),
+        "scenario": (s.get("scenario") or "").strip(),
+        "relationship": s.get("relationship", ""),
+        "agent_profiles": profiles,
+        "agent_goals": s.get("agent_goals", []) or [],
+        "moi_reasoning": s.get("moi_reasoning", ""),
+    }
+
+
 def closest_parent(positions: dict[str, tuple[float, float]],
                    child_id: str, parent_ids: list[str]) -> Optional[str]:
     if child_id not in positions:
@@ -145,6 +171,7 @@ def build_graph(archive: dict, include_failed: bool, closest_only: bool,
                 inferred_k: int = 3, spread: float = 2.0,
                 extra_embeddings: Optional[list[list[float]]] = None,
                 shared_extent: Optional[tuple[float, float, float, float]] = None,
+                positions_override: Optional[dict[str, tuple[float, float]]] = None,
                 ) -> tuple[nx.DiGraph, tuple[float, float, float, float]]:
     successful = archive.get("successful", [])
     failed_int = archive.get("failed_interestingness", []) if include_failed else []
@@ -157,11 +184,19 @@ def build_graph(archive: dict, include_failed: bool, closest_only: bool,
     embedding_arr = np.array([by_id[sid]["embedding"] for sid in ids_with_emb]) \
         if ids_with_emb else np.zeros((0, 0))
 
-    positions, extent = build_position_map(
-        all_nodes, spread=spread,
-        extra_embeddings=extra_embeddings,
-        shared_extent=shared_extent,
-    )
+    if positions_override is not None:
+        # Shared-layout mode: positions come from a single UMAP fit run over the
+        # union of all compared conditions, so skip this archive's own UMAP.
+        positions = {sid: positions_override[sid]
+                     for s in all_nodes
+                     if (sid := s["id"]) in positions_override}
+        extent = (0.0, 0.0, 0.0, 0.0)
+    else:
+        positions, extent = build_position_map(
+            all_nodes, spread=spread,
+            extra_embeddings=extra_embeddings,
+            shared_extent=shared_extent,
+        )
     max_iter = max((s.get("iteration", 0) for s in successful), default=0)
 
     G = nx.DiGraph()
@@ -231,13 +266,15 @@ def render(G: nx.DiGraph, output_path: str, max_iter: int,
     }
     """ % ("true" if physics else "false"))
 
+    details: dict[str, dict] = {}
     for nid, attr in G.nodes(data=True):
         s = attr["scenario"]
         label = "seed" if attr["role"] == "seed" else f"i{s.get('iteration', '?')}"
+        details[nid] = scenario_detail(s, label)
         nt.add_node(
             nid, label=label, title=attr["title"], color=attr["color"],
             x=attr["pos"][0], y=attr["pos"][1],
-            size=10 if attr["role"] == "seed" else (8 if attr["role"] == "failed_int" else 14),
+            size=22 if attr["role"] == "seed" else (18 if attr["role"] == "failed_int" else 30),
             shape="dot" if attr["role"] != "failed_int" else "triangle",
         )
     for u, v in G.edges():
@@ -286,7 +323,10 @@ def render(G: nx.DiGraph, output_path: str, max_iter: int,
   <details>
     <summary>Controls</summary>
     Scroll = zoom. Drag empty area = pan. Drag a node = move it.<br>
-    Click a node = highlight its parents &amp; children.<br>
+    Click a node = highlight its parents &amp; children, and open a
+    detail window (scenario, both agent profiles, goals).<br>
+    Click the node again or the ✕ to close that window. Multiple
+    windows can stay open; drag a window's title bar to move it.<br>
     Hover a node = scenario preview.<br>
     Arrow keys / on-screen buttons also work.
   </details>
@@ -358,8 +398,198 @@ def render(G: nx.DiGraph, output_path: str, max_iter: int,
   }});
 </script>
 """
+    details_json = json.dumps(details, ensure_ascii=True).replace("</", "<\\/")
+    popup_block = """
+<style>
+  .scn-pop { position: fixed; width: 400px; max-height: 72vh; background: #fff;
+    border: 1px solid #999; border-radius: 8px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.28); z-index: 10000;
+    display: flex; flex-direction: column;
+    font-family: -apple-system, sans-serif; }
+  .scn-pop-hd { cursor: move; background: #2c3e50; color: #fff;
+    padding: 8px 10px; border-radius: 8px 8px 0 0; display: flex;
+    align-items: center; justify-content: space-between; font-size: 13px;
+    font-weight: 600; user-select: none; }
+  .scn-pop-hd .ttl { overflow: hidden; text-overflow: ellipsis;
+    white-space: nowrap; margin-right: 8px; }
+  .scn-pop-x { cursor: pointer; padding: 0 4px; font-size: 15px; line-height: 1; }
+  .scn-pop-x:hover { color: #ff9b9b; }
+  .scn-pop-bd { padding: 10px 12px; overflow-y: auto; font-size: 12px;
+    line-height: 1.5; color: #222; }
+  .scn-pop-bd h5 { margin: 12px 0 4px; font-size: 12px; color: #2c3e50;
+    border-bottom: 1px solid #eee; padding-bottom: 2px; }
+  .scn-pop-bd .meta { color: #666; font-size: 11px; margin-bottom: 4px; }
+  .scn-pop-prof { background: #f7f7f9; border: 1px solid #e3e3e8;
+    border-radius: 5px; padding: 6px 8px; margin: 5px 0; }
+  .scn-pop-bd .lbl { font-weight: 600; color: #34495e; }
+</style>
+<script>window.SCN_DETAILS = __SCN_DETAILS__;</script>
+<script>
+(function() {
+  function ready(cb) {
+    if (typeof network !== 'undefined') cb();
+    else setTimeout(function() { ready(cb); }, 100);
+  }
+  var openPopups = {};
+  var zTop = 10000;
+  var cascade = 0;
+
+  function field(parent, label, value) {
+    if (value === undefined || value === null || value === '') return;
+    var p = document.createElement('div');
+    var b = document.createElement('span');
+    b.className = 'lbl'; b.textContent = label + ': ';
+    p.appendChild(b);
+    p.appendChild(document.createTextNode(String(value)));
+    parent.appendChild(p);
+  }
+
+  function makeProfile(pr) {
+    var box = document.createElement('div');
+    box.className = 'scn-pop-prof';
+    var nm = ((pr.first_name || '') + ' ' + (pr.last_name || '')).trim();
+    var h = document.createElement('div');
+    var nb = document.createElement('b');
+    nb.textContent = nm || '(unnamed agent)';
+    h.appendChild(nb); box.appendChild(h);
+    field(box, 'Age', pr.age);
+    field(box, 'Gender', pr.gender_identity);
+    field(box, 'Occupation', pr.occupation);
+    field(box, 'MBTI', pr.mbti);
+    field(box, 'Big Five', pr.big_five);
+    field(box, 'Moral values', pr.moral_values);
+    field(box, 'Schwartz value', pr.schwartz_portrait_value);
+    field(box, 'Decision style', pr.decision_making_style);
+    field(box, 'Public info', pr.public_info);
+    field(box, 'Secret', pr.secret);
+    return box;
+  }
+
+  function buildBody(d) {
+    var bd = document.createElement('div');
+    bd.className = 'scn-pop-bd';
+    var m = document.createElement('div');
+    m.className = 'meta';
+    m.textContent = 'iter ' + d.iteration + '  ·  ' + (d.source || '')
+      + '  ·  type ' + (d.interaction_type || '')
+      + '  ·  tag ' + (d.tag || '');
+    bd.appendChild(m);
+
+    var h1 = document.createElement('h5'); h1.textContent = 'Scenario';
+    bd.appendChild(h1);
+    var sc = document.createElement('div');
+    sc.textContent = d.scenario || '(none)';
+    bd.appendChild(sc);
+
+    if (d.relationship) {
+      var hr = document.createElement('h5'); hr.textContent = 'Relationship';
+      bd.appendChild(hr);
+      var rv = document.createElement('div');
+      rv.textContent = d.relationship;
+      bd.appendChild(rv);
+    }
+
+    var hp = document.createElement('h5');
+    hp.textContent = 'Agent profiles';
+    bd.appendChild(hp);
+    (d.agent_profiles || []).forEach(function(pr) {
+      bd.appendChild(makeProfile(pr));
+    });
+
+    var hg = document.createElement('h5');
+    hg.textContent = 'Agent goals';
+    bd.appendChild(hg);
+    (d.agent_goals || []).forEach(function(g, i) {
+      var gv = document.createElement('div');
+      gv.style.marginBottom = '5px';
+      var b = document.createElement('span');
+      b.className = 'lbl'; b.textContent = 'Goal ' + (i + 1) + ': ';
+      gv.appendChild(b);
+      gv.appendChild(document.createTextNode(g));
+      bd.appendChild(gv);
+    });
+
+    if (d.moi_reasoning) {
+      var hm = document.createElement('h5');
+      hm.textContent = 'MoI reasoning';
+      bd.appendChild(hm);
+      var mv = document.createElement('div');
+      mv.textContent = d.moi_reasoning;
+      bd.appendChild(mv);
+    }
+    return bd;
+  }
+
+  function closePopup(id) {
+    var el = openPopups[id];
+    if (el) { el.remove(); delete openPopups[id]; }
+  }
+
+  function openPopup(id) {
+    var d = (window.SCN_DETAILS || {})[id];
+    if (!d) return;
+    var pop = document.createElement('div');
+    pop.className = 'scn-pop';
+    var off = (cascade % 10) * 26; cascade++;
+    pop.style.left = (90 + off) + 'px';
+    pop.style.top = (70 + off) + 'px';
+    pop.style.zIndex = (++zTop);
+
+    var hd = document.createElement('div');
+    hd.className = 'scn-pop-hd';
+    var ttl = document.createElement('span');
+    ttl.className = 'ttl';
+    var preview = d.scenario
+      ? d.scenario.slice(0, 46) + (d.scenario.length > 46 ? '…' : '')
+      : id.slice(0, 8);
+    ttl.textContent = (d.label ? d.label + '  ' : '') + preview;
+    var x = document.createElement('span');
+    x.className = 'scn-pop-x';
+    x.textContent = '✕';
+    x.addEventListener('mousedown', function(e) { e.stopPropagation(); });
+    x.addEventListener('click', function(e) {
+      e.stopPropagation(); closePopup(id);
+    });
+    hd.appendChild(ttl); hd.appendChild(x);
+    pop.appendChild(hd);
+    pop.appendChild(buildBody(d));
+    document.body.appendChild(pop);
+    openPopups[id] = pop;
+
+    pop.addEventListener('mousedown', function() {
+      pop.style.zIndex = (++zTop);
+    });
+
+    var dragging = false, sx, sy, ox, oy;
+    hd.addEventListener('mousedown', function(e) {
+      dragging = true;
+      sx = e.clientX; sy = e.clientY;
+      ox = pop.offsetLeft; oy = pop.offsetTop;
+      e.preventDefault();
+    });
+    document.addEventListener('mousemove', function(e) {
+      if (!dragging) return;
+      pop.style.left = (ox + e.clientX - sx) + 'px';
+      pop.style.top = (oy + e.clientY - sy) + 'px';
+    });
+    document.addEventListener('mouseup', function() { dragging = false; });
+  }
+
+  ready(function() {
+    network.on('click', function(params) {
+      if (params.nodes.length === 0) return;
+      var id = params.nodes[0];
+      if (openPopups[id]) closePopup(id);
+      else openPopup(id);
+    });
+  });
+})();
+</script>
+""".replace("__SCN_DETAILS__", details_json)
+
     with open(output_path, "a") as f:
         f.write(overlay)
+        f.write(popup_block)
 
 
 def main() -> None:
