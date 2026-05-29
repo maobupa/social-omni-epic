@@ -1,0 +1,63 @@
+# Config for scripts/run_phase2.py (Phase 2: Skills Chronicle + Reflection loop).
+# Run:  python scripts/run_phase2.py
+#       python scripts/run_phase2.py run_mode=phase0
+run_mode: "phase2"     # phase0 | phase2
+
+model: "gpt-4.1"
+temperature: 1.0
+
+# Episode-time models
+learner_model: "gpt-4.1-mini"
+partner_model: "gpt-4.1-mini"
+evaluator_model: "gpt-5.2"
+
+iterations: 200
+checkpoint_every: 25
+random_seed: 42
+checkpoint_dir: "output/phase2_full"
+archive_from_ckpt: null   # e.g. "output/phase1_full/archive_latest.json"
+
+# Episode controls
+goal_threshold: 7.0
+max_turns: 20
+
+# Multi-attempt (reflection) controls
+max_attempts: 5
+chronicle_max_entries: 8   # max entries shown to agent per attempt
+
+# UCB1 task selection (§4.1)
+ucb1_C: 1.0     # exploration coefficient
+ucb1_D: 0.1     # child-penalty coefficient
+
+# Task generator
+use_verbalized_sampling: true
+vs_num_candidates: 5
+
+# Seed loading
+seed_data_dir: "data/sotopia_seeds"
+episodes_path: "data/sotopia_episodes_v1.jsonl"
+restrict_to_episodes_v1: true
+seed_limit: null
+use_fallback_seeds_if_missing: false
+
+task_generator:
+  num_examples: 3
+  max_retries: 3
+  example_strategy: "knn"
+  show_existing_types: true
+
+moi:
+  num_examples: 5
+  min_archive_size: 10
+
+use_archive: true
+enable_moi: true
+
+# Adversarial agent
+adversarial:
+  re_reflect_on_rejection: true   # call reflect_with_critique when adv rejects
+
+hydra:
+  run:
+    dir: ${checkpoint_dir}
+  output_subdir: hydra
