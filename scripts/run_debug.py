@@ -583,7 +583,6 @@ def main() -> None:
         print("ERROR: OPENAI_API_KEY not set.", file=sys.stderr)
         sys.exit(1)
 
-    output_dir = Path(args.output)
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
