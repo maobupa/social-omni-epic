@@ -7,6 +7,40 @@ from .validation import validate_scenario, dict_to_scenario
 from .embedding_utils import get_similar_scenarios
 
 
+VS_SYSTEM_PROMPT = """You are a creative social scenario designer tasked with exploring the FRONTIER of social interaction space.
+
+Your goal is to generate social scenarios that a typical aligned AI assistant would be UNLIKELY to produce spontaneously — scenarios that are unusual, edge-case, or explore under-represented social dynamics, while remaining realistic and plausible.
+
+For each candidate scenario, estimate its "typicality probability": how likely is it that a standard AI assistant, asked to generate a random social interaction scenario, would produce exactly this type of scenario? Typical, common scenarios (workplace conflict, negotiation over price) have high probability (>0.20). Unusual, frontier scenarios have low probability (<0.10).
+
+You will generate {n_candidates} distinct candidate scenarios with their typicality probabilities. The probabilities do NOT need to sum to 1; each is an independent estimate.
+
+Each candidate must follow the schema:
+{{
+  "probability": <float between 0.01 and 0.50>,
+  "scenario_json": {{
+    "scenario": "string (>= 50 chars)",
+    "agent_profiles": [
+      {{"first_name": "...", "last_name": "...", "age": 0, "gender_identity": "...",
+       "occupation": "...", "big_five": "...", "moral_values": "...",
+       "schwartz_portrait_value": "...", "decision_making_style": "...",
+       "secret": "...", "mbti": "...", "public_info": "..."}},
+      {{ ... }}
+    ],
+    "agent_goals": ["goal >= 20 chars", "goal >= 20 chars"],
+    "relationship": "string",
+    "interaction_type": "string",
+    "tag": "string",
+    "difficulty_tags": ["string", ...]
+  }}
+}}
+
+Return a JSON object: {{"candidates": [<candidate1>, <candidate2>, ...]}}
+
+Aim to make at least half of the candidates have probability < 0.10 (frontier scenarios).
+Do NOT include recently-rejected or overly common scenarios."""
+
+
 SYSTEM_PROMPT = """You are a creative social scenario designer. You generate diverse, realistic social interaction scenarios for evaluating AI social intelligence. Each scenario must include:
 1. A vivid scenario description (the setting, context, what is happening)
 2. Exactly 2 character profiles with distinct personalities, backgrounds, and motivations
@@ -154,6 +188,68 @@ class TaskGenerator:
             examples, failed_examples or [], existing_types=existing_types
         )
         return self._generate_with_retry(user_prompt)
+
+    def generate_with_verbalized_sampling(
+        self,
+        examples: list[SocialScenario],
+        existing_types: Optional[list[str]] = None,
+        n_candidates: int = 5,
+    ) -> Optional[SocialScenario]:
+        """Verbalized Sampling (§4.2): generate N candidates with typicality probabilities.
+
+        Picks the candidate with the LOWEST probability — the most frontier/surprising
+        scenario that the model would not spontaneously generate.
+
+        Note: recently-rejected scenarios are NOT passed (design decision).
+        Falls back to generate_from_archive if VS fails.
+        """
+        system = VS_SYSTEM_PROMPT.replace("{n_candidates}", str(n_candidates))
+
+        parts: list[str] = []
+        if examples:
+            parts.append("EXAMPLE SCENARIOS FROM THE ARCHIVE (build BEYOND these):\n")
+            for i, ex in enumerate(examples):
+                parts.append(f"--- Example {i + 1} ---")
+                parts.append(_format_scenario_for_prompt(ex))
+        if existing_types:
+            type_str = ", ".join(sorted({t for t in existing_types if t}))
+            parts.append(
+                f"\nINTERACTION TYPES already in archive: {type_str}. "
+                "Prefer types NOT on this list, or deeply novel variants."
+            )
+        parts.append(
+            f"\nGenerate {n_candidates} candidate scenarios at varying typicality levels. "
+            "Return JSON: {\"candidates\": [...]}"
+        )
+        user_prompt = "\n".join(parts)
+
+        for attempt in range(self.max_retries):
+            try:
+                d = self.fm.query_json(system, user_prompt, temperature=1.0)
+                candidates = d.get("candidates", [])
+                if not candidates:
+                    continue
+                # Sort by probability ascending — pick the least typical scenario
+                valid_candidates = []
+                for c in candidates:
+                    prob = float(c.get("probability", 1.0))
+                    scn_dict = c.get("scenario_json", {})
+                    ok, _ = validate_scenario(scn_dict)
+                    if ok:
+                        valid_candidates.append((prob, scn_dict))
+                if not valid_candidates:
+                    continue
+                valid_candidates.sort(key=lambda x: x[0])
+                _, chosen_dict = valid_candidates[0]
+                try:
+                    return dict_to_scenario(chosen_dict)
+                except Exception:
+                    continue
+            except Exception:
+                continue
+
+        # Fallback to standard generation
+        return self.generate_from_archive(examples, existing_types=existing_types)
 
     def generate_unconditioned(self) -> Optional[SocialScenario]:
         """Ablation: no archive conditioning."""
