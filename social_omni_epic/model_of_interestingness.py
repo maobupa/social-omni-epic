@@ -3,21 +3,21 @@ from .data_models import SocialScenario
 from .fm import FM
 
 
-SYSTEM_PROMPT = """You are an expert judge of social scenario diversity. Given a NEW social scenario and several EXISTING scenarios that are most similar to it, determine whether the new scenario is INTERESTINGLY DIFFERENT from the existing ones.
+SYSTEM_PROMPT = """You are an expert judge evaluating a newly proposed social scenario on two dimensions simultaneously.
 
-A scenario is interestingly different if it introduces:
-- A genuinely new type of social dynamic (not just a topic change)
-- A different power structure or information asymmetry
-- A novel moral or ethical dimension
-- A different type of relationship or social context
-- A meaningfully different strategic challenge for the agents
+DIMENSION 1 — NOVELTY: Is the scenario genuinely different from the existing archived scenarios shown?
+A scenario lacks novelty if it merely changes names, locations, or surface details while repeating the same underlying social dynamic, power structure, or strategic challenge.
 
-A scenario is NOT interestingly different if it merely:
-- Changes names, locations, or surface details
-- Repeats the same social dynamic with a different topic
-- Is a minor variation of an existing scenario
+DIMENSION 2 — VALIDITY: Is the scenario itself non-degenerate?
+A scenario is invalid if it is:
+- Trivially solved (no real social challenge requiring strategy)
+- Socially implausible (the setup could not realistically occur)
+- So vague or underspecified that no meaningful interaction could happen
 
-Respond with a JSON object: {"is_interesting": true/false, "reasoning": "..."}"""
+Respond with a JSON object:
+{"interesting": true/false, "valid": true/false, "reason": "concise explanation covering both dimensions"}
+
+The scenario passes only if BOTH interesting AND valid are true."""
 
 
 def _format(s: SocialScenario) -> str:
@@ -38,17 +38,26 @@ class ModelOfInterestingness:
 
     def evaluate(self, new_scenario: SocialScenario,
                  similar: list[SocialScenario]) -> tuple[bool, str]:
-        parts = ["NEW SCENARIO:", _format(new_scenario),
-                 "\nMOST SIMILAR EXISTING SCENARIOS:"]
-        for i, s in enumerate(similar):
-            parts.append(f"--- Existing {i+1} ---")
-            parts.append(_format(s))
+        """Return (passed, reason). Passes only if novel AND valid."""
+        parts = ["NEW SCENARIO TO EVALUATE:", _format(new_scenario)]
+        if similar:
+            parts.append("\nMOST SIMILAR EXISTING SCENARIOS (for novelty comparison):")
+            for i, s in enumerate(similar):
+                parts.append(f"--- Existing {i + 1} ---")
+                parts.append(_format(s))
+        else:
+            parts.append("\n(No existing scenarios yet — only evaluate validity.)")
         parts.append(
-            '\nIs the NEW scenario interestingly different from the EXISTING ones? '
-            'Respond with JSON: {"is_interesting": true/false, "reasoning": "..."}'
+            "\nEvaluate the NEW scenario on both NOVELTY and VALIDITY. "
+            'Respond with JSON: {"interesting": true/false, "valid": true/false, "reason": "..."}'
         )
         try:
             d = self.fm.query_json(SYSTEM_PROMPT, "\n".join(parts), temperature=0.3)
         except Exception as e:
-            return True, f"MoI error (defaulting to interesting): {e}"
-        return bool(d.get("is_interesting", True)), str(d.get("reasoning", ""))
+            return True, f"MoI error (defaulting to pass): {e}"
+
+        interesting = bool(d.get("interesting", True))
+        valid = bool(d.get("valid", True))
+        reason = str(d.get("reason", ""))
+        passed = interesting and valid
+        return passed, reason
