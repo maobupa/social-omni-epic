@@ -7,17 +7,32 @@ from .validation import validate_scenario, dict_to_scenario
 from .embedding_utils import get_similar_scenarios
 
 
-VS_SYSTEM_PROMPT = """You are a creative social scenario designer tasked with exploring the FRONTIER of social interaction space.
+VS_SYSTEM_PROMPT = """You are a creative social scenario designer. Generate social scenarios that are INTERESTING and LEARNABLE.
 
-Your goal is to generate social scenarios that a typical aligned AI assistant would be UNLIKELY to produce spontaneously — scenarios that are unusual, edge-case, or explore under-represented social dynamics, while remaining realistic and plausible.
+INTERESTING: explores a novel social dynamic, power structure, or relational tension — not a generic archetype. Creative, specific, worth engaging with.
 
-For each candidate scenario, estimate its "typicality probability": how likely is it that a standard AI assistant, asked to generate a random social interaction scenario, would produce exactly this type of scenario? Typical, common scenarios (workplace conflict, negotiation over price) have high probability (>0.20). Unusual, frontier scenarios have low probability (<0.10).
+LEARNABLE: the learner agent's outcome must be meaningfully responsive to HOW they engage (empathy, timing, framing, strategic disclosure, trust-building). Avoid scenarios where the goal is unreachable through conversation, or where any polite response already succeeds.
 
-You will generate {n_candidates} distinct candidate scenarios with their typicality probabilities. The probabilities do NOT need to sum to 1; each is an independent estimate.
+Each scenario must include:
+1. A vivid scenario description (the setting, context, what is happening)
+2. Exactly 2 character profiles with distinct personalities, backgrounds, and motivations
+3. Private goals for each character (what they want to achieve, which may conflict)
+4. The pre-existing relationship between the characters
+5. The type of interaction (negotiation, cooperation, conflict, persuasion, support, competition, deception, mediation, etc.)
+6. Difficulty tags describing what makes this scenario challenging
+
+Scenarios must involve realistic human social dynamics. Avoid fantasy or sci-fi settings. Stakes can range from mundane to high — what matters is that the social tension is real and human.
+
+VERBALIZED SAMPLING: You will generate {n_candidates} distinct candidates and score each on two axes:
+- "probability": typicality (0.01–0.50) — how likely would a standard AI spontaneously propose this exact social dynamic? Low = more interesting.
+- "learnability_score": skill-responsiveness (0.0–1.0) — how much does social skill move the outcome? High = more learnable.
+
+The ideal candidate has LOW probability AND learnability_score ≥ 0.6.
 
 Each candidate must follow the schema:
 {{
-  "probability": <float between 0.01 and 0.50>,
+  "probability": <float 0.01–0.50>,
+  "learnability_score": <float 0.0–1.0>,
   "scenario_json": {{
     "scenario": "string (>= 50 chars)",
     "agent_profiles": [
@@ -35,13 +50,16 @@ Each candidate must follow the schema:
   }}
 }}
 
-Return a JSON object: {{"candidates": [<candidate1>, <candidate2>, ...]}}
-
-Aim to make at least half of the candidates have probability < 0.10 (frontier scenarios).
-Do NOT include recently-rejected or overly common scenarios."""
+Return a JSON object: {{"candidates": [<candidate1>, <candidate2>, ...]}}"""
 
 
-SYSTEM_PROMPT = """You are a creative social scenario designer. You generate diverse, realistic social interaction scenarios for evaluating AI social intelligence. Each scenario must include:
+SYSTEM_PROMPT = """You are a creative social scenario designer. Generate social scenarios that are INTERESTING and LEARNABLE.
+
+INTERESTING: explores a novel social dynamic, power structure, or relational tension — not a generic archetype. Creative, specific, worth engaging with.
+
+LEARNABLE: the learner agent's outcome must be meaningfully responsive to HOW they engage (empathy, timing, framing, strategic disclosure, trust-building). Avoid scenarios where the goal is unreachable through conversation, or where any polite response already succeeds.
+
+Each scenario must include:
 1. A vivid scenario description (the setting, context, what is happening)
 2. Exactly 2 character profiles with distinct personalities, backgrounds, and motivations
 3. Private goals for each character (what they want to achieve, which may conflict)
@@ -49,7 +67,7 @@ SYSTEM_PROMPT = """You are a creative social scenario designer. You generate div
 5. The type of interaction (negotiation, cooperation, conflict, persuasion, support, competition, deception, mediation, etc.)
 6. Difficulty tags describing what makes this scenario challenging
 
-Your scenarios should be grounded in everyday life: workplace, family, neighborhood, school, healthcare, commerce, etc. Avoid fantasy or sci-fi settings. Focus on realistic social dynamics with genuine tension and complexity.
+Scenarios must involve realistic human social dynamics. Avoid fantasy or sci-fi settings. Stakes can range from mundane to high — what matters is that the social tension is real and human.
 
 Respond with valid JSON matching exactly this schema:
 {
@@ -229,18 +247,22 @@ class TaskGenerator:
                 candidates = d.get("candidates", [])
                 if not candidates:
                     continue
-                # Sort by probability ascending — pick the least typical scenario
+                # Pick lowest-typicality candidate among those with learnability >= 0.6.
+                # Fall back to best overall if none meet the learnability threshold.
                 valid_candidates = []
                 for c in candidates:
                     prob = float(c.get("probability", 1.0))
+                    learn = float(c.get("learnability_score", 1.0))
                     scn_dict = c.get("scenario_json", {})
                     ok, _ = validate_scenario(scn_dict)
                     if ok:
-                        valid_candidates.append((prob, scn_dict))
+                        valid_candidates.append((prob, learn, scn_dict))
                 if not valid_candidates:
                     continue
-                valid_candidates.sort(key=lambda x: x[0])
-                _, chosen_dict = valid_candidates[0]
+                learnable = [c for c in valid_candidates if c[1] >= 0.6]
+                pool = learnable if learnable else valid_candidates
+                pool.sort(key=lambda x: x[0])  # lowest typicality first
+                _, _, chosen_dict = pool[0]
                 try:
                     return dict_to_scenario(chosen_dict)
                 except Exception:
