@@ -1,4 +1,5 @@
 import json
+import os
 import time
 from typing import Optional
 import openai
@@ -7,7 +8,13 @@ import openai
 class FM:
     def __init__(self, model: str = "gpt-4o", temperature: float = 1.0,
                  embedding_model: str = "text-embedding-3-small"):
-        self.client = openai.OpenAI()
+        # Prefer LIGHTNING_AI_* env vars; fall back to OPENAI_* for backwards compat.
+        api_key = os.getenv("LIGHTNING_AI_API_KEY") or os.getenv("OPENAI_API_KEY")
+        base_url = os.getenv("LIGHTNING_AI_BASE_URL") or os.getenv("OPENAI_BASE_URL")
+        self.client = openai.OpenAI(
+            api_key=api_key,
+            base_url=base_url,  # None → uses OpenAI default
+        )
         self.model = model
         self.temperature = temperature
         self.embedding_model = embedding_model
