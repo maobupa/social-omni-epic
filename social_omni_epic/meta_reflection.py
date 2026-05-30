@@ -56,15 +56,8 @@ Note: Later clauses take precedence over earlier ones when their conditions appl
 </Guidance>
 <Type>HEURISTIC | WARNING</Type>
 <Dimension>GOAL | FIN | REL | BEL | KNO | SOC | SEC</Dimension>
-<Confidence>HIGH | MEDIUM | LOW</Confidence>
-<Support>[carry forward from most recent version — keep as integer]</Support>
 <Provenance>[carry forward and append "meta-reflection"]</Provenance>
 </Entry>
-
-Confidence assignment (DETERMINISTIC — do NOT change based on content):
-  GOAL, FIN  → HIGH
-  REL, BEL   → MEDIUM
-  KNO, SOC, SEC → LOW
 
 Only output <Entry> blocks. No <Diagnosis>, no <EditReason>, no commentary."""
 
@@ -96,15 +89,8 @@ Note: Later clauses take precedence over earlier ones when their conditions appl
 </Guidance>
 <Type>HEURISTIC | WARNING</Type>
 <Dimension>GOAL | FIN | REL | BEL | KNO | SOC | SEC</Dimension>
-<Confidence>HIGH | MEDIUM | LOW</Confidence>
-<Support>[carry forward from most recent version — keep as integer]</Support>
 <Provenance>[carry forward and append "meta-reflection (failed)"]</Provenance>
 </Entry>
-
-Confidence assignment (DETERMINISTIC):
-  GOAL, FIN  → HIGH
-  REL, BEL   → MEDIUM
-  KNO, SOC, SEC → LOW
 
 Only output <Entry> blocks. No <Diagnosis>, no <EditReason>, no commentary."""
 

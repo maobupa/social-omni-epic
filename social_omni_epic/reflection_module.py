@@ -40,7 +40,6 @@ from .fm import FM
 from .skills_chronicle import (
     ChronicleEntry,
     SkillsChronicle,
-    DIMENSION_TO_CONFIDENCE,
     parse_chronicle,
 )
 
@@ -82,24 +81,17 @@ For each entry you modify, output:
   <Guidance>...</Guidance>
   <Type>HEURISTIC | WARNING</Type>
   <Dimension>GOAL | FIN | REL | BEL | KNO | SOC | SEC</Dimension>
-  <Confidence>HIGH | MEDIUM | LOW</Confidence>
-  <Support>[keep existing integer UNCHANGED]</Support>
   <Provenance>[existing provenance, add ", attempt K"]</Provenance>
   </Entry>
 
 For NEW entries (when no existing entry covers this case):
   <EditReason id="NEW_ID">Why no existing entry covered this</EditReason>
   <Entry id="NEW_ID">
-  ... (Support=0, Confidence set by Dimension per table below) ...
+  ... complete entry block ...
   </Entry>
 
 For entries that ACTIVELY MISDIRECTED the agent, add after their edit block:
   <MisdirectionFlag id="ENTRY_ID"/>
-
-CONFIDENCE assignment for new entries (deterministic, do NOT change):
-  GOAL, FIN → HIGH
-  REL, BEL → MEDIUM
-  KNO, SOC, SEC → LOW
 
 CONDITION FIELD RULES (enforced strictly):
   - NO proper nouns, specific occupations, or scenario-unique details
@@ -228,21 +220,14 @@ def _parse_reflection_output(
             continue
         entry = parsed[0]
 
-        # Ensure new entries get the correct initial confidence from dimension
         existing = existing_chronicle.get_entry(eid)
         if existing is None:
-            # New entry: set entry_id to include scenario context, confidence from dimension
+            # New entry: set entry_id to include scenario context
             entry.entry_id = eid if "_" in eid else f"{scenario_id}_{eid}"
-            entry.confidence = DIMENSION_TO_CONFIDENCE.get(entry.dimension, "MEDIUM")
-            entry.support = 0
             if str(attempt_num) not in entry.provenance:
                 entry.provenance = (
                     f"{entry.provenance}, {scenario_id} attempt {attempt_num}".strip(", ")
                 )
-        else:
-            # Existing entry: keep support unchanged; carry misdirection flag
-            entry.support = existing.support
-            entry.has_misdirection_flag = existing.has_misdirection_flag
 
         updated.upsert_entry(entry)
 
