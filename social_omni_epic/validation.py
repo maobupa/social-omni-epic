@@ -42,6 +42,7 @@ def dict_to_scenario(d: dict) -> SocialScenario:
         agent_profiles=profiles,
         agent_goals=d["agent_goals"],
         relationship=d.get("relationship", ""),
+        relationship_background=d.get("relationship_background", ""),
         tag=d.get("tag", d.get("interaction_type", "")),
         interaction_type=d.get("interaction_type", ""),
         difficulty_tags=d.get("difficulty_tags", []),

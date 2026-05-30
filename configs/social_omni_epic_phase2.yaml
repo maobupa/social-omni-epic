@@ -52,6 +52,10 @@ moi:
 
 use_archive: true
 enable_moi: true
+enable_coherence_check: true
+coherence_max_retries: 2
+enable_diversity_gate: true
+diversity_similarity_threshold: 0.92
 
 # Adversarial agent
 adversarial:

@@ -27,6 +27,7 @@ class SocialScenario(BaseModel):
     agent_profiles: list[AgentProfile]
     agent_goals: list[str]
     relationship: str = ""
+    relationship_background: str = ""
     tag: str = ""
     interaction_type: str = ""
     difficulty_tags: list[str] = []

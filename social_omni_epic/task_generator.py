@@ -39,11 +39,12 @@ Each candidate must follow the schema:
       {{"first_name": "...", "last_name": "...", "age": 0, "gender_identity": "...",
        "occupation": "...", "big_five": "...", "moral_values": "...",
        "schwartz_portrait_value": "...", "decision_making_style": "...",
-       "secret": "...", "mbti": "...", "public_info": "..."}},
+       "secret": "...", "mbti": "...", "public_info": "2-3 sentence narrative bio"}},
       {{ ... }}
     ],
     "agent_goals": ["goal >= 20 chars", "goal >= 20 chars"],
-    "relationship": "string",
+    "relationship": "one of: stranger / acquaintance / friend / romantic / family",
+    "relationship_background": "2-3 sentences of shared history consistent with the relationship label. Empty string if strangers.",
     "interaction_type": "string",
     "tag": "string",
     "difficulty_tags": ["string", ...]
@@ -76,11 +77,12 @@ Respond with valid JSON matching exactly this schema:
     {"first_name": "...", "last_name": "...", "age": 0, "gender_identity": "...",
      "occupation": "...", "big_five": "...", "moral_values": "...",
      "schwartz_portrait_value": "...", "decision_making_style": "...",
-     "secret": "...", "mbti": "...", "public_info": "..."},
+     "secret": "...", "mbti": "...", "public_info": "2-3 sentence narrative bio (name, defining traits, personal details)"},
     { ... }  // exactly 2 profiles
   ],
   "agent_goals": ["goal for agent 1 (>= 20 chars)", "goal for agent 2 (>= 20 chars)"],
-  "relationship": "string",
+  "relationship": "one of: stranger / acquaintance / friend / romantic / family",
+  "relationship_background": "2-3 sentences of shared history consistent with the relationship label. Empty string if strangers.",
   "interaction_type": "string",
   "tag": "string",
   "difficulty_tags": ["string", ...]
@@ -94,6 +96,7 @@ def _format_scenario_for_prompt(s: SocialScenario) -> str:
         "agent_profiles": [p.model_dump(exclude={"id"}) for p in s.agent_profiles],
         "agent_goals": s.agent_goals,
         "relationship": s.relationship,
+        "relationship_background": s.relationship_background,
         "interaction_type": s.interaction_type,
         "tag": s.tag,
         "difficulty_tags": s.difficulty_tags,
@@ -167,7 +170,8 @@ class TaskGenerator:
 
     def _build_user_prompt(self, examples: list[SocialScenario],
                            failed: list[SocialScenario],
-                           existing_types: Optional[list[str]] = None) -> str:
+                           existing_types: Optional[list[str]] = None,
+                           coherence_feedback: Optional[list[str]] = None) -> str:
         parts = []
         if examples:
             parts.append("EXAMPLE SCENARIOS FROM THE ARCHIVE (build BEYOND these):\n")
@@ -188,6 +192,12 @@ class TaskGenerator:
                 "type just for novelty's sake — only when the existing labels would "
                 "misdescribe the scenario."
             )
+        if coherence_feedback:
+            parts.append(
+                "\nYour previous scenario was rejected for these coherence issues:\n"
+                + "\n".join(f"- {issue}" for issue in coherence_feedback)
+                + "\nPlease fix these issues in the new scenario."
+            )
         parts.append(
             "\nGenerate ONE NEW social scenario that is MEANINGFULLY DIFFERENT from the examples above. "
             "Do not merely change surface details (names, locations). Change the underlying social dynamics, "
@@ -201,9 +211,11 @@ class TaskGenerator:
         examples: list[SocialScenario],
         failed_examples: Optional[list[SocialScenario]] = None,
         existing_types: Optional[list[str]] = None,
+        coherence_feedback: Optional[list[str]] = None,
     ) -> Optional[SocialScenario]:
         user_prompt = self._build_user_prompt(
-            examples, failed_examples or [], existing_types=existing_types
+            examples, failed_examples or [], existing_types=existing_types,
+            coherence_feedback=coherence_feedback,
         )
         return self._generate_with_retry(user_prompt)
 

@@ -1,0 +1,78 @@
+import json
+from dataclasses import dataclass, field
+from typing import Optional
+
+from .data_models import SocialScenario
+from .fm import FM
+
+
+SYSTEM_PROMPT = """You are a structural validator for social scenarios. Your job is NOT to judge quality or creativity — only to flag logical inconsistencies that would make the scenario internally broken.
+
+Check exactly four things:
+
+1. RELATIONSHIP CONSISTENCY: Does the relationship label match the relationship_background?
+   - "stranger" → background must be empty or describe no prior history. Flag if background describes prior shared experiences.
+   - "acquaintance" / "friend" / "romantic" / "family" → background must describe some plausible shared history. Flag if background is empty or contradicts the label.
+
+2. GOAL DISTINCTNESS: Are the two agent goals genuinely different?
+   - Flag if both goals are identical or nearly identical (same objective, same stakes).
+   - Do NOT flag opposing goals — a buyer wanting to pay less and a seller wanting to charge more is fine.
+
+3. PROFILE-GOAL PLAUSIBILITY: Does each agent's occupation, personality (big_five), and decision_making_style make their goal believable?
+   - Flag only obvious hard contradictions. Example: a character with "Agreeableness - Very High; Conscientiousness - Very High" whose goal requires persistent deception and manipulation.
+   - Do NOT flag based on challenge or difficulty — people act against type sometimes.
+
+4. SCENARIO-INTERACTION MATCH: Does the scenario description actually describe the stated interaction_type?
+   - Flag only if completely mismatched (e.g. scenario describes two people quietly sharing coffee but interaction_type is "hostile negotiation").
+
+Return JSON: {"passed": true/false, "issues": ["specific issue 1", "specific issue 2", ...]}
+Issues must be specific and actionable — describe exactly what is wrong and what needs to change.
+If passed is true, issues must be an empty list.
+If passed is false, issues must contain at least one item."""
+
+
+def _format(scenario: SocialScenario) -> str:
+    profiles_summary = []
+    for p in scenario.agent_profiles:
+        profiles_summary.append({
+            "first_name": p.first_name,
+            "occupation": p.occupation,
+            "big_five": p.big_five,
+            "decision_making_style": p.decision_making_style,
+        })
+    return json.dumps({
+        "scenario": scenario.scenario,
+        "interaction_type": scenario.interaction_type,
+        "relationship": scenario.relationship,
+        "relationship_background": scenario.relationship_background,
+        "agent_goals": scenario.agent_goals,
+        "agent_profiles": profiles_summary,
+    }, indent=2)
+
+
+@dataclass
+class CoherenceCheckResult:
+    passed: bool
+    issues: list[str] = field(default_factory=list)
+
+
+class CoherenceChecker:
+    def __init__(self, fm: FM):
+        self.fm = fm
+
+    def check(self, scenario: SocialScenario) -> CoherenceCheckResult:
+        user_prompt = (
+            "Check this scenario for internal consistency:\n\n"
+            + _format(scenario)
+            + '\n\nReturn JSON: {"passed": true/false, "issues": [...]}'
+        )
+        try:
+            d = self.fm.query_json(SYSTEM_PROMPT, user_prompt, temperature=0.2)
+        except Exception:
+            return CoherenceCheckResult(passed=True)
+
+        passed = bool(d.get("passed", True))
+        issues = [str(i) for i in d.get("issues", []) if i]
+        if not passed and not issues:
+            issues = ["Scenario failed coherence check (no specific issues returned)."]
+        return CoherenceCheckResult(passed=passed, issues=issues)

@@ -31,6 +31,7 @@ except Exception:
 
 from social_omni_epic.adversarial_agent import AdversarialAgent
 from social_omni_epic.archive import Archive
+from social_omni_epic.coherence_check import CoherenceChecker
 from social_omni_epic.data_models import SocialScenario
 from social_omni_epic.embedding_utils import (
     compute_cell_coverage,
@@ -289,6 +290,7 @@ def main(config: DictConfig) -> None:
         num_examples=config.moi.num_examples,
         min_archive_size=config.moi.min_archive_size,
     )
+    coherence_checker = CoherenceChecker(fm)
     title_gen = ScenarioTitleGenerator(fm)
 
     # Phase 2 episode modules (lazy for phase0 compatibility)
@@ -365,13 +367,62 @@ def main(config: DictConfig) -> None:
                 archive.add_failed_interestingness(scenario)
                 continue
 
-        # 5. Classify + designate target agent
+        # 5. Coherence gate (structural validity; retry with issue feedback)
+        if config.get("enable_coherence_check", True):
+            coherence_feedback = None
+            max_coherence = int(config.get("coherence_max_retries", 2))
+            passed_coherence = False
+            for _c in range(max_coherence + 1):
+                c_result = coherence_checker.check(scenario)
+                if c_result.passed:
+                    passed_coherence = True
+                    break
+                coherence_feedback = c_result.issues
+                scenario = task_gen.generate_from_archive(
+                    examples,
+                    existing_types=existing_types,
+                    coherence_feedback=coherence_feedback,
+                )
+                if scenario is None:
+                    break
+                scenario.iteration = iteration
+                scenario.parent_example_ids = [anchor.id]
+                try:
+                    scenario.embedding = fm.get_embeddings(
+                        [scenario.to_text_for_embedding()]
+                    )[0]
+                except Exception:
+                    scenario = None
+                    break
+            if not passed_coherence or scenario is None:
+                archive.add_failed_generation({
+                    "iteration": iteration,
+                    "reason": "coherence_failed",
+                    "issues": coherence_feedback or [],
+                })
+                continue
+
+        # 6. Diversity gate (programmatic cosine similarity; no LLM call)
+        if config.get("enable_diversity_gate", True) and archive.size > 0:
+            threshold = float(config.get("diversity_similarity_threshold", 0.92))
+            all_embs = archive.get_successful_embeddings()
+            if all_embs and scenario.embedding:
+                emb_arr = np.array(all_embs)
+                s_emb = np.array(scenario.embedding)
+                sims = emb_arr @ s_emb / (
+                    np.linalg.norm(emb_arr, axis=1) * np.linalg.norm(s_emb) + 1e-9
+                )
+                if float(sims.max()) > threshold:
+                    archive.add_failed_interestingness(scenario)
+                    continue
+
+        # 7. Classify + designate target agent
         scenario.goal_structure, scenario.info_position = classify_scenario(scenario, fm)
         scenario.target_agent_idx, scenario.target_agent_goal_abstract = designate_target_agent(
             scenario, anchor, fm
         )
 
-        # Phase 0 path: no episodes
+        # 8. Phase 0 path: no episodes
         if not run_episodes:
             title_data = title_gen.generate(scenario, scenario.target_agent_idx)
             scenario.scenario_title = title_data["scenario_title"]
@@ -397,7 +448,7 @@ def main(config: DictConfig) -> None:
                     json.dump(metrics_log, f, indent=2)
             continue
 
-        # 6. Full Phase 2 episode
+        # 9. Full Phase 2 episode
         try:
             scenario, outcome, final_scores = asyncio.run(
                 _run_phase2_episode(
@@ -417,7 +468,7 @@ def main(config: DictConfig) -> None:
             archive.add_failed_task(scenario)
             continue
 
-        # 7. Persist transcript summary
+        # 10. Persist transcript summary
         (transcript_dir / f"iter_{iteration:04d}.json").write_text(
             json.dumps({
                 "iteration": iteration,
@@ -434,7 +485,7 @@ def main(config: DictConfig) -> None:
             }, indent=2)
         )
 
-        # 8. Archive and bookkeeping
+        # 11. Archive and bookkeeping
         if outcome in (1, 2):
             archive.add_successful(scenario)
         else:
