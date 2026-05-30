@@ -35,6 +35,7 @@ LEFT HALF — describe the abstract social dynamic:
 - The structural type of interaction (negotiation, secret-keeping, persuasion under pressure, etc.)
 - Key asymmetries (time pressure, information gap, power imbalance)
 - What makes this scenario strategically interesting
+- Relationship structure when strategically relevant (e.g., stranger vs. close friend vs. acquaintance) — include only when it materially changes the social dynamic
 - NO proper nouns, specific occupations, or scenario-specific surface details
 - Aim for 8–20 words
 
@@ -43,6 +44,7 @@ RIGHT HALF — describe what skills were built from the TARGET agent's perspecti
 - What the target agent was trying to navigate
 - NO proper nouns or scenario-specific details
 - Aim for 8–15 words starting with "skills from the..."
+- Describe a structural role or position, not an action sequence. Format: "skills from the [structural role] [brief characterization of what they were navigating]"
 
 EXAMPLES:
   "Zero-sum resource negotiation with asymmetric time pressure and anchoring behavior | skills from the uninformed, patient party managing concession timing against an anchoring opponent"
