@@ -34,9 +34,7 @@ use_verbalized_sampling: true
 vs_num_candidates: 5
 
 # Seed loading
-seed_data_dir: "data/sotopia_seeds"
-episodes_path: "data/sotopia_episodes_v1.jsonl"
-restrict_to_episodes_v1: true
+seeds_path: "data/sotopia_90_seeds.jsonl"
 seed_limit: null
 use_fallback_seeds_if_missing: false
 

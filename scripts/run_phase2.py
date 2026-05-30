@@ -58,9 +58,7 @@ from social_omni_epic.task_generator import TaskGenerator
 def _seed_archive(archive: Archive, fm: FM, config: DictConfig) -> None:
     try:
         seed_scenarios = load_sotopia_seeds(
-            data_dir=config.seed_data_dir,
-            episodes_path=config.get("episodes_path"),
-            restrict_to_episodes_v1=config.get("restrict_to_episodes_v1", True),
+            seeds_path=config.get("seeds_path", "data/sotopia_90_seeds.jsonl"),
             limit=config.get("seed_limit"),
         )
         print(f"Loaded {len(seed_scenarios)} Sotopia seed scenarios")

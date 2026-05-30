@@ -1,165 +1,93 @@
-"""Load Sotopia environment + agent profiles as seed SocialScenarios.
+"""Load Sotopia seed SocialScenarios from the pre-assembled 90-seed file.
 
-Data layout (produced by scripts/extract_sotopia_seeds.py):
-  data/sotopia_seeds/environment_profiles.jsonl  (~884 envs from sotopia-pi)
-  data/sotopia_seeds/agent_profiles.jsonl        (~40 agent profiles)
-  data/sotopia_seeds/relationship_profiles.jsonl (~120 pairings)
+Primary source:
+  data/sotopia_90_seeds.jsonl   — 90 scenarios with full agent profiles and
+                                   relationship info already joined.
 
-Plus an optional companion file:
-  data/sotopia_episodes_v1.jsonl                 (episode logs; supplies the
-                                                  env_id <-> agent_ids linkage
-                                                  for the canonical ICLR 90)
+Each row has: env_pk, codename, scenario, agent_goals (2), agent_profiles (2),
+relationship_type (int 0-5), relationship_label, relationship_background.
 
-The canonical Sotopia ICLR 2024 paper used 90 scenarios. sotopia-pi extended this
-to ~884. We pick which subset to use based on `restrict_to_episodes_v1`:
-  True  -> the 90 env_ids that appear in the episodes file (the canonical set)
-  False -> all extracted env profiles
+Learner convention: agent_profiles[0] / agent_goals[0] is always the learner
+(target_agent_idx=0). The task generator places the "active initiator" in
+position 0 for generated scenarios to stay consistent.
+
+Fallback: if the primary file is missing, build_fallback_seeds() generates
+seeds from short descriptions using the task generator.
 """
 import json
 from pathlib import Path
 from typing import Optional
-from collections import OrderedDict
 
 from .data_models import SocialScenario, AgentProfile
 
 
-RELATIONSHIP_LABELS = {
-    0: "strangers",
-    1: "know each other by name",
-    2: "acquaintances",
-    3: "friends",
-    4: "romantic relationship",
-    5: "family members",
-}
-
-
-def _read_jsonl(path: Path) -> list[dict]:
-    rows = []
-    with open(path) as f:
-        for line in f:
-            line = line.strip()
-            if line:
-                rows.append(json.loads(line))
-    return rows
-
-
-def _moral_values_to_str(v) -> str:
-    if isinstance(v, list):
-        return ", ".join(str(x) for x in v)
-    return str(v or "")
-
-
 def _make_agent_profile(d: dict) -> AgentProfile:
-    """Map Sotopia agent record (with their field names) to our AgentProfile."""
+    moral = d.get("moral_values", "")
+    if isinstance(moral, list):
+        moral = ", ".join(str(x) for x in moral)
+    schwartz = d.get("schwartz_personal_values", "")
+    if isinstance(schwartz, list):
+        schwartz = ", ".join(str(x) for x in schwartz)
     return AgentProfile(
         first_name=d.get("first_name") or "Unknown",
         last_name=d.get("last_name", "") or "",
         age=d.get("age") or 0,
-        # Sotopia stores 'gender' (Woman/Man/Nonbinary) and 'gender_pronoun' separately.
         gender_identity=d.get("gender") or d.get("gender_identity", "") or "",
         occupation=d.get("occupation", "") or "",
         big_five=d.get("big_five", "") or "",
-        moral_values=_moral_values_to_str(d.get("moral_values")),
-        # Sotopia field is 'schwartz_personal_values' (list); our schema kept the
-        # original prompt-engineering name 'schwartz_portrait_value'.
-        schwartz_portrait_value=_moral_values_to_str(d.get("schwartz_personal_values")),
+        moral_values=moral,
+        schwartz_portrait_value=schwartz,
         decision_making_style=d.get("decision_making_style", "") or "",
         secret=d.get("secret", "") or "",
         mbti=d.get("mbti", "") or "",
-        public_info=(d.get("public_info") or d.get("personality_and_values") or "")[:500],
+        public_info=d.get("public_info", "") or "",
     )
 
 
-def _build_env_to_agents_from_episodes(episodes_path: Path) -> dict[str, list[str]]:
-    """Return {env_id: [agent1_pk, agent2_pk]} from the first episode per env_id."""
-    env_to_agents: dict[str, list[str]] = {}
-    with open(episodes_path) as f:
-        for line in f:
-            try:
-                d = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            env_id = d.get("environment_id")
-            agent_ids = d.get("agent_ids")
-            if env_id and agent_ids and env_id not in env_to_agents:
-                env_to_agents[env_id] = list(agent_ids)[:2]
-    return env_to_agents
-
-
 def load_sotopia_seeds(
-    data_dir: str = "data/sotopia_seeds",
-    episodes_path: Optional[str] = "data/sotopia_episodes_v1.jsonl",
-    restrict_to_episodes_v1: bool = True,
+    seeds_path: str = "data/sotopia_90_seeds.jsonl",
     limit: Optional[int] = None,
+    # Legacy kwargs accepted but ignored (kept for call-site compatibility)
+    data_dir: Optional[str] = None,
+    episodes_path: Optional[str] = None,
+    restrict_to_episodes_v1: bool = True,
 ) -> list[SocialScenario]:
-    data_dir_p = Path(data_dir)
-    env_path = data_dir_p / "environment_profiles.jsonl"
-    agent_path = data_dir_p / "agent_profiles.jsonl"
-    if not env_path.exists():
-        raise FileNotFoundError(f"Missing {env_path}. Run scripts/extract_sotopia_seeds.py first.")
-
-    env_rows = _read_jsonl(env_path)
-    agent_rows = _read_jsonl(agent_path) if agent_path.exists() else []
-    agent_db: dict[str, dict] = {a["pk"]: a for a in agent_rows if a.get("pk")}
-
-    # env_id -> [agent_pk, agent_pk]
-    env_to_agents: dict[str, list[str]] = {}
-    if episodes_path:
-        ep_path = Path(episodes_path)
-        if ep_path.exists():
-            env_to_agents = _build_env_to_agents_from_episodes(ep_path)
-
-    # Optionally restrict to the canonical ICLR-90 set (the env_ids that appear in
-    # the episodes file).
-    if restrict_to_episodes_v1 and env_to_agents:
-        canonical = set(env_to_agents.keys())
-        env_rows = [e for e in env_rows if e.get("pk") in canonical]
-
-    # Use ordered/deterministic agent fallback if env->agents missing
-    agent_pks_in_order = list(agent_db.keys())
+    path = Path(seeds_path)
+    if not path.exists():
+        raise FileNotFoundError(
+            f"Missing {path}. Expected pre-assembled seed file."
+        )
 
     scenarios: list[SocialScenario] = []
-    for env in env_rows:
-        env_pk = env.get("pk", "")
-        agent_pks = env_to_agents.get(env_pk, [])
+    with open(path) as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            row = json.loads(line)
 
-        if len(agent_pks) < 2 and agent_pks_in_order:
-            # deterministic fallback: pick first two unused
-            fallback = [pk for pk in agent_pks_in_order if pk not in agent_pks]
-            agent_pks = (agent_pks + fallback)[:2]
+            profiles = [_make_agent_profile(p) for p in row.get("agent_profiles", [])]
+            while len(profiles) < 2:
+                profiles.append(AgentProfile(first_name=f"Agent{len(profiles)+1}"))
 
-        profiles = []
-        for pk in agent_pks[:2]:
-            ad = agent_db.get(pk, {"first_name": f"Agent_{pk[:6]}"})
-            profiles.append(_make_agent_profile(ad))
-        if len(profiles) < 2:
-            profiles += [AgentProfile(first_name=f"Agent{i+1}")
-                         for i in range(len(profiles), 2)]
+            agent_goals = row.get("agent_goals") or ["", ""]
+            agent_goals = (list(agent_goals) + ["", ""])[:2]
 
-        agent_goals = env.get("agent_goals") or ["", ""]
-        if isinstance(agent_goals, dict):
-            agent_goals = list(agent_goals.values())
-        agent_goals = (list(agent_goals) + ["", ""])[:2]
+            scenarios.append(SocialScenario(
+                iteration=-1,
+                scenario=row.get("scenario", ""),
+                agent_profiles=profiles,
+                agent_goals=agent_goals,
+                relationship=row.get("relationship_label", "") or str(row.get("relationship_type", "")),
+                relationship_background=row.get("relationship_background", ""),
+                tag=row.get("codename", "") or row.get("source", ""),
+                interaction_type=row.get("source", ""),
+                source="seed_sotopia",
+                target_agent_idx=0,  # agent_0 is always the learner for seeds
+            ))
 
-        rel_raw = env.get("relationship")
-        if isinstance(rel_raw, int):
-            relationship = RELATIONSHIP_LABELS.get(rel_raw, str(rel_raw))
-        else:
-            relationship = str(rel_raw or "")
-
-        scenarios.append(SocialScenario(
-            iteration=-1,
-            scenario=env.get("scenario", "") or "",
-            agent_profiles=profiles,
-            agent_goals=agent_goals,
-            relationship=relationship,
-            tag=env.get("source", "") or env.get("codename", "") or "",
-            interaction_type=env.get("source", "") or "",
-            source="seed_sotopia",
-        ))
-
-        if limit is not None and len(scenarios) >= limit:
-            break
+            if limit is not None and len(scenarios) >= limit:
+                break
 
     return scenarios
 
@@ -187,5 +115,6 @@ def build_fallback_seeds(fm) -> list[SocialScenario]:
         if scn is not None:
             scn.iteration = -1
             scn.source = "fallback_seed"
+            scn.target_agent_idx = 0
             out.append(scn)
     return out
