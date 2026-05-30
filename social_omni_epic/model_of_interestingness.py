@@ -3,21 +3,22 @@ from .data_models import SocialScenario
 from .fm import FM
 
 
-SYSTEM_PROMPT = """You are an expert judge evaluating a newly proposed social scenario on two dimensions simultaneously.
+SYSTEM_PROMPT = """You are an expert judge evaluating a newly proposed social scenario on two dimensions.
 
-DIMENSION 1 — NOVELTY: Is the scenario genuinely different from the existing archived scenarios shown?
+DIMENSION 1 — NOVELTY (interesting): Is the scenario genuinely different from the existing archived scenarios shown?
 A scenario lacks novelty if it merely changes names, locations, or surface details while repeating the same underlying social dynamic, power structure, or strategic challenge.
 
-DIMENSION 2 — VALIDITY: Is the scenario itself non-degenerate?
-A scenario is invalid if it is:
-- Trivially solved (no real social challenge requiring strategy)
-- Socially implausible (the setup could not realistically occur)
-- So vague or underspecified that no meaningful interaction could happen
+DIMENSION 2 — LEARNABILITY: Is there at least one viable social strategy the agent could discover and improve upon across attempts?
+A scenario is NOT learnable if:
+- The outcome is fixed regardless of what the agent does — the partner's position never shifts no matter how the agent frames, empathizes, or negotiates.
+- It is structurally zero-sum with no possible accommodation (no strategy can succeed by construction).
+- It requires only surface politeness — no real strategic depth means no learning signal.
+A learnable scenario has a discoverable strategy path: empathy, timing, framing, strategic disclosure, or trust-building could plausibly change the outcome.
 
 Respond with a JSON object:
-{"interesting": true/false, "valid": true/false, "reason": "concise explanation covering both dimensions"}
+{"interesting": true/false, "learnable": true/false, "reason": "concise explanation covering both dimensions"}
 
-The scenario passes only if BOTH interesting AND valid are true."""
+The scenario passes only if BOTH are true."""
 
 
 def _format(s: SocialScenario) -> str:
@@ -48,8 +49,8 @@ class ModelOfInterestingness:
         else:
             parts.append("\n(No existing scenarios yet — only evaluate validity.)")
         parts.append(
-            "\nEvaluate the NEW scenario on both NOVELTY and VALIDITY. "
-            'Respond with JSON: {"interesting": true/false, "valid": true/false, "reason": "..."}'
+            "\nEvaluate the NEW scenario on NOVELTY and LEARNABILITY. "
+            'Respond with JSON: {"interesting": true/false, "learnable": true/false, "reason": "..."}'
         )
         try:
             d = self.fm.query_json(SYSTEM_PROMPT, "\n".join(parts), temperature=0.3)
@@ -57,7 +58,7 @@ class ModelOfInterestingness:
             return True, f"MoI error (defaulting to pass): {e}"
 
         interesting = bool(d.get("interesting", True))
-        valid = bool(d.get("valid", True))
+        learnable = bool(d.get("learnable", True))
         reason = str(d.get("reason", ""))
-        passed = interesting and valid
+        passed = interesting and learnable
         return passed, reason
