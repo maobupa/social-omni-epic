@@ -15,8 +15,8 @@ AGENT GOALS — this is the most important part. Follow this format exactly:
 Rules for goals:
 - BOTH agents must have ACTIVE goals (things they are trying to achieve), not passive/defensive ones.
 - Goals must be STRUCTURALLY INCOMPATIBLE: both agents cannot fully achieve their goal simultaneously. One agent getting more of what they want means the other gets less. If both agents can get everything they want with one polite exchange, the scenario fails.
-- The learner's goal must name at least one SPECIFIC, BINARY thing they must hold or obtain — something a third-party judge reading only the transcript can verify ("kept the clause requiring X", "obtained agreement that Y will not happen", "stayed below $500"). Vague objectives like "minimize concessions" or "protect your interests" are not evaluable and must not be used.
-- The naive/default behavior — immediately agreeing, being overly accommodating, accepting the first offer — must FAIL to achieve the learner's goal. If a polite cooperative response already scores well, the scenario is too easy.
+- Each agent's goal must name at least one SPECIFIC, BINARY thing they must hold or obtain — something a third-party judge reading only the transcript can verify ("kept the clause requiring X", "obtained agreement that Y will not happen", "stayed below $500"). Vague objectives like "minimize concessions" or "protect your interests" are not evaluable and must not be used.
+- For at least one agent, the naive/default behavior — immediately agreeing, being overly accommodating, accepting the first offer — must FAIL to achieve their goal. If a polite cooperative response from either side already satisfies both goals, the scenario is too easy.
 - The <extra_info> must contain the hidden stake that gives the learner a concrete reason to resist, push back, or hold a specific line — not just "care about this generally."
 - The secret field in each agent profile should connect to or deepen the <extra_info>: it must be something that would change the dynamic if revealed.
 - Do NOT write goals that telegraph cooperation ("I want to find a mutually beneficial solution", "minimize concessions"). Goals should encode each agent's self-interest and their non-negotiable floor.
@@ -30,8 +30,8 @@ Another GOOD pattern — binary, opposing outcomes:
   Agent 1: "Do not confess under any circumstances. <extra_info>You believe you are innocent; confessing would result in a life sentence.</extra_info>"
 
 Example of BAD goals — vague, jointly achievable, unevaluable:
-  Agent 0: "Obtain a majority vote while minimizing concessions to artists."   ← "minimizing concessions" cannot be judged from the transcript
-  Agent 1: "Block the deal unless strong protections are included."             ← both agents can fully win if agent 0 simply agrees to everything
+  Agent A: "Obtain a majority vote while minimizing concessions to artists."   ← "minimizing concessions" cannot be judged from the transcript
+  Agent B: "Block the deal unless strong protections are included."             ← both agents can fully win if agent A simply agrees to everything; no genuine structural conflict
 """
 
 _PROFILE_GUIDE = """
