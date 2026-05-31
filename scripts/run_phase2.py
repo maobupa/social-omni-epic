@@ -140,6 +140,7 @@ async def _run_phase2_episode(
     title_gen: ScenarioTitleGenerator,
     run_single_episode,
     scenario_to_sotopia_profiles,
+    fm,
     config: DictConfig,
 ) -> tuple[SocialScenario, int, dict]:
     """Run multi-attempt episode with the reflection loop.
@@ -169,9 +170,9 @@ async def _run_phase2_episode(
             result = await run_single_episode(
                 env_profile=env_profile,
                 agent_profiles=agent_profiles,
+                fm=fm,
                 learner_model=config.learner_model,
                 partner_model=config.partner_model,
-                evaluator_model=config.evaluator_model,
                 memory_prompt=memory_prompt,
                 max_turns=config.get("max_turns", 20),
             )
@@ -462,6 +463,7 @@ def main(config: DictConfig) -> None:
                     title_gen=title_gen,
                     run_single_episode=run_single_episode,
                     scenario_to_sotopia_profiles=scenario_to_sotopia_profiles,
+                    fm=fm,
                     config=config,
                 )
             )

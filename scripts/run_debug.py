@@ -437,9 +437,9 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
                     run_single_episode(
                         env_profile=env_profile,
                         agent_profiles=agent_profiles,
+                        fm=tfm,
                         learner_model=args.learner_model,
                         partner_model=args.partner_model,
-                        evaluator_model=args.evaluator_model,
                         memory_prompt=memory_prompt,
                         max_turns=args.max_turns,
                     )
@@ -473,6 +473,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
             "scores": final_scores,
             "solved": solved,
         })
+        _flush(debug_output)
 
         if solved:
             outcome = 1 if attempt == 1 else 2

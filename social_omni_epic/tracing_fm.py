@@ -20,7 +20,7 @@ try:
     from rich.rule import Rule
     from rich.text import Text
     _RICH = True
-    _console = Console()
+    _console = Console(width=max(120, Console().width or 120))
 except ImportError:
     _RICH = False
     _console = None

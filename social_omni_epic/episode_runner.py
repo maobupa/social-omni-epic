@@ -1,7 +1,7 @@
 """Run one Sotopia episode end-to-end and return a structured EpisodeResult.
 
-Vendored from sotopia/server.py::arun_one_episode, with two deliberate
-deviations forced by bugs in the pinned sotopia commit:
+Vendored from sotopia/server.py::arun_one_episode, with deliberate deviations
+forced by bugs in the pinned sotopia commit:
 
 1. `arun_one_episode` reads rewards from `info[agent]["complete_rating"]`,
    but `ParallelSotopiaEnv.astep` hardcodes `complete_rating: 0` and discards
@@ -12,36 +12,31 @@ deviations forced by bugs in the pinned sotopia commit:
    (`except: print(e); return []`), so the env's terminal evaluation yields
    empty ratings even when the LLM produced perfectly good scores.
 
-Fix: we do NOT use `terminal_evaluators` on the env at all. We run the
-episode with only the rule-based terminator, then evaluate ourselves by
-calling `agenerate` directly with `EvaluationForAgents[SotopiaDimensions]`
-as the output schema (this is exactly the LLM call Sotopia makes — same
-rubric, same schema — we just skip Sotopia's broken tuple-reduction code
-and read `.score` straight off the dimension objects).
+Fix: we do NOT use `terminal_evaluators` on the env at all. We run the episode
+with only the rule-based terminator, then evaluate with our own `_evaluate_episode`
+which calls `fm.query_json()` directly — `response_format: json_object` guarantees
+valid JSON, a concrete example prompt prevents schema-echo, no PydanticOutputParser.
 """
 import asyncio
 from dataclasses import dataclass, field
 from typing import Any, Optional
 
-from litellm.utils import supports_response_schema
-
 from sotopia.agents import LLMAgent
 from sotopia.agents.llm_agent import Agents
 from sotopia.envs.parallel import ParallelSotopiaEnv
-from sotopia.envs.evaluators import EvaluationForAgents, RuleBasedTerminatedEvaluator
+from sotopia.envs.evaluators import RuleBasedTerminatedEvaluator
 from sotopia.database import EpisodeLog
-from sotopia.database.evaluation_dimensions import SotopiaDimensions
-from sotopia.generation_utils import PydanticOutputParser, agenerate
 from sotopia.messages import AgentAction, SimpleMessage
 
+from .fm import FM
 from .memory_agent import build_custom_template_with_memory
 
 
 # Keep in sync with sotopia/database/evaluation_dimensions.py::SotopiaDimensions.
-# Score ranges differ per dimension (see SotopiaDimensions field docs):
-#   believability/knowledge/goal: 0..10
-#   relationship/financial_and_material_benefits: -5..5
-#   secret/social_rules: -10..0
+# Score ranges differ per dimension:
+#   believability / knowledge / goal:          0 .. 10
+#   relationship / financial_and_material_benefits: -5 .. 5
+#   secret / social_rules:                    -10 .. 0
 SOTOPIA_DIM_KEYS = (
     "believability",
     "relationship",
@@ -52,12 +47,39 @@ SOTOPIA_DIM_KEYS = (
     "goal",
 )
 
-_EVAL_TEMPLATE = """{history}
-Based on previous interactions, evaluate how well participants achieve their goals.
+_EVAL_SYSTEM = (
+    "Evaluate both agents' performance in this social interaction. "
+    "Respond with ONLY valid JSON — no markdown fences, no other text."
+)
+
+_EVAL_PROMPT = """{history}
+
 {agent_instruction}
-Please follow the format:
-{format_instructions}
-"""
+
+Respond with ONLY this JSON (replace the example values with your actual scores and reasoning):
+{{
+  "agent_1": {{
+    "believability":                   {{"score": 8,  "reasoning": "Spoke consistently and plausibly throughout."}},
+    "relationship":                    {{"score": 0,  "reasoning": "Relationship neither improved nor worsened."}},
+    "knowledge":                       {{"score": 5,  "reasoning": "Learned some relevant information."}},
+    "secret":                          {{"score": 0,  "reasoning": "Did not reveal any secrets."}},
+    "social_rules":                    {{"score": 0,  "reasoning": "Followed social norms."}},
+    "financial_and_material_benefits": {{"score": 2,  "reasoning": "Achieved slight financial gain."}},
+    "goal":                            {{"score": 7,  "reasoning": "Achieved most of their stated goal."}}
+  }},
+  "agent_2": {{
+    "believability":                   {{"score": 7,  "reasoning": "Generally believable."}},
+    "relationship":                    {{"score": 1,  "reasoning": "Slight positive relationship shift."}},
+    "knowledge":                       {{"score": 3,  "reasoning": "Limited information gained."}},
+    "secret":                          {{"score": 0,  "reasoning": "Secrets kept."}},
+    "social_rules":                    {{"score": -1, "reasoning": "Minor social norm violation."}},
+    "financial_and_material_benefits": {{"score": -1, "reasoning": "Slight material disadvantage."}},
+    "goal":                            {{"score": 5,  "reasoning": "Partially achieved goal."}}
+  }}
+}}
+
+Score ranges: believability 0–10, relationship −5 to 5, knowledge 0–10, \
+secret −10 to 0, social_rules −10 to 0, financial_and_material_benefits −5 to 5, goal 0–10."""
 
 
 @dataclass
@@ -74,27 +96,27 @@ def _zeros() -> dict:
     return {k: 0.0 for k in SOTOPIA_DIM_KEYS} | {"overall_score": 0.0}
 
 
-def _unpack_dimensions(dims: Any) -> dict:
-    """Turn a SotopiaDimensions instance into a flat {dim: float} dict.
-    Each dimension field is a ReasoningScore object with .reasoning and .score."""
+def _unpack_dimensions(dims: dict) -> dict:
+    """Extract flat {dim: float} scores from a parsed eval dict."""
     out: dict = {}
     for k in SOTOPIA_DIM_KEYS:
-        field_obj = getattr(dims, k, None)
-        score = getattr(field_obj, "score", 0) if field_obj is not None else 0
+        field_obj = dims.get(k, {}) if isinstance(dims, dict) else {}
+        raw = field_obj.get("score", 0) if isinstance(field_obj, dict) else 0
         try:
-            out[k] = float(score)
+            out[k] = float(raw)
         except (TypeError, ValueError):
             out[k] = 0.0
     out["overall_score"] = sum(out[k] for k in SOTOPIA_DIM_KEYS) / len(SOTOPIA_DIM_KEYS)
     return out
 
 
-def _reasoning_text(agent_label: str, dims: Any) -> str:
+def _reasoning_text(agent_label: str, dims: dict) -> str:
     parts = [f"== {agent_label} =="]
     for k in SOTOPIA_DIM_KEYS:
-        field_obj = getattr(dims, k, None)
-        if field_obj is not None:
-            parts.append(f"[{k}] {getattr(field_obj, 'reasoning', '')}")
+        field_obj = dims.get(k, {}) if isinstance(dims, dict) else {}
+        reasoning = field_obj.get("reasoning", "") if isinstance(field_obj, dict) else ""
+        if reasoning:
+            parts.append(f"[{k}] {reasoning}")
     return "\n".join(parts)
 
 
@@ -115,64 +137,55 @@ def _build_history(inbox: list) -> str:
     )
 
 
-async def _evaluate_episode(
-    inbox: list, evaluator_model: str
-) -> tuple[dict, dict, str]:
-    """Run the Sotopia 7-dimension evaluation ourselves. Returns
-    (learner_scores, partner_scores, reasoning_text)."""
+def _evaluate_episode(inbox: list, fm: FM) -> tuple[dict, dict, str]:
+    """Score both agents on SOTOPIA dimensions.
+
+    Uses fm.query_json() (response_format=json_object) with a concrete JSON
+    example prompt. No PydanticOutputParser, no schema injection, no $ref echo.
+    Falls back to zero scores on any failure.
+    """
     history = _build_history(inbox)
     if not history.strip():
         return _zeros(), _zeros(), ""
 
     agent_instruction = (
-        'There are exactly 2 agents. Under the "evaluations" field, use '
-        'exactly these keys: ["agent_1", "agent_2"] (no other keys). '
-        "agent_1 is the first agent to appear, agent_2 the second.\n"
+        'There are exactly 2 agents. Use "agent_1" for the first agent '
+        'to appear in the conversation and "agent_2" for the second.'
     )
-    use_structured = evaluator_model.startswith(
-        "custom/structured"
-    ) or supports_response_schema(model=evaluator_model)
+    prompt = _EVAL_PROMPT.format(history=history, agent_instruction=agent_instruction)
 
-    response: EvaluationForAgents[SotopiaDimensions] = await agenerate(
-        model_name=evaluator_model,
-        template=_EVAL_TEMPLATE,
-        input_values=dict(history=history, agent_instruction=agent_instruction),
-        output_parser=PydanticOutputParser(
-            pydantic_object=EvaluationForAgents[SotopiaDimensions]
-        ),
-        temperature=0.0,
-        structured_output=use_structured,
+    try:
+        data = fm.query_json(_EVAL_SYSTEM, prompt, temperature=0.0)
+    except Exception as e:
+        return _zeros(), _zeros(), f"[evaluation failed: {e}]"
+
+    a1 = data.get("agent_1", {})
+    a2 = data.get("agent_2", {})
+    learner_scores = _unpack_dimensions(a1)
+    partner_scores = _unpack_dimensions(a2)
+    reasoning = (
+        _reasoning_text("learner (agent_1)", a1)
+        + "\n\n"
+        + _reasoning_text("partner (agent_2)", a2)
     )
-
-    evals = list(response.evaluations.values())
-    learner_dims = evals[0] if len(evals) > 0 else None
-    partner_dims = evals[1] if len(evals) > 1 else None
-
-    learner_scores = _unpack_dimensions(learner_dims) if learner_dims else _zeros()
-    partner_scores = _unpack_dimensions(partner_dims) if partner_dims else _zeros()
-
-    reasoning = ""
-    if learner_dims is not None:
-        reasoning += _reasoning_text("learner (agent_1)", learner_dims) + "\n\n"
-    if partner_dims is not None:
-        reasoning += _reasoning_text("partner (agent_2)", partner_dims)
-
     return learner_scores, partner_scores, reasoning.strip()
 
 
 async def run_single_episode(
     env_profile,
     agent_profiles: list,
+    fm: FM,
     learner_model: str,
     partner_model: str,
-    evaluator_model: str,
     memory_prompt: str = "",
     max_turns: int = 20,
+    # evaluator_model kept for backward-compat callers that pass it; unused
+    evaluator_model: str = "",
 ) -> EpisodeResult:
     """Run one episode. agent_profiles[0] is the learner, [1] the partner."""
     env = ParallelSotopiaEnv(
         env_profile=env_profile,
-        model_name=evaluator_model,
+        model_name=learner_model,
         action_order="round-robin",
         evaluators=[
             RuleBasedTerminatedEvaluator(
@@ -235,9 +248,7 @@ async def run_single_episode(
         )
         done = all(terminated.values())
 
-    learner_scores, partner_scores, reasoning = await _evaluate_episode(
-        env.inbox, evaluator_model
-    )
+    learner_scores, partner_scores, reasoning = _evaluate_episode(env.inbox, fm)
 
     transcript: list[dict] = []
     for turn_idx, turn in enumerate(messages):
@@ -256,7 +267,7 @@ async def run_single_episode(
     epilog = EpisodeLog(
         environment=env.profile.pk,
         agents=[a.profile.pk for a in agent_list],
-        models=[evaluator_model, learner_model, partner_model],
+        models=[learner_model, partner_model],
         messages=[
             [
                 (
@@ -292,8 +303,7 @@ def extract_learner_scores(result: EpisodeResult) -> dict:
 
 
 def episode_record(result: EpisodeResult, **extra: Any) -> dict:
-    """JSON-serializable full episode record: transcript + scores + reasoning.
-    `extra` lets callers attach context (iteration, scenario_id, ...)."""
+    """JSON-serializable full episode record: transcript + scores + reasoning."""
     rec: dict = dict(extra)
     rec.update(
         {
