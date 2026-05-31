@@ -47,11 +47,13 @@ Scenarios must involve realistic human social dynamics. No fantasy or sci-fi. St
 The scenario description must set up the conflict clearly: who wants what, what is at stake for each party, and why a quick agreement is NOT the natural outcome.
 """
 
-VS_SYSTEM_PROMPT = """You are a creative social scenario designer. Generate social scenarios that are INTERESTING and LEARNABLE.
+VS_SYSTEM_PROMPT = """You are a creative social scenario designer. Generate social scenarios that are INTERESTING, LEARNABLE, and GENUINELY DIFFICULT.
 
 INTERESTING: explores a novel social dynamic, power structure, or relational tension — not a generic archetype. Creative, specific, worth engaging with.
 
 LEARNABLE: the learner agent's outcome must be meaningfully responsive to HOW they engage. Avoid scenarios where any polite response already succeeds.
+
+DIFFICULT: the scenario must be hard by default. A naive language model playing the learner — one that is overly agreeable, cooperative, or socially deferential — should fail to achieve the learner's goal. Success requires resisting social pressure, holding a specific position, using strategic information, or navigating genuine opposition. Make the partner agent's pressure realistic and hard to dismiss.
 """ + _SHARED_RULES + _GOAL_FORMAT_GUIDE + _PROFILE_GUIDE + """
 VERBALIZED SAMPLING: You will generate {n_candidates} distinct candidates and score each on two axes:
 - "probability": typicality (0.01–0.50) — how likely would a standard AI spontaneously propose this exact social dynamic? Low = more interesting.
