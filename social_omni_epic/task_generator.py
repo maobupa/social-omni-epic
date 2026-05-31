@@ -278,10 +278,17 @@ class TaskGenerator:
                         valid_candidates.append((prob, learn, scn_dict))
                 if not valid_candidates:
                     continue
+                # Filter to learnable candidates first; fall back to full pool if none qualify.
                 learnable = [c for c in valid_candidates if c[1] >= 0.6]
                 pool = learnable if learnable else valid_candidates
-                pool.sort(key=lambda x: x[0])  # lowest typicality first
-                _, _, chosen_dict = pool[0]
+                # Inverse-probability sampling (VS paper): weight = 1/p so low-typicality
+                # candidates are strongly preferred but not always deterministically chosen.
+                # This prevents systematic bias toward the same "unusual" direction across
+                # archive iterations, improving long-run diversity.
+                weights = np.array([1.0 / max(c[0], 1e-6) for c in pool])
+                weights /= weights.sum()
+                chosen_idx = int(np.random.choice(len(pool), p=weights))
+                _, _, chosen_dict = pool[chosen_idx]
                 try:
                     return dict_to_scenario(chosen_dict)
                 except Exception:
