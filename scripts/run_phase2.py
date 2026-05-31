@@ -46,7 +46,7 @@ from social_omni_epic.scenario_title import (
     classify_scenario,
     designate_target_agent,
 )
-from social_omni_epic.seeds import build_fallback_seeds, load_sotopia_seeds
+from social_omni_epic.seeds import load_sotopia_seeds
 from social_omni_epic.skills_chronicle import SkillsChronicle
 from social_omni_epic.task_generator import TaskGenerator
 
@@ -63,12 +63,9 @@ def _seed_archive(archive: Archive, fm: FM, config: DictConfig) -> None:
             both_perspectives=config.get("seed_both_perspectives", True),
         )
         print(f"Loaded {len(seed_scenarios)} Sotopia seed scenarios")
-    except FileNotFoundError:
-        if config.get("use_fallback_seeds_if_missing", False):
-            seed_scenarios = build_fallback_seeds(fm)
-        else:
-            print("ERROR: seeds missing and fallback disabled.", file=sys.stderr)
-            sys.exit(1)
+    except FileNotFoundError as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        sys.exit(1)
 
     if not seed_scenarios:
         return

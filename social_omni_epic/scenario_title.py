@@ -201,7 +201,7 @@ def designate_target_agent(
 
     Returns (target_agent_idx, target_agent_goal_abstract).
     """
-    is_seed_anchor = anchor_task.source in ("seed_sotopia", "fallback_seed")
+    is_seed_anchor = anchor_task.source == "seed_sotopia"
     if is_seed_anchor or not anchor_task.target_agent_goal_abstract:
         idx = anchor_task.target_agent_idx
         goal = scenario.agent_goals[idx] if idx < len(scenario.agent_goals) else ""

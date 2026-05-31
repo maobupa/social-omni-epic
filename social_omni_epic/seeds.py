@@ -11,9 +11,6 @@ With both_perspectives=True (default), each row yields TWO archive entries —
 one with target_agent_idx=0 and one with target_agent_idx=1. IDs are stable
 and deterministic: {env_pk}_p0 and {env_pk}_p1. Both share source_scenario_id
 = env_pk so perspective-aware retrieval can deduplicate correctly.
-
-Fallback: if the primary file is missing, build_fallback_seeds() generates
-seeds from short descriptions using the task generator.
 """
 import json
 from pathlib import Path
@@ -57,7 +54,8 @@ def load_sotopia_seeds(
     path = Path(seeds_path)
     if not path.exists():
         raise FileNotFoundError(
-            f"Missing {path}. Expected pre-assembled seed file."
+            f"Seed file not found: {path}\n"
+            f"Expected data/sotopia_90_seeds.jsonl in the project root."
         )
 
     scenarios: list[SocialScenario] = []
@@ -89,7 +87,7 @@ def load_sotopia_seeds(
                 interaction_type=row.get("source", ""),
                 source="seed_sotopia",
                 source_env_id=env_pk,
-                source_scenario_id=env_pk,  # shared dedup key for both perspectives
+                source_scenario_id=env_pk,
             )
 
             for idx in ([0, 1] if both_perspectives else [0]):
@@ -103,31 +101,3 @@ def load_sotopia_seeds(
                 break
 
     return scenarios
-
-
-FALLBACK_SEED_DESCRIPTIONS = [
-    "Two coworkers must decide how to split credit for a joint project that one person contributed more to.",
-    "Two strangers are stuck in an elevator and must work together to signal for help.",
-    "A landlord confronts a tenant who has been subletting their apartment without permission.",
-    "A teenager tries to convince their strict parent to let them go on a road trip with friends.",
-    "A job interviewer suspects the candidate has fabricated part of their resume.",
-    "A person must break the news to their best friend that the friend's partner has been seen on a dating app.",
-    "Two food truck owners are parked next to each other at a festival, competing for customers.",
-    "An international student asks their professor for a deadline extension.",
-    "A senior doctor must address a junior resident who made a medical error.",
-    "Two divorced parents meet to discuss changing their custody arrangement.",
-]
-
-
-def build_fallback_seeds(fm) -> list[SocialScenario]:
-    from .task_generator import TaskGenerator
-    gen = TaskGenerator(fm, num_examples=0, num_failed_examples=0, max_retries=3)
-    out = []
-    for desc in FALLBACK_SEED_DESCRIPTIONS:
-        scn = gen.flesh_out_seed(desc)
-        if scn is not None:
-            scn.iteration = -1
-            scn.source = "fallback_seed"
-            scn.target_agent_idx = 0
-            out.append(scn)
-    return out
