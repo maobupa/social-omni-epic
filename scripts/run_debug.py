@@ -74,6 +74,34 @@ from social_omni_epic.tracing_fm import (
 
 import re as _re
 
+def _scenario_dict(scenario) -> dict:
+    """Serialize scenario to a debug-friendly dict including full agent profiles."""
+    return {
+        "id": scenario.id,
+        "scenario": scenario.scenario,
+        "interaction_type": scenario.interaction_type,
+        "relationship": scenario.relationship,
+        "relationship_background": scenario.relationship_background,
+        "agent_goals": scenario.agent_goals,
+        "agent_profiles": [
+            {
+                "name": f"{p.first_name} {p.last_name}".strip(),
+                "age": p.age,
+                "gender_identity": p.gender_identity,
+                "occupation": p.occupation,
+                "public_info": p.public_info,
+                "secret": p.secret,
+                "big_five": p.big_five,
+                "mbti": getattr(p, "mbti", ""),
+                "moral_values": p.moral_values,
+                "schwartz_portrait_value": p.schwartz_portrait_value,
+                "decision_making_style": p.decision_making_style,
+            }
+            for p in scenario.agent_profiles
+        ],
+    }
+
+
 def _clean_transcript(raw: list[dict]) -> list[dict]:
     """Strip SOTOPIA scaffolding: drop Environment messages, 'did nothing',
     and the '[private to [...]]  said: ' prefix from agent speech."""
@@ -270,13 +298,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
     print_info(f"Generated: '{scenario.scenario[:100]}'")
     print_info(f"  interaction_type: {scenario.interaction_type}")
     print_info(f"  relationship: {scenario.relationship}")
-    debug_output["generated_scenario"] = {
-        "id": scenario.id,
-        "scenario": scenario.scenario,
-        "interaction_type": scenario.interaction_type,
-        "relationship": scenario.relationship,
-        "agent_goals": scenario.agent_goals,
-    }
+    debug_output["generated_scenario"] = _scenario_dict(scenario)
     _flush(debug_output)
 
     # -----------------------------------------------------------------------
@@ -348,13 +370,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
     }
     # Update generated_scenario if coherence retry replaced the scenario
     if scenario is not None:
-        debug_output["generated_scenario"] = {
-            "id": scenario.id,
-            "scenario": scenario.scenario,
-            "interaction_type": scenario.interaction_type,
-            "relationship": scenario.relationship,
-            "agent_goals": scenario.agent_goals,
-        }
+        debug_output["generated_scenario"] = _scenario_dict(scenario)
         _flush(debug_output)
     if not passed_coherence or scenario is None:
         print_warn("Coherence gate FAILED after all retries. Continuing anyway for debug purposes.")
