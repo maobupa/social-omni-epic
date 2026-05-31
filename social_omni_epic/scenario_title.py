@@ -201,9 +201,12 @@ def designate_target_agent(
 
     Returns (target_agent_idx, target_agent_goal_abstract).
     """
-    if not anchor_task.target_agent_goal_abstract:
-        abstract = _abstract_goal(scenario.agent_goals[0], fm) if scenario.agent_goals else ""
-        return 0, abstract
+    is_seed_anchor = anchor_task.source in ("seed_sotopia", "fallback_seed")
+    if is_seed_anchor or not anchor_task.target_agent_goal_abstract:
+        idx = anchor_task.target_agent_idx
+        goal = scenario.agent_goals[idx] if idx < len(scenario.agent_goals) else ""
+        abstract = _abstract_goal(goal, fm) if goal else ""
+        return idx, abstract
 
     # Embed anchor's abstract goal + both new agent goals
     texts = [
