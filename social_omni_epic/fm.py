@@ -8,16 +8,26 @@ import openai
 class FM:
     def __init__(self, model: str = "gpt-4o", temperature: float = 1.0,
                  embedding_model: str = "text-embedding-3-small"):
-        # Prefer LIGHTNING_AI_* env vars; fall back to OPENAI_* for backwards compat.
-        api_key = os.getenv("LIGHTNING_AI_API_KEY") or os.getenv("OPENAI_API_KEY")
-        base_url = os.getenv("LIGHTNING_AI_BASE_URL") or os.getenv("OPENAI_BASE_URL")
+        # Chat client: prefer Lightning.ai, fall back to OpenAI.
+        chat_api_key = os.getenv("LIGHTNING_AI_API_KEY") or os.getenv("OPENAI_API_KEY")
+        chat_base_url = os.getenv("LIGHTNING_AI_BASE_URL") or os.getenv("OPENAI_BASE_URL")
         self.client = openai.OpenAI(
-            api_key=api_key,
-            base_url=base_url,  # None → uses OpenAI default
+            api_key=chat_api_key,
+            base_url=chat_base_url,
         )
+        # Embedding client: Lightning.ai doesn't support /v1/embeddings.
+        # Use a dedicated OPENAI_API_KEY if set; otherwise reuse the chat client
+        # (works when chat is already on OpenAI with no custom base_url).
+        openai_key = os.getenv("OPENAI_API_KEY")
+        if openai_key:
+            self._embed_client = openai.OpenAI(api_key=openai_key)
+        else:
+            self._embed_client = self.client
         self.model = model
         self.temperature = temperature
         self.embedding_model = embedding_model
+        # Set False on first InternalServerError about temperature restrictions.
+        self._temperature_supported = True
 
     def _retry(self, fn, max_retries: int = 5):
         delay = 2.0
@@ -31,38 +41,57 @@ class FM:
                 time.sleep(delay)
                 delay *= 2
 
+    def _temp(self, temperature: Optional[float]) -> Optional[float]:
+        """Return temperature to use; None means omit the param entirely."""
+        if not self._temperature_supported:
+            return None
+        return temperature if temperature is not None else self.temperature
+
+    def _chat(self, messages: list, temperature: Optional[float],
+              response_format: Optional[dict] = None) -> str:
+        """Single chat completion with auto-fallback on temperature restriction."""
+        kwargs: dict = dict(model=self.model, messages=messages)
+        t = self._temp(temperature)
+        if t is not None:
+            kwargs["temperature"] = t
+        if response_format:
+            kwargs["response_format"] = response_format
+        try:
+            r = self.client.chat.completions.create(**kwargs)
+        except Exception as e:
+            if "temperature" in str(e).lower() and "fixed" in str(e).lower():
+                self._temperature_supported = False
+                kwargs.pop("temperature", None)
+                r = self.client.chat.completions.create(**kwargs)
+            else:
+                raise
+        return r.choices[0].message.content
+
     def query(self, system_prompt: str, user_prompt: str,
               temperature: Optional[float] = None) -> str:
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ]
         def _call():
-            r = self.client.chat.completions.create(
-                model=self.model,
-                temperature=temperature if temperature is not None else self.temperature,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt},
-                ],
-            )
-            return r.choices[0].message.content
+            return self._chat(messages, temperature)
         return self._retry(_call)
 
     def query_json(self, system_prompt: str, user_prompt: str,
                    temperature: Optional[float] = None) -> dict:
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ]
         def _call():
-            r = self.client.chat.completions.create(
-                model=self.model,
-                temperature=temperature if temperature is not None else self.temperature,
-                response_format={"type": "json_object"},
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt},
-                ],
-            )
-            return json.loads(r.choices[0].message.content)
+            content = self._chat(messages, temperature,
+                                 response_format={"type": "json_object"})
+            return json.loads(content)
         return self._retry(_call)
 
     def get_embeddings(self, texts: list[str]) -> list[list[float]]:
         def _call():
-            r = self.client.embeddings.create(
+            r = self._embed_client.embeddings.create(
                 input=texts, model=self.embedding_model
             )
             return [d.embedding for d in r.data]

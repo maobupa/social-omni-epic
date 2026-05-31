@@ -1,9 +1,23 @@
 """Single-scenario debug runner for Social Omni Epic Phase 2.
 
-Runs ONE scenario through the full pipeline with verbose output at every step:
-  generation → embedding → MoI → classify → target designation →
-  multi-attempt episode loop (with reflection + adversarial checks) →
-  meta-reflection → final adversarial → SCENARIO_TITLE
+Mirrors the exact pipeline of scripts/run_phase2.py for one scenario:
+  1  Load seeds & select anchor
+  2  Verbalized sampling generation
+  3  Embed
+  4  MoI (novelty + learnability)
+  5  Coherence gate  (with feedback-retry loop)
+  6  Diversity gate  (cosine similarity vs archive)
+  7  Structural classification
+  8  Designate target agent
+  9  Inherit skills chronicle
+  10 Multi-attempt episode loop
+       10a  Run episode (or mock with --skip-episode)
+       10b  Reflection
+       10c  Adversarial check on reflection (+ re-reflect on rejection)
+  11 Meta-reflection
+  12 Adversarial final check
+  13 SCENARIO_TITLE generation
+  14 Summary
 
 Saves a complete debug JSON log to --output-dir.
 
@@ -11,6 +25,7 @@ Run from project root:
   python scripts/run_debug.py --skip-episode            # no Sotopia needed
   python scripts/run_debug.py --seed-index 3            # full run, seed #3 as anchor
   python scripts/run_debug.py --no-show-prompts         # hide LLM prompts
+  python scripts/run_debug.py --seed-limit 5            # load only 5 seed rows (10 entries)
 """
 import argparse
 import asyncio
@@ -28,8 +43,11 @@ try:
 except Exception:
     pass
 
+import numpy as np
+
 from social_omni_epic.adversarial_agent import AdversarialAgent
 from social_omni_epic.archive import Archive
+from social_omni_epic.coherence_check import CoherenceChecker
 from social_omni_epic.embedding_utils import get_similar_scenarios
 from social_omni_epic.meta_reflection import MetaReflectionModule
 from social_omni_epic.model_of_interestingness import ModelOfInterestingness
@@ -262,9 +280,77 @@ def run_debug_pipeline(args) -> dict:
         print_warn("MoI rejected scenario. Continuing anyway for debug purposes.")
 
     # -----------------------------------------------------------------------
-    # Step 5: Classify
+    # Step 5: Coherence gate  (mirrors run_phase2.py step 5)
     # -----------------------------------------------------------------------
-    tfm.set_step("Step 5: Structural Classification")
+    tfm.set_step("Step 5: Coherence Gate")
+    coherence_checker = CoherenceChecker(tfm)
+    task_gen_for_retry = TaskGenerator(tfm, num_examples=3, num_failed_examples=0, max_retries=2)
+    coherence_feedback = None
+    passed_coherence = False
+    for _c in range(args.coherence_max_retries + 1):
+        c_result = coherence_checker.check(scenario)
+        print_info(f"Coherence check #{_c + 1}: passed={c_result.passed}")
+        if c_result.issues:
+            for issue in c_result.issues:
+                print_warn(f"  issue: {issue}")
+        if c_result.passed:
+            passed_coherence = True
+            break
+        coherence_feedback = c_result.issues
+        print_warn(f"Coherence failed — regenerating with feedback (retry {_c + 1}/{args.coherence_max_retries})")
+        scenario = task_gen_for_retry.generate_from_archive(
+            examples, existing_types=existing_types, coherence_feedback=coherence_feedback
+        )
+        if scenario is None:
+            print_warn("Regeneration returned None — aborting coherence retry loop.")
+            break
+        scenario.iteration = 0
+        scenario.parent_example_ids = [anchor.id] if anchor else []
+        try:
+            scenario.embedding = tfm.get_embeddings([scenario.to_text_for_embedding()])[0]
+        except Exception as e:
+            print_warn(f"Re-embed failed: {e}")
+            scenario = None
+            break
+
+    debug_output["coherence_result"] = {
+        "passed": passed_coherence,
+        "retries": _c,
+        "final_issues": coherence_feedback or [],
+    }
+    if not passed_coherence or scenario is None:
+        print_warn("Coherence gate FAILED after all retries. Continuing anyway for debug purposes.")
+
+    # -----------------------------------------------------------------------
+    # Step 6: Diversity gate  (mirrors run_phase2.py step 6)
+    # -----------------------------------------------------------------------
+    print_step("Step 6: Diversity Gate")
+    diversity_threshold = args.diversity_threshold
+    diversity_passed = True
+    max_sim = 0.0
+    if scenario is not None and scenario.embedding and archive.size > 0:
+        all_embs = archive.get_successful_embeddings()
+        if all_embs:
+            emb_arr = np.array(all_embs)
+            s_emb = np.array(scenario.embedding)
+            sims = emb_arr @ s_emb / (
+                np.linalg.norm(emb_arr, axis=1) * np.linalg.norm(s_emb) + 1e-9
+            )
+            max_sim = float(sims.max())
+            diversity_passed = max_sim <= diversity_threshold
+    print_info(f"Diversity: max_cosine_sim={max_sim:.4f}  threshold={diversity_threshold}  passed={diversity_passed}")
+    if not diversity_passed:
+        print_warn("Diversity gate FAILED (too similar to archive). Continuing anyway for debug purposes.")
+    debug_output["diversity_result"] = {
+        "passed": diversity_passed,
+        "max_cosine_sim": max_sim,
+        "threshold": diversity_threshold,
+    }
+
+    # -----------------------------------------------------------------------
+    # Step 7: Classify
+    # -----------------------------------------------------------------------
+    tfm.set_step("Step 7: Structural Classification")
     gs, ip = classify_scenario(scenario, tfm)
     scenario.goal_structure = gs
     scenario.info_position = ip
@@ -273,9 +359,9 @@ def run_debug_pipeline(args) -> dict:
     debug_output["info_position"] = ip
 
     # -----------------------------------------------------------------------
-    # Step 6: Designate target agent
+    # Step 8: Designate target agent
     # -----------------------------------------------------------------------
-    tfm.set_step("Step 6: Designate Target Agent")
+    tfm.set_step("Step 8: Designate Target Agent")
     if anchor:
         scenario.target_agent_idx, scenario.target_agent_goal_abstract = (
             designate_target_agent(scenario, anchor, tfm)
@@ -291,9 +377,9 @@ def run_debug_pipeline(args) -> dict:
     debug_output["target_agent_goal_abstract"] = scenario.target_agent_goal_abstract
 
     # -----------------------------------------------------------------------
-    # Step 7: Inherit chronicle
+    # Step 9: Inherit chronicle
     # -----------------------------------------------------------------------
-    print_step("Step 7: Inherit Skills Chronicle")
+    print_step("Step 9: Inherit Skills Chronicle")
     current_chronicle = SkillsChronicle.from_markdown(
         anchor.skills_final_md if anchor else ""
     )
@@ -322,9 +408,9 @@ def run_debug_pipeline(args) -> dict:
 
     for attempt in range(1, args.max_attempts + 1):
         # -------------------------------------------------------------------
-        # Step 8a: Run episode
+        # Step 10a: Run episode
         # -------------------------------------------------------------------
-        tfm.set_step(f"Step 8a (attempt {attempt}): Run Episode")
+        tfm.set_step(f"Step 10a (attempt {attempt}): Run Episode")
         memory_prompt = current_chronicle.format_for_prompt(max_entries=8)
         if memory_prompt:
             print_section("Memory injected into agent", memory_prompt[:1000])
@@ -387,9 +473,9 @@ def run_debug_pipeline(args) -> dict:
             break
 
         # -------------------------------------------------------------------
-        # Step 8b: Reflection
+        # Step 10b: Reflection
         # -------------------------------------------------------------------
-        tfm.set_step(f"Step 8b (attempt {attempt}): Reflection")
+        tfm.set_step(f"Step 10b (attempt {attempt}): Reflection")
         ref_out = reflection_mod.reflect(
             chronicle=current_chronicle,
             scenario=scenario,
@@ -416,9 +502,9 @@ def run_debug_pipeline(args) -> dict:
         })
 
         # -------------------------------------------------------------------
-        # Step 8c: Adversarial check on reflection
+        # Step 10c: Adversarial check on reflection
         # -------------------------------------------------------------------
-        tfm.set_step(f"Step 8c (attempt {attempt}): Adversarial Check (Reflection)")
+        tfm.set_step(f"Step 10c (attempt {attempt}): Adversarial Check (Reflection)")
         adv_result = adversarial.check_reflection(
             ref_out, episode_result.transcript, anchor_task=anchor
         )
@@ -429,7 +515,7 @@ def run_debug_pipeline(args) -> dict:
         if not adv_result.approved and adv_result.critique:
             print_warn(f"Critique: {adv_result.critique[:300]}")
             print_warn("Re-reflecting with critique...")
-            tfm.set_step(f"Step 8c (attempt {attempt}): Re-Reflection")
+            tfm.set_step(f"Step 10c (attempt {attempt}): Re-Reflection")
             ref_out = reflection_mod.reflect_with_critique(
                 original_output=ref_out,
                 critique=adv_result.critique,
@@ -458,14 +544,14 @@ def run_debug_pipeline(args) -> dict:
     debug_output["final_scores"] = final_scores
 
     # -----------------------------------------------------------------------
-    # Step 9: Meta-reflection
+    # Step 11: Meta-reflection
     # -----------------------------------------------------------------------
     meta_mod = MetaReflectionModule(tfm, max_retries=1)
     if outcome == 1:
-        print_step("Step 9: Meta-Reflection (skipped — solved on first attempt)")
+        print_step("Step 11: Meta-Reflection (skipped — solved on first attempt)")
         final_chronicle = current_chronicle
     else:
-        tfm.set_step(f"Step 9: Meta-Reflection (outcome={outcome})")
+        tfm.set_step(f"Step 11: Meta-Reflection (outcome={outcome})")
         final_chronicle = meta_mod.synthesize(
             chronicle_versions=all_versions,
             transcripts=all_transcripts,
@@ -493,9 +579,9 @@ def run_debug_pipeline(args) -> dict:
     }
 
     # -----------------------------------------------------------------------
-    # Step 10: Adversarial final check
+    # Step 12: Adversarial final check
     # -----------------------------------------------------------------------
-    tfm.set_step("Step 10: Adversarial Final Check")
+    tfm.set_step("Step 12: Adversarial Final Check")
     adv_final = adversarial.check_final(
         final_chronicle, anchor.skills_final_md if anchor else "", outcome=outcome
     )
@@ -515,9 +601,9 @@ def run_debug_pipeline(args) -> dict:
     }
 
     # -----------------------------------------------------------------------
-    # Step 11: SCENARIO_TITLE
+    # Step 13: SCENARIO_TITLE
     # -----------------------------------------------------------------------
-    tfm.set_step("Step 11: SCENARIO_TITLE Generation")
+    tfm.set_step("Step 13: SCENARIO_TITLE Generation")
     title_gen = ScenarioTitleGenerator(tfm)
     title_data = title_gen.generate(scenario, scenario.target_agent_idx)
     scenario.scenario_title = title_data["scenario_title"]
@@ -529,7 +615,7 @@ def run_debug_pipeline(args) -> dict:
     debug_output["target_perspective"] = scenario.target_perspective
 
     # -----------------------------------------------------------------------
-    # Step 12: Summary
+    # Step 14: Summary
     # -----------------------------------------------------------------------
     traces = tfm.get_traces()
     debug_output["llm_traces"] = traces
@@ -559,8 +645,8 @@ def main() -> None:
     )
     parser.add_argument("--seed-index", type=int, default=0,
                         help="Which seed to use as anchor (default: 0)")
-    parser.add_argument("--seed-limit", type=int, default=20,
-                        help="How many seeds to load (default: 20)")
+    parser.add_argument("--seed-limit", type=int, default=None,
+                        help="How many seed rows to load (default: all 90 → 180 entries)")
     parser.add_argument("--max-attempts", type=int, default=2,
                         help="Max episode attempts (default: 2)")
     parser.add_argument("--vs-candidates", type=int, default=5,
@@ -580,11 +666,15 @@ def main() -> None:
     parser.add_argument("--partner-model", type=str, default="openai/gpt-5-mini")
     parser.add_argument("--evaluator-model", type=str, default="openai/gpt-5-mini")
     parser.add_argument("--seeds-path", type=str, default="data/sotopia_90_seeds.jsonl")
+    parser.add_argument("--coherence-max-retries", type=int, default=2,
+                        help="Max coherence-gate regeneration attempts (default: 2)")
+    parser.add_argument("--diversity-threshold", type=float, default=0.92,
+                        help="Cosine similarity threshold for diversity gate (default: 0.92)")
     parser.add_argument("--output-dir", type=str, default="output/debug")
     args = parser.parse_args()
 
-    if not os.getenv("OPENAI_API_KEY"):
-        print("ERROR: OPENAI_API_KEY not set.", file=sys.stderr)
+    if not (os.getenv("LIGHTNING_AI_API_KEY") or os.getenv("OPENAI_API_KEY")):
+        print("ERROR: LIGHTNING_AI_API_KEY (or OPENAI_API_KEY) not set.", file=sys.stderr)
         sys.exit(1)
 
     output_dir = Path(args.output_dir)

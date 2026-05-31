@@ -262,8 +262,8 @@ async def _run_phase2_episode(
 )
 def main(config: DictConfig) -> None:
     print(OmegaConf.to_yaml(config))
-    if not os.getenv("OPENAI_API_KEY"):
-        print("ERROR: OPENAI_API_KEY is not set.", file=sys.stderr)
+    if not (os.getenv("LIGHTNING_AI_API_KEY") or os.getenv("OPENAI_API_KEY")):
+        print("ERROR: LIGHTNING_AI_API_KEY (or OPENAI_API_KEY) not set.", file=sys.stderr)
         sys.exit(1)
     np.random.seed(config.random_seed)
 
