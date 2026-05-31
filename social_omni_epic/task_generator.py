@@ -13,19 +13,25 @@ AGENT GOALS — this is the most important part. Follow this format exactly:
   "Your goal is to [concrete active objective]. <extra_info>[Hidden constraint or motivation — what you know that the other agent does NOT, what your real minimum/maximum is, what you are unwilling to concede, what you fear or desperately need]</extra_info>"
 
 Rules for goals:
-- BOTH agents must have ACTIVE goals (things they are trying to achieve), not passive/defensive ones ("avoid eviction" is bad; "secure 4 rehearsal nights this week or miss a career-defining showcase" is good).
-- Goals must be STRUCTURALLY INCOMPATIBLE or require genuine trade-offs — if both agents can get what they want with one polite exchange, the scenario fails the learnability test.
-- The <extra_info> must contain the hidden stake that gives each agent a reason to push back, not immediately agree.
-- The secret field in the agent profile should connect to or deepen the <extra_info>.
-- Do NOT write goals that telegraph cooperation ("I want to find a mutually beneficial solution"). Goals should encode each agent's self-interest first.
+- BOTH agents must have ACTIVE goals (things they are trying to achieve), not passive/defensive ones.
+- Goals must be STRUCTURALLY INCOMPATIBLE: both agents cannot fully achieve their goal simultaneously. One agent getting more of what they want means the other gets less. If both agents can get everything they want with one polite exchange, the scenario fails.
+- The learner's goal must name at least one SPECIFIC, BINARY thing they must hold or obtain — something a third-party judge reading only the transcript can verify ("kept the clause requiring X", "obtained agreement that Y will not happen", "stayed below $500"). Vague objectives like "minimize concessions" or "protect your interests" are not evaluable and must not be used.
+- The naive/default behavior — immediately agreeing, being overly accommodating, accepting the first offer — must FAIL to achieve the learner's goal. If a polite cooperative response already scores well, the scenario is too easy.
+- The <extra_info> must contain the hidden stake that gives the learner a concrete reason to resist, push back, or hold a specific line — not just "care about this generally."
+- The secret field in each agent profile should connect to or deepen the <extra_info>: it must be something that would change the dynamic if revealed.
+- Do NOT write goals that telegraph cooperation ("I want to find a mutually beneficial solution", "minimize concessions"). Goals should encode each agent's self-interest and their non-negotiable floor.
 
-Example of GOOD goals (from reference dataset):
+Example of GOOD goals (from reference dataset) — note the evaluable target and explicit penalty:
   Agent 0: "You are the buyer. Your target price is $454. If you pay significantly more you face a penalty; if you negotiate below target you get a bonus. <extra_info>You know comparable units sold for $420 last month and you have a competing offer at $480 you can invoke.</extra_info>"
   Agent 1: "You are the seller. Your target price is $610. You face a penalty for going significantly below target. <extra_info>You have two other interested buyers and a deadline in 48 hours — you can use urgency but must not reveal you are desperate to close.</extra_info>"
 
-Example of BAD goals (too cooperative, no tension):
-  Agent 0: "You want a quiet schedule for your classes."
-  Agent 1: "You want permission to rehearse without being fined."
+Another GOOD pattern — binary, opposing outcomes:
+  Agent 0: "Get the other person to confess. <extra_info>You have circumstantial evidence but it is not conclusive; you need an admission to close the case.</extra_info>"
+  Agent 1: "Do not confess under any circumstances. <extra_info>You believe you are innocent; confessing would result in a life sentence.</extra_info>"
+
+Example of BAD goals — vague, jointly achievable, unevaluable:
+  Agent 0: "Obtain a majority vote while minimizing concessions to artists."   ← "minimizing concessions" cannot be judged from the transcript
+  Agent 1: "Block the deal unless strong protections are included."             ← both agents can fully win if agent 0 simply agrees to everything
 """
 
 _PROFILE_GUIDE = """
