@@ -238,11 +238,6 @@ async def _run_phase2_episode(
         anchor.skills_final_md or "",
         outcome=outcome,
     )
-    for eid in adv_final.active_misdirection_ids:
-        final_chronicle.apply_misdirection_demotion(eid)
-
-    # Increment support once per episode
-    final_chronicle.increment_all_support()
 
     # Generate SCENARIO_TITLE
     title_data = title_gen.generate(scenario, scenario.target_agent_idx)

@@ -139,9 +139,9 @@ def run_debug_pipeline(args) -> dict:
 
     try:
         seeds = load_sotopia_seeds(
-            data_dir=args.seed_data_dir,
-            episodes_path=args.episodes_path,
+            seeds_path=args.seeds_path,
             limit=args.seed_limit,
+            both_perspectives=True,
         )
     except FileNotFoundError as e:
         print_warn(f"Seeds not found ({e}). Using an empty archive — generation will be unconditioned.")
@@ -200,7 +200,13 @@ def run_debug_pipeline(args) -> dict:
     examples = []
     if anchor and anchor.embedding:
         all_embs = archive.get_successful_embeddings()
-        idxs = get_similar_scenarios(anchor.embedding, all_embs, num_returns=3)
+        source_ids = [s.source_scenario_id for s in archive.state.successful]
+        agent_idxs = [s.target_agent_idx for s in archive.state.successful]
+        idxs = get_similar_scenarios(
+            anchor.embedding, all_embs, num_returns=3,
+            source_ids=source_ids, agent_idxs=agent_idxs,
+            preferred_agent_idx=anchor.target_agent_idx,
+        )
         examples = [archive.state.successful[i] for i in idxs]
 
     scenario = task_gen.generate_with_verbalized_sampling(
@@ -240,8 +246,12 @@ def run_debug_pipeline(args) -> dict:
     moi = ModelOfInterestingness(tfm, num_examples=5)
     similar: list = []
     if archive.size > 0:
+        _src_ids = [s.source_scenario_id for s in archive.state.successful]
+        _agt_idxs = [s.target_agent_idx for s in archive.state.successful]
         sim_idxs = get_similar_scenarios(
-            scenario.embedding, archive.get_successful_embeddings(), num_returns=5
+            scenario.embedding, archive.get_successful_embeddings(), num_returns=5,
+            source_ids=_src_ids, agent_idxs=_agt_idxs,
+            preferred_agent_idx=scenario.target_agent_idx,
         )
         similar = [archive.state.successful[i] for i in sim_idxs]
     is_interesting, moi_reason = moi.evaluate(scenario, similar)
@@ -476,8 +486,6 @@ def run_debug_pipeline(args) -> dict:
                 "id": e.entry_id,
                 "type": e.entry_type,
                 "dimension": e.dimension,
-                "confidence": e.confidence,
-                "support": e.support,
                 "condition": e.condition[:80],
             }
             for e in final_chronicle.entries
@@ -495,11 +503,8 @@ def run_debug_pipeline(args) -> dict:
     print_info(f"Adversarial final: {status}")
     if adv_final.issues:
         print_section("Final Issues", "\n".join(f"  - {i}" for i in adv_final.issues))
-    for eid in adv_final.active_misdirection_ids:
-        final_chronicle.apply_misdirection_demotion(eid)
-        print_warn(f"Demoted entry {eid} (active misdirection)")
-
-    final_chronicle.increment_all_support()
+    if adv_final.active_misdirection_ids:
+        print_warn(f"Active misdirection flagged (entries will be noted but not promoted): {adv_final.active_misdirection_ids}")
 
     debug_output["adversarial_final"] = {
         "approved": adv_final.approved,
@@ -574,8 +579,7 @@ def main() -> None:
     parser.add_argument("--learner-model", type=str, default="openai/gpt-5-mini")
     parser.add_argument("--partner-model", type=str, default="openai/gpt-5-mini")
     parser.add_argument("--evaluator-model", type=str, default="openai/gpt-5-mini")
-    parser.add_argument("--seed-data-dir", type=str, default="data/sotopia_seeds")
-    parser.add_argument("--episodes-path", type=str, default="data/sotopia_episodes_v1.jsonl")
+    parser.add_argument("--seeds-path", type=str, default="data/sotopia_90_seeds.jsonl")
     parser.add_argument("--output-dir", type=str, default="output/debug")
     args = parser.parse_args()
 
