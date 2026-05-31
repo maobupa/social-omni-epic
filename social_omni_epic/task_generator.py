@@ -86,11 +86,13 @@ Each candidate must follow the schema:
 Return a JSON object: {{"candidates": [<candidate1>, <candidate2>, ...]}}"""
 
 
-SYSTEM_PROMPT = """You are a creative social scenario designer. Generate social scenarios that are INTERESTING and LEARNABLE.
+SYSTEM_PROMPT = """You are a creative social scenario designer. Generate social scenarios that are INTERESTING, LEARNABLE, and GENUINELY DIFFICULT.
 
 INTERESTING: explores a novel social dynamic, power structure, or relational tension — not a generic archetype. Creative, specific, worth engaging with.
 
 LEARNABLE: the learner agent's outcome must be meaningfully responsive to HOW they engage. Avoid scenarios where any polite response already succeeds.
+
+DIFFICULT: the scenario must be hard by default. A naive language model playing the learner — one that is overly agreeable, cooperative, or socially deferential — should fail to achieve the learner's goal. Success requires resisting social pressure, holding a specific position, using strategic information, or navigating genuine opposition. Make the partner agent's pressure realistic and hard to dismiss.
 """ + _SHARED_RULES + _GOAL_FORMAT_GUIDE + _PROFILE_GUIDE + """
 Respond with valid JSON matching exactly this schema:
 {
