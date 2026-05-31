@@ -18,6 +18,7 @@ which calls `fm.query_json()` directly — `response_format: json_object` guaran
 valid JSON, a concrete example prompt prevents schema-echo, no PydanticOutputParser.
 """
 import asyncio
+import re as _re
 from dataclasses import dataclass, field
 from typing import Any, Callable, Optional
 
@@ -29,6 +30,23 @@ from sotopia.database import EpisodeLog
 from sotopia.messages import AgentAction, SimpleMessage
 
 from .fm import FM
+
+
+def clean_transcript(raw: list[dict]) -> list[dict]:
+    """Strip Sotopia scaffolding: drop Environment messages, 'did nothing' turns,
+    and the '[private to [...]]  said: ' prefix from agent speech."""
+    out = []
+    for msg in raw:
+        if msg.get("sender") == "Environment":
+            continue
+        content = msg.get("content", "")
+        if "did nothing" in content:
+            continue
+        content = _re.sub(r"^\[private to \[.*?\]\]\s+said:\s*", "", content).strip()
+        if content.startswith('"') and content.endswith('"'):
+            content = content[1:-1]
+        out.append({"turn": msg["turn"], "speaker": msg["sender"], "content": content})
+    return out
 
 
 _TURN_PROMPT = """

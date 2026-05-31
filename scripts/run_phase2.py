@@ -179,7 +179,7 @@ async def _run_phase2_episode(
             print(f"    [attempt {attempt}] Episode error: {e}")
             break
 
-        all_transcripts.append(result.transcript)
+        all_transcripts.append(clean_transcript(result.transcript))
         final_scores = result.learner_scores
 
         from social_omni_epic.success_detector import SuccessDetector
@@ -290,7 +290,7 @@ def main(config: DictConfig) -> None:
     transcript_dir = None
 
     if run_episodes:
-        from social_omni_epic.episode_runner import episode_record, run_single_episode  # noqa
+        from social_omni_epic.episode_runner import clean_transcript, episode_record, run_single_episode  # noqa
         from social_omni_epic.sotopia_bridge import scenario_to_sotopia_profiles  # noqa
 
         reflection_mod = ReflectionModule(fm)

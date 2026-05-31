@@ -57,6 +57,7 @@ from social_omni_epic.scenario_title import (
     designate_target_agent,
 )
 from social_omni_epic.seeds import load_sotopia_seeds
+from social_omni_epic.episode_runner import clean_transcript as _clean_transcript
 from social_omni_epic.skills_chronicle import SkillsChronicle
 from social_omni_epic.task_generator import TaskGenerator
 from social_omni_epic.tracing_fm import (
@@ -71,8 +72,6 @@ from social_omni_epic.tracing_fm import (
 # ---------------------------------------------------------------------------
 # Transcript helpers
 # ---------------------------------------------------------------------------
-
-import re as _re
 
 def _scenario_dict(scenario) -> dict:
     """Serialize scenario to a debug-friendly dict including full agent profiles."""
@@ -491,13 +490,14 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
                 break
 
         debug_output.pop("episode_results_partial", None)
-        all_transcripts.append(episode_result.transcript)
+        clean = _clean_transcript(episode_result.transcript)
+        all_transcripts.append(clean)
         final_scores = episode_result.learner_scores
 
         # Display transcript
         transcript_text = "\n".join(
-            f"[T{t['turn']}] {t['sender']}→{t['receiver']}: {t['content']}"
-            for t in episode_result.transcript
+            f"[T{t['turn']}] {t['speaker']}: {t['content']}"
+            for t in clean
         )
         print_section(f"Transcript (attempt {attempt})", transcript_text)
 
@@ -513,7 +513,6 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
         debug_output["episode_results"].append({
             "attempt": attempt,
             "transcript_clean": _clean_transcript(episode_result.transcript),
-            "transcript": episode_result.transcript,
             "scores": final_scores,
             "solved": solved,
         })

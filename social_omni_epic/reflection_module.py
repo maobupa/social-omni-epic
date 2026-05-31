@@ -107,7 +107,7 @@ Output ONLY the <Diagnosis>, <EditReason>, <Entry>, and <MisdirectionFlag> block
 def _format_transcript(transcript: list[dict], attempt_num: int, max_chars: int = 3000) -> str:
     lines = [f"=== Attempt {attempt_num} Transcript ==="]
     for t in transcript:
-        line = f"[T{t['turn']}] {t['sender']}→{t['receiver']}: {t['content']}"
+        line = f"[T{t['turn']}] {t['speaker']}: {t['content']}"
         lines.append(line)
     text = "\n".join(lines)
     if len(text) > max_chars:
