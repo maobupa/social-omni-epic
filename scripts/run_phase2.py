@@ -45,7 +45,7 @@ from social_omni_epic.scenario_title import (
     ScenarioTitleGenerator,
     designate_target_agent,
 )
-from social_omni_epic.seeds import load_sotopia_seeds
+from social_omni_epic.seeds import load_sotopia_seeds_with_embeddings
 from social_omni_epic.skills_chronicle import SkillsChronicle
 from social_omni_epic.task_generator import TaskGenerator
 
@@ -56,12 +56,13 @@ from social_omni_epic.task_generator import TaskGenerator
 
 def _seed_archive(archive: Archive, fm: FM, config: DictConfig) -> None:
     try:
-        seed_scenarios = load_sotopia_seeds(
+        seed_scenarios = load_sotopia_seeds_with_embeddings(
+            fm=fm,
             seeds_path=config.get("seeds_path", "data/sotopia_90_seeds.jsonl"),
             limit=config.get("seed_limit"),
             both_perspectives=config.get("seed_both_perspectives", True),
         )
-        print(f"Loaded {len(seed_scenarios)} Sotopia seed scenarios")
+        print(f"Loaded {len(seed_scenarios)} Sotopia seed scenarios (embeddings from cache or freshly computed)")
     except FileNotFoundError as e:
         print(f"ERROR: {e}", file=sys.stderr)
         sys.exit(1)
@@ -69,12 +70,7 @@ def _seed_archive(archive: Archive, fm: FM, config: DictConfig) -> None:
     if not seed_scenarios:
         return
 
-    texts = [s.to_text_for_embedding() for s in seed_scenarios]
-    embs: list[list[float]] = []
-    for i in range(0, len(texts), 100):
-        embs.extend(fm.get_embeddings(texts[i : i + 100]))
-    for scn, e in zip(seed_scenarios, embs):
-        scn.embedding = e
+    for scn in seed_scenarios:
         archive.add_successful(scn)
     print(f"Archive seeded: size={archive.size}")
 
@@ -155,6 +151,7 @@ async def _run_phase2_episode(
     current_chronicle = SkillsChronicle.from_markdown(anchor.skills_final_md or "")
 
     all_transcripts: list[list[dict]] = []
+    all_scores: list[dict] = []
     all_versions: list[SkillsChronicle] = [deepcopy(current_chronicle)]
     all_edit_reasons: dict[str, str] = {}
     outcome = 3
@@ -176,11 +173,13 @@ async def _run_phase2_episode(
                 max_turns=config.get("max_turns", 20),
             )
         except Exception as e:
-            print(f"    [attempt {attempt}] Episode error: {e}")
+            import traceback
+            print(f"    [attempt {attempt}] Episode error: {e}\n{traceback.format_exc()}")
             break
 
         all_transcripts.append(clean_transcript(result.transcript))
         final_scores = result.learner_scores
+        all_scores.append({"attempt": attempt, "scores": final_scores})
 
         from social_omni_epic.success_detector import SuccessDetector
         success_detector = SuccessDetector(goal_threshold=config.get("goal_threshold", 7.0))
@@ -201,7 +200,7 @@ async def _run_phase2_episode(
 
             # Adversarial check on reflection
             adv_result = adversarial.check_reflection(
-                ref_out, result.transcript, anchor_task=anchor
+                ref_out, all_transcripts[-1], anchor_task=anchor, scenario=scenario
             )
             if not adv_result.approved and re_reflect:
                 ref_out = reflection_mod.synthesize_with_critique(
@@ -220,7 +219,7 @@ async def _run_phase2_episode(
             all_edit_reasons.update(ref_out.edit_reasons)
 
     # Meta-reflection (outcome 2 or 3)
-    if outcome == 1:
+    if outcome == 1 or not all_transcripts:
         final_chronicle = current_chronicle
     else:
         final_chronicle = meta_mod.synthesize(
@@ -230,6 +229,7 @@ async def _run_phase2_episode(
             outcome=outcome,
             scenario=scenario,
             anchor_task=anchor,
+            attempt_scores=all_scores,
         )
 
 

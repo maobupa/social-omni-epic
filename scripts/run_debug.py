@@ -56,7 +56,7 @@ from social_omni_epic.scenario_title import (
     ScenarioTitleGenerator,
     designate_target_agent,
 )
-from social_omni_epic.seeds import load_sotopia_seeds
+from social_omni_epic.seeds import load_sotopia_seeds_with_embeddings
 from social_omni_epic.episode_runner import clean_transcript as _clean_transcript
 from social_omni_epic.skills_chronicle import SkillsChronicle
 from social_omni_epic.task_generator import TaskGenerator
@@ -99,25 +99,6 @@ def _scenario_dict(scenario) -> dict:
             for p in scenario.agent_profiles
         ],
     }
-
-
-def _clean_transcript(raw: list[dict]) -> list[dict]:
-    """Strip SOTOPIA scaffolding: drop Environment messages, 'did nothing',
-    and the '[private to [...]]  said: ' prefix from agent speech."""
-    out = []
-    for msg in raw:
-        if msg.get("sender") == "Environment":
-            continue
-        content = msg.get("content", "")
-        if "did nothing" in content:
-            continue
-        # Strip '[private to ['X']]  said: ' prefix
-        content = _re.sub(r"^\[private to \[.*?\]\]\s+said:\s*", "", content).strip()
-        # Strip surrounding quotes that SOTOPIA adds
-        if content.startswith('"') and content.endswith('"'):
-            content = content[1:-1]
-        out.append({"turn": msg["turn"], "speaker": msg["sender"], "content": content})
-    return out
 
 
 # ---------------------------------------------------------------------------
@@ -210,7 +191,9 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
     archive = Archive(checkpoint_dir=args.output_dir)
 
     try:
-        seeds = load_sotopia_seeds(
+        tfm.set_step("Step 1b: Embed seed scenarios")
+        seeds = load_sotopia_seeds_with_embeddings(
+            fm=tfm,
             seeds_path=args.seeds_path,
             limit=args.seed_limit,
             both_perspectives=True,
@@ -220,14 +203,9 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
         seeds = []
 
     if seeds:
-        print_info(f"Loaded {len(seeds)} seeds. Embedding...")
-        tfm.set_step("Step 1b: Embed seed scenarios")
-        texts = [s.to_text_for_embedding() for s in seeds]
-        embs = tfm.get_embeddings(texts)
-        for scn, e in zip(seeds, embs):
-            scn.embedding = e
+        for scn in seeds:
             archive.add_successful(scn)
-        print_info(f"Archive seeded with {archive.size} scenarios.")
+        print_info(f"Loaded {len(seeds)} seeds (embeddings from cache or freshly computed). Archive size: {archive.size}.")
 
     # Pick anchor
     if archive.size == 0:
@@ -444,6 +422,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
     success_detector = SuccessDetector(goal_threshold=args.goal_threshold)
 
     all_transcripts: list[list[dict]] = []
+    all_scores: list[dict] = []
     all_versions: list[SkillsChronicle] = [deepcopy(current_chronicle)]
     all_edit_reasons: dict[str, str] = {}
     outcome = 3
@@ -486,13 +465,22 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
                     )
                 )
             except Exception as e:
+                import traceback
+                err_msg = traceback.format_exc()
                 print_warn(f"Episode failed: {e}")
+                debug_output.setdefault("episode_errors", []).append({
+                    "attempt": attempt,
+                    "error": str(e),
+                    "traceback": err_msg,
+                })
+                _flush(debug_output)
                 break
 
         debug_output.pop("episode_results_partial", None)
         clean = _clean_transcript(episode_result.transcript)
         all_transcripts.append(clean)
         final_scores = episode_result.learner_scores
+        all_scores.append({"attempt": attempt, "scores": final_scores})
 
         # Display transcript
         transcript_text = "\n".join(
@@ -560,7 +548,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
         # -------------------------------------------------------------------
         tfm.set_step(f"Step 10c (attempt {attempt}): Adversarial Check (Reflection)")
         adv_result = adversarial.check_reflection(
-            ref_out, episode_result.transcript, anchor_task=anchor
+            ref_out, clean, anchor_task=anchor, scenario=scenario
         )
         status = "APPROVED" if adv_result.approved else "REJECTED"
         print_info(f"Adversarial: {status}")
@@ -605,6 +593,9 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
     if outcome == 1:
         print_step("Step 11: Meta-Reflection (skipped — solved on first attempt)")
         final_chronicle = current_chronicle
+    elif not all_transcripts:
+        print_step("Step 11: Meta-Reflection (skipped — no transcripts to learn from)")
+        final_chronicle = current_chronicle
     else:
         tfm.set_step(f"Step 11: Meta-Reflection (outcome={outcome})")
         final_chronicle = meta_mod.synthesize(
@@ -614,6 +605,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
             outcome=outcome,
             scenario=scenario,
             anchor_task=anchor,
+            attempt_scores=all_scores,
         )
         n_final = len(final_chronicle.entries)
         print_info(f"Meta-reflection produced {n_final} final chronicle entries.")
@@ -627,11 +619,12 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
                 "id": e.entry_id,
                 "type": e.entry_type,
                 "dimension": e.dimension,
-                "condition": e.condition[:80],
+                "condition": e.condition,
+                "guidance": e.guidance,
+                "provenance": e.provenance,
             }
             for e in final_chronicle.entries
         ],
-        "full_chronicle_md": final_chronicle.to_markdown(),
     }
     _flush(debug_output)
 

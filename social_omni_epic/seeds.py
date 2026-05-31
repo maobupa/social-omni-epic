@@ -13,6 +13,7 @@ and deterministic: {env_pk}_p0 and {env_pk}_p1. Both share source_scenario_id
 = env_pk so perspective-aware retrieval can deduplicate correctly.
 """
 import json
+import numpy as np
 from pathlib import Path
 from typing import Optional
 
@@ -101,3 +102,51 @@ def load_sotopia_seeds(
                 break
 
     return scenarios
+
+
+def load_sotopia_seeds_with_embeddings(
+    fm,
+    seeds_path: str = "data/sotopia_90_seeds.jsonl",
+    limit: Optional[int] = None,
+    both_perspectives: bool = True,
+) -> list[SocialScenario]:
+    """Load seeds and attach embeddings, using a file cache to avoid re-embedding.
+
+    Cache is stored as <seeds_path>.embeddings.npy + <seeds_path>.embeddings.meta.json.
+    It is invalidated when the seeds file mtime or entry count changes.
+    """
+    seeds = load_sotopia_seeds(
+        seeds_path=seeds_path, limit=limit, both_perspectives=both_perspectives
+    )
+    if not seeds:
+        return seeds
+
+    seeds_file = Path(seeds_path)
+    cache_emb = seeds_file.with_suffix(".embeddings.npy")
+    cache_meta = seeds_file.with_suffix(".embeddings.meta.json")
+
+    mtime = seeds_file.stat().st_mtime
+    n = len(seeds)
+
+    # Try loading from cache
+    if cache_emb.exists() and cache_meta.exists():
+        try:
+            meta = json.loads(cache_meta.read_text())
+            if meta.get("mtime") == mtime and meta.get("count") == n:
+                embs = np.load(cache_emb)
+                if len(embs) == n:
+                    for scn, emb in zip(seeds, embs):
+                        scn.embedding = emb.tolist()
+                    return seeds
+        except Exception:
+            pass  # cache corrupt — fall through to recompute
+
+    # Compute and cache
+    texts = [s.to_text_for_embedding() for s in seeds]
+    embs = fm.get_embeddings(texts)
+    for scn, emb in zip(seeds, embs):
+        scn.embedding = emb
+    np.save(cache_emb, np.array(embs))
+    cache_meta.write_text(json.dumps({"mtime": mtime, "count": n}))
+
+    return seeds

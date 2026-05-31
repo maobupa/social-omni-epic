@@ -111,9 +111,19 @@ class AdversarialAgent:
         reflection_output: ReflectionOutput,
         transcript: list[dict],
         anchor_task: Optional[SocialScenario] = None,
+        scenario: Optional[SocialScenario] = None,
     ) -> AdversarialCheckResult:
         """Mode 1: check post-reflection chronicle edits for quality."""
         parts: list[str] = []
+
+        if scenario:
+            target_goal = (
+                scenario.agent_goals[scenario.target_agent_idx]
+                if scenario.target_agent_idx < len(scenario.agent_goals)
+                else ""
+            )
+            parts.append(f"SCENARIO: {scenario.scenario}")
+            parts.append(f"TARGET AGENT GOAL: {target_goal}")
 
         if anchor_task and anchor_task.social_dynamic:
             parts.append(
@@ -123,7 +133,7 @@ class AdversarialAgent:
         # Summarize transcript for evidence checks
         parts.append("TRANSCRIPT (for evidence verification):")
         for t in transcript:
-            line = f"[T{t['turn']}] {t['sender']}→{t['receiver']}: {t['content']}"
+            line = f"[T{t['turn']}] {t['speaker']}: {t['content']}"
             parts.append(line)
 
         # EditReasons and the resulting entries

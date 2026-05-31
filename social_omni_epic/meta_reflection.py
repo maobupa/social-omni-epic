@@ -106,6 +106,7 @@ def _build_meta_prompt(
     outcome: int,
     scenario: SocialScenario,
     anchor_task: Optional[SocialScenario],
+    attempt_scores: Optional[list[dict]] = None,
 ) -> str:
     parts: list[str] = []
 
@@ -118,6 +119,17 @@ def _build_meta_prompt(
     parts.append(f"TARGET AGENT GOAL: {target_goal}")
     parts.append(f"INTERACTION TYPE: {scenario.interaction_type}")
     parts.append(f"OUTCOME: {'SOLVED after multiple attempts' if outcome == 2 else 'NEVER SOLVED'}")
+
+    if attempt_scores:
+        score_lines = []
+        for s in attempt_scores:
+            g = s["scores"].get("goal", 0)
+            o = s["scores"].get("overall_score", 0)
+            solved = g >= 7.0
+            score_lines.append(
+                f"  Attempt {s['attempt']}: goal={g:.1f}  overall={o:.2f}  {'SOLVED' if solved else 'failed'}"
+            )
+        parts.append("PER-ATTEMPT SCORES:\n" + "\n".join(score_lines))
 
     if anchor_task and anchor_task.social_dynamic:
         parts.append(
@@ -178,6 +190,7 @@ class MetaReflectionModule:
         outcome: int,
         scenario: SocialScenario,
         anchor_task: Optional[SocialScenario] = None,
+        attempt_scores: Optional[list[dict]] = None,
     ) -> SkillsChronicle:
         """Synthesize a final skills chronicle from all attempts.
 
@@ -189,7 +202,8 @@ class MetaReflectionModule:
         """
         system = _SYSTEM_SUCCESS if outcome == 2 else _SYSTEM_FAILURE
         prompt = _build_meta_prompt(
-            chronicle_versions, transcripts, edit_reasons, outcome, scenario, anchor_task
+            chronicle_versions, transcripts, edit_reasons, outcome, scenario, anchor_task,
+            attempt_scores=attempt_scores,
         )
 
         fallback = deepcopy(chronicle_versions[-1]) if chronicle_versions else SkillsChronicle()
