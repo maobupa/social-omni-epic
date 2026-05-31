@@ -181,7 +181,7 @@ class TaskGenerator:
                            coherence_feedback: Optional[list[str]] = None) -> str:
         parts = []
         if examples:
-            parts.append("EXAMPLE SCENARIOS FROM THE ARCHIVE (build BEYOND these):\n")
+            parts.append("EXAMPLE SCENARIOS FROM THE ARCHIVE (stepping stones — build on these dynamics, extending their complexity or adding new structural twists):\n")
             for i, ex in enumerate(examples):
                 parts.append(f"--- Example {i+1} ---")
                 parts.append(_format_scenario_for_prompt(ex))
@@ -206,9 +206,9 @@ class TaskGenerator:
                 + "\nPlease fix these issues in the new scenario."
             )
         parts.append(
-            "\nGenerate ONE NEW social scenario that is MEANINGFULLY DIFFERENT from the examples above. "
-            "Do not merely change surface details (names, locations). Change the underlying social dynamics, "
-            "power structures, information asymmetries, or moral dimensions. "
+            "\nGenerate ONE NEW social scenario that extends or builds upon the social dynamics shown above — "
+            "more complex stakes, a new structural twist, or a different power asymmetry layered on a familiar tension. "
+            "Do not merely re-skin with different names or settings; the structural novelty must be genuine. "
             "Return ONLY a JSON object matching the required schema."
         )
         return "\n".join(parts)

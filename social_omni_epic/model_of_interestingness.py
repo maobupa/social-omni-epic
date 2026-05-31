@@ -5,8 +5,9 @@ from .fm import FM
 
 SYSTEM_PROMPT = """You are an expert judge evaluating a newly proposed social scenario on two dimensions.
 
-DIMENSION 1 — NOVELTY (interesting): Is the scenario genuinely different from the existing archived scenarios shown?
-A scenario lacks novelty if it merely changes names, locations, or surface details while repeating the same underlying social dynamic, power structure, or strategic challenge.
+DIMENSION 1 — NOVELTY (interestingly new vs. archive): Is this scenario interestingly new compared to the shown archive scenarios?
+A scenario FAILS novelty if it re-skins existing dynamics — same underlying power structure, same type of tension, same strategic challenge — just with different names, occupations, or settings.
+A scenario PASSES novelty if it explores a genuinely different social dynamic, introduces a new type of conflict or asymmetry, or adds structural complexity not present in any shown scenario.
 
 DIMENSION 2 — LEARNABILITY: Is there at least one viable social strategy the agent could discover and improve upon across attempts?
 A scenario is NOT learnable if:
@@ -16,7 +17,7 @@ A scenario is NOT learnable if:
 A learnable scenario has a discoverable strategy path: empathy, timing, framing, strategic disclosure, or trust-building could plausibly change the outcome.
 
 Respond with a JSON object:
-{"interesting": true/false, "learnable": true/false, "reason": "concise explanation covering both dimensions"}
+{"novel": true/false, "learnable": true/false, "reason": "concise explanation covering both dimensions"}
 
 The scenario passes only if BOTH are true."""
 
@@ -50,15 +51,15 @@ class ModelOfInterestingness:
             parts.append("\n(No existing scenarios yet — only evaluate validity.)")
         parts.append(
             "\nEvaluate the NEW scenario on NOVELTY and LEARNABILITY. "
-            'Respond with JSON: {"interesting": true/false, "learnable": true/false, "reason": "..."}'
+            'Respond with JSON: {"novel": true/false, "learnable": true/false, "reason": "..."}'
         )
         try:
             d = self.fm.query_json(SYSTEM_PROMPT, "\n".join(parts), temperature=0.3)
         except Exception as e:
             return True, f"MoI error (defaulting to pass): {e}"
 
-        interesting = bool(d.get("interesting", True))
+        novel = bool(d.get("novel", True))
         learnable = bool(d.get("learnable", True))
         reason = str(d.get("reason", ""))
-        passed = interesting and learnable
+        passed = novel and learnable
         return passed, reason
