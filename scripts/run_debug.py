@@ -116,8 +116,13 @@ def _make_mock_episode_result(scenario, attempt: int):
 # Debug pipeline
 # ---------------------------------------------------------------------------
 
-def run_debug_pipeline(args) -> dict:
+def run_debug_pipeline(args, out_path: Path) -> dict:
     """Run the full single-scenario debug pipeline. Returns debug_output dict."""
+
+    def _flush(d: dict) -> None:
+        """Write current debug_output state to disk so it can be tailed live."""
+        out_path.write_text(json.dumps(d, indent=2, default=str))
+
     debug_output: dict = {
         "args": vars(args),
         "timestamp": datetime.now().isoformat(),
@@ -204,6 +209,8 @@ def run_debug_pipeline(args) -> dict:
                 SkillsChronicle.from_markdown(anchor.skills_final_md).to_markdown() or "(empty)"
             )
 
+    _flush(debug_output)
+
     # -----------------------------------------------------------------------
     # Step 2: Scenario generation (verbalized sampling)
     # -----------------------------------------------------------------------
@@ -248,6 +255,7 @@ def run_debug_pipeline(args) -> dict:
         "relationship": scenario.relationship,
         "agent_goals": scenario.agent_goals,
     }
+    _flush(debug_output)
 
     # -----------------------------------------------------------------------
     # Step 3: Embed
@@ -278,6 +286,7 @@ def run_debug_pipeline(args) -> dict:
     debug_output["moi_result"] = {"passed": is_interesting, "reason": moi_reason}
     if not is_interesting:
         print_warn("MoI rejected scenario. Continuing anyway for debug purposes.")
+    _flush(debug_output)
 
     # -----------------------------------------------------------------------
     # Step 5: Coherence gate  (mirrors run_phase2.py step 5)
@@ -346,6 +355,7 @@ def run_debug_pipeline(args) -> dict:
         "max_cosine_sim": max_sim,
         "threshold": diversity_threshold,
     }
+    _flush(debug_output)
 
     # -----------------------------------------------------------------------
     # Step 7: Classify
@@ -381,7 +391,7 @@ def run_debug_pipeline(args) -> dict:
     # -----------------------------------------------------------------------
     print_step("Step 9: Inherit Skills Chronicle")
     current_chronicle = SkillsChronicle.from_markdown(
-        anchor.skills_final_md if anchor else ""
+        (anchor.skills_final_md or "") if anchor else ""
     )
     n_inherited = len(current_chronicle.entries)
     print_info(f"Inherited {n_inherited} entries from anchor.")
@@ -542,6 +552,7 @@ def run_debug_pipeline(args) -> dict:
 
     debug_output["outcome"] = outcome
     debug_output["final_scores"] = final_scores
+    _flush(debug_output)
 
     # -----------------------------------------------------------------------
     # Step 11: Meta-reflection
@@ -576,7 +587,9 @@ def run_debug_pipeline(args) -> dict:
             }
             for e in final_chronicle.entries
         ],
+        "full_chronicle_md": final_chronicle.to_markdown(),
     }
+    _flush(debug_output)
 
     # -----------------------------------------------------------------------
     # Step 12: Adversarial final check
@@ -670,7 +683,7 @@ def main() -> None:
                         help="Max coherence-gate regeneration attempts (default: 2)")
     parser.add_argument("--diversity-threshold", type=float, default=0.92,
                         help="Cosine similarity threshold for diversity gate (default: 0.92)")
-    parser.add_argument("--output-dir", type=str, default="output/debug")
+    parser.add_argument("--output-dir", type=str, default="debug_log")
     args = parser.parse_args()
 
     if not (os.getenv("LIGHTNING_AI_API_KEY") or os.getenv("OPENAI_API_KEY")):
@@ -680,16 +693,18 @@ def main() -> None:
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    t_start = time.monotonic()
-    debug_output = run_debug_pipeline(args)
-    elapsed = time.monotonic() - t_start
-
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     out_path = output_dir / f"debug_{timestamp}.json"
-    with open(out_path, "w") as f:
-        json.dump(debug_output, f, indent=2, default=str)
+    out_path.write_text("{}")  # create file immediately so it can be opened before pipeline ends
+    print(f"Debug log: {out_path}  (updates live after each step)")
 
-    print(f"\nDebug log saved to: {out_path}  (total wall time: {elapsed:.1f}s)")
+    t_start = time.monotonic()
+    debug_output = run_debug_pipeline(args, out_path)
+    elapsed = time.monotonic() - t_start
+
+    # Final write includes llm_traces which are only added at the very end
+    out_path.write_text(json.dumps(debug_output, indent=2, default=str))
+    print(f"\nDebug log finalised: {out_path}  (total wall time: {elapsed:.1f}s)")
 
 
 if __name__ == "__main__":
