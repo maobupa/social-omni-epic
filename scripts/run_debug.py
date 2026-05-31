@@ -70,6 +70,31 @@ from social_omni_epic.tracing_fm import (
 
 
 # ---------------------------------------------------------------------------
+# Transcript helpers
+# ---------------------------------------------------------------------------
+
+import re as _re
+
+def _clean_transcript(raw: list[dict]) -> list[dict]:
+    """Strip SOTOPIA scaffolding: drop Environment messages, 'did nothing',
+    and the '[private to [...]]  said: ' prefix from agent speech."""
+    out = []
+    for msg in raw:
+        if msg.get("sender") == "Environment":
+            continue
+        content = msg.get("content", "")
+        if "did nothing" in content:
+            continue
+        # Strip '[private to ['X']]  said: ' prefix
+        content = _re.sub(r"^\[private to \[.*?\]\]\s+said:\s*", "", content).strip()
+        # Strip surrounding quotes that SOTOPIA adds
+        if content.startswith('"') and content.endswith('"'):
+            content = content[1:-1]
+        out.append({"turn": msg["turn"], "speaker": msg["sender"], "content": content})
+    return out
+
+
+# ---------------------------------------------------------------------------
 # Mock episode (for --skip-episode mode)
 # ---------------------------------------------------------------------------
 
@@ -433,6 +458,13 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
                 from social_omni_epic.episode_runner import run_single_episode
                 from social_omni_epic.sotopia_bridge import scenario_to_sotopia_profiles
                 env_profile, agent_profiles = scenario_to_sotopia_profiles(scenario)
+                def _on_turn(partial_transcript: list[dict]) -> None:
+                    debug_output["episode_results_partial"] = {
+                        "attempt": attempt,
+                        "transcript_so_far": _clean_transcript(partial_transcript),
+                    }
+                    _flush(debug_output)
+
                 episode_result = asyncio.run(
                     run_single_episode(
                         env_profile=env_profile,
@@ -442,12 +474,14 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
                         partner_model=args.partner_model,
                         memory_prompt=memory_prompt,
                         max_turns=args.max_turns,
+                        on_turn=_on_turn,
                     )
                 )
             except Exception as e:
                 print_warn(f"Episode failed: {e}")
                 break
 
+        debug_output.pop("episode_results_partial", None)
         all_transcripts.append(episode_result.transcript)
         final_scores = episode_result.learner_scores
 
@@ -469,6 +503,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
 
         debug_output["episode_results"].append({
             "attempt": attempt,
+            "transcript_clean": _clean_transcript(episode_result.transcript),
             "transcript": episode_result.transcript,
             "scores": final_scores,
             "solved": solved,
@@ -525,11 +560,11 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
             print_section("Issues", "\n".join(f"  - {i}" for i in adv_result.issues))
         if not adv_result.approved and adv_result.critique:
             print_warn(f"Critique: {adv_result.critique[:300]}")
-            print_warn("Re-reflecting with critique...")
-            tfm.set_step(f"Step 10c (attempt {attempt}): Re-Reflection")
-            ref_out = reflection_mod.reflect_with_critique(
-                original_output=ref_out,
-                critique=adv_result.critique,
+            print_warn("Synthesizing reflection + critique...")
+            tfm.set_step(f"Step 10c (attempt {attempt}): Synthesis")
+            ref_out = reflection_mod.synthesize_with_critique(
+                reflection_output=ref_out,
+                adversarial_critique=adv_result.critique,
                 chronicle=current_chronicle,
                 scenario=scenario,
                 transcripts=all_transcripts,
@@ -537,7 +572,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
                 attempt_num=attempt,
                 anchor_task=anchor,
             )
-            print_info("Re-reflection complete.")
+            print_info("Synthesis complete.")
 
         debug_output["adversarial_reflection_results"].append({
             "attempt": attempt,
@@ -592,31 +627,8 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
     }
     _flush(debug_output)
 
-    # -----------------------------------------------------------------------
-    # Step 12: Adversarial final check (skipped for outcome 1 — no synthesis occurred)
-    # -----------------------------------------------------------------------
-    if outcome == 1:
-        print_step("Step 12: Adversarial Final Check (skipped — solved on first attempt)")
-        debug_output["adversarial_final"] = {"skipped": True, "reason": "outcome 1"}
-        _flush(debug_output)
-    else:
-        tfm.set_step("Step 12: Adversarial Final Check")
-        adv_final = adversarial.check_final(
-            final_chronicle, anchor.skills_final_md if anchor else "", outcome=outcome
-        )
-        status = "APPROVED" if adv_final.approved else "REJECTED"
-        print_info(f"Adversarial final: {status}")
-        if adv_final.issues:
-            print_section("Final Issues", "\n".join(f"  - {i}" for i in adv_final.issues))
-        if adv_final.active_misdirection_ids:
-            print_warn(f"Active misdirection flagged: {adv_final.active_misdirection_ids}")
-        debug_output["adversarial_final"] = {
-            "approved": adv_final.approved,
-            "issues": adv_final.issues,
-            "flagged_entry_ids": adv_final.flagged_entry_ids,
-            "active_misdirection_ids": adv_final.active_misdirection_ids,
-            "critique": adv_final.critique,
-        }
+    # Step 12 removed — adversarial final check dropped (meta-reflection entry-level
+    # checks already validated individually; redundant final check had no downstream action)
 
     # -----------------------------------------------------------------------
     # Step 13: SCENARIO_TITLE

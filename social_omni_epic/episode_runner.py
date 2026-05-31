@@ -19,7 +19,7 @@ valid JSON, a concrete example prompt prevents schema-echo, no PydanticOutputPar
 """
 import asyncio
 from dataclasses import dataclass, field
-from typing import Any, Optional
+from typing import Any, Callable, Optional
 
 from sotopia.agents import LLMAgent
 from sotopia.agents.llm_agent import Agents
@@ -214,6 +214,7 @@ async def run_single_episode(
     max_turns: int = 20,
     # evaluator_model kept for backward-compat callers that pass it; unused
     evaluator_model: str = "",
+    on_turn: Optional[Callable[[list[dict]], None]] = None,
 ) -> EpisodeResult:
     """Run one episode. agent_profiles[0] is the learner, [1] the partner."""
     env = ParallelSotopiaEnv(
@@ -280,6 +281,17 @@ async def run_single_episode(
             [("Environment", n, environment_messages[n]) for n in env.agents]
         )
         done = all(terminated.values())
+        if on_turn is not None:
+            partial: list[dict] = []
+            for t_idx, t in enumerate(messages):
+                for sender, receiver, msg in t:
+                    partial.append({
+                        "turn": t_idx,
+                        "sender": sender,
+                        "receiver": receiver,
+                        "content": msg.to_natural_language() if hasattr(msg, "to_natural_language") else str(msg),
+                    })
+            on_turn(partial)
 
     learner_scores, partner_scores, reasoning = _evaluate_episode(env.inbox, fm)
 

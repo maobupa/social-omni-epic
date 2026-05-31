@@ -68,6 +68,7 @@ def scenario_to_sotopia_profiles(
                 decision_making_style=ap.decision_making_style or "",
                 secret=ap.secret or "",
                 mbti=getattr(ap, "mbti", "") or "",
+                personality_and_values=ap.public_info or "",
             )
         )
 
@@ -77,8 +78,17 @@ def scenario_to_sotopia_profiles(
     else:
         rel_int = RELATIONSHIP_STR_TO_INT.get((rel_raw or "").lower(), 2)
 
+    # Append relationship background to scenario text so both agents share the
+    # context of their prior history.
+    scenario_text = scenario.scenario
+    if scenario.relationship_background and scenario.relationship_background.strip():
+        scenario_text = (
+            scenario_text.rstrip()
+            + f"\n\nBackground on their relationship: {scenario.relationship_background.strip()}"
+        )
+
     env_profile = SotopiaEnvironmentProfile(
-        scenario=scenario.scenario,
+        scenario=scenario_text,
         agent_goals=list(scenario.agent_goals),
         relationship=rel_int,
         tag=scenario.tag or "",

@@ -7,22 +7,46 @@ from .validation import validate_scenario, dict_to_scenario
 from .embedding_utils import get_similar_scenarios
 
 
+_GOAL_FORMAT_GUIDE = """
+AGENT GOALS — this is the most important part. Follow this format exactly:
+
+  "Your goal is to [concrete active objective]. <extra_info>[Hidden constraint or motivation — what you know that the other agent does NOT, what your real minimum/maximum is, what you are unwilling to concede, what you fear or desperately need]</extra_info>"
+
+Rules for goals:
+- BOTH agents must have ACTIVE goals (things they are trying to achieve), not passive/defensive ones ("avoid eviction" is bad; "secure 4 rehearsal nights this week or miss a career-defining showcase" is good).
+- Goals must be STRUCTURALLY INCOMPATIBLE or require genuine trade-offs — if both agents can get what they want with one polite exchange, the scenario fails the learnability test.
+- The <extra_info> must contain the hidden stake that gives each agent a reason to push back, not immediately agree.
+- The secret field in the agent profile should connect to or deepen the <extra_info>.
+- Do NOT write goals that telegraph cooperation ("I want to find a mutually beneficial solution"). Goals should encode each agent's self-interest first.
+
+Example of GOOD goals (from reference dataset):
+  Agent 0: "You are the buyer. Your target price is $454. If you pay significantly more you face a penalty; if you negotiate below target you get a bonus. <extra_info>You know comparable units sold for $420 last month and you have a competing offer at $480 you can invoke.</extra_info>"
+  Agent 1: "You are the seller. Your target price is $610. You face a penalty for going significantly below target. <extra_info>You have two other interested buyers and a deadline in 48 hours — you can use urgency but must not reveal you are desperate to close.</extra_info>"
+
+Example of BAD goals (too cooperative, no tension):
+  Agent 0: "You want a quiet schedule for your classes."
+  Agent 1: "You want permission to rehearse without being fined."
+"""
+
+_PROFILE_GUIDE = """
+AGENT PROFILES — each profile must be:
+- Internally consistent: occupation, personality (big_five, mbti, moral_values), decision_making_style, and public_info should all cohere.
+- public_info: 2-3 sentence narrative bio written in third person. Include name, defining personality traits, and one specific personal detail that shapes how they engage socially. This is shown to the agent as their own background.
+- secret: one specific hidden fact that creates vulnerability or leverage relevant to THIS scenario's tension — not a generic background detail.
+"""
+
+_SHARED_RULES = """
+Scenarios must involve realistic human social dynamics. No fantasy or sci-fi. Stakes can be mundane or high — what matters is that the social tension is genuine and that skill changes outcomes.
+
+The scenario description must set up the conflict clearly: who wants what, what is at stake for each party, and why a quick agreement is NOT the natural outcome.
+"""
+
 VS_SYSTEM_PROMPT = """You are a creative social scenario designer. Generate social scenarios that are INTERESTING and LEARNABLE.
 
 INTERESTING: explores a novel social dynamic, power structure, or relational tension — not a generic archetype. Creative, specific, worth engaging with.
 
-LEARNABLE: the learner agent's outcome must be meaningfully responsive to HOW they engage (empathy, timing, framing, strategic disclosure, trust-building). Avoid scenarios where the goal is unreachable through conversation, or where any polite response already succeeds.
-
-Each scenario must include:
-1. A vivid scenario description (the setting, context, what is happening)
-2. Exactly 2 character profiles with distinct personalities, backgrounds, and motivations
-3. Private goals for each character (what they want to achieve, which may conflict)
-4. The pre-existing relationship between the characters
-5. The type of interaction (negotiation, cooperation, conflict, persuasion, support, competition, deception, mediation, etc.)
-6. Difficulty tags describing what makes this scenario challenging
-
-Scenarios must involve realistic human social dynamics. Avoid fantasy or sci-fi settings. Stakes can range from mundane to high — what matters is that the social tension is real and human.
-
+LEARNABLE: the learner agent's outcome must be meaningfully responsive to HOW they engage. Avoid scenarios where any polite response already succeeds.
+""" + _SHARED_RULES + _GOAL_FORMAT_GUIDE + _PROFILE_GUIDE + """
 VERBALIZED SAMPLING: You will generate {n_candidates} distinct candidates and score each on two axes:
 - "probability": typicality (0.01–0.50) — how likely would a standard AI spontaneously propose this exact social dynamic? Low = more interesting.
 - "learnability_score": skill-responsiveness (0.0–1.0) — how much does social skill move the outcome? High = more learnable.
@@ -42,9 +66,9 @@ Each candidate must follow the schema:
        "secret": "...", "mbti": "...", "public_info": "2-3 sentence narrative bio"}},
       {{ ... }}
     ],
-    "agent_goals": ["goal >= 20 chars", "goal >= 20 chars"],
+    "agent_goals": ["Your goal is to ... <extra_info>...</extra_info>", "Your goal is to ... <extra_info>...</extra_info>"],
     "relationship": "one of: stranger / acquaintance / friend / romantic / family",
-    "relationship_background": "2-3 sentences of shared history consistent with the relationship label. Empty string if strangers.",
+    "relationship_background": "2-3 sentences of shared history. Empty string if strangers.",
     "interaction_type": "string",
     "tag": "string",
     "difficulty_tags": ["string", ...]
@@ -58,18 +82,8 @@ SYSTEM_PROMPT = """You are a creative social scenario designer. Generate social 
 
 INTERESTING: explores a novel social dynamic, power structure, or relational tension — not a generic archetype. Creative, specific, worth engaging with.
 
-LEARNABLE: the learner agent's outcome must be meaningfully responsive to HOW they engage (empathy, timing, framing, strategic disclosure, trust-building). Avoid scenarios where the goal is unreachable through conversation, or where any polite response already succeeds.
-
-Each scenario must include:
-1. A vivid scenario description (the setting, context, what is happening)
-2. Exactly 2 character profiles with distinct personalities, backgrounds, and motivations
-3. Private goals for each character (what they want to achieve, which may conflict)
-4. The pre-existing relationship between the characters
-5. The type of interaction (negotiation, cooperation, conflict, persuasion, support, competition, deception, mediation, etc.)
-6. Difficulty tags describing what makes this scenario challenging
-
-Scenarios must involve realistic human social dynamics. Avoid fantasy or sci-fi settings. Stakes can range from mundane to high — what matters is that the social tension is real and human.
-
+LEARNABLE: the learner agent's outcome must be meaningfully responsive to HOW they engage. Avoid scenarios where any polite response already succeeds.
+""" + _SHARED_RULES + _GOAL_FORMAT_GUIDE + _PROFILE_GUIDE + """
 Respond with valid JSON matching exactly this schema:
 {
   "scenario": "string (>= 50 chars)",
@@ -77,12 +91,12 @@ Respond with valid JSON matching exactly this schema:
     {"first_name": "...", "last_name": "...", "age": 0, "gender_identity": "...",
      "occupation": "...", "big_five": "...", "moral_values": "...",
      "schwartz_portrait_value": "...", "decision_making_style": "...",
-     "secret": "...", "mbti": "...", "public_info": "2-3 sentence narrative bio (name, defining traits, personal details)"},
-    { ... }  // exactly 2 profiles
+     "secret": "...", "mbti": "...", "public_info": "2-3 sentence narrative bio"},
+    { ... }
   ],
-  "agent_goals": ["goal for agent 1 (>= 20 chars)", "goal for agent 2 (>= 20 chars)"],
+  "agent_goals": ["Your goal is to ... <extra_info>...</extra_info>", "Your goal is to ... <extra_info>...</extra_info>"],
   "relationship": "one of: stranger / acquaintance / friend / romantic / family",
-  "relationship_background": "2-3 sentences of shared history consistent with the relationship label. Empty string if strangers.",
+  "relationship_background": "2-3 sentences of shared history. Empty string if strangers.",
   "interaction_type": "string",
   "tag": "string",
   "difficulty_tags": ["string", ...]

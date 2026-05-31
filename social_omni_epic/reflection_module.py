@@ -240,6 +240,94 @@ def _parse_reflection_output(
 
 
 # ---------------------------------------------------------------------------
+# Synthesis prompt (reflection + adversarial critique → final edits)
+# ---------------------------------------------------------------------------
+
+_SYNTHESIS_SYSTEM = """You are the final arbiter synthesizing chronicle edits after a reflection-adversarial review cycle.
+
+You have:
+  1. The scenario and transcript showing what failed
+  2. The reflection agent's diagnosis of why it failed and proposed chronicle edits
+  3. The adversarial agent's critique of those proposed edits
+
+Your task: produce the DEFINITIVE chronicle edits. You must:
+  - Preserve the reflection's valid insights about what failed and why
+  - Address legitimate adversarial concerns: evidence gaps (EditReason lacks transcript quotes), abstraction violations (Condition contains proper nouns or scenario-specific details), over-broad Conditions that would also describe the parent scenario
+  - Discard adversarial objections that are overly strict or miss the point of the failure
+  - You are NOT re-doing the reflection from scratch — you are refining the proposed edits using the critique as a quality filter
+
+Output format is identical to the reflection output:
+  <EditReason id="ENTRY_ID">Justification with SPECIFIC transcript evidence</EditReason>
+  <Entry id="ENTRY_ID">
+  ... complete entry ...
+  </Entry>
+  <MisdirectionFlag id="ENTRY_ID"/>   (optional)
+
+Output ONLY <EditReason>, <Entry>, and <MisdirectionFlag> blocks. No <Diagnosis>, no commentary."""
+
+
+def _build_synthesis_prompt(
+    reflection_output: "ReflectionOutput",
+    adversarial_critique: str,
+    chronicle: "SkillsChronicle",
+    scenario: "SocialScenario",
+    transcripts: list[list[dict]],
+    prior_edit_reasons: dict[str, str],
+    attempt_num: int,
+    anchor_task: Optional["SocialScenario"],
+) -> str:
+    parts: list[str] = []
+
+    target_goal = (
+        scenario.agent_goals[scenario.target_agent_idx]
+        if scenario.target_agent_idx < len(scenario.agent_goals)
+        else ""
+    )
+    parts.append(f"SCENARIO: {scenario.scenario}")
+    parts.append(f"TARGET AGENT GOAL: {target_goal}")
+    if anchor_task and anchor_task.social_dynamic:
+        parts.append(f"PARENT SCENARIO SOCIAL DYNAMIC: {anchor_task.social_dynamic}")
+
+    if chronicle.entries:
+        parts.append("\nCURRENT SKILLS CHRONICLE (before this reflection pass):")
+        parts.append(chronicle.to_markdown())
+    else:
+        parts.append("\nCURRENT SKILLS CHRONICLE: (empty)")
+
+    parts.append(f"\nFAILED TRANSCRIPT (attempt {attempt_num}):")
+    if transcripts:
+        parts.append(_format_transcript(transcripts[-1], attempt_num, max_chars=3000))
+
+    # Reflection output
+    parts.append("\nREFLECTION AGENT'S DIAGNOSIS:")
+    parts.append(reflection_output.diagnosis or "(no diagnosis)")
+
+    parts.append("\nREFLECTION AGENT'S PROPOSED EDITS:")
+    if reflection_output.edit_reasons:
+        for eid, reason in reflection_output.edit_reasons.items():
+            parts.append(f"  [{eid}] EditReason: {reason}")
+            entry = reflection_output.updated_chronicle.get_entry(eid)
+            if entry:
+                parts.append(entry.to_tag_block())
+    else:
+        parts.append("(no edits proposed)")
+
+    if reflection_output.misdirection_entry_ids:
+        parts.append(
+            f"\nEntries self-flagged as misdirection by reflection: "
+            + ", ".join(reflection_output.misdirection_entry_ids)
+        )
+
+    parts.append(f"\nADVERSARIAL CRITIQUE:\n{adversarial_critique}")
+
+    parts.append(
+        "\nNow produce the final definitive chronicle edits, refining the reflection's "
+        "proposals to satisfy the adversarial concerns where valid."
+    )
+    return "\n\n".join(parts)
+
+
+# ---------------------------------------------------------------------------
 # Main class
 # ---------------------------------------------------------------------------
 
@@ -289,10 +377,10 @@ class ReflectionModule:
             misdirection_entry_ids=[],
         )
 
-    def reflect_with_critique(
+    def synthesize_with_critique(
         self,
-        original_output: ReflectionOutput,
-        critique: str,
+        reflection_output: ReflectionOutput,
+        adversarial_critique: str,
         chronicle: SkillsChronicle,
         scenario: SocialScenario,
         transcripts: list[list[dict]],
@@ -300,20 +388,21 @@ class ReflectionModule:
         attempt_num: int,
         anchor_task: Optional[SocialScenario] = None,
     ) -> ReflectionOutput:
-        """Re-reflect after adversarial agent rejected the initial edits."""
-        base_prompt = _build_prompt(
-            chronicle, scenario, transcripts, prior_edit_reasons, attempt_num, anchor_task
-        )
-        prompt = (
-            base_prompt
-            + f"\n\nADVERSARIAL CRITIQUE OF YOUR PREVIOUS EDITS (must address):\n{critique}\n\n"
-            "Revise your edits to address this critique. Re-output the full "
-            "<Diagnosis>, <EditReason>, <Entry>, and <MisdirectionFlag> blocks."
+        """Synthesize final chronicle edits from reflection output + adversarial critique.
+
+        Rather than re-running reflection from scratch, this agent reads both
+        the reflection's diagnosis/edits and the adversarial critique simultaneously
+        and produces the definitive edits — preserving valid reflection insights while
+        addressing legitimate adversarial concerns.
+        """
+        prompt = _build_synthesis_prompt(
+            reflection_output, adversarial_critique, chronicle,
+            scenario, transcripts, prior_edit_reasons, attempt_num, anchor_task
         )
         try:
-            llm_output = self.fm.query(_SYSTEM, prompt, temperature=0.3)
+            llm_output = self.fm.query(_SYNTHESIS_SYSTEM, prompt, temperature=0.3)
             return _parse_reflection_output(
                 llm_output, chronicle, scenario.id, attempt_num
             )
         except Exception:
-            return original_output  # fall back to original on error
+            return reflection_output  # fall back to original reflection on error
