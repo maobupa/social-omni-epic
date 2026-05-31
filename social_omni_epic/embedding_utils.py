@@ -1,17 +1,51 @@
 import numpy as np
-from scipy.spatial.distance import cosine
+from typing import Optional
 
 
 def get_similar_scenarios(
     query_embedding: list[float],
     archive_embeddings: list[list[float]],
     num_returns: int = 5,
+    source_ids: Optional[list[str]] = None,
+    agent_idxs: Optional[list[int]] = None,
+    preferred_agent_idx: Optional[int] = None,
 ) -> list[int]:
-    if not archive_embeddings:
+    """Return indices of the top-K most similar archive entries.
+
+    When source_ids is provided, perspective-aware deduplication runs BEFORE
+    cosine similarity: for each source_scenario_id, only one entry enters the
+    candidate pool. The entry matching preferred_agent_idx is preferred; if
+    neither or both match, the first-seen entry is kept.
+    """
+    n = len(archive_embeddings)
+    if n == 0:
         return []
-    distances = [cosine(query_embedding, emb) for emb in archive_embeddings]
-    sorted_indices = np.argsort(distances)
-    return sorted_indices[:num_returns].tolist()
+
+    # Build candidate pool: at most one entry per source_scenario_id.
+    if source_ids is not None:
+        seen: dict[str, int] = {}   # source_id -> chosen archive index
+        for i in range(n):
+            sid = source_ids[i]
+            if sid not in seen:
+                seen[sid] = i
+            elif (preferred_agent_idx is not None
+                  and agent_idxs is not None
+                  and agent_idxs[i] == preferred_agent_idx):
+                seen[sid] = i   # replace with perspective-matching entry
+        candidate_indices = list(seen.values())
+    else:
+        candidate_indices = list(range(n))
+
+    if not candidate_indices:
+        return []
+
+    # Cosine similarity on the reduced candidate pool.
+    emb_arr = np.array([archive_embeddings[i] for i in candidate_indices], dtype=float)
+    q = np.array(query_embedding, dtype=float)
+    norms = np.linalg.norm(emb_arr, axis=1) * np.linalg.norm(q) + 1e-9
+    sims = emb_arr @ q / norms
+    sorted_pos = np.argsort(-sims)
+    return [candidate_indices[int(p)] for p in sorted_pos[:num_returns]]
 
 
 def compute_cell_coverage(embeddings: np.ndarray, num_bins: int = 20) -> float:

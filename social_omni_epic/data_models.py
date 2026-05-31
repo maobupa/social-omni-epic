@@ -32,6 +32,8 @@ class SocialScenario(BaseModel):
     interaction_type: str = ""
     difficulty_tags: list[str] = []
     source: str = "generated"
+    source_env_id: str = ""          # env_pk for SOTOPIA seeds; "" for generated
+    source_scenario_id: str = ""     # dedup key: env_pk for seeds, base UUID for generated
     embedding: Optional[list[float]] = None
     parent_example_ids: list[str] = []
     moi_reasoning: str = ""
@@ -65,13 +67,17 @@ class SocialScenario(BaseModel):
             f"Interaction type: {self.interaction_type}",
             f"Relationship: {self.relationship}",
         ]
-        for i, goal in enumerate(self.agent_goals):
-            agent_name = (
-                self.agent_profiles[i].first_name
-                if i < len(self.agent_profiles)
-                else f"Agent{i}"
-            )
-            parts.append(f"{agent_name}'s goal: {goal}")
+        # Perspective-aware: label which goal belongs to the learner vs. partner.
+        # The two perspectives of the same scenario must produce different texts.
+        learner_idx = self.target_agent_idx
+        partner_idx = 1 - learner_idx
+        def _name(idx: int) -> str:
+            return (self.agent_profiles[idx].first_name
+                    if idx < len(self.agent_profiles) else f"Agent{idx}")
+        if len(self.agent_goals) > learner_idx:
+            parts.append(f"Learner goal ({_name(learner_idx)}): {self.agent_goals[learner_idx]}")
+        if len(self.agent_goals) > partner_idx:
+            parts.append(f"Partner goal ({_name(partner_idx)}): {self.agent_goals[partner_idx]}")
         for agent in self.agent_profiles:
             parts.append(
                 f"Character {agent.first_name}: {agent.occupation}; {agent.big_five}"

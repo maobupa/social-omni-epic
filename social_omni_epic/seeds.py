@@ -7,9 +7,10 @@ Primary source:
 Each row has: env_pk, codename, scenario, agent_goals (2), agent_profiles (2),
 relationship_type (int 0-5), relationship_label, relationship_background.
 
-Learner convention: agent_profiles[0] / agent_goals[0] is always the learner
-(target_agent_idx=0). The task generator places the "active initiator" in
-position 0 for generated scenarios to stay consistent.
+With both_perspectives=True (default), each row yields TWO archive entries —
+one with target_agent_idx=0 and one with target_agent_idx=1. IDs are stable
+and deterministic: {env_pk}_p0 and {env_pk}_p1. Both share source_scenario_id
+= env_pk so perspective-aware retrieval can deduplicate correctly.
 
 Fallback: if the primary file is missing, build_fallback_seeds() generates
 seeds from short descriptions using the task generator.
@@ -47,7 +48,8 @@ def _make_agent_profile(d: dict) -> AgentProfile:
 def load_sotopia_seeds(
     seeds_path: str = "data/sotopia_90_seeds.jsonl",
     limit: Optional[int] = None,
-    # Legacy kwargs accepted but ignored (kept for call-site compatibility)
+    both_perspectives: bool = True,
+    # Legacy kwargs accepted but ignored
     data_dir: Optional[str] = None,
     episodes_path: Optional[str] = None,
     restrict_to_episodes_v1: bool = True,
@@ -59,12 +61,14 @@ def load_sotopia_seeds(
         )
 
     scenarios: list[SocialScenario] = []
+    rows_read = 0
     with open(path) as f:
         for line in f:
             line = line.strip()
             if not line:
                 continue
             row = json.loads(line)
+            rows_read += 1
 
             profiles = [_make_agent_profile(p) for p in row.get("agent_profiles", [])]
             while len(profiles) < 2:
@@ -73,7 +77,8 @@ def load_sotopia_seeds(
             agent_goals = row.get("agent_goals") or ["", ""]
             agent_goals = (list(agent_goals) + ["", ""])[:2]
 
-            scenarios.append(SocialScenario(
+            env_pk = row.get("env_pk", f"seed_{rows_read}")
+            common = dict(
                 iteration=-1,
                 scenario=row.get("scenario", ""),
                 agent_profiles=profiles,
@@ -83,10 +88,18 @@ def load_sotopia_seeds(
                 tag=row.get("codename", "") or row.get("source", ""),
                 interaction_type=row.get("source", ""),
                 source="seed_sotopia",
-                target_agent_idx=0,  # agent_0 is always the learner for seeds
-            ))
+                source_env_id=env_pk,
+                source_scenario_id=env_pk,  # shared dedup key for both perspectives
+            )
 
-            if limit is not None and len(scenarios) >= limit:
+            for idx in ([0, 1] if both_perspectives else [0]):
+                scenarios.append(SocialScenario(
+                    id=f"{env_pk}_p{idx}",
+                    target_agent_idx=idx,
+                    **common,
+                ))
+
+            if limit is not None and rows_read >= limit:
                 break
 
     return scenarios

@@ -1,3 +1,4 @@
+import uuid as _uuid
 from .data_models import SocialScenario, AgentProfile
 
 
@@ -37,7 +38,10 @@ def validate_scenario(d: dict) -> tuple[bool, str]:
 
 def dict_to_scenario(d: dict) -> SocialScenario:
     profiles = [AgentProfile(**p) for p in d["agent_profiles"]]
+    base_id = str(_uuid.uuid4())
     return SocialScenario(
+        id=f"{base_id}_pX",
+        source_scenario_id=base_id,
         scenario=d["scenario"],
         agent_profiles=profiles,
         agent_goals=d["agent_goals"],

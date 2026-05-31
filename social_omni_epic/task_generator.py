@@ -156,12 +156,19 @@ class TaskGenerator:
                     indices.append(int(np.argmin(nearest_sim_to_picked)))
         else:  # "knn" (default)
             seed_idx = int(np.random.choice(n, p=probs))
-            seed_emb = archive.state.successful[seed_idx].embedding
+            anchor = archive.state.successful[seed_idx]
+            seed_emb = anchor.embedding
             all_embs = archive.get_successful_embeddings()
             if seed_emb is None or not all_embs:
                 indices = [seed_idx]
             else:
-                indices = get_similar_scenarios(seed_emb, all_embs, num_returns=k)
+                source_ids = [s.source_scenario_id for s in archive.state.successful]
+                agent_idxs = [s.target_agent_idx for s in archive.state.successful]
+                indices = get_similar_scenarios(
+                    seed_emb, all_embs, num_returns=k,
+                    source_ids=source_ids, agent_idxs=agent_idxs,
+                    preferred_agent_idx=anchor.target_agent_idx,
+                )
                 if seed_idx not in indices:
                     indices = [seed_idx] + indices[:k - 1]
 

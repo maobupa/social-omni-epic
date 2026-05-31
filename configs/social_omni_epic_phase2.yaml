@@ -35,6 +35,7 @@ vs_num_candidates: 5
 
 # Seed loading
 seeds_path: "data/sotopia_90_seeds.jsonl"
+seed_both_perspectives: true
 seed_limit: null
 use_fallback_seeds_if_missing: false
 

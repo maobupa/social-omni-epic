@@ -60,6 +60,7 @@ def _seed_archive(archive: Archive, fm: FM, config: DictConfig) -> None:
         seed_scenarios = load_sotopia_seeds(
             seeds_path=config.get("seeds_path", "data/sotopia_90_seeds.jsonl"),
             limit=config.get("seed_limit"),
+            both_perspectives=config.get("seed_both_perspectives", True),
         )
         print(f"Loaded {len(seed_scenarios)} Sotopia seed scenarios")
     except FileNotFoundError:
@@ -98,7 +99,13 @@ def _select_anchor_and_examples(
     n_examples = config.task_generator.num_examples
     all_embs = archive.get_successful_embeddings()
     if anchor.embedding and all_embs and len(all_embs) >= n_examples:
-        example_indices = get_similar_scenarios(anchor.embedding, all_embs, num_returns=n_examples)
+        source_ids = [s.source_scenario_id for s in archive.state.successful]
+        agent_idxs = [s.target_agent_idx for s in archive.state.successful]
+        example_indices = get_similar_scenarios(
+            anchor.embedding, all_embs, num_returns=n_examples,
+            source_ids=source_ids, agent_idxs=agent_idxs,
+            preferred_agent_idx=anchor.target_agent_idx,
+        )
         if anchor_idx not in example_indices:
             example_indices = [anchor_idx] + example_indices[: n_examples - 1]
     else:
@@ -353,10 +360,15 @@ def main(config: DictConfig) -> None:
 
         # 4. MoI + validity check
         if config.enable_moi and archive.size >= config.moi.min_archive_size:
+            _src_ids = [s.source_scenario_id for s in archive.state.successful]
+            _agt_idxs = [s.target_agent_idx for s in archive.state.successful]
             sim_indices = get_similar_scenarios(
                 scenario.embedding,
                 archive.get_successful_embeddings(),
                 num_returns=config.moi.num_examples,
+                source_ids=_src_ids,
+                agent_idxs=_agt_idxs,
+                preferred_agent_idx=scenario.target_agent_idx,
             )
             similar = [archive.state.successful[i] for i in sim_indices]
             is_interesting, moi_reason = moi.evaluate(scenario, similar)
