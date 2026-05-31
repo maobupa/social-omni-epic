@@ -43,7 +43,6 @@ from social_omni_epic.model_of_interestingness import ModelOfInterestingness
 from social_omni_epic.reflection_module import ReflectionModule
 from social_omni_epic.scenario_title import (
     ScenarioTitleGenerator,
-    classify_scenario,
     designate_target_agent,
 )
 from social_omni_epic.seeds import load_sotopia_seeds
@@ -409,8 +408,7 @@ def main(config: DictConfig) -> None:
                     archive.add_failed_interestingness(scenario)
                     continue
 
-        # 7. Classify + designate target agent
-        scenario.goal_structure, scenario.info_position = classify_scenario(scenario, fm)
+        # 7. Designate target agent
         scenario.target_agent_idx, scenario.target_agent_goal_abstract = designate_target_agent(
             scenario, anchor, fm
         )
@@ -471,8 +469,6 @@ def main(config: DictConfig) -> None:
                 "outcome": outcome,
                 "final_scores": final_scores,
                 "scenario_title": scenario.scenario_title,
-                "goal_structure": scenario.goal_structure,
-                "info_position": scenario.info_position,
                 "chronicle_entries": len(
                     SkillsChronicle.from_markdown(scenario.skills_final_md or "").entries
                 ),
@@ -496,8 +492,6 @@ def main(config: DictConfig) -> None:
             "solved": outcome in (1, 2),
             "archive_size": archive.size,
             "interaction_type": scenario.interaction_type,
-            "goal_structure": scenario.goal_structure,
-            "info_position": scenario.info_position,
         })
 
         print(

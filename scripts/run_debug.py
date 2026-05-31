@@ -54,7 +54,6 @@ from social_omni_epic.model_of_interestingness import ModelOfInterestingness
 from social_omni_epic.reflection_module import ReflectionModule
 from social_omni_epic.scenario_title import (
     ScenarioTitleGenerator,
-    classify_scenario,
     designate_target_agent,
 )
 from social_omni_epic.seeds import load_sotopia_seeds
@@ -154,8 +153,6 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
         "anchor": {},
         "generated_scenario": {},
         "moi_result": {},
-        "goal_structure": "",
-        "info_position": "",
         "target_agent_idx": 0,
         "target_agent_goal_abstract": "",
         "inherited_chronicle": {},
@@ -390,20 +387,9 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
     _flush(debug_output)
 
     # -----------------------------------------------------------------------
-    # Step 7: Classify
+    # Step 7: Designate target agent
     # -----------------------------------------------------------------------
-    tfm.set_step("Step 7: Structural Classification")
-    gs, ip = classify_scenario(scenario, tfm)
-    scenario.goal_structure = gs
-    scenario.info_position = ip
-    print_info(f"goal_structure={gs}  info_position={ip}")
-    debug_output["goal_structure"] = gs
-    debug_output["info_position"] = ip
-
-    # -----------------------------------------------------------------------
-    # Step 8: Designate target agent
-    # -----------------------------------------------------------------------
-    tfm.set_step("Step 8: Designate Target Agent")
+    tfm.set_step("Step 7: Designate Target Agent")
     if anchor:
         scenario.target_agent_idx, scenario.target_agent_goal_abstract = (
             designate_target_agent(scenario, anchor, tfm)
