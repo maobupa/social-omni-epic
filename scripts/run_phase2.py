@@ -233,12 +233,13 @@ async def _run_phase2_episode(
             anchor_task=anchor,
         )
 
-    # Adversarial check on final chronicle
-    adv_final = adversarial.check_final(
-        final_chronicle,
-        anchor.skills_final_md or "",
-        outcome=outcome,
-    )
+    # Adversarial check on final chronicle (skipped for outcome 1 — no synthesis occurred)
+    if outcome != 1:
+        adversarial.check_final(
+            final_chronicle,
+            anchor.skills_final_md or "",
+            outcome=outcome,
+        )
 
     # Generate SCENARIO_TITLE
     title_data = title_gen.generate(scenario, scenario.target_agent_idx)

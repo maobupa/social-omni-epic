@@ -154,7 +154,8 @@ class AdversarialAgent:
         outcome: int = 3,
     ) -> AdversarialCheckResult:
         """Mode 2: check final synthesized chronicle for consistency and balance."""
-        parts: list[str] = [f"EPISODE OUTCOME: {'SOLVED (multi-attempt)' if outcome == 2 else 'FAILED'}"]
+        outcome_label = {1: "SOLVED (first attempt)", 2: "SOLVED (multi-attempt)"}.get(outcome, "FAILED")
+        parts: list[str] = [f"EPISODE OUTCOME: {outcome_label}"]
 
         if inherited_chronicle_md:
             parts.append("\nINHERITED CHRONICLE (from anchor task):")

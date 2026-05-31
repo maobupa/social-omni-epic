@@ -593,26 +593,30 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
     _flush(debug_output)
 
     # -----------------------------------------------------------------------
-    # Step 12: Adversarial final check
+    # Step 12: Adversarial final check (skipped for outcome 1 — no synthesis occurred)
     # -----------------------------------------------------------------------
-    tfm.set_step("Step 12: Adversarial Final Check")
-    adv_final = adversarial.check_final(
-        final_chronicle, anchor.skills_final_md if anchor else "", outcome=outcome
-    )
-    status = "APPROVED" if adv_final.approved else "REJECTED"
-    print_info(f"Adversarial final: {status}")
-    if adv_final.issues:
-        print_section("Final Issues", "\n".join(f"  - {i}" for i in adv_final.issues))
-    if adv_final.active_misdirection_ids:
-        print_warn(f"Active misdirection flagged (entries will be noted but not promoted): {adv_final.active_misdirection_ids}")
-
-    debug_output["adversarial_final"] = {
-        "approved": adv_final.approved,
-        "issues": adv_final.issues,
-        "flagged_entry_ids": adv_final.flagged_entry_ids,
-        "active_misdirection_ids": adv_final.active_misdirection_ids,
-        "critique": adv_final.critique,
-    }
+    if outcome == 1:
+        print_step("Step 12: Adversarial Final Check (skipped — solved on first attempt)")
+        debug_output["adversarial_final"] = {"skipped": True, "reason": "outcome 1"}
+        _flush(debug_output)
+    else:
+        tfm.set_step("Step 12: Adversarial Final Check")
+        adv_final = adversarial.check_final(
+            final_chronicle, anchor.skills_final_md if anchor else "", outcome=outcome
+        )
+        status = "APPROVED" if adv_final.approved else "REJECTED"
+        print_info(f"Adversarial final: {status}")
+        if adv_final.issues:
+            print_section("Final Issues", "\n".join(f"  - {i}" for i in adv_final.issues))
+        if adv_final.active_misdirection_ids:
+            print_warn(f"Active misdirection flagged: {adv_final.active_misdirection_ids}")
+        debug_output["adversarial_final"] = {
+            "approved": adv_final.approved,
+            "issues": adv_final.issues,
+            "flagged_entry_ids": adv_final.flagged_entry_ids,
+            "active_misdirection_ids": adv_final.active_misdirection_ids,
+            "critique": adv_final.critique,
+        }
 
     # -----------------------------------------------------------------------
     # Step 13: SCENARIO_TITLE

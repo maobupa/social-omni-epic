@@ -29,7 +29,40 @@ from sotopia.database import EpisodeLog
 from sotopia.messages import AgentAction, SimpleMessage
 
 from .fm import FM
-from .memory_agent import build_custom_template_with_memory
+
+
+_TURN_PROMPT = """
+                Imagine you are {agent}, your task is to act/speak as {agent} would, keeping in mind {agent}'s social goal.
+                You can find {agent}'s goal (or background) in the 'Here is the context of the interaction' field.
+                Note that {agent}'s goal is only visible to you.
+                You should try your best to achieve {agent}'s goal in a way that align with their character traits.
+                Additionally, maintaining the conversation's naturalness and realism is essential (e.g., do not repeat what other people has already said before).
+                {memory_block}{history}.
+                You are at Turn #{turn_number}. Your available action types are
+                {action_list}.
+                Note: If you have substantially achieved your social goal or reached a clear agreement, you SHOULD choose 'leave' — continuing past the point of resolution is poor social judgment. You may also leave if this conversation makes you uncomfortable, if you find it unproductive, or if you have exhausted reasonable options.
+
+                Please only generate a JSON string including the action type and the argument.
+                Your action should follow the given format:
+                {format_instructions}
+            """
+
+_MEMORY_BLOCK = (
+    "\n                === Lessons from prior similar interactions "
+    "(visible only to you) ===\n"
+    "                {memory_text}\n"
+    "                === End of lessons ===\n"
+    "                "
+)
+
+
+def _build_turn_prompt(memory_text: str = "") -> str:
+    memory_block = (
+        _MEMORY_BLOCK.format(memory_text=memory_text.strip())
+        if memory_text and memory_text.strip()
+        else ""
+    )
+    return _TURN_PROMPT.replace("{memory_block}", memory_block)
 
 
 # Keep in sync with sotopia/database/evaluation_dimensions.py::SotopiaDimensions.
@@ -198,7 +231,7 @@ async def run_single_episode(
     learner = LLMAgent(
         agent_profile=agent_profiles[0],
         model_name=learner_model,
-        custom_template=build_custom_template_with_memory(memory_prompt),
+        custom_template=_build_turn_prompt(memory_prompt),
     )
     partner = LLMAgent(
         agent_profile=agent_profiles[1],
