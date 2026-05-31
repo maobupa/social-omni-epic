@@ -313,6 +313,28 @@ class TaskGenerator:
         # Fallback to standard generation
         return self.generate_from_archive(examples, existing_types=existing_types)
 
+    def patch_scenario(
+        self,
+        scenario: SocialScenario,
+        issues: list[str],
+    ) -> Optional[SocialScenario]:
+        """Fix specific coherence issues in an existing scenario without regenerating it.
+
+        Passes the original scenario JSON back to the model with the exact issues
+        to fix. Only the flagged fields should change; everything else is preserved.
+        """
+        original_json = _format_scenario_for_prompt(scenario)
+        issues_text = "\n".join(f"- {issue}" for issue in issues)
+        user_prompt = (
+            f"The following social scenario has coherence issues that must be fixed:\n\n"
+            f"{original_json}\n\n"
+            f"Issues to fix:\n{issues_text}\n\n"
+            f"Output a corrected version of this scenario as JSON. "
+            f"Fix ONLY the identified issues. Do not change any other fields, "
+            f"the scenario premise, agent goals, or interaction type."
+        )
+        return self._generate_with_retry(user_prompt)
+
     def generate_unconditioned(self) -> Optional[SocialScenario]:
         """Ablation: no archive conditioning."""
         user_prompt = (

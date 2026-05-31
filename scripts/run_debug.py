@@ -318,7 +318,6 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
     # -----------------------------------------------------------------------
     tfm.set_step("Step 5: Coherence Gate")
     coherence_checker = CoherenceChecker(tfm)
-    task_gen_for_retry = TaskGenerator(tfm, num_examples=3, num_failed_examples=0, max_retries=2)
     coherence_feedback = None
     passed_coherence = False
     for _c in range(args.coherence_max_retries + 1):
@@ -331,10 +330,8 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
             passed_coherence = True
             break
         coherence_feedback = c_result.issues
-        print_warn(f"Coherence failed — regenerating with feedback (retry {_c + 1}/{args.coherence_max_retries})")
-        scenario = task_gen_for_retry.generate_from_archive(
-            examples, existing_types=existing_types, coherence_feedback=coherence_feedback
-        )
+        print_warn(f"Coherence failed — patching scenario (retry {_c + 1}/{args.coherence_max_retries})")
+        scenario = task_gen.patch_scenario(scenario, coherence_feedback)
         if scenario is None:
             print_warn("Regeneration returned None — aborting coherence retry loop.")
             break
@@ -352,6 +349,16 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
         "retries": _c,
         "final_issues": coherence_feedback or [],
     }
+    # Update generated_scenario if coherence retry replaced the scenario
+    if scenario is not None:
+        debug_output["generated_scenario"] = {
+            "id": scenario.id,
+            "scenario": scenario.scenario,
+            "interaction_type": scenario.interaction_type,
+            "relationship": scenario.relationship,
+            "agent_goals": scenario.agent_goals,
+        }
+        _flush(debug_output)
     if not passed_coherence or scenario is None:
         print_warn("Coherence gate FAILED after all retries. Continuing anyway for debug purposes.")
 

@@ -375,11 +375,7 @@ def main(config: DictConfig) -> None:
                     passed_coherence = True
                     break
                 coherence_feedback = c_result.issues
-                scenario = task_gen.generate_from_archive(
-                    examples,
-                    existing_types=existing_types,
-                    coherence_feedback=coherence_feedback,
-                )
+                scenario = task_gen.patch_scenario(scenario, coherence_feedback)
                 if scenario is None:
                     break
                 scenario.iteration = iteration
