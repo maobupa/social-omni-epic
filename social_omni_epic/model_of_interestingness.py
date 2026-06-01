@@ -14,7 +14,8 @@ A scenario is NOT learnable if:
 - The outcome is fixed regardless of what the agent does — the partner's position never shifts no matter how the agent frames, empathizes, or negotiates.
 - It is structurally zero-sum with no possible accommodation (no strategy can succeed by construction).
 - It requires only surface politeness — no real strategic depth means no learning signal.
-A learnable scenario has a discoverable strategy path: empathy, timing, framing, strategic disclosure, or trust-building could plausibly change the outcome.
+- The learner's stated goal requires the partner to take an action that is against the partner's core stated interest AND there is no plausible zone of possible agreement — no creative move, trade, reframing, or partial outcome that skilled play could discover.
+A learnable scenario has at least one discoverable path to success that a skilled agent could find — the specific approach does not matter, only that such a path exists.
 
 Respond with a JSON object:
 {"novel": true/false, "learnable": true/false, "reason": "concise explanation covering both dimensions"}

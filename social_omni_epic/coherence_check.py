@@ -25,6 +25,10 @@ Check exactly four things:
 4. SCENARIO-INTERACTION MATCH: Does the scenario description actually describe the stated interaction_type?
    - Flag only if completely mismatched (e.g. scenario describes two people quietly sharing coffee but interaction_type is "hostile negotiation").
 
+5. GOAL ACHIEVABILITY: Does the learner's goal have a plausible zone of possible agreement — some outcome, trade, or partial resolution that skilled play could reach within a conversation?
+   - Flag if the learner's goal requires the partner to take an action so costly to the partner's core interest that no creative move or trade could plausibly bridge it (e.g. asking someone to publicly defend a person they believe guilty of serious misconduct, or to agree to something that directly destroys their stated goal with no compensation).
+   - Do NOT flag scenarios that are merely hard or require skilled negotiation — only flag when success is structurally impossible regardless of skill.
+
 Return JSON: {"passed": true/false, "issues": ["specific issue 1", "specific issue 2", ...]}
 Issues must be specific and actionable — describe exactly what is wrong and what needs to change.
 If passed is true, issues must be an empty list.

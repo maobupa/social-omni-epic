@@ -77,8 +77,14 @@ STEP 2 — EDITS:
 For each entry you modify, output:
   <EditReason id="ENTRY_ID">Justification with SPECIFIC transcript evidence (quote directly)</EditReason>
   <Entry id="ENTRY_ID">
-  <Condition>...</Condition>
-  <Guidance>...</Guidance>
+  <Condition>abstract structural pattern — no proper nouns or scenario-specific details</Condition>
+  <Guidance>
+  1. Primary guidance: [what to do or not do — specific enough that an agent reading this before a conversation would behave observably differently]
+  2. Warning (optional): [only if a specific tempting behavior contrasts with the primary guidance and backfires in a non-obvious way]
+  3. Exception: when [a specific circumstance within the above Condition makes the primary guidance inappropriate], do [alternative] instead
+  (add further numbered Exception clauses as needed)
+  Note: Later clauses take precedence over earlier ones when their conditions apply.
+  </Guidance>
   <Type>HEURISTIC | WARNING</Type>
   <Dimension>GOAL | FIN | REL | BEL | KNO | SOC | SEC</Dimension>
   <Provenance>[existing provenance, add ", attempt K"]</Provenance>
@@ -87,7 +93,7 @@ For each entry you modify, output:
 For NEW entries (when no existing entry covers this case):
   <EditReason id="NEW_ID">Why no existing entry covered this</EditReason>
   <Entry id="NEW_ID">
-  ... complete entry block ...
+  ... complete entry block using the same format above ...
   </Entry>
 
 For entries that ACTIVELY MISDIRECTED the agent, add after their edit block:
