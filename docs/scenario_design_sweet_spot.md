@@ -162,9 +162,11 @@ Knobs that move a scenario along this axis:
 - **Stakes for the partner**: how much the partner has to lose by genuinely agreeing.
 
 Tune so that a *naive* agent reliably trips the constraint or hits the resistance, while a
-*skilled* agent has a findable path. A fraction of scenarios will be solved first-try by
-strong agents — that is acceptable; it just means those particular scenarios produced no
-learning. The curriculum should be calibrated so a meaningful share *fail first*.
+*skilled* agent has a findable path. These knobs are not just design guidance — they are the
+levers the **difficulty editor** turns when a scenario is solved too easily, ratcheting it up
+until it bites (see [`curriculum_loop.md`](curriculum_loop.md) §3). A scenario solved first-try
+is therefore not discarded outright; it is edited harder first, and only discarded if it
+cannot be made to bite.
 
 ---
 

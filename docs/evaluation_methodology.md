@@ -243,16 +243,24 @@ scenarios — never subset B.)
 - Model fails but reflection does *not* improve retries → the reflect–act gap is absent for
   this model → the method cannot work on it as-is.
 
-## 3c. Scenario-quality filtering during archive expansion (no extra rollout)
+## 3c. Scenario-quality filtering during archive expansion
 
-Do **not** run a separate naive rollout per generated scenario. The learning loop already
-emits the signal: `outcome ∈ {1 = solved first attempt, 2 = solved later, 3 = never solved}`.
-- `outcome = 1` → no new learning (too easy *or* inherited chronicle already sufficient) → cull/down-weight.
-- `outcome = 2` → the gold case (a principle was learned and helped).
-- `outcome = 3` → too hard / impossible.
+The behavioral signal is the `outcome` the loop already computes — no separate naive rollout.
+But rather than *cull* too-easy scenarios, we **edit them to bite** (the OMNI-EPIC-style
+difficulty editor, run upward). The full algorithm — the difficulty-calibration loop, the
+skill-learning loop, the archive policy, and why this dissolves the per-scenario counterfactual
+— lives in **[`curriculum_loop.md`](curriculum_loop.md)**. In brief:
 
-This is free — it is the outcome you already compute — and it is the behavioral verifier that
-bite, a skilled path, and diagnosability all exist (`scenario_design_sweet_spot.md` §4).
+- **Solved on attempt 1** → not archived as success; routed to the **difficulty editor**
+  (ratchet up via social knobs) until it bites, or discarded after `D` edits.
+- **Solved-after-biting** (`outcome=2`) → the gold case; archived and **counts** toward the
+  stopping condition.
+- **Never solved** → archived as **failed** (frontier/too-hard); kept for generator
+  conditioning but does **not** count.
+
+Because the editor ratchets up until the *chronicle-equipped* agent fails attempt-1, every
+archived success is one the chronicle could not already handle — so bite, a skilled path, and
+diagnosability are all verified by construction (`scenario_design_sweet_spot.md` §4).
 
 ## 3d. Validate the core assumption: archive-size scaling curve
 
@@ -272,4 +280,6 @@ possible results; a flat curve is itself an informative finding. Do not assert i
 > social dynamic, paired statistics, human-validated subset.
 
 See [`scenario_design_sweet_spot.md`](scenario_design_sweet_spot.md) for how scenarios are
-designed so that this internal success signal is meaningful in the first place.
+designed so that this internal success signal is meaningful in the first place, and
+[`curriculum_loop.md`](curriculum_loop.md) for the expansion algorithm (difficulty editor,
+two-counter loops) and the ANNECS-style stopping condition (count solved-after-biting only).
