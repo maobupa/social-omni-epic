@@ -158,6 +158,13 @@ async def _run_phase2_episode(
     final_scores: dict = {}
 
     env_profile, agent_profiles = scenario_to_sotopia_profiles(scenario)
+    if scenario.target_agent_idx == 1:
+        agent_profiles = [agent_profiles[1], agent_profiles[0]]
+        env_profile.agent_goals = [env_profile.agent_goals[1], env_profile.agent_goals[0]]
+    learner_goal = env_profile.agent_goals[0] if env_profile.agent_goals else ""
+
+    from social_omni_epic.success_detector import SuccessDetector
+    success_detector = SuccessDetector(goal_threshold=config.get("goal_threshold", 7.0))
 
     for attempt in range(1, max_attempts + 1):
         memory_prompt = current_chronicle.format_for_prompt(max_entries=max_entries)
@@ -171,6 +178,7 @@ async def _run_phase2_episode(
                 partner_model=config.partner_model,
                 memory_prompt=memory_prompt,
                 max_turns=config.get("max_turns", 20),
+                learner_goal=learner_goal,
             )
         except Exception as e:
             import traceback
@@ -181,10 +189,7 @@ async def _run_phase2_episode(
         final_scores = result.learner_scores
         all_scores.append({"attempt": attempt, "scores": final_scores})
 
-        from social_omni_epic.success_detector import SuccessDetector
-        success_detector = SuccessDetector(goal_threshold=config.get("goal_threshold", 7.0))
-
-        if success_detector.is_solved(final_scores):
+        if success_detector.is_solved(final_scores, goal_achieved=result.goal_achieved):
             outcome = 1 if attempt == 1 else 2
             break
 

@@ -50,6 +50,7 @@ _REFLECTION_CHECK_SYSTEM = """You are an adversarial quality-control agent revie
 For each edited or added entry, check ALL of the following:
 
 CHECK 1 — EVIDENCE: Does the EditReason cite SPECIFIC evidence from the transcript (direct quotes or specific turn references)? Generic reasoning ("the agent failed to understand") is NOT sufficient.
+  EXCEPTION: If the entry concerns a resource, capability, or information the agent possessed but did NOT use (a missed opportunity or unused leverage), the scenario context or extra_info is acceptable evidence in place of transcript quotes — by definition, something unused cannot appear in the transcript.
 
 CHECK 2 — ABSTRACTION: Does the revised Condition remain abstract? Flag if it contains:
   - Proper nouns (person names, place names)

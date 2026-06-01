@@ -13,7 +13,7 @@ Sotopia's own dimensions have DIFFERENT ranges, so each is normalized to
 (-5..5) would contribute asymmetrically and the score could never reach 1.0.
 """
 from collections import defaultdict, deque
-from typing import Deque
+from typing import Deque, Optional
 
 
 # Score ranges per Sotopia dimension (see SotopiaDimensions field docs).
@@ -51,7 +51,14 @@ class SuccessDetector:
             lambda: deque(maxlen=self.lp_window)
         )
 
-    def is_solved(self, scores: dict) -> bool:
+    def is_solved(self, scores: dict, goal_achieved: Optional[bool] = None) -> bool:
+        """Return True if the episode is solved.
+
+        Prefers the evaluator's binary goal_achieved judgment when available.
+        Falls back to goal score >= threshold when goal_achieved is None.
+        """
+        if goal_achieved is not None:
+            return goal_achieved
         return float(scores.get("goal", 0.0)) >= self.goal_threshold
 
     def compute_progress_score(self, scores: dict) -> float:

@@ -50,8 +50,10 @@ Output format — ONLY the <Entry> blocks, no other text:
 <Entry id="ENTRY_ID">
 <Condition>abstract structural pattern</Condition>
 <Guidance>
-1. Primary guidance
-2. Exception: when [condition], do [alternative] instead
+1. Primary guidance: [what to do or not do — specific enough to change behavior observably]
+2. Warning (optional): [only if a specific tempting behavior contrasts with the primary guidance and backfires]
+3. Exception: when [a specific circumstance within the above Condition makes the primary guidance inappropriate], do [alternative] instead
+(add further numbered Exception clauses as needed)
 Note: Later clauses take precedence over earlier ones when their conditions apply.
 </Guidance>
 <Type>HEURISTIC | WARNING</Type>
@@ -82,9 +84,10 @@ Output format — ONLY the <Entry> blocks, no other text:
 <Entry id="ENTRY_ID">
 <Condition>abstract structural pattern</Condition>
 <Guidance>
-1. Primary guidance (what was tried, what worked partially)
-2. Warning: [structural trap to avoid]
-3. Exception: when [condition], [alternative approach — untested but plausible]
+1. Primary guidance: [what to do or not do — specific enough to change behavior observably]
+2. Warning (optional): [only if a specific tempting behavior contrasts with the primary guidance and backfires]
+3. Exception: when [a specific circumstance within the above Condition makes the primary guidance inappropriate], do [alternative] instead
+(add further numbered Exception clauses as needed)
 Note: Later clauses take precedence over earlier ones when their conditions apply.
 </Guidance>
 <Type>HEURISTIC | WARNING</Type>

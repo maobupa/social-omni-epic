@@ -62,15 +62,15 @@ class ReflectionOutput:
 
 _SYSTEM = """You are a reflective coach analyzing a failed social interaction episode to improve a Skills Chronicle.
 
-A Skills Chronicle is a document of structured entries that guide an AI agent's social behavior. Each entry has a Condition (when to apply it) and Guidance (what to do).
+A Skills Chronicle is a document of structured entries that guide an AI agent's social behavior. Each entry has a Condition (when to apply it) and Guidance (what to do). Guidance must be PRESCRIPTIVE — specific enough that an agent reading it before a conversation would behave observably differently. It can describe a strategy, a tone, an opening move, a question pattern, a framing, or any behavioral disposition. "Be more strategic" is not guidance. "Lead with a question about X before making any ask" or "adopt a collaborative tone and acknowledge the other party's constraint before stating your own" are guidance.
 
 Your task after a FAILED episode:
 
 STEP 1 — DIAGNOSIS:
 Write a <Diagnosis> block analyzing:
-  - Which chronicle entries were relevant to this scenario
+  - Which chronicle entries were relevant to this scenario (if the chronicle is empty, skip this and the next sub-question)
   - Whether the agent applied them
-  - What specifically went wrong that existing entries did not anticipate
+  - What specifically went wrong and what skills were missing that, if codified, would have improved the outcome
   - Whether any existing entry ACTIVELY MISDIRECTED the agent (caused worse behavior)
 
 STEP 2 — EDITS:
@@ -100,6 +100,11 @@ CONDITION FIELD RULES (enforced strictly):
   - BROADENING a Condition: high-risk — EditReason MUST cite specific transcript evidence
     that the current scope is too narrow. If the broadened Condition would also apply to
     the parent/anchor scenario's social dynamic, that is a signal it is too broad.
+  - INHERITED ENTRIES (from a prior scenario lineage): if an inherited entry's Condition
+    contains domain-specific vocabulary from a previous scenario (e.g., "manuscript", "authorship",
+    "lease") and you observed the underlying pattern apply in THIS scenario under different
+    surface terms, re-abstract the Condition to remove the prior domain's vocabulary while
+    preserving the structural pattern. This is encouraged, not high-risk.
 
 Output ONLY the <Diagnosis>, <EditReason>, <Entry>, and <MisdirectionFlag> blocks. No other text."""
 

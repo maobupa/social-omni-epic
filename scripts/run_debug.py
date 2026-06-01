@@ -436,6 +436,8 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
         memory_prompt = current_chronicle.format_for_prompt(max_entries=8)
         if memory_prompt:
             print_section("Memory injected into agent", memory_prompt[:1000])
+        debug_output.setdefault("memory_injected", {})[str(attempt)] = memory_prompt or "(empty)"
+        _flush(debug_output)
 
         if args.skip_episode:
             print_warn("--skip-episode: using mock transcript")
@@ -445,6 +447,12 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
                 from social_omni_epic.episode_runner import run_single_episode
                 from social_omni_epic.sotopia_bridge import scenario_to_sotopia_profiles
                 env_profile, agent_profiles = scenario_to_sotopia_profiles(scenario)
+                # Ensure learner (target_agent_idx) is always at index 0
+                if scenario.target_agent_idx == 1:
+                    agent_profiles = [agent_profiles[1], agent_profiles[0]]
+                    env_profile.agent_goals = [env_profile.agent_goals[1], env_profile.agent_goals[0]]
+                learner_goal = env_profile.agent_goals[0] if env_profile.agent_goals else ""
+
                 def _on_turn(partial_transcript: list[dict]) -> None:
                     debug_output["episode_results_partial"] = {
                         "attempt": attempt,
@@ -461,6 +469,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
                         partner_model=args.partner_model,
                         memory_prompt=memory_prompt,
                         max_turns=args.max_turns,
+                        learner_goal=learner_goal,
                         on_turn=_on_turn,
                     )
                 )
@@ -495,13 +504,14 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
         )
         print_section("Scores", scores_text)
 
-        solved = success_detector.is_solved(final_scores)
-        print_info(f"Solved: {solved}  (goal={final_scores.get('goal', 0):.1f})")
+        solved = success_detector.is_solved(final_scores, goal_achieved=episode_result.goal_achieved)
+        print_info(f"Solved: {solved}  (goal={final_scores.get('goal', 0):.1f}  goal_achieved={episode_result.goal_achieved})")
 
         debug_output["episode_results"].append({
             "attempt": attempt,
-            "transcript_clean": _clean_transcript(episode_result.transcript),
+            "transcript_clean": clean,
             "scores": final_scores,
+            "goal_achieved": episode_result.goal_achieved,
             "solved": solved,
         })
         _flush(debug_output)
@@ -577,6 +587,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
             "flagged_entry_ids": adv_result.flagged_entry_ids,
             "critique": adv_result.critique,
         })
+        _flush(debug_output)
 
         current_chronicle = ref_out.updated_chronicle
         all_versions.append(deepcopy(current_chronicle))
@@ -678,7 +689,7 @@ def main() -> None:
                         help="Which seed to use as anchor (default: 0)")
     parser.add_argument("--seed-limit", type=int, default=None,
                         help="How many seed rows to load (default: all 90 → 180 entries)")
-    parser.add_argument("--max-attempts", type=int, default=2,
+    parser.add_argument("--max-attempts", type=int, default=3,
                         help="Max episode attempts (default: 2)")
     parser.add_argument("--vs-candidates", type=int, default=5,
                         help="Verbalized sampling candidates (default: 5)")

@@ -10,8 +10,10 @@ scenario-unique details. Phrased as a recognizable structural pattern.
 </Condition>
 
 <Guidance>
-1. Default behavioral instruction — the general case
-2. Exception: when [condition], do [override] instead
+1. Primary guidance: [how to behave when entering this type of interaction — can be what TO do or what NOT to do; must be specific enough that an agent reading it before a conversation would behave observably differently]
+2. Warning (optional): only include if there is a specific tempting behavior that contrasts with the primary guidance and backfires in a non-obvious way — omit if the primary guidance already covers what to avoid, or if no clear contrasting trap exists
+3. Exception: when [a specific circumstance within the above Condition makes the primary guidance inappropriate], do [alternative] instead
+(add further numbered Exception clauses as needed)
 Note: Later clauses take precedence over earlier ones when their conditions apply.
 </Guidance>
 
@@ -111,7 +113,9 @@ class SkillsChronicle:
             entries = entries[:max_entries]
         blocks = [e.to_tag_block() for e in entries]
         return (
-            "=== Skills Chronicle (prior experience — visible only to you) ===\n\n"
+            "=== Skills Chronicle (prior experience — visible only to you) ===\n"
+            "These lessons come from past interactions that may differ in setting or characters. "
+            "Apply the underlying principle and adapt it to your current situation — do not treat them as literal scripts.\n\n"
             + "\n\n---\n\n".join(blocks)
             + "\n\n=== End of Skills Chronicle ==="
         )

@@ -34,7 +34,7 @@ from .fm import FM
 
 def clean_transcript(raw: list[dict]) -> list[dict]:
     """Strip Sotopia scaffolding: drop Environment messages, 'did nothing' turns,
-    and the '[private to [...]]  said: ' prefix from agent speech."""
+    and the '[private to [...]]  ...' prefix from all agent messages."""
     out = []
     for msg in raw:
         if msg.get("sender") == "Environment":
@@ -42,9 +42,11 @@ def clean_transcript(raw: list[dict]) -> list[dict]:
         content = msg.get("content", "")
         if "did nothing" in content:
             continue
-        content = _re.sub(r"^\[private to \[.*?\]\]\s+said:\s*", "", content).strip()
+        content = _re.sub(r"^\[private to \[.*?\]\]\s+(?:said:\s*)?", "", content).strip()
         if content.startswith('"') and content.endswith('"'):
             content = content[1:-1]
+        if not content:
+            continue
         out.append({"turn": msg["turn"], "speaker": msg["sender"], "content": content})
     return out
 
@@ -58,7 +60,9 @@ _TURN_PROMPT = """
                 {memory_block}{history}.
                 You are at Turn #{turn_number}. Your available action types are
                 {action_list}.
-                Note: If you have substantially achieved your social goal or reached a clear agreement, you SHOULD choose 'leave' — continuing past the point of resolution is poor social judgment. You may also leave if this conversation makes you uncomfortable, if you find it unproductive, or if you have exhausted reasonable options.
+                Note: If you have substantially achieved your social goal or reached a clear agreement, you SHOULD choose 'leave' — continuing past the point of resolution is poor social judgment. You may also leave if this conversation makes you uncomfortable, you lose your patience, or you have exhausted reasonable options.
+                Important: If your previous 2-3 attempts at the same approach have not moved the other person, do NOT repeat the same offer or request again — try a genuinely different strategy (ask a question, make a different concession, shift your framing, or acknowledge that you may not reach your goal today). Repeating failed moves is poor social judgment.
+                Keep your responses conversational — typically 2-4 sentences unless a complex explanation is genuinely required.
 
                 Please only generate a JSON string including the action type and the argument.
                 Your action should follow the given format:
@@ -106,7 +110,7 @@ _EVAL_SYSTEM = (
 _EVAL_PROMPT = """{history}
 
 {agent_instruction}
-
+{learner_goal_section}
 Respond with ONLY this JSON (replace the example values with your actual scores and reasoning):
 {{
   "agent_1": {{
@@ -116,7 +120,8 @@ Respond with ONLY this JSON (replace the example values with your actual scores 
     "secret":                          {{"score": 0,  "reasoning": "Did not reveal any secrets."}},
     "social_rules":                    {{"score": 0,  "reasoning": "Followed social norms."}},
     "financial_and_material_benefits": {{"score": 2,  "reasoning": "Achieved slight financial gain."}},
-    "goal":                            {{"score": 7,  "reasoning": "Achieved most of their stated goal."}}
+    "goal":                            {{"score": 7,  "reasoning": "Achieved most of their stated goal."}},
+    "goal_achieved":                   true
   }},
   "agent_2": {{
     "believability":                   {{"score": 7,  "reasoning": "Generally believable."}},
@@ -125,12 +130,15 @@ Respond with ONLY this JSON (replace the example values with your actual scores 
     "secret":                          {{"score": 0,  "reasoning": "Secrets kept."}},
     "social_rules":                    {{"score": -1, "reasoning": "Minor social norm violation."}},
     "financial_and_material_benefits": {{"score": -1, "reasoning": "Slight material disadvantage."}},
-    "goal":                            {{"score": 5,  "reasoning": "Partially achieved goal."}}
+    "goal":                            {{"score": 5,  "reasoning": "Partially achieved goal."}},
+    "goal_achieved":                   false
   }}
 }}
 
 Score ranges: believability 0–10, relationship −5 to 5, knowledge 0–10, \
-secret −10 to 0, social_rules −10 to 0, financial_and_material_benefits −5 to 5, goal 0–10."""
+secret −10 to 0, social_rules −10 to 0, financial_and_material_benefits −5 to 5, goal 0–10.
+For goal_achieved: true only if the agent substantially completed the specific, verifiable objective \
+stated in their goal — not just partial progress."""
 
 
 @dataclass
@@ -138,6 +146,7 @@ class EpisodeResult:
     transcript: list[dict] = field(default_factory=list)
     learner_scores: dict = field(default_factory=dict)
     partner_scores: dict = field(default_factory=dict)
+    goal_achieved: bool = False
     num_turns: int = 0
     raw_log: Optional[EpisodeLog] = None
     evaluation_reasoning: str = ""
@@ -147,8 +156,8 @@ def _zeros() -> dict:
     return {k: 0.0 for k in SOTOPIA_DIM_KEYS} | {"overall_score": 0.0}
 
 
-def _unpack_dimensions(dims: dict) -> dict:
-    """Extract flat {dim: float} scores from a parsed eval dict."""
+def _unpack_dimensions(dims: dict) -> tuple[dict, bool]:
+    """Extract flat {dim: float} scores and goal_achieved bool from a parsed eval dict."""
     out: dict = {}
     for k in SOTOPIA_DIM_KEYS:
         field_obj = dims.get(k, {}) if isinstance(dims, dict) else {}
@@ -158,7 +167,8 @@ def _unpack_dimensions(dims: dict) -> dict:
         except (TypeError, ValueError):
             out[k] = 0.0
     out["overall_score"] = sum(out[k] for k in SOTOPIA_DIM_KEYS) / len(SOTOPIA_DIM_KEYS)
-    return out
+    goal_achieved = bool(dims.get("goal_achieved", False)) if isinstance(dims, dict) else False
+    return out, goal_achieved
 
 
 def _reasoning_text(agent_label: str, dims: dict) -> str:
@@ -188,8 +198,8 @@ def _build_history(inbox: list) -> str:
     )
 
 
-def _evaluate_episode(inbox: list, fm: FM) -> tuple[dict, dict, str]:
-    """Score both agents on SOTOPIA dimensions.
+def _evaluate_episode(inbox: list, fm: FM, learner_goal: str = "") -> tuple[dict, dict, bool, str]:
+    """Score both agents on SOTOPIA dimensions and return binary goal_achieved for learner.
 
     Uses fm.query_json() (response_format=json_object) with a concrete JSON
     example prompt. No PydanticOutputParser, no schema injection, no $ref echo.
@@ -197,29 +207,40 @@ def _evaluate_episode(inbox: list, fm: FM) -> tuple[dict, dict, str]:
     """
     history = _build_history(inbox)
     if not history.strip():
-        return _zeros(), _zeros(), ""
+        return _zeros(), _zeros(), False, ""
 
     agent_instruction = (
         'There are exactly 2 agents. Use "agent_1" for the first agent '
-        'to appear in the conversation and "agent_2" for the second.'
+        'to appear in the conversation and "agent_2" for the second. '
+        'agent_1 is the learner agent.'
     )
-    prompt = _EVAL_PROMPT.format(history=history, agent_instruction=agent_instruction)
+    learner_goal_section = (
+        f'\nLEARNER GOAL (agent_1): {learner_goal}\n'
+        'Use this goal to determine agent_1\'s goal score and goal_achieved. '
+        'goal_achieved is true only if agent_1 substantially completed this specific objective.\n'
+        if learner_goal else ""
+    )
+    prompt = _EVAL_PROMPT.format(
+        history=history,
+        agent_instruction=agent_instruction,
+        learner_goal_section=learner_goal_section,
+    )
 
     try:
         data = fm.query_json(_EVAL_SYSTEM, prompt, temperature=0.0)
     except Exception as e:
-        return _zeros(), _zeros(), f"[evaluation failed: {e}]"
+        return _zeros(), _zeros(), False, f"[evaluation failed: {e}]"
 
     a1 = data.get("agent_1", {})
     a2 = data.get("agent_2", {})
-    learner_scores = _unpack_dimensions(a1)
-    partner_scores = _unpack_dimensions(a2)
+    learner_scores, goal_achieved = _unpack_dimensions(a1)
+    partner_scores, _ = _unpack_dimensions(a2)
     reasoning = (
         _reasoning_text("learner (agent_1)", a1)
         + "\n\n"
         + _reasoning_text("partner (agent_2)", a2)
     )
-    return learner_scores, partner_scores, reasoning.strip()
+    return learner_scores, partner_scores, goal_achieved, reasoning.strip()
 
 
 async def run_single_episode(
@@ -230,6 +251,7 @@ async def run_single_episode(
     partner_model: str,
     memory_prompt: str = "",
     max_turns: int = 20,
+    learner_goal: str = "",
     # evaluator_model kept for backward-compat callers that pass it; unused
     evaluator_model: str = "",
     on_turn: Optional[Callable[[list[dict]], None]] = None,
@@ -311,7 +333,7 @@ async def run_single_episode(
                     })
             on_turn(partial)
 
-    learner_scores, partner_scores, reasoning = _evaluate_episode(env.inbox, fm)
+    learner_scores, partner_scores, goal_achieved, reasoning = _evaluate_episode(env.inbox, fm, learner_goal=learner_goal)
 
     transcript: list[dict] = []
     for turn_idx, turn in enumerate(messages):
@@ -355,6 +377,7 @@ async def run_single_episode(
         transcript=transcript,
         learner_scores=learner_scores,
         partner_scores=partner_scores,
+        goal_achieved=goal_achieved,
         num_turns=len(messages),
         raw_log=epilog,
         evaluation_reasoning=reasoning,
