@@ -99,20 +99,16 @@ Only output <Entry> blocks. No <Diagnosis>, no <EditReason>, no commentary."""
 
 
 # ---------------------------------------------------------------------------
-# Prompt builder
+# Prompt builders (split by outcome)
 # ---------------------------------------------------------------------------
 
-def _build_meta_prompt(
-    chronicle_versions: list[SkillsChronicle],
-    transcripts: list[list[dict]],
-    edit_reasons: dict[str, str],
-    outcome: int,
+def _common_header(
     scenario: SocialScenario,
+    outcome: int,
     anchor_task: Optional[SocialScenario],
-    attempt_scores: Optional[list[dict]] = None,
-) -> str:
+    attempt_scores: Optional[list[dict]],
+) -> list[str]:
     parts: list[str] = []
-
     target_goal = (
         scenario.agent_goals[scenario.target_agent_idx]
         if scenario.target_agent_idx < len(scenario.agent_goals)
@@ -122,56 +118,88 @@ def _build_meta_prompt(
     parts.append(f"TARGET AGENT GOAL: {target_goal}")
     parts.append(f"INTERACTION TYPE: {scenario.interaction_type}")
     parts.append(f"OUTCOME: {'SOLVED after multiple attempts' if outcome == 2 else 'NEVER SOLVED'}")
-
     if attempt_scores:
-        score_lines = []
-        for s in attempt_scores:
-            g = s["scores"].get("goal", 0)
-            o = s["scores"].get("overall_score", 0)
-            solved = bool(s.get("solved", False))  # rubric gate, not a goal-score threshold
-            score_lines.append(
-                f"  Attempt {s['attempt']}: goal_diag={g:.1f}  overall_diag={o:.2f}  {'SOLVED' if solved else 'failed'}"
-            )
+        score_lines = [
+            f"  Attempt {s['attempt']}: goal_diag={s['scores'].get('goal',0):.1f}  "
+            f"overall_diag={s['scores'].get('overall_score',0):.2f}  "
+            f"{'SOLVED' if s.get('solved') else 'failed'}"
+            for s in attempt_scores
+        ]
         parts.append("PER-ATTEMPT SCORES:\n" + "\n".join(score_lines))
-
     if anchor_task and anchor_task.social_dynamic:
         parts.append(
             f"PARENT SCENARIO SOCIAL DYNAMIC (for abstraction check): {anchor_task.social_dynamic}"
         )
+    return parts
 
-    # Show chronicle evolution across versions
-    if len(chronicle_versions) == 1:
-        parts.append("\nINITIAL CHRONICLE (pre-episode):")
-        text = chronicle_versions[0].to_markdown()
-        parts.append(text if text else "(empty)")
-    else:
-        parts.append(f"\nCHRONICLE EVOLUTION ({len(chronicle_versions)} versions):")
-        for i, cv in enumerate(chronicle_versions):
-            label = "initial" if i == 0 else f"after attempt {i}"
-            parts.append(f"--- Version {i} ({label}) ---")
-            text = cv.to_markdown()
-            parts.append(text if text else "(empty)")
 
-    # All transcripts
-    n = len(transcripts)
-    if n:
-        parts.append(f"\nALL TRANSCRIPTS ({n} attempt{'s' if n > 1 else ''}):")
-        for i, t in enumerate(transcripts, 1):
-            label = "FAILED" if (outcome == 3 or i < n) else "SUCCESSFUL"
-            truncated = _format_transcript(t, i, max_chars=2000)
-            parts.append(f"[{label}] {truncated}")
+def _build_success_prompt(
+    chronicle_versions: list[SkillsChronicle],
+    edit_reasons: dict[str, str],
+    scenario: SocialScenario,
+    anchor_task: Optional[SocialScenario],
+    attempt_scores: Optional[list[dict]],
+) -> str:
+    """Outcome=2: per-attempt reflection already did the diagnosis work.
+    Pass only the final chronicle + edit reasons for a lightweight cleanup pass."""
+    parts = _common_header(scenario, 2, anchor_task, attempt_scores)
 
-    # Accumulated edit reasons
+    final = chronicle_versions[-1].to_markdown() if chronicle_versions else ""
+    parts.append("\nFINAL CHRONICLE (after all per-attempt reflections):")
+    parts.append(final if final else "(empty)")
+
     if edit_reasons:
-        parts.append("\nALL EDIT REASONS (from intermediate reflections):")
+        parts.append("\nEDIT REASONS from per-attempt reflections (why entries were added/changed):")
         for eid, reason in edit_reasons.items():
             parts.append(f"  [{eid}]: {reason}")
 
-    outcome_label = "SOLVED (multiple attempts)" if outcome == 2 else "FAILED (all attempts)"
     parts.append(
-        f"\nEpisode outcome: {outcome_label}. "
-        "Synthesize a final coherent Skills Chronicle from all the above. "
-        "Reconcile contradictions. Output ONLY <Entry> blocks."
+        "\nEpisode SOLVED after multiple attempts. The per-attempt reflections already "
+        "diagnosed failures and updated the chronicle. Your job is a cleanup pass only: "
+        "merge redundant entries covering the same condition, resolve any contradictions "
+        "into exception clauses, ensure all Conditions are abstract (no proper nouns or "
+        "scenario-unique details), and confirm Guidance is specific enough to change "
+        "behavior observably. Output ONLY <Entry> blocks."
+    )
+    return "\n\n".join(parts)
+
+
+def _build_failure_prompt(
+    chronicle_versions: list[SkillsChronicle],
+    transcripts: list[list[dict]],
+    edit_reasons: dict[str, str],
+    scenario: SocialScenario,
+    anchor_task: Optional[SocialScenario],
+    attempt_scores: Optional[list[dict]],
+) -> str:
+    """Outcome=3: per-attempt reflections may have drifted into wrong diagnoses across
+    repeated failures. Show first + last transcript so meta-reflection can see the
+    structural resistance pattern without re-reading all K attempts."""
+    parts = _common_header(scenario, 3, anchor_task, attempt_scores)
+
+    final = chronicle_versions[-1].to_markdown() if chronicle_versions else ""
+    parts.append("\nFINAL CHRONICLE (after all per-attempt reflections):")
+    parts.append(final if final else "(empty)")
+
+    if transcripts:
+        parts.append("\nFIRST ATTEMPT TRANSCRIPT (FAILED):")
+        parts.append(_format_transcript(transcripts[0], 1, max_chars=2000))
+        if len(transcripts) > 1:
+            parts.append(f"\nLAST ATTEMPT TRANSCRIPT (FAILED, attempt {len(transcripts)}):")
+            parts.append(_format_transcript(transcripts[-1], len(transcripts), max_chars=2000))
+
+    if edit_reasons:
+        parts.append("\nEDIT REASONS from per-attempt reflections:")
+        for eid, reason in edit_reasons.items():
+            parts.append(f"  [{eid}]: {reason}")
+
+    parts.append(
+        "\nEpisode NEVER SOLVED. Diagnose the structural resistance pattern that made "
+        "this scenario type persistently difficult — what did every attempt get wrong, "
+        "and what alternative approach might work? Add or strengthen WARNING entries "
+        "that name the structural traps. Merge/reconcile contradictions from intermediate "
+        "reflections into exception clauses. Conditions must remain abstract. "
+        "Output ONLY <Entry> blocks."
     )
     return "\n\n".join(parts)
 
@@ -197,17 +225,24 @@ class MetaReflectionModule:
     ) -> SkillsChronicle:
         """Synthesize a final skills chronicle from all attempts.
 
-        outcome: 2 = solved after ≥2 attempts, 3 = never solved.
+        outcome: 2 = solved after ≥2 attempts (cleanup pass — no transcripts needed).
+                 3 = never solved (structural resistance diagnosis — first+last transcript).
         chronicle_versions: one entry per reflection step (includes initial).
         transcripts: all episode transcripts in order.
 
         Returns a new SkillsChronicle, or the last chronicle version on failure.
         """
-        system = _SYSTEM_SUCCESS if outcome == 2 else _SYSTEM_FAILURE
-        prompt = _build_meta_prompt(
-            chronicle_versions, transcripts, edit_reasons, outcome, scenario, anchor_task,
-            attempt_scores=attempt_scores,
-        )
+        if outcome == 2:
+            system = _SYSTEM_SUCCESS
+            prompt = _build_success_prompt(
+                chronicle_versions, edit_reasons, scenario, anchor_task, attempt_scores
+            )
+        else:
+            system = _SYSTEM_FAILURE
+            prompt = _build_failure_prompt(
+                chronicle_versions, transcripts, edit_reasons, scenario, anchor_task,
+                attempt_scores
+            )
 
         fallback = deepcopy(chronicle_versions[-1]) if chronicle_versions else SkillsChronicle()
 
@@ -217,7 +252,6 @@ class MetaReflectionModule:
                 result = SkillsChronicle.from_markdown(llm_output)
                 if result.entries:
                     return result
-                # Empty parse — retry
             except Exception:
                 pass
 
