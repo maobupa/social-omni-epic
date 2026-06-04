@@ -23,7 +23,7 @@ Saves a complete debug JSON log to --output-dir.
 
 Run from project root:
   python scripts/run_debug.py --skip-episode            # no Sotopia needed
-  python scripts/run_debug.py --seed-index 34           # use seed #34 as anchor
+  python scripts/run_debug.py xf           # use seed #34 as anchor
   python scripts/run_debug.py --random-seed 42          # random anchor + reproducible generation
   python scripts/run_debug.py --no-show-prompts         # hide LLM prompts
   python scripts/run_debug.py --seed-limit 5            # load only 5 seed rows (10 entries)
@@ -255,10 +255,8 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
         )
         debug_output["anchor"] = {
             "index": seed_idx,
-            "id": anchor.id,
-            "scenario": anchor.scenario,
-            "interaction_type": anchor.interaction_type,
             "inherited_chronicle_entries": inherited_entries,
+            **_scenario_dict(anchor),
         }
         if anchor.skills_final_md:
             print_section(
