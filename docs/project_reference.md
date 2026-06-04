@@ -84,12 +84,10 @@ Used to compare methods on held-out scenarios:
 Every generated scenario has a **structured goal** per agent (symmetric — both agents get one):
 
 ```
-outcome:       the instrumental ask — a genuine state-change requiring authentic buy-in,
-               NOT an extractable utterance ("get them to say X" is banned)
-constraint:    the "without Y" relational/face cost — what blunt pursuit would damage
-shortcut:      the tempting move that wins the outcome but breaks the constraint
-               (an asset = private leverage, or a manner = blunt/coercive style)
-shortcut_form: "asset" | "manner"  (descriptive only — hints the difficulty editor)
+outcome:    the instrumental ask — a genuine state-change requiring authentic buy-in,
+            NOT an extractable utterance ("get them to say X" is banned)
+constraint: the "without Y" relational/face cost — what blunt pursuit would damage
+shortcut:   the tempting move that wins the outcome but breaks the constraint
 ```
 
 **Polarity rule:** every rubric check is phrased so **YES = the learner succeeded**.
@@ -321,3 +319,4 @@ archive_disposition
 - **Clark & Delia (1979)** — instrumental / relational / identity goal types
 - **Brown & Levinson (1987)** — face-threatening acts; the shortcut = the FTA
 - **Burleson & Goldsmith** — person-centeredness in supportive communication (Region B / attunement scenarios)
+

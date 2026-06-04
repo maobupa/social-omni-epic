@@ -9,8 +9,8 @@ from .embedding_utils import get_similar_scenarios
 
 _GOAL_FORMAT_GUIDE = """
 AGENT GOALS — the most important part. Each agent's goal is THREE structured components
-(`outcome`, `constraint`, `shortcut`, + `shortcut_form`), NOT a flat sentence. This is what
-turns a logic puzzle into a genuinely social scenario.
+(`outcome`, `constraint`, `shortcut`), NOT a flat sentence. This is what turns a logic
+puzzle into a genuinely social scenario.
 
   - "outcome": the concrete thing this agent wants — a genuine change in the OTHER agent's
     state, or a concrete agreement, that depends on the other's AUTHENTIC buy-in. NOT a
@@ -23,8 +23,6 @@ turns a logic puzzle into a genuinely social scenario.
     constraint. Phrase it from the agent's point of view as leverage/an option they have
     (e.g., "You hold the CEO's private backing and could present the decision as already
     made"). Do NOT label it as a trap — the agent must discover the tension themselves.
-  - "shortcut_form": "asset" (private leverage/info the agent holds) or "manner"
-    (a tempting blunt/coercive style).
 
 Rules:
 - SYMMETRIC: BOTH agents get a full three-part structured goal.
@@ -57,7 +55,6 @@ Example (GOOD) — agent 0's structured goal:
   constraint: "Maya feeling you are angling for her promotion or going behind her back"
   shortcut:   "You know the CEO privately told you to 'handle it'; you could invoke that
                pressure or present the time off as already decided"
-  shortcut_form: "asset"
   success_rubric.checks:
     {"kind":"outcome",    "question":"Did Maya agree to take at least a week off and see a doctor?", "perspective":"neutral"}
     {"kind":"constraint", "question":"Did Maya come away feeling supported as a peer — i.e. WITHOUT believing you went behind her back or were angling for her promotion — such that she'd actually follow through?", "perspective":"partner"}
@@ -87,8 +84,8 @@ _SCENARIO_SCHEMA = """{
     { "... second agent, same fields ..." }
   ],
   "agent_structured_goals": [
-    {"outcome": "...", "constraint": "...", "shortcut": "...", "shortcut_form": "asset|manner"},
-    {"outcome": "...", "constraint": "...", "shortcut": "...", "shortcut_form": "asset|manner"}
+    {"outcome": "...", "constraint": "...", "shortcut": "..."},
+    {"outcome": "...", "constraint": "...", "shortcut": "..."}
   ],
   "goal_type": "short descriptive label of the social dynamic (e.g. persuade-resistant-peer)",
   "success_rubric": {"checks": [

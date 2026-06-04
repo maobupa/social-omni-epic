@@ -30,7 +30,6 @@ class StructuredGoal(BaseModel):
     outcome: str = ""       # the instrumental ask — a genuine state-change, not an extractable line
     constraint: str = ""    # the "without Y" relational/face cost the blunt path would incur
     shortcut: str = ""      # the tempting move that wins the outcome but breaks the constraint
-    shortcut_form: str = "" # "asset" (private leverage) | "manner" (blunt/coercive style) — descriptive
 
 
 class RubricCheck(BaseModel):
