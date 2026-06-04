@@ -12,9 +12,16 @@ AGENT GOALS — the most important part. Each agent's goal is THREE structured c
 (`outcome`, `constraint`, `shortcut`), NOT a flat sentence. This is what turns a logic
 puzzle into a genuinely social scenario.
 
-  - "outcome": the concrete thing this agent wants — a genuine change in the OTHER agent's
-    state, or a concrete agreement, that depends on the other's AUTHENTIC buy-in. NOT a
-    sentence you can extract by demanding it ("get them to say X" is banned).
+  - "outcome": the CORE state-change this agent needs from the other — a genuine shift in
+    the other's commitment, behavior, or agreement that requires authentic buy-in.
+    PHRASING: write as a verb phrase that completes "Your goal is to ___"
+    (e.g. "get [name] to agree to..." or "convince [name] to..."). Do NOT use third-person
+    narrative ("X wants Y to..." breaks the rendering into the agent's prompt).
+    CORE ONLY: capture the essential outcome, not a specific delivery mechanism. If you find
+    yourself bundling in HOW the outcome is delivered (a particular process, timing, or
+    announcement format), strip it back to the underlying state-change — delivery details
+    belong in the scenario description, not the outcome field. Overconstrained outcomes
+    produce rubric checks that fail even when the social goal was genuinely achieved.
   - "constraint": the relational/face cost this agent must AVOID while pursuing the outcome.
     Phrase it as the thing to avoid, so it reads naturally after the word "without"
     (e.g., "the other person feeling manipulated or that you went behind their back").
@@ -42,13 +49,16 @@ Rules:
 SUCCESS RUBRIC — author the checkable success conditions for the LEARNER (write them for
 agent 0; the designated learner is fixed later). CRITICAL POLARITY: phrase EVERY check so that a
 TRUE/yes answer means the LEARNER SUCCEEDED on that dimension. Provide at least:
-  - one "outcome" check: a yes/no question a NEUTRAL judge can answer from the transcript
-    ("Did <partner> agree to <outcome>?" — yes = success). perspective: "neutral".
+  - one "outcome" check: a yes/no question a NEUTRAL judge can answer from the transcript.
+    Test the CORE state-change only — not a specific process, timeline, or delivery format.
+    Ask: "could a skilled agent satisfy this check via multiple different paths?" If yes,
+    the check is well-scoped. If only one specific path satisfies it, it is overconstrained.
+    perspective: "neutral".
   - one "constraint" check: a yes/no question about the partner's INTERNAL state that only the
     partner (with their private profile) can authentically judge, phrased so YES = the learner
-    AVOIDED the relational cost ("Did the learner secure this WITHOUT you feeling <the cost> / so
-    that you would genuinely follow through?"). perspective: "partner".
-  Phrase questions concretely against THIS scenario. They are frozen once written.
+    AVOIDED the relational cost ("Did the learner secure this WITHOUT you feeling <the cost> /
+    such that you would genuinely follow through?"). perspective: "partner".
+  Both questions must be frozen once written and reused across all attempts.
 
 Example (GOOD) — agent 0's structured goal:
   outcome:    "get Maya to agree to take at least a week off and see a doctor"

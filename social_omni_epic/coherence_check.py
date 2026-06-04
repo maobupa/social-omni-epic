@@ -25,8 +25,9 @@ Check exactly four things:
 4. SCENARIO-INTERACTION MATCH: Does the scenario description actually describe the stated interaction_type?
    - Flag only if completely mismatched (e.g. scenario describes two people quietly sharing coffee but interaction_type is "hostile negotiation").
 
-5. GOAL ACHIEVABILITY (ZOPA): Does each structured goal have a plausible zone of possible agreement — some outcome, trade, or partial resolution that skilled play could reach within a conversation?
-   - Flag if a goal requires the partner to take an action so costly to their core interest that no creative move or trade could plausibly bridge it (e.g. asking someone to publicly defend a person they believe guilty, or to agree to something that directly destroys their stated goal with no compensation).
+5. GOAL ACHIEVABILITY (ZOPA): Does a zone of possible agreement exist where both agents could partially win through skilled play?
+   - Flag if the two agents' outcomes are MUTUALLY EXCLUSIVE on a specific dimension — i.e., one agent's outcome explicitly requires X while the other agent's outcome explicitly forbids X, with no middle ground. This is structural impossibility, not difficulty.
+   - Flag if a goal requires the partner to take an action so costly to their core interest that no creative move or trade could plausibly bridge it.
    - Do NOT flag scenarios that are merely hard or require skilled negotiation — only flag when success is structurally impossible regardless of skill.
 
 6. RUBRIC & SHORTCUT VALIDITY (structured goals): inspect agent_structured_goals (outcome / constraint / shortcut) and success_rubric.
