@@ -117,6 +117,20 @@ CONDITION FIELD RULES (enforced strictly):
     surface terms, re-abstract the Condition to remove the prior domain's vocabulary while
     preserving the structural pattern. This is encouraged, not high-risk.
 
+GUIDANCE FIELD RULES (enforced strictly):
+  - NO scenario-specific nouns, numbers, or domain terms (e.g., "15% service charge",
+    "the loan covenant", "Sofia", "the manuscript"). Replace with structural descriptions
+    ("the specific threshold you need", "the constraint the other party cited", "the decision-maker").
+  - NO verbatim script patterns tied to this scenario's specifics. Scripts become brittle
+    and mislead the agent in different surface contexts. Instead: describe the MOVE
+    ("open with an explicit if-then offer that ties your ask to their stated safeguards")
+    not the literal words.
+  - Guidance MUST be abstract enough to transfer to a different scenario with the same
+    structural pattern but completely different surface details. Ask: if an agent read this
+    Guidance before a scenario about, say, a family disagreement rather than a workplace
+    negotiation, would the Guidance still make sense and be actionable? If not, it is
+    too scenario-specific.
+
 Output ONLY the <Diagnosis>, <EditReason>, <Entry>, and <MisdirectionFlag> blocks. No other text."""
 
 

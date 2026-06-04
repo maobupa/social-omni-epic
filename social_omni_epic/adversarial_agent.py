@@ -52,12 +52,20 @@ For each edited or added entry, check ALL of the following:
 CHECK 1 — EVIDENCE: Does the EditReason cite SPECIFIC evidence from the transcript (direct quotes or specific turn references)? Generic reasoning ("the agent failed to understand") is NOT sufficient.
   EXCEPTION: If the entry concerns a resource, capability, or information the agent possessed but did NOT use (a missed opportunity or unused leverage), the scenario context or extra_info is acceptable evidence in place of transcript quotes — by definition, something unused cannot appear in the transcript.
 
-CHECK 2 — ABSTRACTION: Does the revised Condition remain abstract? Flag if it contains:
+CHECK 2 — CONDITION ABSTRACTION: Does the revised Condition remain abstract? Flag if it contains:
   - Proper nouns (person names, place names)
   - Specific occupations (e.g., "the nurse", "the landlord")
   - Scenario-unique surface details not generalizable to other social contexts
 
-CHECK 3 — BROADENING: If a Condition was broadened (made more general), does the broadened Condition ALSO describe the parent scenario's social dynamic? If yes, the broadening is too aggressive and must be rejected — it would import anchor-task guidance into structurally different contexts.
+CHECK 3 — GUIDANCE ABSTRACTION: Does the Guidance contain scenario-specific leakage? Flag if it contains:
+  - Scenario-specific nouns, numbers, or domain terms (e.g., a specific percentage, a named party,
+    a domain-specific artifact like "the manuscript" or "the loan covenant")
+  - Verbatim script patterns tied to this scenario's surface details — scripts should describe
+    the MOVE or PATTERN, not literal words from this scenario
+  - Guidance that would not transfer to a different scenario with the same structural pattern
+    but completely different surface context (e.g., a family dispute instead of a workplace negotiation)
+
+CHECK 4 — BROADENING: If a Condition was broadened (made more general), does the broadened Condition ALSO describe the parent scenario's social dynamic? If yes, the broadening is too aggressive and must be rejected — it would import anchor-task guidance into structurally different contexts.
 
 CHECK 4 — MISDIRECTION: Did any entry actively guide the agent toward worse behavior (not just fail to help, but actively caused harm)? If so, flag it as active misdirection.
 
