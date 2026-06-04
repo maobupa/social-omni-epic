@@ -23,7 +23,8 @@ Saves a complete debug JSON log to --output-dir.
 
 Run from project root:
   python scripts/run_debug.py --skip-episode            # no Sotopia needed
-  python scripts/run_debug.py --seed-index 3            # full run, seed #3 as anchor
+  python scripts/run_debug.py --seed-index 34           # full run, seed #34 as anchor
+  python scripts/run_debug.py --random-seed 42          # fix numpy seed for reproducibility
   python scripts/run_debug.py --no-show-prompts         # hide LLM prompts
   python scripts/run_debug.py --seed-limit 5            # load only 5 seed rows (10 entries)
 """
@@ -775,7 +776,12 @@ def main() -> None:
     parser.add_argument("--diversity-threshold", type=float, default=0.92,
                         help="Cosine similarity threshold for diversity gate (default: 0.92)")
     parser.add_argument("--output-dir", type=str, default="debug_log")
+    parser.add_argument("--random-seed", type=int, default=None,
+                        help="Numpy random seed for reproducible generation (default: random)")
     args = parser.parse_args()
+
+    if args.random_seed is not None:
+        np.random.seed(args.random_seed)
 
     if not (os.getenv("LIGHTNING_AI_API_KEY") or os.getenv("OPENAI_API_KEY")):
         print("ERROR: LIGHTNING_AI_API_KEY (or OPENAI_API_KEY) not set.", file=sys.stderr)
