@@ -57,6 +57,7 @@ from social_omni_epic.scenario_title import (
     ScenarioTitleGenerator,
     designate_target_agent,
 )
+from social_omni_epic.curriculum import run_coherence_gate
 from social_omni_epic.seeds import load_sotopia_seeds_with_embeddings
 from social_omni_epic.episode_runner import clean_transcript as _clean_transcript
 from social_omni_epic.skills_chronicle import SkillsChronicle
@@ -188,6 +189,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
         "target_agent_idx": 0,
         "target_agent_goal_abstract": "",
         "inherited_chronicle": {},
+        "difficulty_loop": [],
         "episode_results": [],
         "reflection_outputs": [],
         "adversarial_reflection_results": [],
@@ -449,107 +451,61 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
     }
 
     # -----------------------------------------------------------------------
-    # Episode loop
+    # Shared episode runner (used by both Loop 1 and Loop 2)
     # -----------------------------------------------------------------------
-    reflection_mod = ReflectionModule(tfm, max_retries=1)
-    adversarial = AdversarialAgent(tfm)
     from social_omni_epic.success_detector import SuccessDetector
     success_detector = SuccessDetector(goal_threshold=args.goal_threshold)
 
-    all_transcripts: list[list[dict]] = []
-    all_scores: list[dict] = []
-    all_versions: list[SkillsChronicle] = [deepcopy(current_chronicle)]
-    all_edit_reasons: dict[str, str] = {}
-    outcome = 3
-    final_scores: dict = {}
-
-    for attempt in range(1, args.max_attempts + 1):
-        # -------------------------------------------------------------------
-        # Step 10a: Run episode
-        # -------------------------------------------------------------------
-        tfm.set_step(f"Step 10a (attempt {attempt}): Run Episode")
-        memory_prompt = current_chronicle.format_for_prompt(max_entries=8)
-        if memory_prompt:
-            print_section("Memory injected into agent", memory_prompt[:1000])
-        debug_output.setdefault("memory_injected", {})[str(attempt)] = memory_prompt or "(empty)"
+    def _run_episode(scn, chronicle, attempt_label: str):
+        """Run one episode (real or mock). Returns (episode_result, clean_transcript)."""
+        memory_prompt = chronicle.format_for_prompt(max_entries=8)
+        debug_output.setdefault("memory_injected", {})[attempt_label] = memory_prompt or "(empty)"
         _flush(debug_output)
-
         if args.skip_episode:
             print_warn("--skip-episode: using mock transcript")
-            episode_result = _make_mock_episode_result(scenario, attempt)
+            result = _make_mock_episode_result(scn, int(attempt_label.split("-")[-1]) if "-" in attempt_label else 1)
         else:
-            try:
-                from social_omni_epic.episode_runner import run_single_episode
-                from social_omni_epic.sotopia_bridge import scenario_to_sotopia_profiles
-                env_profile, agent_profiles = scenario_to_sotopia_profiles(scenario)
-                # Ensure learner (target_agent_idx) is always at index 0
-                if scenario.target_agent_idx == 1:
-                    agent_profiles = [agent_profiles[1], agent_profiles[0]]
-                    env_profile.agent_goals = [env_profile.agent_goals[1], env_profile.agent_goals[0]]
-                learner_goal = env_profile.agent_goals[0] if env_profile.agent_goals else ""
-                # Partner profile (our AgentProfile) for the partner-perspective rubric judge
-                _partner_idx = 1 - scenario.target_agent_idx
-                partner_profile = (
-                    scenario.agent_profiles[_partner_idx]
-                    if _partner_idx < len(scenario.agent_profiles) else None
-                )
-
-                def _on_turn(partial_transcript: list[dict]) -> None:
-                    debug_output["episode_results_partial"] = {
-                        "attempt": attempt,
-                        "transcript_so_far": _clean_transcript(partial_transcript),
-                    }
-                    _flush(debug_output)
-
-                episode_result = asyncio.run(
-                    run_single_episode(
-                        env_profile=env_profile,
-                        agent_profiles=agent_profiles,
-                        fm=tfm,
-                        learner_model=args.learner_model,
-                        partner_model=args.partner_model,
-                        memory_prompt=memory_prompt,
-                        max_turns=args.max_turns,
-                        learner_goal=learner_goal,
-                        rubric=scenario.success_rubric,
-                        partner_profile=partner_profile,
-                        judge_self_consistency_k=args.judge_k,
-                        on_turn=_on_turn,
-                    )
-                )
-            except Exception as e:
-                import traceback
-                err_msg = traceback.format_exc()
-                print_warn(f"Episode failed: {e}")
-                debug_output.setdefault("episode_errors", []).append({
-                    "attempt": attempt,
-                    "error": str(e),
-                    "traceback": err_msg,
-                })
+            from social_omni_epic.episode_runner import run_single_episode
+            from social_omni_epic.sotopia_bridge import scenario_to_sotopia_profiles
+            env_profile, agent_profiles = scenario_to_sotopia_profiles(scn)
+            if scn.target_agent_idx == 1:
+                agent_profiles = [agent_profiles[1], agent_profiles[0]]
+                env_profile.agent_goals = [env_profile.agent_goals[1], env_profile.agent_goals[0]]
+            learner_goal = env_profile.agent_goals[0] if env_profile.agent_goals else ""
+            _partner_idx = 1 - scn.target_agent_idx
+            partner_profile = (
+                scn.agent_profiles[_partner_idx] if _partner_idx < len(scn.agent_profiles) else None
+            )
+            def _on_turn(partial_transcript):
+                debug_output["episode_results_partial"] = {
+                    "attempt": attempt_label,
+                    "transcript_so_far": _clean_transcript(partial_transcript),
+                }
                 _flush(debug_output)
-                break
+            result = asyncio.run(
+                run_single_episode(
+                    env_profile=env_profile, agent_profiles=agent_profiles, fm=tfm,
+                    learner_model=args.learner_model, partner_model=args.partner_model,
+                    memory_prompt=memory_prompt, max_turns=args.max_turns,
+                    learner_goal=learner_goal, rubric=scn.success_rubric,
+                    partner_profile=partner_profile, judge_self_consistency_k=args.judge_k,
+                    on_turn=_on_turn,
+                )
+            )
+            debug_output.pop("episode_results_partial", None)
+        return result, _clean_transcript(result.transcript)
 
-        debug_output.pop("episode_results_partial", None)
-        clean = _clean_transcript(episode_result.transcript)
-        all_transcripts.append(clean)
-        final_scores = episode_result.learner_scores
-        all_scores.append({"attempt": attempt, "scores": final_scores})
-
-        # Display transcript
+    def _display_episode(result, clean, attempt_label: str):
+        """Print transcript, scores, and rubric for one episode."""
         transcript_text = "\n".join(
-            f"[T{t['turn']}] {t['speaker']}: {t['content']}"
-            for t in clean
+            f"[T{t['turn']}] {t['speaker']}: {t['content']}" for t in clean
         )
-        print_section(f"Transcript (attempt {attempt})", transcript_text)
-
-        # Diagnostics scores table (NOT the gate)
+        print_section(f"Transcript ({attempt_label})", transcript_text)
         scores_text = "\n".join(
-            f"  {k:38s}: {v:.1f}" for k, v in final_scores.items()
+            f"  {k:38s}: {v:.1f}" for k, v in result.learner_scores.items()
         )
         print_section("Diagnostics scores (not the gate)", scores_text)
-
-        # Rubric verdict table (the gate)
-        rubric_results = list(getattr(episode_result, "rubric_results", []) or [])
+        rubric_results = list(getattr(result, "rubric_results", []) or [])
         if rubric_results:
             rubric_text = "\n".join(
                 f"  [{'PASS' if r.get('verdict') else 'FAIL'}] ({r.get('kind')}/{r.get('perspective')}) "
@@ -559,13 +515,160 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
                 for r in rubric_results
             )
             print_section("Rubric checks (the gate)", rubric_text)
-
-        solved = success_detector.is_solved(final_scores, goal_achieved=episode_result.goal_achieved)
-        print_info(
-            f"Solved: {solved}  (outcome_achieved={getattr(episode_result, 'outcome_achieved', None)} "
-            f"constraint_preserved={getattr(episode_result, 'constraint_preserved', None)} "
-            f"goal_achieved={episode_result.goal_achieved})"
+        solved = success_detector.is_solved(
+            result.learner_scores, goal_achieved=result.goal_achieved
         )
+        print_info(
+            f"Solved: {solved}  (outcome_achieved={getattr(result,'outcome_achieved',None)} "
+            f"constraint_preserved={getattr(result,'constraint_preserved',None)} "
+            f"goal_achieved={result.goal_achieved})"
+        )
+        return solved, rubric_results
+
+    # -----------------------------------------------------------------------
+    # Step 10: Difficulty Calibration (Loop 1)
+    # -----------------------------------------------------------------------
+    D = args.difficulty_d
+    print_step(f"Step 10: Difficulty Calibration (Loop 1, D={D})")
+
+    biting_result = None
+    biting_clean = None
+    bit = False
+
+    for d in range(D + 1):
+        tfm.set_step(f"Step 10 (difficulty d={d}): Run Episode")
+        try:
+            ep_result, ep_clean = _run_episode(scenario, current_chronicle, f"d{d}")
+        except Exception as e:
+            import traceback
+            print_warn(f"Episode error at d={d}: {e}\n{traceback.format_exc()}")
+            break
+
+        solved, rubric_results = _display_episode(ep_result, ep_clean, f"difficulty d={d}")
+        rec: dict = {"d": d, "attempt1_solved": solved, "rubric_results": rubric_results}
+
+        if not solved:
+            bit = True
+            biting_result = ep_result
+            biting_clean = ep_clean
+            debug_output["difficulty_loop"].append(rec)
+            print_info(f"→ Scenario BIT on d={d}. Proceeding to skill-learning loop.")
+            break
+
+        if d >= D:
+            debug_output["difficulty_loop"].append(rec)
+            print_warn(f"→ Scenario still too easy after {D} edits. DISCARDED.")
+            break
+
+        # Too easy — analyze and raise difficulty
+        print_info(f"→ Solved too easily at d={d}. Analyzing slack knob...")
+        tfm.set_step(f"Step 10 (difficulty d={d}): Analyze Too Easy")
+        feedback = task_gen.analyze_too_easy(scenario, ep_clean)
+        slack = feedback.get("slack_knob", "?")
+        rationale = feedback.get("rationale", "")
+        suggested = feedback.get("suggested_edit", "")
+        print_info(f"Slack knob: {slack} — {rationale}")
+        print_info(f"Suggested edit: {suggested}")
+
+        tfm.set_step(f"Step 10 (difficulty d={d}): Edit Scenario (raise_difficulty)")
+        edited = task_gen.edit_scenario(scenario, [suggested], intent="raise_difficulty")
+        edited, ok = (
+            run_coherence_gate(edited, coherence_checker, task_gen, tfm,
+                               {"enable_coherence_check": True, "coherence_max_retries": 1},
+                               anchor, scenario.iteration)
+            if edited is not None else (None, False)
+        )
+        rec.update({
+            "slack_knob": slack,
+            "rationale": rationale,
+            "suggested_edit": suggested,
+            "re_gate_passed": bool(ok),
+            "edited_structured_goals": [
+                sg.model_dump() if sg else None
+                for sg in (edited.structured_goals if edited else [])
+            ],
+        })
+        debug_output["difficulty_loop"].append(rec)
+
+        if not ok or edited is None:
+            print_warn(f"Edit failed coherence re-gate at d={d}. Stopping difficulty loop.")
+            break
+
+        scenario = edited
+        print_info(f"Scenario updated (d={d+1}). Re-running episode...")
+        debug_output["generated_scenario"] = _scenario_dict(scenario)
+        _flush(debug_output)
+
+    debug_output["difficulty_loop_summary"] = {"bit": bit, "n_edits": sum(
+        1 for r in debug_output["difficulty_loop"] if r.get("slack_knob")
+    )}
+    _flush(debug_output)
+
+    if not bit:
+        outcome = 0  # discarded — scenario never bit
+        debug_output["outcome"] = outcome
+        debug_output["terminal_state"] = "discarded"
+        _flush(debug_output)
+        print_warn("DISCARDED — scenario could not be made difficult enough. Skipping skill loop.")
+        # Jump to title + summary by falling through with empty episode_results
+
+    # -----------------------------------------------------------------------
+    # Step 11: Skill Learning (Loop 2) — starts from the biting attempt
+    # -----------------------------------------------------------------------
+    reflection_mod = ReflectionModule(tfm, max_retries=1)
+    adversarial = AdversarialAgent(tfm)
+
+    all_transcripts: list[list[dict]] = []
+    all_scores: list[dict] = []
+    all_versions: list[SkillsChronicle] = [deepcopy(current_chronicle)]
+    all_edit_reasons: dict[str, str] = {}
+    outcome = 3
+    final_scores: dict = {}
+
+    if bit and biting_result is not None:
+        # Seed Loop 2 with the biting attempt (attempt 1)
+        all_transcripts.append(biting_clean)
+        final_scores = biting_result.learner_scores
+        all_scores.append({"attempt": 1, "scores": final_scores, "solved": False})
+        rubric_results = list(getattr(biting_result, "rubric_results", []) or [])
+        debug_output["episode_results"].append({
+            "attempt": 1,
+            "transcript_clean": biting_clean,
+            "diagnostics_scores": final_scores,
+            "rubric_results": rubric_results,
+            "outcome_achieved": getattr(biting_result, "outcome_achieved", None),
+            "constraint_preserved": getattr(biting_result, "constraint_preserved", None),
+            "goal_achieved": biting_result.goal_achieved,
+            "solved": False,
+        })
+        _flush(debug_output)
+
+    for attempt in range(2, args.max_attempts + 1):
+        if not bit:
+            break
+
+        # -------------------------------------------------------------------
+        # Step 11a: Run episode
+        # -------------------------------------------------------------------
+        tfm.set_step(f"Step 11a (attempt {attempt}): Run Episode")
+        try:
+            episode_result, clean = _run_episode(scenario, current_chronicle, str(attempt))
+        except Exception as e:
+            import traceback
+            err_msg = traceback.format_exc()
+            print_warn(f"Episode failed: {e}")
+            debug_output.setdefault("episode_errors", []).append({
+                "attempt": attempt, "error": str(e), "traceback": err_msg,
+            })
+            _flush(debug_output)
+            break
+
+        all_transcripts.append(clean)
+        final_scores = episode_result.learner_scores
+        all_scores.append({"attempt": attempt, "scores": final_scores,
+                            "solved": bool(episode_result.goal_achieved)})
+
+        solved, rubric_results = _display_episode(episode_result, clean, f"attempt {attempt}")
 
         debug_output["episode_results"].append({
             "attempt": attempt,
@@ -580,7 +683,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
         _flush(debug_output)
 
         if solved:
-            outcome = 1 if attempt == 1 else 2
+            outcome = 2
             final_scores = episode_result.learner_scores
             break
 
@@ -588,9 +691,9 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
             break
 
         # -------------------------------------------------------------------
-        # Step 10b: Reflection
+        # Step 11b: Reflection
         # -------------------------------------------------------------------
-        tfm.set_step(f"Step 10b (attempt {attempt}): Reflection")
+        tfm.set_step(f"Step 11b (attempt {attempt}): Reflection")
         ref_out = reflection_mod.reflect(
             chronicle=current_chronicle,
             scenario=scenario,
@@ -620,7 +723,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
         # -------------------------------------------------------------------
         # Step 10c: Adversarial check on reflection
         # -------------------------------------------------------------------
-        tfm.set_step(f"Step 10c (attempt {attempt}): Adversarial Check (Reflection)")
+        tfm.set_step(f"Step 11c (attempt {attempt}): Adversarial Check (Reflection)")
         adv_result = adversarial.check_reflection(
             ref_out, clean, anchor_task=anchor, scenario=scenario
         )
@@ -631,7 +734,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
         if not adv_result.approved and adv_result.critique:
             print_warn(f"Critique: {adv_result.critique[:300]}")
             print_warn("Synthesizing reflection + critique...")
-            tfm.set_step(f"Step 10c (attempt {attempt}): Synthesis")
+            tfm.set_step(f"Step 11c (attempt {attempt}): Synthesis")
             ref_out = reflection_mod.synthesize_with_critique(
                 reflection_output=ref_out,
                 adversarial_critique=adv_result.critique,
@@ -662,17 +765,17 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
     _flush(debug_output)
 
     # -----------------------------------------------------------------------
-    # Step 11: Meta-reflection
+    # Step 12: Meta-reflection
     # -----------------------------------------------------------------------
     meta_mod = MetaReflectionModule(tfm, max_retries=1)
-    if outcome == 1:
-        print_step("Step 11: Meta-Reflection (skipped — solved on first attempt)")
+    if outcome == 0:
+        print_step("Step 12: Meta-Reflection (skipped — scenario discarded)")
         final_chronicle = current_chronicle
     elif not all_transcripts:
-        print_step("Step 11: Meta-Reflection (skipped — no transcripts to learn from)")
+        print_step("Step 12: Meta-Reflection (skipped — no transcripts to learn from)")
         final_chronicle = current_chronicle
     else:
-        tfm.set_step(f"Step 11: Meta-Reflection (outcome={outcome})")
+        tfm.set_step(f"Step 12: Meta-Reflection (outcome={outcome})")
         final_chronicle = meta_mod.synthesize(
             chronicle_versions=all_versions,
             transcripts=all_transcripts,
@@ -726,7 +829,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
     traces = tfm.get_traces()
     debug_output["llm_traces"] = traces
 
-    outcome_labels = {1: "SOLVED (attempt 1)", 2: "SOLVED (multi-attempt)", 3: "FAILED"}
+    outcome_labels = {0: "DISCARDED (never bit)", 2: "SOLVED (after biting)", 3: "FAILED (never solved)"}
     total_elapsed = sum(t["elapsed_ms"] for t in traces)
 
     summary = (
@@ -780,6 +883,8 @@ def main() -> None:
     parser.add_argument("--diversity-threshold", type=float, default=0.92,
                         help="Cosine similarity threshold for diversity gate (default: 0.92)")
     parser.add_argument("--output-dir", type=str, default="debug_log")
+    parser.add_argument("--difficulty-d", type=int, default=2,
+                        help="Max difficulty edits in Loop 1 before discarding (default: 2)")
     parser.add_argument("--random-seed", type=int, default=None,
                         help="Numpy random seed for reproducible generation (default: random)")
     args = parser.parse_args()
