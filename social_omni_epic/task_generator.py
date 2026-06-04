@@ -134,7 +134,7 @@ Respond with valid JSON matching exactly this schema:
 """
 
 
-def _format_scenario_for_prompt(s: SocialScenario) -> str:
+def _format_scenario_for_prompt(s: SocialScenario, include_chronicle: bool = False) -> str:
     d = {
         "scenario": s.scenario,
         "agent_profiles": [p.model_dump(exclude={"id"}) for p in s.agent_profiles],
@@ -155,7 +155,11 @@ def _format_scenario_for_prompt(s: SocialScenario) -> str:
             d["success_rubric"] = s.success_rubric.model_dump()
     else:
         d["agent_goals"] = s.agent_goals
-    return json.dumps(d, indent=2)
+    result = json.dumps(d, indent=2)
+    if include_chronicle and s.skills_final_md:
+        chronicle = s.skills_final_md.strip()[:1500]
+        result += f"\n[Skills chronicle — what made this scenario hard / what the agent learned:]\n{chronicle}"
+    return result
 
 
 class TaskGenerator:
@@ -231,19 +235,35 @@ class TaskGenerator:
 
     def _build_user_prompt(self, examples: list[SocialScenario],
                            failed: list[SocialScenario],
+                           episode_failed: Optional[list["SocialScenario"]] = None,
                            existing_types: Optional[list[str]] = None,
                            coherence_feedback: Optional[list[str]] = None) -> str:
         parts = []
         if examples:
-            parts.append("EXAMPLE SCENARIOS FROM THE ARCHIVE (stepping stones — build on these dynamics, extending their complexity or adding new structural twists):\n")
+            parts.append(
+                "EXAMPLE SCENARIOS FROM THE ARCHIVE — each was genuinely difficult: "
+                "the agent failed on the first attempt, then learned. "
+                "The skills chronicle shows WHY it was hard and what the naive agent got wrong. "
+                "Build on these dynamics:\n"
+            )
             for i, ex in enumerate(examples):
                 parts.append(f"--- Example {i+1} ---")
-                parts.append(_format_scenario_for_prompt(ex))
+                parts.append(_format_scenario_for_prompt(ex, include_chronicle=True))
         if failed:
-            parts.append("\nSCENARIOS THAT WERE REJECTED AS UNINTERESTING (avoid these patterns):\n")
+            parts.append("\nSCENARIOS REJECTED AS UNINTERESTING BEFORE ANY EPISODE (avoid these patterns):\n")
             for i, fx in enumerate(failed):
                 parts.append(f"--- Rejected {i+1} ---")
                 parts.append(_format_scenario_for_prompt(fx))
+        if episode_failed:
+            parts.append(
+                "\nSCENARIOS BEYOND THE CURRENT FRONTIER — ran full episodes but the agent "
+                "never solved them. The WARNING entries show what made them unlearnable "
+                "(too hard, no discoverable path, or fully intransigent partner). "
+                "Do NOT generate scenarios with the same structural failure:\n"
+            )
+            for i, fx in enumerate(episode_failed):
+                parts.append(f"--- Beyond-frontier {i+1} ---")
+                parts.append(_format_scenario_for_prompt(fx, include_chronicle=True))
         if existing_types:
             type_str = ", ".join(sorted({t for t in existing_types if t}))
             parts.append(
@@ -260,9 +280,20 @@ class TaskGenerator:
                 + "\nPlease fix these issues in the new scenario."
             )
         parts.append(
-            "\nGenerate ONE NEW social scenario that extends or builds upon the social dynamics shown above — "
-            "more complex stakes, a new structural twist, or a different power asymmetry layered on a familiar tension. "
-            "Do not merely re-skin with different names or settings; the structural novelty must be genuine. "
+            "\nGenerate ONE NEW social scenario. "
+            "The examples above define the current frontier — use them as follows:\n"
+            "  TRANSFER the latent social structure: the TYPE of constraint that bites, the FORM of the shortcut "
+            "(what leverage or style makes the naive move tempting), the NATURE of the power asymmetry. "
+            "The new scenario should belong to the same family of social challenges.\n"
+            "  VARY the surface freely: characters, setting, occupations, relationship, specific stakes — "
+            "these can change completely. The structural family should be recognizable; the surface should not.\n"
+            "  AIM FOR THE FRONTIER: target at least the same difficulty as the examples — not easier. "
+            "You may push further (tighter constraint, more tempting shortcut, deeper partner resistance) "
+            "but only along the social axis, not by adding facts, parties, or numeric complexity. "
+            "Do not worry about guaranteeing hardness — a difficulty calibration step will adjust if needed.\n"
+            "Do NOT re-skin (same dynamic, different names). Do NOT jump to a completely different type of social challenge "
+            "(that ignores the frontier signal). The goal: a reader who knows the examples should think "
+            "'same kind of hard, harder, in a new situation.'\n"
             "Return ONLY a JSON object matching the required schema."
         )
         return "\n".join(parts)
@@ -271,11 +302,14 @@ class TaskGenerator:
         self,
         examples: list[SocialScenario],
         failed_examples: Optional[list[SocialScenario]] = None,
+        episode_failed_examples: Optional[list[SocialScenario]] = None,
         existing_types: Optional[list[str]] = None,
         coherence_feedback: Optional[list[str]] = None,
     ) -> Optional[SocialScenario]:
         user_prompt = self._build_user_prompt(
-            examples, failed_examples or [], existing_types=existing_types,
+            examples, failed_examples or [],
+            episode_failed=episode_failed_examples or [],
+            existing_types=existing_types,
             coherence_feedback=coherence_feedback,
         )
         return self._generate_with_retry(user_prompt)
@@ -283,6 +317,7 @@ class TaskGenerator:
     def generate_with_verbalized_sampling(
         self,
         examples: list[SocialScenario],
+        episode_failed_examples: Optional[list[SocialScenario]] = None,
         existing_types: Optional[list[str]] = None,
         n_candidates: int = 5,
     ) -> Optional[SocialScenario]:
@@ -291,17 +326,29 @@ class TaskGenerator:
         Picks the candidate with the LOWEST probability — the most frontier/surprising
         scenario that the model would not spontaneously generate.
 
-        Note: recently-rejected scenarios are NOT passed (design decision).
+        Note: recently-rejected (MoI) scenarios are NOT passed (design decision).
+        Episode-failed scenarios ARE passed — they mark the beyond-frontier boundary.
         Falls back to generate_from_archive if VS fails.
         """
         system = VS_SYSTEM_PROMPT.replace("{n_candidates}", str(n_candidates))
 
         parts: list[str] = []
         if examples:
-            parts.append("EXAMPLE SCENARIOS FROM THE ARCHIVE (build BEYOND these):\n")
+            parts.append(
+                "EXAMPLE SCENARIOS FROM THE ARCHIVE — each was genuinely difficult "
+                "(agent failed first, then learned). Chronicles show WHY. Build BEYOND these:\n"
+            )
             for i, ex in enumerate(examples):
                 parts.append(f"--- Example {i + 1} ---")
-                parts.append(_format_scenario_for_prompt(ex))
+                parts.append(_format_scenario_for_prompt(ex, include_chronicle=True))
+        if episode_failed_examples:
+            parts.append(
+                "\nSCENARIOS BEYOND THE CURRENT FRONTIER — agent never solved these. "
+                "WARNING entries show what made them unlearnable. Do NOT replicate these structures:\n"
+            )
+            for i, fx in enumerate(episode_failed_examples):
+                parts.append(f"--- Beyond-frontier {i + 1} ---")
+                parts.append(_format_scenario_for_prompt(fx, include_chronicle=True))
         if existing_types:
             type_str = ", ".join(sorted({t for t in existing_types if t}))
             parts.append(
@@ -310,6 +357,11 @@ class TaskGenerator:
             )
         parts.append(
             f"\nGenerate {n_candidates} candidate scenarios at varying typicality levels. "
+            "Each should TRANSFER the latent social structure from the examples (type of constraint, "
+            "form of shortcut, nature of power asymmetry) while VARYING the surface freely "
+            "(characters, setting, stakes). Aim for at least the same difficulty — not easier — "
+            "but do not force escalation; a difficulty calibration step adjusts if needed. "
+            "Do not re-skin; do not jump to a completely different type of social challenge. "
             "Return JSON: {\"candidates\": [...]}"
         )
         user_prompt = "\n".join(parts)
@@ -351,7 +403,9 @@ class TaskGenerator:
                 continue
 
         # Fallback to standard generation
-        return self.generate_from_archive(examples, existing_types=existing_types)
+        return self.generate_from_archive(
+            examples, episode_failed_examples=episode_failed_examples, existing_types=existing_types
+        )
 
     _EDIT_INTENTS = {
         "fix_coherence": (

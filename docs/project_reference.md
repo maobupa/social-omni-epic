@@ -250,6 +250,23 @@ The LLM writes the check questions once at generation time. The same questions a
 ### Partner judge self-consistency (not confidence-threshold escalation)
 For `perspective="partner"` checks: always sample K=3 times at temperature 0.7, take majority vote. The agree-fraction (`n_agree/k`) is the uncertainty signal, visible in the debug output. The `confidence` field is for auditing only — it does not trigger conditional re-sampling.
 
+### `shortcut_form` removed
+**Old design:** `StructuredGoal` had a `shortcut_form: "asset" | "manner"` field classifying whether the shortcut was private leverage or a blunt style. **Actual:** removed entirely. It never appeared in any control flow (not read by the coherence checker, difficulty editor, MoI, or reflection module). The `shortcut` field itself already encodes whether it's leverage or manner — classifying it into a bin added an LLM generation step with no downstream value and confused the prompt.
+
+### Task generator receives episode-failed ("beyond-frontier") scenarios
+**Old design:** the generator's context included successful archive examples + MoI-rejected scenarios. **Actual:** a third section is now added — `archive.state.failed_tasks` scenarios that ran full episodes but were never solved. These have WARNING-dominant `skills_final_md` entries documenting what made them unlearnable (no discoverable path, fully intransigent partner, etc.). Up to `task_generator.num_episode_failed_examples=2` most-recent entries with a chronicle are sampled and shown labeled as "beyond the current frontier — do NOT replicate these structures." This mirrors the OMNI-EPIC use of failed tasks to condition the generator away from the intractable region.
+
+### Task generator prompt: TRANSFER / VARY / FRONTIER (not "build on")
+**Old design:** "build on these dynamics, extending complexity or adding new structural twists." Ambiguous — "build on" could mean copy, re-skin, or anything. **Actual:** the terminal generation instruction now distinguishes three explicit operations:
+- **TRANSFER** the latent social structure (type of constraint, form of shortcut, power asymmetry) — this is what the UCB frontier signal means: stay in this region
+- **VARY** the surface freely (characters, setting, stakes can change completely)
+- **AIM FOR THE FRONTIER** — at least as difficult as the examples, not necessarily harder; Loop 1 difficulty calibration adjusts if needed; do not force escalation through the wrong axis (facts, parties, numeric complexity)
+
+The key insight: "harder" is not the generator's job — Loop 1 handles difficulty calibration. The generator's job is to stay in the right region and be genuinely novel.
+
+### Skills chronicle injected into generation prompt
+**Old design:** `_format_scenario_for_prompt` showed only the raw scenario JSON (goals, profiles, rubric). **Actual:** for successful archive examples shown to the generator, `skills_final_md` is now appended (up to 1500 chars) labeled as "what made this scenario hard / what the agent learned." This gives the generator the WHY behind each example's difficulty — not just the scenario structure but the specific trap the naive agent fell into — so it can replicate that kind of structural challenge in a new surface context.
+
 ---
 
 ## 10. Config Reference
@@ -265,6 +282,9 @@ judge:
   self_consistency_k: 3  # partner-perspective check: 3 samples, majority vote
 moi:
   max_edits: 2           # MoI auditor: edit-up attempts before discarding
+task_generator:
+  num_examples: 3                  # successful KNN examples shown to generator
+  num_episode_failed_examples: 2   # beyond-frontier failed-task examples shown to generator
 stopping:
   N: null                # stop at N solved-after-biting scenarios (null = run all iterations)
 goal_threshold: 7.0      # legacy/mock fallback only; real gate is the rubric AND

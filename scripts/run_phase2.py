@@ -108,19 +108,31 @@ def _select_anchor_and_examples(
     return anchor, anchor_idx, examples
 
 
+def _sample_episode_failed(archive: Archive, n: int) -> list[SocialScenario]:
+    """Return up to n episode-failed scenarios (most recent) that have a skills chronicle."""
+    candidates = [s for s in archive.state.failed_tasks if s.skills_final_md]
+    return candidates[-n:] if len(candidates) > n else candidates
+
+
 def _generate_scenario(
     examples: list[SocialScenario],
     task_gen: TaskGenerator,
+    archive: Archive,
     config: DictConfig,
     existing_types: list[str],
 ) -> SocialScenario | None:
+    n_ep_failed = int(config.get("task_generator", {}).get("num_episode_failed_examples", 2))
+    episode_failed = _sample_episode_failed(archive, n_ep_failed)
     use_vs = bool(config.get("use_verbalized_sampling", True))
     n_cands = int(config.get("vs_num_candidates", 5))
     if use_vs:
         return task_gen.generate_with_verbalized_sampling(
-            examples, existing_types=existing_types, n_candidates=n_cands
+            examples, episode_failed_examples=episode_failed,
+            existing_types=existing_types, n_candidates=n_cands,
         )
-    return task_gen.generate_from_archive(examples, existing_types=existing_types)
+    return task_gen.generate_from_archive(
+        examples, episode_failed_examples=episode_failed, existing_types=existing_types
+    )
 
 
 
@@ -211,7 +223,7 @@ def main(config: DictConfig) -> None:
         )
 
         # 2. Generate scenario
-        scenario = _generate_scenario(examples, task_gen, config, existing_types or [])
+        scenario = _generate_scenario(examples, task_gen, archive, config, existing_types or [])
         if scenario is None:
             archive.add_failed_generation({"iteration": iteration, "reason": "generation_failed"})
             continue
