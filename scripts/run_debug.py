@@ -620,7 +620,10 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
     all_scores: list[dict] = []
     all_versions: list[SkillsChronicle] = [deepcopy(current_chronicle)]
     all_edit_reasons: dict[str, str] = {}
-    outcome = 3
+    if not bit:
+        outcome = 0  # preserve discard — do not overwrite
+    else:
+        outcome = 3  # default to failed; Loop 2 will update to 2 if solved
     final_scores: dict = {}
 
     if bit and biting_result is not None:
