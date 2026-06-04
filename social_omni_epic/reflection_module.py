@@ -68,6 +68,11 @@ Your task after a FAILED episode:
 
 STEP 1 — DIAGNOSIS:
 Write a <Diagnosis> block analyzing:
+  - The FAILURE PATTERN (use the RUBRIC CHECK RESULTS provided): HOLLOW EXTRACTION (got the outcome
+    but broke the constraint — took the tempting shortcut and paid the relational price), an ATTUNEMENT
+    failure (failed a relational/internal constraint — name the real cause, e.g. "defaulted to
+    problem-solving when validation-first was needed," NOT "discomfort"), or simply not achieving the
+    outcome. Diagnose the failure that ACTUALLY occurred per the checks.
   - Which chronicle entries were relevant to this scenario (if the chronicle is empty, skip this and the next sub-question)
   - Whether the agent applied them
   - What specifically went wrong and what skills were missing that, if codified, would have improved the outcome
@@ -128,6 +133,49 @@ def _format_transcript(transcript: list[dict], attempt_num: int, max_chars: int 
     return text
 
 
+def _format_goal_and_checks(scenario: SocialScenario, rubric_results: Optional[list[dict]]) -> str:
+    """Show the learner's structured goal and which rubric checks failed (with judge reasoning)."""
+    li = scenario.target_agent_idx
+    parts: list[str] = []
+    sg = None
+    if scenario.structured_goals and li < len(scenario.structured_goals):
+        sg = scenario.structured_goals[li]
+    if sg is not None:
+        parts.append(
+            "LEARNER GOAL (structured):\n"
+            f"  outcome:    {sg.outcome}\n"
+            f"  constraint: {sg.constraint}\n"
+            f"  shortcut (the tempting move that wins the outcome but breaks the constraint): {sg.shortcut}"
+        )
+    else:
+        target_goal = scenario.agent_goals[li] if li < len(scenario.agent_goals) else ""
+        parts.append(f"TARGET AGENT GOAL: {target_goal}")
+
+    if rubric_results:
+        lines = ["RUBRIC CHECK RESULTS (this attempt):"]
+        for r in rubric_results:
+            mark = "PASS" if r.get("verdict") else "FAIL"
+            lines.append(f"  [{mark}] ({r.get('kind')}) {r.get('question')}  — {r.get('rationale','')}")
+        outcome_pass = all(r.get("verdict") for r in rubric_results if r.get("kind") == "outcome")
+        constraint_pass = all(r.get("verdict") for r in rubric_results if r.get("kind") == "constraint")
+        if outcome_pass and not constraint_pass:
+            lines.append(
+                "FAILURE PATTERN: HOLLOW EXTRACTION — the learner got the outcome but broke the "
+                "constraint (took/!approximated the tempting shortcut and paid the relational price)."
+            )
+        elif not outcome_pass and not constraint_pass:
+            lines.append(
+                "FAILURE PATTERN: the learner failed on both. If the constraint is relational/internal, "
+                "this is an ATTUNEMENT failure — likely the model DEFAULTED TO PROBLEM-SOLVING / pushing "
+                "when the situation rewarded validation-first or reading the other person; do NOT diagnose "
+                "it as 'discomfort'."
+            )
+        elif not outcome_pass:
+            lines.append("FAILURE PATTERN: the learner did not achieve the outcome.")
+        parts.append("\n".join(lines))
+    return "\n".join(parts)
+
+
 def _build_prompt(
     chronicle: SkillsChronicle,
     scenario: SocialScenario,
@@ -135,17 +183,13 @@ def _build_prompt(
     prior_edit_reasons: dict[str, str],
     attempt_num: int,
     anchor_task: Optional[SocialScenario],
+    rubric_results: Optional[list[dict]] = None,
 ) -> str:
     parts: list[str] = []
 
     # Scenario context
-    target_goal = (
-        scenario.agent_goals[scenario.target_agent_idx]
-        if scenario.target_agent_idx < len(scenario.agent_goals)
-        else ""
-    )
     parts.append(f"SCENARIO: {scenario.scenario}")
-    parts.append(f"TARGET AGENT GOAL: {target_goal}")
+    parts.append(_format_goal_and_checks(scenario, rubric_results))
     parts.append(f"INTERACTION TYPE: {scenario.interaction_type}")
 
     if anchor_task and anchor_task.social_dynamic:
@@ -355,14 +399,17 @@ class ReflectionModule:
         prior_edit_reasons: dict[str, str],
         attempt_num: int,
         anchor_task: Optional[SocialScenario] = None,
+        rubric_results: Optional[list[dict]] = None,
     ) -> ReflectionOutput:
         """Run reflection after attempt_num has failed.
 
         transcripts: list of all episode transcripts so far (including the latest failure).
         prior_edit_reasons: accumulated {entry_id: reason} from previous reflections.
+        rubric_results: the latest attempt's per-check verdicts (which checks failed + reasoning).
         """
         prompt = _build_prompt(
-            chronicle, scenario, transcripts, prior_edit_reasons, attempt_num, anchor_task
+            chronicle, scenario, transcripts, prior_edit_reasons, attempt_num, anchor_task,
+            rubric_results=rubric_results,
         )
         for attempt in range(self.max_retries):
             try:

@@ -25,9 +25,15 @@ Check exactly four things:
 4. SCENARIO-INTERACTION MATCH: Does the scenario description actually describe the stated interaction_type?
    - Flag only if completely mismatched (e.g. scenario describes two people quietly sharing coffee but interaction_type is "hostile negotiation").
 
-5. GOAL ACHIEVABILITY: Does the learner's goal have a plausible zone of possible agreement — some outcome, trade, or partial resolution that skilled play could reach within a conversation?
-   - Flag if the learner's goal requires the partner to take an action so costly to the partner's core interest that no creative move or trade could plausibly bridge it (e.g. asking someone to publicly defend a person they believe guilty of serious misconduct, or to agree to something that directly destroys their stated goal with no compensation).
+5. GOAL ACHIEVABILITY (ZOPA): Does each structured goal have a plausible zone of possible agreement — some outcome, trade, or partial resolution that skilled play could reach within a conversation?
+   - Flag if a goal requires the partner to take an action so costly to their core interest that no creative move or trade could plausibly bridge it (e.g. asking someone to publicly defend a person they believe guilty, or to agree to something that directly destroys their stated goal with no compensation).
    - Do NOT flag scenarios that are merely hard or require skilled negotiation — only flag when success is structurally impossible regardless of skill.
+
+6. RUBRIC & SHORTCUT VALIDITY (structured goals): inspect agent_structured_goals (outcome / constraint / shortcut) and success_rubric.
+   - Flag if the shortcut is NOT load-bearing: it must be a tempting move that WOULD achieve the outcome but VIOLATE the constraint. If taking the shortcut wouldn't actually win the outcome, or wouldn't actually break the constraint, flag it.
+   - Flag if the partner's secret is decorative — it should be the leverage behind that agent's shortcut, or directly raise the constraint's stakes.
+   - Flag if any success_rubric check is NOT genuinely checkable (a neutral 'outcome' check must be answerable from the transcript; a 'partner' constraint check must be about the partner's internal state), or if a check is TRIVIALLY satisfiable by the naive/blunt move (then it has no bite).
+   - Flag if the outcome is an extractable utterance ("get them to say X") or pure number-splitting rather than a genuine state-change requiring buy-in.
 
 Return JSON: {"passed": true/false, "issues": ["specific issue 1", "specific issue 2", ...]}
 Issues must be specific and actionable — describe exactly what is wrong and what needs to change.
@@ -44,14 +50,23 @@ def _format(scenario: SocialScenario) -> str:
             "big_five": p.big_five,
             "decision_making_style": p.decision_making_style,
         })
-    return json.dumps({
+    out = {
         "scenario": scenario.scenario,
         "interaction_type": scenario.interaction_type,
         "relationship": scenario.relationship,
         "relationship_background": scenario.relationship_background,
-        "agent_goals": scenario.agent_goals,
         "agent_profiles": profiles_summary,
-    }, indent=2)
+    }
+    if any(sg is not None for sg in (scenario.structured_goals or [])):
+        out["agent_structured_goals"] = [
+            sg.model_dump() if sg else None for sg in scenario.structured_goals
+        ]
+        out["agent_secrets"] = [p.secret for p in scenario.agent_profiles]
+        if scenario.success_rubric:
+            out["success_rubric"] = scenario.success_rubric.model_dump()
+    else:
+        out["agent_goals"] = scenario.agent_goals
+    return json.dumps(out, indent=2)
 
 
 @dataclass

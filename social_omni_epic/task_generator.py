@@ -8,32 +8,59 @@ from .embedding_utils import get_similar_scenarios
 
 
 _GOAL_FORMAT_GUIDE = """
-AGENT GOALS — this is the most important part. Follow this format exactly:
+AGENT GOALS — the most important part. Each agent's goal is THREE structured components
+(`outcome`, `constraint`, `shortcut`, + `shortcut_form`), NOT a flat sentence. This is what
+turns a logic puzzle into a genuinely social scenario.
 
-  "Your goal is to [concrete active objective]. <extra_info>[Hidden constraint or motivation — what you know that the other agent does NOT, what your real minimum/maximum is, what you are unwilling to concede, what you fear or desperately need]</extra_info>"
+  - "outcome": the concrete thing this agent wants — a genuine change in the OTHER agent's
+    state, or a concrete agreement, that depends on the other's AUTHENTIC buy-in. NOT a
+    sentence you can extract by demanding it ("get them to say X" is banned).
+  - "constraint": the relational/face cost this agent must AVOID while pursuing the outcome.
+    Phrase it as the thing to avoid, so it reads naturally after the word "without"
+    (e.g., "the other person feeling manipulated or that you went behind their back").
+    This is the part that makes the scenario social rather than a number/position puzzle.
+  - "shortcut": a tempting, available move that WOULD achieve the outcome but VIOLATES the
+    constraint. Phrase it from the agent's point of view as leverage/an option they have
+    (e.g., "You hold the CEO's private backing and could present the decision as already
+    made"). Do NOT label it as a trap — the agent must discover the tension themselves.
+  - "shortcut_form": "asset" (private leverage/info the agent holds) or "manner"
+    (a tempting blunt/coercive style).
 
-Rules for goals:
-- BOTH agents must have ACTIVE goals (things they are trying to achieve), not passive/defensive ones.
-- Goals must be STRUCTURALLY INCOMPATIBLE: both agents cannot fully achieve their goal simultaneously. One agent getting more of what they want means the other gets less. If both agents can get everything they want with one polite exchange, the scenario fails.
-- However, there must still be a ZONE OF POSSIBLE AGREEMENT: a creative deal, trade, or partial outcome where a sufficiently skilled agent could succeed. Do NOT write goals where one party must fully capitulate with no possible middle ground (e.g., requiring the partner to publicly defend someone they believe is guilty, or to take an action that destroys their credibility). Hard ≠ impossible. Skilled play must be able to move the needle.
-- Each agent's goal must name at least one SPECIFIC, BINARY thing they must hold or obtain — something a third-party judge reading only the transcript can verify ("kept the clause requiring X", "obtained agreement that Y will not happen", "stayed below $500"). Vague objectives like "minimize concessions" or "protect your interests" are not evaluable and must not be used.
-- For at least one agent, the naive/default behavior — immediately agreeing, being overly accommodating, accepting the first offer — must FAIL to achieve their goal. If a polite cooperative response from either side already satisfies both goals, the scenario is too easy.
-- The <extra_info> must contain the hidden stake that gives the learner a concrete reason to resist, push back, or hold a specific line — not just "care about this generally."
-- The secret field in each agent profile should connect to or deepen the <extra_info>: it must be something that would change the dynamic if revealed.
-- Do NOT write goals that telegraph cooperation ("I want to find a mutually beneficial solution", "minimize concessions"). Goals should encode each agent's self-interest and their non-negotiable floor.
-- Goals must be fully achievable within a two-party spoken conversation. Do not write goals that require actions outside the dialogue (sending real documents, obtaining third-party sign-offs, producing external artifacts). Rephrase as what must be explicitly stated or agreed to within the conversation itself.
+Rules:
+- SYMMETRIC: BOTH agents get a full three-part structured goal.
+- STRUCTURALLY INCOMPATIBLE but with a ZONE OF POSSIBLE AGREEMENT: both cannot fully win, yet
+  a skilled agent could find a creative deal or partial outcome. Hard ≠ impossible — never
+  require one party to fully capitulate with no middle ground.
+- THE NAIVE MOVE MUST FAIL: taking the shortcut (blunt demand, spending leverage, coercion)
+  wins the surface outcome but BREAKS the constraint — so a naive agent appears to "succeed"
+  while actually failing. A skilled agent achieves the outcome WITHOUT paying the constraint's
+  cost. The difficulty lives in HOW, not WHAT.
+- The agent profile `secret` must BE the leverage behind that agent's shortcut (or directly
+  raise the stakes of their constraint) — not decorative backstory.
+- Achievable within a two-party spoken conversation. No external artifacts/sign-offs.
+- BANNED: extracting a specific spoken sentence ("get them to say X"); pure number-splitting /
+  positional bargaining with no relational cost; a constraint with no tempting shortcut.
 
-Example of GOOD goals (from reference dataset) — note the evaluable target and explicit penalty:
-  Agent 0: "You are the buyer. Your target price is $454. If you pay significantly more you face a penalty; if you negotiate below target you get a bonus. <extra_info>You know comparable units sold for $420 last month and you have a competing offer at $480 you can invoke.</extra_info>"
-  Agent 1: "You are the seller. Your target price is $610. You face a penalty for going significantly below target. <extra_info>You have two other interested buyers and a deadline in 48 hours — you can use urgency but must not reveal you are desperate to close.</extra_info>"
+SUCCESS RUBRIC — author the checkable success conditions for the LEARNER (write them for
+agent 0; the designated learner is fixed later). CRITICAL POLARITY: phrase EVERY check so that a
+TRUE/yes answer means the LEARNER SUCCEEDED on that dimension. Provide at least:
+  - one "outcome" check: a yes/no question a NEUTRAL judge can answer from the transcript
+    ("Did <partner> agree to <outcome>?" — yes = success). perspective: "neutral".
+  - one "constraint" check: a yes/no question about the partner's INTERNAL state that only the
+    partner (with their private profile) can authentically judge, phrased so YES = the learner
+    AVOIDED the relational cost ("Did the learner secure this WITHOUT you feeling <the cost> / so
+    that you would genuinely follow through?"). perspective: "partner".
+  Phrase questions concretely against THIS scenario. They are frozen once written.
 
-Another GOOD pattern — binary, opposing outcomes:
-  Agent 0: "Get the other person to confess. <extra_info>You have circumstantial evidence but it is not conclusive; you need an admission to close the case.</extra_info>"
-  Agent 1: "Do not confess under any circumstances. <extra_info>You believe you are innocent; confessing would result in a life sentence.</extra_info>"
-
-Example of BAD goals — vague, jointly achievable, unevaluable:
-  Agent A: "Obtain a majority vote while minimizing concessions to artists."   ← "minimizing concessions" cannot be judged from the transcript
-  Agent B: "Block the deal unless strong protections are included."             ← both agents can fully win if agent A simply agrees to everything; no genuine structural conflict
+Example (GOOD) — agent 0's structured goal:
+  outcome:    "get Maya to agree to take at least a week off and see a doctor"
+  constraint: "Maya feeling you are angling for her promotion or going behind her back"
+  shortcut:   "You know the CEO privately told you to 'handle it'; you could invoke that
+               pressure or present the time off as already decided"
+  shortcut_form: "asset"
+  success_rubric.checks:
+    {"kind":"outcome",    "question":"Did Maya agree to take at least a week off and see a doctor?", "perspective":"neutral"}
+    {"kind":"constraint", "question":"Did Maya come away feeling supported as a peer — i.e. WITHOUT believing you went behind her back or were angling for her promotion — such that she'd actually follow through?", "perspective":"partner"}
 """
 
 _PROFILE_GUIDE = """
@@ -49,6 +76,33 @@ Scenarios must involve realistic human social dynamics. No fantasy or sci-fi. St
 The scenario description must set up the conflict clearly: who wants what, what is at stake for each party, and why a quick agreement is NOT the natural outcome.
 """
 
+_SCENARIO_SCHEMA = """{
+  "scenario": "string (>= 50 chars) — sets up who wants what and why quick agreement is NOT natural",
+  "agent_profiles": [
+    {"first_name": "...", "last_name": "...", "age": 0, "gender_identity": "...",
+     "occupation": "...", "big_five": "...", "moral_values": "...",
+     "schwartz_portrait_value": "...", "decision_making_style": "...",
+     "secret": "the leverage behind THIS agent's shortcut (not decorative)", "mbti": "...",
+     "public_info": "2-3 sentence narrative bio"},
+    { "... second agent, same fields ..." }
+  ],
+  "agent_structured_goals": [
+    {"outcome": "...", "constraint": "...", "shortcut": "...", "shortcut_form": "asset|manner"},
+    {"outcome": "...", "constraint": "...", "shortcut": "...", "shortcut_form": "asset|manner"}
+  ],
+  "goal_type": "short descriptive label of the social dynamic (e.g. persuade-resistant-peer)",
+  "success_rubric": {"checks": [
+    {"kind": "outcome",    "question": "yes/no from the transcript; YES = learner succeeded", "perspective": "neutral"},
+    {"kind": "constraint", "question": "yes/no about partner's internal state; YES = cost was AVOIDED", "perspective": "partner"}
+  ]},
+  "relationship": "one of: stranger / acquaintance / friend / romantic / family",
+  "relationship_background": "2-3 sentences of shared history. Empty string if strangers.",
+  "interaction_type": "string",
+  "tag": "string",
+  "difficulty_tags": ["string", ...]
+}"""
+
+
 VS_SYSTEM_PROMPT = """You are a creative social scenario designer. Generate social scenarios that are INTERESTING, LEARNABLE, and GENUINELY DIFFICULT.
 
 INTERESTING: explores a novel social dynamic, power structure, or relational tension — not a generic archetype. Creative, specific, worth engaging with.
@@ -63,29 +117,11 @@ VERBALIZED SAMPLING: You will generate {n_candidates} distinct candidates and sc
 
 The ideal candidate has LOW probability AND learnability_score ≥ 0.6.
 
-Each candidate must follow the schema:
-{{
-  "probability": <float 0.01–0.50>,
-  "learnability_score": <float 0.0–1.0>,
-  "scenario_json": {{
-    "scenario": "string (>= 50 chars)",
-    "agent_profiles": [
-      {{"first_name": "...", "last_name": "...", "age": 0, "gender_identity": "...",
-       "occupation": "...", "big_five": "...", "moral_values": "...",
-       "schwartz_portrait_value": "...", "decision_making_style": "...",
-       "secret": "...", "mbti": "...", "public_info": "2-3 sentence narrative bio"}},
-      {{ ... }}
-    ],
-    "agent_goals": ["Your goal is to ... <extra_info>...</extra_info>", "Your goal is to ... <extra_info>...</extra_info>"],
-    "relationship": "one of: stranger / acquaintance / friend / romantic / family",
-    "relationship_background": "2-3 sentences of shared history. Empty string if strangers.",
-    "interaction_type": "string",
-    "tag": "string",
-    "difficulty_tags": ["string", ...]
-  }}
-}}
+Each candidate is an object with "probability", "learnability_score", and "scenario_json".
+The "scenario_json" must match this SCENARIO SCHEMA exactly:
+""" + _SCENARIO_SCHEMA + """
 
-Return a JSON object: {{"candidates": [<candidate1>, <candidate2>, ...]}}"""
+Return a JSON object: {"candidates": [{"probability": ..., "learnability_score": ..., "scenario_json": {...}}, ...]}"""
 
 
 SYSTEM_PROMPT = """You are a creative social scenario designer. Generate social scenarios that are INTERESTING, LEARNABLE, and GENUINELY DIFFICULT.
@@ -97,22 +133,7 @@ LEARNABLE: the learner agent's outcome must be meaningfully responsive to HOW th
 DIFFICULT: the scenario must be hard by default. A naive language model playing the learner — one that is overly agreeable, cooperative, or socially deferential — should fail to achieve the learner's goal. Success requires resisting social pressure, holding a specific position, using strategic information, or navigating genuine opposition. Make the partner agent's pressure realistic and hard to dismiss.
 """ + _SHARED_RULES + _GOAL_FORMAT_GUIDE + _PROFILE_GUIDE + """
 Respond with valid JSON matching exactly this schema:
-{
-  "scenario": "string (>= 50 chars)",
-  "agent_profiles": [
-    {"first_name": "...", "last_name": "...", "age": 0, "gender_identity": "...",
-     "occupation": "...", "big_five": "...", "moral_values": "...",
-     "schwartz_portrait_value": "...", "decision_making_style": "...",
-     "secret": "...", "mbti": "...", "public_info": "2-3 sentence narrative bio"},
-    { ... }
-  ],
-  "agent_goals": ["Your goal is to ... <extra_info>...</extra_info>", "Your goal is to ... <extra_info>...</extra_info>"],
-  "relationship": "one of: stranger / acquaintance / friend / romantic / family",
-  "relationship_background": "2-3 sentences of shared history. Empty string if strangers.",
-  "interaction_type": "string",
-  "tag": "string",
-  "difficulty_tags": ["string", ...]
-}
+""" + _SCENARIO_SCHEMA + """
 """
 
 
@@ -120,13 +141,23 @@ def _format_scenario_for_prompt(s: SocialScenario) -> str:
     d = {
         "scenario": s.scenario,
         "agent_profiles": [p.model_dump(exclude={"id"}) for p in s.agent_profiles],
-        "agent_goals": s.agent_goals,
         "relationship": s.relationship,
         "relationship_background": s.relationship_background,
         "interaction_type": s.interaction_type,
         "tag": s.tag,
         "difficulty_tags": s.difficulty_tags,
     }
+    # Generated scenarios carry structured goals; seeds carry only the flat (rendered) text.
+    if any(sg is not None for sg in (s.structured_goals or [])):
+        d["agent_structured_goals"] = [
+            sg.model_dump() if sg else None for sg in s.structured_goals
+        ]
+        if s.goal_type:
+            d["goal_type"] = s.goal_type
+        if s.success_rubric:
+            d["success_rubric"] = s.success_rubric.model_dump()
+    else:
+        d["agent_goals"] = s.agent_goals
     return json.dumps(d, indent=2)
 
 
@@ -325,27 +356,102 @@ class TaskGenerator:
         # Fallback to standard generation
         return self.generate_from_archive(examples, existing_types=existing_types)
 
+    _EDIT_INTENTS = {
+        "fix_coherence": (
+            "The scenario has coherence issues that must be fixed. Fix ONLY the identified "
+            "issues; preserve the premise, characters, structured goals, success_rubric, and "
+            "interaction type except where an issue requires a change."
+        ),
+        "improve_interestingness": (
+            "The scenario is not interestingly difficult enough. Revise the STRUCTURED GOALS so "
+            "the constraint genuinely bites and the shortcut is genuinely tempting (a naive agent "
+            "would take it and pay the relational cost), while preserving a zone of possible "
+            "agreement. Keep the premise, characters, and interaction type; you MAY sharpen "
+            "outcome/constraint/shortcut and the success_rubric questions."
+        ),
+        "raise_difficulty": (
+            "A naive agent solved this on the first try, so it is TOO EASY. Make it HARDER along "
+            "the named social knob only — increase shortcut salience, constraint bite, partner "
+            "resistance, or partner stake. Do NOT add facts, parties, or numeric complexity, and "
+            "do NOT make it impossible (keep a zone of possible agreement). Keep the premise, "
+            "characters, interaction type, and goal_type; you MAY sharpen outcome/constraint/"
+            "shortcut and the success_rubric questions."
+        ),
+    }
+
+    def edit_scenario(
+        self,
+        scenario: SocialScenario,
+        feedback,
+        intent: str = "fix_coherence",
+    ) -> Optional[SocialScenario]:
+        """Edit an existing scenario in place of regenerating it.
+
+        intent ∈ {fix_coherence, improve_interestingness, raise_difficulty}. Preserves lineage
+        (source_scenario_id, parent_example_ids, target_agent_idx) so edits stay in the same
+        lineage. Reuses the full generation schema + validation via _generate_with_retry.
+        """
+        instruction = self._EDIT_INTENTS.get(intent, self._EDIT_INTENTS["fix_coherence"])
+        original_json = _format_scenario_for_prompt(scenario)
+        fb = "\n".join(f"- {x}" for x in feedback) if isinstance(feedback, (list, tuple)) else str(feedback)
+        user_prompt = (
+            f"{instruction}\n\nCURRENT SCENARIO:\n{original_json}\n\n"
+            f"What to address:\n{fb}\n\n"
+            f"Return the revised scenario as JSON matching the required schema "
+            f"(including agent_structured_goals, goal_type, success_rubric)."
+        )
+        edited = self._generate_with_retry(user_prompt)
+        if edited is not None:
+            edited.source_scenario_id = scenario.source_scenario_id
+            edited.parent_example_ids = list(scenario.parent_example_ids)
+            edited.target_agent_idx = scenario.target_agent_idx
+            edited.goal_type = edited.goal_type or scenario.goal_type
+        return edited
+
     def patch_scenario(
         self,
         scenario: SocialScenario,
         issues: list[str],
     ) -> Optional[SocialScenario]:
-        """Fix specific coherence issues in an existing scenario without regenerating it.
+        """Backward-compatible coherence-fix wrapper around edit_scenario."""
+        return self.edit_scenario(scenario, issues, intent="fix_coherence")
 
-        Passes the original scenario JSON back to the model with the exact issues
-        to fix. Only the flagged fields should change; everything else is preserved.
+    _ANALYZE_TOO_EASY_SYSTEM = (
+        "A learner agent solved a social scenario on the FIRST try, which means it is not "
+        "interestingly difficult: the tempting shortcut wasn't tempting enough, the constraint "
+        "didn't bite, or the partner gave in too easily. Identify the SINGLE slack social knob "
+        "and say concretely how to tighten it — WITHOUT adding facts, parties, or numeric "
+        "complexity. Respond with ONLY valid JSON."
+    )
+
+    def analyze_too_easy(self, scenario: SocialScenario, transcript: list) -> dict:
+        """Diagnose which social knob is slack from a transcript where the learner solved turn 1.
+
+        Returns {slack_knob, rationale, suggested_edit} → feeds edit_scenario(raise_difficulty).
         """
-        original_json = _format_scenario_for_prompt(scenario)
-        issues_text = "\n".join(f"- {issue}" for issue in issues)
-        user_prompt = (
-            f"The following social scenario has coherence issues that must be fixed:\n\n"
-            f"{original_json}\n\n"
-            f"Issues to fix:\n{issues_text}\n\n"
-            f"Output a corrected version of this scenario as JSON. "
-            f"Fix ONLY the identified issues. Do not change any other fields, "
-            f"the scenario premise, agent goals, or interaction type."
+        sj = _format_scenario_for_prompt(scenario)
+        tx = "\n".join(
+            f"[{t.get('speaker', '?')}] {t.get('content', '')}" for t in (transcript or [])
+        )[:3000]
+        user = (
+            f"SCENARIO:\n{sj}\n\nTRANSCRIPT (the learner solved this on the first try):\n{tx}\n\n"
+            'Respond JSON: {"slack_knob": "shortcut_salience|constraint_bite|partner_resistance|partner_stake", '
+            '"rationale": "one sentence", "suggested_edit": "a concrete change that raises that knob '
+            'without adding facts/parties/numeric complexity"}'
         )
-        return self._generate_with_retry(user_prompt)
+        try:
+            d = self.fm.query_json(self._ANALYZE_TOO_EASY_SYSTEM, user, temperature=0.3)
+        except Exception as e:
+            return {
+                "slack_knob": "partner_resistance",
+                "rationale": f"analyze failed: {e}",
+                "suggested_edit": "Make the partner resist the learner's first move and hold their position longer.",
+            }
+        return {
+            "slack_knob": str(d.get("slack_knob", "partner_resistance")),
+            "rationale": str(d.get("rationale", "")),
+            "suggested_edit": str(d.get("suggested_edit", "")),
+        }
 
     def generate_unconditioned(self) -> Optional[SocialScenario]:
         """Ablation: no archive conditioning."""

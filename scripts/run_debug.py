@@ -81,7 +81,16 @@ def _scenario_dict(scenario) -> dict:
         "interaction_type": scenario.interaction_type,
         "relationship": scenario.relationship,
         "relationship_background": scenario.relationship_background,
-        "agent_goals": scenario.agent_goals,
+        "goal_type": getattr(scenario, "goal_type", None),
+        "target_agent_idx": scenario.target_agent_idx,
+        "structured_goals": [
+            sg.model_dump() if sg else None
+            for sg in (getattr(scenario, "structured_goals", None) or [])
+        ],
+        "success_rubric": (
+            scenario.success_rubric.model_dump() if getattr(scenario, "success_rubric", None) else None
+        ),
+        "agent_goals": scenario.agent_goals,  # rendered (what Sotopia feeds the agents)
         "agent_profiles": [
             {
                 "name": f"{p.first_name} {p.last_name}".strip(),
@@ -114,6 +123,10 @@ def _make_mock_episode_result(scenario, attempt: int):
         transcript: list[dict] = field(default_factory=list)
         learner_scores: dict = field(default_factory=dict)
         partner_scores: dict = field(default_factory=dict)
+        rubric_results: list = field(default_factory=list)
+        outcome_achieved: bool = False
+        constraint_preserved: bool = False
+        goal_achieved: bool = False
         num_turns: int = 0
         raw_log: object = None
         evaluation_reasoning: str = ""
@@ -128,8 +141,9 @@ def _make_mock_episode_result(scenario, attempt: int):
         {"turn": 4, "sender": "Agent1", "receiver": "Agent0",
          "content": "[mock] I don't think that's possible today."},
     ]
-    # First attempt always fails; second attempt succeeds (for testing multi-attempt)
-    goal_score = 8.5 if attempt >= 2 else 3.0
+    # First attempt fails (outcome got but constraint broken = hollow extraction); 2nd succeeds.
+    won = attempt >= 2
+    goal_score = 8.5 if won else 3.0
     scores = {
         "believability": 7.0,
         "relationship": 5.0,
@@ -140,8 +154,17 @@ def _make_mock_episode_result(scenario, attempt: int):
         "goal": goal_score,
         "overall_score": (goal_score + 5.0 * 5) / 6,
     }
-    return FakeResult(transcript=transcript, learner_scores=scores, num_turns=4,
-                      evaluation_reasoning="[mock evaluation]")
+    rubric_results = [
+        {"kind": "outcome", "question": "[mock] outcome achieved?", "perspective": "neutral",
+         "verdict": True, "confidence": 0.9, "rationale": "[mock]", "n_agree": 1, "k": 1},
+        {"kind": "constraint", "question": "[mock] constraint preserved?", "perspective": "partner",
+         "verdict": won, "confidence": 0.8, "rationale": "[mock]", "n_agree": 3, "k": 3},
+    ]
+    return FakeResult(
+        transcript=transcript, learner_scores=scores, rubric_results=rubric_results,
+        outcome_achieved=True, constraint_preserved=won, goal_achieved=won,
+        num_turns=4, evaluation_reasoning="[mock evaluation]",
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -301,12 +324,19 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
             preferred_agent_idx=scenario.target_agent_idx,
         )
         similar = [archive.state.successful[i] for i in sim_idxs]
-    is_interesting, moi_reason = moi.evaluate(scenario, similar)
+    is_interesting, moi_reason, moi_edits = moi.evaluate(scenario, similar)
     print_info(f"MoI: passed={is_interesting}")
     print_info(f"  reason: {moi_reason[:200]}")
-    debug_output["moi_result"] = {"passed": is_interesting, "reason": moi_reason}
+    if moi_edits:
+        print_section("MoI suggested edits", "\n".join(f"  - {e}" for e in moi_edits))
+    debug_output["moi_audit"] = {
+        "passed": is_interesting,
+        "reason": moi_reason,
+        "suggested_edits": moi_edits,
+    }
+    debug_output["moi_result"] = {"passed": is_interesting, "reason": moi_reason}  # legacy key
     if not is_interesting:
-        print_warn("MoI rejected scenario. Continuing anyway for debug purposes.")
+        print_warn("MoI below bar (would route to edit_scenario in the loop). Continuing anyway for debug.")
     _flush(debug_output)
 
     # -----------------------------------------------------------------------
@@ -452,6 +482,12 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
                     agent_profiles = [agent_profiles[1], agent_profiles[0]]
                     env_profile.agent_goals = [env_profile.agent_goals[1], env_profile.agent_goals[0]]
                 learner_goal = env_profile.agent_goals[0] if env_profile.agent_goals else ""
+                # Partner profile (our AgentProfile) for the partner-perspective rubric judge
+                _partner_idx = 1 - scenario.target_agent_idx
+                partner_profile = (
+                    scenario.agent_profiles[_partner_idx]
+                    if _partner_idx < len(scenario.agent_profiles) else None
+                )
 
                 def _on_turn(partial_transcript: list[dict]) -> None:
                     debug_output["episode_results_partial"] = {
@@ -470,6 +506,9 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
                         memory_prompt=memory_prompt,
                         max_turns=args.max_turns,
                         learner_goal=learner_goal,
+                        rubric=scenario.success_rubric,
+                        partner_profile=partner_profile,
+                        judge_self_consistency_k=args.judge_k,
                         on_turn=_on_turn,
                     )
                 )
@@ -498,19 +537,38 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
         )
         print_section(f"Transcript (attempt {attempt})", transcript_text)
 
-        # Scores table
+        # Diagnostics scores table (NOT the gate)
         scores_text = "\n".join(
             f"  {k:38s}: {v:.1f}" for k, v in final_scores.items()
         )
-        print_section("Scores", scores_text)
+        print_section("Diagnostics scores (not the gate)", scores_text)
+
+        # Rubric verdict table (the gate)
+        rubric_results = list(getattr(episode_result, "rubric_results", []) or [])
+        if rubric_results:
+            rubric_text = "\n".join(
+                f"  [{'PASS' if r.get('verdict') else 'FAIL'}] ({r.get('kind')}/{r.get('perspective')}) "
+                f"n_agree={r.get('n_agree')}/{r.get('k')} conf={r.get('confidence')}\n"
+                f"      Q: {r.get('question')}\n"
+                f"      → {r.get('rationale')}"
+                for r in rubric_results
+            )
+            print_section("Rubric checks (the gate)", rubric_text)
 
         solved = success_detector.is_solved(final_scores, goal_achieved=episode_result.goal_achieved)
-        print_info(f"Solved: {solved}  (goal={final_scores.get('goal', 0):.1f}  goal_achieved={episode_result.goal_achieved})")
+        print_info(
+            f"Solved: {solved}  (outcome_achieved={getattr(episode_result, 'outcome_achieved', None)} "
+            f"constraint_preserved={getattr(episode_result, 'constraint_preserved', None)} "
+            f"goal_achieved={episode_result.goal_achieved})"
+        )
 
         debug_output["episode_results"].append({
             "attempt": attempt,
             "transcript_clean": clean,
-            "scores": final_scores,
+            "diagnostics_scores": final_scores,
+            "rubric_results": rubric_results,
+            "outcome_achieved": getattr(episode_result, "outcome_achieved", None),
+            "constraint_preserved": getattr(episode_result, "constraint_preserved", None),
             "goal_achieved": episode_result.goal_achieved,
             "solved": solved,
         })
@@ -535,6 +593,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
             prior_edit_reasons=all_edit_reasons,
             attempt_num=attempt,
             anchor_task=anchor,
+            rubric_results=list(getattr(episode_result, "rubric_results", []) or []),
         )
         print_info(f"Diagnosis: {ref_out.diagnosis[:300]}")
         if ref_out.edit_reasons:
@@ -689,7 +748,7 @@ def main() -> None:
                         help="Which seed to use as anchor (default: 0)")
     parser.add_argument("--seed-limit", type=int, default=None,
                         help="How many seed rows to load (default: all 90 → 180 entries)")
-    parser.add_argument("--max-attempts", type=int, default=3,
+    parser.add_argument("--max-attempts", type=int, default=4,
                         help="Max episode attempts (default: 2)")
     parser.add_argument("--vs-candidates", type=int, default=5,
                         help="Verbalized sampling candidates (default: 5)")
@@ -701,7 +760,10 @@ def main() -> None:
                         help="Truncate prompts/responses at N chars (default: 800)")
     parser.add_argument("--skip-episode", action="store_true",
                         help="Skip real Sotopia episode; use mock transcript")
-    parser.add_argument("--goal-threshold", type=float, default=7.0)
+    parser.add_argument("--goal-threshold", type=float, default=7.0,
+                        help="legacy/mock fallback only; the gate is the rubric")
+    parser.add_argument("--judge-k", type=int, default=3,
+                        help="self-consistency samples for the partner-perspective rubric check")
     parser.add_argument("--max-turns", type=int, default=20)
     parser.add_argument("--model", type=str, default="openai/gpt-5-mini")
     parser.add_argument("--learner-model", type=str, default="openai/gpt-5-mini")

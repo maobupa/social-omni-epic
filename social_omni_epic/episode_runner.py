@@ -144,9 +144,12 @@ stated in their goal — not just partial progress."""
 @dataclass
 class EpisodeResult:
     transcript: list[dict] = field(default_factory=list)
-    learner_scores: dict = field(default_factory=dict)
+    learner_scores: dict = field(default_factory=dict)      # 7-dim diagnostics (not the gate)
     partner_scores: dict = field(default_factory=dict)
-    goal_achieved: bool = False
+    rubric_results: list[dict] = field(default_factory=list)  # per-check: kind/verdict/confidence/rationale/n_agree/k
+    outcome_achieved: bool = False                          # all outcome checks passed
+    constraint_preserved: bool = False                      # all constraint checks passed
+    goal_achieved: bool = False                             # alias = AND of all rubric checks (the gate)
     num_turns: int = 0
     raw_log: Optional[EpisodeLog] = None
     evaluation_reasoning: str = ""
@@ -198,16 +201,15 @@ def _build_history(inbox: list) -> str:
     )
 
 
-def _evaluate_episode(inbox: list, fm: FM, learner_goal: str = "") -> tuple[dict, dict, bool, str]:
-    """Score both agents on SOTOPIA dimensions and return binary goal_achieved for learner.
+def _evaluate_diagnostics(inbox: list, fm: FM, learner_goal: str = "") -> tuple[dict, dict, str]:
+    """Score both agents on the SOTOPIA dimensions — DIAGNOSTICS ONLY.
 
-    Uses fm.query_json() (response_format=json_object) with a concrete JSON
-    example prompt. No PydanticOutputParser, no schema injection, no $ref echo.
-    Falls back to zero scores on any failure.
+    These 7-dim scores no longer gate success (the rubric does, see _evaluate_rubric). They
+    feed reflection ("which facet was weak") and the external eval. Falls back to zeros.
     """
     history = _build_history(inbox)
     if not history.strip():
-        return _zeros(), _zeros(), False, ""
+        return _zeros(), _zeros(), ""
 
     agent_instruction = (
         'There are exactly 2 agents. Use "agent_1" for the first agent '
@@ -216,8 +218,6 @@ def _evaluate_episode(inbox: list, fm: FM, learner_goal: str = "") -> tuple[dict
     )
     learner_goal_section = (
         f'\nLEARNER GOAL (agent_1): {learner_goal}\n'
-        'Use this goal to determine agent_1\'s goal score and goal_achieved. '
-        'goal_achieved is true only if agent_1 substantially completed this specific objective.\n'
         if learner_goal else ""
     )
     prompt = _EVAL_PROMPT.format(
@@ -229,18 +229,116 @@ def _evaluate_episode(inbox: list, fm: FM, learner_goal: str = "") -> tuple[dict
     try:
         data = fm.query_json(_EVAL_SYSTEM, prompt, temperature=0.0)
     except Exception as e:
-        return _zeros(), _zeros(), False, f"[evaluation failed: {e}]"
+        return _zeros(), _zeros(), f"[diagnostics failed: {e}]"
 
     a1 = data.get("agent_1", {})
     a2 = data.get("agent_2", {})
-    learner_scores, goal_achieved = _unpack_dimensions(a1)
+    learner_scores, _ = _unpack_dimensions(a1)
     partner_scores, _ = _unpack_dimensions(a2)
     reasoning = (
         _reasoning_text("learner (agent_1)", a1)
         + "\n\n"
         + _reasoning_text("partner (agent_2)", a2)
     )
-    return learner_scores, partner_scores, goal_achieved, reasoning.strip()
+    return learner_scores, partner_scores, reasoning.strip()
+
+
+# ---------------------------------------------------------------------------
+# Rubric evaluation — the success gate (per-check, perspective-routed)
+# ---------------------------------------------------------------------------
+
+_RUBRIC_NEUTRAL_SYSTEM = (
+    "You are a neutral observer judging whether a specific thing happened in a conversation. "
+    "Decide ONLY from what is observable in the transcript; do not speculate about private "
+    "feelings. Respond with ONLY valid JSON."
+)
+
+_RUBRIC_PARTNER_SYSTEM = (
+    "You ARE the second person in this conversation. Using your PRIVATE background and how the "
+    "conversation actually landed for you, answer honestly from your own point of view — be "
+    "candid, not polite or agreeable, and think about whether you would actually follow through. "
+    "Respond with ONLY valid JSON."
+)
+
+_RUBRIC_USER = (
+    "{context}\n\n"
+    "QUESTION (a YES/true answer means the OTHER person succeeded): {question}\n"
+    'Respond with ONLY this JSON: {{"verdict": true, "confidence": 0.8, "rationale": "one sentence"}}'
+)
+
+
+def _safe_float(v, default: float = 0.0) -> float:
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return default
+
+
+def _judge_check(fm: FM, system: str, user: str, k: int) -> dict:
+    """Run a single rubric check k times; majority vote. k=1 → single deterministic pass."""
+    samples = []
+    for _i in range(max(1, k)):
+        temp = 0.0 if k <= 1 else 0.7
+        try:
+            d = fm.query_json(system, user, temperature=temp)
+            samples.append(
+                (bool(d.get("verdict", False)), str(d.get("rationale", "")), _safe_float(d.get("confidence")))
+            )
+        except Exception:
+            continue
+    if not samples:
+        return {"verdict": False, "confidence": 0.0, "rationale": "[judge failed]", "n_agree": 0, "k": k}
+    trues = sum(1 for v, _, _ in samples if v)
+    verdict = trues * 2 >= len(samples)  # majority; ties resolve to True
+    n_agree = sum(1 for v, _, _ in samples if v == verdict)
+    rationale = next((r for v, r, _ in samples if v == verdict and r), samples[0][1])
+    conf = round(sum(c for _, _, c in samples) / len(samples), 2)
+    return {"verdict": verdict, "confidence": conf, "rationale": rationale, "n_agree": n_agree, "k": len(samples)}
+
+
+def _evaluate_rubric(inbox: list, rubric, partner_profile, fm: FM, k: int = 3) -> list[dict]:
+    """Evaluate each rubric check with the judge matching its perspective.
+
+    neutral → single transcript-only pass. partner → k-sample self-consistency majority vote,
+    conditioned on the partner's private profile + secret. Returns a list of per-check dicts.
+    """
+    history = _build_history(inbox)
+    if not history.strip() or rubric is None or not getattr(rubric, "checks", None):
+        return []
+
+    partner_bg = ""
+    partner_name = "you"
+    if partner_profile is not None:
+        partner_name = getattr(partner_profile, "first_name", "you") or "you"
+        partner_bg = (getattr(partner_profile, "public_info", "") or "").strip()
+        secret = (getattr(partner_profile, "secret", "") or "").strip()
+        if secret:
+            partner_bg += f"\nYour secret: {secret}"
+
+    out: list[dict] = []
+    for c in rubric.checks:
+        if c.perspective == "partner":
+            context = (
+                f"YOUR PRIVATE BACKGROUND:\n{partner_bg}\n\n"
+                f"THE CONVERSATION (you are {partner_name}):\n{history}"
+            )
+            r = _judge_check(fm, _RUBRIC_PARTNER_SYSTEM,
+                             _RUBRIC_USER.format(context=context, question=c.question), k)
+        else:
+            context = f"TRANSCRIPT:\n{history}"
+            r = _judge_check(fm, _RUBRIC_NEUTRAL_SYSTEM,
+                             _RUBRIC_USER.format(context=context, question=c.question), 1)
+        r["kind"] = c.kind
+        r["question"] = c.question
+        r["perspective"] = c.perspective
+        out.append(r)
+    return out
+
+
+def _rollup(rubric_results: list[dict], kind: str) -> bool:
+    """True iff there is ≥1 check of `kind` and all of them passed."""
+    rs = [r for r in rubric_results if r.get("kind") == kind]
+    return bool(rs) and all(r.get("verdict") for r in rs)
 
 
 async def run_single_episode(
@@ -252,6 +350,9 @@ async def run_single_episode(
     memory_prompt: str = "",
     max_turns: int = 20,
     learner_goal: str = "",
+    rubric=None,                       # SuccessRubric for the designated learner (the success gate)
+    partner_profile=None,              # AgentProfile of the partner (for the partner-perspective judge)
+    judge_self_consistency_k: int = 3,
     # evaluator_model kept for backward-compat callers that pass it; unused
     evaluator_model: str = "",
     on_turn: Optional[Callable[[list[dict]], None]] = None,
@@ -333,7 +434,12 @@ async def run_single_episode(
                     })
             on_turn(partial)
 
-    learner_scores, partner_scores, goal_achieved, reasoning = _evaluate_episode(env.inbox, fm, learner_goal=learner_goal)
+    # Diagnostics (7-dim, not the gate) + the rubric gate (per-check, perspective-routed).
+    learner_scores, partner_scores, reasoning = _evaluate_diagnostics(env.inbox, fm, learner_goal=learner_goal)
+    rubric_results = _evaluate_rubric(env.inbox, rubric, partner_profile, fm, k=judge_self_consistency_k)
+    outcome_achieved = _rollup(rubric_results, "outcome")
+    constraint_preserved = _rollup(rubric_results, "constraint")
+    goal_achieved = bool(rubric_results) and all(r.get("verdict") for r in rubric_results)
 
     transcript: list[dict] = []
     for turn_idx, turn in enumerate(messages):
@@ -377,6 +483,9 @@ async def run_single_episode(
         transcript=transcript,
         learner_scores=learner_scores,
         partner_scores=partner_scores,
+        rubric_results=rubric_results,
+        outcome_achieved=outcome_achieved,
+        constraint_preserved=constraint_preserved,
         goal_achieved=goal_achieved,
         num_turns=len(messages),
         raw_log=epilog,

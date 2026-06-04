@@ -10,9 +10,6 @@ Both halves are embedded together as the primary archive retrieval key.
 
 Two scenarios can have identical social structure with roles reversed; the right
 half distinguishes them in embedding space.
-
-Also provides classify_scenario() which assigns GOAL_STRUCTURE and INFO_POSITION
-programmatically via a single compact LLM call.
 """
 import json
 from typing import Optional
@@ -128,59 +125,6 @@ def _fallback_title(scenario: SocialScenario) -> dict[str, str]:
         "social_dynamic": left,
         "target_perspective": right,
     }
-
-
-# ---------------------------------------------------------------------------
-# Structural classification
-# ---------------------------------------------------------------------------
-
-_CLASSIFY_SYSTEM = """Classify a social scenario along two structural dimensions.
-
-GOAL_STRUCTURE:
-  COMPETITIVE — agents have directly opposing goals; one's gain is the other's loss
-  COOPERATIVE — agents have aligned or complementary goals; both can win
-  MIXED       — goals partially overlap; some cooperation, some competition
-
-INFO_POSITION (from the TARGET agent's perspective):
-  INFORMED    — target agent has more relevant information than the partner
-  UNINFORMED  — target agent has less relevant information than the partner
-  SYMMETRIC   — both agents have roughly equal information
-
-Return JSON: {"goal_structure": "COMPETITIVE|COOPERATIVE|MIXED", "info_position": "INFORMED|UNINFORMED|SYMMETRIC"}"""
-
-
-def classify_scenario(scenario: SocialScenario, fm: FM) -> tuple[str, str]:
-    """Return (goal_structure, info_position) for the scenario's target agent."""
-    target_idx = scenario.target_agent_idx
-    target_goal = (
-        scenario.agent_goals[target_idx]
-        if target_idx < len(scenario.agent_goals)
-        else ""
-    )
-    partner_idx = 1 - target_idx
-    partner_goal = (
-        scenario.agent_goals[partner_idx]
-        if partner_idx < len(scenario.agent_goals)
-        else ""
-    )
-    prompt = (
-        f"Scenario: {scenario.scenario}\n"
-        f"Target agent goal: {target_goal}\n"
-        f"Partner agent goal: {partner_goal}\n"
-        f"Interaction type: {scenario.interaction_type}\n"
-        "\nClassify the goal structure and the target agent's information position."
-    )
-    try:
-        d = fm.query_json(_CLASSIFY_SYSTEM, prompt, temperature=0.0)
-        gs = str(d.get("goal_structure", "MIXED")).upper()
-        ip = str(d.get("info_position", "SYMMETRIC")).upper()
-        if gs not in {"COMPETITIVE", "COOPERATIVE", "MIXED"}:
-            gs = "MIXED"
-        if ip not in {"INFORMED", "UNINFORMED", "SYMMETRIC"}:
-            ip = "SYMMETRIC"
-        return gs, ip
-    except Exception:
-        return "MIXED", "SYMMETRIC"
 
 
 # ---------------------------------------------------------------------------

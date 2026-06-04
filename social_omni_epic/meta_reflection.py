@@ -128,9 +128,9 @@ def _build_meta_prompt(
         for s in attempt_scores:
             g = s["scores"].get("goal", 0)
             o = s["scores"].get("overall_score", 0)
-            solved = g >= 7.0
+            solved = bool(s.get("solved", False))  # rubric gate, not a goal-score threshold
             score_lines.append(
-                f"  Attempt {s['attempt']}: goal={g:.1f}  overall={o:.2f}  {'SOLVED' if solved else 'failed'}"
+                f"  Attempt {s['attempt']}: goal_diag={g:.1f}  overall_diag={o:.2f}  {'SOLVED' if solved else 'failed'}"
             )
         parts.append("PER-ATTEMPT SCORES:\n" + "\n".join(score_lines))
 

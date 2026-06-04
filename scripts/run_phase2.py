@@ -32,6 +32,7 @@ except Exception:
 from social_omni_epic.adversarial_agent import AdversarialAgent
 from social_omni_epic.archive import Archive
 from social_omni_epic.coherence_check import CoherenceChecker
+from social_omni_epic.curriculum import run_coherence_gate, run_episode_two_loop
 from social_omni_epic.data_models import SocialScenario
 from social_omni_epic.embedding_utils import (
     compute_cell_coverage,
@@ -122,132 +123,6 @@ def _generate_scenario(
     return task_gen.generate_from_archive(examples, existing_types=existing_types)
 
 
-# ---------------------------------------------------------------------------
-# Phase 2 episode loop
-# ---------------------------------------------------------------------------
-
-async def _run_phase2_episode(
-    scenario: SocialScenario,
-    anchor: SocialScenario,
-    reflection_mod: ReflectionModule,
-    meta_mod: MetaReflectionModule,
-    adversarial: AdversarialAgent,
-    title_gen: ScenarioTitleGenerator,
-    run_single_episode,
-    scenario_to_sotopia_profiles,
-    fm,
-    config: DictConfig,
-) -> tuple[SocialScenario, int, dict]:
-    """Run multi-attempt episode with the reflection loop.
-
-    Returns (updated_scenario, outcome, final_scores).
-    outcome: 1=first-attempt success, 2=multi-attempt success, 3=all failed.
-    """
-    max_attempts = int(config.get("max_attempts", 5))
-    max_entries = int(config.get("chronicle_max_entries", 8))
-    re_reflect = bool(config.adversarial.get("re_reflect_on_rejection", True))
-
-    # Inherit skills chronicle from anchor
-    current_chronicle = SkillsChronicle.from_markdown(anchor.skills_final_md or "")
-
-    all_transcripts: list[list[dict]] = []
-    all_scores: list[dict] = []
-    all_versions: list[SkillsChronicle] = [deepcopy(current_chronicle)]
-    all_edit_reasons: dict[str, str] = {}
-    outcome = 3
-    final_scores: dict = {}
-
-    env_profile, agent_profiles = scenario_to_sotopia_profiles(scenario)
-    if scenario.target_agent_idx == 1:
-        agent_profiles = [agent_profiles[1], agent_profiles[0]]
-        env_profile.agent_goals = [env_profile.agent_goals[1], env_profile.agent_goals[0]]
-    learner_goal = env_profile.agent_goals[0] if env_profile.agent_goals else ""
-
-    from social_omni_epic.success_detector import SuccessDetector
-    success_detector = SuccessDetector(goal_threshold=config.get("goal_threshold", 7.0))
-
-    for attempt in range(1, max_attempts + 1):
-        memory_prompt = current_chronicle.format_for_prompt(max_entries=max_entries)
-
-        try:
-            result = await run_single_episode(
-                env_profile=env_profile,
-                agent_profiles=agent_profiles,
-                fm=fm,
-                learner_model=config.learner_model,
-                partner_model=config.partner_model,
-                memory_prompt=memory_prompt,
-                max_turns=config.get("max_turns", 20),
-                learner_goal=learner_goal,
-            )
-        except Exception as e:
-            import traceback
-            print(f"    [attempt {attempt}] Episode error: {e}\n{traceback.format_exc()}")
-            break
-
-        all_transcripts.append(clean_transcript(result.transcript))
-        final_scores = result.learner_scores
-        all_scores.append({"attempt": attempt, "scores": final_scores})
-
-        if success_detector.is_solved(final_scores, goal_achieved=result.goal_achieved):
-            outcome = 1 if attempt == 1 else 2
-            break
-
-        if attempt < max_attempts:
-            ref_out = reflection_mod.reflect(
-                chronicle=current_chronicle,
-                scenario=scenario,
-                transcripts=all_transcripts,
-                prior_edit_reasons=all_edit_reasons,
-                attempt_num=attempt,
-                anchor_task=anchor,
-            )
-
-            # Adversarial check on reflection
-            adv_result = adversarial.check_reflection(
-                ref_out, all_transcripts[-1], anchor_task=anchor, scenario=scenario
-            )
-            if not adv_result.approved and re_reflect:
-                ref_out = reflection_mod.synthesize_with_critique(
-                    reflection_output=ref_out,
-                    adversarial_critique=adv_result.critique,
-                    chronicle=current_chronicle,
-                    scenario=scenario,
-                    transcripts=all_transcripts,
-                    prior_edit_reasons=all_edit_reasons,
-                    attempt_num=attempt,
-                    anchor_task=anchor,
-                )
-
-            current_chronicle = ref_out.updated_chronicle
-            all_versions.append(deepcopy(current_chronicle))
-            all_edit_reasons.update(ref_out.edit_reasons)
-
-    # Meta-reflection (outcome 2 or 3)
-    if outcome == 1 or not all_transcripts:
-        final_chronicle = current_chronicle
-    else:
-        final_chronicle = meta_mod.synthesize(
-            chronicle_versions=all_versions,
-            transcripts=all_transcripts,
-            edit_reasons=all_edit_reasons,
-            outcome=outcome,
-            scenario=scenario,
-            anchor_task=anchor,
-            attempt_scores=all_scores,
-        )
-
-
-    # Generate SCENARIO_TITLE
-    title_data = title_gen.generate(scenario, scenario.target_agent_idx)
-    scenario.scenario_title = title_data["scenario_title"]
-    scenario.social_dynamic = title_data["social_dynamic"]
-    scenario.target_perspective = title_data["target_perspective"]
-
-    scenario.skills_final_md = final_chronicle.to_markdown()
-    scenario.goal_score = float(final_scores.get("goal", 0.0))
-
-    return scenario, outcome, final_scores
 
 
 # ---------------------------------------------------------------------------
@@ -317,6 +192,8 @@ def main(config: DictConfig) -> None:
         _seed_archive(archive, fm, config)
 
     metrics_log: list[dict] = []
+    solved_count = 0  # solved-after-biting count (the ANNECS-style stopping signal)
+    stopping_N = config.get("stopping", {}).get("N", None)
 
     for iteration in tqdm(range(config.iterations), desc=run_mode):
         # 1. Select anchor via UCB1
@@ -349,7 +226,7 @@ def main(config: DictConfig) -> None:
             archive.add_failed_generation({"iteration": iteration, "reason": f"embed_error: {e}"})
             continue
 
-        # 4. MoI + validity check
+        # 4. MoI auditor+editor: audit social tension/novelty/learnability; edit-up rather than discard
         if config.enable_moi and archive.size >= config.moi.min_archive_size:
             _src_ids = [s.source_scenario_id for s in archive.state.successful]
             _agt_idxs = [s.target_agent_idx for s in archive.state.successful]
@@ -362,42 +239,39 @@ def main(config: DictConfig) -> None:
                 preferred_agent_idx=scenario.target_agent_idx,
             )
             similar = [archive.state.successful[i] for i in sim_indices]
-            is_interesting, moi_reason = moi.evaluate(scenario, similar)
-            scenario.moi_reasoning = moi_reason
-            if not is_interesting:
-                archive.add_failed_interestingness(scenario)
+            max_moi_edits = int(config.moi.get("max_edits", 2))
+            moi_ok = False
+            for _m in range(max_moi_edits + 1):
+                passed, moi_reason, moi_edits = moi.evaluate(scenario, similar)
+                scenario.moi_reasoning = moi_reason
+                if passed:
+                    moi_ok = True
+                    break
+                if _m >= max_moi_edits or not moi_edits:
+                    break
+                edited = task_gen.edit_scenario(scenario, moi_edits, intent="improve_interestingness")
+                if edited is None:
+                    break
+                edited.iteration = iteration
+                edited.parent_example_ids = [anchor.id]
+                try:
+                    edited.embedding = fm.get_embeddings([edited.to_text_for_embedding()])[0]
+                except Exception:
+                    edited = None
+                    break
+                scenario = edited
+            if scenario is None or not moi_ok:
+                if scenario is not None:
+                    archive.add_failed_interestingness(scenario)
                 continue
 
-        # 5. Coherence gate (structural validity; retry with issue feedback)
-        if config.get("enable_coherence_check", True):
-            coherence_feedback = None
-            max_coherence = int(config.get("coherence_max_retries", 2))
-            passed_coherence = False
-            for _c in range(max_coherence + 1):
-                c_result = coherence_checker.check(scenario)
-                if c_result.passed:
-                    passed_coherence = True
-                    break
-                coherence_feedback = c_result.issues
-                scenario = task_gen.patch_scenario(scenario, coherence_feedback)
-                if scenario is None:
-                    break
-                scenario.iteration = iteration
-                scenario.parent_example_ids = [anchor.id]
-                try:
-                    scenario.embedding = fm.get_embeddings(
-                        [scenario.to_text_for_embedding()]
-                    )[0]
-                except Exception:
-                    scenario = None
-                    break
-            if not passed_coherence or scenario is None:
-                archive.add_failed_generation({
-                    "iteration": iteration,
-                    "reason": "coherence_failed",
-                    "issues": coherence_feedback or [],
-                })
-                continue
+        # 5. Coherence gate (structural validity + rubric/shortcut validity; retry with feedback)
+        scenario, passed_coherence = run_coherence_gate(
+            scenario, coherence_checker, task_gen, fm, config, anchor, iteration
+        )
+        if not passed_coherence or scenario is None:
+            archive.add_failed_generation({"iteration": iteration, "reason": "coherence_failed"})
+            continue
 
         # 6. Diversity gate (programmatic cosine similarity; no LLM call)
         if config.get("enable_diversity_gate", True) and archive.size > 0:
@@ -444,16 +318,18 @@ def main(config: DictConfig) -> None:
                     json.dump(metrics_log, f, indent=2)
             continue
 
-        # 9. Full Phase 2 episode
+        # 9. Full Phase 2 episode (difficulty loop → skill loop)
         try:
-            scenario, outcome, final_scores = asyncio.run(
+            scenario, terminal_state, outcome, final_scores, loop_info = asyncio.run(
                 _run_phase2_episode(
                     scenario=scenario,
                     anchor=anchor,
+                    task_gen=task_gen,
                     reflection_mod=reflection_mod,
                     meta_mod=meta_mod,
                     adversarial=adversarial,
                     title_gen=title_gen,
+                    coherence_checker=coherence_checker,
                     run_single_episode=run_single_episode,
                     scenario_to_sotopia_profiles=scenario_to_sotopia_profiles,
                     fm=fm,
@@ -463,6 +339,7 @@ def main(config: DictConfig) -> None:
         except Exception as e:
             print(f"[iter {iteration}] Phase 2 episode loop failed: {e}")
             archive.add_failed_task(scenario)
+            archive.record_child(anchor_idx)
             continue
 
         # 10. Persist transcript summary
@@ -471,38 +348,51 @@ def main(config: DictConfig) -> None:
                 "iteration": iteration,
                 "scenario_id": scenario.id,
                 "scenario": scenario.scenario[:200],
+                "terminal_state": terminal_state,
                 "outcome": outcome,
+                "n_difficulty_edits": loop_info.get("n_difficulty_edits", 0),
                 "final_scores": final_scores,
                 "scenario_title": scenario.scenario_title,
                 "chronicle_entries": len(
                     SkillsChronicle.from_markdown(scenario.skills_final_md or "").entries
                 ),
-            }, indent=2)
+            }, indent=2, default=str)
         )
 
-        # 11. Archive and bookkeeping
-        if outcome in (1, 2):
+        # 11. Archive policy by terminal state
+        #   discarded         → not archived (too easy / unbiteable); metrics only
+        #   solved_after_biting → add_successful + counts toward stopping
+        #   failed            → add_failed_task (conditioning), not counted
+        if terminal_state == "discarded":
+            archive.add_failed_generation({"iteration": iteration, "reason": "discarded_too_easy"})
+        elif terminal_state == "solved_after_biting":
             archive.add_successful(scenario)
-        else:
+            archive.record_child(anchor_idx)
+            solved_count += 1
+        else:  # failed
             archive.add_failed_task(scenario)
-        archive.record_child(anchor_idx)
+            archive.record_child(anchor_idx)
 
         metrics_log.append({
             "iteration": iteration,
+            "terminal_state": terminal_state,
             "outcome": outcome,
+            "n_difficulty_edits": loop_info.get("n_difficulty_edits", 0),
             "goal": final_scores.get("goal", 0.0),
             "relationship": final_scores.get("relationship", 0.0),
             "knowledge": final_scores.get("knowledge", 0.0),
             "overall": final_scores.get("overall_score", 0.0),
-            "solved": outcome in (1, 2),
+            "solved_after_biting": terminal_state == "solved_after_biting",
+            "solved_count": solved_count,
             "archive_size": archive.size,
             "interaction_type": scenario.interaction_type,
         })
 
         print(
-            f"[iter {iteration}] outcome={outcome} | "
+            f"[iter {iteration}] {terminal_state} | "
+            f"edits={loop_info.get('n_difficulty_edits', 0)} | "
             f"goal={final_scores.get('goal', 0):.1f} | "
-            f"archive={archive.size} | "
+            f"archive={archive.size} solved={solved_count} | "
             f"{scenario.scenario[:50]}..."
         )
 
@@ -510,6 +400,11 @@ def main(config: DictConfig) -> None:
             archive.save_checkpoint(iteration)
             with open(Path(config.checkpoint_dir) / "metrics_phase2.json", "w") as f:
                 json.dump(metrics_log, f, indent=2)
+
+        # Stop budget (ANNECS-style): stop once we have N solved-after-biting scenarios.
+        if stopping_N and solved_count >= int(stopping_N):
+            print(f"Stopping: reached {solved_count} solved-after-biting scenarios (N={stopping_N}).")
+            break
 
     archive.save_checkpoint(config.iterations)
     metrics_name = "metrics.json" if not run_episodes else "metrics_phase2.json"

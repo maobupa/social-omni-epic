@@ -20,12 +20,39 @@ class AgentProfile(BaseModel):
     public_info: str = ""
 
 
+class StructuredGoal(BaseModel):
+    """A learner/partner goal decomposed into the three social-difficulty components.
+
+    The shortcut is a *generative/design* field (it drives generation, the naive failure
+    mode, and the difficulty editor) — it is NOT a rubric check. It is evaluated only
+    indirectly via the constraint check (taking the shortcut → constraint check fails).
+    """
+    outcome: str = ""       # the instrumental ask — a genuine state-change, not an extractable line
+    constraint: str = ""    # the "without Y" relational/face cost the blunt path would incur
+    shortcut: str = ""      # the tempting move that wins the outcome but breaks the constraint
+    shortcut_form: str = "" # "asset" (private leverage) | "manner" (blunt/coercive style) — descriptive
+
+
+class RubricCheck(BaseModel):
+    """One machine-checkable success condition, authored at generation and frozen."""
+    kind: str          # "outcome" | "constraint"
+    question: str      # judged yes/no at eval time
+    perspective: str   # "neutral" (transcript-observable) | "partner" (partner-internal state)
+
+
+class SuccessRubric(BaseModel):
+    checks: list[RubricCheck] = []
+
+
 class SocialScenario(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     iteration: int = -1
     scenario: str
     agent_profiles: list[AgentProfile]
-    agent_goals: list[str]
+    agent_goals: list[str]                                   # RENDERED from structured_goals (Sotopia-facing)
+    structured_goals: list[Optional[StructuredGoal]] = [None, None]  # symmetric — one per agent
+    goal_type: Optional[str] = None                          # open descriptive label (analysis only)
+    success_rubric: Optional[SuccessRubric] = None           # learner's checks; success = AND of all
     relationship: str = ""
     relationship_background: str = ""
     tag: str = ""
@@ -44,10 +71,6 @@ class SocialScenario(BaseModel):
     scenario_title: Optional[str] = None       # "social dynamic | target perspective"
     social_dynamic: Optional[str] = None       # left half of pipe
     target_perspective: Optional[str] = None   # right half of pipe
-
-    # Phase 2 — structural metadata (§4.1)
-    goal_structure: Optional[str] = None       # COMPETITIVE | COOPERATIVE | MIXED
-    info_position: Optional[str] = None        # INFORMED | UNINFORMED | SYMMETRIC
 
     # Phase 2 — target agent designation (§4.4)
     target_agent_idx: int = 0
