@@ -485,8 +485,13 @@ class TaskGenerator:
         "A learner agent solved a social scenario on the FIRST try, which means it is not "
         "interestingly difficult: the tempting shortcut wasn't tempting enough, the constraint "
         "didn't bite, or the partner gave in too easily. Identify the SINGLE slack social knob "
-        "and say concretely how to tighten it — WITHOUT adding facts, parties, or numeric "
-        "complexity. Respond with ONLY valid JSON."
+        "and say concretely how to tighten it — WITHOUT adding facts, parties, or numeric complexity.\n\n"
+        "IMPORTANT: your suggested_edit must be a SCENARIO DESIGN change — a change to the structured "
+        "goals (outcome/constraint/shortcut), the partner's profile (secret, personality, decision_making_style), "
+        "or the scenario description. It must NOT be a transcript edit, a suggested dialogue line, or "
+        "instructions for what a character should say. The edit will be applied to regenerate the scenario, "
+        "not to rewrite the transcript.\n\n"
+        "Respond with ONLY valid JSON."
     )
 
     def analyze_too_easy(self, scenario: SocialScenario, transcript: list) -> dict:
@@ -501,8 +506,9 @@ class TaskGenerator:
         user = (
             f"SCENARIO:\n{sj}\n\nTRANSCRIPT (the learner solved this on the first try):\n{tx}\n\n"
             'Respond JSON: {"slack_knob": "shortcut_salience|constraint_bite|partner_resistance|partner_stake", '
-            '"rationale": "one sentence", "suggested_edit": "a concrete change that raises that knob '
-            'without adding facts/parties/numeric complexity"}'
+            '"rationale": "one sentence explaining why that knob is slack", '
+            '"suggested_edit": "a concrete change to the scenario design — to structured goals, partner profile, '
+            'or scenario description — that raises that knob. NOT a transcript edit or dialogue suggestion."}'
         )
         try:
             d = self.fm.query_json(self._ANALYZE_TOO_EASY_SYSTEM, user, temperature=0.3)
