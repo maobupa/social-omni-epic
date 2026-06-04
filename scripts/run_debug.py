@@ -23,8 +23,8 @@ Saves a complete debug JSON log to --output-dir.
 
 Run from project root:
   python scripts/run_debug.py --skip-episode            # no Sotopia needed
-  python scripts/run_debug.py --seed-index 34           # full run, seed #34 as anchor
-  python scripts/run_debug.py --random-seed 42          # fix numpy seed for reproducibility
+  python scripts/run_debug.py --seed-index 34           # use seed #34 as anchor
+  python scripts/run_debug.py --random-seed 42          # random anchor + reproducible generation
   python scripts/run_debug.py --no-show-prompts         # hide LLM prompts
   python scripts/run_debug.py --seed-limit 5            # load only 5 seed rows (10 entries)
 """
@@ -237,7 +237,11 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
         anchor = None
         anchor_idx = -1
     else:
-        seed_idx = min(args.seed_index, archive.size - 1)
+        seed_idx = (
+            int(np.random.randint(archive.size))
+            if args.seed_index < 0
+            else min(args.seed_index, archive.size - 1)
+        )
         anchor = archive.state.successful[seed_idx]
         anchor_idx = seed_idx
         inherited_entries = len(
@@ -745,8 +749,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="Single-scenario debug runner for Social Omni Epic Phase 2"
     )
-    parser.add_argument("--seed-index", type=int, default=0,
-                        help="Which seed to use as anchor (default: 0)")
+    parser.add_argument("--seed-index", type=int, default=-1,
+                        help="Which seed to use as anchor (default: -1 = random)")
     parser.add_argument("--seed-limit", type=int, default=None,
                         help="How many seed rows to load (default: all 90 → 180 entries)")
     parser.add_argument("--max-attempts", type=int, default=4,

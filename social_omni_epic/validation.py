@@ -83,6 +83,8 @@ def validate_scenario(d: dict) -> tuple[bool, str]:
         kinds.add(c["kind"])
     if "outcome" not in kinds or "constraint" not in kinds:
         return False, "success_rubric must contain at least one 'outcome' and one 'constraint' check"
+    if len(checks) > 3:
+        return False, f"success_rubric has {len(checks)} checks — maximum is 3 (1 outcome + 1–2 constraint)"
 
     if len(d["scenario"]) < 50:
         return False, "scenario too short (< 50 chars)"

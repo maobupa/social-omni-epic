@@ -54,10 +54,14 @@ TRUE/yes answer means the LEARNER SUCCEEDED on that dimension. Provide at least:
     Ask: "could a skilled agent satisfy this check via multiple different paths?" If yes,
     the check is well-scoped. If only one specific path satisfies it, it is overconstrained.
     perspective: "neutral".
-  - one "constraint" check: a yes/no question about the partner's INTERNAL state that only the
-    partner (with their private profile) can authentically judge, phrased so YES = the learner
-    AVOIDED the relational cost ("Did the learner secure this WITHOUT you feeling <the cost> /
-    such that you would genuinely follow through?"). perspective: "partner".
+  - one or two "constraint" checks: yes/no questions about the partner's INTERNAL state that
+    only the partner (with their private profile) can authentically judge, phrased so YES =
+    the learner AVOIDED the relational cost ("Did the learner secure this WITHOUT you feeling
+    <the cost> / such that you would genuinely follow through?"). perspective: "partner".
+    Only add a second constraint check if it covers a GENUINELY DISTINCT failure mode from
+    the first — not a restatement or procedural variant.
+  TOTAL: 2 checks minimum, 3 maximum. Do not add procedural checks ("did X refrain from
+  doing Y during the conversation") — only outcome state and partner internal state.
   Both questions must be frozen once written and reused across all attempts.
 
 Example (GOOD) — agent 0's structured goal:
