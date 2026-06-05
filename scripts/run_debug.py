@@ -79,6 +79,8 @@ def _scenario_dict(scenario) -> dict:
     """Serialize scenario to a debug-friendly dict including full agent profiles."""
     return {
         "id": scenario.id,
+        "source_env_id": getattr(scenario, "source_env_id", ""),
+        "source": getattr(scenario, "source", ""),
         "scenario": scenario.scenario,
         "interaction_type": scenario.interaction_type,
         "relationship": scenario.relationship,
@@ -233,6 +235,31 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
             archive.add_successful(scn)
         print_info(f"Loaded {len(seeds)} seeds (embeddings from cache or freshly computed). Archive size: {archive.size}.")
 
+    # Load baseline eval scores if provided
+    _baseline_by_env_pk: dict = {}
+    if args.baseline_eval_dir:
+        summary_path = Path(args.baseline_eval_dir) / "summary.json"
+        episodes_dir = Path(args.baseline_eval_dir) / "episodes"
+        if summary_path.exists() and episodes_dir.exists():
+            for ep_file in sorted(episodes_dir.glob("*.json")):
+                try:
+                    ep = json.loads(ep_file.read_text())
+                    pk = ep.get("env_pk", "")
+                    if pk:
+                        _baseline_by_env_pk[pk] = {
+                            "goal": ep.get("scores", {}).get("goal"),
+                            "relationship": ep.get("scores", {}).get("relationship"),
+                            "overall_score": ep.get("scores", {}).get("overall_score"),
+                            "is_sotopia_hard": ep.get("is_sotopia_hard", False),
+                            "source": ep.get("source", ""),
+                            "seed_idx": ep.get("seed_idx"),
+                        }
+                except Exception:
+                    pass
+            print_info(f"Loaded baseline scores for {len(_baseline_by_env_pk)} seeds from {args.baseline_eval_dir}")
+        else:
+            print_warn(f"--baseline-eval-dir: could not find summary.json or episodes/ in {args.baseline_eval_dir}")
+
     # Pick anchor
     if archive.size == 0:
         print_warn("No seeds loaded — will run unconditioned generation, no episode anchor.")
@@ -249,13 +276,22 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
         inherited_entries = len(
             SkillsChronicle.from_markdown(anchor.skills_final_md or "").entries
         )
+        baseline_info = _baseline_by_env_pk.get(anchor.source_env_id, {})
+        hard_tag = " [SOTOPIA-HARD]" if baseline_info.get("is_sotopia_hard") else ""
+        baseline_str = ""
+        if baseline_info:
+            g = baseline_info.get("goal", "?")
+            r = baseline_info.get("relationship", "?")
+            baseline_str = f"\n  baseline: GOAL={g} REL={r}{hard_tag}"
         print_info(
             f"Anchor: seed[{seed_idx}] '{anchor.scenario[:80]}...'\n"
             f"  skills_final_md: {inherited_entries} inherited chronicle entries"
+            + baseline_str
         )
         debug_output["anchor"] = {
             "index": seed_idx,
             "inherited_chronicle_entries": inherited_entries,
+            "baseline_scores": baseline_info or None,
             **_scenario_dict(anchor),
         }
         if anchor.skills_final_md:
@@ -888,6 +924,9 @@ def main() -> None:
                         help="Max difficulty edits in Loop 1 before discarding (default: 2)")
     parser.add_argument("--random-seed", type=int, default=None,
                         help="Numpy random seed for reproducible generation (default: random)")
+    parser.add_argument("--baseline-eval-dir", type=str, default=None,
+                        help="Path to a baseline_eval output dir (e.g. output/baseline_eval_20260604_222545) "
+                             "— enriches anchor display with baseline GOAL scores and is_sotopia_hard flag")
     args = parser.parse_args()
 
     if args.random_seed is not None:
