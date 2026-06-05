@@ -137,9 +137,10 @@ def _generate_scenario(
     archive: Archive,
     config: DictConfig,
     existing_types: list[str],
+    anchor_embedding: list | None = None,
 ) -> SocialScenario | None:
     n_ep_failed = int(config.get("task_generator", {}).get("num_episode_failed_examples", 2))
-    episode_failed = _sample_episode_failed(archive, n_ep_failed)
+    episode_failed = _sample_episode_failed(archive, n_ep_failed, anchor_embedding=anchor_embedding)
     use_vs = bool(config.get("use_verbalized_sampling", False))
     n_cands = int(config.get("vs_num_candidates", 5))
     if use_vs:
@@ -240,7 +241,7 @@ def main(config: DictConfig) -> None:
         )
 
         # 2. Generate scenario
-        scenario = _generate_scenario(examples, task_gen, archive, config, existing_types or [])
+        scenario = _generate_scenario(examples, task_gen, archive, config, existing_types or [], anchor_embedding=anchor.embedding)
         if scenario is None:
             archive.add_failed_generation({"iteration": iteration, "reason": "generation_failed"})
             continue
