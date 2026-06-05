@@ -53,5 +53,8 @@
       "speaker": "Ava Thompson",
       "content": "left the conversation"
     }
-  ]
+  ],
+  "scenario_title": "Deal-or-no-deal allocation of multiple indivisible items with differing private valuations between acquaintances | skills from the allocating party maximizing personal utility with private valuations and limited information",
+  "social_dynamic": "Deal-or-no-deal allocation of multiple indivisible items with differing private valuations between acquaintances",
+  "target_perspective": "skills from the allocating party maximizing personal utility with private valuations and limited information"
 }

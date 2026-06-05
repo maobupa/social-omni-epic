@@ -73,5 +73,8 @@
       "speaker": "Samuel Anderson",
       "content": "left the conversation"
     }
-  ]
+  ],
+  "scenario_title": "Reserved one-on-one conversation between friends with mismatched expressiveness and fragile rapport | skills from the reserved friend navigating disclosure to elicit support while avoiding neediness",
+  "social_dynamic": "Reserved one-on-one conversation between friends with mismatched expressiveness and fragile rapport",
+  "target_perspective": "skills from the reserved friend navigating disclosure to elicit support while avoiding neediness"
 }

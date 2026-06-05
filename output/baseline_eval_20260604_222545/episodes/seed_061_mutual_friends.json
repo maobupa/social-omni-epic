@@ -43,5 +43,8 @@
       "speaker": "Finnegan O'Malley",
       "content": "left the conversation"
     }
-  ]
+  ],
+  "scenario_title": "Casual mutual-friend discovery between strangers using indirect cues and low social bandwidth | skills from the reserved seeker eliciting mutual-connection cues without overtly asking or embarrassing themselves",
+  "social_dynamic": "Casual mutual-friend discovery between strangers using indirect cues and low social bandwidth",
+  "target_perspective": "skills from the reserved seeker eliciting mutual-connection cues without overtly asking or embarrassing themselves"
 }

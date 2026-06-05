@@ -63,5 +63,8 @@
       "speaker": "Amara Hartley",
       "content": "left the conversation"
     }
-  ]
+  ],
+  "scenario_title": "Persuasion at a charity event between close friends, leveraging moral appeal amid social expectation | skills from the persuading friend balancing moral arguments and low-pressure influence to prompt giving",
+  "social_dynamic": "Persuasion at a charity event between close friends, leveraging moral appeal amid social expectation",
+  "target_perspective": "skills from the persuading friend balancing moral arguments and low-pressure influence to prompt giving"
 }

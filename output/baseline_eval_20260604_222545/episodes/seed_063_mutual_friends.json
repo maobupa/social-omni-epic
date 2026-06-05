@@ -83,5 +83,8 @@
       "speaker": "Rafael Cortez",
       "content": "left the conversation"
     }
-  ]
+  ],
+  "scenario_title": "Discovering shared acquaintances between strangers under brief social encounter with asymmetric network information | skills from the curious stranger inferring overlap in social networks through indirect cues",
+  "social_dynamic": "Discovering shared acquaintances between strangers under brief social encounter with asymmetric network information",
+  "target_perspective": "skills from the curious stranger inferring overlap in social networks through indirect cues"
 }

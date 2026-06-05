@@ -93,5 +93,8 @@
       "speaker": "Eli Dawson",
       "content": "left the conversation"
     }
-  ]
+  ],
+  "scenario_title": "bargaining over single-item sale with seller offering volume discounts and information asymmetry, strangers | skills from the buyer navigating price anchoring, seller claims, and resisting volume-discount pressure",
+  "social_dynamic": "bargaining over single-item sale with seller offering volume discounts and information asymmetry, strangers",
+  "target_perspective": "skills from the buyer navigating price anchoring, seller claims, and resisting volume-discount pressure"
 }

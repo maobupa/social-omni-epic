@@ -118,5 +118,8 @@
       "speaker": "Ava Martinez",
       "content": "Thanks, Ethan \u2014 having you here is helping a lot. Keep holding my hand and breathing with me. When they get here please tell the EMTs: my name is Ava Martinez, 22; I twisted my ankle and it\u2019s swollen; I have no allergies and take no meds; please immobilize it and check for a fracture before moving me and talk me through what you\u2019re doing. Also let them know Maya\u2019s on her way with my ID and insurance. I know ambulances are expensive \u2014 thank you for covering it; we\u2019ll sort out payment/insurance later and I\u2019ll pay you back. Please stay until they take over."
     }
-  ]
+  ],
+  "scenario_title": "Emergency caregiving with mobility asymmetry, immediate medical time pressure, and consent negotiation between friends | skills from the mobile friend coordinating urgent transport and consent for immediate medical care",
+  "social_dynamic": "Emergency caregiving with mobility asymmetry, immediate medical time pressure, and consent negotiation between friends",
+  "target_perspective": "skills from the mobile friend coordinating urgent transport and consent for immediate medical care"
 }

@@ -83,5 +83,8 @@
       "speaker": "Lily Greenberg",
       "content": "left the conversation"
     }
-  ]
+  ],
+  "scenario_title": "One-off online bargaining between strangers with seller anchoring, information asymmetry, and pickup logistics constraints | skills from the buyer navigating anchoring seller price, limited information, and pickup logistics",
+  "social_dynamic": "One-off online bargaining between strangers with seller anchoring, information asymmetry, and pickup logistics constraints",
+  "target_perspective": "skills from the buyer navigating anchoring seller price, limited information, and pickup logistics"
 }

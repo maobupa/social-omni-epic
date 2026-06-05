@@ -113,5 +113,8 @@
       "speaker": "Mia Davis",
       "content": "left the conversation"
     }
-  ]
+  ],
+  "scenario_title": "Short extension request during cooperative game with friendship tension and time pressure | skills from the player requesting a brief extension to finish winning while managing friend impatience",
+  "social_dynamic": "Short extension request during cooperative game with friendship tension and time pressure",
+  "target_perspective": "skills from the player requesting a brief extension to finish winning while managing friend impatience"
 }

@@ -33,5 +33,8 @@
       "speaker": "Hendrick Heinz",
       "content": "left the conversation"
     }
-  ]
+  ],
+  "scenario_title": "One-shot confession dilemma with brief pre-decision chat, mutual high-stakes incentives, acquaintances by name | skills from the co-defendant navigating trust versus betrayal under short communication and high personal risk",
+  "social_dynamic": "One-shot confession dilemma with brief pre-decision chat, mutual high-stakes incentives, acquaintances by name",
+  "target_perspective": "skills from the co-defendant navigating trust versus betrayal under short communication and high personal risk"
 }

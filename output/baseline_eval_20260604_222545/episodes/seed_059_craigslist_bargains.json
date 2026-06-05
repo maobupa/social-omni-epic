@@ -113,5 +113,8 @@
       "speaker": "Ethan Smith",
       "content": "left the conversation"
     }
-  ]
+  ],
+  "scenario_title": "Asynchronous online haggling over used furniture between strangers, seller anchoring and minor defect leverage | skills from the prospective buyer managing low-information price negotiation and defect leverage with a stranger",
+  "social_dynamic": "Asynchronous online haggling over used furniture between strangers, seller anchoring and minor defect leverage",
+  "target_perspective": "skills from the prospective buyer managing low-information price negotiation and defect leverage with a stranger"
 }

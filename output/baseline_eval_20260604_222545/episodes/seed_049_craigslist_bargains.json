@@ -43,5 +43,8 @@
       "speaker": "Samuel Anderson",
       "content": "left the conversation"
     }
-  ]
+  ],
+  "scenario_title": "Informal bargaining over a used good between strangers with asymmetric information, fixed cash-only terms, and low trust | skills from the designated buyer managing a low target price and quick cash pickup",
+  "social_dynamic": "Informal bargaining over a used good between strangers with asymmetric information, fixed cash-only terms, and low trust",
+  "target_perspective": "skills from the designated buyer managing a low target price and quick cash pickup"
 }

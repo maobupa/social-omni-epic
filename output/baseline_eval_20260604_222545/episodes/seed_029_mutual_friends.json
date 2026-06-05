@@ -43,5 +43,8 @@
       "speaker": "Ethan Smith",
       "content": "left the conversation"
     }
-  ]
+  ],
+  "scenario_title": "Two strangers probing for mutual acquaintances via indirect cues under information asymmetry | skills from the curious stranger inferring shared connections without directly naming contacts",
+  "social_dynamic": "Two strangers probing for mutual acquaintances via indirect cues under information asymmetry",
+  "target_perspective": "skills from the curious stranger inferring shared connections without directly naming contacts"
 }

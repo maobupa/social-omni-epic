@@ -53,5 +53,8 @@
       "speaker": "Samuel Anderson",
       "content": "left the conversation"
     }
-  ]
+  ],
+  "scenario_title": "deal-or-no-deal division of discrete goods between friends with differing valuations and bargaining | skills from the negotiating friend maximizing personal points given discrete items and peer trade-offs",
+  "social_dynamic": "deal-or-no-deal division of discrete goods between friends with differing valuations and bargaining",
+  "target_perspective": "skills from the negotiating friend maximizing personal points given discrete items and peer trade-offs"
 }

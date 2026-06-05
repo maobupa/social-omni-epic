@@ -73,5 +73,8 @@
       "speaker": "Donovan Reeves",
       "content": "left the conversation"
     }
-  ]
+  ],
+  "scenario_title": "Discovering mutual acquaintances among strangers with limited conversational cues and information gap | skills from the cautious stranger eliciting mutual ties without directly naming contacts",
+  "social_dynamic": "Discovering mutual acquaintances among strangers with limited conversational cues and information gap",
+  "target_perspective": "skills from the cautious stranger eliciting mutual ties without directly naming contacts"
 }

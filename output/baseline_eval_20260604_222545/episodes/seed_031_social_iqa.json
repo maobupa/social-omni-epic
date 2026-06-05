@@ -53,5 +53,8 @@
       "speaker": "Ethan Johnson",
       "content": "left the conversation"
     }
-  ]
+  ],
+  "scenario_title": "Disclosure and persuasion between friends with asymmetric knowledge about personal misfortune | skills from the informed friend navigating confession, persuasion, and maintaining trust",
+  "social_dynamic": "Disclosure and persuasion between friends with asymmetric knowledge about personal misfortune",
+  "target_perspective": "skills from the informed friend navigating confession, persuasion, and maintaining trust"
 }

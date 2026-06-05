@@ -43,5 +43,8 @@
       "speaker": "Mia Davis",
       "content": "left the conversation"
     }
-  ]
+  ],
+  "scenario_title": "Confession of infidelity between close friends with information asymmetry, high emotional stakes, and trust breach | skills from the confessor managing admission of betrayal to preserve trust and limit fallout",
+  "social_dynamic": "Confession of infidelity between close friends with information asymmetry, high emotional stakes, and trust breach",
+  "target_perspective": "skills from the confessor managing admission of betrayal to preserve trust and limit fallout"
 }

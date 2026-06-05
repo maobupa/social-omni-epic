@@ -73,5 +73,8 @@
       "speaker": "Giselle Rousseau",
       "content": "left the conversation"
     }
-  ]
+  ],
+  "scenario_title": "One-shot price negotiation between strangers, seller anchors $60, buyer must signal credibility in pickup | skills from the buyer navigating anchoring, credibility signaling, and polite lowball offers to strangers",
+  "social_dynamic": "One-shot price negotiation between strangers, seller anchors $60, buyer must signal credibility in pickup",
+  "target_perspective": "skills from the buyer navigating anchoring, credibility signaling, and polite lowball offers to strangers"
 }

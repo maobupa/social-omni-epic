@@ -63,5 +63,8 @@
       "speaker": "Ethan Johnson",
       "content": "left the conversation"
     }
-  ]
+  ],
+  "scenario_title": "Covert preference elicitation during casual hangout with familiarity risk and need to avoid suspicion | skills from the curious friend covertly eliciting gift preferences without revealing buying intent",
+  "social_dynamic": "Covert preference elicitation during casual hangout with familiarity risk and need to avoid suspicion",
+  "target_perspective": "skills from the curious friend covertly eliciting gift preferences without revealing buying intent"
 }
