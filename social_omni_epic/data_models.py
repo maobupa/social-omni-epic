@@ -84,26 +84,23 @@ class SocialScenario(BaseModel):
     n_children: int = 0    # number of descendant scenarios generated from this task
 
     def to_text_for_embedding(self) -> str:
-        parts = [
+        parts = []
+        # scenario_title is the primary structural retrieval key (abstract, no proper nouns).
+        # Seeds that have been pre-titled populate this; others fall back to scenario text.
+        if self.scenario_title:
+            parts.append(f"Scenario type: {self.scenario_title}")
+        parts += [
             f"Scenario: {self.scenario}",
             f"Interaction type: {self.interaction_type}",
             f"Relationship: {self.relationship}",
         ]
-        # Perspective-aware: label which goal belongs to the learner vs. partner.
-        # The two perspectives of the same scenario must produce different texts.
+        # Perspective-aware goals (structural signal; drop character surface details).
         learner_idx = self.target_agent_idx
         partner_idx = 1 - learner_idx
-        def _name(idx: int) -> str:
-            return (self.agent_profiles[idx].first_name
-                    if idx < len(self.agent_profiles) else f"Agent{idx}")
         if len(self.agent_goals) > learner_idx:
-            parts.append(f"Learner goal ({_name(learner_idx)}): {self.agent_goals[learner_idx]}")
+            parts.append(f"Learner goal: {self.agent_goals[learner_idx]}")
         if len(self.agent_goals) > partner_idx:
-            parts.append(f"Partner goal ({_name(partner_idx)}): {self.agent_goals[partner_idx]}")
-        for agent in self.agent_profiles:
-            parts.append(
-                f"Character {agent.first_name}: {agent.occupation}; {agent.big_five}"
-            )
+            parts.append(f"Partner goal: {self.agent_goals[partner_idx]}")
         return "\n".join(parts)
 
 
