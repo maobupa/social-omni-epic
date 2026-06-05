@@ -101,7 +101,23 @@ def _coerce_perspective(kind: str, perspective) -> str:
     return "neutral" if kind == "outcome" else "partner"
 
 
+def _clean_str(s) -> str:
+    """Strip null bytes and non-breaking spaces that LLMs occasionally generate as padding."""
+    if not isinstance(s, str):
+        return s
+    return s.replace("\x00", "").replace(" ", " ").strip()
+
+
+def _clean_dict(d: dict) -> dict:
+    """Recursively clean string values in a dict."""
+    return {k: (_clean_dict(v) if isinstance(v, dict) else
+                [_clean_dict(i) if isinstance(i, dict) else _clean_str(i) if isinstance(i, str) else i for i in v] if isinstance(v, list) else
+                _clean_str(v) if isinstance(v, str) else v)
+            for k, v in d.items()}
+
+
 def dict_to_scenario(d: dict) -> SocialScenario:
+    d = _clean_dict(d)
     profiles = [AgentProfile(**p) for p in d["agent_profiles"]]
     structured = [StructuredGoal(**g) for g in d["agent_structured_goals"]]
     rendered_goals = [render_agent_goal(sg) for sg in structured]
