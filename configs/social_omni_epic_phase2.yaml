@@ -43,7 +43,7 @@ ucb1_C: 1.0     # exploration coefficient
 ucb1_D: 0.1     # child-penalty coefficient
 
 # Task generator
-use_verbalized_sampling: true
+use_verbalized_sampling: false
 vs_num_candidates: 5
 
 # Seed loading

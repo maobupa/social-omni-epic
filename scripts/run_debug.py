@@ -303,9 +303,9 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
     _flush(debug_output)
 
     # -----------------------------------------------------------------------
-    # Step 2: Scenario generation (verbalized sampling)
+    # Step 2: Scenario generation
     # -----------------------------------------------------------------------
-    tfm.set_step("Step 2: Verbalized Sampling Scenario Generation")
+    tfm.set_step("Step 2: Scenario Generation")
 
     task_gen = TaskGenerator(tfm, num_examples=3, num_failed_examples=0, max_retries=2)
     existing_types = (
@@ -325,11 +325,11 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
         )
         examples = [archive.state.successful[i] for i in idxs]
 
-    scenario = task_gen.generate_with_verbalized_sampling(
-        examples, existing_types=existing_types, n_candidates=args.vs_candidates
+    scenario = task_gen.generate_from_archive(
+        examples, existing_types=existing_types
     )
     if scenario is None:
-        print_warn("Verbalized sampling failed — trying unconditioned generation.")
+        print_warn("Generation failed — trying unconditioned generation.")
         scenario = task_gen.generate_unconditioned()
     if scenario is None:
         print_warn("Generation failed entirely. Aborting.")

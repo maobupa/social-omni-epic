@@ -123,7 +123,7 @@ def _generate_scenario(
 ) -> SocialScenario | None:
     n_ep_failed = int(config.get("task_generator", {}).get("num_episode_failed_examples", 2))
     episode_failed = _sample_episode_failed(archive, n_ep_failed)
-    use_vs = bool(config.get("use_verbalized_sampling", True))
+    use_vs = bool(config.get("use_verbalized_sampling", False))
     n_cands = int(config.get("vs_num_candidates", 5))
     if use_vs:
         return task_gen.generate_with_verbalized_sampling(
