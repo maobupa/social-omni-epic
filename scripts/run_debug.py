@@ -2,7 +2,7 @@
 
 Mirrors the exact pipeline of scripts/run_phase2.py for one scenario:
   1  Load seeds & select anchor
-  2  Verbalized sampling generation
+  2  Scenario generation
   3  Embed
   4  MoI (novelty + learnability)
   5  Coherence gate  (with feedback-retry loop)
@@ -224,7 +224,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
             fm=tfm,
             seeds_path=args.seeds_path,
             limit=args.seed_limit,
-            both_perspectives=True,
+            both_perspectives=args.seed_both_perspectives,
         )
     except FileNotFoundError as e:
         print_warn(f"Seeds not found ({e}). Using an empty archive — generation will be unconditioned.")
@@ -501,13 +501,14 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
         "max_attempts": args.max_attempts,
         "difficulty": {"D": args.difficulty_d},
         "judge": {"self_consistency_k": args.judge_k},
-        "chronicle_max_entries": 8,
+        "chronicle_max_entries": args.chronicle_max_entries,
         "adversarial": {"re_reflect_on_rejection": True},
         "learner_model": args.learner_model,
         "partner_model": args.partner_model,
+        "evaluator_model": args.evaluator_model,
         "max_turns": args.max_turns,
         "enable_coherence_check": True,
-        "coherence_max_retries": 1,
+        "coherence_max_retries": args.coherence_max_retries,
     }
 
     if args.skip_episode:
@@ -637,11 +638,9 @@ def main() -> None:
     parser.add_argument("--seed-index", type=int, default=-1,
                         help="Which seed to use as anchor (default: -1 = random)")
     parser.add_argument("--seed-limit", type=int, default=None,
-                        help="How many seed rows to load (default: all 90 → 180 entries)")
+                        help="How many seed rows to load (default: all 90)")
     parser.add_argument("--max-attempts", type=int, default=4,
-                        help="Max episode attempts (default: 2)")
-    parser.add_argument("--vs-candidates", type=int, default=5,
-                        help="Verbalized sampling candidates (default: 5)")
+                        help="Max episode attempts (K: attempt 1 is the biting failure, then up to K-1 retries)")
     parser.add_argument("--show-prompts", action=argparse.BooleanOptionalAction, default=True,
                         help="Show LLM prompts (default: True; --no-show-prompts to hide)")
     parser.add_argument("--show-responses", action=argparse.BooleanOptionalAction, default=True,
@@ -660,6 +659,10 @@ def main() -> None:
     parser.add_argument("--partner-model", type=str, default="openai/gpt-5-mini")
     parser.add_argument("--evaluator-model", type=str, default="openai/gpt-5-mini")
     parser.add_argument("--seeds-path", type=str, default="data/sotopia_90_seeds.jsonl")
+    parser.add_argument("--seed-both-perspectives", action=argparse.BooleanOptionalAction, default=False,
+                        help="Load both agent perspectives per seed (doubles seed pool; default: False)")
+    parser.add_argument("--chronicle-max-entries", type=int, default=8,
+                        help="Max chronicle entries injected per attempt (default: 8)")
     parser.add_argument("--coherence-max-retries", type=int, default=2,
                         help="Max coherence-gate regeneration attempts (default: 2)")
     parser.add_argument("--diversity-threshold", type=float, default=0.92,
