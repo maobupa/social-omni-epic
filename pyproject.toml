@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "social-omni-epic"
+version = "0.1.0"
+description = "Social Omni EPIC research project"
+authors = ["Applejuize"]
+packages = [{ include = "social_omni_epic" }]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+openai = "*"
+numpy = "*"
+scipy = "*"
+scikit-learn = "*"
+umap-learn = "*"
+matplotlib = "*"
+pydantic = "*"
+hydra-core = "*"
+omegaconf = "*"
+tqdm = "*"
+tenacity = "*"
+python-dotenv = "*"
+redis = "*"
+pyvis = "*"
+networkx = "*"
+rich = "*"
+sotopia = { git = "https://github.com/sotopia-lab/sotopia.git", rev = "a0aaafb440e570e5e61b7c44a44e5e417c545383" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
