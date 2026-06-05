@@ -85,6 +85,10 @@ Supporting claims:
 - We do not claim to beat SOTOPIA-PI's absolute numbers (fine-tuning has an inherent advantage)
 - We do not claim to replace evaluation — SOTOPIA-EVAL is our metric, not a contribution
 - We do not claim the approach is better for all social tasks — it's specifically designed for high-constraint relational scenarios where the shortcut/constraint dynamic is load-bearing
+- We do not claim to produce "believable" agents in a human-facing sense — believability is already high at baseline (agents already sound natural); what fails is goal + relational success, which is what we target
+- We do not claim the chronicle strategies generalize from LLM partners to human partners without further validation — that gap is real and untested
+- The primary contribution is the **framework and its properties** (open-ended generation, difficulty calibration, structured distillation), not the size of the absolute performance delta; the delta is evidence the framework works, not the claim itself
+- The most defensible practical context is AI-mediated practice settings (negotiation training, conflict resolution roleplay) where the agent plays a sparring partner, not a deployed conversational agent talking to real users
 
 ---
 
