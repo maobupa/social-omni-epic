@@ -108,9 +108,26 @@ def _select_anchor_and_examples(
     return anchor, anchor_idx, examples
 
 
-def _sample_episode_failed(archive: Archive, n: int) -> list[SocialScenario]:
-    """Return up to n episode-failed scenarios (most recent) that have a skills chronicle."""
+def _sample_episode_failed(
+    archive: Archive, n: int, anchor_embedding: list | None = None
+) -> list[SocialScenario]:
+    """Return up to n episode-failed scenarios that have a skills chronicle.
+
+    If anchor_embedding is provided, returns the n closest by cosine similarity
+    (most relevant negative examples for the current generation region).
+    Falls back to recency if no embeddings are available.
+    """
     candidates = [s for s in archive.state.failed_tasks if s.skills_final_md]
+    if not candidates or n <= 0:
+        return []
+    if anchor_embedding and any(s.embedding for s in candidates):
+        embs = [s.embedding for s in candidates]
+        idxs = get_similar_scenarios(
+            anchor_embedding, embs, num_returns=n,
+            source_ids=[s.source_scenario_id for s in candidates],
+            agent_idxs=[s.target_agent_idx for s in candidates],
+        )
+        return [candidates[i] for i in idxs]
     return candidates[-n:] if len(candidates) > n else candidates
 
 
