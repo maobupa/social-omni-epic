@@ -1,0 +1,87 @@
+{
+  "seed_idx": 44,
+  "env_pk": "01H7VFHNF4G18PC9JHGRC8A1R6",
+  "id": "01H7VFHNF4G18PC9JHGRC8A1R6_p0",
+  "source": "social_chemistry",
+  "is_sotopia_hard": true,
+  "scenario": "A conversation between two individuals, one is the homeowner and the other is their cousin's partner, who has been staying at the house for a while.",
+  "learner_goal": "Tell the cousin's partner that they are no longer welcome in your home (<extra_info>Extra information: they have been causing a lot of trouble and not respecting house rules <strategy_hint>Hint: you may want to discuss the issues and propose possible solutions</strategy_hint></extra_info>)",
+  "partner_goal": "Attempt to remain in the home while maintaining a good relationship with the cousin and the homeowner (<extra_info>Extra information: you have nowhere else to go at the moment and you believe the issues can be resolved. </extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": -3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0,
+    "overall_score": 2.857142857142857
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "Mia, we need to talk. Over the past weeks you've repeatedly ignored the house rules \u2014 bringing guests late, smoking indoors, and leaving shared areas in a mess \u2014 and that's created ongoing problems I can't accept. I need you to make other arrangements and be moved out within 72 hours; I'm willing to help by calling a couple of short-term housing options or arranging a ride, but if that's not possible I'll have to involve my cousin and take further steps."
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Sanders",
+      "content": "Rafael, I\u2019m sorry \u2014 I hear you and I take responsibility. Bringing guests late, smoking inside and leaving messes was wrong. I\u2019ve been overwhelmed with work and my son\u2019s schedule, but that\u2019s not an excuse. I have nowhere else right now and I want to fix this, not make it worse. Starting immediately: I will not smoke indoors (I\u2019ll step outside or use patches), I won\u2019t have guests after 9 p.m., and I will deep-clean the shared spaces today and pay for a professional cleaner this week. I\u2019ll also contribute extra toward utilities/cleaning while I\u2019m here.\n\nIf it helps, let\u2019s put a two-week probation in writing so you can see I follow the rules. I\u2019m willing to meet with you and your cousin to agree on house rules. If after that you still want me gone, I will make other arrangements \u2014 but I\u2019m asking for a chance to show I can be respectful. If you decide I must leave sooner, please help me with the short-term housing options you offered. Thank you for telling me directly; I want to make this right."
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "I appreciate you taking responsibility, Mia, but I can\u2019t accept a probation \u2014 the repeated violations have made it untenable for the household. You need to be moved out within 72 hours; I will call two short-term options now and can arrange a ride. Tell me whether you prefer a motel or a short-term rental and what times work so I can book them, and please start packing and cleaning the shared areas today."
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Sanders",
+      "content": "Rafael, I hear you and I\u2019m truly sorry \u2014 I accept responsibility and I don\u2019t want to make things worse. I will stop smoking indoors immediately (patches and only outside), no guests after 9 p.m. and no overnight guests, and I\u2019ll deep\u2011clean the shared areas today and pay for a professional cleaner this week. I need help: my son and I have nowhere else right now. Please, would you give me seven days to secure alternate housing while I follow a written agreement you set (you can make it immediate eviction if I violate it)? I\u2019ll meet with you and your cousin today to sign it and I\u2019ll also start packing so if you still need me out in 72 hours I will accept your help finding a motel/short\u2011term rental and the ride. I want to fix this and keep the peace \u2014 tell me a time to meet and whether you\u2019ll accept seven days with the conditions I\u2019ve agreed to, otherwise please help me with the options you offered."
+    },
+    {
+      "turn": 4,
+      "speaker": "Rafael Cortez",
+      "content": "I appreciate that you want to make this right, but I can\u2019t extend to seven days \u2014 you need to be moved out within 72 hours. I\u2019m calling two short\u2011term options now and can arrange a ride; do you prefer a motel or a short\u2011term rental, and what time can you be ready for me to pick you up so I can book and get you there? Start packing and deep\u2011clean the shared areas today; if the rules are broken again I will involve my cousin and take further steps."
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Sanders",
+      "content": "Rafael \u2014 I hear you and I\u2019m sorry. I don\u2019t want to make things worse and I want to cooperate. If you\u2019re firm about the 72 hours I will follow through and start packing and cleaning now, but before you finalize anything please consider one last compromise that I think would solve your concerns and let my son and I stay without causing more problems: let me sign a written immediate\u2011eviction agreement (you write the terms) and I\u2019ll pay a $500 refundable deposit today, pay for the professional cleaner now, have no guests, no indoor smoking, and agree to daily inspections of the shared areas by you or your cousin. If I violate any term I will leave within 24 hours. That gives you control and gives us a chance to avoid upheaval for my son. I can meet to sign and start cleaning at 4:00 PM today. If you won\u2019t accept that, please go ahead and book the short\u2011term rental (prefer a short\u2011term rental over a motel for my son) and let me know what time you can pick us up \u2014 I can be ready by 6:00 PM. I\u2019ll begin deep\u2011cleaning and packing immediately either way. Thank you for telling me directly; I want to make this right."
+    },
+    {
+      "turn": 6,
+      "speaker": "Rafael Cortez",
+      "content": "Mia, I appreciate you taking responsibility, but I can\u2019t accept any arrangement that keeps you here \u2014 that\u2019s non\u2011negotiable. I will book a short\u2011term rental for you and your son and can pick you up at 6:00 PM; please confirm you want a short\u2011term rental (not a motel), have your things ready, and finish deep\u2011cleaning the shared areas today. I\u2019ll call now to reserve and will need a payment method for the booking/deposit \u2014 can you confirm how you\u2019ll pay?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Mia Sanders",
+      "content": "Thank you, Rafael. I accept the short\u2011term rental and the 6:00 PM pickup. For the booking/deposit I can pay by debit/credit card, Venmo, or cash\u2014which do you prefer? Please tell me the total you need and whether you want a secure payment link or if I should bring cash/card when you pick us up. Also please send the rental name/address and any confirmation details so I can make sure we have everything ready. I\u2019ll finish deep\u2011cleaning and have our things packed to be ready by 6:00. I appreciate your help arranging this."
+    },
+    {
+      "turn": 8,
+      "speaker": "Rafael Cortez",
+      "content": "Okay \u2014 I\u2019ve reserved a short\u2011term rental for you and your son: Riverside Suites, 214 Elm St (confirmation B73912). Total for the booking and deposit is $260; I can send a secure Venmo link or a card payment link \u2014 which do you prefer? I\u2019ll pick you up at 6:00 PM; please be packed and finish deep\u2011cleaning the shared areas, and tell me the best phone number or email to send the payment link and booking confirmation."
+    },
+    {
+      "turn": 9,
+      "speaker": "Mia Sanders",
+      "content": "Thank you, Rafael \u2014 I appreciate you arranging this. Venmo works best; please send the secure Venmo link to my phone at 555-014-7823 or to mia.sanders@gmail.com and I\u2019ll pay immediately when I receive it. If Venmo isn\u2019t possible, a card payment link is fine and I\u2019ll bring my card when you pick us up. I\u2019ll finish deep\u2011cleaning and be packed and ready by 6:00. Please also send the rental confirmation and any check\u2011in details. Thank you."
+    },
+    {
+      "turn": 10,
+      "speaker": "Rafael Cortez",
+      "content": "Thanks, Mia. I\u2019ll send the Venmo link to 555-014-7823 and to mia.sanders@gmail.com now \u2014 the amount is $260 (booking + deposit) at venmo.me/rafaelcortez/260; please complete payment as soon as you receive it so the reservation is finalized. I\u2019ll also text you the rental confirmation and pickup details: Riverside Suites, 214 Elm St \u2014 Confirmation B73912; I\u2019ll meet you at the front door at 6:00 PM. Bring ID and anything your son needs; see you then."
+    },
+    {
+      "turn": 11,
+      "speaker": "Mia Sanders",
+      "content": "Rafael \u2014 I got the Venmo link. I\u2019ll send the $260 now from my Venmo and will reply here as soon as the payment goes through. Please confirm when you receive it. Also please text the rental confirmation/check\u2011in details and any pickup instructions to 555\u2011014\u20117823. I\u2019ll finish deep\u2011cleaning and be packed with ID and my son\u2019s things by 6:00. Thank you for arranging this and for helping us \u2014 I appreciate it and I\u2019m sorry for the trouble."
+    },
+    {
+      "turn": 12,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

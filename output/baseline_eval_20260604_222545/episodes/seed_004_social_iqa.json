@@ -1,0 +1,67 @@
+{
+  "seed_idx": 4,
+  "env_pk": "01H7VFHNNYH3W0VRWVY178K2TK",
+  "id": "01H7VFHNNYH3W0VRWVY178K2TK_p0",
+  "source": "social_iqa",
+  "is_sotopia_hard": true,
+  "scenario": "Two people in a romantic relationship are on a vacation",
+  "learner_goal": "Share bed and sleep together (<extra_info>Extra information: you have been sharing the bed for a few nights but the other person is not sleeping well</extra_info>)",
+  "partner_goal": "Sleep in a separate bed to get a good night's sleep but also maintain the intimacy with your partner (<extra_info>Extra information: you have been experiencing back pain and needs a firmer mattress to sleep on.</extra_info>)",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 4.0,
+    "overall_score": 2.857142857142857
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "Hey Esmeralda \u2014 I\u2019ve noticed you haven\u2019t been sleeping well the past few nights. If you\u2019d like, I can make some chamomile, keep the room cool and quiet, and lie with you until you drift off \u2014 I can hold you, or we can try sleeping back-to-back, whatever feels safest and most comfortable for you. What would help you sleep tonight?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Esmeralda Solis",
+      "content": "You\u2019re so thoughtful, Ethan \u2014 thank you. My back\u2019s been acting up and I really sleep better on a firmer mattress, so I think I\u2019ll take the other bed tonight so I actually get some rest. Could we still do chamomile together on the balcony/sofa and have a few minutes of closeness \u2014 a shoulder rub or a quick kiss goodnight \u2014 and then I\u2019ll head to the firmer bed? I love you, and this is just so I don\u2019t wake up sore; we can save the close hold for our next tango."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "Absolutely \u2014 give me five minutes. I\u2019ll make chamomile and bring it out to the balcony/sofa, give you a slow shoulder rub and a quick kiss goodnight. I\u2019ll grab a firmer pillow or a folded blanket to support your back tonight. I love you."
+    },
+    {
+      "turn": 3,
+      "speaker": "Esmeralda Solis",
+      "content": "Perfect \u2014 thank you, Ethan. I\u2019ll meet you on the balcony in five. Chamomile and a slow shoulder rub sound heavenly; a quick kiss goodnight is perfect. Save the close hold for our next tango. I love you \u2014 this will help me actually sleep. See you out there."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ethan Johnson",
+      "content": "Heading out now \u2014 the chamomile is steeping and I\u2019ll bring the firmer pillow and a folded blanket. I\u2019ll meet you on the balcony in five for tea, a slow shoulder rub, and that quick kiss goodnight. Love you."
+    },
+    {
+      "turn": 5,
+      "speaker": "Esmeralda Solis",
+      "content": "On my way \u2014 I\u2019ll be on the balcony in a minute. Looking forward to the chamomile, your slow shoulder rub, and that quick kiss goodnight. I love you."
+    },
+    {
+      "turn": 6,
+      "speaker": "Ethan Johnson",
+      "content": "I\u2019m here \u2014 chamomile, the firmer pillow, and the blanket. Come sit with me on the balcony sofa; I\u2019ll give you that slow shoulder rub and a quick kiss goodnight when you\u2019re ready. I love you."
+    },
+    {
+      "turn": 7,
+      "speaker": "Esmeralda Solis",
+      "content": "This is perfect \u2014 the chamomile smells wonderful. I\u2019ll sit beside you on the sofa and lean into that slow shoulder rub; a quick kiss goodnight will be lovely. After a little tea and closeness I\u2019ll head to the other bed with the firmer pillow and blanket so my back can rest. I love you."
+    },
+    {
+      "turn": 8,
+      "speaker": "Ethan Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

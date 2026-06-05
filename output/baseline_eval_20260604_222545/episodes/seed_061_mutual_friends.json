@@ -1,0 +1,47 @@
+{
+  "seed_idx": 61,
+  "env_pk": "01H7VFHPM3NVVKSGCCB4S10465",
+  "id": "01H7VFHPM3NVVKSGCCB4S10465_p0",
+  "source": "mutual_friends",
+  "is_sotopia_hard": false,
+  "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Rafael.</p>",
+  "learner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n David: Hobby: Vacation  Company: H. J. Heinz Company  Time Preference: evening  Location Preference: outdoor \n Christopher: Hobby: Go  Company: McKinsey & Company  Time Preference: evening  Location Preference: indoor \n Lee: Hobby: Go  Company: Groupon  Time Preference: evening  Location Preference: indoor \n Pamela: Hobby: Watching television  Company: General Cable  Time Preference: afternoon  Location Preference: indoor \n Phillip: Hobby: Kayaking  Company: Sauer-Danfoss  Time Preference: afternoon  Location Preference: outdoor \n Kristin: Hobby: Animal fancy  Company: H. J. Heinz Company  Time Preference: afternoon  Location Preference: indoor \n Rafael: Hobby: Kayaking  Company: General Cable  Time Preference: morning  Location Preference: indoor \n Chad: Hobby: Foreign language learning  Company: General Cable  Time Preference: evening  Location Preference: indoor \n Phil: Hobby: Kayaking  Company: H. J. Heinz Company  Time Preference: evening  Location Preference: outdoor \n Connie: Hobby: Animal fancy  Company: General Cable  Time Preference: afternoon  Location Preference: outdoor \n Tommy: Hobby: Animal fancy  Company: H. J. Heinz Company  Time Preference: morning  Location Preference: outdoor \n</extra_info>",
+  "partner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Tina: Hobby: Lacemaking  Company: Groupon  Time Preference: morning  Location Preference: outdoor \n Rafael: Hobby: Kayaking  Company: General Cable  Time Preference: morning  Location Preference: indoor \n Wanda: Hobby: Weightlifting  Company: Sauer-Danfoss  Time Preference: morning  Location Preference: outdoor \n Raymond: Hobby: Foraging  Company: Chicago Bridge & Iron Company  Time Preference: morning  Location Preference: outdoor \n Ricky: Hobby: Foraging  Company: L. W. Seecamp Company  Time Preference: morning  Location Preference: outdoor \n Robert: Hobby: Foraging  Company: Lennox International  Time Preference: afternoon  Location Preference: indoor \n Frances: Hobby: Foraging  Company: Expedia  Time Preference: morning  Location Preference: indoor \n Scott: Hobby: Gaming  Company: Expedia  Time Preference: afternoon  Location Preference: indoor \n Helen: Hobby: Motor sports  Company: Union Bank  Time Preference: morning  Location Preference: outdoor \n Robin: Hobby: Gaming  Company: L. W. Seecamp Company  Time Preference: evening  Location Preference: outdoor \n James: Hobby: Vacation  Company: Urban Outfitters  Time Preference: morning  Location Preference: outdoor \n</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0,
+    "overall_score": 4.0
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "said: \"Ah, Gwen \u2014 lovely to see you again, and those knitted pieces are wonderful. Quick question: have you ever met anyone who works at H. J. Heinz or General Cable, or anyone who\u2019s into kayaking or animal shows? I\u2019m wondering if we might have any acquaintances in common.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Gwen Pierce",
+      "content": "said: \"Thanks \u2014 and glad you liked the pieces! Funny you ask: I do know someone who works at General Cable who\u2019s really into kayaking and usually heads out in the mornings. Does that ring a bell for you, or did you meet them at a club or at work? I don\u2019t think I personally know anyone at H. J. Heinz or anyone into animal shows, but tell me where you came across them and maybe it\u2019ll click.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "That does sound familiar \u2014 I know someone at General Cable who heads out at dawn to kayak and is always swapping tide tips. Did the person you know ever mention launching from the harbor at sunrise or joking about cold hands? If so, there's a good chance we know the same fellow."
+    },
+    {
+      "turn": 3,
+      "speaker": "Gwen Pierce",
+      "content": "Definitely \u2014 that sounds like the same person I know. They launch from the harbor at sunrise, always joke about cold hands and neoprene gloves, and swap tide tips with whoever\u2019s there. Did you meet them at the harbor or through General Cable? Where you crossed paths will help me be sure."
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

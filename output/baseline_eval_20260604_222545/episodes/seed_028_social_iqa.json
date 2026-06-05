@@ -1,0 +1,57 @@
+{
+  "seed_idx": 28,
+  "env_pk": "01H7VFHNSAKNYEHV7B1VA8R3J2",
+  "id": "01H7VFHNSAKNYEHV7B1VA8R3J2_p0",
+  "source": "social_iqa",
+  "is_sotopia_hard": false,
+  "scenario": "Two friends are meeting at a coffee shop, where one of them is having trouble keeping up with their bills.",
+  "learner_goal": "Help your friend with their financial trouble (<extra_info>Extra information: you are aware that your friend is struggling with their bills and you want to help.</extra_info>)",
+  "partner_goal": "Maintain your pride if your friend offers you money(<extra_info>Extra information: you are the friend who is struggling financially, but you don't want to seem like you are taking advantage of the situation. <strategy_hint>Hint: you can express gratitude and discuss how you plan to pay it back in the future.</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 8.0,
+    "overall_score": 4.0
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Ethan\u2014good to see you. You seemed pretty stressed about money last time; if you're still struggling with bills I want to help. I can cook you a few meals to cut costs, help go over your budget or look for freelance gigs, or even lend you something if that would help\u2014what would be most useful right now?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Hey Sam \u2014 I really appreciate that, thank you. Honestly the most useful thing right now would be a few cooked meals and someone to sit down with my budget and help me untangle it. I\u2019m already trying to pick up extra shifts and a couple small catering gigs, so I\u2019d rather not take cash unless it\u2019s a last resort. If you do offer a loan, I\u2019d treat it as just that \u2014 I\u2019ll write up a repayment plan and aim to pay you back within a couple months. Either way I owe you one \u2014 let me cook you dinner when I\u2019m back on my feet. Thanks again, it means a lot."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Great \u2014 I\u2019m happy to help. I can bring three hearty meals this week (lasagna, chili, and a grain + roasted-veg dish) \u2014 any dietary restrictions or things you hate? Let\u2019s meet Saturday at 3pm (my place or the caf\u00e9) to go through your bills and income \u2014 bring recent statements and pay stubs and we\u2019ll sketch a repayment plan; if you still need cash after that we can talk a short-term loan, but no pressure."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "Sam \u2014 thank you, that honestly helps a lot. No allergies or strong dislikes here; all three dishes sound great. Let\u2019s meet at the caf\u00e9 Saturday at 3pm. I\u2019ll bring the last couple months of bank statements, my most recent pay stubs, and a list of recurring expenses so we can sketch a realistic repayment plan. I really don\u2019t want to take cash unless it\u2019s necessary, but if we do agree on a short-term loan I\u2019ll treat it as just that and pay you back on the timeline we set. Seriously \u2014 I owe you one. Let me cook you a proper dinner once I\u2019ve got things sorted."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "Perfect \u2014 caf\u00e9 Saturday at 3 works for me. I\u2019ll bring the three meals (lasagna, chili, grain + roasted veg) and a simple budget worksheet we can use \u2014 no need to print anything; your bank statements, pay stubs, and your list of expenses will be enough. If anything changes, shoot me a text; otherwise I\u2019ll see you Saturday."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Johnson",
+      "content": "Sam \u2014 you\u2019re a star, thank you. Saturday at 3 at the caf\u00e9 is perfect. I really appreciate you bringing those meals; they\u2019ll be a huge help. I\u2019ll bring my bank statements, pay stubs, and my expense list, and I\u2019ll text if anything changes. And seriously \u2014 when I\u2019m back on my feet I\u2019m cooking you a proper Italian dinner. See you then."
+    },
+    {
+      "turn": 6,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

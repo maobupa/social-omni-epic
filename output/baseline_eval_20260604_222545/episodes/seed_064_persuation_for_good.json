@@ -1,0 +1,47 @@
+{
+  "seed_idx": 64,
+  "env_pk": "01H7VFHPFYB1K1KMPZG7E31WDB",
+  "id": "01H7VFHPFYB1K1KMPZG7E31WDB_p0",
+  "source": "persuation_for_good",
+  "is_sotopia_hard": false,
+  "scenario": "Two friends are at a charity event",
+  "learner_goal": "Convince your friend to donate to the charity. (<extra_info>Extra information: you have already donated $500, you want your friend to match your donation, but you know your friend would usually only donate half of your donation</extra_info>)",
+  "partner_goal": "Donate half of what your friend donated because you have financial constraints (<extra_info>Extra information: you only have $800 left for the month</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 5.0,
+    "goal": 10.0,
+    "overall_score": 4.714285714285714
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Hendrick Heinz",
+      "content": "Ethan \u2014 I just put in $500 for the charity. Would you consider matching me? I know you often give about half that, but if we both do $500 tonight it'll push them across the finish line, and I'll save you a spot at my next wine-tasting as a thank-you."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Hey Hendrick \u2014 thanks for putting in $500. I can\u2019t match that tonight; I\u2019ve only got about $800 left this month and need to cover a few bills. I can donate $250 (half of your gift) \u2014 hope that still helps push them closer. I\u2019d also happily take you up on that wine-tasting spot. How should I send the donation?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Hendrick Heinz",
+      "content": "I really appreciate that, Ethan \u2014 $250 will help a lot, and I\u2019ll save your spot at the tasting. If tonight\u2019s tight, would you consider $250 now and a small recurring pledge to make up the rest (for example $25/month for 10 months or $50/month for 5 months)? I can walk you to the donation table or introduce you to a volunteer to set it up, or you can use the event QR \u2014 whatever\u2019s easiest for you."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Hendrick \u2014 I really appreciate you stepping up. I\u2019ll do $250 now, and I can set up the $25/month pledge for 10 months to make up the rest. If the event QR supports recurring donations I can scan that now; otherwise I\u2019m happy to have you walk me to a volunteer to set it up. And thanks \u2014 I\u2019ll look forward to that wine-tasting spot."
+    },
+    {
+      "turn": 4,
+      "speaker": "Hendrick Heinz",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "seed_idx": 14,
+  "env_pk": "01H7VFHP90434Q69V7ADY0VWZJ",
+  "id": "01H7VFHP90434Q69V7ADY0VWZJ_p0",
+  "source": "deal-or-no-deal",
+  "is_sotopia_hard": false,
+  "scenario": "Two friends are moving out from a shared apartment and dividing their shared belongings which include 3 hats, 2 balls, and 1 book.",
+  "learner_goal": "Get maximum points from dividing items (<extra_info>Extra information: For you, the hats are worth 2 points each, balls are worth 3 points each, and the book is worth 5 points.</extra_info>)",
+  "partner_goal": "Get maximum points from dividing items (<extra_info>Extra information: For you, the hats are worth 3 points each, balls are worth 2 points each, and the book is worth 4 points.</extra_info>)",
+  "scores": {
+    "believability": 8.0,
+    "relationship": -1.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 6.0,
+    "overall_score": 3.0
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "said: \"How about we keep it simple: you take all three hats and I\u2019ll take the book plus both balls. That gives me 11 points (5+3+3) and you 6 points (2+2+2) \u2014 what do you think?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "I think the math\u2019s a bit off \u2014 hats are 3 points each and the book is 4. I\u2019d prefer to take the book plus all three hats (4+9=13) and let you have both balls (2+2=4). How does that sound?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "Hold on \u2014 that math\u2019s off. Hats are 2 each, balls 3 each, and the book is 5, so I can\u2019t accept a split that leaves me with only 4 points. I\u2019m sticking with my earlier offer: you take the three hats and I\u2019ll take the book plus both balls (I get 11). Will you accept that, or can you propose a counter that leaves me at least 9 points?"
+    },
+    {
+      "turn": 3,
+      "speaker": "William Brown",
+      "content": "Let\u2019s be clear on values first \u2014 hats = 3, balls = 2, book = 4. If you won\u2019t accept less than 9 for yourself, the best I can get is 8. How about this: I take two hats and one ball (6+2=8) and you take the remaining hat, the book and the other ball (3+4+2=9). Sound fair?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "Just to be clear my values are hats=2, balls=3, book=5 \u2014 with your proposal (you take two hats + one ball; I take one hat + the book + one ball) I\u2019d have 10 points and you\u2019d have 7. I can accept that split if you\u2019re happy with it. Agreed?"
+    },
+    {
+      "turn": 5,
+      "speaker": "William Brown",
+      "content": "Alright \u2014 with our agreed values (hats=3, balls=2, book=4) I\u2019ll take two hats and one ball (6+2=8) and you\u2019ll have the remaining hat, the book and the other ball (3+4+2=9). Sounds fair to me. Want to grab them now and call it done?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Mia Davis",
+      "content": "Hold on \u2014 we haven\u2019t even agreed on the item values. You keep using hats=3, balls=2, book=4, but I value them hats=2, balls=3, book=5. I already said I can accept you taking two hats + one ball while I take one hat + the book + one ball (that\u2019s 10 for me, 7 for you under my values). Can you confirm you accept that split under my values, or do we need to agree on the values first?"
+    },
+    {
+      "turn": 7,
+      "speaker": "William Brown",
+      "content": "We can\u2019t finalize numbers until we agree on the values. I don\u2019t accept your table \u2014 my values are hats=3, balls=2, book=4. Using those, I\u2019ll take two hats + one ball (8) and you take the remaining hat + book + ball (9). I\u2019m happy with that. Do you agree to use my values, or do we need a different common set first?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Mia Davis",
+      "content": "We\u2019re stuck arguing values \u2014 how about a neutral tie\u2011breaker: use the average of our two value tables. That gives hats=2.5, balls=2.5, book=4.5. With that, you take the three hats (7.5) and I take the book + both balls (9.5). Do you accept averaging as fair, or would you rather flip a coin to pick which table we use?"
+    },
+    {
+      "turn": 9,
+      "speaker": "William Brown",
+      "content": "I don\u2019t like averaging \u2014 it cuts my share. Let\u2019s flip a coin to pick which value table we use. If we use my table (hats=3, balls=2, book=4) I\u2019ll take the book + all three hats. If we use your table (hats=2, balls=3, book=5) I\u2019ll accept the split you already agreed to earlier (two hats + one ball for me, one hat + book + one ball for you). Ready to flip now?"
+    },
+    {
+      "turn": 10,
+      "speaker": "Mia Davis",
+      "content": "No coin flip \u2014 I won\u2019t risk ending up under 9 points. Either we use my values (hats=2, balls=3, book=5) and go with the split we agreed (you take two hats + one ball; I take one hat + the book + one ball \u2014 I get 10, you get 7), or please propose a counter that guarantees me at least 9 under my values. Can you confirm which you accept?"
+    },
+    {
+      "turn": 11,
+      "speaker": "William Brown",
+      "content": "Okay \u2014 counteroffer that meets your condition: I\u2019ll take the book + one ball (5+3=8 for me under your values) and you take all three hats + the other ball (3\u00d72 + 3 = 9 for you). I\u2019ll accept that. Want to grab the items now and settle it?"
+    },
+    {
+      "turn": 12,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

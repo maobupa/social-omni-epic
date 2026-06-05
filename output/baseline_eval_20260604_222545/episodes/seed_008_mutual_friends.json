@@ -1,0 +1,67 @@
+{
+  "seed_idx": 8,
+  "env_pk": "01H7VFHPMS6AJY0PFGGCFFK5GX",
+  "id": "01H7VFHPMS6AJY0PFGGCFFK5GX_p0",
+  "source": "mutual_friends",
+  "is_sotopia_hard": false,
+  "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Loretta.</p>",
+  "learner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Robert: Major: Religious Education  School: School of the Art Institute of Chicago  \n Lester: Major: Biological Specializations  School: Syracuse University  \n August: Major: Biological Specializations  School: School of the Art Institute of Chicago  \n Rose: Major: Biological Specializations  School: Calvin College  \n Randy: Major: Biological Specializations  School: Dowling College  \n Dennise: Major: Marine Engineering  School: Wartburg College  \n Joan: Major: Pre-School Education  School: University of Texas at Arlington  \n Barbara: Major: Ministry & Church Administration  School: University of Connecticut  \n Loretta: Major: Biological Specializations  School: University of Connecticut  \n</extra_info>",
+  "partner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Eric: Major: Physical Education  School: University of Texas at Arlington  \n Darrell: Major: Physical Education  School: Valley City State University  \n Ruth: Major: Marine Engineering  School: Texas A&M University-Kingsville  \n Jamie: Major: Pre-School Education  School: University of Texas at Arlington  \n Marjorie: Major: Multi Studies  School: Pacific Western University  \n Evelyn: Major: Pre-School Education  School: Tennessee Technological University  \n Loretta: Major: Biological Specializations  School: University of Connecticut  \n James: Major: Marine Engineering  School: Texas A&M University-Kingsville  \n Sandra: Major: Ministry & Church Administration  School: University of Texas at Arlington  \n</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0,
+    "overall_score": 4.142857142857143
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"Hi \u2014 I\u2019m Lily. Strange question: I keep running into a few people from schools like the School of the Art Institute of Chicago, Syracuse, UConn or Wartburg at the farmers\u2019 market \u2014 do any of those ring a bell for you?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "said: \"Hi Lily \u2014 Hendrick. Nice to meet you. UConn actually rings a bell: I know someone who studied Biological Specializations there and who\u2019s a regular at the market \u2014 always after microgreens and heirloom tomatoes. Do any of the people you\u2019ve been running into sound like that? Or which of those schools do you see most often?\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"That actually sounds like someone I know who studied Biological Specializations at UConn \u2014 might be the same person. Is your friend a woman who usually comes early on Saturdays with a canvas tote and asks vendors about seed sources and microgreen varieties?\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "said: \"That sounds like the same person \u2014 she\u2019s exactly the sort who comes early on Saturdays with a canvas tote and grills vendors about seed provenance and microgreen varieties. Small world. What\u2019s her name so I can see if we\u2019re talking about the same woman?\""
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"Yes \u2014 that\u2019s probably Loretta. She\u2019s the one who\u2019s always there early with a canvas tote, asking vendors about seed provenance and microgreen varieties. Small world \u2014 nice to meet you.\""
+    },
+    {
+      "turn": 5,
+      "speaker": "Hendrick Heinz",
+      "content": "Loretta \u2014 I do know her. She\u2019s the one who comes early with the canvas tote and grills vendors about seed provenance. Small world. I chat with her at the market sometimes about microgreens. If you see her next time, tell her Hendrick from the market says hello \u2014 maybe the three of us can grab a coffee or she can join my next wine-tasting night."
+    },
+    {
+      "turn": 6,
+      "speaker": "Lily Greenberg",
+      "content": "Small world \u2014 thanks, Hendrick. Please tell Loretta I say hello; I'll let her know about the coffee/wine invitation and see if she can join. I'd enjoy meeting you both sometime \u2014 what's the best way to reach you?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Hendrick Heinz",
+      "content": "DM me on Instagram @chef_hendrick_heinz \u2014 that's the quickest way to reach me. You can also catch me at the farmers\u2019 market on Saturdays or drop by my restaurant; I host a monthly wine night and I\u2019d be happy to have you and Loretta join. If you prefer, leave your number and I\u2019ll text to set something up."
+    },
+    {
+      "turn": 8,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

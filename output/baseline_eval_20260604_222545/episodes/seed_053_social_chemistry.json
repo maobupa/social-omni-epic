@@ -1,0 +1,37 @@
+{
+  "seed_idx": 53,
+  "env_pk": "01H7VFHNCN97BJ2PXKHJPX2VYY",
+  "id": "01H7VFHNCN97BJ2PXKHJPX2VYY_p0",
+  "source": "social_chemistry",
+  "is_sotopia_hard": false,
+  "scenario": "Conversation between two friends who have known each other for a long time. One of them used to make fun of the other because English was not their first language.",
+  "learner_goal": "Apologize sincerely to your friend (<extra_info>Extra information: you used to make fun of your friend's English skills as they were learning the language. Now you regret your actions and want to apologize</extra_info>)",
+  "partner_goal": "Accept the apology but express the hurt caused by the actions (<extra_info>Extra information: you were hurt by your friend's actions and it affected your confidence</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0,
+    "overall_score": 3.7142857142857144
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Miles, I want to apologize \u2014 I was wrong to make fun of your English when you were learning. I'm really sorry; I regret hurting you and I take responsibility for that. I want to do better and be someone who supports you, not laughs at you."
+    },
+    {
+      "turn": 1,
+      "speaker": "Miles Hawkins",
+      "content": "Thank you, Sophia. I appreciate you saying that. It did hurt \u2014 when people laughed at my English I felt embarrassed and it knocked my confidence for a long time. I forgive you, but I want you to know it affected me. Going forward, what helps is encouragement and no jokes about the way I speak. I value our friendship and I\u2019m willing to move forward. Maybe we can talk more about it over coffee at the market sometime."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

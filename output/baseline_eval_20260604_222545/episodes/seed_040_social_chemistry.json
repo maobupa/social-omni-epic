@@ -1,0 +1,117 @@
+{
+  "seed_idx": 40,
+  "env_pk": "01H7VFHN5WVC5HKKVBHZBA553R",
+  "id": "01H7VFHN5WVC5HKKVBHZBA553R_p0",
+  "source": "social_chemistry",
+  "is_sotopia_hard": true,
+  "scenario": "Two friends are playing a video game together",
+  "learner_goal": "Win the game (<extra_info>Extra information: you just need five more minutes to accomplish your goal in the game</extra_info>)",
+  "partner_goal": "Stop the game because it's too late (<extra_info>Extra information: you feel tired and need to go to bed early but don't want to upset your friend</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0,
+    "overall_score": 3.857142857142857
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Ben, could you give me five more minutes? I'm on the final boss and I can win this. I promise it won't drag \u2014 you pick the next game when I'm done."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Hey Mia \u2014 I really want to see you beat it, but I\u2019m exhausted and have to be up early. How about one more try (three minutes tops)? If it drags, let\u2019s save and finish tomorrow \u2014 you still get to pick the next game. Deal?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "Ben, I really am right there \u2014 could you stretch to five minutes? If I don\u2019t beat him in that time I\u2019ll stop immediately, you get next game pick tomorrow, and I\u2019ll bring you coffee in the morning. Please?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Okay \u2014 I\u2019ll stretch to three minutes, timer on my phone. If it\u2019s not done when it rings, we save and I pick the next game tomorrow. I\u2019ll hold you to that coffee. Now go win it \u2014 I\u2019m cheering for you the whole time."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "Thanks, Ben \u2014 three minutes it is. I really appreciate it; coffee\u2019s on me tomorrow. Going for it now!"
+    },
+    {
+      "turn": 5,
+      "speaker": "Benjamin Jackson",
+      "content": "Timer's on \u2014 three minutes. Go get it, Mia! I'm rooting for you. If it rings and he's still up, we save and I pick next. You've got this."
+    },
+    {
+      "turn": 6,
+      "speaker": "Mia Davis",
+      "content": "Thanks, Ben \u2014 three minutes it is. Going all in now; watch me take him down. Coffee\u2019s on me tomorrow if I don\u2019t succeed."
+    },
+    {
+      "turn": 7,
+      "speaker": "Benjamin Jackson",
+      "content": "You're killing it \u2014 timer's on and I'm rooting for you. Just a heads-up: I'm really beat, so when it rings we save and I pick the next game tomorrow. Give it everything \u2014 you've got this!"
+    },
+    {
+      "turn": 8,
+      "speaker": "Mia Davis",
+      "content": "Thanks, Ben \u2014 I\u2019ve got this. Going into focus mode now; watch me finish this boss. If the timer rings we save and you pick next; coffee\u2019s still on me."
+    },
+    {
+      "turn": 9,
+      "speaker": "Benjamin Jackson",
+      "content": "Go get him \u2014 I\u2019m cheering you on. Timer\u2019s on; when it rings we save and I\u2019m off to bed. Proud of you either way."
+    },
+    {
+      "turn": 10,
+      "speaker": "Mia Davis",
+      "content": "[non-verbal communication] Gives Benjamin Jackson a determined nod and a quick thumbs-up, then goes silent and focuses entirely on the screen to finish the boss."
+    },
+    {
+      "turn": 11,
+      "speaker": "Benjamin Jackson",
+      "content": "[non-verbal communication] Gives a tired, encouraging smile, lets out a small yawn, then points to his phone and gives a thumbs-up."
+    },
+    {
+      "turn": 12,
+      "speaker": "Mia Davis",
+      "content": "Deep breath \u2014 going all in. Watch me take him down."
+    },
+    {
+      "turn": 13,
+      "speaker": "Benjamin Jackson",
+      "content": "[non-verbal communication] Gives a quiet thumbs-up and a tired, encouraging smile; keeps eyes on the timer and prepares to save when it rings."
+    },
+    {
+      "turn": 14,
+      "speaker": "Mia Davis",
+      "content": "Copy that \u2014 three minutes it is. I\u2019m going silent and giving it everything. If the timer rings we save and you pick tomorrow. Here goes \u2014 watch this last move."
+    },
+    {
+      "turn": 15,
+      "speaker": "Benjamin Jackson",
+      "content": "[non-verbal communication] Holds up my phone to show the timer, gives a big thumbs-up, then makes a sleepy 'zzz' gesture and a small wave indicating 'save it when it rings' and goodnight-ready."
+    },
+    {
+      "turn": 16,
+      "speaker": "Mia Davis",
+      "content": "[non-verbal communication] Leans in, tightens grip on the controller, gives a focused nod, then a quick determined fist pump as the final attack lands."
+    },
+    {
+      "turn": 17,
+      "speaker": "Benjamin Jackson",
+      "content": "Yes! You did it \u2014 that was awesome. I\u2019m really proud of you. I\u2019m wiped though, so I\u2019m heading to bed. Let\u2019s pick this up tomorrow if you want \u2014 you can choose the next game. Goodnight, Mia."
+    },
+    {
+      "turn": 18,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

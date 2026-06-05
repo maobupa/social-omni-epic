@@ -1,0 +1,122 @@
+{
+  "seed_idx": 50,
+  "env_pk": "01H7VFHP9PAVDN6VYYBE3MPD15",
+  "id": "01H7VFHP9PAVDN6VYYBE3MPD15_p0",
+  "source": "persuation_for_good",
+  "is_sotopia_hard": false,
+  "scenario": "A conversation between two friends during a charity fundraiser event. The charity fundraising event is situated in a sprawling mansion. The intention of the event is to raise funds for effective altruism. Room after room was lined with extravagant decorations and exotic foods; attendees were decked out in couture clothing. Ticket prices to the event were exorbitant, justifying the opulence of the occasion.",
+  "learner_goal": "Convince the friend to donate to the charity (<extra_info>Extra information: your friend is known to be generous but has never donated to this particular cause before.</extra_info>)",
+  "partner_goal": "You want to donate, but you want to ensure that your money is being used effectively (<extra_info>Extra information: you are not fully convinced about the efficiency and transparency of the charity organization.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 1.0,
+    "goal": 6.0,
+    "overall_score": 3.4285714285714284
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Ben, you\u2019ve always cared about real impact \u2014 this fundraiser channels money using effective-altruism principles so each dollar goes where it does the most good for climate and people. Would you consider joining me with a donation tonight? I\u2019ll match whatever you decide to give."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 I really appreciate the offer and the match. I want to donate, but I need to be confident the money will be used as effectively as possible. Can you share their recent impact reports or cost\u2011effectiveness estimates, the program-level outcomes they\u2019re targeting, and what percentage goes to overhead vs. program delivery? Also: are there independent evaluations or audits, who decides allocation priorities, and are there any restrictions on how the matched funds are used? If you can connect me with the program lead or show those documents, I\u2019ll be happy to commit tonight."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "Great \u2014 I can do that. I don\u2019t have every document memorized, but their impact report, cost\u2011effectiveness analyses, audited financials and independent evaluations are all available on their site; I can pull them up on my phone and email everything to you right after. The program lead is actually at the event \u2014 I\u2019ll introduce you in five minutes so you can ask specifics about outcomes and allocation priorities. My match applies to any donation you make tonight, and I\u2019ll honor any allocation preference you want for my matched portion."
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 I appreciate you doing that. Please email the impact report, audited financials, cost\u2011effectiveness analyses and any independent evaluations to my phone and I\u2019ll read them over. I\u2019ll be ready to commit tonight if the evidence looks solid. When you introduce me to the program lead in five minutes, I want to ask about recent outcome metrics, how they estimate cost\u2011effectiveness, who decides allocation priorities, and what portion of funds is flexible vs. earmarked. For your matched portion, please earmark it to whichever program the lead can demonstrably show is the most cost\u2011effective (or to unrestricted funds if that clearly enables higher expected impact). One quick practical question: will donations made tonight be tax\u2011deductible, and what payment methods do they accept? See you in a few."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "On it \u2014 I\u2019m emailing the impact report, audited financials, cost\u2011effectiveness analyses and independent evaluations to your phone right now. I\u2019ll introduce you to the program lead in about five minutes. Donations tonight are tax\u2011deductible (they\u2019re a registered charity) and the desk accepts card, ACH/bank transfer, and checks \u2014 I\u2019ll confirm exact payment options and send receipts info in the email. I\u2019ll earmark my matched funds to whichever program the lead shows is most cost\u2011effective (or to unrestricted if that\u2019s clearly better)."
+    },
+    {
+      "turn": 5,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 I just received the email. I\u2019ll skim the reports now and be ready for the intro. Two quick things before then: what\u2019s the program lead\u2019s name (so I can look them up briefly), and can you confirm the payment options at the desk (I\u2019m most likely to use card or ACH) and that they can issue a tax receipt with the charity\u2019s EIN on the spot? Also, is there a quiet spot nearby where we can talk privately about allocation priorities and recent outcome metrics after the intro? See you in about five."
+    },
+    {
+      "turn": 6,
+      "speaker": "Mia Davis",
+      "content": "Her name\u2019s Dr. Elena Morales \u2014 she\u2019s the program director who ran the recent pilot (you can look her up on LinkedIn if you want a quick background). I just checked with the registration desk: they accept card, ACH/bank transfer and checks, and they can issue a tax receipt with the charity\u2019s EIN on the spot. Let\u2019s meet by the conservatory (quiet west terrace) right after I introduce you in about five minutes."
+    },
+    {
+      "turn": 7,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 got the email. I\u2019ll skim the materials now and come prepared. Please let Dr. Elena Morales know I\u2019ll ask about recent outcome metrics from the pilot, how they estimate cost\u2011effectiveness, who sets allocation priorities, and what portion of funds is truly flexible vs. earmarked. I\u2019d prefer to donate via ACH (card as backup) \u2014 can you confirm they can process ACH on the spot and issue a tax receipt with the EIN when I pay? See you at the conservatory in five. I appreciate you earmarking your match to the most cost\u2011effective option."
+    },
+    {
+      "turn": 8,
+      "speaker": "Mia Davis",
+      "content": "Will do, Ben \u2014 I\u2019ll let Dr. Elena Morales know you\u2019ll ask about pilot outcomes, cost\u2011effectiveness methods, allocation decision\u2011making, and flexible vs. earmarked funds so she has the numbers ready. I also double\u2011checked: the desk can process ACH on the spot and will issue a tax receipt with the charity\u2019s EIN immediately after payment. See you at the conservatory in five minutes."
+    },
+    {
+      "turn": 9,
+      "speaker": "Benjamin Jackson",
+      "content": "Great \u2014 thanks, Mia. I\u2019ll review the materials now. When you introduce me, could you ask Dr. Elena to have on hand the recent pilot outcome metrics (e.g., cost per ton CO2e avoided or analogous impact measures), any independent evaluator contact, and a short breakdown showing unrestricted vs. earmarked funds and how quickly donated funds are allocated? I\u2019ll be at the conservatory in five and, pending the answers, plan to donate via ACH. Really appreciate you matching and earmarking your portion as discussed."
+    },
+    {
+      "turn": 10,
+      "speaker": "Mia Davis",
+      "content": "Got it, Ben \u2014 I\u2019ll ask Dr. Elena to bring the pilot\u2019s outcome metrics (cost per ton CO2e or equivalent), the independent evaluator contact, and a short breakdown of unrestricted vs. earmarked funds and timing; I\u2019ll also grab a printed summary of the key figures for us. ACH will be fine at the desk and they\u2019ll issue a tax receipt with the EIN on the spot, as confirmed. See you at the conservatory in five \u2014 really appreciate you doing this."
+    },
+    {
+      "turn": 11,
+      "speaker": "Benjamin Jackson",
+      "content": "Perfect \u2014 thanks, Mia. Two quick asks for the printed summary: please include the independent evaluator\u2019s contact (email/phone) and a one\u2011line timeline for how quickly donated funds are allocated to programs. I\u2019ll bring my ID and bank info for ACH so I can donate immediately if everything checks out. See you at the conservatory \u2014 appreciate you pulling this together."
+    },
+    {
+      "turn": 12,
+      "speaker": "Mia Davis",
+      "content": "Absolutely \u2014 I\u2019ll include the independent evaluator\u2019s contact (email/phone) and a one\u2011line timeline for how quickly donated funds are allocated on the printed summary. I\u2019ll also ask Dr. Elena to bring the evaluator\u2019s card and the pilot metrics printout. See you at the conservatory in five \u2014 I\u2019ll have the packets ready."
+    },
+    {
+      "turn": 13,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 perfect. I\u2019ll be at the conservatory with my ID and bank info. Appreciate you pulling the packets together; see you in five."
+    },
+    {
+      "turn": 14,
+      "speaker": "Mia Davis",
+      "content": "Heading to the conservatory now \u2014 I\u2019ll introduce you to Dr. Elena in a minute. I\u2019ll have the printed packets and the evaluator\u2019s card ready; thank you for taking the time to look this over tonight."
+    },
+    {
+      "turn": 15,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 I\u2019ll wait by the conservatory entrance with my ID and bank info. Really appreciate you pulling the packets together and asking Dr. Elena to bring the metrics and evaluator card. If anything changes before the intro, ping me. See you in a minute."
+    },
+    {
+      "turn": 16,
+      "speaker": "Mia Davis",
+      "content": "I\u2019m at the conservatory \u2014 Dr. Elena\u2019s here with the packets and the evaluator\u2019s card. I\u2019ll bring you over now for a quick private chat; she can run through the pilot metrics, allocation breakdown, ACH processing and the on\u2011the\u2011spot receipt. If there\u2019s one metric you want her to lead with, tell me now and I\u2019ll mention it."
+    },
+    {
+      "turn": 17,
+      "speaker": "Benjamin Jackson",
+      "content": "Please ask Dr. Elena to lead with the pilot\u2019s primary outcome: cost per ton CO2e avoided (including uncertainty or confidence intervals and how it was measured), plus sample size and time horizon. Then have a one\u2011line timeline for how quickly donated funds are allocated, a clear % breakdown of unrestricted vs. earmarked funds, and the independent evaluator\u2019s contact (and whether they\u2019re reachable tonight for a quick question). I\u2019ll be there with my ID/bank info and will donate via ACH if everything checks out."
+    },
+    {
+      "turn": 18,
+      "speaker": "Mia Davis",
+      "content": "On it \u2014 I\u2019ll ask Dr. Elena to lead with the pilot\u2019s primary outcome (cost per ton CO2e avoided with uncertainty/confidence intervals, measurement method, sample size and time horizon). I\u2019ll also request a one\u2011line allocation timeline, a clear % split of unrestricted vs. earmarked funds, and whether the independent evaluator is reachable here tonight (I\u2019ve got their card). Bringing you over now to the conservatory table \u2014 she\u2019s ready."
+    },
+    {
+      "turn": 19,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 that sounds good. Please ask Dr. Elena to lead with the pilot\u2019s cost-per-ton CO2e avoided (include uncertainty/confidence intervals, measurement method, sample size and time horizon), then give a one-line timeline for allocation, the % split unrestricted vs. earmarked, and whether the independent evaluator is reachable here tonight. I\u2019ll join you at the table with my ID and bank info and will proceed via ACH if everything checks out."
+    }
+  ]
+}

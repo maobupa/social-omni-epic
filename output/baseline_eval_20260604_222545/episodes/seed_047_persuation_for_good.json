@@ -1,0 +1,67 @@
+{
+  "seed_idx": 47,
+  "env_pk": "01H7VFHPBTC4ES406NQ4ET12EQ",
+  "id": "01H7VFHPBTC4ES406NQ4ET12EQ_p0",
+  "source": "persuation_for_good",
+  "is_sotopia_hard": false,
+  "scenario": "Two acquaintances meet at a charity event. One is a representative of the charity and the other is an attendee.",
+  "learner_goal": "Persuade the other to make a small donation (<extra_info>Extra information: the charity is in dire need of funds but even a small donation will make a difference</extra_info>)",
+  "partner_goal": "Make a reasonable donation without disrupting personal budget (<extra_info>Extra information: you are already on a tight budget this month.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 8.0,
+    "overall_score": 3.857142857142857
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "Ben \u2014 great to see you, it\u2019s Donovan from the globals. I\u2019m volunteering with this charity tonight; they\u2019re short on funds and even a small donation helps keep their after-school programs running. Would you consider chipping in $20 or whatever\u2019s comfortable? I can grab the QR code for you so it\u2019s quick."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Great to see you too, Donovan. I\u2019m a bit tight this month so I can\u2019t swing $20, but I can chip in $10. Happy to help spread the word or volunteer time if that\u2019d help. Send the QR and I\u2019ll scan it now."
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "[action] Shows the QR code on my phone and says, \"Thanks, Ben \u2014 really appreciate the $10. Here\u2019s the QR to scan. If you want to volunteer or help spread the word, I can introduce you to the coordinator afterward.\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Donovan \u2014 just scanned and sent $10. I\u2019m a bit tight this month so that\u2019s all I can do for now, but I can help spread the word and volunteer a few hours a week. I\u2019d appreciate an intro to the coordinator when you have a moment."
+    },
+    {
+      "turn": 4,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Ben \u2014 that really helps. I\u2019ll introduce you to the coordinator in a few minutes; if you\u2019d prefer, I can also send their contact info. I appreciate you spreading the word and offering to volunteer."
+    },
+    {
+      "turn": 5,
+      "speaker": "Benjamin Jackson",
+      "content": "An intro would be perfect \u2014 whatever\u2019s easiest for you: a quick in-person intro or you can send their contact info and I\u2019ll reach out. I\u2019m usually free weekday evenings after 6 and Saturday mornings, and I can commit a few hours a week for tutoring/outreach. I can also share the program on my socials and help run an environmental-themed workshop for the kids if that\u2019s useful. Really appreciate you connecting me, Donovan."
+    },
+    {
+      "turn": 6,
+      "speaker": "Donovan Reeves",
+      "content": "Perfect \u2014 I\u2019ll introduce you to the coordinator in about ten minutes. I\u2019ll mention your availability (weeknights after 6 and Saturday mornings) and the environmental workshop idea \u2014 sound good?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Benjamin Jackson",
+      "content": "Perfect \u2014 thanks, Donovan. That sounds great. I appreciate you mentioning my availability and the environmental workshop idea. I\u2019ll be ready for the intro in a few minutes. Please let the coordinator know I can commit a few hours a week for tutoring/outreach and can be flexible when needed."
+    },
+    {
+      "turn": 8,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

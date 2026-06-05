@@ -1,0 +1,87 @@
+{
+  "seed_idx": 3,
+  "env_pk": "01H7VFHPP9SPQ8W6583JFZ7HZC",
+  "id": "01H7VFHPP9SPQ8W6583JFZ7HZC_p0",
+  "source": "mutual_friends",
+  "is_sotopia_hard": false,
+  "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Micheline.</p>",
+  "learner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Melissa: Hobby: Card collecting  School: University of Texas Health Science Center at Houston  \n Orlando: Hobby: BASE jumping  School: St. Ambrose University  \n Steven: Hobby: Knitting  School: St. John's College-Santa Fe  \n Elizabeth: Hobby: Water sports  School: St. John's College-Santa Fe  \n Melaine: Hobby: Geocaching  School: University of Texas Health Science Center at Houston  \n Charles: Hobby: Ice hockey  School: Saint Joseph's University  \n Stephanie: Hobby: Card collecting  School: University of California, Davis  \n William: Hobby: Ice hockey  School: St. Ambrose University  \n Joe: Hobby: Blacksmithing  School: Saint Joseph's University  \n Micheline: Hobby: Shopping  School: University of Hartford  \n Dylan: Hobby: Card collecting  School: Tennessee State University  \n</extra_info>",
+  "partner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Jacob: Hobby: Card collecting  School: Whittier College  \n Marjorie: Hobby: Foraging  School: University of Texas Health Science Center at Houston  \n Carrie: Hobby: Geocaching  School: Tennessee State University  \n Louis: Hobby: Shopping  School: Hesston College  \n Micheline: Hobby: Shopping  School: University of Hartford  \n Eva: Hobby: Geocaching  School: Hesston College  \n Johnnie: Hobby: Blacksmithing  School: University of Akron  \n John: Hobby: Foraging  School: University of California, Davis  \n Ronald: Hobby: Weightlifting  School: Indiana University at South Bend  \n Cynthia: Hobby: Lacrosse  School: Kansas State University  \n Robert: Hobby: Water sports  School: University of Akron  \n</extra_info>",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 5.0,
+    "overall_score": 3.0
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "said: \"Hey Zane \u2014 nice running into you again. Quick question: do you happen to know anyone who went to St. Ambrose or Saint Joseph\u2019s, or anyone who collects trading cards? I\u2019m trying to see if we might have a mutual friend.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Zane Bennett",
+      "content": "said: \"Hey Giselle \u2014 great to see you. I don\u2019t know anyone from St. Ambrose or Saint Joseph\u2019s off the top of my head, but I do know a friend who collects trading cards \u2014 he\u2019s a Whittier College alum. Are you thinking of someone specific? Any details (name, city, or where they went to school) that might help me check?\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "said: \"No specific name \u2014 I\u2019m thinking of someone local. Is your card\u2011collecting friend based in town or out of state, and do they hang out at any particular shop or meetup? If they\u2019re a Whittier alum they likely aren\u2019t the same person I know, but that\u2019ll help me check.\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Zane Bennett",
+      "content": "He\u2019s local \u2014 usually at the small card shop on Third and at a weekly Thursday meetup downtown. He\u2019s a Whittier alum and into vintage sets. Do you know an age range, any nicknames, or where your person usually meets up? If the details line up I can check with him or put you two in touch."
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "They\u2019re early 20s and usually at the little shop on Maple and a student card meetup on Tuesdays \u2014 not part of the Third/Thursday crowd. If your friend\u2019s a Whittier alum who\u2019s local and into vintage sets, that probably rules them out, but could you ask whether they go by a nickname or what their first-name initial is? If it matches, I\u2019d love you to put us in touch."
+    },
+    {
+      "turn": 5,
+      "speaker": "Zane Bennett",
+      "content": "Sounds like a different crowd \u2014 my card\u2011collecting friend\u2019s a Whittier alum and usually hangs at Third/Thursday, so he\u2019s probably older than your person. I can still check his first\u2011name initial and any nicknames, and ask if he ever swings by the Maple shop or a Tuesday meetup. Want me to ask him now and get back to you later today, and would you like an intro if it matches?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Giselle Rousseau",
+      "content": "Yes\u2014please ask him for his first-name initial and any nicknames, and whether he ever swings by the Maple shop or the Tuesday student meetup. If the initial lines up I\u2019d love an intro; you can message me here later today or DM me\u2014whatever\u2019s easiest."
+    },
+    {
+      "turn": 7,
+      "speaker": "Zane Bennett",
+      "content": "On it \u2014 I\u2019ll reach out now and ask for his first\u2011name initial, any nicknames, and whether he ever goes to the Maple shop or the Tuesday student meetup. I\u2019ll check back with you later today. If it matches, do you want me to DM you or reply here?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Giselle Rousseau",
+      "content": "DM me here \u2014 that'll be easiest. Thanks for checking; I\u2019ll be around this afternoon if you need anything. If it matches, an intro would be great; if not, no worries either."
+    },
+    {
+      "turn": 9,
+      "speaker": "Zane Bennett",
+      "content": "Quick update \u2014 I checked with him. His first name starts with J and he sometimes goes by \u201cJake.\u201d He\u2019s local and into vintage sets, but he doesn\u2019t swing by the Maple shop or the Tuesday student meetup \u2014 he\u2019s mostly at the Third St. shop and the Thursday downtown group, and he\u2019s older than early\u201120s. Sounds like a different person, but if the initial makes you curious I can still connect you. Want me to DM his contact here or send an intro message?"
+    },
+    {
+      "turn": 10,
+      "speaker": "Giselle Rousseau",
+      "content": "Thanks \u2014 that sounds like a different person, so no intro\u2019s necessary. Could you DM me his full first name anyway (just to be certain)? Really appreciate you checking."
+    },
+    {
+      "turn": 11,
+      "speaker": "Zane Bennett",
+      "content": "His full first name is Jacob. If you want his contact or an intro later, I can do that."
+    },
+    {
+      "turn": 12,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

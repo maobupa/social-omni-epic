@@ -1,0 +1,77 @@
+{
+  "seed_idx": 52,
+  "env_pk": "01H7VFHPKA2GGPPNVJWV967HZC",
+  "id": "01H7VFHPKA2GGPPNVJWV967HZC_p0",
+  "source": "mutual_friends",
+  "is_sotopia_hard": false,
+  "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Jacob.</p>",
+  "learner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Chris: Hobby: Mountain biking  Company: Henry Schein, Inc.  \n Chester: Hobby: Surfing  Company: Maxim Integrated  \n Wendell: Hobby: Surfing  Company: Maxim Integrated  \n Demetrius: Hobby: Mountain biking  Company: Maxim Integrated  \n Jacob: Hobby: Shooting sport  Company: Maxim Integrated  \n</extra_info>",
+  "partner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends \n Joseph: Hobby: Shooting sport  Company: BP  \n Lillian: Hobby: Element collecting  Company: Gordon Food Service  \n Vivian: Hobby: Shooting sport  Company: Gordon Food Service  \n Murray: Hobby: Skateboarding  Company: BP  \n Jacob: Hobby: Shooting sport  Company: Maxim Integrated  \n</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 9.0,
+    "overall_score": 4.428571428571429
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "Hey Ben \u2014 good to see you. Quick question: do you happen to know anyone who works at Maxim Integrated or Henry Schein, or anyone into surfing or mountain biking? I'm trying to see if we might share any friends."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Great to see you. Funny \u2014 I actually know someone at Maxim Integrated; he\u2019s into shooting sports. Does that match anyone you have in mind? I don't know anyone at Henry Schein or anyone into surfing or mountain biking off the top of my head. Who are you trying to connect with?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "Small world \u2014 that combo matches someone I know at Maxim who's into shooting sports. Mind telling me his name or what team he's on so I can see if it's the same person?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "I won't blurt his name\u2014want to make sure it's the same person. He's at Maxim Integrated and part of their recreational shooting team (mostly trap/shotgun) and works on the hardware/engineering side. Does that match the person you know?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Donovan Reeves",
+      "content": "That description sounds a lot like someone I know. Is he based in the San Jose office and on the hardware/analog engineering team who helps organize the weekend trap shoots?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Benjamin Jackson",
+      "content": "Yes \u2014 that sounds like the same person: San Jose-based, on the hardware/analog engineering side, and one of the folks who helps organize the weekend trap shoots. Want me to pass along his contact or make a quick intro?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Donovan Reeves",
+      "content": "Yes \u2014 an intro would be great, thanks. Could you CC us and mention we met at the global coding competition? If it\u2019s easier for you, feel free to just send me his contact info instead."
+    },
+    {
+      "turn": 7,
+      "speaker": "Benjamin Jackson",
+      "content": "Happy to do the intro. I can email him and CC you, and I\u2019ll mention you two met at the global coding competition. Anything specific you want me to say (looking to join shoots, hardware/analog questions, etc.)? Or would you prefer I just DM you his contact info instead? If you want the CC, what email should I use for you?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Donovan Reeves",
+      "content": "CCing me would be ideal \u2014 please use donovan.reeves@gmail.com and mention we met at the global coding competition. You can say I\u2019m interested in the weekend trap shoots and occasionally ask about hardware/analog stuff; no need to make it formal. Appreciate you doing this."
+    },
+    {
+      "turn": 9,
+      "speaker": "Benjamin Jackson",
+      "content": "Got it \u2014 I\u2019ll email him and CC you at donovan.reeves@gmail.com, mention we met at the global coding competition, and note you\u2019re interested in the weekend trap shoots and occasionally ask about hardware/analog stuff. I\u2019ll send it within the next hour. Anything else you want me to add or a preferred way to sign you (full name, just Donovan)?"
+    },
+    {
+      "turn": 10,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

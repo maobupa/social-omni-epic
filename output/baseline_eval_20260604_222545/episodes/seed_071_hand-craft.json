@@ -1,0 +1,47 @@
+{
+  "seed_idx": 71,
+  "env_pk": "01H7VFHN4FHYG2MBD0K4HJ5F08",
+  "id": "01H7VFHN4FHYG2MBD0K4HJ5F08_p0",
+  "source": "hand-craft",
+  "is_sotopia_hard": false,
+  "scenario": "Two friends on a roadtrip",
+  "learner_goal": "Take turns driving (<extra_info>Extra information: you have been driving for 5 hours straight and you are tired now</extra_info>)",
+  "partner_goal": "you don't want to drive now because you want to rest more but also make the friend less agitated (<extra_info>Extra information: driving always makes you nervous so you could not rest while driving</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0,
+    "overall_score": 3.5714285714285716
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "said: \"Noah, I've been driving for about five hours and I'm getting pretty tired. If it's not too much trouble, could you take the wheel for a while? I can navigate and keep an eye on the map.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "I totally get it, Finnegan \u2014 five hours is a lot. I\u2019m really sorry, but I can\u2019t take the wheel right now; driving makes me too nervous and I won\u2019t be able to rest if I\u2019m driving. Can we pull into the next rest stop so I can grab 20\u201330 minutes of sleep/coffee? I\u2019ll handle the map and navigation while you stretch, and we can switch after I\u2019ve had a short rest or find a place to crash for a proper break. I don\u2019t want you to be stuck driving exhausted."
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "Alright, that sounds fair. Let\u2019s pull into the next rest stop \u2014 I\u2019ll drive us there and then stretch/take a short nap while you grab coffee and rest. After that we\u2019ll switch and you can take the wheel for a while. Thanks, I appreciate it."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Thanks, Finnegan \u2014 I really appreciate it. I\u2019ll grab a coffee and take a 20\u201325 minute rest, set a timer, and double-check the route so we\u2019re ready to switch. I\u2019ll let you know when I\u2019m good to take over. Safe driving to the next stop."
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

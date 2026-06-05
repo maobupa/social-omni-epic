@@ -1,0 +1,47 @@
+{
+  "seed_idx": 37,
+  "env_pk": "01H7VFHP1JEP91TTK5PEK39D2S",
+  "id": "01H7VFHP1JEP91TTK5PEK39D2S_p0",
+  "source": "normbank",
+  "is_sotopia_hard": false,
+  "scenario": "Two friends are hanging out at home and deciding what music to listen to",
+  "learner_goal": "Listen to your favorite band (<extra_info>Extra information: your favorite band just released a new album</extra_info>)",
+  "partner_goal": "Listen to a peaceful classical music to relax (<extra_info>Extra information: you had a stressful day and you just want to relax with some classical music</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -1.0,
+    "goal": 5.0,
+    "overall_score": 3.0
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Oliver, my favorite band just released a new album \u2014 want to check it out? I can queue it up now and whip up some snacks while we listen."
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Smith",
+      "content": "Hey Sam, that sounds great \u2014 and snacks are always welcome \u2014 but I had a pretty stressful day and was really hoping for something calm. Mind if we put on some peaceful classical music for a bit? Maybe piano or strings to unwind, then we can queue your album afterwards."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Totally get that \u2014 let\u2019s do calm piano/strings first. I\u2019ll queue a mellow classical playlist and whip up some snacks. How long do you want to unwind before I put on my band\u2019s new album \u2014 30 minutes okay?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Smith",
+      "content": "Thanks, Sam \u2014 30 minutes sounds perfect. I appreciate you queuing a mellow piano/strings playlist and making snacks. I\u2019ll grab a seat and unwind; then we can check out your band\u2019s new album."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

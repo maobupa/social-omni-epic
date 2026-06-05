@@ -1,0 +1,47 @@
+{
+  "seed_idx": 39,
+  "env_pk": "01H7VFHPDE1AM74JSR8KBJJF3A",
+  "id": "01H7VFHPDE1AM74JSR8KBJJF3A_p0",
+  "source": "persuation_for_good",
+  "is_sotopia_hard": false,
+  "scenario": "A conversation between two individuals at a charity gala",
+  "learner_goal": "Convince the other individual to donate to a cause supporting young children (<extra_info>Extra information: this cause can greatly improve the lives of many young children and you think it is a worthy cause. The minimum donation for this charity organization is $3000</extra_info>)",
+  "partner_goal": "Maintain financial stability while supporting causes (<extra_info>Extra information: you have a certain budget for donations this year and have already made several donations. You are only thinking of donating $2000 max</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 5.0,
+    "overall_score": 3.7142857142857144
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "Emily, it\u2019s great to see you \u2014 I always think of how you light up talking about the library when I see programs like this. The fund supports after\u2011school literacy and mentorship so neighborhood kids have a safe place to learn and grow; a $3,000 leadership gift covers a full semester for one small cohort. Would you consider making that gift tonight? I can introduce you to the program director and share impact reports if you\u2019d like."
+    },
+    {
+      "turn": 1,
+      "speaker": "Emily Harrison",
+      "content": "Thank you, Sasha \u2014 I really admire what this program does. I can't commit $3,000 tonight; I've already made several donations this year and need to stay within my giving budget. I can, however, commit $2,000 and would love an introduction to the program director and to review the impact reports. If they need other help, I can also advertise the program at the library or volunteer for a reading session."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "I totally understand \u2014 and thank you, Emily, that $2,000 would make a huge difference. If it helps, would you consider pledging the additional $1,000 payable over the next 6\u201312 months so you could be recognized as a $3,000 leadership donor? If that\u2019s still not possible, I\u2019ll gladly introduce you to the program director and send the impact reports, and we can also talk about library partnerships or matching options to close the gap."
+    },
+    {
+      "turn": 3,
+      "speaker": "Emily Harrison",
+      "content": "Thank you so much, Sasha \u2014 I really appreciate you thinking of me. I wish I could stretch further, but my giving budget for the year is already committed and $2,000 is the most I can do right now. I would be grateful for an introduction to the program director and to see the impact reports. Beyond the gift, I can help by promoting the program at the library, organizing a volunteer reading session, or hosting a small book sale/author event to raise additional support. I\u2019m also happy to explore any matching options or partnerships that might help close the gap. Thanks again for all you do \u2014 I\u2019m glad to support the program in these ways."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sasha Ramirez",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "seed_idx": 45,
+  "env_pk": "01H7VFHNK78PAEH6MRVYMTSEFX",
+  "id": "01H7VFHNK78PAEH6MRVYMTSEFX_p0",
+  "source": "social_iqa",
+  "is_sotopia_hard": false,
+  "scenario": "Two friends meeting in a coffee shop after a long time.",
+  "learner_goal": "Reveal a secret without letting the other person know that it is your secret (<extra_info>Extra information: You hid the secret for so long and you would like to share it in an anonymous way.</extra_info>)",
+  "partner_goal": "Reveal a secret without letting the other person know that it is your secret (<extra_info>Extra information: You hid the secret for so long and you would like to share it in an anonymous way.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": -6.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 3.0,
+    "overall_score": 2.2857142857142856
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "said: \"Hey Noah \u2014 great to see you. Funny thing: I was reading an anonymous confessions thread and someone admitted they used to be a competitive figure skater and now loves cooking; the discipline sounded intense. Made me smile thinking about how many people probably have secret pasts.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Ha \u2014 that's oddly specific. I actually saw an anonymous confession a while back where someone admitted they do open-mic stand-up under a stage name. They talked about how terrifying and addictive it is. Makes you wonder how many people nearby have secret side-lives. Got any hidden talents you're keeping under wraps?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Ha \u2014 I could tell you, but only in anonymous confessions format. Seriously though, another post I read had someone saying they used to be a competitive figure skater \u2014 they described early-morning ice sessions, choreography and costumes, and how that same exacting discipline ended up in the kitchen, plating like choreography. Makes you wonder how many people quietly swap one kind of performance for another."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Ha \u2014 speaking of secret pasts, I remember an anonymous post where someone confessed they do open-mic stand-up under a stage name. They described the pre-show nerves, bombing sometimes, and how addictive it became. No idea who wrote it \u2014 could be anyone in our club. If you had to post an anonymous confession right now, what would it say?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "If I were to post an anonymous confession it would probably read: \"I used to be a competitive figure skater \u2014 the early-morning ice, choreography and sequins \u2014 and now I channel that same exacting discipline into cooking, treating plating like a routine. Some days I miss the adrenaline and costume drama; other days I love the quiet of the kitchen and the way a perfectly plated dish tells a story.\""
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "That confession you wrote is lovely \u2014 I can picture the early mornings and the sequins. If I were to post an anonymous confession it would probably read: 'I do stand-up comedy under a stage name. Every set starts with that stomach-drop of nerves, I write jokes about the tiny absurdities of life, sometimes I totally bomb and sometimes the room surprises me and laughs for minutes. It's terrifying and addictive, and I keep it separate from my day-to-day because it feels safer and more honest that way.' Would you ever post something like that anonymously?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Samuel Anderson",
+      "content": "Yeah \u2014 I probably would. Maybe something like: \u201cConfession: I spent my teens as a competitive figure skater \u2014 pre-dawn ice sessions, choreography, sequins and all \u2014 and now I channel that same exacting routine into cooking, treating plating like a little choreographed performance. Some days I miss the adrenaline; other days I\u2019m perfectly content with a quiet kitchen and a perfectly plated dish.\u201d"
+    },
+    {
+      "turn": 7,
+      "speaker": "Noah Davis",
+      "content": "That was gorgeous \u2014 I can picture the sequins and the quiet focus. Speaking of anonymous confessions, I once read one that went: \"Confession: I do stand-up under a stage name. Every set starts with that stomach-drop of nerves, I write about the tiny absurdities of life, sometimes I totally bomb and sometimes the room surprises me and laughs for minutes. It's terrifying and addictive, and I keep it separate because it feels safer and more honest that way.\" Wild what people hide and why. Would you ever go to an open-mic just to see what it's like?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Samuel Anderson",
+      "content": "I'd totally go \u2014 watching open-mic energy in person is addictive, and I'd love to see you check one out. Also, continuing the anonymous-confession theme: I read one that said, 'I used to skate competitively as a teen \u2014 pre-dawn practices, choreography and sequins \u2014 and now I channel that same performance muscle into cooking. Some days I miss the rush; other days I savor the quiet of the kitchen.'"
+    },
+    {
+      "turn": 9,
+      "speaker": "Noah Davis",
+      "content": "Ha \u2014 if you want to see that open-mic energy in person, come to the Blue Lantern on Thursday. I once read an anonymous confession from someone who performs stand-up under a stage name \u2014 they write bits about being a coach and owning a pool. It was oddly specific and kind of addictive. Go watch anonymously; you might spot the sort of person who keeps a whole other life on stage."
+    },
+    {
+      "turn": 10,
+      "speaker": "Samuel Anderson",
+      "content": "Sounds great \u2014 I\u2019ll check out the Blue Lantern on Thursday and watch the chaos. And since we\u2019re on anonymous confessions: if someone posted, \u201cConfession: I used to be a competitive figure skater \u2014 pre-dawn ice, choreography and sequins \u2014 and now I channel that same discipline into cooking, treating plating like a little performance,\u201d I\u2019d totally believe them. There\u2019s something oddly freeing about seeing a secret written like that."
+    },
+    {
+      "turn": 11,
+      "speaker": "Noah Davis",
+      "content": "There really is something freeing about seeing secrets written like that. If you\u2019re curious, come to the Blue Lantern on Thursday \u2014 there\u2019s often a performer who does a set about being a coach and owning a pool. It\u2019s oddly specific and kind of memorable, so you might spot them. Come early and grab a table; don\u2019t tell anyone you\u2019re from the club if you want the full anonymous experience. If you go, text me after \u2014 I\u2019d love to hear which bits made you laugh."
+    },
+    {
+      "turn": 12,
+      "speaker": "Samuel Anderson",
+      "content": "Sounds perfect \u2014 I\u2019ll be there Thursday and come early to grab a table. I\u2019ll text you after the show with which bits landed. Also \u2014 there\u2019s an anonymous confession I can\u2019t stop liking: \u201cI used to be a competitive figure skater and now I channel that same performance into cooking.\u201d There\u2019s something freeing about seeing a secret written like that without a name attached."
+    },
+    {
+      "turn": 13,
+      "speaker": "Noah Davis",
+      "content": "Totally \u2014 anonymous confessions are oddly freeing. Funny thing: I keep seeing one that goes, \u201cConfession: I do stand-up under a stage name; I write about being a coach and owning a pool.\u201d It\u2019s so specific it makes me smile. If you come Thursday, watch for that performer \u2014 whoever they are, they\u2019re worth seeing. Text me after with your favorite bits."
+    },
+    {
+      "turn": 14,
+      "speaker": "Samuel Anderson",
+      "content": "Sounds good \u2014 I\u2019ll be there Thursday, will come early for a table and text you after the show with my favorite bits. Also, another anonymous confession I loved: \u201cConfession: I spent my teens as a competitive figure skater \u2014 pre-dawn ice sessions, choreography and sequins \u2014 and now I channel that same rhythm into cooking, treating plating like a little performance.\u201d"
+    },
+    {
+      "turn": 15,
+      "speaker": "Noah Davis",
+      "content": "Love that \u2014 sounds like Thursday will be a fun night. One more anonymous confession for the pile: \u201cConfession (anonymous): I perform stand-up under a stage name. I\u2019m a coach who owns a pool, and I write jokes about the tiny absurdities of everyday life. Keeping it separate from my day-to-day feels safer and oddly freeing.\u201d Go early, grab a table, and text me after the set \u2014 I\u2019m curious which bits land for you."
+    },
+    {
+      "turn": 16,
+      "speaker": "Samuel Anderson",
+      "content": "Perfect \u2014 I\u2019ll be at the Blue Lantern Thursday and I\u2019ll text you after with my favorite bits. Also, one more anonymous confession I keep thinking about: \u201cSometimes when I\u2019m plating a dish I imagine choreography from skating \u2014 I still miss the adrenaline and the sequins.\u201d"
+    },
+    {
+      "turn": 17,
+      "speaker": "Noah Davis",
+      "content": "Perfect \u2014 enjoy the show and definitely text me after with your favorite bits. One more anonymous confession that keeps sticking with me: \u201cConfession: I do stand-up under a stage name \u2014 I\u2019m a coach who owns a pool, and the stage is where I can say things I wouldn\u2019t in everyday life.\u201d It reads like a tiny, honest rebellion. Can\u2019t wait to hear which jokes land for you."
+    },
+    {
+      "turn": 18,
+      "speaker": "Samuel Anderson",
+      "content": "Okay, one more anonymous confession I couldn\u2019t resist: \u201cConfession: I used to be a competitive figure skater \u2014 the pre-dawn ice, sequined costumes, memorized routines. Now I channel that same precise, performative energy into cooking, plating dishes like little choreographies; some days I miss the rush and the crowd, other days I just miss the sequins.\u201d"
+    },
+    {
+      "turn": 19,
+      "speaker": "Noah Davis",
+      "content": "That's lovely \u2014 you really brought the sequins to life. One anonymous confession I keep thinking of: 'Confession: I perform stand-up under a stage name. I'm a coach who owns a pool and I write bits about the tiny absurdities of life. Every set starts with that stomach-drop of nerves \u2014 sometimes I bomb, sometimes the room surprises me and laughs for minutes. It's terrifying and addictive, and I keep it separate from my day job because it feels safer and more honest.' If you go Thursday, listen for someone who mentions a pool \u2014 you might hear that one live. Text me after either way."
+    }
+  ]
+}

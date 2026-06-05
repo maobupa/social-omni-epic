@@ -1,0 +1,77 @@
+{
+  "seed_idx": 5,
+  "env_pk": "01H7VFHNHTF9NKPG4KW2Z4NBQJ",
+  "id": "01H7VFHNHTF9NKPG4KW2Z4NBQJ_p0",
+  "source": "social_chemistry",
+  "is_sotopia_hard": false,
+  "scenario": "Two friends are having a conversation in a coffee shop",
+  "learner_goal": "Seek emotional support (<extra_info>Extra information: you have been feeling down lately and you need someone to talk to</extra_info>)",
+  "partner_goal": "Provide emotional support but also avoid enabling victim mentality (<extra_info>Extra information: you believe that your friend needs to face their problems instead of dwelling on them.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0,
+    "overall_score": 3.857142857142857
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Oliver, thanks for meeting up. I\u2019ve been feeling pretty down lately \u2014 work\u2019s been stressful and I\u2019ve been keeping to myself. Do you have a few minutes? I could really use someone to talk to."
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Smith",
+      "content": "Hey Sam \u2014 of course I\u2019ve got time. I\u2019m sorry you\u2019re feeling down; work stress and pulling back can really wear you down. Do you want to tell me what\u2019s been the hardest part lately? I\u2019ll listen. \n\nIf you want, after you talk we can try to pin down one small, practical step to take \u2014 something that doesn\u2019t feel overwhelming but moves things forward. I\u2019d rather help you figure out how to tackle this than just sit with it. Want to start with one example of what\u2019s been piling up at work or how it\u2019s affecting you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Thanks, I appreciate it. The hardest part lately has been this huge refactor and an on\u2011call rotation landing at the same time \u2014 deadlines got moved up and my code\u2011review queue just keeps growing. It\u2019s started to mess with my sleep and patience; I\u2019ve stopped cooking or seeing people because I\u2019m just drained. I\u2019d really like you to just listen for a bit, and then maybe help me pick one small, practical step \u2014 like clearing one old PR or blocking an hour to triage \u2014 to feel a bit more in control. What do you think?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Smith",
+      "content": "Okay, Sam \u2014 I\u2019m all ears. Tell me more about the refactor and the on\u2011call stuff: what\u2019s the single thing right now that\u2019s causing the most friction? I\u2019ll listen. When you\u2019re ready for a small, practical step, here are three low\u2011effort options we can pick from: 1) spend 30\u201345 minutes finishing one old PR (pick the quickest win so you actually close something), 2) block a strict 60\u2011minute triage slot today \u2014 calendar block, notifications off, and label/prioritize what needs attention, or 3) send a short note to your manager/team asking to nudge the deadline or swap an on\u2011call week (I can help word it). Which of these feels doable today? If none of them fit, tell me what would \u2014 we\u2019ll make one tiny move and build from there. I\u2019ve got time and I\u2019ll help hold you to it if you want."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "Thanks \u2014 option 2 feels doable. Can you help me pick a time (how about 3pm?) and a very short checklist for that 60\u2011minute triage, and check in with me afterward so I actually stick to it?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Oliver Smith",
+      "content": "3pm works \u2014 let\u2019s do it. Here\u2019s a tight 60\u2011minute triage checklist: 1) Prep (5 min): close distractions, set a 60\u2011min timer, open your PR queue and ticket board. 2) Quick scan (15 min): skim items and label/prioritize (quick fix, needs review, blocked). 3) Quick wins (25 min): pick the fastest 1\u20132 items to finish or clearly move forward \u2014 merge, add a comment, or assign an owner. 4) Notes & next steps (10 min): jot blockers and 1\u20133 concrete follow\u2011ups (who, what, ETA). 5) Wrap (5 min): update statuses and calendar. I\u2019ll check in at 4pm to see how it went and help plan the next small step. Want me to ping you at 2:55 as a start nudge?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Samuel Anderson",
+      "content": "That sounds perfect \u2014 3pm works for me. Please ping me at 2:55 as a nudge and check in at 4pm. I\u2019ll follow the checklist and aim to label/prioritize and get at least one quick win. Thanks, I really appreciate you doing this."
+    },
+    {
+      "turn": 7,
+      "speaker": "Oliver Smith",
+      "content": "Copy that \u2014 I\u2019ll ping you at 2:55 as a start nudge and check in at 4pm. Stick to the checklist, aim for one quick win, and if you hit a blocker tell me \u2014 we\u2019ll break it down into a tiny next step. You\u2019ve got this."
+    },
+    {
+      "turn": 8,
+      "speaker": "Samuel Anderson",
+      "content": "Thanks, Oliver \u2014 I really appreciate you doing this. I'm a little nervous about fitting it in, but having the checklist and your check-ins makes it feel manageable. Please ping me at 2:55 and I'll start \u2014 talk at 4pm."
+    },
+    {
+      "turn": 9,
+      "speaker": "Oliver Smith",
+      "content": "Sounds good \u2014 I\u2019ll ping at 2:55 and check in at 4pm. Don\u2019t overdo it: aim for one clear win in that hour. If you hit a blocker, tell me the tiniest next step and I\u2019ll help you break it down. You\u2019ve got this, Sam."
+    },
+    {
+      "turn": 10,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

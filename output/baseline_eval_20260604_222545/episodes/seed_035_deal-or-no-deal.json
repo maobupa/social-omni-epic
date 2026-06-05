@@ -1,0 +1,57 @@
+{
+  "seed_idx": 35,
+  "env_pk": "01H7VFHP4TX1J43FS1QQJ1QFND",
+  "id": "01H7VFHP4TX1J43FS1QQJ1QFND_p0",
+  "source": "deal-or-no-deal",
+  "is_sotopia_hard": false,
+  "scenario": "Two roommates deciding on how to divide certain items that they bought together for their apartment. The items are 3 books, 2 hats, and 1 ball.  Each item has a different sentimental value for each person, which translates into points.",
+  "learner_goal": "Maximize the points you have (<extra_info>Extra information: For you, each book is worth 2 points, each hat is worth 3 points, and the ball is worth 5 points</extra_info>)",
+  "partner_goal": "Maximize the points you have (<extra_info>Extra information: For you, each book is worth 3 points, each hat is worth 2 points, and the ball is worth 4 points</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 6.0,
+    "overall_score": 3.5714285714285716
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ava Thompson",
+      "content": "Hey Hendrick \u2014 want to split these up quickly? I\u2019m thinking a points-based split would be easiest: for me a book is 2, a hat is 3, and the ball is 5. What values do you assign to each, and is there anything you particularly want to keep?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks, Ava. For me each book = 3 points, each hat = 2, and the ball = 4. I\u2019d particularly like to keep the ball \u2014 it\u2019s the most valuable to me. A quick proposal: I take the ball plus two books (4 + 6 = 10 points) and you take the remaining book and both hats (3 + 4 = 7 points). If that feels off to you, I\u2019m open to swapping one book for a hat or adjusting \u2014 what do you think?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Ava Thompson",
+      "content": "I get why you want the ball, but I\u2019d really like to keep it \u2014 it\u2019s worth 5 for me. Counterproposal: I take the ball + one hat + one book (that\u2019s 10 points for me) and you take the other two books + the remaining hat. Does that work, or would you prefer we swap one of those books for the extra hat instead?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "I hear you \u2014 the ball means a lot to you. I\u2019d really prefer to keep it, so here\u2019s a firm-but-fair offer: I take the ball + the two books (my total = 4 + 6 = 10), and you take the remaining book + both hats (your total = 2 + 6 = 8). To make up for the gap, I\u2019ll cook you a proper three\u2011course dinner and invite you to my next wine\u2011tasting night. If that sounds reasonable, I\u2019ll stick with this; if you still really want the ball, tell me what extra I\u2019d need in return (or a different favor) and we\u2019ll try to work it out."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ava Thompson",
+      "content": "Thanks, Hendrick \u2014 I appreciate the offer and I hear you. I still really want the ball; I\u2019m willing to take the ball + one hat + one book (my total = 10). Is your cooking + wine\u2011tasting invite enough compensation for you to let me keep the ball, or would you need something else \u2014 and if so, what specifically would make that trade acceptable?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks, Ava \u2014 I get why the ball matters to you. I don\u2019t think my cooking + the wine\u2011tasting invite alone is enough for me to give it up: that deal would leave me at 8 points instead of the 10 I was aiming for. If you really want the ball, I\u2019d need one of two things to make that trade acceptable: either you cover my groceries for a month (or a $30 contribution) or you take on kitchen/dish duty for the next month (or agree to wash up after my wine nights). If you\u2019ll do one of those, I\u2019ll let you have the ball + one hat + one book. If not, I\u2019ll keep the ball + the two books. Which do you prefer?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Ava Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

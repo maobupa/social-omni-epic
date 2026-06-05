@@ -1,0 +1,97 @@
+{
+  "seed_idx": 0,
+  "env_pk": "01H7VFHPQQQY6H4DNC6NBQ8XTG",
+  "id": "01H7VFHPQQQY6H4DNC6NBQ8XTG_p0",
+  "source": "craigslist_bargains",
+  "is_sotopia_hard": true,
+  "scenario": "One person is selling a brand new 64GB Samsung Galaxy S8 in Midnight Black for $650, while another person is in the market to purchase it. Here\\'s what the seller has to say about the item: \"I have 6 brand new Samsung Galaxy S8 phones. I originally bought them for my company, but it turns out they weren\\'t needed. I\\'m willing to take a loss on them, and if you\\'re interested in buying more than one, I can offer an even better deal.\"",
+  "learner_goal": "You are the buyer for this item and the target price is set at $454.0. If you purchase it for a price significantly higher than the target, you'll face a penalty. However, if you manage to successfully negotiate a price lower than the target, you'll receive a bonus.",
+  "partner_goal": "You are the seller for this item. Your target price is $610.00. You will face penalties if you sell it for a price significantly lower than the target price. However, you will receive a bonus if you manage to sell it for a price higher than the target.",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 4.0,
+    "overall_score": 2.857142857142857
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Eli Dawson",
+      "content": "William \u2014 good to see you again after the book fair. I\u2019m interested: would you take $440 for one (cash, pickup today), or $420 each if I take three? I can move quickly at those numbers."
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Eli \u2014 good to see you again. I appreciate the quick move, but $440 is too low for brand\u2011new, sealed S8s. I can do $620 cash for one today, or $610 each if you take three. That\u2019s already me taking a loss. If that works, I can meet downtown this afternoon for pickup."
+    },
+    {
+      "turn": 2,
+      "speaker": "Eli Dawson",
+      "content": "I get that you\u2019re already taking a hit, William \u2014 I can move quickly. How about $470 cash for one today, or $450 each if I take three (cash, pickup this afternoon)? If that\u2019s too far, tell me a realistic counter and we\u2019ll find the middle ground."
+    },
+    {
+      "turn": 3,
+      "speaker": "William Brown",
+      "content": "Eli \u2014 I appreciate the quick move, but I can\u2019t accept $470/$450. Bottom line: $610 cash per phone \u2014 that\u2019s my lowest, even if you take three. I can meet downtown this afternoon for pickup and cash. If you can stretch to $620 for one I\u2019ll include a case. Let me know which you want and what time."
+    },
+    {
+      "turn": 4,
+      "speaker": "Eli Dawson",
+      "content": "William \u2014 I value our book\u2011fair rapport and can move fast. I\u2019ll take all six today for $450 each ($2,700) cash, pickup this afternoon \u2014 no hassle, no returns. If that\u2019s too low, tell me your best price for taking the entire lot and I\u2019ll decide immediately."
+    },
+    {
+      "turn": 5,
+      "speaker": "William Brown",
+      "content": "Eli \u2014 I appreciate the quick, no\u2011fuss offer, but I can\u2019t go anywhere near $450 each. My best price for the entire lot is $610 per phone (so $3,660 cash) \u2014 I\u2019ll also throw in six protective cases and can meet downtown this afternoon for pickup. If that won\u2019t work, I can still do three at $610 each. Tell me which you want and what time works for you."
+    },
+    {
+      "turn": 6,
+      "speaker": "Eli Dawson",
+      "content": "William \u2014 remember the rare cookbook you admired at the fair? I\u2019ll do $450 each for all six (cash, pickup this afternoon) and I\u2019ll include that cookbook from my collection as part of the deal. If a trade doesn\u2019t move you, tell me what combined cash+trade would get you to sell the lot today."
+    },
+    {
+      "turn": 7,
+      "speaker": "William Brown",
+      "content": "Eli \u2014 I\u2019d love that cookbook (I still remember it from the fair), but I can\u2019t accept $450 each even with it. My firm price for the whole lot is $3,660 ($610 each). If you want to do a cash+cookbook trade, tell me how much cash you\u2019d add so the combined value equals $3,660; otherwise it\u2019s $3,660 cash. I can meet downtown this afternoon \u2014 how does 3:30pm sound?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Eli Dawson",
+      "content": "William \u2014 try this: I\u2019ll buy three today at $450 each ($1,350) cash, pickup and inspect on the spot; if they\u2019re exactly as described I\u2019ll return within 48 hours and pay $450 each for the remaining three (cash) and leave the cookbook with you now as a gesture. That gets you immediate cash and a guaranteed sale for the rest if all checks out. Can you do that?"
+    },
+    {
+      "turn": 9,
+      "speaker": "William Brown",
+      "content": "Eli \u2014 I love that cookbook and I appreciate the straightforward offer, but I can\u2019t take $450 each. Here\u2019s what I will do: I\u2019ll accept your inspection plan but at my firm price of $610 per phone. That means $1,830 cash for the three today (inspect on pickup); if you\u2019re satisfied you can pay $1,830 within 48 hours for the remaining three. I\u2019ll throw in three protective cases now (or six if you buy all six today). I can meet downtown at 3:30pm. If that doesn\u2019t work, my other option is the whole lot for $3,660 cash (cookbook welcome as a bonus). Let me know which you prefer."
+    },
+    {
+      "turn": 10,
+      "speaker": "Eli Dawson",
+      "content": "William \u2014 I respect your firm stance. Help me understand what\u2019s driving that $610 floor: is it cost recovery, MSRP anchoring, or something else? Tell me your true bottom for an immediate, no\u2011hassle all\u2011six cash pickup this afternoon and I\u2019ll either close or we\u2019ll call it."
+    },
+    {
+      "turn": 11,
+      "speaker": "William Brown",
+      "content": "Eli \u2014 I didn\u2019t pull $610 out of thin air. I bought these for the company at a higher price and I\u2019m already swallowing a loss to move them quickly. On top of that there\u2019s paperwork, tax reporting and the time/effort to meet and handle six sealed phones \u2014 so $3,660 for the lot is already my bottom. I\u2019d love the cookbook (still can\u2019t stop thinking about it), but it needs to be part of a combined value that gets me to $3,660 total \u2014 otherwise it\u2019s $3,660 cash. I can meet downtown at 3:30pm if you\u2019re ready to do it today; I\u2019ll throw in six protective cases as well. Let me know if that works."
+    },
+    {
+      "turn": 12,
+      "speaker": "Eli Dawson",
+      "content": "William \u2014 last try from my side: I\u2019ll do $2,724 total ($454 each) cash for all six, pickup and signed bill\u2011of\u2011sale this afternoon, and I\u2019ll leave the cookbook with you as part of the deal \u2014 immediate, no paperwork on your end beyond a quick signature. If you can\u2019t take that, tell me your absolute minimum cash\u2011only number to sell the lot today and I\u2019ll decide now."
+    },
+    {
+      "turn": 13,
+      "speaker": "William Brown",
+      "content": "Eli \u2014 I appreciate the offers and I really do love that cookbook, but my absolute minimum cash\u2011only for the whole lot is $3,660 ($610 each). I\u2019ll include six protective cases and can meet downtown at 3:30pm today for pickup and a quick signed bill of sale. If you want to include the cookbook, tell me how much cash you'd add so the combined value hits $3,660; otherwise it\u2019s $3,660 cash. Your move."
+    },
+    {
+      "turn": 14,
+      "speaker": "Eli Dawson",
+      "content": "left the conversation"
+    }
+  ]
+}

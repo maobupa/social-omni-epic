@@ -1,0 +1,47 @@
+{
+  "seed_idx": 29,
+  "env_pk": "01H7VFHPGABSWQXTACCC8C3X2F",
+  "id": "01H7VFHPGABSWQXTACCC8C3X2F_p0",
+  "source": "mutual_friends",
+  "is_sotopia_hard": false,
+  "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Gracie.</p>",
+  "learner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Gracie: School: Ithaca College  Major: Mathematics Education  Company: Aramark  Location Preference: indoor \n Ada: School: Tulane University  Major: Computer Engineering  Company: Briggs & Stratton  Location Preference: indoor \n Sergio: School: LeTourneau University  Major: Economics  Company: Savers  Location Preference: indoor \n William: School: Eastern Michigan University  Major: Ceramic Engineering  Company: Xenco Medical  Location Preference: indoor \n Harry: School: Creighton University  Major: Computer Engineering  Company: Speedway Motorsports  Location Preference: indoor \n Tyler: School: Columbia College Chicago  Major: Middle Eastern Languages  Company: Aramark  Location Preference: indoor \n Richard: School: University of Dubuque  Major: German  Company: Illinois Tool Works  Location Preference: indoor \n Randy: School: Holy Cross College  Major: Library Science  Company: American Licorice Company  Location Preference: indoor \n Marquerite: School: Ithaca College  Major: Middle Eastern Languages  Company: Aramark  Location Preference: indoor \n Jack: School: Creighton University  Major: Chinese  Company: Speedway Motorsports  Location Preference: outdoor \n Cody: School: Metropolitan State University  Major: Mathematics Education  Company: LinkedIn  Location Preference: indoor \n Shirley: School: Augsburg College  Major: Senior High Education  Company: Demaco  Location Preference: indoor \n</extra_info>",
+  "partner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Kathleen: School: William Mitchell College of Law  Major: Greek  Company: Demaco  Location Preference: indoor \n Carol: School: Hood College  Major: Library Science  Company: Illinois Tool Works  Location Preference: outdoor \n Herman: School: University of Puget Sound  Major: Library Science  Company: Mesa Airlines  Location Preference: indoor \n Matthew: School: William Mitchell College of Law  Major: Asian & Pacific Area Studies  Company: Savers  Location Preference: indoor \n Mark: School: University of Arkansas - Monticello  Major: Economics  Company: Metro-Goldwyn-Mayer  Location Preference: outdoor \n Deborah: School: William Mitchell College of Law  Major: Pre-Law  Company: Aramark  Location Preference: outdoor \n Kelly: School: Hood College  Major: Middle Eastern Languages  Company: Mesa Airlines  Location Preference: outdoor \n Gracie: School: Ithaca College  Major: Mathematics Education  Company: Aramark  Location Preference: indoor \n Etta: School: University of Arkansas - Monticello  Major: Judaism & Jewish Studies  Company: Aramark  Location Preference: outdoor \n Natasha: School: Thomas Edison State College  Major: Linguistics  Company: Invacare Corporation  Location Preference: outdoor \n Lloyd: School: Eastern Michigan University  Major: Geophysical Engineering  Company: Illinois Tool Works  Location Preference: outdoor \n Brian: School: Ithaca College  Major: Asian & Pacific Area Studies  Company: Orange Micro  Location Preference: outdoor \n</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0,
+    "overall_score": 4.142857142857143
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Smith",
+      "content": "said: \"Hey Noah, great to see you. Quick question\u2014do you happen to know anyone who went to Ithaca College or Creighton, or anyone who works at Aramark or Speedway Motorsports? I\u2019m wondering if we might have a mutual friend.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Hey\u2014yeah, I actually know a couple people who went to Ithaca and a few who work at Aramark. Rather than just rattling off names, can you give me a little detail about who you\u2019re thinking of? Gender, what they do, where they live, or how you know them (worked together, same class year, etc.)? One of my Ithaca friends is in education and works with Aramark, so that could be our overlap \u2014 but a quick hint from you will help me tell if it\u2019s the same person."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Smith",
+      "content": "Yep \u2014 the person I have in mind is a woman who went to Ithaca and majored in Mathematics Education. She now works for Aramark in a campus dining/food\u2011services role, and I met her through a volunteering/after\u2011school tutoring program for kids. Does that sound like the same person you know?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Yep \u2014 that matches someone I know. She went to Ithaca, majored in Mathematics Education, works in campus dining for Aramark, and volunteers with after-school tutoring. Small world \u2014 sounds like we do have a mutual friend."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ethan Smith",
+      "content": "left the conversation"
+    }
+  ]
+}

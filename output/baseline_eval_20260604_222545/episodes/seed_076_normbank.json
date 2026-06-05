@@ -1,0 +1,37 @@
+{
+  "seed_idx": 76,
+  "env_pk": "01H7VFHP0TRETZPZMEJ5RZA2G7",
+  "id": "01H7VFHP0TRETZPZMEJ5RZA2G7_p0",
+  "source": "normbank",
+  "is_sotopia_hard": false,
+  "scenario": "Two friends are studying together in a library.",
+  "learner_goal": "Ask your friend to talk more softly (<extra_info>Extra information: Your friend's loud talking is distracting you and others around you.</extra_info>)",
+  "partner_goal": "You need to express your thoughts and ideas but also want to respect the library rules and your friend's request (<extra_info>Extra information: You are naturally a loud talker and you are excited about the topic you're discussing.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0,
+    "overall_score": 3.4285714285714284
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Miles, sorry to interrupt \u2014 could you please talk a bit more quietly? It\u2019s getting a little loud in here and I\u2019m having trouble concentrating, and I think it\u2019s bothering others too."
+    },
+    {
+      "turn": 1,
+      "speaker": "Miles Hawkins",
+      "content": "Oh\u2014sorry, Sophia. I got carried away there. Thanks for telling me; I\u2019ll keep it down. Want me to whisper the rest or save the food-chat for after we finish studying?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

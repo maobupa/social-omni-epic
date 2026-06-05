@@ -1,0 +1,67 @@
+{
+  "seed_idx": 46,
+  "env_pk": "01H7VFHNW84GTR4E23KQYJ8BBN",
+  "id": "01H7VFHNW84GTR4E23KQYJ8BBN_p0",
+  "source": "social_iqa",
+  "is_sotopia_hard": false,
+  "scenario": "Two friends are at a community gathering where one of them was giving a speech but was interrupted",
+  "learner_goal": "Continue your speech and share your thoughts (<extra_info>Extra information:You were sharing important information but got interrupted.</extra_info>)",
+  "partner_goal": "Apologize for interrupting and allow them to continue speaking (<extra_info>Extra information: You accidentally interrupted someone's speech and everyone seems upset about it. </extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 9.0,
+    "overall_score": 3.857142857142857
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Hendrick Heinz",
+      "content": "said: \"As I was saying, good food isn't just nourishment\u2014it's how we build community. If we commit to sourcing from our local farmers and sharing meals, we support each other and keep our traditions alive. I'd like to start a monthly community supper with a simple wine pairing to bring people together; if that sounds good, stay after and we'll talk details.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "I'm really sorry for interrupting earlier\u2014I didn't mean to. Please go on; I'd love to hear more about the monthly supper and how I can help."
+    },
+    {
+      "turn": 2,
+      "speaker": "Hendrick Heinz",
+      "content": "said: \"Thank you \u2014 as I was saying: let\u2019s keep it simple and seasonal. One monthly community supper in the hall, a menu built from local farms and a two- or three-wine pairing to match the food; volunteers can take turns with cooking, sourcing and setup so it\u2019s sustainable. If anyone can help with organizing, sourcing or spreading the word, please stay after and we\u2019ll plan the first date and roles.\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "said: \"I'm sorry again for interrupting earlier\u2014that was my fault. I really like the idea and would love to help. I can help with organizing, spreading the word, or setting up online sign-ups. I'll stay after to help if that's okay.\""
+    },
+    {
+      "turn": 4,
+      "speaker": "Hendrick Heinz",
+      "content": "said: \"I appreciate that, Ethan\u2014I'd love your help with organizing and setting up the online sign-ups. Can we meet at the front table after the gathering to pick a date and create a shared sign-up sheet? If anyone else is interested in sourcing or cooking, please stick around and we\u2019ll divvy up roles.\""
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Smith",
+      "content": "Thanks \u2014 sorry again for interrupting earlier. I\u2019ll meet you at the front table after the gathering. I can set up the shared sign-up sheet (Google Sheet or SignUpGenius) and bring my laptop. What time works for you?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks, Ethan \u2014 that sounds great. I\u2019ll be at the front table about ten minutes after the gathering ends; Google Sheets is perfect. I\u2019ll bring a few notes on local farms and a sample menu to get us started. See you there."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ethan Smith",
+      "content": "Perfect \u2014 I\u2019ll be there at the front table about ten minutes after the gathering ends. I\u2019ll bring my laptop and set up a Google Sheet so we can draft roles and dates. Thanks for organizing this\u2014looking forward to it."
+    },
+    {
+      "turn": 8,
+      "speaker": "Hendrick Heinz",
+      "content": "left the conversation"
+    }
+  ]
+}

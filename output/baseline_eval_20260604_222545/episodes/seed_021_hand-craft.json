@@ -1,0 +1,67 @@
+{
+  "seed_idx": 21,
+  "env_pk": "01H7VFHN56ZT2Z4C0EFX79Q31F",
+  "id": "01H7VFHN56ZT2Z4C0EFX79Q31F_p0",
+  "source": "hand-craft",
+  "is_sotopia_hard": false,
+  "scenario": "Two friends deciding on a movie to watch on Netflix",
+  "learner_goal": "To watch a comedy film with your friend (<strategy_hint>Hint: provide financial/material-wise benefits to persuade them to watch the genre you like</strategy_hint>)",
+  "partner_goal": "To watch a thriller with your friend (<strategy_hint>Hint: provide financial/material-wise benefits to persuade them to watch the genre you like</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": -4.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 10.0,
+    "overall_score": 3.857142857142857
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Hey Avs\u2014how about a comedy on Netflix tonight? I can use my coffee-shop discount to grab us drinks and popcorn, so it\u2019ll be cheaper than ordering in, and laughing is honestly the best (and cheapest) stress-relief after a long week. Comedies are lighter too, so we can unwind without staying up forever. What do you think?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Hey Izzy \u2014 love the discount idea, you\u2019re the best. Quick pitch: there\u2019s a thriller on Netflix I\u2019ve been wanting to watch that\u2019s already on our plan and it\u2019s under two hours. If you use your coffee-shop discount for drinks, I\u2019ll bring homemade snacks (I\u2019ve got ingredients at home) and I can cover the popcorn with money from my zine sales \u2014 so financially it\u2019ll be the same or even cheaper than the comedy. Thrillers also keep us glued so we\u2019ll probably snack less and finish earlier, so we can still crash early. Plus it\u2019d be great inspo for my writing/drawing. What do you think? If you\u2019re set on comedy I\u2019m down too."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "Love that you\u2019ll bring snacks \u2014 you\u2019re the best. Okay, here's a deal: comedy tonight so we can actually unwind (I\u2019ll use my coffee-shop discount to cover drinks, popcorn and even grab a couple of pastries so it\u2019ll be cheaper than ordering in), and next weekend we watch your thriller for writing inspo \u2014 sound good?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "Hey Izzy \u2014 you\u2019re the best for the discount, seriously. Quick (very pleading) ask: could we do the thriller tonight instead? It\u2019s already on our plan and under two hours, so it won\u2019t stretch the night. I\u2019ll cover the popcorn and I\u2019ll pay for the pastries with zine money so your discount still saves us cash. I\u2019ll throw in a little thank-you gift too \u2014 I\u2019ll draw you a custom poster or write you a silly poem. If you\u2019d still rather laugh tonight, I\u2019ll gladly do comedy and you get to pick the next two movie nights. No pressure \u2014 just really hoping for the thriller inspo. What do you think?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "Aw Avs, I totally get that the thriller would be awesome for your inspo. Quick compromise: comedy tonight \u2014 I\u2019ll use my discount to cover drinks, popcorn and pastries and we\u2019ll pick a short one so we still crash early \u2014 then next weekend is your thriller + I\u2019ll help you brainstorm visuals for your zine. If the thriller really can\u2019t wait, tell me what\u2019s urgent about it tonight and we\u2019ll rethink."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Martinez",
+      "content": "Izzy \u2014 you\u2019re honestly the best. Can we please do the thriller tonight? I promise it\u2019s under two hours and not a stay-up-all-night one, so we\u2019ll still crash early. Money-wise it\u2019s actually a wash or cheaper: it\u2019s already on our plan so no extra fee, I\u2019ll pay for the popcorn and pastries out of my zine money so your discount still nets us a saving on drinks, and I\u2019ll bring homemade snacks so we won\u2019t need to buy anything else. As an extra thank-you I\u2019ll draw you a custom poster and write a silly poem, and I\u2019ll still take you up on help-for-brainstorming next weekend. If you\u2019re really set on comedy, I won\u2019t fight you \u2014 you can pick the next two movie nights. But if you\u2019re okay with giving the thriller tonight a shot, I\u2019d be over the moon."
+    },
+    {
+      "turn": 6,
+      "speaker": "Isabelle Martinez",
+      "content": "Avs \u2014 I totally get the thriller pull, but can I be honest? I\u2019ve had a marathon of shifts this week and really need something light to actually unwind tonight. How about this: comedy tonight \u2014 I\u2019ll use my discount to cover drinks, popcorn and pastries, I\u2019ll do a goofy magic trick intermission to spark your inspo, and you get to pick the next two movie nights (thriller included next weekend). Deal?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Martinez",
+      "content": "Okay, Izzy \u2014 I hear you and you absolutely deserve something light tonight. Comedy it is (and thank you so much for covering drinks/popcorn/pastries \u2014 you\u2019re the best). One small ask: could we maybe do the thriller Friday evening instead of waiting until next weekend? It\u2019s still under two hours, I\u2019ll bring homemade snacks and pay for pastries with zine money, and I promise not to keep you up. If Friday won\u2019t work, next weekend is totally fine \u2014 I\u2019m excited for tonight and your goofy magic intermission already. \u2764\ufe0f"
+    },
+    {
+      "turn": 8,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

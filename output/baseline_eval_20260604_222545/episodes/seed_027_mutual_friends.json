@@ -1,0 +1,57 @@
+{
+  "seed_idx": 27,
+  "env_pk": "01H7VFHPHWA2CYG7BC82NS4XH1",
+  "id": "01H7VFHPHWA2CYG7BC82NS4XH1_p0",
+  "source": "mutual_friends",
+  "is_sotopia_hard": false,
+  "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Neoma.</p>",
+  "learner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n August: School: Saint Vincent College  Time Preference: evening  Location Preference: indoor \n John: School: University of Rhode Island  Time Preference: evening  Location Preference: indoor \n Rebecca: School: State University of New York at Albany  Time Preference: evening  Location Preference: indoor \n Neoma: School: Hofstra University  Time Preference: evening  Location Preference: indoor \n Ronnie: School: National Technological University  Time Preference: evening  Location Preference: indoor \n Suzette: School: Utah Valley State College  Time Preference: evening  Location Preference: indoor \n Penelope: School: Texas A&M University-Corpus Christi  Time Preference: evening  Location Preference: indoor \n Fernando: School: St. John's College-Santa Fe  Time Preference: evening  Location Preference: outdoor \n Velda: School: Rhode Island College  Time Preference: evening  Location Preference: indoor \n</extra_info>",
+  "partner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Tiffany: School: Saint Vincent College  Time Preference: evening  Location Preference: outdoor \n Lucille: School: Southampton College  Time Preference: evening  Location Preference: indoor \n James: School: University of Wisconsin-River Falls  Time Preference: evening  Location Preference: outdoor \n Quinn: School: Antioch University-Los Angeles  Time Preference: evening  Location Preference: indoor \n Alyssa: School: Davidson College  Time Preference: evening  Location Preference: indoor \n Betty: School: St. John's College-Santa Fe  Time Preference: evening  Location Preference: indoor \n Neoma: School: Hofstra University  Time Preference: evening  Location Preference: indoor \n William: School: State University of New York at Albany  Time Preference: evening  Location Preference: outdoor \n Victoria: School: Montana Tech  Time Preference: evening  Location Preference: indoor \n</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0,
+    "overall_score": 3.7142857142857144
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"Hi, I\u2019m Lily \u2014 nice to meet you. Quick question: I\u2019m trying to see if we might have a mutual friend; where did you go to college?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Isabella White",
+      "content": "said: \"Hi Lily\u2014I'm Isabella. I went to Cornell for vet school. Where did you go? If you happened to go to places like Davidson, Hofstra, Antioch University\u2013Los Angeles, Saint Vincent, Southampton, Montana Tech, SUNY Albany, or UW\u2013River Falls, there's a good chance we might know the same people\u2014do any of those ring a bell for you?\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"Small world \u2014 I went to Hofstra. Do you know many Hofstra alums, or does that make it likely we might know the same people?\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Isabella White",
+      "content": "said: \"Oh, lovely\u2014Hofstra! I actually know at least one Hofstra alum. Do you happen to know anyone from Hofstra who prefers evening get-togethers and usually likes indoor spots? If so, there\u2019s a good chance we might have a mutual acquaintance.\""
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "Yes \u2014 I do know a Hofstra alum who prefers evening, indoor get-togethers. She usually gravitates toward quiet wine bars or small bookshop events rather than loud bars. Does that sound like the person you know?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Isabella White",
+      "content": "That does sound like someone I know. Mind if I ask two quick questions to be sure? Is she a woman, and does she live in the city rather than out on Long Island? And did you meet her through work or at one of those bookshop/wine events?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

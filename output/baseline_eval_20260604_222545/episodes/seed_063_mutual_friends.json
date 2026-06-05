@@ -1,0 +1,87 @@
+{
+  "seed_idx": 63,
+  "env_pk": "01H7VFHPJKR16MD1KC71V4ZRCF",
+  "id": "01H7VFHPJKR16MD1KC71V4ZRCF_p0",
+  "source": "mutual_friends",
+  "is_sotopia_hard": false,
+  "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Lawrence.</p>",
+  "learner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Andrew: Hobby: Slot car racing  School: Mount Senario College  Major: Middle Eastern Languages  Company: Exxon \n Melissa: Hobby: Astronomy  School: Weber State University  Major: Hispanic-American Studies  Company: Hornbeck Offshore Services \n Anna: Hobby: Climbing  School: Valley City State University  Major: Middle Eastern Languages  Company: National Airlines \n Soledad: Hobby: Parkour  School: Valley City State University  Major: Biological Specializations  Company: Concur Technologies \n John: Hobby: Astronomy  School: Mount Senario College  Major: Fire Protection & Security  Company: Gibson Guitar Corporation \n Lawrence: Hobby: Sculling  School: University of Wisconsin-Milwaukee  Major: Hispanic-American Studies  Company: Leonard Green & Partners \n</extra_info>",
+  "partner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Lawrence: Hobby: Sculling  School: University of Wisconsin-Milwaukee  Major: Hispanic-American Studies  Company: Leonard Green & Partners \n Kay: Hobby: Badminton  School: Black Hills State University  Major: Religious Education  Company: National Airlines \n Tanya: Hobby: Badminton  School: University of Illinois at Springfield  Major: Hispanic-American Studies  Company: ConverDyn \n Jason: Hobby: Badminton  School: Mount Senario College  Major: Senior High Education  Company: Vertex Pharmaceuticals \n Cristina: Hobby: Badminton  School: Mount Senario College  Major: Middle Eastern Languages  Company: Exxon \n Josef: Hobby: Curling  School: California State University, Northridge  Major: Middle Eastern Languages  Company: Concur Technologies \n</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0,
+    "overall_score": 3.857142857142857
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "said: \"Oliver, good to see you. Quick question \u2014 do you happen to know anyone who went to Mount Senario or Valley City State, or anyone who\u2019s into astronomy, climbing, parkour or sculling? I ask because a few people from those circles often turn up at the history society and I\u2019m trying to place someone.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "said: \"Mount Senario does ring a bell \u2014 I know a couple of people from there: one now works in pharmaceuticals and another at an oil company. And I know someone who sculls and is in private equity. Do any of those fit the person you\u2019re trying to place? Any idea about their profession, age range, or whether they play badminton?\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "said: \"Okay \u2014 that oil company, is it a big firm like Exxon? And the sculler who\u2019s in private equity: is he roughly our age, mid\u201140s? Also, of the Mount Senario folks, is either one into astronomy? If you confirm those details I can tell whether it\u2019s someone I know.\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "Yes \u2014 the oil\u2011company contact I mentioned is at Exxon. The sculler who went into private equity is roughly our age, mid\u201140s. Of the Mount Senario alumni I know, both play badminton and neither is into astronomy \u2014 one now works in pharmaceuticals and the other at Exxon. Does that line up with who you\u2019re thinking of?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Rafael Cortez",
+      "content": "Two quick clarifying things: the sculler in private equity \u2014 do you know where he went to school (for example, University of Wisconsin\u2013Milwaukee)? And the Mount Senario person at Exxon \u2014 any hobbies besides badminton or an academic background, say in Middle Eastern languages or something like slot\u2011car racing?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Oliver Thompson",
+      "content": "Yes \u2014 the sculler who went into private equity did attend the University of Wisconsin\u2013Milwaukee. The Mount Senario alum who\u2019s at Exxon studied Middle Eastern languages and, beyond badminton, I don\u2019t know of any other hobby like slot\u2011car racing. Does that line up with who you\u2019re thinking of?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Rafael Cortez",
+      "content": "If the sculler from UWM in private equity is mid\u201140s, that likely matches someone I know \u2014 is that the same person? And for the Mount Senario alum at Exxon with a Middle Eastern languages degree: any other hobby beyond badminton, say something niche like slot\u2011car racing?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Oliver Thompson",
+      "content": "Yes \u2014 the UWM sculler in private equity is about our age, so that would be the same person I mentioned. And the Mount Senario alum who works at Exxon studied Middle Eastern languages and, beyond badminton, I don\u2019t know of any other hobby like slot\u2011car racing. Does that narrow it down for you, or do you have any other details to check?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Rafael Cortez",
+      "content": "If the UWM sculler in private equity works at Leonard Green & Partners or majored in Hispanic\u2011American Studies, that sounds like someone I know \u2014 can you confirm either of those details?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Oliver Thompson",
+      "content": "Yes \u2014 he\u2019s at Leonard Green & Partners and his major was Hispanic\u2011American Studies. Does that line up with the person you\u2019re thinking of?"
+    },
+    {
+      "turn": 10,
+      "speaker": "Rafael Cortez",
+      "content": "That matches someone I know \u2014 a UWM sculler now at Leonard Green with a Hispanic\u2011American Studies degree. Are we talking about the same person? Do you know him personally or just by reputation?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Oliver Thompson",
+      "content": "Yes \u2014 that\u2019s the same person. I know him personally; we met through the sculling group and I\u2019ve rowed with him a few times. Do you know him directly or only by reputation?"
+    },
+    {
+      "turn": 12,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

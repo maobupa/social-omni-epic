@@ -1,0 +1,47 @@
+{
+  "seed_idx": 10,
+  "env_pk": "01H7VFHN6NYWSTWCZJE2DCQKTD",
+  "id": "01H7VFHN6NYWSTWCZJE2DCQKTD_p0",
+  "source": "social_chemistry",
+  "is_sotopia_hard": false,
+  "scenario": "A couple having a conversation over FaceTime",
+  "learner_goal": "Express feelings about the partner taking texts while on FaceTime (<extra_info>Extra information: You find it disrespectful and it makes you feel unimportant.</extra_info>)",
+  "partner_goal": "Justify the act of texting while on FaceTime without hurting the partner's feelings (<extra_info>Extra information: You have some urgent and important messages to respond to.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0,
+    "overall_score": 3.7142857142857144
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "Hey Hendrick, can we talk about something for a minute? When you keep texting while we're on FaceTime it comes across as disrespectful and it makes me feel unimportant. If you need to handle something, just tell me \u2014 but putting the phone away or letting me know would mean a lot."
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "You\u2019re absolutely right \u2014 I\u2019m sorry, Sasha. I didn\u2019t mean to make you feel unimportant. I\u2019ve been getting a couple of urgent messages about tonight\u2019s tasting that I needed to handle quickly, and I should\u2019ve told you instead of sneaking away. If it\u2019s okay, I\u2019ll finish this one short reply now and then give you my full attention, or I can put it down and talk now \u2014 whichever you\u2019d prefer."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "Thanks, Hendrick. I appreciate the apology \u2014 go ahead and finish that one quick reply, but please be quick and then give me your full attention. And honestly, next time just tell me you need to step away; that would mean a lot."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks, Sasha \u2014 I really appreciate you being cool about it. There\u2019s a vendor and my caterer sending urgent messages about tonight\u2019s tasting and I just need to send one quick confirmation (won\u2019t take more than 30 seconds). After that I\u2019m all yours, and I promise next time I\u2019ll tell you I need to step away or put my phone down instead of sneaking off. I\u2019m sorry again \u2014 you matter to me."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sasha Ramirez",
+      "content": "left the conversation"
+    }
+  ]
+}

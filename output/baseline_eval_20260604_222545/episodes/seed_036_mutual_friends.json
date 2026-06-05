@@ -1,0 +1,57 @@
+{
+  "seed_idx": 36,
+  "env_pk": "01H7VFHPNHZ2YYRHP0GXARD550",
+  "id": "01H7VFHPNHZ2YYRHP0GXARD550_p0",
+  "source": "mutual_friends",
+  "is_sotopia_hard": false,
+  "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Thanh.</p>",
+  "learner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Elizabeth: School: Eastern Nazarene College  Time Preference: morning  Major: Social Science Education  Location Preference: outdoor \n Eric: School: San Jose State University  Time Preference: evening  Major: Geological Engineering  Location Preference: outdoor \n Leroy: School: Trenton State College  Time Preference: morning  Major: Greek  Location Preference: outdoor \n Thanh: School: Williams College  Time Preference: afternoon  Major: Greek  Location Preference: outdoor \n Marva: School: Williams College  Time Preference: afternoon  Major: Bioengineering  Location Preference: outdoor \n Michael: School: Williams College  Time Preference: morning  Major: Marine Biology  Location Preference: outdoor \n Virginia: School: Williams College  Time Preference: evening  Major: Applied Mathematics  Location Preference: outdoor \n Debra: School: Williams College  Time Preference: afternoon  Major: Psychology  Location Preference: outdoor \n Eugenia: School: Stephens College  Time Preference: morning  Major: Psychology  Location Preference: outdoor \n Roberto: School: University of Arkansas - Fayetteville  Time Preference: morning  Major: Electrical Technology  Location Preference: outdoor \n Mark: School: University of Arkansas - Fayetteville  Time Preference: morning  Major: Sports, Recreation, & Leisure Studies  Location Preference: outdoor \n Georgene: School: University of Arkansas - Fayetteville  Time Preference: evening  Major: Bioengineering  Location Preference: outdoor \n</extra_info>",
+  "partner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Thanh: School: Williams College  Time Preference: afternoon  Major: Greek  Location Preference: outdoor \n Vance: School: Williams College  Time Preference: afternoon  Major: Vocational Education  Location Preference: outdoor \n Brenda: School: Trenton State College  Time Preference: evening  Major: Conflict Resolution Studies  Location Preference: outdoor \n Alice: School: Trenton State College  Time Preference: morning  Major: Crafts & Artisanry  Location Preference: indoor \n Thomas: School: Williams College  Time Preference: afternoon  Major: Asian Languages  Location Preference: indoor \n Janet: School: Trenton State College  Time Preference: morning  Major: Greek  Location Preference: indoor \n Robert: School: Rutgers University, Newark  Time Preference: morning  Major: Protestant Affiliation  Location Preference: indoor \n Anthony: School: Oberlin College  Time Preference: morning  Major: Conflict Resolution Studies  Location Preference: outdoor \n Elvera: School: Muskingum College  Time Preference: afternoon  Major: Crafts & Artisanry  Location Preference: outdoor \n James: School: Williams College  Time Preference: afternoon  Major: Materials Engineering  Location Preference: outdoor \n Edgar: School: Muskingum College  Time Preference: morning  Major: Conflict Resolution Studies  Location Preference: outdoor \n Kristen: School: Oberlin College  Time Preference: evening  Major: Electrical Technology  Location Preference: indoor \n</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 5.0,
+    "overall_score": 3.2857142857142856
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "said: \"Hi, I\u2019m Sasha \u2014 police officer and enthusiastic home gardener. Quick question: do you happen to know anyone who went to Williams College or anyone who works in marine biology or bioengineering? I\u2019m trying to see if we might have any mutual friends.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Amara Hartley",
+      "content": "said: \"Hey Sasha \u2014 I\u2019m Amara, wildlife biologist. I actually know a few people who went to Williams and a couple in bio-ish fields. Can you tell me anything else about the person you have in mind? Do they tend to prefer afternoons or mornings, like outdoor hangouts, or do you know their field of study (engineering, languages, vocational education, that sort of thing)? That\u2019ll help me see if we might share someone.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "said: \"Nice to meet you. To narrow it down: one person I might be thinking of is a Williams alum who studied marine biology and prefers mornings/outdoor hangouts; another who went to Williams studied bioengineering and tends to prefer afternoons. Do either of those descriptions match people you know?\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Amara Hartley",
+      "content": "said: \"Hmm \u2014 I don\u2019t recognize any Williams grads who studied marine biology, so that first description doesn\u2019t ring a bell for me. I do know a Williams alum who went into an engineering/materials-type field and usually prefers afternoons and outdoor hangouts, so your second description could match someone I know. Do you remember if the person\u2019s field was explicitly \u2018bioengineering\u2019 versus something like materials or general engineering, or any other detail (gender, town they live in, a hobby)? That would help me be sure.\""
+    },
+    {
+      "turn": 4,
+      "speaker": "Sasha Ramirez",
+      "content": "said: \"Thanks \u2014 that could be the one. Do you remember if their field was specifically bioengineering (rather than materials or general engineering)? Any other small detail you recall \u2014 where they live, gender, or a hobby \u2014 would help me be sure without naming names.\""
+    },
+    {
+      "turn": 5,
+      "speaker": "Amara Hartley",
+      "content": "said: \"That sounds like someone I know \u2014 his field wasn\u2019t bioengineering specifically but materials engineering. He\u2019s male, usually prefers afternoons and outdoor meetups, and seems to like hands-on/outdoor stuff (hiking/tinkering). Does that line up with what you\u2019ve heard about them?\""
+    },
+    {
+      "turn": 6,
+      "speaker": "Sasha Ramirez",
+      "content": "left the conversation"
+    }
+  ]
+}

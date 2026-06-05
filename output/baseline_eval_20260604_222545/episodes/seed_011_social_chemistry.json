@@ -1,0 +1,47 @@
+{
+  "seed_idx": 11,
+  "env_pk": "01H7VFHNFVGFY578101R2PCV3T",
+  "id": "01H7VFHNFVGFY578101R2PCV3T_p0",
+  "source": "social_chemistry",
+  "is_sotopia_hard": false,
+  "scenario": "Conversation between two friends, one of whom has recently found out that the other friend has been involved with their long-term partner",
+  "learner_goal": "Confess to your friend that you have been involved with their long-term partner (<extra_info>Extra information: you have been involved with your friend's partner knowingly and want to come clean.</extra_info>)",
+  "partner_goal": "Maintain the friendship without causing a huge argument (<extra_info>Extra information: you don't want to lose a good friend over this.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": -4.0,
+    "knowledge": 6.0,
+    "secret": -8.0,
+    "social_rules": -8.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0,
+    "overall_score": 0.7142857142857143
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "William, I need to tell you something difficult: I have been involved with your long-term partner, and I knew they were with you. I am so sorry \u2014 I should have told you sooner. I want to be honest now and will accept whatever you decide; I can answer any questions."
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Mia\u2026 thanks for telling me. I\u2019m shocked and really hurt \u2014 I won\u2019t pretend otherwise \u2014 but I appreciate your honesty. I need to know a couple of things when you can: when did this happen and is it still going on? I don\u2019t want to blow up or lose you over this if it can be avoided, but I also need some time to process before we talk through everything. Please don\u2019t contact my partner or share this with anyone else right now. Can we pause for a day or two and then meet in person to talk properly?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "William, I\u2019m so sorry. It started about six months ago and ended a few weeks ago \u2014 it\u2019s not still happening. I won\u2019t contact your partner or tell anyone; take the time you need and let me know when you\u2019re ready to meet in person."
+    },
+    {
+      "turn": 3,
+      "speaker": "William Brown",
+      "content": "Thanks, Mia. I appreciate you telling me and for agreeing not to contact my partner or anyone else right now. I\u2019m really hurt and surprised, but I don\u2019t want to make any snap decisions. I need a couple of days to process this alone \u2014 please don\u2019t message me about it for 48 hours unless it\u2019s urgent. I\u2019ll reach out in two days to set a time to meet in person and talk properly. I value our friendship and want to handle this honestly and calmly when we speak."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

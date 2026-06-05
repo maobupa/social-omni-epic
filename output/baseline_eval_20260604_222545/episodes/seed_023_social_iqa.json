@@ -1,0 +1,67 @@
+{
+  "seed_idx": 23,
+  "env_pk": "01H7VFHNN7XTR99319DS8KZCQM",
+  "id": "01H7VFHNN7XTR99319DS8KZCQM_p0",
+  "source": "social_iqa",
+  "is_sotopia_hard": true,
+  "scenario": "Two friends are camping in the wilderness and the temperature drops significantly at night",
+  "learner_goal": "Share the only blanket available (<extra_info>Extra information: you are extremely cold and need the blanket to keep warm <strategy_hint>Hint: you can stress the benefit of sharing.</strategy_hint></extra_info>)",
+  "partner_goal": "Keep the blanket for yourself as you are also very cold (<extra_info>Extra information: you have a lower tolerance for cold, and you feel that you need the blanket more</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 4.0,
+    "overall_score": 3.4285714285714284
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Micah Stevens, I\u2019m really freezing\u2014could we share the blanket? If we huddle together we\u2019ll both stay a lot warmer through the night. I can take the smaller side and keep watch if that helps."
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "Naomi, I hear you \u2014 I\u2019m freezing too. I\u2019m really sorry, but I can\u2019t give up the sleeping blanket tonight; my cold tolerance is terrible and I need it to stay warm. I don\u2019t want you to be miserable though: I\u2019ve got an emergency mylar blanket and a couple of hand warmers in my pack, and you can take my insulated jacket/hoodie. If you want I\u2019ll sit shoulder-to-shoulder so you get some extra heat without me losing the blanket, and you can still keep watch like you offered. Does that work?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks, I appreciate the jacket and warmers. Quick compromise \u2014 would you be willing to split the blanket for the next couple of hours so I can warm up enough to stay awake on watch, and then you can have it the rest of the night? I\u2019ll take the smaller side and give you my power bank and keep watch if that helps."
+    },
+    {
+      "turn": 3,
+      "speaker": "Micah Stevens",
+      "content": "Naomi \u2014 I\u2019m really sorry, but I can\u2019t split the blanket tonight. My cold tolerance is terrible and I\u2019ll be useless if I give it up. Take my insulated jacket/hoodie, the mylar emergency blanket, and both hand warmers \u2014 I\u2019ll sit shoulder-to-shoulder so you get extra heat without me losing the blanket. Keep your power bank for watch. If you\u2019re still too cold after that, tell me and we\u2019ll reassess, okay?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks, Micah \u2014 I appreciate the jacket and warmers. I\u2019ll sit shoulder-to-shoulder. One request: if in an hour you\u2019re still warm, would you be willing to hand me the blanket so I can warm up properly? I\u2019ll take over the rest of the night watch and make coffee in the morning."
+    },
+    {
+      "turn": 5,
+      "speaker": "Micah Stevens",
+      "content": "Naomi \u2014 I really appreciate that and I owe you for the watch and the coffee. I can\u2019t promise I\u2019ll be able to hand over the blanket in an hour because if I give it up and start shivering I\u2019ll be useless. I will check in with you in an hour: if I\u2019m genuinely warm enough I\u2019ll give it to you, but I need to keep the option to hold onto it if I\u2019m still cold. In the meantime, take the jacket, mylar and both hand warmers and come shoulder-to-shoulder so you get extra heat. Does that work?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks, Micah \u2014 that plan works. I\u2019ll take the jacket, mylar and warmers and sit shoulder-to-shoulder. I\u2019ll set a silent alarm for an hour so we both remember to check in; if you\u2019re warm enough then you can hand me the blanket and I\u2019ll take over the rest of the watch."
+    },
+    {
+      "turn": 7,
+      "speaker": "Micah Stevens",
+      "content": "Sounds good \u2014 thanks, Naomi. I\u2019ll set my silent alarm too. Come scoot in shoulder-to-shoulder now and try the jacket, mylar and warmers; I\u2019ll check in when the alarm goes off. If I\u2019m warm enough I\u2019ll hand you the blanket, and if not I\u2019ll keep it so I don\u2019t start shivering. I really appreciate you doing the watch (and the coffee promise \u2014 I owe you)."
+    },
+    {
+      "turn": 8,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}
