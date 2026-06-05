@@ -95,6 +95,9 @@ def load_sotopia_seeds(
                 scenarios.append(SocialScenario(
                     id=f"{env_pk}_p{idx}",
                     target_agent_idx=idx,
+                    scenario_title=row.get("scenario_title"),
+                    social_dynamic=row.get("social_dynamic"),
+                    target_perspective=row.get("target_perspective"),
                     **common,
                 ))
 

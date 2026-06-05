@@ -149,7 +149,10 @@ Respond with valid JSON matching exactly this schema:
 
 
 def _format_scenario_for_prompt(s: SocialScenario, include_chronicle: bool = False) -> str:
-    d = {
+    d = {}
+    if s.scenario_title:
+        d["scenario_title"] = s.scenario_title
+    d.update({
         "scenario": s.scenario,
         "agent_profiles": [p.model_dump(exclude={"id"}) for p in s.agent_profiles],
         "relationship": s.relationship,
@@ -157,7 +160,7 @@ def _format_scenario_for_prompt(s: SocialScenario, include_chronicle: bool = Fal
         "interaction_type": s.interaction_type,
         "tag": s.tag,
         "difficulty_tags": s.difficulty_tags,
-    }
+    })
     # Generated scenarios carry structured goals; seeds carry only the flat (rendered) text.
     if any(sg is not None for sg in (s.structured_goals or [])):
         d["agent_structured_goals"] = [

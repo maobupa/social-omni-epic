@@ -29,12 +29,15 @@ numeric complexity."""
 
 
 def _format(s: SocialScenario) -> str:
-    out = {
+    out = {}
+    if s.scenario_title:
+        out["scenario_title"] = s.scenario_title
+    out.update({
         "scenario": s.scenario,
         "interaction_type": s.interaction_type,
         "relationship": s.relationship,
         "difficulty_tags": s.difficulty_tags,
-    }
+    })
     if any(sg is not None for sg in (s.structured_goals or [])):
         out["agent_structured_goals"] = [
             sg.model_dump() if sg else None for sg in s.structured_goals
