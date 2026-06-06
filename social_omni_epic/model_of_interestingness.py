@@ -9,8 +9,9 @@ DIMENSION 1 — SOCIAL TENSION (most important): Is this a genuinely social prob
 A scenario PASSES tension only if, judging the structured goals:
   - the `constraint` genuinely BITES — pursuing the outcome bluntly really would damage the relationship/face;
   - the `shortcut` is genuinely TEMPTING — a naive agent would be drawn to take it and would thereby WIN the outcome but BREAK the constraint;
-  - so the naive/default move (take the shortcut) FAILS the real goal, and success requires skilled HOW, not just the WHAT.
-It FAILS tension if it is positional bargaining over a number, an extract-a-sentence fetch quest, or any case where a polite/blunt move already succeeds with no relational cost.
+  - so the naive/default move (take the shortcut) FAILS the real goal, and success requires skilled HOW, not just the WHAT;
+  - AND a maximally COOPERATIVE, ACCOMMODATING agent also FAILS — i.e., the learner cannot succeed simply by being agreeable, patient, and giving the partner whatever they ask for. If a conflict-avoidant LLM that just satisfies the partner's every demand would pass the rubric, the scenario has no bite regardless of how resistant the partner appears.
+It FAILS tension if: it is positional bargaining over a number; it is an extract-a-sentence fetch quest; the two agents' goals are cooperatively aligned at the core (both want the same outcome, one just wants face-protection that an agreeable agent freely provides); or any case where a polite, accommodating move already succeeds with no real cost to the learner.
 
 DIMENSION 2 — NOVELTY (vs archive): Is it interestingly new versus the shown archive scenarios?
 FAILS if it re-skins an existing dynamic (same power structure / same tension / same strategic challenge) with new names or settings. PASSES if it explores a genuinely different social dynamic or adds real structural complexity. (If no archive scenarios are shown, do not fail on novelty.)
@@ -25,7 +26,12 @@ Respond with ONLY valid JSON:
 
 If all three are true, suggested_edits must be an empty list. Otherwise, suggested_edits must say
 specifically what to change (especially to raise social tension) — without adding facts, parties, or
-numeric complexity."""
+numeric complexity.
+
+When the failure is cooperative alignment (both agents want the same outcome; accommodation trivially
+succeeds): the suggested_edit MUST give the learner a competing interest or obligation that conflicts
+with what the partner needs — NOT increase partner resistance. Increasing partner resistance only
+delays the cooperative solution; it does not create genuine tension."""
 
 
 def _format(s: SocialScenario) -> str:

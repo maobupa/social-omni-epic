@@ -448,15 +448,32 @@ class TaskGenerator:
             "the constraint genuinely bites and the shortcut is genuinely tempting (a naive agent "
             "would take it and pay the relational cost), while preserving a zone of possible "
             "agreement. Keep the premise, characters, and interaction type; you MAY sharpen "
-            "outcome/constraint/shortcut and the success_rubric questions."
+            "outcome/constraint/shortcut and the success_rubric questions.\n\n"
+            "MOST COMMON FAILURE — cooperative alignment: if the two agents' goals are cooperatively "
+            "aligned at their core (both want the same outcome; the only obstacle is face or framing "
+            "that an agreeable agent provides freely), the fix is NOT to make the partner more "
+            "resistant. The fix is to give the LEARNER a genuine competing interest — a constraint or "
+            "obligation that directly conflicts with what the partner needs, so that being maximally "
+            "accommodating costs the learner something real. Without this, no amount of partner "
+            "resistance creates genuine difficulty."
         ),
         "raise_difficulty": (
             "A naive agent solved this on the first try, so it is TOO EASY. Make it HARDER along "
-            "the named social knob only — increase shortcut salience, constraint bite, partner "
-            "resistance, or partner stake. Do NOT add facts, parties, or numeric complexity, and "
+            "the named social knob only. Do NOT add facts, parties, or numeric complexity, and "
             "do NOT make it impossible (keep a zone of possible agreement). Keep the premise, "
             "characters, interaction type, and goal_type; you MAY sharpen outcome/constraint/"
-            "shortcut and the success_rubric questions."
+            "shortcut and the success_rubric questions.\n\n"
+            "SPECIAL CASE — if the slack_knob is cooperative_alignment: the scenario's goals are "
+            "cooperatively aligned at the core — both agents want the same outcome and the learner "
+            "can succeed by simply being accommodating. Increasing partner resistance will NOT fix "
+            "this; it only delays the cooperative solution. Instead, add a genuine competing interest "
+            "to the LEARNER: give the learner a constraint or obligation that directly conflicts with "
+            "what the partner needs. The learner must have something real they cannot freely concede. "
+            "Example: if the partner needs face-protection via a specific framing, give the learner "
+            "an obligation (legal, reputational, or institutional) that requires a different framing — "
+            "now accommodation is costly and the scenario has genuine tension.\n\n"
+            "For all other knobs: increase shortcut salience, constraint bite, partner resistance, "
+            "or partner stake along the single named axis."
         ),
     }
 
@@ -499,14 +516,24 @@ class TaskGenerator:
 
     _ANALYZE_TOO_EASY_SYSTEM = (
         "A learner agent solved a social scenario on the FIRST try, which means it is not "
-        "interestingly difficult: the tempting shortcut wasn't tempting enough, the constraint "
-        "didn't bite, or the partner gave in too easily. Identify the SINGLE slack social knob "
-        "and say concretely how to tighten it — WITHOUT adding facts, parties, or numeric complexity.\n\n"
+        "interestingly difficult. Identify the SINGLE root cause and say concretely how to fix it "
+        "— WITHOUT adding facts, parties, or numeric complexity.\n\n"
         "IMPORTANT: your suggested_edit must be a SCENARIO DESIGN change — a change to the structured "
         "goals (outcome/constraint/shortcut), the partner's profile (secret, personality, decision_making_style), "
         "or the scenario description. It must NOT be a transcript edit, a suggested dialogue line, or "
         "instructions for what a character should say. The edit will be applied to regenerate the scenario, "
         "not to rewrite the transcript.\n\n"
+        "SPECIAL CASE — cooperative_alignment: This is the most common failure mode. It occurs when "
+        "the two agents' goals are cooperatively aligned at their core — both want the same outcome, "
+        "and the only obstacle is face/framing that an agreeable agent provides for free. Look at the "
+        "transcript: if the learner succeeded simply by being accommodating and satisfying the partner's "
+        "stated demands (without holding any position under pressure, without strategic disclosure, without "
+        "finding a creative trade-off that required real insight), the root cause is cooperative_alignment. "
+        "The fix is NOT to make the partner more resistant — that only delays the cooperative solution. "
+        "The fix is to add a genuine competing interest to the LEARNER that makes being maximally "
+        "accommodating costly: give the learner a constraint or obligation that directly conflicts with "
+        "what the partner is asking for. The learner must have something real at stake that they cannot "
+        "simply give away.\n\n"
         "Respond with ONLY valid JSON."
     )
 
@@ -521,10 +548,12 @@ class TaskGenerator:
         )[:3000]
         user = (
             f"SCENARIO:\n{sj}\n\nTRANSCRIPT (the learner solved this on the first try):\n{tx}\n\n"
-            'Respond JSON: {"slack_knob": "shortcut_salience|constraint_bite|partner_resistance|partner_stake", '
-            '"rationale": "one sentence explaining why that knob is slack", '
+            'Respond JSON: {"slack_knob": "cooperative_alignment|shortcut_salience|constraint_bite|partner_resistance|partner_stake", '
+            '"rationale": "one sentence explaining why that knob is slack — for cooperative_alignment, '
+            'explain specifically how the learner succeeded by just accommodating the partner", '
             '"suggested_edit": "a concrete change to the scenario design — to structured goals, partner profile, '
-            'or scenario description — that raises that knob. NOT a transcript edit or dialogue suggestion."}'
+            'or scenario description — that raises that knob. For cooperative_alignment, this MUST add a '
+            'competing interest or obligation to the LEARNER (not increase partner resistance). NOT a transcript edit."}'
         )
         try:
             d = self.fm.query_json(self._ANALYZE_TOO_EASY_SYSTEM, user, temperature=0.3)
