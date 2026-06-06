@@ -591,6 +591,8 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
         )
     )
 
+    debug_output.pop("episode_results_partial", None)
+
     # Unpack loop_info into debug_output
     outcome = {"discarded": 0, "solved_after_biting": 2, "failed": 3}.get(terminal_state, 3)
     debug_output["outcome"] = outcome
