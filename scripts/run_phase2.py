@@ -82,10 +82,8 @@ def _select_anchor_and_examples(
     fm: FM,
     config: DictConfig,
 ) -> tuple[SocialScenario, int, list[SocialScenario]]:
-    """UCB1 select anchor; get KNN examples around it for proposer context."""
-    C = float(config.get("ucb1_C", 1.0))
-    D = float(config.get("ucb1_D", 0.1))
-    anchor_idx = archive.ucb1_select(C=C, D=D)
+    """Thompson Sampling anchor selection; get KNN examples around it for proposer context."""
+    anchor_idx = archive.thompson_select()
     anchor = archive.state.successful[anchor_idx]
 
     # KNN examples around anchor for the task generator context
@@ -329,6 +327,7 @@ def main(config: DictConfig) -> None:
             scenario.social_dynamic = title_data["social_dynamic"]
             scenario.target_perspective = title_data["target_perspective"]
 
+            scenario.prior_alpha, scenario.prior_beta = archive.child_prior_from_parent(anchor_idx)
             archive.add_successful(scenario)
             archive.record_child(anchor_idx)
 
@@ -396,6 +395,10 @@ def main(config: DictConfig) -> None:
         if terminal_state == "discarded":
             archive.add_failed_generation({"iteration": iteration, "reason": "discarded_too_easy"})
         elif terminal_state == "solved_after_biting":
+            # Record this success on the parent first, then inherit that posterior
+            # as the child's prior (hierarchical Thompson Sampling warm start).
+            archive.record_solved_child(anchor_idx)
+            scenario.prior_alpha, scenario.prior_beta = archive.child_prior_from_parent(anchor_idx)
             archive.add_successful(scenario)
             archive.record_child(anchor_idx)
             solved_count += 1

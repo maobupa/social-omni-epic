@@ -472,10 +472,10 @@ try:
     for s in seeds:
         seed_arch.add_successful(s)
 
-    N_SIM = 20   # simulate 20 UCB1 anchor picks
+    N_SIM = 20   # simulate 20 Thompson Sampling anchor picks
     sel_history = []
     for step in range(N_SIM):
-        idx  = seed_arch.ucb1_select()
+        idx  = seed_arch.thompson_select()
         task = seed_arch.state.successful[idx]
         sel_history.append({
             "step":               step,

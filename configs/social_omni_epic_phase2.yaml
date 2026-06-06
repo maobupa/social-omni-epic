@@ -38,9 +38,8 @@ judge:
 stopping:
   N: null
 
-# UCB1 task selection (§4.1)
-ucb1_C: 1.0     # exploration coefficient
-ucb1_D: 0.1     # child-penalty coefficient
+# Anchor selection: hierarchical Thompson Sampling (§4.1)
+# No tunable constants — priors are inherited from parent posteriors at child creation.
 
 # Task generator
 use_verbalized_sampling: false

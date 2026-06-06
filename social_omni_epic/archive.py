@@ -1,5 +1,4 @@
 import json
-import math
 from pathlib import Path
 
 import numpy as np
@@ -44,26 +43,37 @@ class Archive:
         self._total_selections = sum(s.n_i for s in self.state.successful)
 
     # ------------------------------------------------------------------
-    # UCB1 selection (§4.1)
-    # score(task) = C * sqrt(ln(N) / n_i) - D * n_children
-    # Tasks with n_i == 0 always get inf → chosen first.
+    # Hierarchical Thompson Sampling selection (§4.1)
+    #
+    # Each archive entry is modelled as a Bernoulli arm with unknown
+    # success rate p_i (probability of producing a solved-after-biting
+    # child).  We maintain a Beta posterior over p_i:
+    #
+    #   posterior_i ~ Beta(prior_alpha_i + n_solved_i,
+    #                      prior_beta_i  + n_i - n_solved_i)
+    #
+    # Original seeds start with a flat prior: Beta(1, 1).
+    # Generated children inherit the parent's posterior at birth, giving
+    # them a warm start that reflects structural similarity to a proven
+    # productive seed rather than treating them as completely unknown.
+    #
+    # At each selection step, sample once from every posterior and pick
+    # the argmax.  This naturally balances exploration (high uncertainty
+    # → wide distribution → occasionally sampled high) and exploitation
+    # (high solved rate → distribution peaks near 1 → consistently
+    # sampled high), with no tunable constants.
     # ------------------------------------------------------------------
 
-    def ucb1_select(self, C: float = 1.0, D: float = 0.1) -> int:
-        """Return archive index of the task selected as anchor by UCB1."""
-        n = self.size
-        if n == 0:
+    def thompson_select(self) -> int:
+        """Return archive index selected by hierarchical Thompson Sampling."""
+        if self.size == 0:
             return -1
-        N = max(self._total_selections, 1)
-        scores = []
+        samples = []
         for task in self.state.successful:
-            if task.n_i == 0:
-                scores.append(float("inf"))
-            else:
-                exploration = C * math.sqrt(math.log(N) / task.n_i)
-                penalty = D * task.n_children
-                scores.append(exploration - penalty)
-        return int(np.argmax(scores))
+            alpha = task.prior_alpha + task.n_solved
+            beta_param = task.prior_beta + (task.n_i - task.n_solved)
+            samples.append(np.random.beta(alpha, beta_param))
+        return int(np.argmax(samples))
 
     def record_selection(self, idx: int, iteration: int) -> None:
         """Mark task at idx as selected; update UCB1 bookkeeping."""
@@ -76,6 +86,25 @@ class Archive:
         """Increment n_children for the parent that spawned a new task."""
         if 0 <= parent_idx < self.size:
             self.state.successful[parent_idx].n_children += 1
+
+    def record_solved_child(self, parent_idx: int) -> None:
+        """Increment n_solved for the parent that produced a solved-after-biting child."""
+        if 0 <= parent_idx < self.size:
+            self.state.successful[parent_idx].n_solved += 1
+
+    def child_prior_from_parent(self, parent_idx: int) -> tuple[float, float]:
+        """Return (prior_alpha, prior_beta) a child should inherit from this parent.
+
+        The child's prior is the parent's current posterior — reflecting that a
+        child generated from a productive seed is structurally likely to be
+        productive itself, rather than starting from total ignorance.
+        """
+        if not (0 <= parent_idx < self.size):
+            return 1.0, 1.0
+        p = self.state.successful[parent_idx]
+        alpha = p.prior_alpha + p.n_solved
+        beta_param = p.prior_beta + (p.n_i - p.n_solved)
+        return float(alpha), float(beta_param)
 
     @property
     def size(self) -> int:

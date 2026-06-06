@@ -78,10 +78,17 @@ class SocialScenario(BaseModel):
     # Phase 2 — skills chronicle (§4.8)
     skills_final_md: Optional[str] = None
 
-    # Phase 2 — UCB1 bookkeeping (§4.1)
-    n_i: int = 0           # times chosen as anchor task
-    last_chosen: int = -1  # iteration index when last chosen
-    n_children: int = 0    # number of descendant scenarios generated from this task
+    # Phase 2 — anchor selection bookkeeping (§4.1)
+    n_i: int = 0            # times chosen as anchor
+    last_chosen: int = -1   # iteration index when last chosen
+    n_children: int = 0     # total descendant scenarios generated from this anchor
+    n_solved: int = 0       # children that reached solved_after_biting
+
+    # Hierarchical Thompson Sampling prior.
+    # Seeds: flat Beta(1,1) — no evidence.
+    # Generated children: parent's posterior at time of child creation.
+    prior_alpha: float = 1.0
+    prior_beta: float = 1.0
 
     def to_text_for_embedding(self) -> str:
         parts = []
