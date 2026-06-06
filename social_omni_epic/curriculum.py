@@ -63,6 +63,7 @@ async def run_episode_two_loop(
     scenario_to_sotopia_profiles,
     fm,
     config,
+    on_attempt_done=None,
 ) -> tuple:
     """Difficulty-calibration loop (D edits, ≤D+1 scenario versions) then skill-learning loop
     (K episode attempts: the biting failure is attempt 1, then up to K-1 reflection-driven retries).
@@ -124,9 +125,13 @@ async def run_episode_two_loop(
         if not result.goal_achieved:
             bit = True
             loop_info["difficulty_loop"].append(rec)
+            if on_attempt_done:
+                on_attempt_done(loop_info)
             break
         if d >= D:
             loop_info["difficulty_loop"].append(rec)
+            if on_attempt_done:
+                on_attempt_done(loop_info)
             break  # used all edits, still too easy
         feedback = task_gen.analyze_too_easy(scenario, clean_transcript(result.transcript))
         edited = task_gen.edit_scenario(
@@ -146,6 +151,8 @@ async def run_episode_two_loop(
             ],
         })
         loop_info["difficulty_loop"].append(rec)
+        if on_attempt_done:
+            on_attempt_done(loop_info)
         if not ok or edited is None:
             break
         scenario = edited
@@ -183,6 +190,8 @@ async def run_episode_two_loop(
         }
         if result.goal_achieved:
             loop_info["skill_attempts"].append(att_rec)
+            if on_attempt_done:
+                on_attempt_done(loop_info)
             solved = True
             break
         if attempt < K:
@@ -207,6 +216,8 @@ async def run_episode_two_loop(
             all_versions.append(deepcopy(current_chronicle))
             all_edit_reasons.update(ref_out.edit_reasons)
         loop_info["skill_attempts"].append(att_rec)
+        if on_attempt_done:
+            on_attempt_done(loop_info)
 
     outcome = 2 if solved else 3
     terminal_state = "solved_after_biting" if solved else "failed"

@@ -521,6 +521,28 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
     else:
         _run_single_episode_fn = run_single_episode
 
+    def _on_attempt_done(loop_info: dict) -> None:
+        """Flush partial loop results to disk after each episode attempt completes."""
+        debug_output["difficulty_loop"] = loop_info.get("difficulty_loop", [])
+        debug_output["difficulty_loop_summary"] = {
+            "bit": loop_info.get("bit", False),
+            "n_edits": loop_info.get("n_difficulty_edits", 0),
+        }
+        debug_output["episode_results"] = [
+            {
+                "attempt": att["attempt"],
+                "transcript_clean": att.get("transcript_clean", []),
+                "diagnostics_scores": att.get("diagnostics_scores", {}),
+                "rubric_results": att.get("rubric_results", []),
+                "solved": att.get("solved", False),
+                "reflection_diagnosis": att.get("reflection_diagnosis", ""),
+                "reflection_edit_reasons": att.get("reflection_edit_reasons", {}),
+                "adversarial_approved": att.get("adversarial_approved"),
+            }
+            for att in loop_info.get("skill_attempts", [])
+        ]
+        _flush(debug_output)
+
     scenario, terminal_state, outcome_int, final_scores, loop_info = asyncio.run(
         run_episode_two_loop(
             scenario=scenario,
@@ -535,6 +557,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
             scenario_to_sotopia_profiles=scenario_to_sotopia_profiles,
             fm=tfm,
             config=cfg,
+            on_attempt_done=_on_attempt_done,
         )
     )
 
@@ -549,9 +572,10 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
         "n_edits": loop_info.get("n_difficulty_edits", 0),
     }
 
-    # episode_results from skill_attempts
-    for att in loop_info.get("skill_attempts", []):
-        debug_output["episode_results"].append({
+    # episode_results — already written incrementally by _on_attempt_done; do a final
+    # authoritative overwrite here in case the last attempt's callback was skipped on error.
+    debug_output["episode_results"] = [
+        {
             "attempt": att["attempt"],
             "transcript_clean": att.get("transcript_clean", []),
             "diagnostics_scores": att.get("diagnostics_scores", {}),
@@ -560,7 +584,9 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
             "reflection_diagnosis": att.get("reflection_diagnosis", ""),
             "reflection_edit_reasons": att.get("reflection_edit_reasons", {}),
             "adversarial_approved": att.get("adversarial_approved"),
-        })
+        }
+        for att in loop_info.get("skill_attempts", [])
+    ]
 
     # Print transcripts and rubric results for each attempt
     for att in loop_info.get("skill_attempts", []):
