@@ -141,11 +141,18 @@ Run these after the main comparison is confirmed:
 |---|---|
 | **Archive-size curve** | OUR with N=20, 40, 60, 80 → plot held-out `goal` vs N. Tests "more experience → better performance" |
 | **Difficulty calibration** | OUR with D=0 (no difficulty ratchet; accept any scenario that bites on first try) vs D=2. Tests whether the calibration ratchet adds value beyond just having more generated scenarios |
+| **EXP-HARD** | ExpeL run on only the SOTOPIA-HARD subset (baseline GOAL < 7, roughly 30–40 seeds). Tests whether OUR's advantage over EXP comes from the curriculum mechanism or simply from the fact that OUR naturally concentrates training on hard scenarios via UCB1 |
 | **Structured chronicle vs ExpeL extraction** (optional) | OUR with structured XML chronicles (Condition/Guidance/Type/Dimension) injected at inference vs OUR with ExpeL-style extraction — both on the same generated scenarios. Tests whether structured distillation outperforms unstructured bullet rules given the same curriculum source |
 
 Note: "Generated vs SOTOPIA source" is **not** an ablation — it is the main comparison (OUR vs EXP). The primary experiment already tests this directly.
 
-The most important ablation is **Difficulty calibration** — it verifies that D=2 ratcheting, not simply having open-ended scenarios, drives the improvement. If D=0 matches D=2, the difficulty calibration loop is incidental; if D=2 > D=0, the ratchet is load-bearing.
+**EXP-HARD rationale (important to get right):** OUR's curriculum naturally gravitates toward seeds that are generatively productive — seeds from which the two-loop calibration can produce scenarios that bite. This is a property of the mechanism, not a design choice: UCB1 rewards seeds that yield solved-after-biting scenarios and penalizes seeds that yield discards. In practice this means OUR concentrates on a subset of seeds that skew hard. A reviewer could argue this distributional concentration, not the generation and calibration mechanism, explains OUR's advantage over EXP (which uniformly covers all 90 seeds including easy ones). EXP-HARD controls for this by giving ExpeL the same hard-skewed seed distribution.
+
+However, even if OUR ≈ EXP-HARD, the mechanism claim survives in part: EXP-HARD runs ExpeL on the original SOTOPIA scenarios for those hard seeds, while OUR runs the two-loop curriculum on *generated* scenarios adapted from those seeds. The generated scenarios are calibrated to the model's difficulty frontier in a novel context; the original SOTOPIA scenarios are at the seed's inherent difficulty level regardless of model. If OUR > EXP-HARD, the generation + calibration adds value beyond hard-seed selection. If OUR ≈ EXP-HARD, the contribution narrows to "hard-seed selection via self-calibration" rather than "open-ended generation."
+
+Note also: UCB1 gravitates toward seeds that are *generatively* productive, which is not the same as seeds that are hard in their original SOTOPIA form. A seed with SOTOPIA GOAL=9 (easy) might produce generatively hard scenarios; a seed with SOTOPIA GOAL=2 (hard) might still produce cooperative discards. EXP-HARD uses the static SOTOPIA-HARD label, not the UCB1-discovered productive subset — so the comparison is conservative (favorable to OUR).
+
+The most important ablation is **Difficulty calibration** — it verifies that D=2 ratcheting, not simply having open-ended scenarios, drives the improvement. If D=0 matches D=2, the difficulty calibration loop is incidental; if D=2 > D=0, the ratchet is load-bearing. **EXP-HARD** is the second most important: it answers whether the curriculum's self-calibrating concentration on hard seeds is itself the contribution, or whether the generation mechanism adds value on top of that.
 
 ---
 
