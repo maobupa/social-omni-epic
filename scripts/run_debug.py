@@ -496,6 +496,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
     # Steps 10-12: run_episode_two_loop (shared curriculum engine)
     # -----------------------------------------------------------------------
     print_step(f"Steps 10-12: Difficulty + Skill loop + Meta-reflection (D={args.difficulty_d}, K={args.max_attempts})")
+    tfm.set_step("Steps 10-12: Episode Loop")
 
     cfg = {
         "max_attempts": args.max_attempts,
@@ -528,6 +529,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
             "bit": loop_info.get("bit", False),
             "n_edits": loop_info.get("n_difficulty_edits", 0),
         }
+        skill_attempts = loop_info.get("skill_attempts", [])
         debug_output["episode_results"] = [
             {
                 "attempt": att["attempt"],
@@ -539,9 +541,29 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
                 "reflection_edit_reasons": att.get("reflection_edit_reasons", {}),
                 "adversarial_approved": att.get("adversarial_approved"),
             }
-            for att in loop_info.get("skill_attempts", [])
+            for att in skill_attempts
         ]
         _flush(debug_output)
+
+        # Print the most recent attempt's transcript immediately so it's visible live
+        if skill_attempts:
+            latest = skill_attempts[-1]
+            attempt_n = latest["attempt"]
+            clean = latest.get("transcript_clean", [])
+            if clean:
+                transcript_text = "\n".join(
+                    f"[T{t['turn']}] {t['speaker']}: {t['content']}" for t in clean
+                )
+                print_section(f"Transcript (attempt {attempt_n})", transcript_text)
+            rubric = latest.get("rubric_results", [])
+            if rubric:
+                rubric_text = "\n".join(
+                    f"  [{r.get('kind','?')}] verdict={r.get('verdict')} — {r.get('rationale','')[:120]}"
+                    for r in rubric
+                )
+                print_section(f"Rubric checks (attempt {attempt_n})", rubric_text)
+            solved = latest.get("solved", False)
+            print_info(f"Attempt {attempt_n} result: {'SOLVED ✓' if solved else 'FAILED ✗'}")
 
     scenario, terminal_state, outcome_int, final_scores, loop_info = asyncio.run(
         run_episode_two_loop(
@@ -558,6 +580,11 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
             fm=tfm,
             config=cfg,
             on_attempt_done=_on_attempt_done,
+            on_turn=lambda turns: print(
+                f"\r  [T{turns[-1]['turn'] if turns else '?'}] "
+                f"{turns[-1].get('speaker','?')}: "
+                f"{str(turns[-1].get('content',''))[:120]}"
+            ) if turns else None,
         )
     )
 

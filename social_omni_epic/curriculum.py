@@ -64,6 +64,7 @@ async def run_episode_two_loop(
     fm,
     config,
     on_attempt_done=None,
+    on_turn=None,
 ) -> tuple:
     """Difficulty-calibration loop (D edits, ≤D+1 scenario versions) then skill-learning loop
     (K episode attempts: the biting failure is attempt 1, then up to K-1 reflection-driven retries).
@@ -105,6 +106,7 @@ async def run_episode_two_loop(
             rubric=rubric,
             partner_profile=partner_profile,
             judge_self_consistency_k=judge_k,
+            on_turn=on_turn,
         )
 
     # ---- Loop 1: difficulty calibration — ratchet up until attempt-1 fails (bites) ----
