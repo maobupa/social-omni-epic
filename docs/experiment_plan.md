@@ -84,12 +84,20 @@ Additionally, run the archive-size ablation (§6) which requires N = 20, 40, 60,
 
 Both EXP and OUR inject ICL context into the learner's prompt before each test episode. The retrieval must be symmetric.
 
+### 5.0 Embedding key (shared by both conditions)
+
+Retrieval uses `to_text_for_embedding()`, which concatenates: `scenario_title` (if present), scenario prose, interaction type, relationship, and learner/partner goals. The `scenario_title` is a structured abstract label ("social dynamic | learner vantage point") that gives the embedding strong structural signal beyond raw surface prose.
+
+**All training scenarios already have titles:** SOTOPIA seeds have pre-computed titles in `sotopia_90_seeds.jsonl`; generated scenarios receive titles from `title_gen` at the end of each curriculum run.
+
+**Held-out test scenarios need titles pre-generated:** Before running external eval on the held-out SOTOPIA-PI set, run `title_gen` on every held-out scenario (oriented to the correct `target_agent_idx`) and store the titles in the held-out JSONL. This must be done once offline and applies identically to both EXP and OUR retrieval — do not generate titles only for one condition.
+
 ### 5.1 ExpeL retrieval
-- Inject: full insight list (all extracted rules) + top-k=3 most similar successful SOTOPIA transcripts, retrieved by scenario embedding similarity
+- Inject: full insight list (all extracted rules) + top-k=3 most similar successful SOTOPIA transcripts, retrieved by title-enriched embedding similarity
 - This matches ExpeL's standard inference protocol
 
 ### 5.2 Our retrieval
-- Inject: full insight list (all extracted rules from generated transcripts) + top-k=3 most similar generated transcripts, retrieved by scenario embedding similarity
+- Inject: full insight list (all extracted rules from generated transcripts) + top-k=3 most similar generated transcripts, retrieved by title-enriched embedding similarity
 - Same format as EXP — the insight list and transcripts both come from the generated archive instead of the SOTOPIA training set
 
 ### 5.3 Vanilla and CoT
