@@ -51,6 +51,12 @@ Rules:
 - Achievable within a two-party spoken conversation. No external artifacts/sign-offs.
 - BANNED: extracting a specific spoken sentence ("get them to say X"); pure number-splitting /
   positional bargaining with no relational cost; a constraint with no tempting shortcut.
+- PARTNER'S NATURAL OFFER MUST NOT SUFFICE: before finalising, ask — "if the learner simply
+  waits and accepts whatever the partner naturally proposes, does the partner's lowest-cost,
+  face-saving offer already satisfy the learner's outcome check?" If YES, the scenario has no
+  real difficulty: the partner hands the learner their outcome for free. The learner must face
+  a situation where the partner's natural move is insufficient — forcing the learner to actively
+  shape the outcome through skilled engagement rather than mere acceptance.
 
 SUCCESS RUBRIC — author the checkable success conditions for the LEARNER (write them for
 agent 0; the designated learner is fixed later). CRITICAL POLARITY: phrase EVERY check so that a
