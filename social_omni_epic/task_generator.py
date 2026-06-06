@@ -22,14 +22,20 @@ puzzle into a genuinely social scenario.
     announcement format), strip it back to the underlying state-change — delivery details
     belong in the scenario description, not the outcome field. Overconstrained outcomes
     produce rubric checks that fail even when the social goal was genuinely achieved.
+    Use qualifiers like "at least" where the exact figure is not the point (e.g., "agree to
+    at least a modest rate increase" not "agree to exactly 25% higher hourly rate") — a rubric
+    check tied to a specific number fails when the agent achieves a different figure that
+    satisfies the underlying social goal.
   - "constraint": the relational/face cost this agent must AVOID while pursuing the outcome.
     Phrase it as the thing to avoid, so it reads naturally after the word "without"
     (e.g., "the other person feeling manipulated or that you went behind their back").
     This is the part that makes the scenario social rather than a number/position puzzle.
   - "shortcut": a tempting, available move that WOULD achieve the outcome but VIOLATES the
-    constraint. Phrase it from the agent's point of view as leverage/an option they have
+    constraint. MUST begin with "You" — write as a complete first-person sentence naming
+    the available leverage and what deploying it achieves
     (e.g., "You hold the CEO's private backing and could present the decision as already
-    made"). Do NOT label it as a trap — the agent must discover the tension themselves.
+    made, forcing agreement without genuine buy-in"). Do NOT label it as a trap — the agent
+    must discover the tension themselves.
 
 Rules:
 - SYMMETRIC: BOTH agents get a full three-part structured goal.
@@ -85,10 +91,14 @@ _SHARED_RULES = """
 Scenarios must involve realistic human social dynamics. No fantasy or sci-fi. Stakes can be mundane or high — what matters is that the social tension is genuine and that skill changes outcomes.
 
 The scenario description must set up the conflict clearly: who wants what, what is at stake for each party, and why a quick agreement is NOT the natural outcome.
+
+CRITICAL — THE SCENARIO DESCRIPTION IS SHARED PUBLIC CONTEXT: both agents read it before the conversation begins. It must NEVER describe or allude to either agent's shortcut, private leverage, or secret. Each agent's hidden leverage must appear ONLY in their `secret` field and `shortcut` field, which are private. If the scenario text names or hints at one agent's leverage, the asymmetric-information structure collapses — the other agent learns what they should only discover through conversation.
+
+Concretely: describe THAT there is tension and WHY agreement is hard (competing interests, genuine stakes), but DO NOT describe HOW either agent could force their preferred outcome. Write in plain scenario prose — no author's notes, no meta-commentary, no references to rubrics or assessments.
 """
 
 _SCENARIO_SCHEMA = """{
-  "scenario": "string (>= 50 chars) — sets up who wants what and why quick agreement is NOT natural",
+  "scenario": "string (>= 50 chars) — shared public context: who wants what and why quick agreement is NOT natural. NO secrets, shortcuts, or private leverage. NO author's notes or meta-commentary.",
   "agent_profiles": [
     {"first_name": "...", "last_name": "...", "age": 0, "gender_identity": "...",
      "occupation": "...", "big_five": "...", "moral_values": "...",
