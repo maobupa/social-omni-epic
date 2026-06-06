@@ -580,13 +580,14 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
             fm=tfm,
             config=cfg,
             on_attempt_done=_on_attempt_done,
-            on_turn=lambda turns: (
-                lambda agent_turns: print(
-                    f"  [T{agent_turns[-1]['turn']}] "
-                    f"{agent_turns[-1].get('sender','?')}: "
-                    f"{str(agent_turns[-1].get('content',''))[:120]}"
-                ) if agent_turns else None
-            )([t for t in turns if t.get("sender") != "Environment" and "did nothing" not in t.get("content", "")]),
+            on_turn=lambda turns: [
+                debug_output.update({
+                    "episode_results_partial": {
+                        "transcript_so_far": _clean_transcript(turns),
+                    }
+                }),
+                _flush(debug_output),
+            ],
         )
     )
 
