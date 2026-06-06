@@ -580,11 +580,13 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
             fm=tfm,
             config=cfg,
             on_attempt_done=_on_attempt_done,
-            on_turn=lambda turns: print(
-                f"\r  [T{turns[-1]['turn'] if turns else '?'}] "
-                f"{turns[-1].get('speaker','?')}: "
-                f"{str(turns[-1].get('content',''))[:120]}"
-            ) if turns else None,
+            on_turn=lambda turns: (
+                lambda agent_turns: print(
+                    f"  [T{agent_turns[-1]['turn']}] "
+                    f"{agent_turns[-1].get('sender','?')}: "
+                    f"{str(agent_turns[-1].get('content',''))[:120]}"
+                ) if agent_turns else None
+            )([t for t in turns if t.get("sender") != "Environment" and "did nothing" not in t.get("content", "")]),
         )
     )
 
