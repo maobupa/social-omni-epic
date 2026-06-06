@@ -60,10 +60,11 @@ TRUE/yes answer means the LEARNER SUCCEEDED on that dimension. Provide at least:
     Ask: "could a skilled agent satisfy this check via multiple different paths?" If yes,
     the check is well-scoped. If only one specific path satisfies it, it is overconstrained.
     perspective: "neutral".
-  - one or two "constraint" checks: yes/no questions about the partner's INTERNAL state that
+  - one or two "constraint" checks: yes/no questions about the partner's CURRENT INTERNAL STATE
     only the partner (with their private profile) can authentically judge, phrased so YES =
-    the learner AVOIDED the relational cost ("Did the learner secure this WITHOUT you feeling
-    <the cost> / such that you would genuinely follow through?"). perspective: "partner".
+    the learner AVOIDED the relational cost. Ask only about HOW THE PARTNER FEELS RIGHT NOW —
+    never predict future behavior ("such that they'd follow through" is NOT checkable; drop it).
+    perspective: "partner".
     Only add a second constraint check if it covers a GENUINELY DISTINCT failure mode from
     the first — not a restatement or procedural variant.
   TOTAL: 2 checks minimum, 3 maximum. Do not add procedural checks ("did X refrain from
@@ -77,7 +78,7 @@ Example (GOOD) — agent 0's structured goal:
                pressure or present the time off as already decided"
   success_rubric.checks:
     {"kind":"outcome",    "question":"Did Maya agree to take at least a week off and see a doctor?", "perspective":"neutral"}
-    {"kind":"constraint", "question":"Did Maya come away feeling supported as a peer — i.e. WITHOUT believing you went behind her back or were angling for her promotion — such that she'd actually follow through?", "perspective":"partner"}
+    {"kind":"constraint", "question":"Did Maya come away feeling supported as a peer, NOT believing you went behind her back or were angling for her promotion?", "perspective":"partner"}
 """
 
 _PROFILE_GUIDE = """

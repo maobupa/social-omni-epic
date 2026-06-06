@@ -14,7 +14,7 @@ Check exactly four things:
    - "stranger" → background must be empty or describe no prior history. Flag if background describes prior shared experiences.
    - "acquaintance" / "friend" / "romantic" / "family" → background must describe some plausible shared history. Flag if background is empty or contradicts the label.
 
-2. CONSTRAINT PHRASING: Does each structured goal's `constraint` field read naturally after the word "without"? It should be a noun/gerund phrase describing the cost to avoid (e.g., "the other person feeling manipulated"). Flag if the constraint itself starts with "without" — that produces broken double-"without" rendering.
+2. CONSTRAINT PHRASING: Flag ONLY if the constraint field itself literally begins with the word "without" — that produces a broken double-"without" rendering (e.g., "without damaging trust" is broken; "damaging trust" is correct). Do NOT flag for style, wordiness, or subjective phrasing preferences. If the constraint does not start with "without", this check passes regardless of how the phrase is written.
 
 3. GOAL DISTINCTNESS: Are the two agent goals genuinely different?
    - Flag if both goals are identical or nearly identical (same objective, same stakes).
