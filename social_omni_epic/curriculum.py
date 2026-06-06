@@ -123,6 +123,7 @@ async def run_episode_two_loop(
             "d": d,
             "attempt1_solved": bool(result.goal_achieved),
             "rubric_results": result.rubric_results,
+            "transcript_clean": clean_transcript(result.transcript),
         }
         if not result.goal_achieved:
             bit = True
