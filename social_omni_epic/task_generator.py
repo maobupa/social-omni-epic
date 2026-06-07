@@ -77,6 +77,18 @@ TRUE/yes answer means the LEARNER SUCCEEDED on that dimension. Provide at least:
   doing Y during the conversation") — only outcome state and partner internal state.
   Both questions must be frozen once written and reused across all attempts.
 
+DELIVERY-MECHANISM TRAP — the most common outcome check error. These are all bad:
+  BAD: "Did the other person initial or sign a written acknowledgment of the agreement?"
+  BAD: "Did the other person send a follow-up message confirming the decision?"
+  BAD: "Did the other person say the word 'promise' or use explicit commitment language?"
+  BAD: "Did the other person complete the action during this conversation?"
+  Each fails a skilled agent who achieved genuine buy-in via a different path. An independent
+  evaluator would score GOAL=10 on those transcripts; the rubric would say failure. That is a
+  rubric error, not a social failure. The fix: ask about the STATE-CHANGE, not the delivery
+  format. The outcome check must be answerable YES even if the agent used a completely
+  different conversational path than expected.
+  GOOD: "Did the other person agree to [the core ask]?" — passes via any form of genuine agreement.
+
 Example (GOOD) — agent 0's structured goal:
   outcome:    "get Maya to agree to take at least a week off and see a doctor"
   constraint: "Maya feeling you are angling for her promotion or going behind her back"

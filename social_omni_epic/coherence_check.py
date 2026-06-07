@@ -39,6 +39,7 @@ Check exactly four things:
    - Flag if any check is procedural ("did X refrain from doing Y during the conversation") rather than testing an outcome state or partner internal state.
    - Flag if any success_rubric check is NOT genuinely checkable (a neutral 'outcome' check must be answerable from the transcript; a 'partner' constraint check must be about the partner's internal state), or if a check is TRIVIALLY satisfiable by the naive/blunt move (then it has no bite).
    - Flag if the outcome is an extractable utterance ("get them to say X") or pure number-splitting rather than a genuine state-change requiring buy-in.
+   - Flag if the outcome check tests a delivery mechanism rather than the core state-change: checks that require a signature, written acknowledgment, specific spoken phrase, or completion of an action during the conversation are delivery-mechanism checks. The correct form is always "Did [partner] agree to [core ask]?" — not "Did [partner] sign/confirm/say/complete X?"
    - NOTE: the success_rubric evaluates ONLY the learner (agent 0). Do NOT flag the rubric for failing to cover agent 1's goal — this is by design.
 
 Return JSON: {"passed": true/false, "issues": ["specific issue 1", "specific issue 2", ...]}
