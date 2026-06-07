@@ -160,21 +160,36 @@ def stage_gather(args, fm, out_dir):
     seeds = load_sotopia_seeds(seeds_path=args.train_seeds, limit=args.n_seeds,
                                both_perspectives=False)
     print(f"[gather] {len(seeds)} training seeds, up to {args.max_trials} attempts each")
-    succeeded, failed, idx2task = gather_trajectories(
+
+    path = out_dir / "trajectories.json"
+    # Per-seed checkpoint so a long unattended run survives crashes/restarts.
+    # Atomic write (temp + replace) so a crash mid-write can't corrupt it.
+    def _checkpoint(s, f, i, c):
+        tmp = path.with_suffix(".json.tmp")
+        tmp.write_text(json.dumps(trajectories_to_dict(s, f, i, c), indent=2, default=str))
+        os.replace(tmp, path)
+
+    initial_state = None
+    if args.resume and path.exists():
+        initial_state = json.loads(path.read_text())
+        done = len(initial_state.get("completed_idx", []))
+        print(f"[gather] --resume: found checkpoint with {done} completed scenarios")
+
+    succeeded, failed, idx2task, completed = gather_trajectories(
         scenarios=seeds, fm=fm,
         learner_model=args.learner_model, partner_model=args.partner_model,
         max_trials=args.max_trials, max_turns=args.max_turns,
         goal_threshold=GOAL_SUCCESS_THRESHOLD,
         on_log=print,
+        initial_state=initial_state,
+        on_progress=_checkpoint,
     )
     n_succ_tasks = sum(1 for v in succeeded.values() if v)
     n_fail_trajs = sum(len(v) for v in failed.values())
     n_succ_trajs = sum(len(v) for v in succeeded.values())
     print(f"[gather] tasks with ≥1 success: {n_succ_tasks}/{len(seeds)} | "
           f"success trajs: {n_succ_trajs} | failure trajs: {n_fail_trajs}")
-    path = out_dir / "trajectories.json"
-    path.write_text(json.dumps(trajectories_to_dict(succeeded, failed, idx2task),
-                               indent=2, default=str))
+    _checkpoint(succeeded, failed, idx2task, completed)  # final flush
     print(f"[gather] wrote {path}")
     return succeeded, failed, idx2task
 
@@ -256,9 +271,20 @@ def stage_eval(args, fm, out_dir):
 
     results = []
     for i, scenario in enumerate(eval_seeds):
+        source = scenario.interaction_type or "unknown"
+        safe = source.replace("/", "_").replace(" ", "_")
+        ep_file = episodes_dir / f"eval_{i:03d}_{safe}.json"
+        # Resume: reuse an already-scored episode instead of re-running it.
+        if args.resume and ep_file.exists():
+            try:
+                results.append(json.loads(ep_file.read_text()))
+                print(f"[{i+1:3d}/{len(eval_seeds)}] {source:<22} | RESUMED (cached)")
+                continue
+            except Exception:
+                pass  # corrupt cache — fall through and re-run
+
         env_profile, agent_profiles = scenario_to_sotopia_profiles(scenario)
         learner_goal = env_profile.agent_goals[0] if env_profile.agent_goals else ""
-        source = scenario.interaction_type or "unknown"
         rules = fold_rules_for_idx.get(i, combined_rules)
 
         fewshots = []
@@ -306,9 +332,7 @@ def stage_eval(args, fm, out_dir):
             record["error"] = error
         results.append(record)
 
-        safe = source.replace("/", "_").replace(" ", "_")
-        (episodes_dir / f"eval_{i:03d}_{safe}.json").write_text(
-            json.dumps(record, indent=2, default=str))
+        ep_file.write_text(json.dumps(record, indent=2, default=str))
 
         summary = _build_summary(results, args.learner_model, args.partner_model,
                                  eval_path, config)
@@ -339,6 +363,8 @@ def main():
     ap.add_argument("--learner-model", type=str, default=None)
     ap.add_argument("--partner-model", type=str, default=None)
     ap.add_argument("--max-turns", type=int, default=20)
+    ap.add_argument("--resume", action="store_true", default=False,
+                    help="Resume from existing checkpoints (skip gathered seeds / scored episodes)")
     # gather
     ap.add_argument("--max-trials", type=int, default=3,
                     help="Reflexion attempts per training scenario (ExpeL default depth)")

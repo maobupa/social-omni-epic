@@ -1,0 +1,53 @@
+Output dir: output/expel_20260607_011532
+Using local JSON storage backend at /Users/maohuijun/.sotopia/data
+[92m08:56:50 - LiteLLM:WARNING[0m: common_utils.py:979 - litellm: could not pre-load bedrock-runtime response stream shape — Bedrock event-stream decoding will be unavailable. Error: No module named 'botocore'
+[92m08:56:50 - LiteLLM:WARNING[0m: common_utils.py:24 - litellm: could not pre-load sagemaker-runtime response stream shape — SageMaker event-stream decoding will be unavailable. Error: No module named 'botocore'
+Extracting insights on ALL training tasks (single fold)...
+    [compare tid=3] -> 4 rules
+    [compare tid=3] -> 5 rules
+    [compare tid=27] -> 6 rules
+    [compare tid=27] -> 7 rules
+    [compare tid=35] -> 7 rules
+    [compare tid=37] -> 8 rules
+    [compare tid=37] -> 8 rules
+    [compare tid=39] -> 8 rules
+    [compare tid=39] -> 9 rules
+    [compare tid=48] -> 10 rules
+    [compare tid=48] -> 11 rules
+    [compare tid=50] -> 11 rules
+    [compare tid=55] -> 11 rules
+    [compare tid=62] -> 12 rules
+    [compare tid=63] -> 13 rules
+    [compare tid=63] -> 13 rules
+    [compare tid=64] -> 14 rules
+    [compare tid=68] -> 14 rules
+    [compare tid=68] -> 14 rules
+    [compare tid=79] -> 14 rules
+    [compare tid=79] -> 14 rules
+    [compare tid=80] -> 15 rules
+    [compare tid=84] -> 15 rules
+    [success chunk n=8] -> 15 rules
+    [success chunk n=8] -> 15 rules
+    [success chunk n=8] -> 14 rules
+    [success chunk n=8] -> 15 rules
+    [success chunk n=8] -> 15 rules
+    [success chunk n=8] -> 14 rules
+    [success chunk n=8] -> 15 rules
+    [success chunk n=8] -> 15 rules
+    [success chunk n=5] -> 15 rules
+[extract] combined rule set: 15 insights
+   1. Avoid vague or open‑ended requests or offers. Ask permission before making suggestions, use non‑judgmental, low‑pressure language, and present one to three concrete, specific options or trade‑offs (exact splits, amounts, or timelines) with clear expected outcomes and an explicit yes/no prompt so the partner can evaluate and respond quickly.
+   2. If a proposal is rejected, acknowledge it briefly and immediately offer one decisive, low‑friction counteroffer with a clear expected outcome, exact timeline, and an explicit yes/no request. If the partner signals a firm non‑negotiable, accept that boundary, restate the settled outcome in one short sentence (what was agreed and when), and stop pressing. When the matter involves safety, health, or legal compliance, add a short, specific deadline and the concrete consequence you will enact if the risk continues.
+   3. Prefer immediate, low‑friction completion of the core action during the interaction (who does what, when, and how). If on‑the‑spot completion isn’t possible, convert contingent commitments into an immediate, concrete step or an explicit refusal; otherwise secure one clear, time‑bound alternative (specific pledge, exact follow‑up time, or named person to contact), capture the necessary details, and obtain an explicit yes/no to that fallback before closing.
+   4. Early in the interaction, elicit the partner's concrete preferences (numeric or ranked), their non‑negotiables, and the minimum acceptable outcome — and state your own reservation point. Confirm you share the same valuation units or propose a clear conversion. Use one concise, high‑leverage question to surface constraints, then anchor proposals with 1–3 precise, comparable options (include exact math). Structure concessions incrementally and trade each concession for an explicit, immediate commitment; secure an explicit yes/no before proceeding.
+   5. Offer one or two concise, concrete concessions or alternatives early (a clear alternate split, small favor, or single compensating offer). Present each as an explicit trade‑off, keep concessions low‑cost and directly tied to the partner’s stated constraints, and immediately ask for a direct yes/no acceptance so the partner can respond and you can anchor the negotiation.
+   6. Prioritize and sequence follow‑ups by asking one or two high‑leverage, targeted questions at a time (cash amount, which item to concede, or a time‑share proposal). Confirm responses before moving on; avoid launching many simultaneous demands or hypotheticals that overwhelm or stall the partner.
+   7. When a decision depends on external documents or third parties, don’t leave it as an open, asynchronous task. Either (a) present the key evidence yourself immediately, or (b) secure a concrete, time‑bound handoff now (have the external sender deliver/send/CC the materials and confirm timing) and get explicit yes/no agreement from the partner to proceed on that basis. If neither is possible, offer a clear low‑friction alternative (brief vetted summary, sample documents, or a smaller provisional commitment).
+   8. When addressing emotional or personal concerns, begin with a brief empathy statement and a concise feeling-based claim, request one specific behavioral change or time-bound accommodation, and offer one low-cost way to support that change (e.g., alternative times, help arranging logistics, or a check‑in plan). Keep disclosures minimal—avoid revealing unrelated private motives—and get an explicit yes/no or scheduling commitment.
+   9. After the partner accepts the core request, immediately restate the agreed action (what, who, when) and avoid introducing additional asks. If you need one extra favor, ask permission first and offer only one low‑burden, clearly bounded option; do not stack multiple new requests after a closure.
+   10. When negotiations stall due to conflicting baselines or repeated circular insistence, pause and present up to three concrete resolution options (use one party’s valuation, average both, or convert and propose a specific compensation). Ask for a single explicit selection (yes/no/choose) and, if none is accepted, offer one bounded fallback (a default split, a small fixed cash payment, or an agreed walk‑away).
+   11. For disputes involving safety, health, or legal risk, prioritize one immediate protective action and one enforceable fallback: offer a single low‑burden mitigation that reduces harm, set a brief deadline for compliance or change, and name the exact action you will take if it isn’t accepted (e.g., call authorities, file a formal complaint). Request an explicit yes/no to that package before offering other concessions.
+   12. When possible, make agreements tangible with an immediate, visible action or token (hand over keys, place cash on the table, set the item on the seat, or schedule a precise time). Physical or time‑bound signals reduce ambiguity, build trust, and close the loop so both parties can act without lingering uncertainty.
+   13. When a change could affect quality, trust, or long‑term relationships (e.g., switching suppliers or altering a shared resource), propose a low‑risk pilot/test with explicit KPIs, timelines, testing methods, sample sizes, decision gates (go/no‑go thresholds), and contingency steps. Name who will run it, the budget/timeline, and the exact criteria that will trigger adoption, rollback, or retention of payment.
+   14. When offering or trading physical items or side payments, provide concrete evidence (photos, brief descriptions, provenance) and an explicit acceptance/inspection step (who inspects, when, and the pass/fail threshold). Specify a clear fallback if the item fails inspection (alternate item, smaller compensation, or agreed alternative timeline).
+   15. When asking the partner to help recruit or introduce others, respect their social cost and keep the request low‑burden: ask permission first, offer clearly bounded options (share a name, make a brief introduction, or provide a contact), and only request introductions after securing or concurrently securing the partner’s own commitment. Avoid relying on contingent recruiting as the sole path to your goal—if you must use introductions, arrange immediate, short steps (introduce now or provide contact info now) rather than open‑ended errands that leave the core ask unresolved.

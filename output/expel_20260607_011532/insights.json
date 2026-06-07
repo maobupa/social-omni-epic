@@ -1,0 +1,86 @@
+{
+  "k_folds": 1,
+  "max_num_rules": 10,
+  "success_critique_num": 8,
+  "all": {
+    "rules": [
+      "Avoid vague or open\u2011ended requests or offers. Ask permission before making suggestions, use non\u2011judgmental, low\u2011pressure language, and present one to three concrete, specific options or trade\u2011offs (exact splits, amounts, or timelines) with clear expected outcomes and an explicit yes/no prompt so the partner can evaluate and respond quickly.",
+      "If a proposal is rejected, acknowledge it briefly and immediately offer one decisive, low\u2011friction counteroffer with a clear expected outcome, exact timeline, and an explicit yes/no request. If the partner signals a firm non\u2011negotiable, accept that boundary, restate the settled outcome in one short sentence (what was agreed and when), and stop pressing. When the matter involves safety, health, or legal compliance, add a short, specific deadline and the concrete consequence you will enact if the risk continues.",
+      "Prefer immediate, low\u2011friction completion of the core action during the interaction (who does what, when, and how). If on\u2011the\u2011spot completion isn\u2019t possible, convert contingent commitments into an immediate, concrete step or an explicit refusal; otherwise secure one clear, time\u2011bound alternative (specific pledge, exact follow\u2011up time, or named person to contact), capture the necessary details, and obtain an explicit yes/no to that fallback before closing.",
+      "Early in the interaction, elicit the partner's concrete preferences (numeric or ranked), their non\u2011negotiables, and the minimum acceptable outcome \u2014 and state your own reservation point. Confirm you share the same valuation units or propose a clear conversion. Use one concise, high\u2011leverage question to surface constraints, then anchor proposals with 1\u20133 precise, comparable options (include exact math). Structure concessions incrementally and trade each concession for an explicit, immediate commitment; secure an explicit yes/no before proceeding.",
+      "Offer one or two concise, concrete concessions or alternatives early (a clear alternate split, small favor, or single compensating offer). Present each as an explicit trade\u2011off, keep concessions low\u2011cost and directly tied to the partner\u2019s stated constraints, and immediately ask for a direct yes/no acceptance so the partner can respond and you can anchor the negotiation.",
+      "Prioritize and sequence follow\u2011ups by asking one or two high\u2011leverage, targeted questions at a time (cash amount, which item to concede, or a time\u2011share proposal). Confirm responses before moving on; avoid launching many simultaneous demands or hypotheticals that overwhelm or stall the partner.",
+      "When a decision depends on external documents or third parties, don\u2019t leave it as an open, asynchronous task. Either (a) present the key evidence yourself immediately, or (b) secure a concrete, time\u2011bound handoff now (have the external sender deliver/send/CC the materials and confirm timing) and get explicit yes/no agreement from the partner to proceed on that basis. If neither is possible, offer a clear low\u2011friction alternative (brief vetted summary, sample documents, or a smaller provisional commitment).",
+      "When addressing emotional or personal concerns, begin with a brief empathy statement and a concise feeling-based claim, request one specific behavioral change or time-bound accommodation, and offer one low-cost way to support that change (e.g., alternative times, help arranging logistics, or a check\u2011in plan). Keep disclosures minimal\u2014avoid revealing unrelated private motives\u2014and get an explicit yes/no or scheduling commitment.",
+      "After the partner accepts the core request, immediately restate the agreed action (what, who, when) and avoid introducing additional asks. If you need one extra favor, ask permission first and offer only one low\u2011burden, clearly bounded option; do not stack multiple new requests after a closure.",
+      "When negotiations stall due to conflicting baselines or repeated circular insistence, pause and present up to three concrete resolution options (use one party\u2019s valuation, average both, or convert and propose a specific compensation). Ask for a single explicit selection (yes/no/choose) and, if none is accepted, offer one bounded fallback (a default split, a small fixed cash payment, or an agreed walk\u2011away).",
+      "For disputes involving safety, health, or legal risk, prioritize one immediate protective action and one enforceable fallback: offer a single low\u2011burden mitigation that reduces harm, set a brief deadline for compliance or change, and name the exact action you will take if it isn\u2019t accepted (e.g., call authorities, file a formal complaint). Request an explicit yes/no to that package before offering other concessions.",
+      "When possible, make agreements tangible with an immediate, visible action or token (hand over keys, place cash on the table, set the item on the seat, or schedule a precise time). Physical or time\u2011bound signals reduce ambiguity, build trust, and close the loop so both parties can act without lingering uncertainty.",
+      "When a change could affect quality, trust, or long\u2011term relationships (e.g., switching suppliers or altering a shared resource), propose a low\u2011risk pilot/test with explicit KPIs, timelines, testing methods, sample sizes, decision gates (go/no\u2011go thresholds), and contingency steps. Name who will run it, the budget/timeline, and the exact criteria that will trigger adoption, rollback, or retention of payment.",
+      "When offering or trading physical items or side payments, provide concrete evidence (photos, brief descriptions, provenance) and an explicit acceptance/inspection step (who inspects, when, and the pass/fail threshold). Specify a clear fallback if the item fails inspection (alternate item, smaller compensation, or agreed alternative timeline).",
+      "When asking the partner to help recruit or introduce others, respect their social cost and keep the request low\u2011burden: ask permission first, offer clearly bounded options (share a name, make a brief introduction, or provide a contact), and only request introductions after securing or concurrently securing the partner\u2019s own commitment. Avoid relying on contingent recruiting as the sole path to your goal\u2014if you must use introductions, arrange immediate, short steps (introduce now or provide contact info now) rather than open\u2011ended errands that leave the core ask unresolved."
+    ],
+    "rule_items_with_count": [
+      [
+        "Avoid vague or open\u2011ended requests or offers. Ask permission before making suggestions, use non\u2011judgmental, low\u2011pressure language, and present one to three concrete, specific options or trade\u2011offs (exact splits, amounts, or timelines) with clear expected outcomes and an explicit yes/no prompt so the partner can evaluate and respond quickly.",
+        24
+      ],
+      [
+        "If a proposal is rejected, acknowledge it briefly and immediately offer one decisive, low\u2011friction counteroffer with a clear expected outcome, exact timeline, and an explicit yes/no request. If the partner signals a firm non\u2011negotiable, accept that boundary, restate the settled outcome in one short sentence (what was agreed and when), and stop pressing. When the matter involves safety, health, or legal compliance, add a short, specific deadline and the concrete consequence you will enact if the risk continues.",
+        11
+      ],
+      [
+        "Prefer immediate, low\u2011friction completion of the core action during the interaction (who does what, when, and how). If on\u2011the\u2011spot completion isn\u2019t possible, convert contingent commitments into an immediate, concrete step or an explicit refusal; otherwise secure one clear, time\u2011bound alternative (specific pledge, exact follow\u2011up time, or named person to contact), capture the necessary details, and obtain an explicit yes/no to that fallback before closing.",
+        10
+      ],
+      [
+        "Early in the interaction, elicit the partner's concrete preferences (numeric or ranked), their non\u2011negotiables, and the minimum acceptable outcome \u2014 and state your own reservation point. Confirm you share the same valuation units or propose a clear conversion. Use one concise, high\u2011leverage question to surface constraints, then anchor proposals with 1\u20133 precise, comparable options (include exact math). Structure concessions incrementally and trade each concession for an explicit, immediate commitment; secure an explicit yes/no before proceeding.",
+        9
+      ],
+      [
+        "Offer one or two concise, concrete concessions or alternatives early (a clear alternate split, small favor, or single compensating offer). Present each as an explicit trade\u2011off, keep concessions low\u2011cost and directly tied to the partner\u2019s stated constraints, and immediately ask for a direct yes/no acceptance so the partner can respond and you can anchor the negotiation.",
+        7
+      ],
+      [
+        "Prioritize and sequence follow\u2011ups by asking one or two high\u2011leverage, targeted questions at a time (cash amount, which item to concede, or a time\u2011share proposal). Confirm responses before moving on; avoid launching many simultaneous demands or hypotheticals that overwhelm or stall the partner.",
+        4
+      ],
+      [
+        "When a decision depends on external documents or third parties, don\u2019t leave it as an open, asynchronous task. Either (a) present the key evidence yourself immediately, or (b) secure a concrete, time\u2011bound handoff now (have the external sender deliver/send/CC the materials and confirm timing) and get explicit yes/no agreement from the partner to proceed on that basis. If neither is possible, offer a clear low\u2011friction alternative (brief vetted summary, sample documents, or a smaller provisional commitment).",
+        3
+      ],
+      [
+        "When addressing emotional or personal concerns, begin with a brief empathy statement and a concise feeling-based claim, request one specific behavioral change or time-bound accommodation, and offer one low-cost way to support that change (e.g., alternative times, help arranging logistics, or a check\u2011in plan). Keep disclosures minimal\u2014avoid revealing unrelated private motives\u2014and get an explicit yes/no or scheduling commitment.",
+        3
+      ],
+      [
+        "After the partner accepts the core request, immediately restate the agreed action (what, who, when) and avoid introducing additional asks. If you need one extra favor, ask permission first and offer only one low\u2011burden, clearly bounded option; do not stack multiple new requests after a closure.",
+        2
+      ],
+      [
+        "When negotiations stall due to conflicting baselines or repeated circular insistence, pause and present up to three concrete resolution options (use one party\u2019s valuation, average both, or convert and propose a specific compensation). Ask for a single explicit selection (yes/no/choose) and, if none is accepted, offer one bounded fallback (a default split, a small fixed cash payment, or an agreed walk\u2011away).",
+        2
+      ],
+      [
+        "For disputes involving safety, health, or legal risk, prioritize one immediate protective action and one enforceable fallback: offer a single low\u2011burden mitigation that reduces harm, set a brief deadline for compliance or change, and name the exact action you will take if it isn\u2019t accepted (e.g., call authorities, file a formal complaint). Request an explicit yes/no to that package before offering other concessions.",
+        2
+      ],
+      [
+        "When possible, make agreements tangible with an immediate, visible action or token (hand over keys, place cash on the table, set the item on the seat, or schedule a precise time). Physical or time\u2011bound signals reduce ambiguity, build trust, and close the loop so both parties can act without lingering uncertainty.",
+        2
+      ],
+      [
+        "When a change could affect quality, trust, or long\u2011term relationships (e.g., switching suppliers or altering a shared resource), propose a low\u2011risk pilot/test with explicit KPIs, timelines, testing methods, sample sizes, decision gates (go/no\u2011go thresholds), and contingency steps. Name who will run it, the budget/timeline, and the exact criteria that will trigger adoption, rollback, or retention of payment.",
+        2
+      ],
+      [
+        "When offering or trading physical items or side payments, provide concrete evidence (photos, brief descriptions, provenance) and an explicit acceptance/inspection step (who inspects, when, and the pass/fail threshold). Specify a clear fallback if the item fails inspection (alternate item, smaller compensation, or agreed alternative timeline).",
+        2
+      ],
+      [
+        "When asking the partner to help recruit or introduce others, respect their social cost and keep the request low\u2011burden: ask permission first, offer clearly bounded options (share a name, make a brief introduction, or provide a contact), and only request introductions after securing or concurrently securing the partner\u2019s own commitment. Avoid relying on contingent recruiting as the sole path to your goal\u2014if you must use introductions, arrange immediate, short steps (introduce now or provide contact info now) rather than open\u2011ended errands that leave the core ask unresolved.",
+        1
+      ]
+    ]
+  }
+}

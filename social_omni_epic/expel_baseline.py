@@ -336,20 +336,44 @@ def gather_trajectories(
     goal_threshold: float = 7.0,
     judge_self_consistency_k: int = 1,
     on_log: Optional[Callable[[str], None]] = None,
-) -> tuple[dict[int, list[ExpelTrajectory]], dict[int, list[ExpelTrajectory]], dict[int, str]]:
+    initial_state: Optional[dict] = None,
+    on_progress: Optional[Callable[[dict, dict, dict, set], None]] = None,
+) -> tuple[dict[int, list[ExpelTrajectory]], dict[int, list[ExpelTrajectory]], dict[int, str], set]:
     """Reflexion-style gathering: attempt each scenario up to `max_trials` times,
     reflecting after each failure and stopping on first success.
 
-    Returns (succeeded, failed, idx2task), where succeeded/failed map a task
-    index to its list of ExpelTrajectory, and idx2task maps the index to the
-    scenario description (the critique/retrieval key).
+    Crash-safe for long unattended runs:
+      - `initial_state` (a previously written trajectories dict) lets the run
+        RESUME — scenarios already fully gathered (recorded in `completed_idx`)
+        are skipped. Partially-gathered scenarios (process died mid-attempts)
+        are discarded and re-run cleanly from scratch.
+      - `on_progress(succeeded, failed, idx2task, completed)` is called after
+        EACH scenario completes, so a caller can checkpoint to disk per-seed.
+
+    Returns (succeeded, failed, idx2task, completed), where succeeded/failed map
+    a task index to its list of ExpelTrajectory, idx2task maps the index to the
+    scenario description (the critique/retrieval key), and completed is the set
+    of fully-gathered task indices.
     """
     log = on_log or (lambda _m: None)
-    succeeded: dict[int, list[ExpelTrajectory]] = {}
-    failed: dict[int, list[ExpelTrajectory]] = {}
-    idx2task: dict[int, str] = {}
+    if initial_state:
+        succeeded, failed, idx2task = trajectories_from_dict(initial_state)
+        completed: set = set(initial_state.get("completed_idx", []))
+        # Drop any partial entries for scenarios that did not fully complete
+        # (e.g. a crash mid-attempt), so they re-run cleanly without duplicates.
+        for i in list(idx2task.keys()):
+            if i not in completed:
+                succeeded.pop(i, None)
+                failed.pop(i, None)
+                idx2task.pop(i, None)
+        if completed:
+            log(f"  [gather] resuming — {len(completed)} scenarios already done, skipping them")
+    else:
+        succeeded, failed, idx2task, completed = {}, {}, {}, set()
 
     for idx, scenario in enumerate(scenarios):
+        if idx in completed:
+            continue
         env_profile, agent_profiles = scenario_to_sotopia_profiles(scenario)
         learner_goal = env_profile.agent_goals[0] if env_profile.agent_goals else ""
         idx2task[idx] = scenario.scenario
@@ -402,7 +426,12 @@ def gather_trajectories(
                 reflections.append(_reflect(fm, scenario.scenario, learner_goal,
                                             transcript_text, goal))
 
-    return succeeded, failed, idx2task
+        # Scenario fully gathered — mark complete and checkpoint.
+        completed.add(idx)
+        if on_progress is not None:
+            on_progress(succeeded, failed, idx2task, completed)
+
+    return succeeded, failed, idx2task, completed
 
 
 # ===========================================================================
@@ -673,6 +702,7 @@ def trajectories_to_dict(
     succeeded: dict[int, list[ExpelTrajectory]],
     failed: dict[int, list[ExpelTrajectory]],
     idx2task: dict[int, str],
+    completed: Optional[set] = None,
 ) -> dict:
     def _ser(d):
         return {str(k): [t.__dict__ for t in v] for k, v in d.items()}
@@ -680,6 +710,8 @@ def trajectories_to_dict(
         "succeeded": _ser(succeeded),
         "failed": _ser(failed),
         "idx2task": {str(k): v for k, v in idx2task.items()},
+        # completed_idx drives crash-safe resume in gather_trajectories.
+        "completed_idx": sorted(int(i) for i in (completed or idx2task.keys())),
     }
 
 
