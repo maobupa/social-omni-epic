@@ -126,6 +126,34 @@ async def run_episode_two_loop(
             "transcript_clean": clean_transcript(result.transcript),
         }
         if not result.goal_achieved:
+            # Check for rubric-artifact bite: outcome fails but constraint passes + GOAL ≥ 8.
+            # When two independent signals (partner's own perspective + SOTOPIA) both say
+            # "social success" while only the outcome rubric says "failure," the outcome check
+            # is almost certainly overconstrained (delivery-mechanism trap). Log a warning with
+            # the offending question text so it can be audited. Still treat as bit=True for now;
+            # promote to auto-discard if this warning fires on >25-30% of biting failures.
+            rubric_results = result.rubric_results or []
+            constraint_passed = all(
+                r.get("verdict", False) for r in rubric_results if r.get("kind") == "constraint"
+            ) and any(r.get("kind") == "constraint" for r in rubric_results)
+            goal_score = (result.learner_scores or {}).get("goal", 0.0)
+            failing_outcome_checks = [
+                r.get("question", "") for r in rubric_results
+                if r.get("kind") == "outcome" and not r.get("verdict", True)
+            ]
+            if constraint_passed and goal_score >= 8.0 and failing_outcome_checks:
+                rec["rubric_artifact_warning"] = {
+                    "reason": "constraint PASS + GOAL≥8 + outcome FAIL — likely overconstrained outcome check",
+                    "goal_score": goal_score,
+                    "failing_outcome_checks": failing_outcome_checks,
+                }
+                print(
+                    f"    [difficulty d={d}] ⚠ RUBRIC ARTIFACT WARNING: constraint passed, "
+                    f"GOAL={goal_score:.1f}, but outcome check failed.\n"
+                    f"    Failing check: {failing_outcome_checks[0][:120]}\n"
+                    f"    Treating as real bite for now. Promote to auto-discard if this fires "
+                    f">25% of biting failures."
+                )
             bit = True
             loop_info["difficulty_loop"].append(rec)
             if on_attempt_done:
