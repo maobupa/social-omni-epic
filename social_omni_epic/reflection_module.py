@@ -459,6 +459,7 @@ class ReflectionModule:
         attempt_num: int,
         anchor_task: Optional[SocialScenario] = None,
         rubric_results: Optional[list[dict]] = None,
+        attempt_scores: Optional[list[dict]] = None,
     ) -> ReflectionOutput:
         """Run reflection after attempt_num has failed.
 
@@ -469,6 +470,7 @@ class ReflectionModule:
         prompt = _build_prompt(
             chronicle, scenario, transcripts, prior_edit_reasons, attempt_num, anchor_task,
             rubric_results=rubric_results,
+            attempt_scores=attempt_scores,
         )
         for attempt in range(self.max_retries):
             try:
