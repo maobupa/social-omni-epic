@@ -147,6 +147,39 @@ def _format_transcript(transcript: list[dict], attempt_num: int, max_chars: int 
     return text
 
 
+def _format_score_progression(attempt_scores: list[dict]) -> str:
+    """Format per-attempt SOTOPIA dimension scores as a learning-progress table."""
+    if not attempt_scores:
+        return ""
+    dims = ["goal", "relationship", "believability", "knowledge", "social_rules",
+            "financial_and_material_benefits", "secret"]
+    # Only show dims that appear in at least one attempt
+    present = [d for d in dims if any(s.get("scores", {}).get(d) is not None for s in attempt_scores)]
+    if not present:
+        return ""
+    header = "SCORE PROGRESSION ACROSS ATTEMPTS (use this to identify what is and isn't improving):"
+    rows = ["  attempt | " + " | ".join(f"{d[:6]:>6}" for d in present)]
+    rows.append("  " + "-" * (10 + 9 * len(present)))
+    for s in attempt_scores:
+        scores = s.get("scores") or {}
+        solved_mark = " ✓" if s.get("solved") else ""
+        row = f"  {s.get('attempt', '?'):>7} | " + " | ".join(
+            f"{scores.get(d, 0.0):>6.1f}" for d in present
+        ) + solved_mark
+        rows.append(row)
+    # Compute per-dimension delta from first to last attempt
+    if len(attempt_scores) >= 2:
+        first = attempt_scores[0].get("scores") or {}
+        last = attempt_scores[-1].get("scores") or {}
+        deltas = []
+        for d in present:
+            delta = (last.get(d) or 0.0) - (first.get(d) or 0.0)
+            sign = "+" if delta > 0 else ""
+            deltas.append(f"{sign}{delta:.1f}")
+        rows.append("  " + " " * 9 + "  " + " | ".join(f"{dv:>6}" for dv in deltas) + "  (Δ first→last)")
+    return header + "\n" + "\n".join(rows)
+
+
 def _format_goal_and_checks(scenario: SocialScenario, rubric_results: Optional[list[dict]]) -> str:
     """Show the learner's structured goal and which rubric checks failed (with judge reasoning)."""
     li = scenario.target_agent_idx
@@ -198,6 +231,7 @@ def _build_prompt(
     attempt_num: int,
     anchor_task: Optional[SocialScenario],
     rubric_results: Optional[list[dict]] = None,
+    attempt_scores: Optional[list[dict]] = None,
 ) -> str:
     parts: list[str] = []
 
@@ -233,8 +267,19 @@ def _build_prompt(
     if transcripts:
         parts.append(_format_transcript(transcripts[-1], attempt_num, max_chars=3500))
 
+    score_prog = _format_score_progression(attempt_scores or [])
+    if score_prog:
+        parts.append("\n" + score_prog)
+
     parts.append(
-        f"\nThis is attempt {attempt_num}. Diagnose the failure and produce targeted chronicle edits."
+        f"\nThis is attempt {attempt_num}. "
+        "The overall score trend is the primary learning signal: if it rose, something in the "
+        "approach is working — preserve or strengthen it before adding new edits. If it dropped "
+        "or is flat, the current chronicle entries are not helping and need revision. "
+        "The dimension breakdown is secondary context only — use it to understand *why* the "
+        "consolidated score moved, not as a list of things to fix independently. "
+        "The rubric check results above remain your primary guide for what specifically failed. "
+        "Diagnose the failure and produce targeted chronicle edits."
     )
     return "\n\n".join(parts)
 
