@@ -79,7 +79,7 @@ class SocialScenario(BaseModel):
     skills_final_md: Optional[str] = None
 
     # Phase 2 — anchor selection bookkeeping (§4.1)
-    n_i: int = 0            # times chosen as anchor
+    n_i: float = 0.0        # effective selection count (float to support weighted outcomes)
     last_chosen: int = -1   # iteration index when last chosen
     n_children: int = 0     # total descendant scenarios generated from this anchor
     n_solved: int = 0       # children that reached solved_after_biting

@@ -76,11 +76,25 @@ class Archive:
         return int(np.argmax(samples))
 
     def record_selection(self, idx: int, iteration: int) -> None:
-        """Mark task at idx as selected; update UCB1 bookkeeping."""
+        """Mark task at idx as selected. Increments n_i immediately so subsequent
+        Thompson picks within the same batch see the updated distribution."""
         self._total_selections += 1
         task = self.state.successful[idx]
-        task.n_i += 1
+        task.n_i += 1.0
         task.last_chosen = iteration
+
+    def record_outcome_weight(self, parent_idx: int, extra_n_i: float) -> None:
+        """Post-result adjustment to n_i after outcome is known.
+
+        Positive extra_n_i adds to the failure side of the Beta posterior (stronger
+        downward pressure on the anchor's estimated success rate). Negative reduces it.
+
+        Use cases:
+          generation_failed → extra_n_i = -0.5  (generator may be at fault, halve the penalty)
+          structural failure → extra_n_i = +1.0  (structurally unlearnable, double the penalty)
+        """
+        if 0 <= parent_idx < self.size:
+            self.state.successful[parent_idx].n_i += extra_n_i
 
     def record_child(self, parent_idx: int) -> None:
         """Increment n_children for the parent that spawned a new task."""
