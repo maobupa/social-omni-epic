@@ -626,8 +626,22 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
             "reflection_diagnosis": att.get("reflection_diagnosis", ""),
             "reflection_edit_reasons": att.get("reflection_edit_reasons", {}),
             "adversarial_approved": att.get("adversarial_approved"),
+            "chronicle_after_reflection": att.get("chronicle_after_reflection", ""),
         }
         for att in loop_info.get("skill_attempts", [])
+    ]
+
+    # reflection_outputs — per-attempt chronicle snapshots so you can trace how skills evolved
+    debug_output["reflection_outputs"] = [
+        {
+            "after_attempt": att["attempt"],
+            "chronicle_md": att.get("chronicle_after_reflection", ""),
+            "chronicle_entries": SkillsChronicle.from_markdown(
+                att.get("chronicle_after_reflection", "")
+            ).entries.__len__(),
+        }
+        for att in loop_info.get("skill_attempts", [])
+        if att.get("chronicle_after_reflection")
     ]
 
     # Print transcripts and rubric results for each attempt

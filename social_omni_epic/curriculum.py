@@ -244,6 +244,7 @@ async def run_episode_two_loop(
             att_rec["reflection_edit_reasons"] = ref_out.edit_reasons
             att_rec["adversarial_approved"] = adv_result.approved
             current_chronicle = ref_out.updated_chronicle
+            att_rec["chronicle_after_reflection"] = current_chronicle.to_markdown()
             all_versions.append(deepcopy(current_chronicle))
             all_edit_reasons.update(ref_out.edit_reasons)
         loop_info["skill_attempts"].append(att_rec)
