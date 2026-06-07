@@ -34,3 +34,5 @@ ExpeL-main
 output/skill_smoke/
 output/smoke_test/
 output/expel_smoke/
+
+nohup.out
