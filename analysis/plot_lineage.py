@@ -77,6 +77,8 @@ def color_for(s: dict, max_iter: int, role: str) -> str:
         return "#bdbdbd"
     if role == "failed_int":
         return "#e57373"  # soft red for "rejected as uninteresting"
+    if role == "succeeded":
+        return "#43a047"  # material green — episode ran and goal >= threshold
     # generated -> viridis by iteration
     cmap = plt.get_cmap("viridis").reversed()
     it = max(s.get("iteration", 0), 0)
@@ -90,6 +92,9 @@ def hover_html(s: dict) -> str:
                  f"<i>{s.get('source', '')}</i>")
     title.append(f"<b>type:</b> {s.get('interaction_type', '')}  "
                  f"<b>tag:</b> {s.get('tag', '')}")
+    if s.get("goal_score") is not None:
+        title.append(f"<b>goal score:</b> {s['goal_score']:.1f}  "
+                     f"<b>progress:</b> {s.get('progress_score', 0.0):.2f}")
     scn = (s.get("scenario") or "").strip()
     if len(scn) > 400:
         scn = scn[:400] + "..."
@@ -114,7 +119,7 @@ def scenario_detail(s: dict, label: str) -> dict:
     profiles = []
     for p in (s.get("agent_profiles") or []):
         profiles.append({k: p.get(k) for k in _PROFILE_FIELDS})
-    return {
+    detail: dict = {
         "label": label,
         "iteration": s.get("iteration", "?"),
         "source": s.get("source", ""),
@@ -126,6 +131,10 @@ def scenario_detail(s: dict, label: str) -> dict:
         "agent_goals": s.get("agent_goals", []) or [],
         "moi_reasoning": s.get("moi_reasoning", ""),
     }
+    if s.get("goal_score") is not None:
+        detail["goal_score"] = s["goal_score"]
+        detail["progress_score"] = s.get("progress_score")
+    return detail
 
 
 def closest_parent(positions: dict[str, tuple[float, float]],
@@ -201,7 +210,12 @@ def build_graph(archive: dict, include_failed: bool, closest_only: bool,
 
     G = nx.DiGraph()
     for s in successful:
-        role = "seed" if s.get("iteration", -1) < 0 else "generated"
+        if s.get("iteration", -1) < 0:
+            role = "seed"
+        elif s.get("goal_score") is not None:
+            role = "succeeded"
+        else:
+            role = "generated"
         if s["id"] not in positions:
             continue
         G.add_node(s["id"], role=role, scenario=s, color=color_for(s, max_iter, role),
@@ -269,13 +283,20 @@ def render(G: nx.DiGraph, output_path: str, max_iter: int,
     details: dict[str, dict] = {}
     for nid, attr in G.nodes(data=True):
         s = attr["scenario"]
-        label = "seed" if attr["role"] == "seed" else f"i{s.get('iteration', '?')}"
+        role = attr["role"]
+        if role == "seed":
+            label = "seed"
+        elif role == "succeeded":
+            label = f"✓i{s.get('iteration', '?')}"
+        else:
+            label = f"i{s.get('iteration', '?')}"
         details[nid] = scenario_detail(s, label)
+        size = {"seed": 22, "failed_int": 18, "succeeded": 32, "generated": 26}.get(role, 26)
+        shape = "triangle" if role == "failed_int" else ("star" if role == "succeeded" else "dot")
         nt.add_node(
             nid, label=label, title=attr["title"], color=attr["color"],
             x=attr["pos"][0], y=attr["pos"][1],
-            size=22 if attr["role"] == "seed" else (18 if attr["role"] == "failed_int" else 30),
-            shape="dot" if attr["role"] != "failed_int" else "triangle",
+            size=size, shape=shape,
         )
     for u, v in G.edges():
         nt.add_edge(u, v, color="#888888", width=0.8)
@@ -308,9 +329,10 @@ def render(G: nx.DiGraph, output_path: str, max_iter: int,
 </style>
 <div id="ui">
   <h4>Lineage</h4>
-  <div><span class="sw" style="background:#bdbdbd"></span>seed (90)</div>
-  <div><span class="sw" style="background:{early_color}"></span>early iter</div>
-  <div><span class="sw" style="background:{late_color}"></span>late iter (max {max_iter})</div>
+  <div><span class="sw" style="background:#bdbdbd"></span>seed</div>
+  <div><span class="sw" style="background:#43a047"></span>succeeded (episode ≥ threshold) ✓</div>
+  <div><span class="sw" style="background:{early_color}"></span>generated — early iter</div>
+  <div><span class="sw" style="background:{late_color}"></span>generated — late iter (max {max_iter})</div>
   <div><span class="tri"></span>MoI-rejected</div>
 
   <details open>
@@ -339,6 +361,7 @@ def render(G: nx.DiGraph, output_path: str, max_iter: int,
 
   <details>
     <summary>Tips</summary>
+    • Green stars (✓) = succeeded episodes (goal ≥ threshold). Click to see score.<br>
     • Click a bright (late-iter) node to trace its provenance back to seeds.<br>
     • Many red triangles in one region = MoI persistently rejecting a pattern.<br>
     • A gray seed with many outgoing edges = a popular template the LLM keeps building from.
@@ -474,6 +497,16 @@ def render(G: nx.DiGraph, output_path: str, max_iter: int,
       + '  ·  type ' + (d.interaction_type || '')
       + '  ·  tag ' + (d.tag || '');
     bd.appendChild(m);
+    if (d.goal_score !== undefined && d.goal_score !== null) {
+      var sc = document.createElement('div');
+      sc.className = 'meta';
+      sc.style.color = '#2e7d32';
+      sc.style.fontWeight = '600';
+      sc.textContent = '✓ succeeded  goal=' + d.goal_score.toFixed(1)
+        + (d.progress_score !== null && d.progress_score !== undefined
+            ? '  progress=' + d.progress_score.toFixed(2) : '');
+      bd.appendChild(sc);
+    }
 
     var h1 = document.createElement('h5'); h1.textContent = 'Scenario';
     bd.appendChild(h1);

@@ -1,9 +1,9 @@
 """Experiment 1: vanilla LLMAgent on all canonical Sotopia seeds, NO memory.
 
 Usage:
-  python -m experiments.baseline \
-      --learner-model gpt-4o-mini --partner-model gpt-4o-mini \
-      --evaluator-model gpt-4o --output-dir output/baseline
+  uv run python -m experiments.baseline \
+      --learner-model gpt-4.1-mini --partner-model gpt-4.1-mini \
+      --evaluator-model gpt-5.2 --output-dir output/baseline
 """
 import argparse
 import asyncio

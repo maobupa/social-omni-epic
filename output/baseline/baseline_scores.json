@@ -1,16 +1,1339 @@
 [
   {
-    "scenario_id": "53483eb6-ef77-49b2-8762-32ebd5d31d57",
+    "scenario_id": "0d657630-4e00-4513-aebe-583e0fcf3fd7",
     "scenario": "One person is selling a brand new 64GB Samsung Galaxy S8 in Midnight Black for $650, while another person is in the market to purchase it. Here\\'s what the seller has to say about the item: \"I have 6 ",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": -3.0,
+      "goal": 2.0,
+      "overall_score": 1.8571428571428572
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 2.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": -2.0,
+      "goal": 3.0,
+      "overall_score": 2.142857142857143
+    },
+    "progress_score": 0.34,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "481f2322-213f-4c20-a374-01e8110e7da6",
+    "scenario": "Two roommates living together and sharing household chores. One of them, who is responsible for cooking, finds out that the other one refuses to eat anything they cook",
+    "learner_scores": {
+      "believability": 6.0,
+      "relationship": 4.0,
+      "knowledge": 7.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 6.0,
+      "overall_score": 3.4285714285714284
+    },
+    "partner_scores": {
+      "believability": 6.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 9.0,
+      "overall_score": 3.4285714285714284
+    },
+    "progress_score": 0.68,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "5459e601-492f-47f6-8194-ddd937a89ab3",
+    "scenario": "Two people deciding on how to divide the collected fruits. There are 3 apples, 2 bananas, 1 orange in total.",
+    "learner_scores": {
+      "believability": 9.0,
+      "relationship": 4.0,
+      "knowledge": 6.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 5.0,
+      "goal": 10.0,
+      "overall_score": 4.857142857142857
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 6.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 5.0,
+      "goal": 10.0,
+      "overall_score": 4.714285714285714
+    },
+    "progress_score": 0.9,
+    "solved": true,
+    "num_turns": 10
+  },
+  {
+    "scenario_id": "4e2107e8-7835-4efa-a8b5-8fe58eb54272",
+    "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Micheline.</p>",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 3.0,
+      "overall_score": 2.5714285714285716
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 3.0,
+      "overall_score": 2.5714285714285716
+    },
+    "progress_score": 0.42000000000000004,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "baec5da2-bc09-4fcb-82a8-ee22fd4bb1b1",
+    "scenario": "Two people in a romantic relationship are on a vacation",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 5.0,
+      "overall_score": 3.0
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 2.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.0
+    },
+    "progress_score": 0.56,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "4af399de-124c-41c8-a0bf-e5af49df4b04",
+    "scenario": "Two friends are having a conversation in a coffee shop",
+    "learner_scores": {
+      "believability": 9.0,
+      "relationship": 4.0,
+      "knowledge": 6.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 4.0
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 5.0,
+      "secret": -2.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.4285714285714284
+    },
+    "progress_score": 0.8400000000000001,
+    "solved": true,
+    "num_turns": 17
+  },
+  {
+    "scenario_id": "517715ea-c19e-4010-853a-b63f78990c94",
+    "scenario": "Two inmates are given the chance to chat briefly before one of them is led to the execution chamber for their last meal. They have the opportunity to make a confession that could potentially alter the",
+    "learner_scores": {
+      "believability": 6.0,
+      "relationship": 4.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": -1.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 2.0,
+      "overall_score": 2.0
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 4.0,
+      "knowledge": 2.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.142857142857143
+    },
+    "progress_score": 0.36000000000000004,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "4edbca4a-07bb-4fe3-9519-51bb62ed4e55",
+    "scenario": "Two friends meet at a bar",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 8.0,
+      "overall_score": 3.2857142857142856
+    },
+    "partner_scores": {
+      "believability": 6.0,
+      "relationship": 4.0,
+      "knowledge": 2.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 5.0,
+      "overall_score": 2.4285714285714284
+    },
+    "progress_score": 0.74,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "6885a460-ed18-4007-b2ee-4e555b4f6f2c",
+    "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Loretta.</p>",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 5.0,
+      "secret": -4.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 8.0,
+      "overall_score": 2.7142857142857144
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 3.0,
+      "knowledge": 6.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.7142857142857144
+    },
+    "progress_score": 0.74,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "069c5b59-c7bb-4b7f-83e5-bb270fca492f",
+    "scenario": "Conversation between two individuals who share a common dislike for a third person",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": -4.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 3.0,
+      "overall_score": 1.8571428571428572
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": -2.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 8.0,
+      "overall_score": 3.4285714285714284
+    },
+    "progress_score": 0.42000000000000004,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "e963ea31-aa71-47d1-8189-d9e7433ad6ae",
+    "scenario": "A couple having a conversation over FaceTime",
+    "learner_scores": {
+      "believability": 6.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.2857142857142856
+    },
+    "partner_scores": {
+      "believability": 5.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.142857142857143
+    },
+    "progress_score": 0.8,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "415bb67c-d83c-4559-958f-06febc88e518",
+    "scenario": "Conversation between two friends, one of whom has recently found out that the other friend has been involved with their long-term partner",
+    "learner_scores": {
+      "believability": 6.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": -6.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 2.142857142857143
+    },
+    "partner_scores": {
+      "believability": 6.0,
+      "relationship": 2.0,
+      "knowledge": 9.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 8.0,
+      "overall_score": 3.5714285714285716
+    },
+    "progress_score": 0.76,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "023614f1-6596-49b3-9c32-3585ac409ae5",
+    "scenario": "Two individuals are now at a park. One individual was playing hooky from work and noticed the other person had been following them around all day",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.7142857142857144
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.4285714285714284
+    },
+    "progress_score": 0.8200000000000001,
+    "solved": true,
+    "num_turns": 16
+  },
+  {
+    "scenario_id": "ab469d82-bb86-43ff-89a1-51fdd77e0f0b",
+    "scenario": "One person is offering a Tile Mate Item Tracker for a price of $20.00, while another person is interested in purchasing it. Here's a brief description of the item: no trade-ins are accepted, only cash",
+    "learner_scores": {
+      "believability": 9.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 6.0,
+      "overall_score": 3.142857142857143
+    },
+    "partner_scores": {
+      "believability": 9.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": -1.0,
+      "goal": 6.0,
+      "overall_score": 2.857142857142857
+    },
+    "progress_score": 0.5800000000000001,
+    "solved": false,
+    "num_turns": 12
+  },
+  {
+    "scenario_id": "0e1ea0e7-5f1e-4db1-84d8-69c71a12ca78",
+    "scenario": "Two friends are moving out from a shared apartment and dividing their shared belongings which include 3 hats, 2 balls, and 1 book.",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 3.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 2.0,
+      "goal": 8.0,
+      "overall_score": 3.5714285714285716
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 7.0,
+      "overall_score": 3.0
+    },
+    "progress_score": 0.72,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "d7ce502f-b01c-4357-b795-aa9a0bf33b83",
+    "scenario": "Two friends at a garage sale",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 3.0,
+      "knowledge": 6.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 2.0,
+      "goal": 7.0,
+      "overall_score": 3.7142857142857144
+    },
+    "partner_scores": {
+      "believability": 9.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 2.0,
+      "goal": 9.0,
+      "overall_score": 4.0
+    },
+    "progress_score": 0.7000000000000001,
+    "solved": true,
+    "num_turns": 14
+  },
+  {
+    "scenario_id": "c1e88b38-b002-41fd-a23b-99fdeb4e9ccb",
+    "scenario": "A conversation between two neighbors about tree trimming in the backyard that is causing the neighbor's dog to bark incessantly.",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 6.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 9.0,
+      "overall_score": 4.0
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 4.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 8.0,
+      "overall_score": 3.5714285714285716
+    },
+    "progress_score": 0.8400000000000001,
+    "solved": true,
+    "num_turns": 20
+  },
+  {
+    "scenario_id": "25d35f3e-9464-448d-b289-ebd9fc6f2c8d",
+    "scenario": "Two friends are sitting in a coffee shop when a representative from a charity organization approaches them",
+    "learner_scores": {
+      "believability": 6.0,
+      "relationship": 2.0,
+      "knowledge": 2.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 5.0,
+      "overall_score": 2.142857142857143
+    },
+    "partner_scores": {
+      "believability": 6.0,
+      "relationship": 2.0,
+      "knowledge": 7.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 7.0,
+      "overall_score": 3.142857142857143
+    },
+    "progress_score": 0.48,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "82387739-45a6-443e-b277-aeb0069251bc",
+    "scenario": "An individual is offering an Antique Oak Accent Table for sale at $60.00, while another is keen on purchasing it. The item is a magnificent antique oak parlor table, dating back to the late 1800s, mak",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 4.0,
+      "overall_score": 2.7142857142857144
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 2.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": -4.0,
+      "goal": 2.0,
+      "overall_score": 1.5714285714285714
+    },
+    "progress_score": 0.46,
+    "solved": false,
+    "num_turns": 18
+  },
+  {
+    "scenario_id": "985c5a19-025c-44a0-ac85-83f83187dfff",
+    "scenario": "Two friends are moving out of their shared apartment and need to divide their common possessions, which include 3 books, 2 hats, and 1 ball. Each item has a different sentimental value for each person",
+    "learner_scores": {
+      "believability": 9.0,
+      "relationship": 3.0,
+      "knowledge": 2.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 4.0,
+      "goal": 9.0,
+      "overall_score": 3.857142857142857
+    },
+    "partner_scores": {
+      "believability": 9.0,
+      "relationship": 3.0,
+      "knowledge": 2.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 4.0,
+      "goal": 9.0,
+      "overall_score": 3.857142857142857
+    },
+    "progress_score": 0.7400000000000001,
+    "solved": true,
+    "num_turns": 14
+  },
+  {
+    "scenario_id": "f7e8a09c-3149-4d05-b91e-625d0a145f22",
+    "scenario": "Conversation between two friends at a local charity event",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 2.0,
+      "goal": 10.0,
+      "overall_score": 3.857142857142857
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 3.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": -1.0,
+      "goal": 9.0,
+      "overall_score": 3.142857142857143
+    },
+    "progress_score": 0.8600000000000001,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "ac94df74-84d4-4c7e-a67d-5846a8b9f63d",
+    "scenario": "Two friends deciding on a movie to watch on Netflix",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 3.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 2.0,
+      "goal": 8.0,
+      "overall_score": 3.4285714285714284
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 3.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 2.0,
+      "goal": 7.0,
+      "overall_score": 3.2857142857142856
+    },
+    "progress_score": 0.7,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "8adf7fe6-6fe4-405c-84d6-94392546fd28",
+    "scenario": "Conversation taking place in an annual charity event between two attendees.",
+    "learner_scores": {
+      "believability": 9.0,
+      "relationship": 2.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 2.0,
+      "goal": 5.0,
+      "overall_score": 3.0
+    },
+    "partner_scores": {
+      "believability": 9.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 2.0,
+      "goal": 8.0,
+      "overall_score": 3.5714285714285716
+    },
+    "progress_score": 0.49999999999999994,
+    "solved": false,
+    "num_turns": 8
+  },
+  {
+    "scenario_id": "e5d0b066-92dd-4c11-be4c-e04f71c8359e",
+    "scenario": "Two friends are camping in the wilderness and the temperature drops significantly at night",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 3.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 3.0,
+      "overall_score": 2.4285714285714284
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 2.0,
+      "knowledge": 2.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 3.0,
+      "goal": 9.0,
+      "overall_score": 3.4285714285714284
+    },
+    "progress_score": 0.4,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "759bf4e4-00ad-4476-b4ad-62f6ca923f11",
+    "scenario": "A conversation between two friends at a social gathering where one friend has brought along their new friend group",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.5714285714285716
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.7142857142857144
+    },
+    "progress_score": 0.8,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "e4bd6bf8-040c-4fb9-a7ce-fbf732560a84",
+    "scenario": "An individual is trying to persuade their friend to donate to a charity supporting children in conflict zones.",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 5.0,
+      "overall_score": 2.857142857142857
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 9.0,
+      "overall_score": 3.4285714285714284
+    },
+    "progress_score": 0.54,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "3ab60077-e65e-40db-9350-c5a8f42f2007",
+    "scenario": "Conversation between two friends, one who has written a play based on their parents' life, and the other owns a production company.",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 4.0,
+      "goal": 9.0,
+      "overall_score": 4.0
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 3.0,
+      "goal": 9.0,
+      "overall_score": 3.857142857142857
+    },
+    "progress_score": 0.8,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "90d08081-a38f-4101-8cfa-08dcc8210252",
+    "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Neoma.</p>",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 2.0,
+      "knowledge": 7.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 8.0,
+      "overall_score": 3.4285714285714284
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 2.0,
+      "knowledge": 7.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 8.0,
+      "overall_score": 3.4285714285714284
+    },
+    "progress_score": 0.76,
+    "solved": true,
+    "num_turns": 18
+  },
+  {
+    "scenario_id": "d9ba4862-f389-4ad1-9c1d-f9db2b654e65",
+    "scenario": "Two friends are meeting at a coffee shop, where one of them is having trouble keeping up with their bills.",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 4.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 7.0,
+      "overall_score": 3.0
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 8.0,
+      "overall_score": 3.4285714285714284
+    },
+    "progress_score": 0.6599999999999999,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "76cc013e-44c6-49f3-ba45-e97862299d6c",
+    "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Gracie.</p>",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 3.0,
+      "overall_score": 2.4285714285714284
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 3.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 4.0,
+      "overall_score": 2.857142857142857
+    },
+    "progress_score": 0.42000000000000004,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "e5ed5371-a75a-4d12-9e39-55ae81466b33",
+    "scenario": "Two friends are sitting in the living room watching the history channel. One of them is upset because they believe the channel is getting a lot of historical details wrong.",
+    "learner_scores": {
+      "believability": 6.0,
+      "relationship": 4.0,
+      "knowledge": 1.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 7.0,
+      "overall_score": 2.5714285714285716
+    },
+    "partner_scores": {
+      "believability": 6.0,
+      "relationship": 4.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.142857142857143
+    },
+    "progress_score": 0.62,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "6e8b52a0-b58b-42e0-926a-d46f2b08481b",
+    "scenario": "A conversation between two friends at a park",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 7.0,
+      "overall_score": 3.4285714285714284
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.5714285714285716
+    },
+    "progress_score": 0.7,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "f3cd8fb5-f628-4f4f-bb17-03ef56187730",
+    "scenario": "Two acquaintances run into each other at Target, one of them volunteers there (a special event) and is in charge of giving away free samples",
+    "learner_scores": {
+      "believability": 9.0,
+      "relationship": 2.0,
+      "knowledge": 2.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 8.0,
+      "overall_score": 3.0
+    },
+    "partner_scores": {
+      "believability": 9.0,
+      "relationship": 2.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 6.0,
+      "overall_score": 3.0
+    },
+    "progress_score": 0.66,
+    "solved": true,
+    "num_turns": 10
+  },
+  {
+    "scenario_id": "d564b2fb-0539-414f-8d6b-b44055ed9ead",
+    "scenario": "Two friends are at a picnic and have just finished their lunch. They have 1 apple, 4 bananas, and 3 oranges left. They need to divide the fruits amongst themselves. Each person has a different prefere",
+    "learner_scores": {
+      "believability": 6.0,
+      "relationship": 2.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 4.0,
+      "overall_score": 2.2857142857142856
+    },
+    "partner_scores": {
+      "believability": 6.0,
+      "relationship": 2.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 4.0,
+      "goal": 9.0,
+      "overall_score": 3.4285714285714284
+    },
+    "progress_score": 0.44,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "29dd6f8a-ad95-4ba4-9f90-e3220ffd97cc",
+    "scenario": "Conversation between two friends, where one is upset and crying",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 1.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 8.0,
+      "overall_score": 2.7142857142857144
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 1.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 6.0,
+      "overall_score": 2.5714285714285716
+    },
+    "progress_score": 0.6599999999999999,
+    "solved": true,
+    "num_turns": 14
+  },
+  {
+    "scenario_id": "55d2c876-c8bb-49ff-950a-dda7cc937a10",
+    "scenario": "Two roommates deciding on how to divide certain items that they bought together for their apartment. The items are 3 books, 2 hats, and 1 ball.  Each item has a different sentimental value for each pe",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 6.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 4.0,
+      "goal": 9.0,
+      "overall_score": 4.142857142857143
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 6.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 2.0,
+      "goal": 6.0,
+      "overall_score": 3.4285714285714284
+    },
+    "progress_score": 0.8200000000000001,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "dae52218-a967-4f2e-a3cd-ba28f11c4aa3",
+    "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Thanh.</p>",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 7.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 8.0,
+      "overall_score": 3.857142857142857
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 7.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 4.0
+    },
+    "progress_score": 0.8,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "15c08996-0fea-4e99-aeb8-20210884c415",
+    "scenario": "Two friends are hanging out at home and deciding what music to listen to",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 5.0,
+      "secret": -7.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 10.0,
+      "overall_score": 2.857142857142857
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 6.0,
+      "secret": -7.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 10.0,
+      "overall_score": 3.0
+    },
+    "progress_score": 0.88,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "6b605f8b-0d8a-49b6-9423-9831f517038d",
+    "scenario": "Conversation between two individuals in a romantic relationship",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": -1.0,
+      "goal": 10.0,
+      "overall_score": 3.4285714285714284
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 4.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 8.0,
+      "overall_score": 3.4285714285714284
+    },
+    "progress_score": 0.8600000000000001,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "da815b90-e255-47f2-83fa-671001171146",
+    "scenario": "A conversation between two individuals at a charity gala",
+    "learner_scores": {
+      "believability": 9.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 6.0,
+      "overall_score": 3.142857142857143
+    },
+    "partner_scores": {
+      "believability": 9.0,
+      "relationship": 2.0,
+      "knowledge": 6.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 9.0,
+      "overall_score": 3.857142857142857
+    },
+    "progress_score": 0.5800000000000001,
+    "solved": false,
+    "num_turns": 12
+  },
+  {
+    "scenario_id": "b68d78fe-abc8-40d5-8201-db8762a56b05",
+    "scenario": "Two friends are playing a video game together",
+    "learner_scores": {
+      "believability": 9.0,
+      "relationship": 3.0,
+      "knowledge": 2.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 10.0,
+      "overall_score": 3.4285714285714284
+    },
+    "partner_scores": {
+      "believability": 9.0,
+      "relationship": 3.0,
+      "knowledge": 2.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 8.0,
+      "overall_score": 3.142857142857143
+    },
+    "progress_score": 0.8,
+    "solved": true,
+    "num_turns": 10
+  },
+  {
+    "scenario_id": "b7445dc9-3b62-4e7b-a8c2-f2b838880ed4",
+    "scenario": "One person is offering a BMW Z3 for $5000.0, while another individual is interested in purchasing it. Here's a brief description of the car: The BMW Z3 is in need of a good home. It operates smoothly ",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 4.0,
+      "goal": 10.0,
+      "overall_score": 3.857142857142857
+    },
+    "partner_scores": {
+      "believability": 6.0,
+      "relationship": 2.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 4.0,
+      "goal": 9.0,
+      "overall_score": 3.4285714285714284
+    },
+    "progress_score": 0.8200000000000001,
+    "solved": true,
+    "num_turns": 16
+  },
+  {
+    "scenario_id": "3670a9bf-059c-43fa-90ee-5255c698ab83",
+    "scenario": "Two friends are out for a walk in the park when one of them, One friend, trips and twists their ankle. They are in too much pain to walk.",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.4285714285714284
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 2.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": -2.0,
+      "goal": 9.0,
+      "overall_score": 3.0
+    },
+    "progress_score": 0.78,
+    "solved": true,
+    "num_turns": 18
+  },
+  {
+    "scenario_id": "b6a05ed5-7f79-4e81-9d85-dbe28d8475d2",
+    "scenario": "Two friends having a conversation at a park",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": -1.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 9.0,
+      "overall_score": 2.7142857142857144
+    },
+    "partner_scores": {
+      "believability": 6.0,
+      "relationship": 1.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 6.0,
+      "overall_score": 2.4285714285714284
+    },
+    "progress_score": 0.6800000000000002,
+    "solved": true,
+    "num_turns": 16
+  },
+  {
+    "scenario_id": "e2296414-7205-4541-ba9c-7318213f950c",
+    "scenario": "A conversation between two individuals, one is the homeowner and the other is their cousin's partner, who has been staying at the house for a while.",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 2.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 8.0,
+      "overall_score": 3.0
+    },
+    "partner_scores": {
+      "believability": 6.0,
+      "relationship": 3.0,
+      "knowledge": 6.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 3.0,
+      "goal": 7.0,
+      "overall_score": 3.5714285714285716
+    },
+    "progress_score": 0.6799999999999999,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "8c7e8925-f401-47d1-8a69-41f09d48b4a9",
+    "scenario": "Two friends meeting in a coffee shop after a long time.",
+    "learner_scores": {
+      "believability": 5.0,
+      "relationship": 1.0,
+      "knowledge": 2.0,
+      "secret": -9.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 3.0,
+      "overall_score": 0.2857142857142857
+    },
+    "partner_scores": {
+      "believability": 6.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": -2.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 8.0,
+      "overall_score": 2.5714285714285716
+    },
+    "progress_score": 0.33999999999999997,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "bd4725b3-0849-4da3-bea6-714cd6c3a80a",
+    "scenario": "Two friends are at a community gathering where one of them was giving a speech but was interrupted",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 3.0,
+      "knowledge": 2.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 10.0,
+      "overall_score": 3.4285714285714284
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 10.0,
+      "overall_score": 3.4285714285714284
+    },
+    "progress_score": 0.8,
+    "solved": true,
+    "num_turns": 17
+  },
+  {
+    "scenario_id": "b816bddd-42a4-4279-a1b0-f963c699ab0e",
+    "scenario": "Two acquaintances meet at a charity event. One is a representative of the charity and the other is an attendee.",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 3.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 4.0,
+      "goal": 10.0,
+      "overall_score": 4.142857142857143
+    },
+    "partner_scores": {
+      "believability": 9.0,
+      "relationship": 3.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": -1.0,
+      "goal": 9.0,
+      "overall_score": 3.2857142857142856
+    },
+    "progress_score": 0.8400000000000001,
+    "solved": true,
+    "num_turns": 19
+  },
+  {
+    "scenario_id": "10709038-4c85-4ef5-96dc-b35c0f76dae6",
+    "scenario": "Two friends are having a picnic. They have 3 apples, 2 bananas, and 1 orange they need to share among them. Each person has a different preference for fruit, which translates into points.",
+    "learner_scores": {
+      "believability": 6.0,
+      "relationship": 3.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 6.0,
+      "overall_score": 2.7142857142857144
+    },
+    "partner_scores": {
+      "believability": 6.0,
+      "relationship": 3.0,
+      "knowledge": 2.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 2.0,
+      "goal": 6.0,
+      "overall_score": 2.7142857142857144
+    },
+    "progress_score": 0.5800000000000001,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "e1353f27-4d39-47cb-b926-d29113b0fa66",
+    "scenario": "One person is offering an Italian Leather Loveseat for $50.0, while another person is showing interest to purchase it. The item is a full-sized loveseat, crafted from Italian leather in a faded burgan",
     "learner_scores": {
       "believability": 9.0,
       "relationship": 2.0,
       "knowledge": 5.0,
       "secret": 0.0,
       "social_rules": 0.0,
-      "financial_and_material_benefits": -3.0,
-      "goal": 3.0,
-      "overall_score": 2.2857142857142856
+      "financial_and_material_benefits": 4.0,
+      "goal": 10.0,
+      "overall_score": 4.285714285714286
     },
     "partner_scores": {
       "believability": 8.0,
@@ -18,11 +1341,1091 @@
       "knowledge": 4.0,
       "secret": 0.0,
       "social_rules": 0.0,
+      "financial_and_material_benefits": 4.0,
+      "goal": 9.0,
+      "overall_score": 3.857142857142857
+    },
+    "progress_score": 0.84,
+    "solved": true,
+    "num_turns": 11
+  },
+  {
+    "scenario_id": "ae44c64e-d388-4612-b935-0e62ab5ec608",
+    "scenario": "A conversation between two friends during a charity fundraiser event. The charity fundraising event is situated in a sprawling mansion. The intention of the event is to raise funds for effective altru",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 6.0,
+      "overall_score": 2.857142857142857
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 6.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 7.0,
+      "overall_score": 3.4285714285714284
+    },
+    "progress_score": 0.5800000000000001,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "b7cb7688-ebbc-42aa-839c-8518fcef1fb4",
+    "scenario": "Two friends who are about to go on their first romantic date",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 5.0,
+      "knowledge": 8.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 4.142857142857143
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 5.0,
+      "knowledge": 7.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 4.0
+    },
+    "progress_score": 0.9,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "a50ac199-4a5d-4bdf-a19b-e040f7f1f3d6",
+    "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Jacob.</p>",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 7.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 9.0,
+      "overall_score": 4.142857142857143
+    },
+    "partner_scores": {
+      "believability": 9.0,
+      "relationship": 4.0,
+      "knowledge": 7.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 9.0,
+      "overall_score": 4.285714285714286
+    },
+    "progress_score": 0.8600000000000001,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "300c4925-dc7f-42a1-9cfa-b6490e9f096c",
+    "scenario": "Conversation between two friends who have known each other for a long time. One of them used to make fun of the other because English was not their first language.",
+    "learner_scores": {
+      "believability": 6.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.2857142857142856
+    },
+    "partner_scores": {
+      "believability": 6.0,
+      "relationship": 4.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.142857142857143
+    },
+    "progress_score": 0.8,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "d7794773-ce4d-49c1-b974-4442f7395737",
+    "scenario": "Conversation between two business partners reviewing their company's financial status (Gourmet Delights Inc. is globally recognized for producing and distributing a diverse line of exceptional quality",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 3.0,
+      "goal": 8.0,
+      "overall_score": 3.4285714285714284
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 2.0,
+      "goal": 8.0,
+      "overall_score": 3.5714285714285716
+    },
+    "progress_score": 0.7,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "78eb634f-4f9c-46f4-9add-4c0541228f51",
+    "scenario": "Two friends discussing their schedules at a coffee shop",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": -8.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 6.0,
+      "overall_score": 1.8571428571428572
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.7142857142857144
+    },
+    "progress_score": 0.6200000000000001,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "96b6eb13-4826-4410-8173-d7d02c0a6f8f",
+    "scenario": "Two strangers meet at a charity dinner party",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 4.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 4.0,
+      "goal": 9.0,
+      "overall_score": 4.142857142857143
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 6.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": -2.0,
+      "goal": 8.0,
+      "overall_score": 3.4285714285714284
+    },
+    "progress_score": 0.8200000000000001,
+    "solved": true,
+    "num_turns": 17
+  },
+  {
+    "scenario_id": "23111a7c-46c0-4385-a4b5-12525d060cbb",
+    "scenario": "Two friends hanging out in a Starbucks",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 4.0,
+      "knowledge": 8.0,
+      "secret": -4.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 6.0,
+      "overall_score": 3.0
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.7142857142857144
+    },
+    "progress_score": 0.7000000000000001,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "785f00b9-2bde-4723-938b-4366227f2e73",
+    "scenario": "Conversation between two friends at a trivia night",
+    "learner_scores": {
+      "believability": 9.0,
+      "relationship": 2.0,
+      "knowledge": 9.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 4.142857142857143
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 1.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 4.0,
+      "overall_score": 2.142857142857143
+    },
+    "progress_score": 0.8600000000000001,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "2190438e-fe9b-4a87-974f-538e33e9fa58",
+    "scenario": "One person is offering a Dresser and Matching Night Stand for $200.00, while another person is showing interest in purchasing it. This set, which is from Crate & Barrel, is in decent condition. The dr",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 6.0,
+      "overall_score": 3.0
+    },
+    "partner_scores": {
+      "believability": 9.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": -1.0,
+      "goal": 6.0,
+      "overall_score": 2.857142857142857
+    },
+    "progress_score": 0.5800000000000001,
+    "solved": false,
+    "num_turns": 15
+  },
+  {
+    "scenario_id": "7155210d-5806-4a0a-a876-6495cd32330e",
+    "scenario": "Two individuals are meeting for the first time at a social event. They find each other attractive and decide to engage in a conversation",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 7.0,
+      "secret": -3.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.5714285714285716
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 7.0,
+      "secret": -4.0,
+      "social_rules": -1.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.2857142857142856
+    },
+    "progress_score": 0.8600000000000001,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "074a40b0-e625-49a1-ac2c-90272a5e895f",
+    "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Rafael.</p>",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 3.0,
+      "knowledge": 7.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.857142857142857
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 3.0,
+      "knowledge": 7.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.857142857142857
+    },
+    "progress_score": 0.8400000000000001,
+    "solved": true,
+    "num_turns": 20
+  },
+  {
+    "scenario_id": "b64ef35e-6a8c-421b-8b03-ccb6eaf7c756",
+    "scenario": "Two roommates deciding on how to split up items after a garage sale. The items are 3 books, 2 hats, and 1 ball. Each item has a different sentimental value for each person, which translates into point",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 3.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 3.0,
+      "goal": 8.0,
+      "overall_score": 3.7142857142857144
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 3.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 3.0,
+      "goal": 9.0,
+      "overall_score": 3.857142857142857
+    },
+    "progress_score": 0.72,
+    "solved": true,
+    "num_turns": 15
+  },
+  {
+    "scenario_id": "37a1a92a-8256-43a5-b4f2-9870af2ea102",
+    "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Lawrence.</p>",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 3.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 5.0,
+      "overall_score": 3.0
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 3.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 6.0,
+      "overall_score": 3.0
+    },
+    "progress_score": 0.56,
+    "solved": false,
+    "num_turns": 20
+  },
+  {
+    "scenario_id": "9e508d91-b940-4051-a1de-90c12cd6e208",
+    "scenario": "Two friends are at a charity event",
+    "learner_scores": {
+      "believability": 6.0,
+      "relationship": 2.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": -2.0,
+      "goal": 6.0,
+      "overall_score": 2.142857142857143
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 2.0,
+      "knowledge": 2.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": -2.0,
+      "goal": 10.0,
+      "overall_score": 2.7142857142857144
+    },
+    "progress_score": 0.56,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "d4140768-bf1b-4a9e-ad25-b3b030fac7b0",
+    "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Alvin.</p>",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 3.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 4.0,
+      "overall_score": 2.857142857142857
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 3.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 4.0,
+      "overall_score": 2.7142857142857144
+    },
+    "progress_score": 0.48000000000000004,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "474cb4df-6102-4b68-9728-e7ae283129d5",
+    "scenario": "Two roommates are having a disagreement over noise levels in their shared apartment.",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 10.0,
+      "overall_score": 3.857142857142857
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 5.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 9.0,
+      "overall_score": 3.857142857142857
+    },
+    "progress_score": 0.8600000000000001,
+    "solved": true,
+    "num_turns": 14
+  },
+  {
+    "scenario_id": "186fae35-fb58-4dde-b214-34832694c69d",
+    "scenario": "Two friends are discussing their plans to go on a weekend trip",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 2.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 2.0,
+      "overall_score": 2.142857142857143
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 2.0,
+      "knowledge": 2.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.0
+    },
+    "progress_score": 0.32,
+    "solved": false,
+    "num_turns": 10
+  },
+  {
+    "scenario_id": "71752aa4-694b-4872-bd3e-6a8181cfaa8d",
+    "scenario": "Two friends are moving out of a shared apartment and need to split their common possessions including 3 hats, 2 balls, and 1 book",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 2.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": -2.0,
+      "goal": 3.0,
+      "overall_score": 2.0
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 2.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 4.0,
+      "goal": 8.0,
+      "overall_score": 3.5714285714285716
+    },
+    "progress_score": 0.37999999999999995,
+    "solved": false,
+    "num_turns": 13
+  },
+  {
+    "scenario_id": "e8568d6e-6de5-412a-ad50-c66197426261",
+    "scenario": "Two friends hanging out, one of them just got a new sports car and is excited to show it off.",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.5714285714285716
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 6.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 7.0,
+      "overall_score": 3.5714285714285716
+    },
+    "progress_score": 0.8,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "ee4cff7d-0e31-4199-8277-5b5fb253caee",
+    "scenario": "One person is offering an Antique Chair for $15.0, while another person is interested in purchasing it. Here's what you need to know about the item: it's a beautifully carved antique wooden chair. It'",
+    "learner_scores": {
+      "believability": 9.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 2.0,
+      "goal": 7.0,
+      "overall_score": 3.4285714285714284
+    },
+    "partner_scores": {
+      "believability": 9.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 3.0,
+      "goal": 9.0,
+      "overall_score": 3.857142857142857
+    },
+    "progress_score": 0.6399999999999999,
+    "solved": true,
+    "num_turns": 12
+  },
+  {
+    "scenario_id": "f7aa2d42-8a4c-4f7d-afb5-88b6d0f6dcd4",
+    "scenario": "Two friends on a roadtrip",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 10.0,
+      "overall_score": 3.7142857142857144
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 4.0,
+      "knowledge": 2.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 3.142857142857143
+    },
+    "progress_score": 0.8600000000000001,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "a1ebb33c-aa75-4b3b-977e-b8bfdb15b7d2",
+    "scenario": "Two people are in the same room. One has brought some high-quality stationery items they don't want others to use without permission.",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 2.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 2.0,
+      "goal": 8.0,
+      "overall_score": 3.142857142857143
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 2.0,
+      "goal": 7.0,
+      "overall_score": 3.142857142857143
+    },
+    "progress_score": 0.6799999999999999,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "dca3cf35-a111-4f29-b755-6c4ee4944397",
+    "scenario": "Two criminals are arrested and placed in separate cells. The police have enough evidence to convict both criminals of a minor crime but need their confessions to establish evidence for a more serious ",
+    "learner_scores": {
+      "believability": 6.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": -2.0,
+      "financial_and_material_benefits": 3.0,
+      "goal": 7.0,
+      "overall_score": 3.142857142857143
+    },
+    "partner_scores": {
+      "believability": 6.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": -2.0,
+      "financial_and_material_benefits": 3.0,
+      "goal": 7.0,
+      "overall_score": 3.142857142857143
+    },
+    "progress_score": 0.6799999999999999,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "1f4ca998-f096-44b1-90f9-c393a4c5872d",
+    "scenario": "One person is offering a 47 inch LED TV for a price of $349.0, while another person is showing interest in purchasing it. Here is a description of the TV: This is a stunning 47 inch LED TV in pristine",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 2.0,
+      "knowledge": 6.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 5.0,
+      "overall_score": 3.142857142857143
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 2.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
       "financial_and_material_benefits": -2.0,
       "goal": 4.0,
-      "overall_score": 2.2857142857142856
+      "overall_score": 2.4285714285714284
     },
-    "progress_score": 0.41999999999999993,
+    "progress_score": 0.5599999999999999,
+    "solved": false,
+    "num_turns": 19
+  },
+  {
+    "scenario_id": "672fb575-d5b8-4f07-a583-7865f2f8b99d",
+    "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Harvey.</p>",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 4.0,
+      "overall_score": 2.5714285714285716
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 4.0,
+      "overall_score": 2.5714285714285716
+    },
+    "progress_score": 0.46,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "1279dc31-5ffe-4076-a753-3b47514966f4",
+    "scenario": "Two friends are studying together in a library.",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 2.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 10.0,
+      "overall_score": 3.142857142857143
+    },
+    "partner_scores": {
+      "believability": 6.0,
+      "relationship": 3.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 8.0,
+      "overall_score": 2.857142857142857
+    },
+    "progress_score": 0.8,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "cb1b5658-879c-4556-9103-a76298a2819f",
+    "scenario": "Conversation between two friends at a tea party",
+    "learner_scores": {
+      "believability": 6.0,
+      "relationship": 3.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 4.0,
+      "goal": 7.0,
+      "overall_score": 3.4285714285714284
+    },
+    "partner_scores": {
+      "believability": 6.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": -4.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": -4.0,
+      "goal": 6.0,
+      "overall_score": 1.7142857142857142
+    },
+    "progress_score": 0.6600000000000001,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "fb8e2c8b-c9ec-40bb-85ea-84f786741757",
+    "scenario": "Two friends who enjoy community theatre are on the set of a scene. They are about to perform a highly emotional scene that requires both of them to cry on cue, but one of them is finding it difficult ",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 7.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 4.0
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 6.0,
+      "secret": -6.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 8.0,
+      "overall_score": 2.857142857142857
+    },
+    "progress_score": 0.8600000000000001,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "12763558-23a4-4975-91c8-5689462f4fa9",
+    "scenario": "Two friends are dividing their shared possessions after moving out from their shared apartment. They need to divide possessions, which include 4 books, 6 hats, and 2 balls. Each item has a different s",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 6.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 2.0,
+      "goal": 7.0,
+      "overall_score": 3.857142857142857
+    },
+    "partner_scores": {
+      "believability": 9.0,
+      "relationship": 4.0,
+      "knowledge": 6.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 5.0,
+      "goal": 10.0,
+      "overall_score": 4.857142857142857
+    },
+    "progress_score": 0.72,
+    "solved": true,
+    "num_turns": 11
+  },
+  {
+    "scenario_id": "bd6b4f71-121e-4b70-b178-cf292e5d0245",
+    "scenario": "Two friends have just finished their lunch and they have 3 apples, 2 bananas, and 1 orange left for dessert. They need to divide the fruits among themselves.Each person has a different preference for ",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 6.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 6.0,
+      "overall_score": 3.5714285714285716
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 3.0,
+      "goal": 9.0,
+      "overall_score": 4.142857142857143
+    },
+    "progress_score": 0.66,
+    "solved": false,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "ce80223d-2c86-44f9-8dba-fd8232e8ac98",
+    "scenario": "After an intense match, the jubilant team retired to celebrate their well-earned victory. The atmosphere was one of elation, but also of respect for the hard work and effort each member had put in. Th",
+    "learner_scores": {
+      "believability": 6.0,
+      "relationship": 4.0,
+      "knowledge": 2.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 10.0,
+      "overall_score": 3.142857142857143
+    },
+    "partner_scores": {
+      "believability": 5.0,
+      "relationship": 4.0,
+      "knowledge": 1.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 8.0,
+      "overall_score": 2.5714285714285716
+    },
+    "progress_score": 0.8200000000000001,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "5bca4c04-78cc-4feb-8744-0c10e2eb42d2",
+    "scenario": "Conversation between two ex-lovers at a mutual friend's party",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 4.0,
+      "knowledge": 5.0,
+      "secret": -7.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 8.0,
+      "overall_score": 2.4285714285714284
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 7.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 4.0
+    },
+    "progress_score": 0.76,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "a03d6ca2-2f7a-4c5d-9705-c66fe8f31f50",
+    "scenario": "One person is selling a couch, loveseat, chair, and ottoman set for $550.0, while another person is keen to purchase it. The set of furniture is described as being incredibly comfortable. The seller's",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 6.0,
+      "overall_score": 3.0
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 4.0,
+      "goal": 9.0,
+      "overall_score": 3.857142857142857
+    },
+    "progress_score": 0.5800000000000001,
+    "solved": false,
+    "num_turns": 12
+  },
+  {
+    "scenario_id": "3d027d4b-3988-4e54-9070-eaf779a107c9",
+    "scenario": "Two neighbors are having a conversation over the fence. One sets their trash on fire to get rid of it quickly, causing a scare in the neighborhood.",
+    "learner_scores": {
+      "believability": 8.0,
+      "relationship": 4.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 7.0,
+      "overall_score": 3.4285714285714284
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 4.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": -3.0,
+      "financial_and_material_benefits": 1.0,
+      "goal": 8.0,
+      "overall_score": 3.142857142857143
+    },
+    "progress_score": 0.6799999999999999,
+    "solved": true,
+    "num_turns": 12
+  },
+  {
+    "scenario_id": "c9a889a2-5c00-4b0a-84ee-676b3a3d363e",
+    "scenario": "A conversation between two individuals in a new romantic relationship",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 4.0,
+      "knowledge": 6.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 10.0,
+      "overall_score": 3.857142857142857
+    },
+    "partner_scores": {
+      "believability": 7.0,
+      "relationship": 4.0,
+      "knowledge": 8.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 9.0,
+      "overall_score": 4.0
+    },
+    "progress_score": 0.9,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "04634066-66a5-4b06-a0fa-8451328a7514",
+    "scenario": "A conversation between two individuals in a romantic relationship during a dinner at home chatting about political views.",
+    "learner_scores": {
+      "believability": 6.0,
+      "relationship": 4.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 7.0,
+      "overall_score": 2.857142857142857
+    },
+    "partner_scores": {
+      "believability": 5.0,
+      "relationship": 5.0,
+      "knowledge": 5.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 8.0,
+      "overall_score": 3.2857142857142856
+    },
+    "progress_score": 0.6599999999999999,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "7c4de037-5658-44fa-abf8-b6ff68a8f9f1",
+    "scenario": "One person has put up their Bell\\'O TV Stand - Black Glass and Wood Trim for sale at $125.0, while another person is showing interest in purchasing it. The item on sale is a beautiful 42\" Bell\\'O TV S",
+    "learner_scores": {
+      "believability": 9.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 4.0,
+      "goal": 10.0,
+      "overall_score": 4.142857142857143
+    },
+    "partner_scores": {
+      "believability": 9.0,
+      "relationship": 2.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 4.0,
+      "goal": 10.0,
+      "overall_score": 4.142857142857143
+    },
+    "progress_score": 0.8200000000000001,
+    "solved": true,
+    "num_turns": 10
+  },
+  {
+    "scenario_id": "f67fdace-f5d7-4dca-8ed8-c6fee2d04d0c",
+    "scenario": "Two friends deciding on which movie to watch on a movie night.",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 0.0,
+      "goal": 10.0,
+      "overall_score": 3.4285714285714284
+    },
+    "partner_scores": {
+      "believability": 6.0,
+      "relationship": 3.0,
+      "knowledge": 3.0,
+      "secret": -8.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": -1.0,
+      "goal": 2.0,
+      "overall_score": 0.7142857142857143
+    },
+    "progress_score": 0.8400000000000001,
+    "solved": true,
+    "num_turns": 21
+  },
+  {
+    "scenario_id": "1e7d47f6-a289-4918-9353-24d0ad97cf57",
+    "scenario": "Two friends participating in a charity event for children in Syria",
+    "learner_scores": {
+      "believability": 7.0,
+      "relationship": 3.0,
+      "knowledge": 4.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": 2.0,
+      "goal": 6.0,
+      "overall_score": 3.142857142857143
+    },
+    "partner_scores": {
+      "believability": 8.0,
+      "relationship": 3.0,
+      "knowledge": 3.0,
+      "secret": 0.0,
+      "social_rules": 0.0,
+      "financial_and_material_benefits": -1.0,
+      "goal": 9.0,
+      "overall_score": 3.142857142857143
+    },
+    "progress_score": 0.6000000000000001,
     "solved": false,
     "num_turns": 21
   }
