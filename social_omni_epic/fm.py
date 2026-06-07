@@ -59,7 +59,15 @@ class FM:
         try:
             r = self.client.chat.completions.create(**kwargs)
         except Exception as e:
-            if "temperature" in str(e).lower() and "fixed" in str(e).lower():
+            # Some models (e.g. gpt-5-mini) only accept the default temperature.
+            # The error wording varies ("fixed", "Only the default (1) value is
+            # supported", "does not support"), so match any temperature-related
+            # rejection and retry once without the param.
+            msg = str(e).lower()
+            if "temperature" in msg and (
+                "fixed" in msg or "does not support" in msg
+                or "only the default" in msg or "unsupported" in msg
+            ):
                 self._temperature_supported = False
                 kwargs.pop("temperature", None)
                 r = self.client.chat.completions.create(**kwargs)

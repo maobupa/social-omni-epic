@@ -33,3 +33,4 @@ ExpeL-main
 # Smoke-test scratch output (not part of the tracked results)
 output/skill_smoke/
 output/smoke_test/
+output/expel_smoke/
