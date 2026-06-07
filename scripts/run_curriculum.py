@@ -40,6 +40,8 @@ import numpy as np
 from omegaconf import DictConfig, OmegaConf
 from tqdm import tqdm
 
+from social_omni_epic.tracing_fm import print_info, print_section, print_step, print_warn
+
 try:
     from dotenv import load_dotenv
     load_dotenv(Path(__file__).resolve().parent.parent / ".env")
@@ -115,6 +117,7 @@ async def _run_one_scenario(
     svc: _Services,
     config: DictConfig,
     global_iter: int,
+    output_dirs: tuple[Path, Path, Path],  # (success_dir, failed_dir, discarded_dir)
 ) -> tuple[str, Optional[SocialScenario], dict, int]:
     """
     Full pipeline for one scenario: generate → filter gates → two-loop episode.
@@ -124,9 +127,14 @@ async def _run_one_scenario(
 
     Safe for concurrent execution: reads archive (read-only during gather); archive
     writes happen only in the sequential update step after gather() returns.
+    File saves happen here immediately on completion.
     """
+    success_dir, failed_dir, discarded_dir = output_dirs
     fm = svc.fm
     anchor = archive.state.successful[anchor_idx]
+    tag = f"[iter {global_iter:04d}]"
+
+    print_step(f"{tag} Generating from anchor: {anchor.scenario[:70]}...")
 
     # --- KNN examples around anchor for generation context ---
     n_examples = int(config.task_generator.num_examples)
@@ -181,8 +189,11 @@ async def _run_one_scenario(
         )
     )
     if scenario is None:
+        print_warn(f"{tag} Generation returned None → generation_failed")
         return "generation_failed", None, {"reason": "generation_returned_none"}, anchor_idx
 
+    print_info(f"{tag} Generated: {scenario.scenario[:80]}")
+    print_info(f"{tag}   interaction_type={scenario.interaction_type}  relationship={scenario.relationship}")
     scenario.iteration = global_iter
     scenario.parent_example_ids = [anchor.id]
 
@@ -190,6 +201,7 @@ async def _run_one_scenario(
     try:
         scenario.embedding = fm.get_embeddings([scenario.to_text_for_embedding()])[0]
     except Exception as e:
+        print_warn(f"{tag} Embed failed: {e}")
         return "generation_failed", None, {"reason": f"embed_error: {e}"}, anchor_idx
 
     # --- MoI gate ---
@@ -208,9 +220,12 @@ async def _run_one_scenario(
             scenario.moi_reasoning = moi_reason
             if passed:
                 moi_ok = True
+                print_info(f"{tag} MoI gate: PASS")
                 break
+            print_warn(f"{tag} MoI gate: FAIL — {moi_reason[:120]}")
             if _m >= int(config.moi.get("max_edits", 2)) or not moi_edits:
                 break
+            print_info(f"{tag}   MoI edit {_m+1}: {moi_edits[0][:80]}")
             edited = svc.task_gen.edit_scenario(scenario, moi_edits, intent="improve_interestingness")
             if edited is None:
                 break
@@ -223,6 +238,7 @@ async def _run_one_scenario(
                 break
             scenario = edited
         if scenario is None or not moi_ok:
+            print_warn(f"{tag} MoI gate: REJECTED after edits → generation_failed")
             return "generation_failed", scenario, {"reason": "moi_failed"}, anchor_idx
 
     # --- Coherence gate ---
@@ -230,7 +246,9 @@ async def _run_one_scenario(
         scenario, svc.coherence_checker, svc.task_gen, fm, config, anchor, global_iter
     )
     if not passed_coherence or scenario is None:
+        print_warn(f"{tag} Coherence gate: FAIL → generation_failed")
         return "generation_failed", None, {"reason": "coherence_failed"}, anchor_idx
+    print_info(f"{tag} Coherence gate: PASS")
 
     # --- Diversity gate ---
     if config.get("enable_diversity_gate", True) and all_embs and scenario.embedding:
@@ -238,15 +256,51 @@ async def _run_one_scenario(
         emb_arr = np.array(all_embs)
         s_emb = np.array(scenario.embedding)
         sims = emb_arr @ s_emb / (np.linalg.norm(emb_arr, axis=1) * np.linalg.norm(s_emb) + 1e-9)
-        if float(sims.max()) > threshold:
+        max_sim = float(sims.max())
+        if max_sim > threshold:
+            print_warn(f"{tag} Diversity gate: FAIL (max_sim={max_sim:.3f} > {threshold}) → generation_failed")
             return "generation_failed", scenario, {"reason": "diversity_failed"}, anchor_idx
+        print_info(f"{tag} Diversity gate: PASS (max_sim={max_sim:.3f})")
 
     # --- Designate target agent ---
     scenario.target_agent_idx, scenario.target_agent_goal_abstract = designate_target_agent(
         scenario, anchor, fm
     )
+    print_info(f"{tag} Target agent: {scenario.target_agent_idx}  abstract_goal={scenario.target_agent_goal_abstract[:60]}")
 
     # --- Two-loop curriculum episode ---
+    print_step(f"{tag} Starting episode loop (K={config.get('max_attempts',4)}, D={config.get('difficulty',{}).get('D',2)})")
+
+    def _on_attempt_done(loop_info: dict) -> None:
+        diff = loop_info.get("difficulty_loop", [])
+        skill = loop_info.get("skill_attempts", [])
+        latest_diff = diff[-1] if diff else None
+        latest_skill = skill[-1] if skill else None
+        latest = latest_skill or latest_diff
+        if not latest:
+            return
+        if "attempt" in latest:
+            label = f"attempt {latest['attempt']}"
+            goal = (latest.get("diagnostics_scores") or {}).get("goal", "?")
+            solved = latest.get("solved", False)
+            rubric = latest.get("rubric_results") or []
+            verdicts = " | ".join(
+                f"[{'PASS' if r.get('verdict') else 'FAIL'}] {r.get('kind')}"
+                for r in rubric
+            )
+            status = "SOLVED ✓" if solved else "FAILED ✗"
+            print_info(f"{tag}   {label}: {status}  GOAL={goal}  rubric=({verdicts})")
+            if latest.get("reflection_diagnosis"):
+                print_info(f"{tag}   diagnosis: {latest['reflection_diagnosis'][:120]}")
+        else:
+            d = latest.get("d", "?")
+            solved1 = latest.get("attempt1_solved", False)
+            goal = (latest.get("diagnostics_scores") or {}).get("goal", "?")
+            if solved1:
+                print_info(f"{tag}   difficulty d={d}: agent SOLVED on first try (too easy)")
+            else:
+                print_info(f"{tag}   difficulty d={d}: agent FAILED (bit) ✓  GOAL={goal}")
+
     try:
         scenario, terminal_state, _outcome, final_scores, loop_info = await run_episode_two_loop(
             scenario=scenario,
@@ -261,13 +315,34 @@ async def _run_one_scenario(
             scenario_to_sotopia_profiles=svc.scenario_to_sotopia_profiles,
             fm=fm,
             config=config,
+            on_attempt_done=_on_attempt_done,
         )
     except Exception as e:
         import traceback
-        print(f"[iter {global_iter}] Episode exception: {e}\n{traceback.format_exc()}")
+        print_warn(f"{tag} Episode exception: {e}\n{traceback.format_exc()}")
         return "failed", scenario, {"reason": f"episode_exception: {e}"}, anchor_idx
 
     loop_info["final_scores"] = final_scores
+
+    # --- Save file immediately on completion (before returning) ---
+    if terminal_state == "solved_after_biting":
+        _save_scenario_file(scenario, success_dir)
+        print_info(
+            f"{tag} ✓ SOLVED_AFTER_BITING → success/  "
+            f"GOAL={final_scores.get('goal',0):.1f}  "
+            f"title={scenario.scenario_title or scenario.scenario[:50]}"
+        )
+    elif terminal_state == "failed":
+        _save_scenario_file(scenario, failed_dir)
+        sf_flag = " [STRUCTURAL]" if loop_info.get("structural_failure") else ""
+        print_warn(
+            f"{tag} ✗ FAILED{sf_flag} → failed/  "
+            f"GOAL={final_scores.get('goal',0):.1f}"
+        )
+    else:  # discarded
+        _save_discarded(global_iter, "discarded_too_easy", anchor.id, discarded_dir)
+        print_warn(f"{tag} — DISCARDED (too easy) → discarded/")
+
     return terminal_state, scenario, loop_info, anchor_idx
 
 
@@ -391,7 +466,21 @@ def main(config: DictConfig) -> None:
                 archive.record_selection(idx, global_iter + b)
                 batch_anchor_indices.append(idx)
 
-            # Run batch concurrently — archive is read-only during gather()
+            selected_labels = [
+                f"[{i}] {archive.state.successful[i].scenario[:40]}..."
+                for i in batch_anchor_indices
+            ]
+            print_step(
+                f"Batch {iterations_done//current_batch + 1} | "
+                f"solved={solved_count} | archive={archive.size} | "
+                f"selecting {current_batch} anchor(s)"
+            )
+            for label in selected_labels:
+                print_info(f"  anchor → {label}")
+
+            # Run batch concurrently — archive is read-only during gather().
+            # Each task saves its own file immediately on completion.
+            output_dirs = (success_dir, failed_dir, discarded_dir)
             raw_results = await asyncio.gather(
                 *[
                     _run_one_scenario(
@@ -400,11 +489,14 @@ def main(config: DictConfig) -> None:
                         svc=svc,
                         config=config,
                         global_iter=global_iter + i,
+                        output_dirs=output_dirs,
                     )
                     for i, anchor_idx in enumerate(batch_anchor_indices)
                 ],
                 return_exceptions=True,
             )
+
+            print_step(f"Batch done — updating archive ({len(raw_results)} results)")
 
             # Update archive sequentially — all writes happen here, never inside gather()
             for result in raw_results:
@@ -413,7 +505,7 @@ def main(config: DictConfig) -> None:
                 pbar.update(1)
 
                 if isinstance(result, Exception):
-                    print(f"Task raised uncaught exception: {result}")
+                    print_warn(f"Task raised uncaught exception: {result}")
                     archive.add_failed_generation({"reason": f"uncaught: {result}"})
                     metrics_log.append({"iteration": global_iter, "terminal_state": "exception"})
                     continue
@@ -424,34 +516,41 @@ def main(config: DictConfig) -> None:
 
                 if terminal_state == "generation_failed":
                     archive.add_failed_generation({"iteration": global_iter, **info})
+                    # Generator or gate may be at fault, not the anchor — halve the penalty.
+                    archive.record_outcome_weight(anchor_idx, extra_n_i=-0.5)
 
                 elif terminal_state == "discarded":
                     archive.add_failed_generation({
                         "iteration": global_iter, "reason": "discarded_too_easy"
                     })
-                    _save_discarded(global_iter, "discarded_too_easy", anchor_id, discarded_dir)
+                    # File already saved inside _run_one_scenario; no adjustment needed.
 
                 elif terminal_state == "solved_after_biting":
-                    # Record success on parent first; child inherits parent's updated posterior
+                    # Record success on parent first; child inherits parent's updated posterior.
+                    # File already saved inside _run_one_scenario.
                     archive.record_solved_child(anchor_idx)
                     scenario.prior_alpha, scenario.prior_beta = archive.child_prior_from_parent(anchor_idx)
                     archive.add_successful(scenario)
                     archive.record_child(anchor_idx)
-                    _save_scenario_file(scenario, success_dir)
                     solved_count += 1
-                    print(
-                        f"  ✓ solved | total={solved_count} | archive={archive.size} | "
-                        f"{scenario.scenario_title or scenario.scenario[:50]}"
+                    print_info(
+                        f"Archive updated | solved_total={solved_count} | archive_size={archive.size}"
                     )
 
                 else:  # failed — bit but never solved across K attempts
+                    # File already saved inside _run_one_scenario.
                     archive.add_failed_task(scenario)
                     archive.record_child(anchor_idx)
-                    _save_scenario_file(scenario, failed_dir)
+                    # Structural failures (GOAL ≤ 2 across all attempts) double-penalise
+                    # the anchor — no skill can bridge a scenario with no solution path.
+                    if info.get("structural_failure"):
+                        archive.record_outcome_weight(anchor_idx, extra_n_i=1.0)
+                        print_warn(f"Structural failure penalty applied to anchor {anchor_id[:8]}")
 
                 metrics_log.append({
                     "iteration": global_iter,
                     "terminal_state": terminal_state,
+                    "structural_failure": bool(info.get("structural_failure", False)),
                     "n_difficulty_edits": info.get("n_difficulty_edits", 0),
                     "goal": final_scores.get("goal", 0.0),
                     "relationship": final_scores.get("relationship", 0.0),
