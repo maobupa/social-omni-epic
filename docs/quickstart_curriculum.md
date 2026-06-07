@@ -127,11 +127,20 @@ Edit `configs/social_omni_epic_curriculum.yaml` or pass as CLI overrides:
 # Count solved so far
 ls results/run_001/success | wc -l
 
-# Tail metrics
+# Tail metrics (includes structural_failure flag)
 python3 -c "
 import json
 log = json.load(open('results/run_001/metrics.json'))
 for m in log[-10:]:
-    print(m['iteration'], m['terminal_state'], 'solved='+str(m['solved_count']))
+    sf = ' [STRUCTURAL]' if m.get('structural_failure') else ''
+    print(m['iteration'], m['terminal_state'] + sf, 'goal='+str(m['goal']), 'solved='+str(m['solved_count']))
+"
+
+# Count structural failures (anchors to investigate)
+python3 -c "
+import json
+log = json.load(open('results/run_001/metrics.json'))
+sf = [m for m in log if m.get('structural_failure')]
+print(f'{len(sf)} structural failures from anchors:', set(m['anchor_id'][:8] for m in sf))
 "
 ```
