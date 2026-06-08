@@ -78,6 +78,17 @@ class SocialScenario(BaseModel):
     # Phase 2 — skills chronicle (§4.8)
     skills_final_md: Optional[str] = None
 
+    # Cooperative-alignment fields (optional; at least one should be present for generated scenarios).
+    # competing_interest: family (a) — the learner's personal cost that full accommodation forfeits.
+    # partner_default_position: family (a) and (b) — what the partner naturally offers without skilled
+    #   engagement; must fall short of the learner's outcome for the scenario to have real difficulty.
+    competing_interest: Optional[str] = None
+    partner_default_position: Optional[str] = None
+
+    # Per-attempt GOAL scores from the K-loop in order (attempt 1 first).
+    # Populated after curriculum run; empty for seed scenarios and generation failures.
+    goal_trajectory: list[float] = []
+
     # Phase 2 — anchor selection bookkeeping (§4.1)
     n_i: float = 0.0        # effective selection count (float to support weighted outcomes)
     last_chosen: int = -1   # iteration index when last chosen
