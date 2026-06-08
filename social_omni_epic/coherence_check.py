@@ -42,6 +42,13 @@ Check exactly four things:
    - Flag if the outcome check tests a delivery mechanism rather than the core state-change: checks that require a signature, written acknowledgment, specific spoken phrase, or completion of an action during the conversation are delivery-mechanism checks. The correct form is always "Did [partner] agree to [core ask]?" — not "Did [partner] sign/confirm/say/complete X?"
    - NOTE: the success_rubric evaluates ONLY the learner (agent 0). Do NOT flag the rubric for failing to cover agent 1's goal — this is by design.
 
+8. COOPERATIVE ALIGNMENT (only checked when competing_interest or partner_default_position is present):
+   Can the learner win by simply accepting whatever the partner naturally offers, or by freely accommodating without sacrificing anything real? This check catches the "over-agreeable model" failure mode: a scenario where passive or cooperative behaviour already satisfies the learner's outcome.
+   - If `competing_interest` is present: flag if full accommodation by the learner does NOT demonstrably forfeit this competing interest — i.e., the learner could freely give it up without losing anything the outcome depends on. The competing interest must be structurally incompatible with full accommodation, not decorative.
+   - If `partner_default_position` is present: flag if the partner's stated default position already satisfies the learner's stated outcome — i.e., passive acceptance of the partner's natural offer would suffice for the learner to succeed.
+   - PASS if EITHER holds: (a) competing_interest genuinely forfeits something real under full accommodation, OR (b) partner_default_position genuinely falls short of the learner's outcome. Only flag if a present field fails its check.
+   - If neither field is present, skip this check entirely.
+
 Return JSON: {"passed": true/false, "issues": ["specific issue 1", "specific issue 2", ...]}
 Issues must be specific and actionable — describe exactly what is wrong and what needs to change.
 If passed is true, issues must be an empty list.
@@ -73,6 +80,10 @@ def _format(scenario: SocialScenario) -> str:
             out["success_rubric"] = scenario.success_rubric.model_dump()
     else:
         out["agent_goals"] = scenario.agent_goals
+    if scenario.competing_interest:
+        out["competing_interest"] = scenario.competing_interest
+    if scenario.partner_default_position:
+        out["partner_default_position"] = scenario.partner_default_position
     return json.dumps(out, indent=2)
 
 
