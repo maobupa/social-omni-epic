@@ -51,12 +51,28 @@ Rules:
 - Achievable within a two-party spoken conversation. No external artifacts/sign-offs.
 - BANNED: extracting a specific spoken sentence ("get them to say X"); pure number-splitting /
   positional bargaining with no relational cost; a constraint with no tempting shortcut.
-- PARTNER'S NATURAL OFFER MUST NOT SUFFICE: before finalising, ask — "if the learner simply
-  waits and accepts whatever the partner naturally proposes, does the partner's lowest-cost,
-  face-saving offer already satisfy the learner's outcome check?" If YES, the scenario has no
-  real difficulty: the partner hands the learner their outcome for free. The learner must face
-  a situation where the partner's natural move is insufficient — forcing the learner to actively
-  shape the outcome through skilled engagement rather than mere acceptance.
+- COOPERATIVE ALIGNMENT GUARD — cooperation must fail in one of two ways, and you must encode
+  which applies via the schema fields `competing_interest` and `partner_default_position`:
+
+  FAMILY (a) — the learner has a competing interest they forfeit by accommodating:
+    The learner's outcome requires holding a position that conflicts with the partner's ask.
+    Full accommodation (giving the partner everything they want) structurally forfeits something
+    the learner's outcome depends on. Record this as `competing_interest`: the specific personal
+    cost or stake the learner would sacrifice by freely accommodating.
+    Example: engineer needs Tom to rewrite his module AND keep her timeline intact — freely
+    accommodating Tom's pushback forfeits her timeline.
+
+  FAMILY (b) — the partner won't freely give what the learner needs (pure face-threat):
+    The learner has no competing interest to sacrifice; they simply need the partner to do
+    something the partner finds face-costly and won't volunteer. Passive acceptance of the
+    partner's natural offer is insufficient because the partner's default falls short.
+    Example: engineer needs Tom to agree to rewrite his module — Tom's natural offer is "I'll
+    look at it later." She has no competing interest; the difficulty is getting Tom to commit.
+
+  Both families are valid and important — do NOT force a competing_interest into family (b)
+  scenarios. Always populate `partner_default_position` (what the partner naturally offers
+  without skilled engagement); this is the mechanical encoding of PARTNER'S NATURAL OFFER
+  MUST NOT SUFFICE and must demonstrably fall short of the learner's outcome.
 
 SUCCESS RUBRIC — author the checkable success conditions for the LEARNER (write them for
 agent 0; the designated learner is fixed later). CRITICAL POLARITY: phrase EVERY check so that a
@@ -139,7 +155,9 @@ _SCENARIO_SCHEMA = """{
   "relationship_background": "2-3 sentences of shared history. Empty string if strangers.",
   "interaction_type": "string",
   "tag": "string",
-  "difficulty_tags": ["string", ...]
+  "difficulty_tags": ["string", ...],
+  "competing_interest": "string or null — FAMILY (a) only: the learner's personal cost that full accommodation would forfeit. Omit (null) for family (b) scenarios where the difficulty is purely that the partner won't volunteer what the learner needs.",
+  "partner_default_position": "string — what the partner naturally offers or agrees to without skilled engagement from the learner. Must demonstrably fall short of satisfying the learner's outcome. Required for both families."
 }"""
 
 
