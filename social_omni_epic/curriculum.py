@@ -225,11 +225,25 @@ async def run_episode_two_loop(
                 on_attempt_done(loop_info)
             solved = True
             break
+
+        # Early structural failure: if every attempt so far has GOAL ≤ 2 and we have
+        # at least 2 data points (attempt 2 already benefited from one reflection cycle),
+        # the scenario almost certainly has no learnable solution path. Exit now rather
+        # than spending 2+ more episode calls on a dead scenario.
+        if len(all_scores) >= 2:
+            if all(s["scores"].get("goal", 0.0) <= 2.0 for s in all_scores):
+                loop_info["structural_failure"] = True
+                loop_info["skill_attempts"].append(att_rec)
+                if on_attempt_done:
+                    on_attempt_done(loop_info)
+                break
+
         if attempt < K:
             ref_out = reflection_mod.reflect(
                 chronicle=current_chronicle, scenario=scenario, transcripts=all_transcripts,
                 prior_edit_reasons=all_edit_reasons, attempt_num=attempt, anchor_task=anchor,
                 rubric_results=result.rubric_results,
+                attempt_scores=all_scores,
             )
             adv_result = adversarial.check_reflection(
                 ref_out, all_transcripts[-1], anchor_task=anchor, scenario=scenario
@@ -269,5 +283,8 @@ async def run_episode_two_loop(
     scenario.target_perspective = title_data["target_perspective"]
     scenario.skills_final_md = final_chronicle.to_markdown()
     scenario.goal_score = float(final_scores.get("goal", 0.0))
+    scenario.goal_trajectory = [
+        float(s["scores"].get("goal", 0.0)) for s in all_scores
+    ]
 
     return scenario, terminal_state, outcome, final_scores, loop_info
