@@ -148,5 +148,7 @@ def dict_to_scenario(d: dict) -> SocialScenario:
         tag=d.get("tag", d.get("interaction_type", "")),
         interaction_type=d.get("interaction_type", ""),
         difficulty_tags=d.get("difficulty_tags", []),
+        competing_interest=d.get("competing_interest") or None,
+        partner_default_position=d.get("partner_default_position") or None,
         source="generated",
     )
