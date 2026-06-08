@@ -334,9 +334,8 @@ async def _run_one_scenario(
         )
     elif terminal_state == "failed":
         _save_scenario_file(scenario, failed_dir)
-        sf_flag = " [STRUCTURAL]" if loop_info.get("structural_failure") else ""
         print_warn(
-            f"{tag} ✗ FAILED{sf_flag} → failed/  "
+            f"{tag} ✗ FAILED → failed/  "
             f"GOAL={final_scores.get('goal',0):.1f}"
         )
     else:  # discarded
@@ -541,11 +540,6 @@ def main(config: DictConfig) -> None:
                     # File already saved inside _run_one_scenario.
                     archive.add_failed_task(scenario)
                     archive.record_child(anchor_idx)
-                    # Structural failures (GOAL ≤ 2 across all attempts) double-penalise
-                    # the anchor — no skill can bridge a scenario with no solution path.
-                    if info.get("structural_failure"):
-                        archive.record_outcome_weight(anchor_idx, extra_n_i=1.0)
-                        print_warn(f"Structural failure penalty applied to anchor {anchor_id[:8]}")
 
                 metrics_log.append({
                     "iteration": global_iter,
