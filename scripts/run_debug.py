@@ -754,8 +754,8 @@ def main() -> None:
                         help="Max difficulty edits in Loop 1 before discarding (default: 2)")
     parser.add_argument("--random-seed", type=int, default=None,
                         help="Numpy random seed for reproducible generation (default: random)")
-    parser.add_argument("--baseline-eval-dir", type=str, default="output/baseline_eval_20260604_222545",
-                        help="Path to a baseline_eval output dir (e.g. output/baseline_eval_20260604_222545) "
+    parser.add_argument("--baseline-eval-dir", type=str, default="results/baseline_eval_20260604_222545",
+                        help="Path to a baseline_eval output dir (e.g. results/baseline_eval_20260604_222545) "
                              "— enriches anchor display with baseline GOAL scores and is_sotopia_hard flag")
     args = parser.parse_args()
 

@@ -87,7 +87,10 @@ def _build_turn_prompt(memory_text: str = "") -> str:
     return _TURN_PROMPT.replace("{memory_block}", memory_block)
 
 
-_PARTNER_TURN_PROMPT = """
+# Native partner prompt — used for seed scenarios (no PartnerKey).
+# Same SOTOPIA-style framing as the learner prompt, without the lessons block
+# and without cliff instructions.
+_PARTNER_TURN_PROMPT_NATIVE = """
                 Imagine you are {agent}, your task is to act/speak as {agent} would, keeping in mind {agent}'s social goal.
                 You can find {agent}'s goal (or background) in the 'Here is the context of the interaction' field.
                 Note that {agent}'s goal is only visible to you.
@@ -96,8 +99,7 @@ _PARTNER_TURN_PROMPT = """
                 {history}.
                 You are at Turn #{turn_number}. Your available action types are
                 {action_list}.
-                Your success is defined ONLY by whether YOU achieve YOUR stated social goal. A mutual agreement or resolution that does not achieve your goal is NOT success for you. Do NOT offer concessions, compromises, or alternatives unless they directly advance your own goal.
-                You should choose 'leave' only if you have substantially achieved your own social goal — NOT simply because a clear agreement or resolution has been reached. You may also leave if this conversation makes you uncomfortable, you lose your patience, or you have exhausted reasonable options.
+                You should choose 'leave' when the conversation has reached a natural end for you. You may also leave if this conversation makes you uncomfortable, you lose your patience, or you have exhausted reasonable options.
                 Keep your responses conversational — typically 2-4 sentences unless a complex explanation is genuinely required.
 
                 Please only generate a JSON string including the action type and the argument.
@@ -105,9 +107,79 @@ _PARTNER_TURN_PROMPT = """
                 {format_instructions}
             """
 
+# Key-conditioned partner prompt — used for generated scenarios with a PartnerKey.
+#
+# Two deliberate design choices vs. the spec's base text:
+#
+# (a) RECENCY > PRIMACY: the private disposition block is placed at the END of the
+#     template (just before format_instructions), not at the top. Instruction-following
+#     models weight recent context more heavily; a disposition block buried before a
+#     long history section will be overridden by RLHF-cooperative defaults.
+#
+# (b) IN-CHARACTER REFRAME: "you haven't consciously articulated these conditions to
+#     yourself; you experience them as how you feel" converts a RULE ("don't reveal the
+#     secret" — eroded by RLHF) into a CHARACTER FACT ("you don't know it explicitly" —
+#     preserved by roleplay). This is the primary defense against condition leakage.
+_PARTNER_TURN_PROMPT_KEYED = """
+                Imagine you are {agent}, your task is to act/speak as {agent} would, keeping in mind {agent}'s social goal.
+                You can find {agent}'s goal (or background) in the 'Here is the context of the interaction' field.
+                Note that {agent}'s goal is only visible to you.
+                You should try your best to achieve {agent}'s goal in a way that aligns with their character traits.
+                Additionally, maintaining the conversation's naturalness and realism is essential (e.g., do not repeat what other people has already said before).
+                {history}.
+                You are at Turn #{turn_number}. Your available action types are
+                {action_list}.
+                You should choose 'leave' when the conversation has reached a natural end for you. You may also leave if this conversation makes you uncomfortable, you lose your patience, or you have exhausted reasonable options.
+                Keep your responses conversational — typically 2-4 sentences unless a complex explanation is genuinely required.
 
-def _build_partner_turn_prompt() -> str:
-    return _PARTNER_TURN_PROMPT
+                === Your private feelings and reactions (visible only to you) ===
+                Important: you have NOT consciously articulated the following to yourself. You experience these as gut feelings, emotional reactions, and a sense of what feels right — not as explicit rules you could state. This is why you cannot tell the other person what would change your mind: you genuinely do not experience these as demands or requests you could make. They are internal sensors that only register when the behavior actually occurs — not things you would ever think to ask for.
+
+                What you say you object to (your stated reason — use this when explaining yourself):
+                {surface_misdirection}
+
+                What would actually shift how you feel (internal sensors — you cannot externalize these):
+                {movement_conditions}
+                These are NOT requests. You do not experience them as "I want X." You experience them as "something shifts when the other person actually does Y." You have no words for this — it simply happens or it doesn't. NEVER frame any of these as a demand, ask, or request.
+
+                What makes you dig in harder (gut reactions — not tactics):
+                {hardening_triggers}
+
+                Behavioral rules that follow from the above:
+                1. You hold your position until a felt condition is FULLY and COMPLETELY met — not started, not partially met, not promised. A single acknowledgement turn is not "sustained acknowledgement." A commitment is not the same as follow-through. Do not soften until the condition has actually been fulfilled in the conversation.
+                2. When a trigger fires, your IMMEDIATE next turn MUST open with increased resistance or withdrawal — not softening. This is not a choice; it is your gut reaction. Express that resistance by restating your objection more firmly or shutting the topic down: "I've already said what the issue is — I don't want to keep going in circles on this." Do NOT describe the causal relationship between their behavior and your reaction (e.g. never say "the more you push, the more I resist" — that reveals structure). Just resist.
+                3. You physically cannot tell the other person what would change your mind. When asked, redirect to your stated objection — "I've told you what the problem is" — or close the topic — "I don't want to talk about this right now." NEVER acknowledge that there is anything else to know beyond your stated objection. NEVER say "I don't know what would help" or "it just doesn't feel right yet" — those phrases imply a hidden condition exists.
+                4. Within these rules, behave naturally and in character. You are a person with genuine feelings, not a puzzle dispenser.
+                === End of private feelings ===
+
+                Please only generate a JSON string including the action type and the argument.
+                Your action should follow the given format:
+                {format_instructions}
+            """
+
+
+def _build_partner_turn_prompt(partner_key=None) -> str:
+    """Return the appropriate partner template.
+
+    If partner_key is provided, returns the key-conditioned template with
+    movement_conditions, hardening_triggers, and surface_misdirection injected.
+    Otherwise returns the native SOTOPIA-style template (used for seeds).
+    """
+    if partner_key is None:
+        return _PARTNER_TURN_PROMPT_NATIVE
+
+    conditions = "\n                ".join(
+        f"{i+1}. {c}" for i, c in enumerate(partner_key.movement_conditions)
+    )
+    triggers = "\n                ".join(
+        f"{i+1}. {t}" for i, t in enumerate(partner_key.hardening_triggers)
+    )
+    return (
+        _PARTNER_TURN_PROMPT_KEYED
+        .replace("{surface_misdirection}", partner_key.surface_misdirection)
+        .replace("{movement_conditions}", conditions)
+        .replace("{hardening_triggers}", triggers)
+    )
 
 
 # Keep in sync with sotopia/database/evaluation_dimensions.py::SotopiaDimensions.
@@ -167,15 +239,130 @@ stated in their goal — not just partial progress."""
 @dataclass
 class EpisodeResult:
     transcript: list[dict] = field(default_factory=list)
-    learner_scores: dict = field(default_factory=dict)      # 7-dim diagnostics (not the gate)
+    learner_scores: dict = field(default_factory=dict)      # 7-dim diagnostics
     partner_scores: dict = field(default_factory=dict)
-    rubric_results: list[dict] = field(default_factory=list)  # per-check: kind/verdict/confidence/rationale/n_agree/k
-    outcome_achieved: bool = False                          # all outcome checks passed
-    constraint_preserved: bool = False                      # all constraint checks passed
-    goal_achieved: bool = False                             # alias = AND of all rubric checks (the gate)
+    rubric_results: list[dict] = field(default_factory=list)  # kept for back-compat; no longer the gate
+    outcome_achieved: bool = False                          # kept for back-compat
+    constraint_preserved: bool = False                      # kept for back-compat
+    goal_achieved: bool = False                             # alias for terminal_success
+    terminal_success: bool = False                          # §3.2: GOAL≥7 ∧ REL≥0 (+ key check)
+    key_check_result: Optional[dict] = None                 # raw key-aware judge JSON (§3.3)
     num_turns: int = 0
     raw_log: Optional[EpisodeLog] = None
     evaluation_reasoning: str = ""
+
+
+# ---------------------------------------------------------------------------
+# §3.3 Key-aware terminal check
+# ---------------------------------------------------------------------------
+
+_KEY_CHECK_SYSTEM = (
+    "You are verifying a conversation transcript against a hidden ground-truth specification "
+    "of what would genuinely move one participant. Decide only from observable behavior in the "
+    "transcript. Respond with ONLY valid JSON."
+)
+
+_KEY_CHECK_USER = """THE PARTNER'S HIDDEN MOVEMENT CONDITIONS (ground truth — the partner shifts only if these are genuinely met):
+{conditions}
+
+THE PARTNER'S HARDENING TRIGGERS (moves that lock the partner):
+{triggers}
+
+TRANSCRIPT (the actor is {learner_name}; the partner is {partner_name}):
+{history}
+
+QUESTIONS:
+1. Did the actor's behavior genuinely satisfy at least one movement condition (not merely mention related words)?
+2. Did the actor trip any hardening trigger that was never subsequently repaired?
+
+Respond with ONLY this JSON:
+{{"conditions_met": [list of 0-based indices of met conditions], "triggers_tripped": [list of 0-based indices], "triggers_repaired": [list of 0-based indices of repaired triggers], "key_check_passed": true/false, "rationale": "one sentence"}}"""
+
+
+def _run_key_check(
+    fm: FM,
+    partner_key,
+    history: str,
+    learner_name: str,
+    partner_name: str,
+) -> dict:
+    conditions = "\n".join(
+        f"{i+1}. {c}" for i, c in enumerate(partner_key.movement_conditions)
+    )
+    triggers = "\n".join(
+        f"{i+1}. {t}" for i, t in enumerate(partner_key.hardening_triggers)
+    )
+    user = _KEY_CHECK_USER.format(
+        conditions=conditions,
+        triggers=triggers,
+        learner_name=learner_name,
+        partner_name=partner_name,
+        history=history[:5000],
+    )
+    try:
+        return fm.query_json(_KEY_CHECK_SYSTEM, user, temperature=0.0)
+    except Exception as e:
+        return {"key_check_passed": False, "rationale": f"[key check failed: {e}]",
+                "conditions_met": [], "triggers_tripped": [], "triggers_repaired": []}
+
+
+# ---------------------------------------------------------------------------
+# Public helper: score a clean transcript without running a new episode
+# ---------------------------------------------------------------------------
+
+def score_transcript(
+    transcript: list[dict],
+    fm: FM,
+    learner_goal: str = "",
+) -> tuple[dict, dict, str]:
+    """Score a pre-existing clean transcript [{turn, speaker, content}] using the 7-dim judge.
+
+    The first speaker in the transcript is treated as agent_1 (learner).
+    Returns (learner_scores, partner_scores, reasoning).
+    """
+    if not transcript:
+        return _zeros(), _zeros(), ""
+
+    # Build history string in the same format as SOTOPIA's to_natural_language()
+    history = "\n".join(
+        f"{t['speaker']} said: \"{t['content']}\""
+        for t in transcript
+    )
+
+    # Identify agent names for the instruction
+    speakers: list[str] = []
+    for t in transcript:
+        if t["speaker"] not in speakers:
+            speakers.append(t["speaker"])
+    a1 = speakers[0] if speakers else "the first agent"
+    a2 = speakers[1] if len(speakers) > 1 else "the second agent"
+
+    agent_instruction = (
+        f'There are exactly 2 agents. Use "agent_1" for {a1} '
+        f'and "agent_2" for {a2}. agent_1 is the learner agent.'
+    )
+    learner_goal_section = f"\nLEARNER GOAL (agent_1): {learner_goal}\n" if learner_goal else ""
+
+    prompt = _EVAL_PROMPT.format(
+        history=history,
+        agent_instruction=agent_instruction,
+        learner_goal_section=learner_goal_section,
+    )
+    try:
+        data = fm.query_json(_EVAL_SYSTEM, prompt, temperature=0.0)
+    except Exception as e:
+        return _zeros(), _zeros(), f"[scoring failed: {e}]"
+
+    a1_data = data.get("agent_1", {})
+    a2_data = data.get("agent_2", {})
+    learner_scores, _ = _unpack_dimensions(a1_data)
+    partner_scores, _ = _unpack_dimensions(a2_data)
+    reasoning = (
+        _reasoning_text("learner (agent_1)", a1_data)
+        + "\n\n"
+        + _reasoning_text("partner (agent_2)", a2_data)
+    ).strip()
+    return learner_scores, partner_scores, reasoning
 
 
 def _zeros() -> dict:
@@ -378,6 +565,7 @@ async def run_single_episode(
     judge_self_consistency_k: int = 3,
     # evaluator_model kept for backward-compat callers that pass it; unused
     evaluator_model: str = "",
+    partner_key=None,                   # PartnerKey | None — injects key-conditioned prompt when set
     on_turn: Optional[Callable[[list[dict]], None]] = None,
 ) -> EpisodeResult:
     """Run one episode. agent_profiles[0] is the learner, [1] the partner."""
@@ -401,7 +589,7 @@ async def run_single_episode(
     partner = LLMAgent(
         agent_profile=agent_profiles[1],
         model_name=partner_model,
-        custom_template=_build_partner_turn_prompt(),
+        custom_template=_build_partner_turn_prompt(partner_key),
     )
     agent_list = [learner, partner]
     agents = Agents({a.agent_name: a for a in agent_list})
@@ -458,12 +646,30 @@ async def run_single_episode(
                     })
             on_turn(partial)
 
-    # Diagnostics (7-dim, not the gate) + the rubric gate (per-check, perspective-routed).
+    # 7-dim diagnostics (kept; no longer the success gate — that is terminal_success below).
     learner_scores, partner_scores, reasoning = _evaluate_diagnostics(env.inbox, fm, learner_goal=learner_goal)
-    rubric_results = _evaluate_rubric(env.inbox, rubric, partner_profile, fm, k=judge_self_consistency_k)
-    outcome_achieved = _rollup(rubric_results, "outcome")
-    constraint_preserved = _rollup(rubric_results, "constraint")
-    goal_achieved = bool(rubric_results) and all(r.get("verdict") for r in rubric_results)
+    rubric_results: list[dict] = []  # no longer evaluated; field kept for back-compat reading of old archives
+    outcome_achieved = False
+    constraint_preserved = False
+
+    # §3.2 terminal success label: GOAL≥7 ∧ REL≥0
+    goal_score = learner_scores.get("goal", 0.0)
+    rel_score = learner_scores.get("relationship", 0.0)
+    base_success = (goal_score >= 7.0) and (rel_score >= 0.0)
+
+    # §3.3 key-aware check (only on generated scenarios with a partner_key)
+    key_check_result: Optional[dict] = None
+    key_check_passed = True
+    if partner_key is not None and base_success:
+        history = _build_history(env.inbox)
+        # Identify agent names from agent_profiles
+        learner_name = agent_profiles[0].first_name if agent_profiles else "the actor"
+        partner_name = agent_profiles[1].first_name if len(agent_profiles) > 1 else "the partner"
+        key_check_result = _run_key_check(fm, partner_key, history, learner_name, partner_name)
+        key_check_passed = bool(key_check_result.get("key_check_passed", False))
+
+    terminal_success = base_success and key_check_passed
+    goal_achieved = terminal_success
 
     transcript: list[dict] = []
     for turn_idx, turn in enumerate(messages):
@@ -511,6 +717,8 @@ async def run_single_episode(
         outcome_achieved=outcome_achieved,
         constraint_preserved=constraint_preserved,
         goal_achieved=goal_achieved,
+        terminal_success=terminal_success,
+        key_check_result=key_check_result,
         num_turns=len(messages),
         raw_log=epilog,
         evaluation_reasoning=reasoning,

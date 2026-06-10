@@ -275,6 +275,21 @@ async def run_episode_two_loop(
         chronicle_versions=all_versions, transcripts=all_transcripts, edit_reasons=all_edit_reasons,
         outcome=outcome, scenario=scenario, anchor_task=anchor, attempt_scores=all_scores,
     )
+
+    # §8.3: wire check_final (was dead code in Phase 1)
+    inherited_md = (anchor.skills_final_md or "") if anchor else ""
+    adv_final = adversarial.check_final(final_chronicle, inherited_md, outcome=outcome)
+    if not adv_final.approved:
+        final_chronicle = meta_mod.synthesize(
+            chronicle_versions=all_versions, transcripts=all_transcripts,
+            edit_reasons=all_edit_reasons, outcome=outcome, scenario=scenario,
+            anchor_task=anchor, attempt_scores=all_scores,
+            adversarial_critique=adv_final.critique,
+        )
+        adv_final2 = adversarial.check_final(final_chronicle, inherited_md, outcome=outcome)
+        if not adv_final2.approved:
+            loop_info["final_check_flag"] = adv_final2.issues
+
     loop_info["final_chronicle_md"] = final_chronicle.to_markdown()
 
     title_data = title_gen.generate(scenario, scenario.target_agent_idx)

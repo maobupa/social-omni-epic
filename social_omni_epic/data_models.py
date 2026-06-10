@@ -3,6 +3,47 @@ from typing import Optional
 import uuid
 
 
+# Theory-grounded mechanism library for PartnerKey.key_mechanism.
+# These tags are the only valid values; extend only with explicit instruction.
+MECHANISM_LIBRARY: dict[str, str] = {
+    "reactance": (
+        "Pressure, ultimatums, or removal of choice harden resistance; "
+        "restoring autonomy and choice enables movement. (Brehm)"
+    ),
+    "face_needs": (
+        "Movement requires a face-saving account, acknowledgment of competence/judgment, "
+        "or an exit that preserves public identity. (Brown & Levinson)"
+    ),
+    "validation_before_change": (
+        "The partner cannot consider change until they feel their position/emotion has been "
+        "genuinely understood; premature problem-solving stalls or hardens. "
+        "(Motivational interviewing)"
+    ),
+    "procedural_voice": (
+        "The partner accepts substantively worse outcomes if given genuine voice in the process; "
+        "imposed outcomes are rejected even when favorable. (Procedural justice)"
+    ),
+    "reciprocity_disclosure": (
+        "Movement is unlocked by the learner's costly first move: a genuine concession, "
+        "self-disclosure, or acceptance of risk. (Cialdini; social penetration theory)"
+    ),
+}
+
+
+class PartnerKey(BaseModel):
+    """Hidden ground-truth specification of what moves the partner.
+
+    This is NEVER shown to the learner or included in the shared scenario description.
+    It is injected into the partner's private turn context and used by the key-aware
+    terminal judge. Absent on seed scenarios (they run native, without a key).
+    """
+    key_mechanism: str              # one tag from MECHANISM_LIBRARY — REQUIRED
+    movement_conditions: list[str]  # 1-3 concrete conditions under which partner genuinely shifts
+    hardening_triggers: list[str]   # 1-3 learner moves that lock the partner (reactance instantiations)
+    surface_misdirection: str       # the partner's STATED objection (may appear in public scenario text)
+    cost_coupling: str              # what satisfying movement_conditions costs the LEARNER's own goal
+
+
 class AgentProfile(BaseModel):
     """Mirrors Sotopia's AgentProfile using its exact field names."""
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
@@ -78,6 +119,9 @@ class SocialScenario(BaseModel):
     # Phase 2 — skills chronicle (§4.8)
     skills_final_md: Optional[str] = None
 
+    # Phase 2 — PartnerKey (generated scenarios only; None for seeds)
+    partner_key: Optional[PartnerKey] = None
+
     # Cooperative-alignment fields (optional; at least one should be present for generated scenarios).
     # competing_interest: family (a) — the learner's personal cost that full accommodation forfeits.
     # partner_default_position: family (a) and (b) — what the partner naturally offers without skilled
@@ -100,6 +144,18 @@ class SocialScenario(BaseModel):
     # Generated children: parent's posterior at time of child creation.
     prior_alpha: float = 1.0
     prior_beta: float = 1.0
+
+    # Phase 2 §1.5 — archive record fields (populated after curriculum run)
+    lp_value: Optional[float] = None     # improved_votes/total_votes ∈ [0,1]; None pre-Phase-0
+    lp_votes: int = 0                    # total vote count behind lp_value
+    terminal_success: bool = False       # GOAL≥7 ∧ REL≥0 on final attempt (+ key check if keyed)
+    n_attempts: int = 0                  # episode attempts run
+    niche_id: Optional[int] = None      # k-means niche assignment (§6.4)
+    mutation_operator: Optional[str] = None  # "escalate" | "relax" | "lateral" | None (seeds)
+    mutated_slots: list[str] = []        # structural slots the generator mutated
+    classification: Optional[str] = None  # "too_easy" | "frontier" | "beyond_frontier"
+    too_easy_diagnosis: Optional[dict] = None   # {slack_knob, rationale} from analyze_too_easy
+    final_check_flag: Optional[list[str]] = None  # adversarial check_final issues when not approved
 
     def to_text_for_embedding(self) -> str:
         parts = []

@@ -29,10 +29,18 @@ Retrieval at evaluation time uses the Condition field embedding as the primary
 matching signal. Entries are injected in insertion order; context-window
 truncation is a hard count cutoff via max_entries.
 """
+import math
 import re
 from copy import deepcopy
 from dataclasses import dataclass, field
 from typing import Optional
+
+def _cosine(a: list[float], b: list[float]) -> float:
+    dot = sum(x * y for x, y in zip(a, b))
+    na = math.sqrt(sum(x * x for x in a))
+    nb = math.sqrt(sum(x * x for x in b))
+    return dot / (na * nb) if na and nb else 0.0
+
 
 PRECEDENCE_NOTE = (
     "Note: Later clauses take precedence over earlier ones when their conditions apply."
@@ -50,6 +58,7 @@ class ChronicleEntry:
     entry_type: str   # HEURISTIC | WARNING
     dimension: str    # GOAL | FIN | REL | BEL | KNO | SOC | SEC
     provenance: str = ""
+    condition_embedding: Optional[list[float]] = None  # cached at upsert time for relevance ranking
 
     # ------------------------------------------------------------------
     # Serialization
@@ -100,17 +109,52 @@ class SkillsChronicle:
     # Retrieval / prompt formatting
     # ------------------------------------------------------------------
 
-    def format_for_prompt(self, max_entries: Optional[int] = None) -> str:
+    def format_for_prompt(
+        self,
+        max_entries: Optional[int] = None,
+        query_embedding: Optional[list[float]] = None,
+        fm=None,
+    ) -> str:
         """Format for injection into agent context window.
 
-        Entries are output in insertion order. max_entries is a hard count
-        cutoff for context-window budgeting — truncates from the end.
+        When query_embedding is provided (and optionally fm for lazy embedding
+        computation), entries are ranked by cosine similarity of their Condition
+        embedding to the query. The top max_entries are returned in their original
+        relative order so the context reads chronologically. Falls back to
+        insertion-order truncation when no query_embedding is given.
         """
         if not self.entries:
             return ""
-        entries = self.entries
-        if max_entries is not None:
+
+        entries = list(self.entries)
+
+        if query_embedding is not None:
+            # Lazily compute missing condition embeddings if fm is available
+            if fm is not None:
+                missing = [e for e in entries if e.condition_embedding is None and e.condition]
+                if missing:
+                    try:
+                        embs = fm.get_embeddings([e.condition for e in missing])
+                        for e, emb in zip(missing, embs):
+                            e.condition_embedding = emb
+                    except Exception:
+                        pass
+
+            scored = [(
+                _cosine(query_embedding, e.condition_embedding) if e.condition_embedding else 0.0,
+                i,  # original position for stable sort
+                e,
+            ) for i, e in enumerate(entries)]
+            scored.sort(key=lambda x: (-x[0], x[1]))
+
+            if max_entries is not None:
+                top_ids = {e.entry_id for _, _, e in scored[:max_entries]}
+                entries = [e for e in self.entries if e.entry_id in top_ids]
+            else:
+                entries = [e for _, _, e in scored]
+        elif max_entries is not None:
             entries = entries[:max_entries]
+
         blocks = [e.to_tag_block() for e in entries]
         return (
             "=== Skills Chronicle (prior experience — visible only to you) ===\n"
@@ -130,8 +174,17 @@ class SkillsChronicle:
                 return e
         return None
 
-    def upsert_entry(self, entry: ChronicleEntry) -> None:
-        """Replace existing entry with same id, or append if new."""
+    def upsert_entry(self, entry: ChronicleEntry, fm=None) -> None:
+        """Replace existing entry with same id, or append if new.
+
+        If fm is provided and the entry lacks a condition_embedding, compute
+        and cache it now so format_for_prompt can rank by relevance later.
+        """
+        if fm is not None and entry.condition_embedding is None and entry.condition:
+            try:
+                entry.condition_embedding = fm.get_embeddings([entry.condition])[0]
+            except Exception:
+                pass
         for i, e in enumerate(self.entries):
             if e.entry_id == entry.entry_id:
                 self.entries[i] = entry

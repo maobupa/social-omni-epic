@@ -254,7 +254,7 @@ def main() -> None:
 
     # Output directory
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-    out_dir = Path(args.output_dir) if args.output_dir else Path(f"output/baseline_eval_{ts}")
+    out_dir = Path(args.output_dir) if args.output_dir else Path(f"results/baseline_eval_{ts}")
     episodes_dir = out_dir / "episodes"
     episodes_dir.mkdir(parents=True, exist_ok=True)
     print(f"Output dir: {out_dir}")

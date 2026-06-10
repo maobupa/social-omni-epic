@@ -67,15 +67,24 @@ A Skills Chronicle is a document of structured entries that guide an AI agent's 
 Your task after a FAILED episode:
 
 STEP 1 — DIAGNOSIS:
-Write a <Diagnosis> block analyzing:
-  - The FAILURE PATTERN (use the RUBRIC CHECK RESULTS provided): HOLLOW EXTRACTION (got the outcome
-    but broke the constraint — took the tempting shortcut and paid the relational price), an ATTUNEMENT
-    failure (failed a relational/internal constraint — name the real cause, e.g. "defaulted to
-    problem-solving when validation-first was needed," NOT "discomfort"), or simply not achieving the
-    outcome. Diagnose the failure that ACTUALLY occurred per the checks.
-  - Which chronicle entries were relevant to this scenario (if the chronicle is empty, skip this and the next sub-question)
+Write a <Diagnosis> block analyzing, using the EVALUATION SIGNALS provided:
+  - GOAL and RELATIONSHIP scores and their trend across attempts (rising = something is working;
+    flat or falling = the current approach is not working and needs real change, not just refinement).
+  - KEY VERDICT (when present): which hidden movement conditions the actor approached or satisfied,
+    which hardening triggers were tripped and whether they were repaired. You see this verdict, NOT
+    the hidden condition text itself — the chronicle must stay key-blind to preserve transfer.
+  - The FAILURE PATTERN — classify which one occurred:
+      PRESSURE FAILURE: the actor tripped the partner's resistance — pushed, threatened, imposed,
+        took over, or problem-solved before the partner was ready; the partner dug in harder.
+      DISCOVERY FAILURE: the actor argued against the partner's stated objection without ever
+        probing beneath it to find what actually drives the resistance.
+      COST AVOIDANCE: the actor identified (or should have identified) what the partner genuinely
+        needed, but refused to pay the cost to their own goal required to satisfy it.
+      CAPITULATION: the actor preserved the relationship by abandoning the goal — gave up rather
+        than finding a path that satisfies both sides.
+  - Which chronicle entries were relevant to this scenario (skip if chronicle is empty)
   - Whether the agent applied them
-  - What specifically went wrong and what skills were missing that, if codified, would have improved the outcome
+  - What skills were missing that, if codified, would have improved the outcome
   - Whether any existing entry ACTIVELY MISDIRECTED the agent (caused worse behavior)
 
 STEP 2 — EDITS:
@@ -180,8 +189,11 @@ def _format_score_progression(attempt_scores: list[dict]) -> str:
     return header + "\n" + "\n".join(rows)
 
 
-def _format_goal_and_checks(scenario: SocialScenario, rubric_results: Optional[list[dict]]) -> str:
-    """Show the learner's structured goal and which rubric checks failed (with judge reasoning)."""
+def _format_goal_and_checks(
+    scenario: SocialScenario,
+    key_check_verdicts: Optional[list[dict]] = None,
+) -> str:
+    """Show the learner's structured goal and key-check verdicts (Phase 2 evaluation signals)."""
     li = scenario.target_agent_idx
     parts: list[str] = []
     sg = None
@@ -192,33 +204,30 @@ def _format_goal_and_checks(scenario: SocialScenario, rubric_results: Optional[l
             "LEARNER GOAL (structured):\n"
             f"  outcome:    {sg.outcome}\n"
             f"  constraint: {sg.constraint}\n"
-            f"  shortcut (the tempting move that wins the outcome but breaks the constraint): {sg.shortcut}"
+            f"  shortcut (the tempting path that wins the outcome but breaks the constraint): {sg.shortcut}"
         )
     else:
         target_goal = scenario.agent_goals[li] if li < len(scenario.agent_goals) else ""
         parts.append(f"TARGET AGENT GOAL: {target_goal}")
 
-    if rubric_results:
-        lines = ["RUBRIC CHECK RESULTS (this attempt):"]
-        for r in rubric_results:
-            mark = "PASS" if r.get("verdict") else "FAIL"
-            lines.append(f"  [{mark}] ({r.get('kind')}) {r.get('question')}  — {r.get('rationale','')}")
-        outcome_pass = all(r.get("verdict") for r in rubric_results if r.get("kind") == "outcome")
-        constraint_pass = all(r.get("verdict") for r in rubric_results if r.get("kind") == "constraint")
-        if outcome_pass and not constraint_pass:
+    # Key verdicts — only present on generated scenarios with a partner_key
+    if key_check_verdicts and scenario.partner_key is not None:
+        lines = ["KEY CHECK VERDICTS (per attempt — you see the verdict, NOT the hidden key text):"]
+        for i, v in enumerate(key_check_verdicts, 1):
+            if not v:
+                continue
+            passed = v.get("key_check_passed", False)
+            conditions_met = v.get("conditions_met", [])
+            triggers_tripped = v.get("triggers_tripped", [])
+            triggers_repaired = v.get("triggers_repaired", [])
+            rationale = v.get("rationale", "")
+            mark = "PASS" if passed else "FAIL"
             lines.append(
-                "FAILURE PATTERN: HOLLOW EXTRACTION — the learner got the outcome but broke the "
-                "constraint (took/!approximated the tempting shortcut and paid the relational price)."
+                f"  [attempt {i}] {mark}  conditions_met={conditions_met}  "
+                f"triggers_tripped={triggers_tripped}  triggers_repaired={triggers_repaired}"
             )
-        elif not outcome_pass and not constraint_pass:
-            lines.append(
-                "FAILURE PATTERN: the learner failed on both. If the constraint is relational/internal, "
-                "this is an ATTUNEMENT failure — likely the model DEFAULTED TO PROBLEM-SOLVING / pushing "
-                "when the situation rewarded validation-first or reading the other person; do NOT diagnose "
-                "it as 'discomfort'."
-            )
-        elif not outcome_pass:
-            lines.append("FAILURE PATTERN: the learner did not achieve the outcome.")
+            if rationale:
+                lines.append(f"    rationale: {rationale}")
         parts.append("\n".join(lines))
     return "\n".join(parts)
 
@@ -230,14 +239,14 @@ def _build_prompt(
     prior_edit_reasons: dict[str, str],
     attempt_num: int,
     anchor_task: Optional[SocialScenario],
-    rubric_results: Optional[list[dict]] = None,
+    key_check_verdicts: Optional[list[dict]] = None,
     attempt_scores: Optional[list[dict]] = None,
 ) -> str:
     parts: list[str] = []
 
     # Scenario context
     parts.append(f"SCENARIO: {scenario.scenario}")
-    parts.append(_format_goal_and_checks(scenario, rubric_results))
+    parts.append(_format_goal_and_checks(scenario, key_check_verdicts))
     parts.append(f"INTERACTION TYPE: {scenario.interaction_type}")
 
     if anchor_task and anchor_task.social_dynamic:
@@ -273,13 +282,12 @@ def _build_prompt(
 
     parts.append(
         f"\nThis is attempt {attempt_num}. "
-        "The overall score trend is the primary learning signal: if it rose, something in the "
-        "approach is working — preserve or strengthen it before adding new edits. If it dropped "
-        "or is flat, the current chronicle entries are not helping and need revision. "
-        "The dimension breakdown is secondary context only — use it to understand *why* the "
-        "consolidated score moved, not as a list of things to fix independently. "
-        "The rubric check results above remain your primary guide for what specifically failed. "
-        "Diagnose the failure and produce targeted chronicle edits."
+        "GOAL and RELATIONSHIP score trends are the primary learning signal: rising = something "
+        "is working (preserve and strengthen it); flat or falling = the current approach is not "
+        "working (real change needed, not refinement). The key-check verdicts (when present) tell "
+        "you which conditions were approached or triggers tripped — use them to classify the failure "
+        "pattern, not to deduce the hidden key text. "
+        "Diagnose the failure pattern and produce targeted chronicle edits."
     )
     return "\n\n".join(parts)
 
@@ -458,18 +466,20 @@ class ReflectionModule:
         prior_edit_reasons: dict[str, str],
         attempt_num: int,
         anchor_task: Optional[SocialScenario] = None,
-        rubric_results: Optional[list[dict]] = None,
+        key_check_verdicts: Optional[list[dict]] = None,
         attempt_scores: Optional[list[dict]] = None,
+        rubric_results: Optional[list[dict]] = None,  # kept for back-compat; ignored
     ) -> ReflectionOutput:
         """Run reflection after attempt_num has failed.
 
-        transcripts: list of all episode transcripts so far (including the latest failure).
+        transcripts: all episode transcripts so far (including the latest failure).
         prior_edit_reasons: accumulated {entry_id: reason} from previous reflections.
-        rubric_results: the latest attempt's per-check verdicts (which checks failed + reasoning).
+        key_check_verdicts: per-attempt key-check JSON dicts (conditions_met, triggers_tripped…).
+          Only populated on generated scenarios with a partner_key; None for seeds.
         """
         prompt = _build_prompt(
             chronicle, scenario, transcripts, prior_edit_reasons, attempt_num, anchor_task,
-            rubric_results=rubric_results,
+            key_check_verdicts=key_check_verdicts,
             attempt_scores=attempt_scores,
         )
         for attempt in range(self.max_retries):

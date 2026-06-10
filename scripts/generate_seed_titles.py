@@ -2,14 +2,14 @@
 
 Writes scenario_title, social_dynamic, and target_perspective fields directly into:
   - data/sotopia_90_seeds.jsonl        (in-place, one field added per row)
-  - output/baseline_eval_*/episodes/   (in-place, one field added per episode JSON)
+  - results/baseline_eval_*/episodes/  (in-place, one field added per episode JSON)
 
 Uses the identical ScenarioTitleGenerator prompt as the curriculum pipeline.
 
 Run from project root:
   python scripts/generate_seed_titles.py
   python scripts/generate_seed_titles.py --overwrite   # regenerate even if title exists
-  python scripts/generate_seed_titles.py --episodes-dir output/baseline_eval_20260604_222545/episodes
+  python scripts/generate_seed_titles.py --episodes-dir results/baseline_eval_20260604_222545/episodes
 """
 import argparse
 import json

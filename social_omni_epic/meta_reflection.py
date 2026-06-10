@@ -222,6 +222,7 @@ class MetaReflectionModule:
         scenario: SocialScenario,
         anchor_task: Optional[SocialScenario] = None,
         attempt_scores: Optional[list[dict]] = None,
+        adversarial_critique: str = "",
     ) -> SkillsChronicle:
         """Synthesize a final skills chronicle from all attempts.
 
@@ -242,6 +243,12 @@ class MetaReflectionModule:
             prompt = _build_failure_prompt(
                 chronicle_versions, transcripts, edit_reasons, scenario, anchor_task,
                 attempt_scores
+            )
+
+        if adversarial_critique:
+            prompt = (
+                prompt + "\n\nADVERSARIAL CRITIQUE FROM PRIOR SYNTHESIS PASS "
+                "(address these issues in your output):\n" + adversarial_critique
             )
 
         fallback = deepcopy(chronicle_versions[-1]) if chronicle_versions else SkillsChronicle()
