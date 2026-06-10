@@ -47,17 +47,17 @@ from social_omni_epic.task_generator import TaskGenerator
 def _gen_one(fm, archive, task_gen, coherence_checker, n_examples, vs_candidates):
     """Generate one coherent, target-designated dev scenario from a random anchor."""
     idx = int(np.random.randint(archive.size))
-    anchor = archive.state.successful[idx]
+    anchor = archive.state.tasks[idx]
     all_embs = archive.get_successful_embeddings()
     examples = [anchor]
     if anchor.embedding and all_embs:
-        src = [s.source_scenario_id for s in archive.state.successful]
-        agt = [s.target_agent_idx for s in archive.state.successful]
+        src = [s.source_scenario_id for s in archive.state.tasks]
+        agt = [s.target_agent_idx for s in archive.state.tasks]
         ex_idx = get_similar_scenarios(anchor.embedding, all_embs, num_returns=n_examples,
                                        source_ids=src, agent_idxs=agt,
                                        preferred_agent_idx=anchor.target_agent_idx)
-        examples = [archive.state.successful[i] for i in ex_idx]
-    scn = task_gen.generate_with_verbalized_sampling(examples, n_candidates=vs_candidates)
+        examples = [archive.state.tasks[i] for i in ex_idx]
+    scn = task_gen.generate_from_archive(examples)
     if scn is None:
         return None, None
     try:

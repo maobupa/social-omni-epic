@@ -139,9 +139,10 @@ def _build_success_prompt(
     scenario: SocialScenario,
     anchor_task: Optional[SocialScenario],
     attempt_scores: Optional[list[dict]],
+    transcripts: Optional[list[list[dict]]] = None,
 ) -> str:
     """Outcome=2: per-attempt reflection already did the diagnosis work.
-    Pass only the final chronicle + edit reasons for a lightweight cleanup pass."""
+    Lightweight cleanup pass: merge/deduplicate chronicle + anchor on what worked differently."""
     parts = _common_header(scenario, 2, anchor_task, attempt_scores)
 
     final = chronicle_versions[-1].to_markdown() if chronicle_versions else ""
@@ -153,13 +154,19 @@ def _build_success_prompt(
         for eid, reason in edit_reasons.items():
             parts.append(f"  [{eid}]: {reason}")
 
+    # Include first failed + last successful transcript so cleanup can anchor on what worked.
+    if transcripts and len(transcripts) >= 2:
+        parts.append("\nFIRST ATTEMPT TRANSCRIPT (FAILED — shows baseline approach):")
+        parts.append(_format_transcript(transcripts[0], 1, max_chars=2000))
+        parts.append(f"\nFINAL ATTEMPT TRANSCRIPT (SUCCESSFUL, attempt {len(transcripts)}):")
+        parts.append(_format_transcript(transcripts[-1], len(transcripts), max_chars=2000))
+
     parts.append(
-        "\nEpisode SOLVED after multiple attempts. The per-attempt reflections already "
-        "diagnosed failures and updated the chronicle. Your job is a cleanup pass only: "
-        "merge redundant entries covering the same condition, resolve any contradictions "
-        "into exception clauses, ensure all Conditions are abstract (no proper nouns or "
-        "scenario-unique details), and confirm Guidance is specific enough to change "
-        "behavior observably. Output ONLY <Entry> blocks."
+        "\nEpisode SOLVED after multiple attempts. Per-attempt reflections already diagnosed "
+        "failures. Your job is a cleanup pass: merge redundant entries covering the same "
+        "condition, resolve contradictions into exception clauses, ensure Conditions are "
+        "abstract (no proper nouns or scenario-unique details), and confirm Guidance is "
+        "specific enough to change behavior observably. Output ONLY <Entry> blocks."
     )
     return "\n\n".join(parts)
 
@@ -236,7 +243,8 @@ class MetaReflectionModule:
         if outcome == 2:
             system = _SYSTEM_SUCCESS
             prompt = _build_success_prompt(
-                chronicle_versions, edit_reasons, scenario, anchor_task, attempt_scores
+                chronicle_versions, edit_reasons, scenario, anchor_task, attempt_scores,
+                transcripts=transcripts,
             )
         else:
             system = _SYSTEM_FAILURE

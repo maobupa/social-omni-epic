@@ -1,10 +1,22 @@
+"""Schema validation and SocialScenario construction for Phase 2 generated scenarios.
+
+Phase 2 schema invariants (enforced here):
+  - structured_goals[0]  → learner's three-part triple (outcome / constraint / shortcut)
+  - structured_goals[1]  → always None (partner gets a natural-language goal + partner_key)
+  - partner_goal          → natural-language string rendered into agent_goals[1]
+  - success_rubric        → NOT generated; GOAL≥7∧REL≥0 + key-aware check replaces it
+
+SOTOPIA seeds and Phase-1 archive records bypass this validator (they load via checkpoint).
+"""
 import uuid as _uuid
+from typing import Optional
+
 from .data_models import (
-    SocialScenario,
     AgentProfile,
+    MECHANISM_LIBRARY,
+    PartnerKey,
+    SocialScenario,
     StructuredGoal,
-    RubricCheck,
-    SuccessRubric,
 )
 
 
@@ -12,24 +24,25 @@ REQUIRED_TOP = [
     "scenario",
     "agent_profiles",
     "agent_structured_goals",
+    "partner_goal",
     "relationship",
     "interaction_type",
-    "success_rubric",
+    "partner_key",
 ]
 REQUIRED_AGENT = ["first_name", "occupation", "big_five"]
 REQUIRED_GOAL = ["outcome", "constraint", "shortcut"]
-VALID_KINDS = {"outcome", "constraint"}
-VALID_PERSPECTIVES = {"neutral", "partner"}
+REQUIRED_KEY = ["key_mechanism", "movement_conditions", "hardening_triggers",
+                "surface_misdirection", "cost_coupling"]
+VALID_MECHANISMS = set(MECHANISM_LIBRARY.keys())  # derived; add new tags to data_models only
 
 
 def render_agent_goal(sg: StructuredGoal) -> str:
-    """Render a StructuredGoal into the Sotopia-facing goal string the agent actually sees.
+    """Render a StructuredGoal into the Sotopia-facing goal string (learner / agent 0).
 
-    Single source of truth for `agent_goals`. The shortcut/leverage is surfaced in
-    <extra_info> as *available and tempting* — deliberately NOT labeled as a trap (the agent
-    must discover the tension itself). The generator authors `constraint` as the thing to
-    avoid (so it reads after "without") and `shortcut` as the leverage phrased from the
-    agent's POV.
+    Single source of truth for agent_goals[0]. The shortcut/leverage is surfaced in
+    <extra_info> as available and tempting — NOT labeled as a trap (the agent must
+    discover the tension itself). constraint is phrased as the thing to avoid so it
+    reads naturally after "without".
     """
     outcome = (sg.outcome or "").strip().rstrip(".")
     goal = f"Your goal is to {outcome}" if outcome else "Your goal is to act in your interest"
@@ -44,10 +57,15 @@ def render_agent_goal(sg: StructuredGoal) -> str:
 
 
 def validate_scenario(d: dict) -> tuple[bool, str]:
+    """Validate a generated scenario dict (Phase 2 schema).
+
+    Returns (True, "") on success or (False, reason) on failure.
+    """
     for f in REQUIRED_TOP:
         if f not in d:
             return False, f"Missing field: {f}"
 
+    # --- agent_profiles ---
     profiles = d["agent_profiles"]
     if not isinstance(profiles, list) or len(profiles) != 2:
         return False, "agent_profiles must be a list of exactly 2 profiles"
@@ -58,80 +76,87 @@ def validate_scenario(d: dict) -> tuple[bool, str]:
             if pf not in p or not p[pf]:
                 return False, f"Agent profile {i} missing/empty field: {pf}"
 
+    # --- agent_structured_goals: [learner triple, null] ---
     goals = d["agent_structured_goals"]
     if not isinstance(goals, list) or len(goals) != 2:
-        return False, "agent_structured_goals must be a list of exactly 2 structured goals"
-    for i, g in enumerate(goals):
-        if not isinstance(g, dict):
-            return False, f"Structured goal {i} not a dict"
-        for gf in REQUIRED_GOAL:
-            if gf not in g or not str(g[gf]).strip():
-                return False, f"Structured goal {i} missing/empty field: {gf}"
+        return False, "agent_structured_goals must be a list of exactly 2 entries"
+    learner_goal = goals[0]
+    partner_goal_entry = goals[1]
+    if not isinstance(learner_goal, dict):
+        return False, "agent_structured_goals[0] (learner) must be a dict"
+    for gf in REQUIRED_GOAL:
+        if gf not in learner_goal or not str(learner_goal[gf]).strip():
+            return False, f"agent_structured_goals[0] missing/empty field: {gf}"
+    if partner_goal_entry is not None:
+        return False, "agent_structured_goals[1] must be null — partner has no structured triple"
 
-    rubric = d["success_rubric"]
-    checks = rubric.get("checks") if isinstance(rubric, dict) else None
-    if not isinstance(checks, list) or not checks:
-        return False, "success_rubric.checks must be a non-empty list"
-    kinds = set()
-    for i, c in enumerate(checks):
-        if not isinstance(c, dict):
-            return False, f"Rubric check {i} not a dict"
-        if c.get("kind") not in VALID_KINDS:
-            return False, f"Rubric check {i} kind must be one of {VALID_KINDS}"
-        if not str(c.get("question", "")).strip():
-            return False, f"Rubric check {i} missing question"
-        kinds.add(c["kind"])
-    if "outcome" not in kinds or "constraint" not in kinds:
-        return False, "success_rubric must contain at least one 'outcome' and one 'constraint' check"
-    if len(checks) > 3:
-        return False, f"success_rubric has {len(checks)} checks — maximum is 3 (1 outcome + 1–2 constraint)"
+    # --- partner_goal ---
+    pg = d.get("partner_goal", "")
+    if not isinstance(pg, str) or not pg.strip():
+        return False, "partner_goal must be a non-empty string"
 
+    # --- partner_key ---
+    key = d.get("partner_key", {})
+    if not isinstance(key, dict):
+        return False, "partner_key must be a dict"
+    for kf in REQUIRED_KEY:
+        if kf not in key:
+            return False, f"partner_key missing field: {kf}"
+    if key.get("key_mechanism") not in VALID_MECHANISMS:
+        return False, f"partner_key.key_mechanism must be one of {sorted(VALID_MECHANISMS)}"
+    if not isinstance(key.get("movement_conditions"), list) or not key["movement_conditions"]:
+        return False, "partner_key.movement_conditions must be a non-empty list"
+    if not isinstance(key.get("hardening_triggers"), list) or not key["hardening_triggers"]:
+        return False, "partner_key.hardening_triggers must be a non-empty list"
+
+    # --- scenario text ---
     if len(d["scenario"]) < 50:
         return False, "scenario too short (< 50 chars)"
 
     return True, ""
 
 
-def _coerce_perspective(kind: str, perspective) -> str:
-    """Trust the generator's perspective; fall back to the natural default per kind."""
-    p = str(perspective or "").strip().lower()
-    if p in VALID_PERSPECTIVES:
-        return p
-    # outcome → transcript-observable by default; constraint → partner-internal by default
-    return "neutral" if kind == "outcome" else "partner"
-
-
 def _clean_str(s) -> str:
-    """Strip null bytes and non-breaking spaces that LLMs occasionally generate as padding."""
     if not isinstance(s, str):
         return s
     return s.replace("\x00", "").replace(" ", " ").strip()
 
 
 def _clean_dict(d: dict) -> dict:
-    """Recursively clean string values in a dict."""
-    return {k: (_clean_dict(v) if isinstance(v, dict) else
-                [_clean_dict(i) if isinstance(i, dict) else _clean_str(i) if isinstance(i, str) else i for i in v] if isinstance(v, list) else
-                _clean_str(v) if isinstance(v, str) else v)
-            for k, v in d.items()}
+    return {
+        k: (
+            _clean_dict(v) if isinstance(v, dict) else
+            [_clean_dict(i) if isinstance(i, dict) else
+             _clean_str(i) if isinstance(i, str) else i
+             for i in v] if isinstance(v, list) else
+            _clean_str(v) if isinstance(v, str) else v
+        )
+        for k, v in d.items()
+    }
 
 
 def dict_to_scenario(d: dict) -> SocialScenario:
-    d = _clean_dict(d)
-    profiles = [AgentProfile(**p) for p in d["agent_profiles"]]
-    structured = [StructuredGoal(**g) for g in d["agent_structured_goals"]]
-    rendered_goals = [render_agent_goal(sg) for sg in structured]
+    """Convert a validated Phase 2 scenario dict to a SocialScenario object.
 
-    rubric = SuccessRubric(
-        checks=[
-            RubricCheck(
-                kind=c["kind"],
-                question=str(c["question"]).strip(),
-                perspective=_coerce_perspective(c["kind"], c.get("perspective")),
-            )
-            for c in d["success_rubric"]["checks"]
-        ]
-    )
+    agent_goals[0] = rendered learner triple
+    agent_goals[1] = partner_goal string (natural-language)
+    structured_goals[1] = None (role invariant)
+    partner_key = parsed from dict
+    """
+    d = _clean_dict(d)
+
+    profiles = [AgentProfile(**p) for p in d["agent_profiles"]]
+
+    # Learner structured goal (agent 0 only)
+    learner_sg = StructuredGoal(**d["agent_structured_goals"][0])
+    structured = [learner_sg, None]
+
+    # agent_goals: learner from triple, partner from natural-language string
+    partner_goal_text = str(d["partner_goal"]).strip()
+    rendered_goals = [render_agent_goal(learner_sg), partner_goal_text]
+
+    # Parse partner_key
+    partner_key = PartnerKey(**d["partner_key"])
 
     base_id = str(_uuid.uuid4())
     return SocialScenario(
@@ -142,13 +167,13 @@ def dict_to_scenario(d: dict) -> SocialScenario:
         agent_goals=rendered_goals,
         structured_goals=structured,
         goal_type=d.get("goal_type"),
-        success_rubric=rubric,
         relationship=d.get("relationship", ""),
         relationship_background=d.get("relationship_background", ""),
         tag=d.get("tag", d.get("interaction_type", "")),
         interaction_type=d.get("interaction_type", ""),
         difficulty_tags=d.get("difficulty_tags", []),
-        competing_interest=d.get("competing_interest") or None,
-        partner_default_position=d.get("partner_default_position") or None,
+        partner_key=partner_key,
+        mutation_operator=d.get("mutation_operator"),
+        mutated_slots=d.get("mutated_slots", []),
         source="generated",
     )

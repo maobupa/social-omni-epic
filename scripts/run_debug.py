@@ -271,7 +271,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
             if args.seed_index < 0
             else min(args.seed_index, archive.size - 1)
         )
-        anchor = archive.state.successful[seed_idx]
+        anchor = archive.state.tasks[seed_idx]
         anchor_idx = seed_idx
         inherited_entries = len(
             SkillsChronicle.from_markdown(anchor.skills_final_md or "").entries
@@ -309,21 +309,21 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
 
     task_gen = TaskGenerator(tfm, num_examples=3, num_failed_examples=0, max_retries=2)
     existing_types = (
-        list({s.interaction_type for s in archive.state.successful if s.interaction_type})
+        list({s.interaction_type for s in archive.state.tasks if s.interaction_type})
         if archive.size > 0 else []
     )
 
     examples = []
     if anchor and anchor.embedding:
         all_embs = archive.get_successful_embeddings()
-        source_ids = [s.source_scenario_id for s in archive.state.successful]
-        agent_idxs = [s.target_agent_idx for s in archive.state.successful]
+        source_ids = [s.source_scenario_id for s in archive.state.tasks]
+        agent_idxs = [s.target_agent_idx for s in archive.state.tasks]
         idxs = get_similar_scenarios(
             anchor.embedding, all_embs, num_returns=3,
             source_ids=source_ids, agent_idxs=agent_idxs,
             preferred_agent_idx=anchor.target_agent_idx,
         )
-        examples = [archive.state.successful[i] for i in idxs]
+        examples = [archive.state.tasks[i] for i in idxs]
 
     scenario = task_gen.generate_from_archive(
         examples, existing_types=existing_types
@@ -357,14 +357,14 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
     moi = ModelOfInterestingness(tfm, num_examples=5)
     similar: list = []
     if archive.size > 0:
-        _src_ids = [s.source_scenario_id for s in archive.state.successful]
-        _agt_idxs = [s.target_agent_idx for s in archive.state.successful]
+        _src_ids = [s.source_scenario_id for s in archive.state.tasks]
+        _agt_idxs = [s.target_agent_idx for s in archive.state.tasks]
         sim_idxs = get_similar_scenarios(
             scenario.embedding, archive.get_successful_embeddings(), num_returns=5,
             source_ids=_src_ids, agent_idxs=_agt_idxs,
             preferred_agent_idx=scenario.target_agent_idx,
         )
-        similar = [archive.state.successful[i] for i in sim_idxs]
+        similar = [archive.state.tasks[i] for i in sim_idxs]
     is_interesting, moi_reason, moi_edits = moi.evaluate(scenario, similar)
     print_info(f"MoI: passed={is_interesting}")
     print_info(f"  reason: {moi_reason[:200]}")

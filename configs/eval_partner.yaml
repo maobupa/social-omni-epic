@@ -1,0 +1,19 @@
+# Frozen partner configuration for held-out evaluation (§10.1).
+#
+# At eval time EVERY partner is instantiated from this config, regardless of
+# whether the scenario was generated (with a partner_key) or is a native seed.
+# The partner runs in NATIVE mode — no partner_key injection, no key-conditioned
+# prompt. This ensures that the eval condition is identical for condition A (Phase 0
+# baseline) and condition B (Phase 2 curriculum), so LP differences reflect what
+# the learner learned, not how the partner was conditioned.
+#
+# Usage in experiments/evaluate_with_memory.py:
+#   cfg = OmegaConf.load("configs/eval_partner.yaml")
+#   partner_model = cfg.partner.model
+#   partner_prompt_template = cfg.partner.prompt_template  # "native"
+
+partner:
+  model: "openai/gpt-5-mini"
+  temperature: 0.7
+  prompt_template: "native"    # always native at eval; never keyed
+  max_turns: 20

@@ -1,118 +1,54 @@
 import json
 import numpy as np
 from typing import Optional
-from .data_models import SocialScenario
+from .data_models import SocialScenario, MECHANISM_LIBRARY
 from .fm import FM
 from .validation import validate_scenario, dict_to_scenario
-from .embedding_utils import get_similar_scenarios
 
 
 _GOAL_FORMAT_GUIDE = """
-AGENT GOALS — the most important part. Each agent's goal is THREE structured components
-(`outcome`, `constraint`, `shortcut`), NOT a flat sentence. This is what turns a logic
-puzzle into a genuinely social scenario.
+AGENT GOALS — the most important part.
 
-  - "outcome": the CORE state-change this agent needs from the other — a genuine shift in
-    the other's commitment, behavior, or agreement that requires authentic buy-in.
-    PHRASING: write as a verb phrase that completes "Your goal is to ___"
-    (e.g. "get [name] to agree to..." or "convince [name] to..."). Do NOT use third-person
-    narrative ("X wants Y to..." breaks the rendering into the agent's prompt).
-    CORE ONLY: capture the essential outcome, not a specific delivery mechanism. If you find
-    yourself bundling in HOW the outcome is delivered (a particular process, timing, or
-    announcement format), strip it back to the underlying state-change — delivery details
-    belong in the scenario description, not the outcome field. Overconstrained outcomes
-    produce rubric checks that fail even when the social goal was genuinely achieved.
-    Use qualifiers like "at least" where the exact figure is not the point (e.g., "agree to
-    at least a modest rate increase" not "agree to exactly 25% higher hourly rate") — a rubric
-    check tied to a specific number fails when the agent achieves a different figure that
-    satisfies the underlying social goal.
-  - "constraint": the relational/face cost this agent must AVOID while pursuing the outcome.
-    Phrase it as the thing to avoid, so it reads naturally after the word "without"
+ASYMMETRIC ROLES:
+  - ONLY agent 0 (learner) gets the three-part structured goal triple (outcome / constraint / shortcut).
+  - Agent 1 (partner) gets ONLY a natural-language `partner_goal` string plus the private
+    `partner_key`. Do NOT give agent 1 a structured triple.
+  - The `partner_goal` must be written as "Your goal is to ..." and encode the partner's position,
+    stake, and what they are willing to concede. It must NOT reveal any partner_key field.
+
+For agent 0's structured goal:
+  - "outcome": the CORE state-change this agent needs — a genuine shift in the other's commitment,
+    behavior, or agreement that requires authentic buy-in.
+    PHRASING: write as a verb phrase completing "Your goal is to ___"
+    (e.g. "get [name] to agree to..." or "convince [name] to...").
+    CORE ONLY: capture the essential outcome, not a specific delivery mechanism. Strip back any
+    HOW to the underlying state-change — delivery details belong in the scenario description.
+    Use qualifiers like "at least" where the exact figure is not the point.
+  - "constraint": the relational/face cost agent 0 must AVOID while pursuing the outcome.
+    Phrase as the thing to avoid, reading naturally after "without"
     (e.g., "the other person feeling manipulated or that you went behind their back").
-    This is the part that makes the scenario social rather than a number/position puzzle.
+    This is what makes the scenario social rather than a positional puzzle.
   - "shortcut": a tempting, available move that WOULD achieve the outcome but VIOLATES the
     constraint. MUST begin with "You" — write as a complete first-person sentence naming
-    the available leverage and what deploying it achieves
-    (e.g., "You hold the CEO's private backing and could present the decision as already
-    made, forcing agreement without genuine buy-in"). Do NOT label it as a trap — the agent
-    must discover the tension themselves.
+    the available leverage and what deploying it achieves.
+    Do NOT label it as a trap — agent 0 must discover the tension themselves.
 
-Rules:
-- SYMMETRIC: BOTH agents get a full three-part structured goal.
+Rules for agent 0's goal:
 - STRUCTURALLY INCOMPATIBLE but with a ZONE OF POSSIBLE AGREEMENT: both cannot fully win, yet
-  a skilled agent could find a creative deal or partial outcome. Hard ≠ impossible — never
-  require one party to fully capitulate with no middle ground.
-- THE NAIVE MOVE MUST FAIL: taking the shortcut (blunt demand, spending leverage, coercion)
-  wins the surface outcome but BREAKS the constraint — so a naive agent appears to "succeed"
-  while actually failing. A skilled agent achieves the outcome WITHOUT paying the constraint's
-  cost. The difficulty lives in HOW, not WHAT.
-- The agent profile `secret` must BE the leverage behind that agent's shortcut (or directly
-  raise the stakes of their constraint) — not decorative backstory.
+  a skilled agent could find a creative deal or partial outcome.
+- THE NAIVE MOVE MUST FAIL: taking the shortcut wins the surface outcome but BREAKS the
+  constraint — a skilled agent achieves the outcome WITHOUT paying the constraint's cost.
+  The difficulty lives in HOW, not WHAT.
+- Agent 0's `secret` field must BE the leverage behind their shortcut (not decorative backstory).
 - Achievable within a two-party spoken conversation. No external artifacts/sign-offs.
-- BANNED: extracting a specific spoken sentence ("get them to say X"); pure number-splitting /
-  positional bargaining with no relational cost; a constraint with no tempting shortcut.
-- COOPERATIVE ALIGNMENT GUARD — cooperation must fail in one of two ways, and you must encode
-  which applies via the schema fields `competing_interest` and `partner_default_position`:
+- BANNED: extracting a specific spoken sentence; pure number-splitting with no relational cost;
+  a constraint with no tempting shortcut.
 
-  FAMILY (a) — the learner has a competing interest they forfeit by accommodating:
-    The learner's outcome requires holding a position that conflicts with the partner's ask.
-    Full accommodation (giving the partner everything they want) structurally forfeits something
-    the learner's outcome depends on. Record this as `competing_interest`: the specific personal
-    cost or stake the learner would sacrifice by freely accommodating.
-    Example: engineer needs Tom to rewrite his module AND keep her timeline intact — freely
-    accommodating Tom's pushback forfeits her timeline.
-
-  FAMILY (b) — the partner won't freely give what the learner needs (pure face-threat):
-    The learner has no competing interest to sacrifice; they simply need the partner to do
-    something the partner finds face-costly and won't volunteer. Passive acceptance of the
-    partner's natural offer is insufficient because the partner's default falls short.
-    Example: engineer needs Tom to agree to rewrite his module — Tom's natural offer is "I'll
-    look at it later." She has no competing interest; the difficulty is getting Tom to commit.
-
-  Both families are valid and important — do NOT force a competing_interest into family (b)
-  scenarios. Always populate `partner_default_position` (what the partner naturally offers
-  without skilled engagement); this is the mechanical encoding of PARTNER'S NATURAL OFFER
-  MUST NOT SUFFICE and must demonstrably fall short of the learner's outcome.
-
-SUCCESS RUBRIC — author the checkable success conditions for the LEARNER (write them for
-agent 0; the designated learner is fixed later). CRITICAL POLARITY: phrase EVERY check so that a
-TRUE/yes answer means the LEARNER SUCCEEDED on that dimension. Provide at least:
-  - one "outcome" check: a yes/no question a NEUTRAL judge can answer from the transcript.
-    Test the CORE state-change only — not a specific process, timeline, or delivery format.
-    Ask: "could a skilled agent satisfy this check via multiple different paths?" If yes,
-    the check is well-scoped. If only one specific path satisfies it, it is overconstrained.
-    perspective: "neutral".
-  - one or two "constraint" checks: yes/no questions about the partner's CURRENT INTERNAL STATE
-    only the partner (with their private profile) can authentically judge, phrased so YES =
-    the learner AVOIDED the relational cost. Ask only about HOW THE PARTNER FEELS RIGHT NOW —
-    never predict future behavior ("such that they'd follow through" is NOT checkable; drop it).
-    perspective: "partner".
-    Only add a second constraint check if it covers a GENUINELY DISTINCT failure mode from
-    the first — not a restatement or procedural variant.
-  TOTAL: 2 checks minimum, 3 maximum. Do not add procedural checks ("did X refrain from
-  doing Y during the conversation") — only outcome state and partner internal state.
-  Both questions must be frozen once written and reused across all attempts.
-
-DELIVERY-MECHANISM TRAP — the most common outcome check error. These are all bad:
-  BAD: "Did the other person initial or sign a written acknowledgment of the agreement?"
-  BAD: "Did the other person send a follow-up message confirming the decision?"
-  BAD: "Did the other person say the word 'promise' or use explicit commitment language?"
-  BAD: "Did the other person complete the action during this conversation?"
-  Each fails a skilled agent who achieved genuine buy-in via a different path. An independent
-  evaluator would score GOAL=10 on those transcripts; the rubric would say failure. That is a
-  rubric error, not a social failure. The fix: ask about the STATE-CHANGE, not the delivery
-  format. The outcome check must be answerable YES even if the agent used a completely
-  different conversational path than expected.
-  GOOD: "Did the other person agree to [the core ask]?" — passes via any form of genuine agreement.
-
-Example (GOOD) — agent 0's structured goal:
+Example — agent 0's structured goal:
   outcome:    "get Maya to agree to take at least a week off and see a doctor"
   constraint: "Maya feeling you are angling for her promotion or going behind her back"
   shortcut:   "You know the CEO privately told you to 'handle it'; you could invoke that
                pressure or present the time off as already decided"
-  success_rubric.checks:
-    {"kind":"outcome",    "question":"Did Maya agree to take at least a week off and see a doctor?", "perspective":"neutral"}
-    {"kind":"constraint", "question":"Did Maya come away feeling supported as a peer, NOT believing you went behind her back or were angling for her promotion?", "perspective":"partner"}
 """
 
 _PROFILE_GUIDE = """
@@ -144,43 +80,59 @@ _SCENARIO_SCHEMA = """{
   ],
   "agent_structured_goals": [
     {"outcome": "...", "constraint": "...", "shortcut": "..."},
-    {"outcome": "...", "constraint": "...", "shortcut": "..."}
+    null
   ],
+  "partner_goal": "natural-language goal for agent 1 — written as 'Your goal is to ...' encoding their position and stake. Must NOT reveal the partner_key.",
   "goal_type": "short descriptive label of the social dynamic (e.g. persuade-resistant-peer)",
-  "success_rubric": {"checks": [
-    {"kind": "outcome",    "question": "yes/no from the transcript; YES = learner succeeded", "perspective": "neutral"},
-    {"kind": "constraint", "question": "yes/no about partner's internal state; YES = cost was AVOIDED", "perspective": "partner"}
-  ]},
   "relationship": "one of: stranger / acquaintance / friend / romantic / family",
   "relationship_background": "2-3 sentences of shared history. Empty string if strangers.",
   "interaction_type": "string",
   "tag": "string",
-  "difficulty_tags": ["string", ...],
-  "competing_interest": "string or null — FAMILY (a) only: the learner's personal cost that full accommodation would forfeit. Omit (null) for family (b) scenarios where the difficulty is purely that the partner won't volunteer what the learner needs.",
-  "partner_default_position": "string — what the partner naturally offers or agrees to without skilled engagement from the learner. Must demonstrably fall short of satisfying the learner's outcome. Required for both families."
+  "difficulty_tags": ["string", ...]
 }"""
 
 
-VS_SYSTEM_PROMPT = """You are a creative social scenario designer. Generate social scenarios that are INTERESTING, LEARNABLE, and GENUINELY DIFFICULT.
+_MECHANISM_LIBRARY_TEXT = "\n".join(
+    f'  "{tag}": {desc}' for tag, desc in MECHANISM_LIBRARY.items()
+)
 
-INTERESTING: explores a novel social dynamic, power structure, or relational tension — not a generic archetype. Creative, specific, worth engaging with.
+_PARTNER_KEY_SCHEMA = """,
+  "partner_key": {
+    "key_mechanism": "one of: reactance | face_needs | validation_before_change | procedural_voice | reciprocity_disclosure",
+    "movement_conditions": ["condition 1 (concrete, behaviorally checkable)", "condition 2"],
+    "hardening_triggers": ["trigger 1 (learner move that locks the partner)", "trigger 2"],
+    "surface_misdirection": "the partner's stated objection — what they say the problem is",
+    "cost_coupling": "what satisfying movement_conditions costs the LEARNER's own stated goal"
+  },
+  "mutated_slots": ["list of slot labels mutated, e.g. b, c, d"],
+  "mutation_rationale": "one sentence explaining the mutation"
+"""
 
-LEARNABLE: the learner agent's outcome must be meaningfully responsive to HOW they engage. Avoid scenarios where any polite response already succeeds.
+_MECHANISM_LIBRARY_BLOCK = f"""
+MECHANISM LIBRARY — choose the key_mechanism from these tags only:
+{_MECHANISM_LIBRARY_TEXT}
+"""
 
-DIFFICULT: the scenario must be hard by default. A naive language model playing the learner — one that is overly agreeable, cooperative, or socially deferential — should fail to achieve the learner's goal. Success requires resisting social pressure, holding a specific position, using strategic information, or navigating genuine opposition. Make the partner agent's pressure realistic and hard to dismiss.
-""" + _SHARED_RULES + _GOAL_FORMAT_GUIDE + _PROFILE_GUIDE + """
-VERBALIZED SAMPLING: You will generate {n_candidates} distinct candidates and score each on two axes:
-- "probability": typicality (0.01–0.50) — how likely would a standard AI spontaneously propose this exact social dynamic? Low = more interesting.
-- "learnability_score": skill-responsiveness (0.0–1.0) — how much does social skill move the outcome? High = more learnable.
+# Slot vocabulary: (a) premise/characters, (b) surface_misdirection discoverability,
+# (c) hardening_triggers congruence, (d) cost_coupling cost, (e) key_mechanism,
+# (f) power/information asymmetry, (g) relationship type & stakes.
+_MUTATION_OPERATOR_TEXT = """
+MUTATION OPERATOR for this generation step:
+{operator_block}
 
-The ideal candidate has LOW probability AND learnability_score ≥ 0.6.
+Slot labels for mutated_slots:
+  (a) premise + characters
+  (b) surface_misdirection (how discoverable the partner_key surface is to a skilled learner)
+  (c) hardening_triggers   (how congruent the lock-up conditions are with learner's natural moves)
+  (d) cost_coupling        (what satisfying movement_conditions costs the learner's own goal)
+  (e) key_mechanism        (the underlying psychological mechanism from MECHANISM_LIBRARY)
+  (f) power/information asymmetry
+  (g) relationship type & stakes
 
-Each candidate is an object with "probability", "learnability_score", and "scenario_json".
-The "scenario_json" must match this SCENARIO SCHEMA exactly:
-""" + _SCENARIO_SCHEMA + """
-
-Return a JSON object: {"candidates": [{"probability": ..., "learnability_score": ..., "scenario_json": {...}}, ...]}"""
-
+ROLE INVARIANT: Agent 0 is the learner and receives the structured goal triple.
+Agent 1 is the partner and receives the partner_key and partner_goal only.
+Write the learner's role to continue this structural vantage point: {target_perspective}.
+"""
 
 SYSTEM_PROMPT = """You are a creative social scenario designer. Generate social scenarios that are INTERESTING, LEARNABLE, and GENUINELY DIFFICULT.
 
@@ -189,10 +141,38 @@ INTERESTING: explores a novel social dynamic, power structure, or relational ten
 LEARNABLE: the learner agent's outcome must be meaningfully responsive to HOW they engage. Avoid scenarios where any polite response already succeeds.
 
 DIFFICULT: the scenario must be hard by default. A naive language model playing the learner — one that is overly agreeable, cooperative, or socially deferential — should fail to achieve the learner's goal. Success requires resisting social pressure, holding a specific position, using strategic information, or navigating genuine opposition. Make the partner agent's pressure realistic and hard to dismiss.
-""" + _SHARED_RULES + _GOAL_FORMAT_GUIDE + _PROFILE_GUIDE + """
-Respond with valid JSON matching exactly this schema:
-""" + _SCENARIO_SCHEMA + """
+""" + _SHARED_RULES + _GOAL_FORMAT_GUIDE + _PROFILE_GUIDE + _MECHANISM_LIBRARY_BLOCK + """
+Respond with valid JSON matching exactly this schema (include partner_key, mutated_slots, mutation_rationale):
+""" + _SCENARIO_SCHEMA.rstrip("}") + _PARTNER_KEY_SCHEMA + """
+}
 """
+
+# Seed system prompt — no partner_key required. Used only for flesh_out_seed.
+_SEED_SCHEMA = """{
+  "scenario": "string (>= 50 chars) — shared public context. NO secrets or private leverage.",
+  "agent_profiles": [
+    {"first_name": "...", "last_name": "...", "age": 0, "gender_identity": "...",
+     "occupation": "...", "big_five": "...", "moral_values": "...",
+     "schwartz_portrait_value": "...", "decision_making_style": "...",
+     "secret": "the leverage behind THIS agent's shortcut", "mbti": "...",
+     "public_info": "2-3 sentence narrative bio"},
+    { "... second agent, same fields ..." }
+  ],
+  "agent_goals": ["Your goal is to ... (agent 0 natural-language)", "Your goal is to ... (agent 1 natural-language)"],
+  "relationship": "one of: stranger / acquaintance / friend / romantic / family",
+  "relationship_background": "2-3 sentences. Empty string if strangers.",
+  "interaction_type": "string",
+  "tag": "string"
+}"""
+
+_SEED_SYSTEM_PROMPT = (
+    "You are a creative social scenario designer. Flesh out a seed description into a "
+    "complete social scenario with two detailed character profiles and clear goals.\n"
+    + _SHARED_RULES
+    + _PROFILE_GUIDE
+    + "\nRespond with valid JSON matching exactly this schema:\n"
+    + _SEED_SCHEMA
+)
 
 
 def _format_scenario_for_prompt(s: SocialScenario, include_chronicle: bool = False) -> str:
@@ -208,17 +188,21 @@ def _format_scenario_for_prompt(s: SocialScenario, include_chronicle: bool = Fal
         "tag": s.tag,
         "difficulty_tags": s.difficulty_tags,
     })
-    # Generated scenarios carry structured goals; seeds carry only the flat (rendered) text.
-    if any(sg is not None for sg in (s.structured_goals or [])):
-        d["agent_structured_goals"] = [
-            sg.model_dump() if sg else None for sg in s.structured_goals
-        ]
+    # Learner structured goal (Phase 2 generated scenarios have a triple for agent 0, None for agent 1)
+    learner_sg = (s.structured_goals or [None, None])[0] if s.structured_goals else None
+    if learner_sg is not None:
+        d["agent_structured_goals"] = [learner_sg.model_dump(), None]
         if s.goal_type:
             d["goal_type"] = s.goal_type
-        if s.success_rubric:
-            d["success_rubric"] = s.success_rubric.model_dump()
     else:
         d["agent_goals"] = s.agent_goals
+
+    # Phase 2: show partner_goal and partner_key when present (never show success_rubric)
+    if s.partner_key is not None:
+        if len(s.agent_goals) > 1:
+            d["partner_goal"] = s.agent_goals[1]
+        d["partner_key"] = s.partner_key.model_dump()
+
     result = json.dumps(d, indent=2)
     if include_chronicle and s.skills_final_md:
         chronicle = s.skills_final_md.strip()[:1500]
@@ -246,6 +230,8 @@ class TaskGenerator:
           "farthest" Greedy farthest-point: seed + iteratively pick the entry
                      maximally distant from already-chosen examples.
         """
+        from .embedding_utils import get_similar_scenarios
+
         n = archive.size
         if n == 0:
             return [], []
@@ -266,26 +252,24 @@ class TaskGenerator:
                 indices = [int(np.random.choice(n, p=probs))]
                 emb_arr = np.array(all_embs)
                 while len(indices) < k:
-                    # cosine distance from every candidate to the nearest already-picked
                     picked = emb_arr[indices]
-                    # 1 - normalized similarity
                     sim = picked @ emb_arr.T / (
                         np.linalg.norm(picked, axis=1, keepdims=True) *
                         np.linalg.norm(emb_arr, axis=1) + 1e-9
                     )
                     nearest_sim_to_picked = sim.max(axis=0)
-                    nearest_sim_to_picked[indices] = np.inf  # exclude already-picked
+                    nearest_sim_to_picked[indices] = np.inf
                     indices.append(int(np.argmin(nearest_sim_to_picked)))
         else:  # "knn" (default)
             seed_idx = int(np.random.choice(n, p=probs))
-            anchor = archive.state.successful[seed_idx]
+            anchor = archive.state.tasks[seed_idx]
             seed_emb = anchor.embedding
             all_embs = archive.get_successful_embeddings()
             if seed_emb is None or not all_embs:
                 indices = [seed_idx]
             else:
-                source_ids = [s.source_scenario_id for s in archive.state.successful]
-                agent_idxs = [s.target_agent_idx for s in archive.state.successful]
+                source_ids = [s.source_scenario_id for s in archive.state.tasks]
+                agent_idxs = [s.target_agent_idx for s in archive.state.tasks]
                 indices = get_similar_scenarios(
                     seed_emb, all_embs, num_returns=k,
                     source_ids=source_ids, agent_idxs=agent_idxs,
@@ -294,48 +278,66 @@ class TaskGenerator:
                 if seed_idx not in indices:
                     indices = [seed_idx] + indices[:k - 1]
 
-        examples = [archive.state.successful[i] for i in indices]
+        examples = [archive.state.tasks[i] for i in indices]
         return examples, indices
 
     def _build_user_prompt(self, examples: list[SocialScenario],
                            failed: list[SocialScenario],
-                           episode_failed: Optional[list["SocialScenario"]] = None,
+                           episode_failed: Optional[list[SocialScenario]] = None,
                            existing_types: Optional[list[str]] = None,
                            coherence_feedback: Optional[list[str]] = None) -> str:
+        # Split the KNN pool by classification for adaptive sections.
+        # Seeds have classification=None and count as frontier exemplars.
+        frontier_ex = [s for s in examples if s.classification in (None, "frontier")]
+        too_easy_ex = [s for s in examples if s.classification == "too_easy"]
+        # Merge beyond_frontier from KNN with any caller-supplied episode_failed list.
+        beyond_ex = [s for s in examples if s.classification == "beyond_frontier"] + list(episode_failed or [])
+
         parts = []
-        if examples:
+
+        # --- Positive signal: frontier exemplars ---
+        if frontier_ex:
             parts.append(
-                "EXAMPLE SCENARIOS FROM THE ARCHIVE — each was genuinely difficult: "
-                "the agent failed on the first attempt, then learned. "
-                "The skills chronicle shows WHY it was hard and what the naive agent got wrong. "
-                "Build on these dynamics:\n"
+                "FRONTIER EXEMPLARS — scenarios at the current difficulty boundary. "
+                "The learner model failed on the first attempt then learned. "
+                "The skills chronicle shows WHY each was hard and what the naive approach got wrong. "
+                "Target this difficulty level:\n"
             )
-            for i, ex in enumerate(examples):
-                parts.append(f"--- Example {i+1} ---")
+            for i, ex in enumerate(frontier_ex):
+                parts.append(f"--- Frontier {i+1} ---")
                 parts.append(_format_scenario_for_prompt(ex, include_chronicle=True))
-        if failed:
-            parts.append("\nSCENARIOS REJECTED AS UNINTERESTING BEFORE ANY EPISODE (avoid these patterns):\n")
-            for i, fx in enumerate(failed):
-                parts.append(f"--- Rejected {i+1} ---")
-                parts.append(_format_scenario_for_prompt(fx))
-        if episode_failed:
+
+        # --- Negative signal: too easy ---
+        if too_easy_ex:
             parts.append(
-                "\nSCENARIOS BEYOND THE CURRENT FRONTIER — ran full episodes but the agent "
-                "never solved them. The WARNING entries show what made them unlearnable "
-                "(too hard, no discoverable path, or fully intransigent partner). "
+                "\nTOO EASY — the learner model solved these without needing to learn. "
+                "Avoid reproducing these structural patterns (cooperative goals, no real constraint bite, "
+                "partner who moves without skilled engagement):\n"
+            )
+            for i, ex in enumerate(too_easy_ex):
+                diag = ""
+                if ex.too_easy_diagnosis:
+                    diag = f"  slack_knob: {ex.too_easy_diagnosis.get('slack_knob','')} — {ex.too_easy_diagnosis.get('rationale','')}"
+                parts.append(f"--- Too Easy {i+1} ---{diag}")
+                parts.append(_format_scenario_for_prompt(ex, include_chronicle=False))
+
+        # --- Negative signal: beyond frontier ---
+        if beyond_ex:
+            parts.append(
+                "\nSTRUCTURAL DEAD ENDS — the learner model never solved these across all attempts. "
+                "The WARNING entries in the chronicle show what made them unwinnable. "
                 "Do NOT generate scenarios with the same structural failure:\n"
             )
-            for i, fx in enumerate(episode_failed):
-                parts.append(f"--- Beyond-frontier {i+1} ---")
+            for i, fx in enumerate(beyond_ex):
+                parts.append(f"--- Dead End {i+1} ---")
                 parts.append(_format_scenario_for_prompt(fx, include_chronicle=True))
+
         if existing_types:
             type_str = ", ".join(sorted({t for t in existing_types if t}))
             parts.append(
                 f"\nINTERACTION TYPES already present in the archive: {type_str}.\n"
                 "You may set `interaction_type` to one of these if it genuinely fits, "
-                "OR coin a new descriptive type if none fits well. Do not invent a new "
-                "type just for novelty's sake — only when the existing labels would "
-                "misdescribe the scenario."
+                "OR coin a new descriptive type if none fits well."
             )
         if coherence_feedback:
             parts.append(
@@ -345,25 +347,92 @@ class TaskGenerator:
             )
         parts.append(
             "\nGenerate ONE NEW social scenario. "
-            "The examples above define the current frontier — use them as follows:\n"
-            "  TRANSFER the latent social structure. Each example's `scenario_title` is the authoritative "
-            "structural description — its left half names the social dynamic (type of conflict, asymmetry, "
-            "pressure), its right half names the learner's structural vantage point. Use these as your primary "
-            "guide for what to preserve: the TYPE of constraint that bites, the FORM of the shortcut "
-            "(what leverage or style makes the naive move tempting), the NATURE of the power asymmetry. "
-            "The new scenario should belong to the same structural family described by those titles.\n"
-            "  VARY the surface freely: characters, setting, occupations, relationship, specific stakes — "
-            "these can change completely. The structural family should be recognizable; the surface should not.\n"
-            "  AIM FOR THE FRONTIER: target at least the same difficulty as the examples — not easier. "
-            "You may push further (tighter constraint, more tempting shortcut, deeper partner resistance) "
-            "but only along the social axis, not by adding facts, parties, or numeric complexity. "
-            "Do not worry about guaranteeing hardness — a difficulty calibration step will adjust if needed.\n"
-            "Do NOT re-skin (same dynamic, different names). Do NOT jump to a completely different type of social challenge "
-            "(that ignores the frontier signal). The goal: a reader who knows the examples should think "
-            "'same kind of hard, harder, in a new situation.'\n"
+            "What to preserve and what to mutate is fully specified by the MUTATION OPERATOR block above — "
+            "follow its instructions exactly. "
+            "Do NOT apply independent frontier-escalation logic; difficulty is controlled by the operator. "
             "Return ONLY a JSON object matching the required schema."
         )
         return "\n".join(parts)
+
+    def generate_batch_from_archive(
+        self,
+        examples: list[SocialScenario],
+        anchor=None,
+        mutation_operator: str = "lateral",
+        failed_examples: Optional[list[SocialScenario]] = None,
+        episode_failed_examples: Optional[list[SocialScenario]] = None,
+        existing_types: Optional[list[str]] = None,
+        batch_size: int = 3,
+    ) -> list[SocialScenario]:
+        """Generate `batch_size` candidates in one call using mutation-operator framing.
+
+        The parent anchor is identified FIRST in the user prompt so the model mutates it,
+        not the archive examples. Archive examples provide structural context only.
+
+        Returns all valid candidates (may be fewer than batch_size if some fail validation).
+        """
+        operator_block = self._EDIT_INTENTS.get(mutation_operator, self._EDIT_INTENTS["lateral"])
+        target_perspective = (
+            (anchor.target_perspective or "the learner's perspective") if anchor
+            else "the learner's perspective"
+        )
+
+        mutation_block = _MUTATION_OPERATOR_TEXT.format(
+            operator_block=operator_block,
+            target_perspective=target_perspective,
+        )
+
+        # Parent identification block — MUST come first so model mutates the parent
+        parent_block = ""
+        if anchor is not None:
+            parent_block = (
+                "=== PARENT SCENARIO (mutate THIS one) ===\n"
+                + _format_scenario_for_prompt(anchor, include_chronicle=True)
+                + f"\nclassification: {anchor.classification or 'unknown'}"
+            )
+            if anchor.too_easy_diagnosis:
+                parent_block += f"\ntoo_easy_diagnosis: {json.dumps(anchor.too_easy_diagnosis)}"
+            parent_block += "\n\n=== RELATED ARCHIVE EXAMPLES (context only — do not mutate these) ===\n"
+
+        archive_block = self._build_user_prompt(
+            examples, failed_examples or [],
+            episode_failed=episode_failed_examples or [],
+            existing_types=existing_types,
+        )
+        user_prompt = parent_block + archive_block
+
+        system = (
+            SYSTEM_PROMPT
+            + mutation_block
+            + f"\nGenerate {batch_size} candidates as a JSON array: "
+            + '{"candidates": [{"scenario_json": {...}}, ...]}'
+        )
+
+        candidates: list[SocialScenario] = []
+        for attempt in range(self.max_retries):
+            try:
+                d = self.fm.query_json(system, user_prompt, temperature=1.0)
+                raw_candidates = d.get("candidates", [])
+                if not raw_candidates:
+                    continue
+                for c in raw_candidates:
+                    scn_dict = c.get("scenario_json", c)
+                    ok, _ = validate_scenario(scn_dict)
+                    if ok:
+                        try:
+                            scn = dict_to_scenario(scn_dict)
+                            scn.mutation_operator = mutation_operator
+                            scn.mutated_slots = scn_dict.get("mutated_slots", [])
+                            if "mutation_rationale" in scn_dict:
+                                scn.mutation_rationale = str(scn_dict["mutation_rationale"])
+                            candidates.append(scn)
+                        except Exception:
+                            continue
+                if candidates:
+                    return candidates
+            except Exception:
+                continue
+        return candidates
 
     def generate_from_archive(
         self,
@@ -381,136 +450,33 @@ class TaskGenerator:
         )
         return self._generate_with_retry(user_prompt)
 
-    def generate_with_verbalized_sampling(
-        self,
-        examples: list[SocialScenario],
-        episode_failed_examples: Optional[list[SocialScenario]] = None,
-        existing_types: Optional[list[str]] = None,
-        n_candidates: int = 5,
-    ) -> Optional[SocialScenario]:
-        """Verbalized Sampling (§4.2): generate N candidates with typicality probabilities.
-
-        Picks the candidate with the LOWEST probability — the most frontier/surprising
-        scenario that the model would not spontaneously generate.
-
-        Note: recently-rejected (MoI) scenarios are NOT passed (design decision).
-        Episode-failed scenarios ARE passed — they mark the beyond-frontier boundary.
-        Falls back to generate_from_archive if VS fails.
-        """
-        system = VS_SYSTEM_PROMPT.replace("{n_candidates}", str(n_candidates))
-
-        parts: list[str] = []
-        if examples:
-            parts.append(
-                "EXAMPLE SCENARIOS FROM THE ARCHIVE — each was genuinely difficult "
-                "(agent failed first, then learned). Chronicles show WHY. Build BEYOND these:\n"
-            )
-            for i, ex in enumerate(examples):
-                parts.append(f"--- Example {i + 1} ---")
-                parts.append(_format_scenario_for_prompt(ex, include_chronicle=True))
-        if episode_failed_examples:
-            parts.append(
-                "\nSCENARIOS BEYOND THE CURRENT FRONTIER — agent never solved these. "
-                "WARNING entries show what made them unlearnable. Do NOT replicate these structures:\n"
-            )
-            for i, fx in enumerate(episode_failed_examples):
-                parts.append(f"--- Beyond-frontier {i + 1} ---")
-                parts.append(_format_scenario_for_prompt(fx, include_chronicle=True))
-        if existing_types:
-            type_str = ", ".join(sorted({t for t in existing_types if t}))
-            parts.append(
-                f"\nINTERACTION TYPES already in archive: {type_str}. "
-                "Prefer types NOT on this list, or deeply novel variants."
-            )
-        parts.append(
-            f"\nGenerate {n_candidates} candidate scenarios at varying typicality levels. "
-            "Each should TRANSFER the latent social structure from the examples (type of constraint, "
-            "form of shortcut, nature of power asymmetry) while VARYING the surface freely "
-            "(characters, setting, stakes). Aim for at least the same difficulty — not easier — "
-            "but do not force escalation; a difficulty calibration step adjusts if needed. "
-            "Do not re-skin; do not jump to a completely different type of social challenge. "
-            "Return JSON: {\"candidates\": [...]}"
-        )
-        user_prompt = "\n".join(parts)
-
-        for attempt in range(self.max_retries):
-            try:
-                d = self.fm.query_json(system, user_prompt, temperature=1.0)
-                candidates = d.get("candidates", [])
-                if not candidates:
-                    continue
-                # Pick lowest-typicality candidate among those with learnability >= 0.6.
-                # Fall back to best overall if none meet the learnability threshold.
-                valid_candidates = []
-                for c in candidates:
-                    prob = float(c.get("probability", 1.0))
-                    learn = float(c.get("learnability_score", 1.0))
-                    scn_dict = c.get("scenario_json", {})
-                    ok, _ = validate_scenario(scn_dict)
-                    if ok:
-                        valid_candidates.append((prob, learn, scn_dict))
-                if not valid_candidates:
-                    continue
-                # Filter to learnable candidates first; fall back to full pool if none qualify.
-                learnable = [c for c in valid_candidates if c[1] >= 0.6]
-                pool = learnable if learnable else valid_candidates
-                # Inverse-probability sampling (VS paper): weight = 1/p so low-typicality
-                # candidates are strongly preferred but not always deterministically chosen.
-                # This prevents systematic bias toward the same "unusual" direction across
-                # archive iterations, improving long-run diversity.
-                weights = np.array([1.0 / max(c[0], 1e-6) for c in pool])
-                weights /= weights.sum()
-                chosen_idx = int(np.random.choice(len(pool), p=weights))
-                _, _, chosen_dict = pool[chosen_idx]
-                try:
-                    return dict_to_scenario(chosen_dict)
-                except Exception:
-                    continue
-            except Exception:
-                continue
-
-        # Fallback to standard generation
-        return self.generate_from_archive(
-            examples, episode_failed_examples=episode_failed_examples, existing_types=existing_types
-        )
-
     _EDIT_INTENTS = {
         "fix_coherence": (
             "The scenario has coherence issues that must be fixed. Fix ONLY the identified "
-            "issues; preserve the premise, characters, structured goals, success_rubric, and "
-            "interaction type except where an issue requires a change."
+            "issues; preserve the premise, characters, structured goals, interaction type "
+            "and partner_key except where an issue requires a change."
         ),
-        "improve_interestingness": (
-            "The scenario is not interestingly difficult enough. Revise the STRUCTURED GOALS so "
-            "the constraint genuinely bites and the shortcut is genuinely tempting (a naive agent "
-            "would take it and pay the relational cost), while preserving a zone of possible "
-            "agreement. Keep the premise, characters, and interaction type; you MAY sharpen "
-            "outcome/constraint/shortcut and the success_rubric questions.\n\n"
-            "MOST COMMON FAILURE — cooperative alignment: if the two agents' goals are cooperatively "
-            "aligned at their core (both want the same outcome; the only obstacle is face or framing "
-            "that an agreeable agent provides freely), the fix is NOT to make the partner more "
-            "resistant. The fix is to give the LEARNER a genuine competing interest — a constraint or "
-            "obligation that directly conflicts with what the partner needs, so that being maximally "
-            "accommodating costs the learner something real. Without this, no amount of partner "
-            "resistance creates genuine difficulty."
+        "escalate": (
+            "The parent was TOO EASY — the learner solved it on the first attempt. Choose 1–2 "
+            "slots from (b) surface_misdirection, (c) hardening_triggers, (d) cost_coupling "
+            "and tighten them; the too_easy_diagnosis above names the slack knob. Preserve all "
+            "other slots (characters, premise, interaction type, goal_type, key_mechanism (e)). "
+            "Do NOT make the scenario impossible: the movement_conditions must remain genuinely "
+            "satisfiable by a skilled, non-capitulating actor. Keep a zone of possible agreement."
         ),
-        "raise_difficulty": (
-            "A naive agent solved this on the first try, so it is TOO EASY. Make it HARDER along "
-            "the named social knob only. Do NOT add facts, parties, or numeric complexity, and "
-            "do NOT make it impossible (keep a zone of possible agreement). Keep the premise, "
-            "characters, interaction type, and goal_type; you MAY sharpen outcome/constraint/"
-            "shortcut and the success_rubric questions.\n\n"
-            "SPECIAL CASE — if the slack_knob is cooperative_alignment: the scenario's goals are "
-            "cooperatively aligned at the core — both agents want the same outcome and the learner "
-            "can succeed by simply being accommodating. Increasing partner resistance will NOT fix "
-            "this; it only delays the cooperative solution. Instead, add a genuine competing interest "
-            "to the LEARNER: give the learner a constraint or obligation that directly conflicts with "
-            "what the partner needs. The learner must have something real they cannot freely concede. "
-            "Example: if the partner needs face-protection via a specific framing, give the learner "
-            "an obligation (legal, reputational, or institutional) that requires a different framing — "
-            "now accommodation is costly and the scenario has genuine tension.\n\n"
-            "For all other knobs: increase shortcut salience, constraint bite, partner resistance, "
-            "or partner stake along the single named axis."
+        "relax": (
+            "The parent was NEVER SOLVED across all K attempts (beyond_frontier). Identify from "
+            "the skills chronicle WARNINGs which slot made it unwinnable and loosen exactly that "
+            "slot. Prefer loosening (c) hardening_triggers or (d) cost_coupling first. Preserve "
+            "all other slots. The goal is a scenario that is hard but genuinely solvable."
+        ),
+        "lateral": (
+            "The parent is AT THE LEARNING FRONTIER (some attempts failed, some may have "
+            "succeeded). Hold difficulty constant: preserve slots (b) surface_misdirection, "
+            "(c) hardening_triggers, (d) cost_coupling at the same intensity. Mutate 1–2 of "
+            "(a) premise/characters, (e) key_mechanism, (f) power/information asymmetry, "
+            "(g) relationship type & stakes to explore a structurally different dynamic within "
+            "the same difficulty band."
         ),
     }
 
@@ -522,9 +488,8 @@ class TaskGenerator:
     ) -> Optional[SocialScenario]:
         """Edit an existing scenario in place of regenerating it.
 
-        intent ∈ {fix_coherence, improve_interestingness, raise_difficulty}. Preserves lineage
-        (source_scenario_id, parent_example_ids, target_agent_idx) so edits stay in the same
-        lineage. Reuses the full generation schema + validation via _generate_with_retry.
+        intent ∈ {fix_coherence, escalate, relax, lateral}. Preserves lineage
+        (source_scenario_id, parent_example_ids, target_agent_idx).
         """
         instruction = self._EDIT_INTENTS.get(intent, self._EDIT_INTENTS["fix_coherence"])
         original_json = _format_scenario_for_prompt(scenario)
@@ -533,7 +498,7 @@ class TaskGenerator:
             f"{instruction}\n\nCURRENT SCENARIO:\n{original_json}\n\n"
             f"What to address:\n{fb}\n\n"
             f"Return the revised scenario as JSON matching the required schema "
-            f"(including agent_structured_goals, goal_type, success_rubric)."
+            f"(including agent_structured_goals, partner_goal, partner_key)."
         )
         edited = self._generate_with_retry(user_prompt)
         if edited is not None:
@@ -553,31 +518,22 @@ class TaskGenerator:
 
     _ANALYZE_TOO_EASY_SYSTEM = (
         "A learner agent solved a social scenario on the FIRST try, which means it is not "
-        "interestingly difficult. Identify the SINGLE root cause and say concretely how to fix it "
-        "— WITHOUT adding facts, parties, or numeric complexity.\n\n"
-        "IMPORTANT: your suggested_edit must be a SCENARIO DESIGN change — a change to the structured "
-        "goals (outcome/constraint/shortcut), the partner's profile (secret, personality, decision_making_style), "
-        "or the scenario description. It must NOT be a transcript edit, a suggested dialogue line, or "
-        "instructions for what a character should say. The edit will be applied to regenerate the scenario, "
-        "not to rewrite the transcript.\n\n"
+        "interestingly difficult. Identify the SINGLE root cause — the social knob that is slack. "
+        "This is a LABELING task only: name the knob and explain why it is slack. "
+        "Do NOT suggest edits; the mutation operator will handle escalation separately.\n\n"
         "SPECIAL CASE — cooperative_alignment: This is the most common failure mode. It occurs when "
         "the two agents' goals are cooperatively aligned at their core — both want the same outcome, "
         "and the only obstacle is face/framing that an agreeable agent provides for free. Look at the "
         "transcript: if the learner succeeded simply by being accommodating and satisfying the partner's "
-        "stated demands (without holding any position under pressure, without strategic disclosure, without "
-        "finding a creative trade-off that required real insight), the root cause is cooperative_alignment. "
-        "The fix is NOT to make the partner more resistant — that only delays the cooperative solution. "
-        "The fix is to add a genuine competing interest to the LEARNER that makes being maximally "
-        "accommodating costly: give the learner a constraint or obligation that directly conflicts with "
-        "what the partner is asking for. The learner must have something real at stake that they cannot "
-        "simply give away.\n\n"
+        "stated demands, the root cause is cooperative_alignment.\n\n"
         "Respond with ONLY valid JSON."
     )
 
     def analyze_too_easy(self, scenario: SocialScenario, transcript: list) -> dict:
-        """Diagnose which social knob is slack from a transcript where the learner solved turn 1.
+        """Diagnose which social knob is slack from a transcript where the learner solved attempt 1.
 
-        Returns {slack_knob, rationale, suggested_edit} → feeds edit_scenario(raise_difficulty).
+        Returns {slack_knob, rationale} — labeler only, no suggested_edit.
+        The escalate mutation operator uses this diagnosis to choose which slots to tighten.
         """
         sj = _format_scenario_for_prompt(scenario)
         tx = "\n".join(
@@ -585,25 +541,18 @@ class TaskGenerator:
         )[:3000]
         user = (
             f"SCENARIO:\n{sj}\n\nTRANSCRIPT (the learner solved this on the first try):\n{tx}\n\n"
-            'Respond JSON: {"slack_knob": "cooperative_alignment|shortcut_salience|constraint_bite|partner_resistance|partner_stake", '
-            '"rationale": "one sentence explaining why that knob is slack — for cooperative_alignment, '
-            'explain specifically how the learner succeeded by just accommodating the partner", '
-            '"suggested_edit": "a concrete change to the scenario design — to structured goals, partner profile, '
-            'or scenario description — that raises that knob. For cooperative_alignment, this MUST add a '
-            'competing interest or obligation to the LEARNER (not increase partner resistance). NOT a transcript edit."}'
+            'Respond JSON: {"slack_knob": "cooperative_alignment|surface_misdirection_too_obvious|'
+            'hardening_triggers_missing|cost_coupling_too_low|key_mechanism_weak|'
+            'shortcut_salience|constraint_bite|partner_resistance", '
+            '"rationale": "one sentence explaining why that knob is slack"}'
         )
         try:
             d = self.fm.query_json(self._ANALYZE_TOO_EASY_SYSTEM, user, temperature=0.3)
         except Exception as e:
-            return {
-                "slack_knob": "partner_resistance",
-                "rationale": f"analyze failed: {e}",
-                "suggested_edit": "Make the partner resist the learner's first move and hold their position longer.",
-            }
+            return {"slack_knob": "partner_resistance", "rationale": f"analyze failed: {e}"}
         return {
             "slack_knob": str(d.get("slack_knob", "partner_resistance")),
             "rationale": str(d.get("rationale", "")),
-            "suggested_edit": str(d.get("suggested_edit", "")),
         }
 
     def generate_unconditioned(self) -> Optional[SocialScenario]:
@@ -615,13 +564,59 @@ class TaskGenerator:
         return self._generate_with_retry(user_prompt)
 
     def flesh_out_seed(self, description: str) -> Optional[SocialScenario]:
+        """Convert a plain description into a seed SocialScenario (no partner_key).
+
+        Seeds use flat agent_goals strings and are later mutated in the curriculum to
+        produce keyed Phase 2 scenarios. They must NOT carry a partner_key.
+        """
         user_prompt = (
             f"Flesh out the following short scenario description into a complete social scenario "
-            f"with 2 detailed character profiles, private goals, and a clear relationship.\n\n"
+            f"with 2 detailed character profiles, flat natural-language goals, and a clear relationship.\n\n"
             f"Description: {description}\n\n"
             f"Return ONLY a JSON object matching the required schema."
         )
-        return self._generate_with_retry(user_prompt)
+        return self._generate_seed_with_retry(user_prompt)
+
+    def _generate_seed_with_retry(self, user_prompt: str) -> Optional[SocialScenario]:
+        """Generate a seed scenario without partner_key using the seed schema."""
+        import uuid as _uuid
+        from .data_models import AgentProfile
+
+        prompt = user_prompt
+        for attempt in range(self.max_retries):
+            try:
+                d = self.fm.query_json(_SEED_SYSTEM_PROMPT, prompt)
+            except Exception as e:
+                prompt = user_prompt + f"\n\nPrevious FM error: {e}. Fix and return valid JSON."
+                continue
+            # Minimal seed validation
+            if not d.get("scenario") or len(str(d.get("scenario", ""))) < 50:
+                prompt = user_prompt + "\n\nScenario text too short. Make it at least 50 chars."
+                continue
+            profiles = d.get("agent_profiles", [])
+            goals = d.get("agent_goals", [])
+            if len(profiles) < 2 or len(goals) < 2:
+                prompt = user_prompt + "\n\nNeed exactly 2 agent_profiles and 2 agent_goals."
+                continue
+            try:
+                agent_profiles = [AgentProfile(**p) for p in profiles[:2]]
+            except Exception as e:
+                prompt = user_prompt + f"\n\nProfile parse error: {e}. Fix and return valid JSON."
+                continue
+            base_id = str(_uuid.uuid4())
+            return SocialScenario(
+                id=f"{base_id}_pX",
+                source_scenario_id=base_id,
+                scenario=str(d["scenario"]),
+                agent_profiles=agent_profiles,
+                agent_goals=[str(g) for g in goals[:2]],
+                relationship=d.get("relationship", ""),
+                relationship_background=d.get("relationship_background", ""),
+                tag=d.get("tag", d.get("interaction_type", "")),
+                interaction_type=d.get("interaction_type", ""),
+                source="seed",
+            )
+        return None
 
     def _generate_with_retry(self, user_prompt: str) -> Optional[SocialScenario]:
         last_err = ""

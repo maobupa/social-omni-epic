@@ -292,12 +292,19 @@ def _run_key_check(
     triggers = "\n".join(
         f"{i+1}. {t}" for i, t in enumerate(partner_key.hardening_triggers)
     )
+    # Head+tail truncation so conditions met early in long episodes aren't cut off.
+    if len(history) > 5000:
+        head = history[:2500]
+        tail = history[-2500:]
+        history_trunc = head + "\n...[middle truncated]...\n" + tail
+    else:
+        history_trunc = history
     user = _KEY_CHECK_USER.format(
         conditions=conditions,
         triggers=triggers,
         learner_name=learner_name,
         partner_name=partner_name,
-        history=history[:5000],
+        history=history_trunc,
     )
     try:
         return fm.query_json(_KEY_CHECK_SYSTEM, user, temperature=0.0)
@@ -414,8 +421,8 @@ def _build_history(inbox: list) -> str:
 def _evaluate_diagnostics(inbox: list, fm: FM, learner_goal: str = "") -> tuple[dict, dict, str]:
     """Score both agents on the SOTOPIA dimensions — DIAGNOSTICS ONLY.
 
-    These 7-dim scores no longer gate success (the rubric does, see _evaluate_rubric). They
-    feed reflection ("which facet was weak") and the external eval. Falls back to zeros.
+    Feeds reflection ("which facet was weak") and external eval. Terminal success is
+    determined by §3.2 (GOAL≥7 ∧ REL≥0), not by these scores directly. Falls back to zeros.
     """
     history = _build_history(inbox)
     if not history.strip():
@@ -453,103 +460,6 @@ def _evaluate_diagnostics(inbox: list, fm: FM, learner_goal: str = "") -> tuple[
     return learner_scores, partner_scores, reasoning.strip()
 
 
-# ---------------------------------------------------------------------------
-# Rubric evaluation — the success gate (per-check, perspective-routed)
-# ---------------------------------------------------------------------------
-
-_RUBRIC_NEUTRAL_SYSTEM = (
-    "You are a neutral observer judging whether a specific thing happened in a conversation. "
-    "Decide ONLY from what is observable in the transcript; do not speculate about private "
-    "feelings. Respond with ONLY valid JSON."
-)
-
-_RUBRIC_PARTNER_SYSTEM = (
-    "You ARE the second person in this conversation. Using your PRIVATE background and how the "
-    "conversation actually landed for you, answer honestly from your own point of view — be "
-    "candid, not polite or agreeable, and think about whether you would actually follow through. "
-    "Respond with ONLY valid JSON."
-)
-
-_RUBRIC_USER = (
-    "{context}\n\n"
-    "QUESTION (a YES/true answer means the OTHER person succeeded): {question}\n"
-    'Respond with ONLY this JSON: {{"verdict": true, "confidence": 0.8, "rationale": "one sentence"}}'
-)
-
-
-def _safe_float(v, default: float = 0.0) -> float:
-    try:
-        return float(v)
-    except (TypeError, ValueError):
-        return default
-
-
-def _judge_check(fm: FM, system: str, user: str, k: int) -> dict:
-    """Run a single rubric check k times; majority vote. k=1 → single deterministic pass."""
-    samples = []
-    for _i in range(max(1, k)):
-        temp = 0.0 if k <= 1 else 0.7
-        try:
-            d = fm.query_json(system, user, temperature=temp)
-            samples.append(
-                (bool(d.get("verdict", False)), str(d.get("rationale", "")), _safe_float(d.get("confidence")))
-            )
-        except Exception:
-            continue
-    if not samples:
-        return {"verdict": False, "confidence": 0.0, "rationale": "[judge failed]", "n_agree": 0, "k": k}
-    trues = sum(1 for v, _, _ in samples if v)
-    verdict = trues * 2 >= len(samples)  # majority; ties resolve to True
-    n_agree = sum(1 for v, _, _ in samples if v == verdict)
-    rationale = next((r for v, r, _ in samples if v == verdict and r), samples[0][1])
-    conf = round(sum(c for _, _, c in samples) / len(samples), 2)
-    return {"verdict": verdict, "confidence": conf, "rationale": rationale, "n_agree": n_agree, "k": len(samples)}
-
-
-def _evaluate_rubric(inbox: list, rubric, partner_profile, fm: FM, k: int = 3) -> list[dict]:
-    """Evaluate each rubric check with the judge matching its perspective.
-
-    neutral → single transcript-only pass. partner → k-sample self-consistency majority vote,
-    conditioned on the partner's private profile + secret. Returns a list of per-check dicts.
-    """
-    history = _build_history(inbox)
-    if not history.strip() or rubric is None or not getattr(rubric, "checks", None):
-        return []
-
-    partner_bg = ""
-    partner_name = "you"
-    if partner_profile is not None:
-        partner_name = getattr(partner_profile, "first_name", "you") or "you"
-        partner_bg = (getattr(partner_profile, "public_info", "") or "").strip()
-        secret = (getattr(partner_profile, "secret", "") or "").strip()
-        if secret:
-            partner_bg += f"\nYour secret: {secret}"
-
-    out: list[dict] = []
-    for c in rubric.checks:
-        if c.perspective == "partner":
-            context = (
-                f"YOUR PRIVATE BACKGROUND:\n{partner_bg}\n\n"
-                f"THE CONVERSATION (you are {partner_name}):\n{history}"
-            )
-            r = _judge_check(fm, _RUBRIC_PARTNER_SYSTEM,
-                             _RUBRIC_USER.format(context=context, question=c.question), k)
-        else:
-            context = f"TRANSCRIPT:\n{history}"
-            r = _judge_check(fm, _RUBRIC_NEUTRAL_SYSTEM,
-                             _RUBRIC_USER.format(context=context, question=c.question), 1)
-        r["kind"] = c.kind
-        r["question"] = c.question
-        r["perspective"] = c.perspective
-        out.append(r)
-    return out
-
-
-def _rollup(rubric_results: list[dict], kind: str) -> bool:
-    """True iff there is ≥1 check of `kind` and all of them passed."""
-    rs = [r for r in rubric_results if r.get("kind") == kind]
-    return bool(rs) and all(r.get("verdict") for r in rs)
-
 
 async def run_single_episode(
     env_profile,
@@ -560,15 +470,21 @@ async def run_single_episode(
     memory_prompt: str = "",
     max_turns: int = 20,
     learner_goal: str = "",
-    rubric=None,                       # SuccessRubric for the designated learner (the success gate)
-    partner_profile=None,              # AgentProfile of the partner (for the partner-perspective judge)
+    # rubric/partner_profile/judge_self_consistency_k: kept for backward-compat callers; unused
+    rubric=None,
+    partner_profile=None,
     judge_self_consistency_k: int = 3,
-    # evaluator_model kept for backward-compat callers that pass it; unused
     evaluator_model: str = "",
     partner_key=None,                   # PartnerKey | None — injects key-conditioned prompt when set
+    fm_judge: Optional["FM"] = None,    # separate judge FM; falls back to fm if not provided
     on_turn: Optional[Callable[[list[dict]], None]] = None,
 ) -> EpisodeResult:
-    """Run one episode. agent_profiles[0] is the learner, [1] the partner."""
+    """Run one episode. agent_profiles[0] is the learner, [1] the partner.
+
+    fm_judge is used for _evaluate_diagnostics and _run_key_check (cross-lab judge).
+    fm is used for generation/reflection (the learner's pipeline model).
+    """
+    _judge = fm_judge if fm_judge is not None else fm
     env = ParallelSotopiaEnv(
         env_profile=env_profile,
         model_name=learner_model,
@@ -646,9 +562,12 @@ async def run_single_episode(
                     })
             on_turn(partial)
 
-    # 7-dim diagnostics (kept; no longer the success gate — that is terminal_success below).
-    learner_scores, partner_scores, reasoning = _evaluate_diagnostics(env.inbox, fm, learner_goal=learner_goal)
-    rubric_results: list[dict] = []  # no longer evaluated; field kept for back-compat reading of old archives
+    # 7-dim diagnostics feed reflection; terminal success is §3.2 (GOAL≥7 ∧ REL≥0).
+    # Uses fm_judge (cross-lab judge) not the learner pipeline FM.
+    learner_scores, partner_scores, reasoning = _evaluate_diagnostics(
+        env.inbox, _judge, learner_goal=learner_goal
+    )
+    rubric_results: list[dict] = []  # kept for back-compat reading of old archives
     outcome_achieved = False
     constraint_preserved = False
 
@@ -657,15 +576,17 @@ async def run_single_episode(
     rel_score = learner_scores.get("relationship", 0.0)
     base_success = (goal_score >= 7.0) and (rel_score >= 0.0)
 
-    # §3.3 key-aware check (only on generated scenarios with a partner_key)
+    # §3.3 key-aware check — runs on EVERY attempt of keyed scenarios, not just successes.
+    # The verdict's diagnostic payload (which triggers fired, which conditions were approached)
+    # is the primary input for reflection on failed attempts. Gating on base_success would
+    # leave key_check_verdicts=None for all attempts reflection actually analyzes.
     key_check_result: Optional[dict] = None
     key_check_passed = True
-    if partner_key is not None and base_success:
+    if partner_key is not None:
         history = _build_history(env.inbox)
-        # Identify agent names from agent_profiles
         learner_name = agent_profiles[0].first_name if agent_profiles else "the actor"
         partner_name = agent_profiles[1].first_name if len(agent_profiles) > 1 else "the partner"
-        key_check_result = _run_key_check(fm, partner_key, history, learner_name, partner_name)
+        key_check_result = _run_key_check(_judge, partner_key, history, learner_name, partner_name)
         key_check_passed = bool(key_check_result.get("key_check_passed", False))
 
     terminal_success = base_success and key_check_passed

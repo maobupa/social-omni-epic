@@ -3,35 +3,27 @@ from .data_models import SocialScenario
 from .fm import FM
 
 
-SYSTEM_PROMPT = """You are an expert auditor of social scenarios used to train social skill. Judge a newly proposed scenario on THREE dimensions, and if it falls short, say concretely how to fix it.
+# MOI is now a batch RANKER on social worth only (§6.3).
+# The three-dimension gate (social_tension / novelty / learnability) is removed.
+# The edit loop is removed. Worth is the only axis.
+SYSTEM_PROMPT = """You are ranking candidate social scenarios on one axis only: SOCIAL WORTH.
 
-DIMENSION 1 — SOCIAL TENSION (most important): Is this a genuinely social problem, not a logic puzzle?
-A scenario PASSES tension only if, judging the structured goals:
-  - the `constraint` genuinely BITES — pursuing the outcome bluntly really would damage the relationship/face;
-  - the `shortcut` is genuinely TEMPTING — a naive agent would be drawn to take it and would thereby WIN the outcome but BREAK the constraint;
-  - so the naive/default move (take the shortcut) FAILS the real goal, and success requires skilled HOW, not just the WHAT;
-  - AND a maximally COOPERATIVE, ACCOMMODATING agent also FAILS — i.e., the learner cannot succeed simply by being agreeable, patient, and giving the partner whatever they ask for. If a conflict-avoidant LLM that just satisfies the partner's every demand would pass the rubric, the scenario has no bite regardless of how resistant the partner appears.
-It FAILS tension if: it is positional bargaining over a number; it is an extract-a-sentence fetch quest; the two agents' goals are cooperatively aligned at the core (both want the same outcome, one just wants face-protection that an agreeable agent freely provides); or any case where a polite, accommodating move already succeeds with no real cost to the learner.
+A scenario has worth if the tension is one a thoughtful person would recognize as a real,
+meaningful social situation — not contrived, not a gimmick, not a logic puzzle wearing a
+social costume. Judge the human meaningfulness of the dynamic, NOT its difficulty and NOT
+its novelty.
 
-DIMENSION 2 — NOVELTY (vs archive): Is it interestingly new versus the shown archive scenarios?
-FAILS if it re-skins an existing dynamic (same power structure / same tension / same strategic challenge) with new names or settings. PASSES if it explores a genuinely different social dynamic or adds real structural complexity. (If no archive scenarios are shown, do not fail on novelty.)
+HIGH worth: the situation captures something true and painful about how real people get stuck
+with each other — power imbalances that aren't just positional, face costs that aren't just
+ego, relational dynamics that a perceptive person would recognize from life.
 
-DIMENSION 3 — LEARNABILITY / ZOPA: Is there at least one discoverable path to success a skilled agent could find?
-FAILS if the outcome is fixed regardless of skill, or requires the partner to fully capitulate with no possible middle ground. PASSES if creative framing, timing, disclosure, or trade-offs could plausibly move the partner.
+LOW worth: the scenario feels constructed as a puzzle, or the stakes are too abstract to care
+about, or it reads like a management-training vignette rather than a genuine human situation.
 
 Respond with ONLY valid JSON:
-{"social_tension": true/false, "novel": true/false, "learnable": true/false,
- "reason": "concise explanation across the three dimensions",
- "suggested_edits": ["concrete change 1", "concrete change 2"]}
+{"rankings": [{"index": 0, "worth": 8, "rationale": "one sentence"}, ...]}
 
-If all three are true, suggested_edits must be an empty list. Otherwise, suggested_edits must say
-specifically what to change (especially to raise social tension) — without adding facts, parties, or
-numeric complexity.
-
-When the failure is cooperative alignment (both agents want the same outcome; accommodation trivially
-succeeds): the suggested_edit MUST give the learner a competing interest or obligation that conflicts
-with what the partner needs — NOT increase partner resistance. Increasing partner resistance only
-delays the cooperative solution; it does not create genuine tension."""
+Score worth 0–10. Rank all candidates; higher worth = better."""
 
 
 def _format(s: SocialScenario) -> str:
@@ -42,13 +34,11 @@ def _format(s: SocialScenario) -> str:
         "scenario": s.scenario,
         "interaction_type": s.interaction_type,
         "relationship": s.relationship,
-        "difficulty_tags": s.difficulty_tags,
     })
     if any(sg is not None for sg in (s.structured_goals or [])):
         out["agent_structured_goals"] = [
             sg.model_dump() if sg else None for sg in s.structured_goals
         ]
-        out["agent_secrets"] = [p.secret for p in s.agent_profiles]
         if s.goal_type:
             out["goal_type"] = s.goal_type
     else:
@@ -57,41 +47,74 @@ def _format(s: SocialScenario) -> str:
 
 
 class ModelOfInterestingness:
-    def __init__(self, fm: FM, num_examples: int = 5, min_archive_size: int = 10):
+    def __init__(self, fm: FM, num_examples: int = 5):
         self.fm = fm
         self.num_examples = num_examples
-        self.min_archive_size = min_archive_size
+
+    def rank_batch(
+        self,
+        candidates: list[SocialScenario],
+        archive_scenarios: list[SocialScenario] = None,
+    ) -> list[SocialScenario]:
+        """Rank candidates by social worth. Returns list sorted best-first.
+
+        On error, returns candidates in original order (never blocks the pipeline).
+        """
+        if not candidates:
+            return candidates
+        if len(candidates) == 1:
+            return candidates
+
+        parts = ["CANDIDATES TO RANK:"]
+        for i, c in enumerate(candidates):
+            parts.append(f"\n--- Candidate {i} ---")
+            parts.append(_format(c))
+
+        parts.append(
+            f"\nRank all {len(candidates)} candidates by SOCIAL WORTH (0–10). "
+            "Return JSON: {\"rankings\": [{\"index\": 0, \"worth\": ..., \"rationale\": \"...\"}, ...]}"
+        )
+
+        try:
+            d = self.fm.query_json(SYSTEM_PROMPT, "\n".join(parts), temperature=0.3)
+            rankings = d.get("rankings", [])
+            if not rankings:
+                return candidates
+            # Sort by worth descending; carry over worth score for logging.
+            indexed = {r.get("index"): r.get("worth", 0) for r in rankings}
+            sorted_candidates = sorted(
+                enumerate(candidates),
+                key=lambda ic: indexed.get(ic[0], 0),
+                reverse=True,
+            )
+            return [c for _, c in sorted_candidates]
+        except Exception:
+            return candidates
 
     def evaluate(
         self, new_scenario: SocialScenario, similar: list[SocialScenario]
     ) -> tuple[bool, str, list[str]]:
-        """Audit the scenario. Returns (passed, reason, suggested_edits).
+        """Backward-compat single-scenario gate (used by old pipeline paths).
 
-        passed = social_tension AND learnable AND (novel OR no archive shown). On error, passes
-        (do not block the pipeline) with empty edits.
+        Passes iff social worth ≥ 5. Never blocks on error.
         """
-        parts = ["NEW SCENARIO TO EVALUATE:", _format(new_scenario)]
-        if similar:
-            parts.append("\nMOST SIMILAR EXISTING SCENARIOS (for novelty comparison):")
-            for i, s in enumerate(similar):
-                parts.append(f"--- Existing {i + 1} ---")
-                parts.append(_format(s))
-        else:
-            parts.append("\n(No existing scenarios yet — do not fail on novelty.)")
-        parts.append(
-            "\nAudit the NEW scenario on SOCIAL TENSION, NOVELTY, and LEARNABILITY. "
-            'Respond with JSON: {"social_tension":..., "novel":..., "learnable":..., '
-            '"reason":"...", "suggested_edits":[...]}'
-        )
+        ranked = self.rank_batch([new_scenario])
+        if not ranked:
+            return True, "no candidates to rank", []
+        # Single candidate — just check worth via rank_batch internal scoring.
+        # Re-run as a single query to get the worth score.
         try:
+            parts = [
+                "CANDIDATE:",
+                _format(new_scenario),
+                "\nRate this scenario's SOCIAL WORTH (0–10).",
+                'Return JSON: {"rankings": [{"index": 0, "worth": 0, "rationale": "..."}]}',
+            ]
             d = self.fm.query_json(SYSTEM_PROMPT, "\n".join(parts), temperature=0.3)
+            rankings = d.get("rankings", [])
+            worth = rankings[0].get("worth", 5) if rankings else 5
+            reason = rankings[0].get("rationale", "") if rankings else ""
+            passed = float(worth) >= 5.0
+            return passed, reason, []
         except Exception as e:
             return True, f"MoI error (defaulting to pass): {e}", []
-
-        tension = bool(d.get("social_tension", True))
-        novel = bool(d.get("novel", True)) if similar else True
-        learnable = bool(d.get("learnable", True))
-        reason = str(d.get("reason", ""))
-        edits = [str(x) for x in d.get("suggested_edits", []) if str(x).strip()]
-        passed = tension and novel and learnable
-        return passed, reason, edits

@@ -96,6 +96,7 @@ def _count_solved(run_dir: Path) -> int:
 @dataclass
 class _Services:
     fm: FM
+    fm_judge: FM        # separate judge FM for diagnostics, key check, LP (§2 cross-lab separation)
     task_gen: TaskGenerator
     moi: ModelOfInterestingness
     coherence_checker: CoherenceChecker
@@ -131,7 +132,7 @@ async def _run_one_scenario(
     """
     success_dir, failed_dir, discarded_dir = output_dirs
     fm = svc.fm
-    anchor = archive.state.successful[anchor_idx]
+    anchor = archive.state.tasks[anchor_idx]
     tag = f"[iter {global_iter:04d}]"
 
     print_step(f"{tag} Generating from anchor: {anchor.scenario[:70]}...")
@@ -140,8 +141,8 @@ async def _run_one_scenario(
     n_examples = int(config.task_generator.num_examples)
     all_embs = archive.get_successful_embeddings()
     if anchor.embedding and all_embs and len(all_embs) >= n_examples:
-        src_ids = [s.source_scenario_id for s in archive.state.successful]
-        agt_idxs = [s.target_agent_idx for s in archive.state.successful]
+        src_ids = [s.source_scenario_id for s in archive.state.tasks]
+        agt_idxs = [s.target_agent_idx for s in archive.state.tasks]
         ex_idxs = get_similar_scenarios(
             anchor.embedding, all_embs, num_returns=n_examples,
             source_ids=src_ids, agent_idxs=agt_idxs,
@@ -151,7 +152,7 @@ async def _run_one_scenario(
             ex_idxs = [anchor_idx] + ex_idxs[:n_examples - 1]
     else:
         ex_idxs = [anchor_idx]
-    examples = [archive.state.successful[i] for i in ex_idxs]
+    examples = [archive.state.tasks[i] for i in ex_idxs]
 
     # --- Failed-task negative examples for generator ---
     n_ep_failed = int(config.task_generator.get("num_episode_failed_examples", 2))
@@ -171,28 +172,44 @@ async def _run_one_scenario(
             episode_failed = ep_failed_candidates[-n_ep_failed:]
 
     existing_types = (
-        list({s.interaction_type for s in archive.state.successful if s.interaction_type})
+        list({s.interaction_type for s in archive.state.tasks if s.interaction_type})
         if config.task_generator.get("show_existing_types", True) else None
     )
 
-    # --- Generate ---
-    use_vs = bool(config.get("use_verbalized_sampling", False))
-    scenario = (
-        svc.task_gen.generate_with_verbalized_sampling(
-            examples, episode_failed_examples=episode_failed,
-            existing_types=existing_types or [],
-            n_candidates=int(config.get("vs_num_candidates", 5)),
-        ) if use_vs else
-        svc.task_gen.generate_from_archive(
-            examples, episode_failed_examples=episode_failed,
-            existing_types=existing_types or [],
-        )
+    # --- Determine mutation operator from anchor classification ---
+    classification = getattr(anchor, "classification", None)
+    if classification == "too_easy":
+        mutation_op = "escalate"
+    elif classification == "beyond_frontier":
+        mutation_op = "relax"
+    else:
+        mutation_op = "lateral"
+
+    # --- Generate batch + MOI rank ---
+    batch_size_gen = int(config.get("gen_batch_size", 3))
+    candidates = svc.task_gen.generate_batch_from_archive(
+        examples,
+        anchor=anchor,
+        mutation_operator=mutation_op,
+        episode_failed_examples=episode_failed,
+        existing_types=existing_types or [],
+        batch_size=batch_size_gen,
     )
+    if not candidates:
+        print_warn(f"{tag} Generation returned no valid candidates → generation_failed")
+        return "generation_failed", None, {"reason": "generation_returned_none"}, anchor_idx
+
+    # MOI: rank candidates by social worth, pick best
+    if config.enable_moi and len(candidates) > 1:
+        candidates = svc.moi.rank_batch(candidates)
+        print_info(f"{tag} MOI ranked {len(candidates)} candidates; selected top")
+    scenario = candidates[0]
+
     if scenario is None:
         print_warn(f"{tag} Generation returned None → generation_failed")
         return "generation_failed", None, {"reason": "generation_returned_none"}, anchor_idx
 
-    print_info(f"{tag} Generated: {scenario.scenario[:80]}")
+    print_info(f"{tag} Generated ({mutation_op}): {scenario.scenario[:80]}")
     print_info(f"{tag}   interaction_type={scenario.interaction_type}  relationship={scenario.relationship}")
     scenario.iteration = global_iter
     scenario.parent_example_ids = [anchor.id]
@@ -204,42 +221,7 @@ async def _run_one_scenario(
         print_warn(f"{tag} Embed failed: {e}")
         return "generation_failed", None, {"reason": f"embed_error: {e}"}, anchor_idx
 
-    # --- MoI gate ---
-    if config.enable_moi and archive.size >= config.moi.min_archive_size:
-        src_ids = [s.source_scenario_id for s in archive.state.successful]
-        agt_idxs = [s.target_agent_idx for s in archive.state.successful]
-        sim_idxs = get_similar_scenarios(
-            scenario.embedding, all_embs, num_returns=config.moi.num_examples,
-            source_ids=src_ids, agent_idxs=agt_idxs,
-            preferred_agent_idx=scenario.target_agent_idx,
-        )
-        similar = [archive.state.successful[i] for i in sim_idxs]
-        moi_ok = False
-        for _m in range(int(config.moi.get("max_edits", 2)) + 1):
-            passed, moi_reason, moi_edits = svc.moi.evaluate(scenario, similar)
-            scenario.moi_reasoning = moi_reason
-            if passed:
-                moi_ok = True
-                print_info(f"{tag} MoI gate: PASS")
-                break
-            print_warn(f"{tag} MoI gate: FAIL — {moi_reason[:120]}")
-            if _m >= int(config.moi.get("max_edits", 2)) or not moi_edits:
-                break
-            print_info(f"{tag}   MoI edit {_m+1}: {moi_edits[0][:80]}")
-            edited = svc.task_gen.edit_scenario(scenario, moi_edits, intent="improve_interestingness")
-            if edited is None:
-                break
-            edited.iteration = global_iter
-            edited.parent_example_ids = [anchor.id]
-            try:
-                edited.embedding = fm.get_embeddings([edited.to_text_for_embedding()])[0]
-            except Exception:
-                edited = None
-                break
-            scenario = edited
-        if scenario is None or not moi_ok:
-            print_warn(f"{tag} MoI gate: REJECTED after edits → generation_failed")
-            return "generation_failed", scenario, {"reason": "moi_failed"}, anchor_idx
+    # (MOI ranking was done at generation time inside generate_batch_from_archive)
 
     # --- Coherence gate ---
     scenario, passed_coherence = run_coherence_gate(
@@ -268,38 +250,21 @@ async def _run_one_scenario(
     )
     print_info(f"{tag} Target agent: {scenario.target_agent_idx}  abstract_goal={scenario.target_agent_goal_abstract[:60]}")
 
-    # --- Two-loop curriculum episode ---
-    print_step(f"{tag} Starting episode loop (K={config.get('max_attempts',4)}, D={config.get('difficulty',{}).get('D',2)})")
+    # --- K-attempt curriculum episode ---
+    print_step(f"{tag} Starting episode loop (K={config.get('max_attempts',4)}, op={mutation_op})")
 
     def _on_attempt_done(loop_info: dict) -> None:
-        diff = loop_info.get("difficulty_loop", [])
         skill = loop_info.get("skill_attempts", [])
-        latest_diff = diff[-1] if diff else None
-        latest_skill = skill[-1] if skill else None
-        latest = latest_skill or latest_diff
+        latest = skill[-1] if skill else None
         if not latest:
             return
-        if "attempt" in latest:
-            label = f"attempt {latest['attempt']}"
-            goal = (latest.get("diagnostics_scores") or {}).get("goal", "?")
-            solved = latest.get("solved", False)
-            rubric = latest.get("rubric_results") or []
-            verdicts = " | ".join(
-                f"[{'PASS' if r.get('verdict') else 'FAIL'}] {r.get('kind')}"
-                for r in rubric
-            )
-            status = "SOLVED ✓" if solved else "FAILED ✗"
-            print_info(f"{tag}   {label}: {status}  GOAL={goal}  rubric=({verdicts})")
-            if latest.get("reflection_diagnosis"):
-                print_info(f"{tag}   diagnosis: {latest['reflection_diagnosis'][:120]}")
-        else:
-            d = latest.get("d", "?")
-            solved1 = latest.get("attempt1_solved", False)
-            goal = (latest.get("diagnostics_scores") or {}).get("goal", "?")
-            if solved1:
-                print_info(f"{tag}   difficulty d={d}: agent SOLVED on first try (too easy)")
-            else:
-                print_info(f"{tag}   difficulty d={d}: agent FAILED (bit) ✓  GOAL={goal}")
+        label = f"attempt {latest['attempt']}"
+        goal = (latest.get("diagnostics_scores") or {}).get("goal", "?")
+        solved = latest.get("solved", False)
+        status = "SOLVED ✓" if solved else "FAILED ✗"
+        print_info(f"{tag}   {label}: {status}  GOAL={goal}")
+        if latest.get("reflection_diagnosis"):
+            print_info(f"{tag}   diagnosis: {latest['reflection_diagnosis'][:120]}")
 
     try:
         scenario, terminal_state, _outcome, final_scores, loop_info = await run_episode_two_loop(
@@ -316,6 +281,7 @@ async def _run_one_scenario(
             fm=fm,
             config=config,
             on_attempt_done=_on_attempt_done,
+            fm_judge=svc.fm_judge,
         )
     except Exception as e:
         import traceback
@@ -324,23 +290,33 @@ async def _run_one_scenario(
 
     loop_info["final_scores"] = final_scores
 
-    # --- Save file immediately on completion (before returning) ---
-    if terminal_state == "solved_after_biting":
-        _save_scenario_file(scenario, success_dir)
-        print_info(
-            f"{tag} ✓ SOLVED_AFTER_BITING → success/  "
-            f"GOAL={final_scores.get('goal',0):.1f}  "
-            f"title={scenario.scenario_title or scenario.scenario[:50]}"
-        )
-    elif terminal_state == "failed":
+    # --- Save file immediately on completion ---
+    lp_str = f"LP={loop_info.get('lp_value', 0.0):.2f}"
+    if terminal_state == "frontier":
+        if scenario.terminal_success:
+            _save_scenario_file(scenario, success_dir)
+            print_info(
+                f"{tag} ✓ FRONTIER (solved) → success/  "
+                f"GOAL={final_scores.get('goal',0):.1f}  {lp_str}  "
+                f"title={scenario.scenario_title or scenario.scenario[:50]}"
+            )
+        else:
+            _save_scenario_file(scenario, failed_dir)
+            print_info(
+                f"{tag} ~ FRONTIER (unsolved) → failed/  "
+                f"GOAL={final_scores.get('goal',0):.1f}  {lp_str}"
+            )
+    elif terminal_state == "too_easy":
+        _save_discarded(global_iter, "too_easy", anchor.id, discarded_dir)
+        print_warn(f"{tag} — TOO EASY → discarded/  {lp_str}")
+    elif terminal_state == "beyond_frontier":
         _save_scenario_file(scenario, failed_dir)
         print_warn(
-            f"{tag} ✗ FAILED → failed/  "
-            f"GOAL={final_scores.get('goal',0):.1f}"
+            f"{tag} ✗ BEYOND FRONTIER → failed/  "
+            f"GOAL={final_scores.get('goal',0):.1f}  {lp_str}"
         )
-    else:  # discarded
-        _save_discarded(global_iter, "discarded_too_easy", anchor.id, discarded_dir)
-        print_warn(f"{tag} — DISCARDED (too easy) → discarded/")
+    else:
+        print_warn(f"{tag} unexpected terminal_state={terminal_state}")
 
     return terminal_state, scenario, loop_info, anchor_idx
 
@@ -395,8 +371,13 @@ def main(config: DictConfig) -> None:
     from social_omni_epic.sotopia_bridge import scenario_to_sotopia_profiles
 
     fm = FM(model=config.model, temperature=config.temperature)
+    fm_judge = FM(
+        model=config.judge.model,
+        temperature=float(config.judge.get("lp_temperature", 0.3)),
+    )
     svc = _Services(
         fm=fm,
+        fm_judge=fm_judge,
         task_gen=TaskGenerator(
             fm,
             num_examples=config.task_generator.num_examples,
@@ -406,7 +387,6 @@ def main(config: DictConfig) -> None:
         moi=ModelOfInterestingness(
             fm,
             num_examples=config.moi.num_examples,
-            min_archive_size=config.moi.min_archive_size,
         ),
         coherence_checker=CoherenceChecker(fm),
         title_gen=ScenarioTitleGenerator(fm),
@@ -466,7 +446,7 @@ def main(config: DictConfig) -> None:
                 batch_anchor_indices.append(idx)
 
             selected_labels = [
-                f"[{i}] {archive.state.successful[i].scenario[:40]}..."
+                f"[{i}] {archive.state.tasks[i].scenario[:40]}..."
                 for i in batch_anchor_indices
             ]
             print_step(
@@ -510,42 +490,49 @@ def main(config: DictConfig) -> None:
                     continue
 
                 terminal_state, scenario, info, anchor_idx = result
-                anchor_id = archive.state.successful[anchor_idx].id
+                anchor_id = archive.state.tasks[anchor_idx].id
                 final_scores = info.get("final_scores", {})
+                lp_improved = info.get("lp_improved_votes", 0)
+                lp_total = info.get("lp_votes", 0)
 
                 if terminal_state == "generation_failed":
                     archive.add_failed_generation({"iteration": global_iter, **info})
-                    # Generator or gate may be at fault, not the anchor — halve the penalty.
-                    archive.record_outcome_weight(anchor_idx, extra_n_i=-0.5)
+                    # No LP vote update — generator/gate failure is not the anchor's fault.
 
-                elif terminal_state == "discarded":
-                    archive.add_failed_generation({
-                        "iteration": global_iter, "reason": "discarded_too_easy"
-                    })
-                    # File already saved inside _run_one_scenario; no adjustment needed.
-
-                elif terminal_state == "solved_after_biting":
-                    # Record success on parent first; child inherits parent's updated posterior.
-                    # File already saved inside _run_one_scenario.
-                    archive.record_solved_child(anchor_idx)
+                elif terminal_state == "too_easy":
+                    # too_easy: LP pseudo-votes (0, K_VOTES_EQUIV) penalise the anchor.
+                    from social_omni_epic.archive import K_VOTES_EQUIV
                     scenario.prior_alpha, scenario.prior_beta = archive.child_prior_from_parent(anchor_idx)
-                    archive.add_successful(scenario)
+                    archive.add_task(scenario)
                     archive.record_child(anchor_idx)
-                    solved_count += 1
+                    archive.record_child_outcome(anchor_idx, 0, K_VOTES_EQUIV)
+
+                elif terminal_state == "frontier":
+                    # frontier: both solved and LP>0 outcomes go here.
+                    scenario.prior_alpha, scenario.prior_beta = archive.child_prior_from_parent(anchor_idx)
+                    archive.add_task(scenario)
+                    archive.record_child(anchor_idx)
+                    archive.record_child_outcome(anchor_idx, lp_improved, max(lp_total, 1))
+                    if scenario.terminal_success:
+                        archive.record_solved_child(anchor_idx)
+                        solved_count += 1
                     print_info(
-                        f"Archive updated | solved_total={solved_count} | archive_size={archive.size}"
+                        f"Archive updated | frontier | solved_total={solved_count} | archive_size={archive.size}"
                     )
 
-                else:  # failed — bit but never solved across K attempts
-                    # File already saved inside _run_one_scenario.
-                    archive.add_failed_task(scenario)
+                else:  # beyond_frontier
+                    scenario.prior_alpha, scenario.prior_beta = archive.child_prior_from_parent(anchor_idx)
+                    archive.add_task(scenario)
                     archive.record_child(anchor_idx)
+                    # Use K_VOTES_EQUIV when LP errored (lp_total==0), not 1-vote penalty.
+                    from social_omni_epic.archive import K_VOTES_EQUIV as _K
+                    archive.record_child_outcome(anchor_idx, 0, lp_total if lp_total > 0 else _K)
 
                 metrics_log.append({
                     "iteration": global_iter,
                     "terminal_state": terminal_state,
-                    "structural_failure": bool(info.get("structural_failure", False)),
-                    "n_difficulty_edits": info.get("n_difficulty_edits", 0),
+                    "classification": getattr(scenario, "classification", terminal_state) if scenario else terminal_state,
+                    "lp_value": info.get("lp_value", 0.0),
                     "goal": final_scores.get("goal", 0.0),
                     "relationship": final_scores.get("relationship", 0.0),
                     "solved_count": solved_count,

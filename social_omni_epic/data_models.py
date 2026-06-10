@@ -145,6 +145,11 @@ class SocialScenario(BaseModel):
     prior_alpha: float = 1.0
     prior_beta: float = 1.0
 
+    # LP pseudo-vote accumulators (§5).
+    # Posterior = Beta(prior_alpha + alpha_votes, prior_beta + beta_votes).
+    alpha_votes: float = 0.0   # sum of improved_votes from children
+    beta_votes: float = 0.0    # sum of (total_votes - improved_votes) from children
+
     # Phase 2 §1.5 — archive record fields (populated after curriculum run)
     lp_value: Optional[float] = None     # improved_votes/total_votes ∈ [0,1]; None pre-Phase-0
     lp_votes: int = 0                    # total vote count behind lp_value
@@ -153,6 +158,7 @@ class SocialScenario(BaseModel):
     niche_id: Optional[int] = None      # k-means niche assignment (§6.4)
     mutation_operator: Optional[str] = None  # "escalate" | "relax" | "lateral" | None (seeds)
     mutated_slots: list[str] = []        # structural slots the generator mutated
+    mutation_rationale: Optional[str] = None  # one-sentence rationale from the generator
     classification: Optional[str] = None  # "too_easy" | "frontier" | "beyond_frontier"
     too_easy_diagnosis: Optional[dict] = None   # {slack_knob, rationale} from analyze_too_easy
     final_check_flag: Optional[list[str]] = None  # adversarial check_final issues when not approved
@@ -179,7 +185,8 @@ class SocialScenario(BaseModel):
 
 
 class ArchiveState(BaseModel):
-    successful: list[SocialScenario] = []
+    tasks: list[SocialScenario] = []          # all completed scenarios (§5 rename from successful)
     failed_generation: list[dict] = []
     failed_interestingness: list[SocialScenario] = []
     failed_tasks: list[SocialScenario] = []
+    niche_counts: dict[int, int] = {}         # generations per niche (§6.4)

@@ -138,13 +138,20 @@ def designate_target_agent(
 ) -> tuple[int, str]:
     """Pick which agent (0 or 1) is the target and generate their abstract goal.
 
-    For seed scenarios (no anchor or anchor has no abstract goal): returns (0, "").
+    For generated scenarios: always returns (0, abstract) — the structured triple was
+    written for agent 0 by the generator; flipping the index would invert the role
+    invariant (triple → wrong seat, partner_key → wrong seat).
 
-    For generated scenarios: picks the agent whose goal embeds most similarly to
-    the anchor's target_agent_goal_abstract. Ties → Agent 0 by convention.
+    For seed scenarios (no anchor or anchor has no abstract goal): returns (0, "").
 
     Returns (target_agent_idx, target_agent_goal_abstract).
     """
+    # Role invariant: for generated scenarios agent 0 is always the learner.
+    if scenario.source == "generated":
+        goal = scenario.agent_goals[0] if scenario.agent_goals else ""
+        abstract = _abstract_goal(goal, fm) if goal else ""
+        return 0, abstract
+
     is_seed_anchor = anchor_task.source == "seed_sotopia"
     if is_seed_anchor or not anchor_task.target_agent_goal_abstract:
         idx = anchor_task.target_agent_idx
