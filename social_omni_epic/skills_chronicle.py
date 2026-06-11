@@ -206,6 +206,65 @@ def _extract_tag(block: str, tag: str) -> str:
     return m.group(1).strip() if m else ""
 
 
+_ARTIFACT_PATTERNS = [
+    r"\bwritten\b", r"\breceipt\b", r"\btimestamp", r"\bsealed\b", r"\brecorded\b",
+    r"\brecording\b", r"\bphotograph", r"\bescrow\b", r"\bdocument(ed|ation)?\b",
+    r"\bemail\b", r"\bsign(ed|ature)\b", r"\bin writing\b",
+]
+_CROSS_REF_PATTERNS = [
+    r"\bsee (the )?[A-Z]", r"\bsee entry\b", r"\bprotocol\b", r"\b(FINAL|ENTRY|NEW)_\d",
+]
+_OVERGENERALIZATION = [r"\balways\b", r"\bnever fails\b", r"\breliably\b", r"\bregularly\b"]
+_PROVENANCE_RE = re.compile(r"attempt\s*\d", re.IGNORECASE)
+
+
+def validate_synthesis(chronicle: "SkillsChronicle", max_entries: int = 3) -> list[str]:
+    """Programmatic quality gate on synthesized chronicles.
+
+    Returns a list of issue strings (empty = pass). Issues feed directly into
+    the adversarial critique for a re-synthesis pass.
+    """
+    issues: list[str] = []
+    if len(chronicle.entries) > max_entries:
+        issues.append(
+            f"TOO MANY ENTRIES: {len(chronicle.entries)} entries; maximum is {max_entries}. "
+            "Merge entries whose guidance produces the same observable behavior; keep only "
+            "entries derived from observed contrasts."
+        )
+    for e in chronicle.entries:
+        text = f"{e.condition}\n{e.guidance}"
+        for pat in _ARTIFACT_PATTERNS:
+            if re.search(pat, text, _re.IGNORECASE):
+                issues.append(
+                    f"[{e.entry_id}] UNEXECUTABLE GUIDANCE: matches '{pat}'. All guidance "
+                    "must be performable in spoken conversational turns only — rewrite or "
+                    "remove this entry."
+                )
+                break
+        for pat in _CROSS_REF_PATTERNS:
+            if re.search(pat, e.guidance):
+                issues.append(
+                    f"[{e.entry_id}] NOT SELF-CONTAINED: references another entry or named "
+                    "protocol. Each entry must stand alone — inline the needed content or "
+                    "remove the reference."
+                )
+                break
+        for pat in _OVERGENERALIZATION:
+            if re.search(pat, e.guidance, _re.IGNORECASE):
+                issues.append(
+                    f"[{e.entry_id}] OVERGENERALIZATION: frequency claim ('{pat}') is not "
+                    "supported by a single episode. Restate as what was observed."
+                )
+                break
+        if not _PROVENANCE_RE.search(e.provenance or ""):
+            issues.append(
+                f"[{e.entry_id}] INVALID PROVENANCE: '{e.provenance}'. Required format: "
+                "attempt references plus turn range, e.g. 'attempt1→attempt2: turns [0–4] — "
+                "stopped abandoning after first counteroffer'."
+            )
+    return issues
+
+
 def parse_chronicle(text: str) -> list[ChronicleEntry]:
     """Parse a skills_final.md string into a list of ChronicleEntry objects."""
     entries: list[ChronicleEntry] = []

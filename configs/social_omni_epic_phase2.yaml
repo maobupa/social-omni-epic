@@ -22,8 +22,11 @@ goal_threshold: 7.0   # legacy/mock fallback only; the success gate is the rubri
 max_turns: 20
 
 # Multi-attempt (reflection) controls — K = skill-learning episode attempts
-max_attempts: 4       # K: attempt 1 is the biting failure, then up to 3 reflection-driven retries (3 chronicle edits)
-chronicle_max_entries: 8   # max entries shown to agent per attempt
+max_attempts: 4       # K: attempt 1 is the biting failure, then up to 3 reflection-driven retries
+# Memory mechanism in the K-loop. true (default) = ExpeL within-episode Reflexion strings
+# (no Skills Chronicle / adversarial / meta-reflection). false = legacy Skills Chronicle path.
+use_expel_memory: true
+chronicle_max_entries: 8   # max entries shown to agent per attempt (chronicle path only)
 
 # Difficulty-calibration loop (Loop 1): ratchet a too-easy scenario up until it bites
 difficulty:

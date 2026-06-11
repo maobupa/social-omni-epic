@@ -67,7 +67,7 @@ CHECK 3 — GUIDANCE ABSTRACTION: Does the Guidance contain scenario-specific le
 
 CHECK 4 — BROADENING: If a Condition was broadened (made more general), does the broadened Condition ALSO describe the parent scenario's social dynamic? If yes, the broadening is too aggressive and must be rejected — it would import anchor-task guidance into structurally different contexts.
 
-CHECK 4 — MISDIRECTION: Did any entry actively guide the agent toward worse behavior (not just fail to help, but actively caused harm)? If so, flag it as active misdirection.
+CHECK 5 — MISDIRECTION: Did any entry actively guide the agent toward worse behavior (not just fail to help, but actively caused harm)? If so, flag it as active misdirection.
 
 Respond with JSON only:
 {
@@ -96,6 +96,24 @@ CHECK 4 — OUTCOME BALANCE:
   - Success outcome: Chronicle may mix freely; WARNING entries from failed attempts are valuable contrast.
 
 CHECK 5 — ACTIVE MISDIRECTION: Are there any entries that would actively mislead an agent (not just neutral/unhelpful, but directionally harmful)?
+
+CHECK 6 — BEHAVIORAL REDUNDANCY: If two entries' primary guidance would produce the same
+observable behavior in conversation, they are redundant — flag both for merge.
+
+CHECK 7 — SELF-CONTAINMENT: Flag any entry whose guidance references another entry, a named
+protocol, or assumes other entries are co-present. Entries are retrieved individually.
+
+CHECK 8 — EXECUTABILITY: Flag any entry whose guidance cannot be performed entirely through
+spoken conversational turns with the present partner (written artifacts, recordings,
+third-party actions, physical-world steps).
+
+CHECK 9 — CONDITION SPECIFICITY: Flag any entry whose Condition describes a routine activity
+or interaction genre rather than a structural tension or dilemma. Generic conditions match
+everything at retrieval time and crowd out specific entries.
+
+CHECK 10 — CONTRAST GROUNDING (success outcomes only): Flag any entry that prescribes
+behavior already exhibited in the failed attempt(s). If the failed attempt did it and still
+failed, it is not the lesson. (Only applies when FIRST FAILED ATTEMPT TRANSCRIPT is provided below.)
 
 Respond with JSON only:
 {
@@ -171,6 +189,7 @@ class AdversarialAgent:
         final_chronicle: SkillsChronicle,
         inherited_chronicle_md: str,
         outcome: int = 3,
+        first_failed_transcript: Optional[list[dict]] = None,
     ) -> AdversarialCheckResult:
         """Mode 2: check final synthesized chronicle for consistency and balance."""
         outcome_label = {1: "SOLVED (first attempt)", 2: "SOLVED (multi-attempt)"}.get(outcome, "FAILED")
@@ -192,6 +211,11 @@ class AdversarialAgent:
             f"\nEntry counts: {n_heuristics} HEURISTIC, {n_warnings} WARNING, "
             f"{len(final_chronicle.entries)} total."
         )
+
+        if first_failed_transcript and outcome == 2:
+            parts.append("\nFIRST FAILED ATTEMPT TRANSCRIPT (for contrast-grounding check):")
+            for t in first_failed_transcript:
+                parts.append(f"[T{t['turn']}] {t['speaker']}: {t['content']}")
 
         parts.append("\nReview the final chronicle above and respond with your JSON assessment.")
         prompt = "\n".join(parts)

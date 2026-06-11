@@ -30,72 +30,106 @@ from .skills_chronicle import SkillsChronicle
 # Prompts
 # ---------------------------------------------------------------------------
 
-_SYSTEM_SUCCESS = """You are a reflective coach synthesizing a Skills Chronicle after a SUCCESSFUL episode (solved in ≥2 attempts).
+_SYSTEM_SUCCESS = """You are synthesizing a Skills Chronicle after a SUCCESSFUL episode (solved in ≥2 attempts).
 
-You have access to:
-- All chronicle versions (one per reflection iteration)
-- All transcripts (both failed and the final successful attempt)
-- All EditReasons produced by intermediate reflections
+Your job is to extract ONLY what the episode evidence supports — not general social knowledge.
 
-Your job is to produce a FINAL, coherent Skills Chronicle — a set of <Entry> blocks — that:
+THE CONTRAST RULE (your core method):
+Every entry must be derived from an observed CONTRAST between the failed attempt(s) and the
+successful attempt: name what the failed attempt did, what the successful attempt did
+differently, and cite the turns. If the failed attempt already exhibited a behavior and the
+episode still failed, that behavior is NOT a lesson — do not write an entry for it.
 
-1. CONSOLIDATE: Merge redundant entries that cover the same condition into one, combining the best Guidance from both.
-2. RECONCILE: When earlier and later entries contradict each other, produce a single entry with an exception clause ("Exception: when X, do Y instead").
-3. WEIGHT TOWARD HEURISTICS: The final chronicle should be predominantly HEURISTIC entries (what the agent should DO), not WARNING entries. Retain WARNING entries only where they provide essential contrast.
-4. CAPTURE WHAT WORKED: The final Guidance should reflect what the successful attempt did differently from the failed ones.
-5. RETAIN ABSTRACTION: Conditions must remain abstract — no proper nouns, specific occupations, scenario-unique details.
+THE PRIOR-INCONGRUENCE RULE:
+Do not record general best practices, etiquette, or textbook strategy the actor would follow
+by default. Record only CORRECTIONS to default behavior that this episode's evidence
+demonstrates. Test: if the entry would be true of this interaction type in general, rather
+than learned from this specific failure-to-success transition, omit it.
 
-Output format — ONLY the <Entry> blocks, no other text:
+HARD CONSTRAINTS:
+- Output AT MOST 3 entries. One excellent entry beats three diluted ones.
+- EXECUTABILITY: All guidance must be performable entirely through spoken conversational
+  turns with the present partner. Never prescribe written artifacts, documents, recordings,
+  receipts, photographs, contacting third parties, or any physical-world action.
+- SELF-CONTAINMENT: Each entry must stand alone. Never reference another entry, a named
+  protocol, or assume any other entry is co-present. Entries are retrieved individually.
+  Do not write meta-entries about how to reconcile entries.
+- CONDITION SPECIFICITY: The Condition must name the structural TENSION or dilemma (what
+  pulls against what), not the activity genre. A condition that merely describes a routine
+  activity will be rejected.
+- PROVENANCE: format exactly as `attemptN→attemptM: turns [i–j]` plus a short phrase naming
+  the observed contrast. Bare labels like "[meta-reflection]" are invalid.
+- TYPE SEMANTICS: WARNING = the entry's primary content is a behavior to AVOID. HEURISTIC =
+  primary content is a behavior to perform. Label by content, not by episode outcome.
+- ABSTRACTION: Conditions contain no proper nouns, specific occupations, or scenario-unique
+  surface details.
+
+Output format — ONLY <Entry> blocks, no other text:
 
 <Entry id="ENTRY_ID">
-<Condition>abstract structural pattern</Condition>
+<Condition>structural tension, abstract</Condition>
 <Guidance>
-1. Primary guidance: [what to do or not do — specific enough to change behavior observably]
-2. Warning (optional): [only if a specific tempting behavior contrasts with the primary guidance and backfires]
-3. Exception: when [a specific circumstance within the above Condition makes the primary guidance inappropriate], do [alternative] instead
-(add further numbered Exception clauses as needed)
+1. Primary guidance: [the correction — specific enough to change behavior observably]
+2. Warning (optional): [only if a specific tempting behavior contrasts and backfires]
+3. Exception: when [specific circumstance], do [alternative] instead
 Note: Later clauses take precedence over earlier ones when their conditions apply.
 </Guidance>
 <Type>HEURISTIC | WARNING</Type>
 <Dimension>GOAL | FIN | REL | BEL | KNO | SOC | SEC</Dimension>
-<Provenance>[carry forward and append "meta-reflection"]</Provenance>
-</Entry>
-
-Only output <Entry> blocks. No <Diagnosis>, no <EditReason>, no commentary."""
+<Provenance>attemptN→attemptM: turns [i–j] — [one-phrase contrast]</Provenance>
+</Entry>"""
 
 
-_SYSTEM_FAILURE = """You are a reflective coach synthesizing a Skills Chronicle after a FAILED episode (never solved within the attempt budget).
+_SYSTEM_FAILURE = """You are synthesizing a Skills Chronicle after a FAILED episode (never solved within the
+attempt budget).
 
-You have access to:
-- All chronicle versions (one per reflection iteration)
-- All transcripts from all failed attempts
-- All EditReasons produced by intermediate reflections
+Your job is to record what the evidence shows about why attempts failed — not to invent a
+solution. Nothing in this episode is validated by success; write accordingly.
 
-Your job is to produce a FINAL, coherent Skills Chronicle — a set of <Entry> blocks — that:
+THE EVIDENCE RULE:
+Every WARNING must cite the observed behavior that backfired and the observed partner
+reaction, with turn references. Claims of frequency ("always", "reliably", "typically")
+are forbidden — you observed at most a handful of attempts at ONE scenario.
 
-1. DOCUMENT STRUCTURAL RESISTANCE: Identify what made this scenario type persistently difficult. Add or strengthen WARNING entries that name the structural traps.
-2. PROPOSE ALTERNATIVES: Where a strategy was tried and failed repeatedly, the Guidance should document what a DIFFERENT approach might look like (even untested), marked as a WARNING to flag uncertainty.
-3. RECONCILE CONTRADICTIONS: When intermediate reflections produced contradictory edits, synthesize them into one entry with exception clauses.
-4. WEIGHT TOWARD WARNINGS: The final chronicle should include substantial WARNING entries. HEURISTIC entries should be limited to what reliably worked across all attempts (if anything did).
-5. RETAIN ABSTRACTION: Conditions must remain abstract — no proper nouns, occupations, or scenario-unique details.
+THE SPECULATION BUDGET:
+You may include AT MOST ONE untested hypothesis about an alternative approach. It must be
+a single sentence inside one entry's Guidance, explicitly prefixed "Untested hypothesis:".
+Do not write multi-step procedures for approaches that were never tried.
 
-Output format — ONLY the <Entry> blocks, no other text:
+THE PRIOR-INCONGRUENCE RULE:
+Do not record general best practices or invented protocols. Record only what this episode's
+evidence shows: which specific default behaviors backfired, and how.
+
+HARD CONSTRAINTS:
+- Output AT MOST 3 entries.
+- EXECUTABILITY: All guidance must be performable entirely through spoken conversational
+  turns with the present partner. Never prescribe written artifacts, documents, recordings,
+  receipts, photographs, contacting third parties, or any physical-world action.
+- SELF-CONTAINMENT: Each entry must stand alone. Never reference another entry or a named
+  protocol. No meta-entries about reconciling entries.
+- CONDITION SPECIFICITY: The Condition must name the structural TENSION, not the activity
+  genre.
+- PROVENANCE: format exactly as `attemptN: turns [i–j]` (or a range of attempts) plus a
+  short phrase naming the observed pattern. Bare labels are invalid.
+- TYPE SEMANTICS: WARNING = primary content is a behavior to avoid; HEURISTIC = behavior to
+  perform. If something reliably produced partial progress across attempts, it may be a
+  HEURISTIC even though the episode failed.
+- ABSTRACTION: no proper nouns, occupations, or scenario-unique details in Conditions.
+
+Output format — ONLY <Entry> blocks, no other text:
 
 <Entry id="ENTRY_ID">
-<Condition>abstract structural pattern</Condition>
+<Condition>structural tension, abstract</Condition>
 <Guidance>
-1. Primary guidance: [what to do or not do — specific enough to change behavior observably]
-2. Warning (optional): [only if a specific tempting behavior contrasts with the primary guidance and backfires]
-3. Exception: when [a specific circumstance within the above Condition makes the primary guidance inappropriate], do [alternative] instead
-(add further numbered Exception clauses as needed)
+1. Primary guidance: [the correction — specific enough to change behavior observably]
+2. Warning (optional): [only if a specific tempting behavior contrasts and backfires]
+3. Exception: when [specific circumstance], do [alternative] instead
 Note: Later clauses take precedence over earlier ones when their conditions apply.
 </Guidance>
 <Type>HEURISTIC | WARNING</Type>
 <Dimension>GOAL | FIN | REL | BEL | KNO | SOC | SEC</Dimension>
-<Provenance>[carry forward and append "meta-reflection (failed)"]</Provenance>
-</Entry>
-
-Only output <Entry> blocks. No <Diagnosis>, no <EditReason>, no commentary."""
+<Provenance>attemptN: turns [i–j] — [one-phrase observed pattern]</Provenance>
+</Entry>"""
 
 
 # ---------------------------------------------------------------------------
@@ -140,10 +174,17 @@ def _build_success_prompt(
     anchor_task: Optional[SocialScenario],
     attempt_scores: Optional[list[dict]],
     transcripts: Optional[list[list[dict]]] = None,
+    lp_votes=None,
 ) -> str:
-    """Outcome=2: per-attempt reflection already did the diagnosis work.
-    Lightweight cleanup pass: merge/deduplicate chronicle + anchor on what worked differently."""
     parts = _common_header(scenario, 2, anchor_task, attempt_scores)
+
+    if lp_votes:
+        parts.append(
+            "\nCROSS-ATTEMPT JUDGE OBSERVATIONS (independent judge comparing attempt 1 vs later "
+            "attempts; use these as contrast evidence — they describe what actually changed):"
+        )
+        for v in lp_votes:
+            parts.append(f"  [attempt 1 vs attempt {v.pair[1]}] {v.rationale}")
 
     final = chronicle_versions[-1].to_markdown() if chronicle_versions else ""
     parts.append("\nFINAL CHRONICLE (after all per-attempt reflections):")
@@ -154,7 +195,6 @@ def _build_success_prompt(
         for eid, reason in edit_reasons.items():
             parts.append(f"  [{eid}]: {reason}")
 
-    # Include first failed + last successful transcript so cleanup can anchor on what worked.
     if transcripts and len(transcripts) >= 2:
         parts.append("\nFIRST ATTEMPT TRANSCRIPT (FAILED — shows baseline approach):")
         parts.append(_format_transcript(transcripts[0], 1, max_chars=2000))
@@ -162,11 +202,10 @@ def _build_success_prompt(
         parts.append(_format_transcript(transcripts[-1], len(transcripts), max_chars=2000))
 
     parts.append(
-        "\nEpisode SOLVED after multiple attempts. Per-attempt reflections already diagnosed "
-        "failures. Your job is a cleanup pass: merge redundant entries covering the same "
-        "condition, resolve contradictions into exception clauses, ensure Conditions are "
-        "abstract (no proper nouns or scenario-unique details), and confirm Guidance is "
-        "specific enough to change behavior observably. Output ONLY <Entry> blocks."
+        "\nEpisode SOLVED after multiple attempts. Derive entries ONLY from the contrast between "
+        "the failed and successful transcripts above (the judge observations point at it). "
+        "Discard inherited or per-attempt entries that describe behavior already present in the "
+        "failed attempt. Maximum 3 entries. Output ONLY <Entry> blocks."
     )
     return "\n\n".join(parts)
 
@@ -178,11 +217,17 @@ def _build_failure_prompt(
     scenario: SocialScenario,
     anchor_task: Optional[SocialScenario],
     attempt_scores: Optional[list[dict]],
+    lp_votes=None,
 ) -> str:
-    """Outcome=3: per-attempt reflections may have drifted into wrong diagnoses across
-    repeated failures. Show first + last transcript so meta-reflection can see the
-    structural resistance pattern without re-reading all K attempts."""
     parts = _common_header(scenario, 3, anchor_task, attempt_scores)
+
+    if lp_votes:
+        parts.append(
+            "\nCROSS-ATTEMPT JUDGE OBSERVATIONS (independent judge comparing attempt 1 vs later "
+            "attempts; use these as contrast evidence — they describe what actually changed):"
+        )
+        for v in lp_votes:
+            parts.append(f"  [attempt 1 vs attempt {v.pair[1]}] {v.rationale}")
 
     final = chronicle_versions[-1].to_markdown() if chronicle_versions else ""
     parts.append("\nFINAL CHRONICLE (after all per-attempt reflections):")
@@ -201,11 +246,8 @@ def _build_failure_prompt(
             parts.append(f"  [{eid}]: {reason}")
 
     parts.append(
-        "\nEpisode NEVER SOLVED. Diagnose the structural resistance pattern that made "
-        "this scenario type persistently difficult — what did every attempt get wrong, "
-        "and what alternative approach might work? Add or strengthen WARNING entries "
-        "that name the structural traps. Merge/reconcile contradictions from intermediate "
-        "reflections into exception clauses. Conditions must remain abstract. "
+        "\nEpisode NEVER SOLVED. Record only what the evidence shows backfired, with turn "
+        "references. At most ONE single-sentence 'Untested hypothesis:'. Maximum 3 entries. "
         "Output ONLY <Entry> blocks."
     )
     return "\n\n".join(parts)
@@ -230,27 +272,25 @@ class MetaReflectionModule:
         anchor_task: Optional[SocialScenario] = None,
         attempt_scores: Optional[list[dict]] = None,
         adversarial_critique: str = "",
+        lp_votes=None,
     ) -> SkillsChronicle:
         """Synthesize a final skills chronicle from all attempts.
 
-        outcome: 2 = solved after ≥2 attempts (cleanup pass — no transcripts needed).
-                 3 = never solved (structural resistance diagnosis — first+last transcript).
-        chronicle_versions: one entry per reflection step (includes initial).
-        transcripts: all episode transcripts in order.
-
+        outcome: 2 = solved after ≥2 attempts; 3 = never solved.
+        lp_votes: list[VoteRecord] from LPResult — injected as contrast evidence.
         Returns a new SkillsChronicle, or the last chronicle version on failure.
         """
         if outcome == 2:
             system = _SYSTEM_SUCCESS
             prompt = _build_success_prompt(
                 chronicle_versions, edit_reasons, scenario, anchor_task, attempt_scores,
-                transcripts=transcripts,
+                transcripts=transcripts, lp_votes=lp_votes,
             )
         else:
             system = _SYSTEM_FAILURE
             prompt = _build_failure_prompt(
                 chronicle_versions, transcripts, edit_reasons, scenario, anchor_task,
-                attempt_scores
+                attempt_scores, lp_votes=lp_votes,
             )
 
         if adversarial_critique:

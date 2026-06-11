@@ -105,32 +105,49 @@ async def run_episode_k_loop(
     partner_model = config.get("partner_model")
     max_turns = int(config.get("max_turns", 20))
 
+    # Memory mechanism switch. ExpeL (default) replaces the Skills Chronicle in the
+    # gen-90 loop with within-episode Reflexion strings; the chronicle modules stay
+    # importable and are used when use_expel_memory is False.
+    use_expel = bool(config.get("use_expel_memory", True))
+    from .expel_baseline import _reflect, _format_reflections, _format_transcript
+
+    # Chronicle is only constructed for the chronicle path. Under ExpeL the learner
+    # starts attempt 1 with no memory (clean LP baseline); lineage knowledge is carried
+    # to the generator via skills_final_md, not into the learner's within-episode memory.
     current_chronicle = (
-        SkillsChronicle.from_markdown(anchor.skills_final_md or "") if anchor else SkillsChronicle()
+        None if use_expel
+        else (SkillsChronicle.from_markdown(anchor.skills_final_md or "") if anchor
+              else SkillsChronicle())
     )
     loop_info: dict = {"skill_attempts": [], "terminal_state": None, "outcome": 0}
 
     _judge = fm_judge if fm_judge is not None else fm
 
+    # Learner goal text (stable across attempts) — needed for ExpeL reflection prompts.
+    _, _, _learner_goal_text, _, _ = build_episode_inputs(scenario, scenario_to_sotopia_profiles)
+
     # Compute query embedding once for relevance-ranked chronicle truncation (§8.2).
     # Falls back to positional truncation when abstract goal or FM embedding unavailable.
     _query_embedding: list[float] | None = None
-    _abstract_goal_text = (scenario.target_agent_goal_abstract or
-                           (scenario.agent_goals[0] if scenario.agent_goals else ""))
-    if _abstract_goal_text:
-        try:
-            _query_embedding = fm.get_embeddings([_abstract_goal_text])[0]
-        except Exception:
-            pass
+    if not use_expel:
+        _abstract_goal_text = (scenario.target_agent_goal_abstract or
+                               (scenario.agent_goals[0] if scenario.agent_goals else ""))
+        if _abstract_goal_text:
+            try:
+                _query_embedding = fm.get_embeddings([_abstract_goal_text])[0]
+            except Exception:
+                pass
 
-    async def _episode(scn: SocialScenario, chronicle: SkillsChronicle):
-        env_profile, agent_profiles, learner_goal, _partner_profile, _rubric = build_episode_inputs(
-            scn, scenario_to_sotopia_profiles
-        )
-        mem = chronicle.format_for_prompt(
+    def _chronicle_mem(chronicle: SkillsChronicle) -> str:
+        return chronicle.format_for_prompt(
             max_entries=max_entries,
             query_embedding=_query_embedding,
             fm=fm,
+        )
+
+    async def _episode(scn: SocialScenario, memory_prompt: str):
+        env_profile, agent_profiles, learner_goal, _partner_profile, _rubric = build_episode_inputs(
+            scn, scenario_to_sotopia_profiles
         )
         return await run_single_episode(
             env_profile=env_profile,
@@ -138,7 +155,7 @@ async def run_episode_k_loop(
             fm=fm,
             learner_model=learner_model,
             partner_model=partner_model,
-            memory_prompt=mem,
+            memory_prompt=memory_prompt,
             max_turns=max_turns,
             learner_goal=learner_goal,
             partner_key=scn.partner_key,
@@ -149,8 +166,9 @@ async def run_episode_k_loop(
     # ------------------------------------------------------------------ #
     # Attempt 1                                                            #
     # ------------------------------------------------------------------ #
+    attempt1_mem = "" if use_expel else _chronicle_mem(current_chronicle)
     try:
-        result = await _episode(scenario, current_chronicle)
+        result = await _episode(scenario, attempt1_mem)
     except Exception as e:
         import traceback
         print(f"    [attempt 1] episode error: {e}\n{traceback.format_exc()}")
@@ -187,12 +205,12 @@ async def run_episode_k_loop(
         loop_info["outcome"] = 1
         loop_info["too_easy_diagnosis"] = scenario.too_easy_diagnosis
 
-        # Skip meta-reflection: no learning occurred (solved immediately, nothing to reflect on).
-        # Pass inherited chronicle through unchanged so children see accurate lineage knowledge.
-        # Synthesizing here would route outcome=1 into the FAILURE branch (outcome==2 is success)
-        # and generate a WARNING-dominant chronicle for a trivially solved scenario — poisoning
-        # all descendants' generation prompts.
-        scenario.skills_final_md = current_chronicle.to_markdown()
+        # Skip synthesis: no learning occurred (solved immediately, nothing to reflect on).
+        # ExpeL: empty memory (no reflexions gathered). Chronicle: pass the inherited
+        # chronicle through unchanged so children see accurate lineage knowledge.
+        # (Synthesizing here would route outcome=1 into the FAILURE branch — outcome==2 is
+        # success — and produce WARNING-dominant memory for a trivially solved scenario.)
+        scenario.skills_final_md = "" if use_expel else current_chronicle.to_markdown()
         loop_info["final_chronicle_md"] = scenario.skills_final_md
         scenario.goal_score = float(result.learner_scores.get("goal", 0.0))
         scenario.goal_trajectory = [float(result.learner_scores.get("goal", 0.0))]
@@ -204,33 +222,50 @@ async def run_episode_k_loop(
     # ------------------------------------------------------------------ #
     all_transcripts: list = [transcript1]
     all_scores: list = [{"attempt": 1, "scores": result.learner_scores, "solved": False}]
-    all_versions: list = [deepcopy(current_chronicle)]
     all_key_checks: list = [result.key_check_result]
-    all_edit_reasons: dict = {}
     final_scores: dict = result.learner_scores
     solved = False
 
+    # Chronicle-path bookkeeping (unused under ExpeL).
+    all_versions: list = [] if use_expel else [deepcopy(current_chronicle)]
+    all_edit_reasons: dict = {}
+
+    # ExpeL-path memory: within-episode Reflexion strings. Seed with a reflection on
+    # attempt 1's failure (attempt 1 always failed here — the too_easy path returned
+    # above). Attempt k>=2 sees the reflections from attempts 1..k-1.
+    reflexion_strings: list[str] = []
+    if use_expel and K >= 2:
+        reflexion_strings.append(
+            _reflect(fm, task=scenario.scenario, learner_goal=_learner_goal_text,
+                     transcript_text=_format_transcript(transcript1),
+                     goal_score=float(result.learner_scores.get("goal", 0.0)))
+        )
+
     for attempt in range(2, K + 1):
-        ref_out = reflection_mod.reflect(
-            chronicle=current_chronicle, scenario=scenario, transcripts=all_transcripts,
-            prior_edit_reasons=all_edit_reasons, attempt_num=attempt - 1, anchor_task=anchor,
-            key_check_verdicts=all_key_checks, attempt_scores=all_scores,
-        )
-        adv_result = adversarial.check_reflection(
-            ref_out, all_transcripts[-1], anchor_task=anchor, scenario=scenario
-        )
-        if not adv_result.approved and re_reflect:
-            ref_out = reflection_mod.synthesize_with_critique(
-                reflection_output=ref_out, adversarial_critique=adv_result.critique,
+        if use_expel:
+            mem = _format_reflections(reflexion_strings)
+        else:
+            ref_out = reflection_mod.reflect(
                 chronicle=current_chronicle, scenario=scenario, transcripts=all_transcripts,
                 prior_edit_reasons=all_edit_reasons, attempt_num=attempt - 1, anchor_task=anchor,
+                key_check_verdicts=all_key_checks, attempt_scores=all_scores,
             )
-        current_chronicle = ref_out.updated_chronicle
-        all_versions.append(deepcopy(current_chronicle))
-        all_edit_reasons.update(ref_out.edit_reasons)
+            adv_result = adversarial.check_reflection(
+                ref_out, all_transcripts[-1], anchor_task=anchor, scenario=scenario
+            )
+            if not adv_result.approved and re_reflect:
+                ref_out = reflection_mod.synthesize_with_critique(
+                    reflection_output=ref_out, adversarial_critique=adv_result.critique,
+                    chronicle=current_chronicle, scenario=scenario, transcripts=all_transcripts,
+                    prior_edit_reasons=all_edit_reasons, attempt_num=attempt - 1, anchor_task=anchor,
+                )
+            current_chronicle = ref_out.updated_chronicle
+            all_versions.append(deepcopy(current_chronicle))
+            all_edit_reasons.update(ref_out.edit_reasons)
+            mem = _chronicle_mem(current_chronicle)
 
         try:
-            result = await _episode(scenario, current_chronicle)
+            result = await _episode(scenario, mem)
         except Exception as e:
             import traceback
             print(f"    [attempt {attempt}] episode error: {e}\n{traceback.format_exc()}")
@@ -250,11 +285,16 @@ async def run_episode_k_loop(
             "diagnostics_scores": result.learner_scores,
             "solved": result.terminal_success,
             "key_check_result": result.key_check_result,
-            "reflection_diagnosis": ref_out.diagnosis,
-            "reflection_edit_reasons": ref_out.edit_reasons,
-            "adversarial_approved": adv_result.approved,
-            "chronicle_after_reflection": current_chronicle.to_markdown(),
         }
+        if use_expel:
+            att_rec["reflexion"] = reflexion_strings[-1] if reflexion_strings else ""
+        else:
+            att_rec.update({
+                "reflection_diagnosis": ref_out.diagnosis,
+                "reflection_edit_reasons": ref_out.edit_reasons,
+                "adversarial_approved": adv_result.approved,
+                "chronicle_after_reflection": current_chronicle.to_markdown(),
+            })
         loop_info["skill_attempts"].append(att_rec)
         if on_attempt_done:
             on_attempt_done(loop_info)
@@ -262,6 +302,14 @@ async def run_episode_k_loop(
         if result.terminal_success:
             solved = True
             break
+
+        # ExpeL: reflect on this failure to inform the next attempt (skip after the last).
+        if use_expel and attempt < K:
+            reflexion_strings.append(
+                _reflect(fm, task=scenario.scenario, learner_goal=_learner_goal_text,
+                         transcript_text=_format_transcript(transcript),
+                         goal_score=float(result.learner_scores.get("goal", 0.0)))
+            )
 
     # ------------------------------------------------------------------ #
     # LP computation                                                       #
@@ -308,29 +356,54 @@ async def run_episode_k_loop(
     loop_info["outcome"] = outcome
 
     # ------------------------------------------------------------------ #
-    # Meta-reflection                                                      #
+    # Final memory synthesis                                               #
     # ------------------------------------------------------------------ #
-    final_chronicle = meta_mod.synthesize(
-        chronicle_versions=all_versions, transcripts=all_transcripts, edit_reasons=all_edit_reasons,
-        outcome=outcome, scenario=scenario, anchor_task=anchor, attempt_scores=all_scores,
-    )
+    if use_expel:
+        # ExpeL: the accumulated within-episode Reflexion strings ARE the lineage
+        # memory the task generator reads from skills_final_md. No adversarial/meta pass.
+        scenario.skills_final_md = _format_reflections(reflexion_strings)
+        loop_info["final_chronicle_md"] = scenario.skills_final_md
+    else:
+        from .skills_chronicle import validate_synthesis
 
-    inherited_md = (anchor.skills_final_md or "") if anchor else ""
-    adv_final = adversarial.check_final(final_chronicle, inherited_md, outcome=outcome)
-    if not adv_final.approved:
+        first_failed_tx = all_transcripts[0] if all_transcripts else None
+
         final_chronicle = meta_mod.synthesize(
-            chronicle_versions=all_versions, transcripts=all_transcripts,
-            edit_reasons=all_edit_reasons, outcome=outcome, scenario=scenario,
-            anchor_task=anchor, attempt_scores=all_scores,
-            adversarial_critique=adv_final.critique,
+            chronicle_versions=all_versions, transcripts=all_transcripts, edit_reasons=all_edit_reasons,
+            outcome=outcome, scenario=scenario, anchor_task=anchor, attempt_scores=all_scores,
+            lp_votes=lp_result.votes,
         )
-        adv_final2 = adversarial.check_final(final_chronicle, inherited_md, outcome=outcome)
-        if not adv_final2.approved:
-            loop_info["final_check_flag"] = adv_final2.issues
-            scenario.final_check_flag = adv_final2.issues
 
-    loop_info["final_chronicle_md"] = final_chronicle.to_markdown()
-    scenario.skills_final_md = final_chronicle.to_markdown()
+        inherited_md = (anchor.skills_final_md or "") if anchor else ""
+        prog_issues = validate_synthesis(final_chronicle)
+        adv_final = adversarial.check_final(
+            final_chronicle, inherited_md, outcome=outcome,
+            first_failed_transcript=first_failed_tx if outcome == 2 else None,
+        )
+
+        if (not adv_final.approved) or prog_issues:
+            combined_critique = "\n".join(
+                ([adv_final.critique] if adv_final.critique else []) + prog_issues
+            )
+            final_chronicle = meta_mod.synthesize(
+                chronicle_versions=all_versions, transcripts=all_transcripts,
+                edit_reasons=all_edit_reasons, outcome=outcome, scenario=scenario,
+                anchor_task=anchor, attempt_scores=all_scores,
+                lp_votes=lp_result.votes, adversarial_critique=combined_critique,
+            )
+            prog_issues2 = validate_synthesis(final_chronicle)
+            adv_final2 = adversarial.check_final(
+                final_chronicle, inherited_md, outcome=outcome,
+                first_failed_transcript=first_failed_tx if outcome == 2 else None,
+            )
+            remaining = (adv_final2.issues if not adv_final2.approved else []) + prog_issues2
+            if remaining:
+                loop_info["final_check_flag"] = remaining
+                scenario.final_check_flag = remaining
+
+        loop_info["final_chronicle_md"] = final_chronicle.to_markdown()
+        scenario.skills_final_md = final_chronicle.to_markdown()
+
     scenario.goal_score = float(final_scores.get("goal", 0.0))
     scenario.goal_trajectory = [float(s["scores"].get("goal", 0.0)) for s in all_scores]
     _set_titles(scenario, title_gen)

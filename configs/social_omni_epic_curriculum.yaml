@@ -31,7 +31,10 @@ seed_limit: null
 # Episode controls
 max_turns: 20
 max_attempts: 4        # K: attempt 1 → too_easy check; 2..K → reflection + retry
-chronicle_max_entries: 8
+# Memory mechanism in the K-loop. true (default) = ExpeL within-episode Reflexion strings
+# (no Skills Chronicle / adversarial / meta-reflection). false = legacy Skills Chronicle path.
+use_expel_memory: true
+chronicle_max_entries: 8   # chronicle path only
 
 # LP judge
 judge:
