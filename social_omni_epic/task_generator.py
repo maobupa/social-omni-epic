@@ -110,7 +110,7 @@ _PARTNER_KEY_SCHEMA = """,
     "surface_misdirection": "the partner's stated objection — what they say the problem is",
     "cost_coupling": "what satisfying movement_conditions costs the LEARNER's own stated goal"
   },
-  "mutated_slots": ["list of slot labels mutated, e.g. b, c, d"],
+  "mutated_slots": ["the 1-3 MOST significant slot labels you changed — not an exhaustive inventory; e.g. b, d"],
   "mutation_rationale": "one sentence explaining the mutation"
 """
 
@@ -168,9 +168,26 @@ Agent 1 is the partner and receives the partner_key and partner_goal only.
 Write the learner's role to continue this structural vantage point: {target_perspective}.
 """
 
+# Shared across all three direction operators (escalate/relax/lateral). Injected ONCE at the
+# generate_batch_from_archive .format() site (prepended to the operator_block) — NOT pasted into
+# the per-operator _EDIT_INTENTS values, so the universal "fresh surface" mandate has one home.
+# This is the load-bearing fix for Faults 1-3: operators set a difficulty DIRECTION; the surface
+# is always fresh; LP + Thompson verify where the child actually landed.
+_OPERATOR_PREAMBLE = (
+    "Generate a NEW scenario in the parent's structural family — the same kind of tension, "
+    "asymmetry, and learner vantage point named in its scenario_title — but with a COMPLETELY "
+    "FRESH SURFACE: new character names, new setting, new occupational world, new specific stakes. "
+    "NEVER reuse the parent's character names, venue, or figures. The parent's value to you is its "
+    "structural family, not its text.\n"
+    "If the parent has a partner_key, treat it as the reference point for difficulty. If it has "
+    "none (a seed), you are inventing the key from scratch: sensor-form movement conditions, "
+    "survivable cost coupling, spoken-turn satisfiable throughout.\n"
+    "DIRECTION FOR THIS STEP:\n"
+)
+
 SYSTEM_PROMPT = """You are a creative social scenario designer. Generate social scenarios that are INTERESTING, LEARNABLE, and GENUINELY DIFFICULT.
 
-INTERESTING: explores a novel social dynamic, power structure, or relational tension — not a generic archetype. Creative, specific, worth engaging with.
+INTERESTING: the tension is one a thoughtful person would recognize as a real, meaningful social situation — power imbalances that aren't just positional, face costs that aren't just ego, dynamics a perceptive person would recognize from life. NOT a logic puzzle wearing a social costume, NOT a management-training vignette, NOT a generic archetype.
 
 LEARNABLE: the learner agent's outcome must be meaningfully responsive to HOW they engage. Avoid scenarios where any polite response already succeeds.
 
@@ -256,7 +273,11 @@ class TaskGenerator:
     def select_examples(self, archive, choose_probs: np.ndarray,
                         num_examples: int,
                         strategy: str = "knn") -> tuple[list[SocialScenario], list[int]]:
-        """Pick K archive entries to show in the prompt.
+        """LEGACY: used only by run_phase0.py / run_phase1.py. The production runner
+        (run_curriculum.py) does its own lineage-excluded inline KNN and does NOT call this.
+        Retained for the older phase scripts; do not wire into the gen-90 path.
+
+        Pick K archive entries to show in the prompt.
 
         strategy:
           "knn"      OMNI-EPIC default: pick one seed via choose_probs, then K-1
@@ -409,7 +430,13 @@ class TaskGenerator:
 
         Returns all valid candidates (may be fewer than batch_size if some fail validation).
         """
-        operator_block = self._EDIT_INTENTS.get(mutation_operator, self._EDIT_INTENTS["lateral"])
+        # Prepend the shared fresh-surface preamble once (single home — see _OPERATOR_PREAMBLE).
+        # fix_coherence is a repair intent, not a direction operator, so it skips the preamble.
+        direction_clause = self._EDIT_INTENTS.get(mutation_operator, self._EDIT_INTENTS["lateral"])
+        operator_block = (
+            direction_clause if mutation_operator == "fix_coherence"
+            else _OPERATOR_PREAMBLE + direction_clause
+        )
         target_perspective = (
             (anchor.target_perspective or "the learner's perspective") if anchor
             else "the learner's perspective"
@@ -501,34 +528,35 @@ class TaskGenerator:
             "background issues, rewrite only the relationship label or background prose — do NOT "
             "expand or rewrite the scenario description in a way that reveals hidden partner logic."
         ),
+        # Direction-setter operators. Each names ONLY a difficulty direction relative to the
+        # parent; the _OPERATOR_PREAMBLE (prepended at the call site) carries the universal
+        # fresh-surface mandate. Whether the child landed where directed is LP's verdict, not a
+        # generation-time contract — so there are no slot-preservation rules here by design.
         "escalate": (
-            "The parent was TOO EASY — the learner solved it on the first attempt. Choose 1–2 "
-            "slots from (b) surface_misdirection, (c) hardening_triggers, (d) cost_coupling "
-            "and tighten them; the too_easy_diagnosis above names the slack knob. Preserve all "
-            "other slots (characters, premise, interaction type, goal_type, key_mechanism (e)). "
-            "Do NOT make the scenario impossible: the movement_conditions must remain genuinely "
-            "satisfiable by a skilled, non-capitulating actor. Keep a zone of possible agreement. "
-            "CRITICAL — SURVIVABILITY: tightening cost_coupling makes the outcome HARDER or "
-            "PARTIAL, never STRICTLY UNREACHABLE. After satisfying the movement_conditions, a "
-            "skilled actor must still have a path to a meaningful version of their stated outcome. "
-            "If satisfying the conditions makes the learner's stated target literally impossible "
-            "to reach (e.g. the goal requires a 60% shift but the conditions cap any change at a "
-            "tiny pilot), the scenario is cost-stuck, not hard — that is a failure, not escalation."
+            "Target difficulty ABOVE the parent's. The parent was too easy — a capable learner "
+            "solved it readily. Make the new scenario harder along one or more of: a better-hidden "
+            "path (deeper surface misdirection), a higher cost of satisfying the movement "
+            "conditions, or conditions that cut more strongly against an agreeable model's trained "
+            "instincts. "
+            "CRITICAL — SURVIVABILITY: harder or partial, never strictly unreachable. After "
+            "satisfying the movement_conditions, a skilled actor must still have a path to a "
+            "meaningful version of their stated outcome. If satisfying the conditions makes the "
+            "learner's stated target literally impossible to reach (e.g. the goal requires a 60% "
+            "shift but the conditions cap any change at a tiny pilot), the scenario is cost-stuck, "
+            "not hard — that is a failure, not escalation."
         ),
         "relax": (
-            "The parent was NEVER SOLVED across all attempts (beyond_frontier). The "
-            "beyond_frontier_diagnosis above names the stuck knob — loosen exactly that slot. "
-            "If the diagnosis is missing or 'unknown', loosen (c) hardening_triggers first, then "
-            "(d) cost_coupling. Preserve all other slots. The goal is a scenario that is hard but "
-            "genuinely winnable by a skilled, non-capitulating actor."
+            "Target difficulty BELOW the parent's. The parent was never solved across all attempts "
+            "(beyond_frontier). Make the new scenario more winnable along one or more of: a more "
+            "discoverable path, a lower cost of meeting the conditions, or conditions less opposed "
+            "to an agreeable model's instincts. The beyond_frontier_diagnosis above names what was "
+            "stuck — make sure THAT dimension is the one that eases. Hard but genuinely winnable by "
+            "a skilled, non-capitulating actor."
         ),
         "lateral": (
-            "The parent is AT THE LEARNING FRONTIER (some attempts failed, some may have "
-            "succeeded). Hold difficulty constant: preserve slots (b) surface_misdirection, "
-            "(c) hardening_triggers, (d) cost_coupling at the same intensity. Mutate 1–2 of "
-            "(a) premise/characters, (e) key_mechanism, (f) power/information asymmetry, "
-            "(g) relationship type & stakes to explore a structurally different dynamic within "
-            "the same difficulty band."
+            "Target the SAME difficulty as the parent (it is at the learning frontier), expressed "
+            "through a different mechanism, a different power/information asymmetry, or a different "
+            "relationship structure. Keep the challenge comparable; change how it is realized."
         ),
     }
 

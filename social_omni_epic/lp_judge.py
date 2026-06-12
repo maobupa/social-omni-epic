@@ -53,8 +53,12 @@ _JUDGE_SYSTEM = (
     "better served the actor's goal. Judge holistically: achieving the stated goal AND "
     "preserving the relationship and the other party's goodwill both count. An attempt "
     "that extracts the outcome while damaging trust is worse than one that makes real "
-    "progress on both. Decide only from what is observable in the transcripts. "
-    "Respond with ONLY valid JSON."
+    "progress on both. The mirror also holds: if NEITHER attempt makes meaningful "
+    "progress toward the actor's stated objective, differences in politeness, rapport, "
+    "warmth, or graceful disengagement do NOT make one attempt better — answer "
+    "no_difference. 'Better' requires genuinely more progress toward the objective while "
+    "at least preserving the relationship. Decide only from what is observable in the "
+    "transcripts. Respond with ONLY valid JSON."
 )
 
 _JUDGE_USER = """THE ACTOR'S GOAL: {learner_goal}
@@ -66,7 +70,7 @@ TRANSCRIPT A:
 TRANSCRIPT B:
 {transcript_b}
 
-QUESTION: Which transcript shows the actor better achieving their goal while preserving the relationship — A, B, or is there no meaningful difference?
+QUESTION: Which transcript shows the actor better achieving their goal while preserving the relationship — A, B, or is there no meaningful difference? If both attempts fail the actor's objective to a similar degree, answer no_difference regardless of which is warmer or more graceful.
 Respond with ONLY this JSON: {{"verdict": "A" | "B" | "no_difference", "rationale": "one sentence"}}"""
 
 _MAX_TRANSCRIPT_CHARS = 4000

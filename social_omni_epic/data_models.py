@@ -173,6 +173,8 @@ class SocialScenario(BaseModel):
     # Lineage (pointers only — full ancestor scenarios live in the archive by id).
     parent_id: Optional[str] = None              # immediate anchor id; None for seeds
     parent_is_sotopia_seed: bool = False         # was the immediate parent a raw SOTOPIA-90 seed?
+    parent_classification: Optional[str] = None  # the anchor's classification at generation time (too_easy/frontier/beyond_frontier)
+    parent_scenario: Optional[str] = None         # the anchor's scenario text (for quick at-a-glance lineage review)
     root_seed_env_pk: Optional[str] = None        # env_pk of the SOTOPIA-90 ancestor at the lineage root
     lineage_depth: int = 0                        # generations from the root seed (0 = seed)
     ancestor_ids: list[str] = []                  # ids from root seed down to (and including) the parent

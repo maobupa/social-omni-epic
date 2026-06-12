@@ -49,7 +49,7 @@ except Exception:
 from social_omni_epic.adversarial_agent import AdversarialAgent
 from social_omni_epic.archive import Archive
 from social_omni_epic.coherence_check import CoherenceChecker, fuzzy_key_leak_check
-from social_omni_epic.validation import key_delta_check
+from social_omni_epic.validation import surface_novelty_check
 from social_omni_epic.curriculum import run_coherence_gate, run_episode_two_loop
 from social_omni_epic.data_models import SocialScenario, K_VOTES_EQUIV
 from social_omni_epic.embedding_utils import get_similar_scenarios
@@ -111,6 +111,42 @@ def _write_compute_report(run_dir: Path, fms: dict) -> None:
     (run_dir / "compute_report.json").write_text(
         json.dumps({name: fm.usage_report() for name, fm in fms.items()}, indent=2)
     )
+
+
+# Direction-sanity registered stopping rule (Patch 10, §III.C). Pre-declared so it is a legitimate
+# stopping rule under the freeze, not a post-hoc edit. Arms only with enough children per operator;
+# halts only on the gross-failure signature (escalate strictly more too_easy than lateral, with a
+# floor of too_easy escalate children) — strict ">" so a tie/zero (the best case) never halts.
+_DIR_SANITY_MIN_CHILDREN = 8   # per operator before the rule arms
+_DIR_SANITY_MIN_TOO_EASY = 3   # escalate too_easy children before a halt can fire
+
+
+def _direction_sanity(run_dir: Path) -> dict:
+    """Read the just-flushed summary.json and compare escalate vs lateral too_easy-rates.
+
+    Returns {escalate_*, lateral_*, armed, halt} for logging + the stopping decision.
+    """
+    try:
+        summary = json.loads((run_dir / "summary.json").read_text())
+        op_counts = summary.get("per_operator_classification_counts", {}) or {}
+    except Exception:
+        op_counts = {}
+
+    def _stats(op: str) -> tuple[int, int, float]:
+        counts = op_counts.get(op, {}) or {}
+        total = sum(int(v) for v in counts.values())
+        too_easy = int(counts.get("too_easy", 0))
+        return too_easy, total, (too_easy / total if total else 0.0)
+
+    e_te, e_tot, e_rate = _stats("escalate")
+    l_te, l_tot, l_rate = _stats("lateral")
+    armed = (e_tot >= _DIR_SANITY_MIN_CHILDREN and l_tot >= _DIR_SANITY_MIN_CHILDREN)
+    halt = bool(armed and e_rate > l_rate and e_te >= _DIR_SANITY_MIN_TOO_EASY)
+    return {
+        "escalate_too_easy": e_te, "escalate_total": e_tot, "escalate_rate": round(e_rate, 3),
+        "lateral_too_easy": l_te, "lateral_total": l_tot, "lateral_rate": round(l_rate, 3),
+        "armed": armed, "halt": halt,
+    }
 
 
 def _cosine(a, b) -> float:
@@ -240,24 +276,25 @@ async def _run_one_scenario(
     if config.enable_moi and len(candidates) > 1:
         candidates = svc.moi.rank_batch(candidates)
 
-    # --- Walk the MOI-ranked list through embed + operator-conditional admission gates ---
-    # Gate ownership principle (§9.8):
-    #   lateral   → embedding diversity gate (surface novelty is what lateral produces)
-    #   escalate/relax → key-delta check (difficulty mutation on the hidden genotype;
-    #                    embedding is blind to partner_key changes by design)
+    # --- Show the generated candidate batch (MOI-ranked, best-first) ---
+    print_step(f"{tag} {len(candidates)} candidate(s) generated (op={mutation_op}), MOI-ranked best-first:")
+    for r, c in enumerate(candidates):
+        names = " & ".join(p.first_name for p in (c.agent_profiles or []) if p.first_name)
+        km = c.partner_key.key_mechanism if c.partner_key else "—"
+        print_info(f"{tag}   [{r}] {names or '?'} | mech={km} | slots={c.mutated_slots or []}")
+        print_info(f"{tag}       {c.scenario[:160]}")
+
+    # --- Walk the MOI-ranked list through embed + UNIVERSAL admission gates (Patch 10) ---
+    # Single-axis ownership: the embedding diversity gate owns surface novelty for EVERY child,
+    # every operator. Because completed children are archived, it covers siblings/parents/all.
+    # surface_novelty_check is a free deterministic pre-check (no anchor name reuse, no clone).
+    # There is no operator-conditional branch: operators set difficulty DIRECTION; whether a child
+    # landed where directed is LP's verdict, not a generation-time gate.
     emb_threshold = float(config.get("diversity_similarity_threshold", 0.92))
-    key_delta_threshold = int(config.get("key_delta_threshold", 90))
     scenario = None
     admitted_rank = -1
-    key_delta_violations: list[str] = []
     gate_fail_log: list[dict] = []
     for rank, cand in enumerate(candidates):
-        # The original mutation's slot labels (b/c/d…) — the coherence-fix path
-        # (edit_scenario) rebuilds the object and overwrites mutated_slots with labels
-        # describing the FIX, which would make key_delta_check falsely reject escalate/relax
-        # children. Capture here; restore after the gate so key_delta_check sees the real
-        # declared difficulty knobs.
-        orig_slots = list(cand.mutated_slots or [])
         cand.iteration = global_iter
         cand.parent_example_ids = [anchor.id]
         try:
@@ -270,45 +307,43 @@ async def _run_one_scenario(
         if not ok or cand is None:
             gate_fail_log.append({"rank": rank, "gate": "coherence", "issues": coherence_issues})
             break  # best candidate failed coherence — lower-ranked candidates share the same anchor/structural issues
-        cand.mutated_slots = orig_slots  # restore the original mutation's declared slots
-        if mutation_op == "lateral":
-            # Lateral: embedding gate guards surface novelty.
-            if config.get("enable_diversity_gate", True) and all_embs and cand.embedding:
-                emb_arr = np.array(all_embs); s_emb = np.array(cand.embedding)
-                sims = emb_arr @ s_emb / (np.linalg.norm(emb_arr, axis=1) * np.linalg.norm(s_emb) + 1e-9)
-                max_sim = float(sims.max())
-                if max_sim > emb_threshold:
-                    print_warn(f"{tag} diversity gate FAIL (rank {rank}, max_sim={max_sim:.3f})")
-                    gate_fail_log.append({"rank": rank, "gate": "diversity", "max_sim": max_sim})
-                    continue
-        else:
-            # Escalate/relax: key-delta check guards mutation fidelity on the hidden axis.
-            violations = key_delta_check(cand, anchor, threshold=key_delta_threshold)
-            if violations:
-                key_delta_violations = violations
-                print_warn(f"{tag} key-delta FAIL (rank {rank}): {violations[0]}")
-                gate_fail_log.append({"rank": rank, "gate": "key_delta", "issues": violations})
+        # Deterministic surface-novelty pre-check (free): reused names / clone text.
+        novelty_issues = surface_novelty_check(cand, anchor)
+        if novelty_issues:
+            print_warn(f"{tag} surface-novelty FAIL (rank {rank}): {novelty_issues[0]}")
+            gate_fail_log.append({"rank": rank, "gate": "surface_novelty", "issues": novelty_issues})
+            continue
+        # Embedding diversity gate vs the whole archive (universal — every operator).
+        if config.get("enable_diversity_gate", True) and all_embs and cand.embedding:
+            emb_arr = np.array(all_embs); s_emb = np.array(cand.embedding)
+            sims = emb_arr @ s_emb / (np.linalg.norm(emb_arr, axis=1) * np.linalg.norm(s_emb) + 1e-9)
+            max_sim = float(sims.max())
+            if max_sim > emb_threshold:
+                print_warn(f"{tag} diversity gate FAIL (rank {rank}, max_sim={max_sim:.3f})")
+                gate_fail_log.append({"rank": rank, "gate": "diversity", "max_sim": max_sim})
                 continue
+        # mutated_slots is descriptive self-report (not a contract) — warn only, never reject.
+        if not (cand.mutated_slots or []):
+            print_warn(f"{tag} note: candidate (rank {rank}) reported empty mutated_slots")
         scenario = cand; admitted_rank = rank
         break
     if scenario is None:
-        reason = "no_candidate_passed_gates"
-        if mutation_op != "lateral" and key_delta_violations:
-            reason = "key_delta_too_small"
-        print_warn(f"{tag} ALL candidates failed gates — {reason}. Gate log: {gate_fail_log}")
+        print_warn(f"{tag} ALL candidates failed gates — no_candidate_passed_gates. Gate log: {gate_fail_log}")
         return "generation_failed", None, {
-            "reason": reason,
+            "reason": "no_candidate_passed_gates",
             "gate_fail_log": gate_fail_log,
-            "key_delta_violations": key_delta_violations,
         }, anchor_idx
     # Re-stamp the operator: the coherence-fix path (edit_scenario) rebuilds the scenario
     # object and drops mutation_operator, which would break the per-operator diagnostics.
     scenario.mutation_operator = mutation_op
-    print_info(f"{tag} admitted MOI rank {admitted_rank} ({mutation_op}): {scenario.scenario[:70]}")
+    _sel_names = " & ".join(p.first_name for p in (scenario.agent_profiles or []) if p.first_name)
+    print_info(f"{tag} ✓ SELECTED candidate [{admitted_rank}] ({mutation_op}) — {_sel_names or '?'}: {scenario.scenario[:120]}")
 
     # --- Lineage (pointers; full ancestors live in the archive by id) ---
     scenario.parent_id = anchor.id
     scenario.parent_is_sotopia_seed = (anchor.source == "seed_sotopia")
+    scenario.parent_classification = anchor.classification   # what band the anchor was when selected
+    scenario.parent_scenario = anchor.scenario               # parent text, for quick lineage eyeballing
     scenario.root_seed_env_pk = anchor.root_seed_env_pk or anchor.source_env_id or None
     scenario.lineage_depth = (anchor.lineage_depth or 0) + 1
     scenario.ancestor_ids = list(anchor.ancestor_ids or []) + [anchor.id]
@@ -624,7 +659,6 @@ def main(config: DictConfig) -> None:
                         "anchor_id": anchor_id,
                         "reason": info.get("reason"),
                         "gate_fail_log": info.get("gate_fail_log", []),
-                        "key_delta_violations": info.get("key_delta_violations", []),
                     })
                     continue
 
@@ -677,13 +711,31 @@ def main(config: DictConfig) -> None:
                 if stopping_N and generated_count >= int(stopping_N):
                     break
 
-            # Checkpoint after every batch.
+            # Checkpoint after every batch (saved BEFORE the direction-sanity check below, so a
+            # halt's "losslessly resumable" promise holds at print time).
             archive.save_checkpoint(global_iter)
             metrics_path.write_text(json.dumps(metrics_log, indent=2))
             flush_aggregates(run_dir, learner_model=str(config.learner_model),
                              judge_model=str(config.judge.model))
             _write_lineage(run_dir, archive)
             _write_compute_report(run_dir, fms)
+
+            # Direction-sanity registered stopping rule (reads the summary.json just flushed above).
+            ds = _direction_sanity(run_dir)
+            print_info(
+                f"direction-sanity: escalate too_easy={ds['escalate_too_easy']}/{ds['escalate_total']} "
+                f"(r={ds['escalate_rate']}) · lateral too_easy={ds['lateral_too_easy']}/{ds['lateral_total']} "
+                f"(r={ds['lateral_rate']}) · armed={ds['armed']}"
+            )
+            if ds["halt"]:
+                print_warn(
+                    f"DIRECTION-SANITY HALT: escalate too_easy-rate ({ds['escalate_rate']}) > lateral "
+                    f"({ds['lateral_rate']}) with {ds['escalate_too_easy']} too_easy escalate children — "
+                    "escalate is not escalating. Stopping (registered rule). Inspect summary.json; "
+                    "the run is losslessly resumable from archive_latest.json (re-run the same "
+                    "run_name to continue if this is judged noise)."
+                )
+                break
 
         pbar.close()
 

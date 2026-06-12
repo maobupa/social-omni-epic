@@ -54,7 +54,6 @@ class ModelOfInterestingness:
     def rank_batch(
         self,
         candidates: list[SocialScenario],
-        archive_scenarios: list[SocialScenario] = None,
     ) -> list[SocialScenario]:
         """Rank candidates by social worth. Returns list sorted best-first.
 

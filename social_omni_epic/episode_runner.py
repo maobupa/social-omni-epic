@@ -290,7 +290,7 @@ TRANSCRIPT (the actor is {learner_name}; the partner is {partner_name}):
 
 QUESTIONS:
 1. Did the actor's behavior genuinely satisfy at least one movement condition (not merely mention related words)?
-2. Did the actor trip any hardening trigger that was never subsequently repaired?
+2. Did the actor trip any hardening trigger that was never subsequently repaired? Treat offering, presenting, or making the proscribed move available as tripping the trigger — a trigger does not require an explicit threat or a completed act (e.g., offering evidence for the partner to inspect counts as producing that evidence).
 
 Respond with ONLY this JSON:
 {{"conditions_met": [list of 0-based indices of met conditions], "triggers_tripped": [list of 0-based indices], "triggers_repaired": [list of 0-based indices of repaired triggers], "key_check_passed": true/false, "rationale": "one sentence"}}"""

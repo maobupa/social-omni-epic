@@ -118,6 +118,45 @@ def validate_scenario(d: dict) -> tuple[bool, str]:
     return True, ""
 
 
+def surface_novelty_check(child: SocialScenario, anchor: SocialScenario) -> list[str]:
+    """Cheap deterministic surface-novelty guard, applied to EVERY admitted child (Patch 10).
+
+    Under the unified direction-setter operators, every child must have a fresh surface relative
+    to its parent. The embedding diversity gate owns novelty against the whole archive; this is a
+    free pre-check that catches the two most common lazy mutations before the embedding call:
+
+    1. Reused character first name(s) — the strongest tell that the generator re-skinned rather
+       than re-imagined (e.g. the Sasha/Emily lateral).
+    2. Near-verbatim scenario text (partial_ratio > 90) — a clone that slipped the prompt.
+
+    Returns a list of violation strings; empty = pass. Deliberately does NOT check mutated_slots
+    (that is a descriptive self-report, not a contract — an empty-slots warning is emitted in the
+    admission path instead).
+    """
+    violations: list[str] = []
+
+    child_names = {p.first_name.strip().lower() for p in (child.agent_profiles or []) if p.first_name}
+    anchor_names = {p.first_name.strip().lower() for p in (anchor.agent_profiles or []) if p.first_name}
+    reused = child_names & anchor_names
+    if reused:
+        violations.append(
+            f"SURFACE-NOVELTY: child reuses parent character first name(s) {reused} — "
+            "every mutation must use a completely fresh surface (new names)"
+        )
+
+    child_text = (child.scenario or "").strip()
+    anchor_text = (anchor.scenario or "").strip()
+    if anchor_text and child_text:
+        sim = _fuzz.partial_ratio(child_text.lower(), anchor_text.lower())
+        if sim > 90:
+            violations.append(
+                f"SURFACE-NOVELTY: scenario text is near-verbatim to parent (partial_ratio={sim}) — "
+                "this is a clone, not a mutation"
+            )
+
+    return violations
+
+
 # Slot label → partner_key field name(s). Only key slots (b/c/d) are mutation-fidelity
 # checked; surface slots (a/e/f/g) are not in partner_key and are covered by the
 # preservation side of the check instead.
@@ -134,7 +173,14 @@ def key_delta_check(
     threshold: int = 90,
     preservation_floor: int = 60,
 ) -> list[str]:
-    """Two-sided mutation-fidelity check for escalate/relax children.
+    """DEPRECATED (Patch 10) — no longer called by the production runner.
+
+    Superseded by universal embedding diversity gating + surface_novelty_check, which removed
+    the operator-conditional gate this check belonged to. Retained for documentation of the old
+    escalate/relax mutation-fidelity design and possible post-hoc analysis. See
+    docs/pre_run_final_Patch.md (Fault 2) for why the gate it served was removed.
+
+    Two-sided mutation-fidelity check for escalate/relax children.
 
     Skip entirely when anchor has no partner_key (seed parents — any key is novel).
 
