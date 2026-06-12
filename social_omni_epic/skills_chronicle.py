@@ -234,7 +234,7 @@ def validate_synthesis(chronicle: "SkillsChronicle", max_entries: int = 3) -> li
     for e in chronicle.entries:
         text = f"{e.condition}\n{e.guidance}"
         for pat in _ARTIFACT_PATTERNS:
-            if re.search(pat, text, _re.IGNORECASE):
+            if re.search(pat, text, re.IGNORECASE):
                 issues.append(
                     f"[{e.entry_id}] UNEXECUTABLE GUIDANCE: matches '{pat}'. All guidance "
                     "must be performable in spoken conversational turns only — rewrite or "
@@ -250,7 +250,7 @@ def validate_synthesis(chronicle: "SkillsChronicle", max_entries: int = 3) -> li
                 )
                 break
         for pat in _OVERGENERALIZATION:
-            if re.search(pat, e.guidance, _re.IGNORECASE):
+            if re.search(pat, e.guidance, re.IGNORECASE):
                 issues.append(
                     f"[{e.entry_id}] OVERGENERALIZATION: frequency claim ('{pat}') is not "
                     "supported by a single episode. Restate as what was observed."

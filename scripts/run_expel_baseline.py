@@ -54,6 +54,14 @@ from social_omni_epic.fm import FM
 from social_omni_epic.seeds import load_sotopia_seeds
 
 GOAL_SUCCESS_THRESHOLD = 7.0  # SOTOPIA-PI success convention (matches run_baseline_eval.py)
+REL_SUCCESS_THRESHOLD = 0.0   # relationship floor — success = GOAL≥7 ∧ REL≥0 (matches
+                              # run_expel_chronicle._is_terminal_success and the bank labels)
+
+
+def _is_success(scores: dict) -> bool:
+    s = scores or {}
+    return (float(s.get("goal", 0.0)) >= GOAL_SUCCESS_THRESHOLD
+            and float(s.get("relationship", 0.0)) >= REL_SUCCESS_THRESHOLD)
 
 
 # ---------------------------------------------------------------------------
@@ -83,7 +91,7 @@ def _build_summary(results, learner_model, partner_model, seeds_path, config):
         for dim, val in scores.items():
             dim_accum[dim].append(float(val))
         by_source[r["source"]].append(goal)
-        (succeeded if goal >= GOAL_SUCCESS_THRESHOLD else failed).append(r["seed_idx"])
+        (succeeded if _is_success(scores) else failed).append(r["seed_idx"])
 
     overall = {}
     for dim, vals in dim_accum.items():
@@ -223,7 +231,7 @@ def stage_extract(args, fm, out_dir, pool=None):
     return insights
 
 
-def stage_eval(args, fm, out_dir):
+def stage_eval(args, fm, out_dir, fm_judge=None):
     from social_omni_epic.episode_runner import clean_transcript, run_single_episode
     from social_omni_epic.expel_baseline import (
         embed_trajectory_bank, format_memory_prompt, retrieve_fewshots,
@@ -305,6 +313,7 @@ def stage_eval(args, fm, out_dir):
                 memory_prompt=memory_prompt, max_turns=args.max_turns,
                 learner_goal=learner_goal, rubric=None, partner_profile=None,
                 judge_self_consistency_k=1,
+                fm_judge=fm_judge,  # cross-lab judge — eval must NOT be self-scored
             ))
             scores = result.learner_scores
             transcript = clean_transcript(result.transcript)
@@ -362,6 +371,9 @@ def main():
     ap.add_argument("--model", type=str, default="openai/gpt-5-mini")
     ap.add_argument("--learner-model", type=str, default=None)
     ap.add_argument("--partner-model", type=str, default=None)
+    ap.add_argument("--judge-model", type=str, default="google/gemini-3-flash-preview",
+                    help="Cross-lab judge for eval scoring (key check / diagnostics). MUST differ "
+                         "from the learner provider — eval must not be self-scored.")
     ap.add_argument("--max-turns", type=int, default=20)
     ap.add_argument("--resume", action="store_true", default=False,
                     help="Resume from existing checkpoints (skip gathered seeds / scored episodes)")
@@ -395,10 +407,18 @@ def main():
 
     _require_key()
     using_lightning = bool(os.getenv("LIGHTNING_AI_API_KEY") or os.getenv("LIGHTNING_AI_BASE_URL"))
-    fm_model = args.model
-    if not using_lightning and fm_model.startswith("openai/"):
-        fm_model = fm_model.split("/", 1)[1]
-    fm = FM(model=fm_model)
+
+    def _bare(m: str) -> str:
+        return m.split("/", 1)[1] if (not using_lightning and m.startswith("openai/")) else m
+
+    fm = FM(model=_bare(args.model))
+    # Separate cross-lab judge for eval scoring (gemini by default). Asserted distinct provider.
+    fm_judge = FM(model=_bare(args.judge_model))
+    if args.stage in ("eval", "all"):
+        if str(args.judge_model).split("/")[0] == str(args.learner_model).split("/")[0]:
+            print(f"ERROR: --judge-model provider must differ from the learner "
+                  f"({args.learner_model}) — eval must not be self-scored.", file=sys.stderr)
+            sys.exit(1)
 
     if args.out:
         out_dir = Path(args.out)
@@ -406,18 +426,25 @@ def main():
         ts = datetime.now().strftime("%Y%m%d_%H%M%S")
         out_dir = Path(f"output/expel_{ts}")
     out_dir.mkdir(parents=True, exist_ok=True)
-    print(f"Output dir: {out_dir}")
+    print(f"Output dir: {out_dir}  |  judge: {args.judge_model}")
 
     if args.stage == "gather":
+        print("WARNING: the `gather` stage is DEPRECATED — it self-scores with the learner "
+              "(no cross-lab judge) at a goal-only threshold. Use scripts/run_expel_chronicle.py "
+              "for trajectory gathering (gemini judge, GOAL≥7 ∧ REL≥0, phase0 output + LP), then "
+              "`run_expel_baseline.py extract --out <dir>`.", file=sys.stderr)
         stage_gather(args, fm, out_dir)
     elif args.stage == "extract":
         stage_extract(args, fm, out_dir)
     elif args.stage == "eval":
-        stage_eval(args, fm, out_dir)
+        stage_eval(args, fm, out_dir, fm_judge=fm_judge)
     elif args.stage == "all":
+        print("WARNING: `all` uses the deprecated `gather` stage. Prefer "
+              "run_expel_chronicle.py (gather) → run_expel_baseline.py extract → eval.",
+              file=sys.stderr)
         pool = stage_gather(args, fm, out_dir)
         stage_extract(args, fm, out_dir, pool=pool)
-        stage_eval(args, fm, out_dir)
+        stage_eval(args, fm, out_dir, fm_judge=fm_judge)
 
 
 if __name__ == "__main__":

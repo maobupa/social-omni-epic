@@ -12,7 +12,7 @@ temperature: 1.0
 learner_model: "openai/gpt-5-mini"
 partner_model: "openai/gpt-5-mini"
 
-random_seed: 42
+random_seed: 1
 
 # How many generation attempts in this invocation
 iterations: 10
@@ -24,9 +24,25 @@ batch_size: 4
 stopping:
   N: 90
 
-# Seed loading — 90 seeds, agent 0 as learner
+# Seed loading — 90 seeds, agent 0 as learner (both_perspectives is permanently False)
 seeds_path: "data/sotopia_90_seeds.jsonl"
 seed_limit: null
+
+# LP-initialized seeding from a phase0 ExpeL results dir (null = flat Beta(1,1) seeding).
+# Carries per-seed classification + LP; classification drives the first operator; LP enters
+# Thompson ONLY as a soft asymmetric prior (votes stay 0). Refuses to start if any seed lacks
+# a classification unless allow_uncalibrated=true.
+seed_from_phase0_dir: null
+allow_uncalibrated: false
+seed_prior:
+  frontier_alpha: 2.0   # frontier seeds: mild optimism (lateral is the reliable frontier path)
+  frontier_beta: 1.0
+  default_alpha: 1.0    # too_easy / beyond_frontier / uncalibrated: flat (let child LP decide)
+  default_beta: 1.0
+
+# Cap on the warm-start prior mass a child inherits from its parent's posterior, so deep
+# lineages stay responsive to their own first votes (mean preserved, mass capped).
+child_prior_mass: 4.0
 
 # Episode controls
 max_turns: 20
@@ -36,9 +52,10 @@ max_attempts: 4        # K: attempt 1 → too_easy check; 2..K → reflection + 
 use_expel_memory: true
 chronicle_max_entries: 8   # chronicle path only
 
-# LP judge
+# LP judge — MUST be a different provider than the learner (cross-lab; asserted at startup).
+# Matches the phase0 Base90 ExpeL run for protocol parity.
 judge:
-  model: "openai/gpt-5-mini"   # can differ from learner/partner model
+  model: "google/gemini-3-flash-preview"
   lp_temperature: 0.3
 
 # Task generator — batch + rank

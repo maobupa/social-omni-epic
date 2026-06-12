@@ -18,3 +18,4 @@ redis
 pyvis
 networkx
 rich
+rapidfuzz

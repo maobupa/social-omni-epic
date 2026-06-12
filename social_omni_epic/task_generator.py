@@ -13,8 +13,14 @@ ASYMMETRIC ROLES:
   - ONLY agent 0 (learner) gets the three-part structured goal triple (outcome / constraint / shortcut).
   - Agent 1 (partner) gets ONLY a natural-language `partner_goal` string plus the private
     `partner_key`. Do NOT give agent 1 a structured triple.
-  - The `partner_goal` must be written as "Your goal is to ..." and encode the partner's position,
-    stake, and what they are willing to concede. It must NOT reveal any partner_key field.
+  - The `partner_goal` must be written as "Your goal is to ..." and encode the partner's position
+    and stake. It must NOT reveal any partner_key field, and CRITICALLY it must NOT state the
+    conditions under which the partner would move or concede. WRONG (leaks the key): "Your goal is
+    to keep the premium supplier; you will only accept a tightly scoped blind trial on a non-flagship
+    product with your direct oversight and public credit" — that hands the learner the movement_conditions
+    verbatim. RIGHT: "Your goal is to protect the brand's premium positioning and your standing as its
+    quality steward; you are deeply skeptical of cost-driven supplier changes." State the partner's
+    stance and what they care about; let the conditions that actually move them stay hidden in partner_key.
 
 For agent 0's structured goal:
   - "outcome": the CORE state-change this agent needs — a genuine shift in the other's commitment,
@@ -99,13 +105,41 @@ _MECHANISM_LIBRARY_TEXT = "\n".join(
 _PARTNER_KEY_SCHEMA = """,
   "partner_key": {
     "key_mechanism": "one of: reactance | face_needs | validation_before_change | procedural_voice | reciprocity_disclosure",
-    "movement_conditions": ["condition 1 (concrete, behaviorally checkable)", "condition 2"],
-    "hardening_triggers": ["trigger 1 (learner move that locks the partner)", "trigger 2"],
+    "movement_conditions": ["condition 1 (learner-action sensor form — see rules)", "condition 2"],
+    "hardening_triggers": ["trigger 1 (a LEARNER move that locks the partner)", "trigger 2"],
     "surface_misdirection": "the partner's stated objection — what they say the problem is",
     "cost_coupling": "what satisfying movement_conditions costs the LEARNER's own stated goal"
   },
   "mutated_slots": ["list of slot labels mutated, e.g. b, c, d"],
   "mutation_rationale": "one sentence explaining the mutation"
+"""
+
+# Phrasing/realizability contract for partner_key fields. These guard the partial-observability
+# invariant: the partner must NOT be able to read its own key off the page and announce it.
+_PARTNER_KEY_RULES = """
+PARTNER_KEY AUTHORING RULES (these make the hidden key actually hidden and winnable):
+
+1. SENSOR FORM, NOT DEMAND FORM. Write each movement_condition as a thing the LEARNER does that
+   the partner silently responds to — "the learner, unprompted, offers them visible leadership of
+   the process" — NEVER as a partner demand — "the partner insists on leading." A condition that
+   reads naturally as a demand the character would voice out loud is MALFORMED: the role-played
+   partner will simply state it in turn 1, destroying the discoverability that makes the scenario
+   hard. If you could rewrite the condition as "I want X", rephrase it as "something shifts when the
+   other person actually does X."
+
+2. NOT VOLUNTEERED. movement_conditions must be conditions the partner would NOT announce unprompted.
+   If the partner would naturally state it as a demand or precondition, it provides zero discoverability
+   difficulty — the learner needs nothing but to read the partner's own words. Make the partner's
+   stated stance the surface_misdirection; keep what actually moves them implicit.
+
+3. SPOKEN TURNS ONLY. Every movement_condition and hardening_trigger must be satisfiable and
+   checkable purely within a two-party spoken conversation. NO external artifacts: no written
+   guarantees, signed documents, emails, contracts, receipts, escrow, or sign-offs. If a condition
+   requires paperwork ("a written guarantee that his role remains intact"), rewrite it as the spoken
+   equivalent ("he hears the learner publicly commit, in front of him, that his role stays intact").
+
+4. The cost_coupling must leave a survivable path (see escalate/cost rules): satisfying the
+   conditions makes the outcome harder or partial, never strictly unreachable.
 """
 
 _MECHANISM_LIBRARY_BLOCK = f"""
@@ -142,6 +176,7 @@ LEARNABLE: the learner agent's outcome must be meaningfully responsive to HOW th
 
 DIFFICULT: the scenario must be hard by default. A naive language model playing the learner — one that is overly agreeable, cooperative, or socially deferential — should fail to achieve the learner's goal. Success requires resisting social pressure, holding a specific position, using strategic information, or navigating genuine opposition. Make the partner agent's pressure realistic and hard to dismiss.
 """ + _SHARED_RULES + _GOAL_FORMAT_GUIDE + _PROFILE_GUIDE + _MECHANISM_LIBRARY_BLOCK + """
+""" + _PARTNER_KEY_RULES + """
 Respond with valid JSON matching exactly this schema (include partner_key, mutated_slots, mutation_rationale):
 """ + _SCENARIO_SCHEMA.rstrip("}") + _PARTNER_KEY_SCHEMA + """
 }
@@ -298,14 +333,13 @@ class TaskGenerator:
         # --- Positive signal: frontier exemplars ---
         if frontier_ex:
             parts.append(
-                "FRONTIER EXEMPLARS — scenarios at the current difficulty boundary. "
-                "The learner model failed on the first attempt then learned. "
-                "The skills chronicle shows WHY each was hard and what the naive approach got wrong. "
-                "Target this difficulty level:\n"
+                "FRONTIER EXEMPLARS — scenarios at the current difficulty boundary "
+                "(the learner failed the first attempt, then improved). Match this difficulty "
+                "level and structural shape:\n"
             )
             for i, ex in enumerate(frontier_ex):
                 parts.append(f"--- Frontier {i+1} ---")
-                parts.append(_format_scenario_for_prompt(ex, include_chronicle=True))
+                parts.append(_format_scenario_for_prompt(ex, include_chronicle=False))
 
         # --- Negative signal: too easy ---
         if too_easy_ex:
@@ -324,13 +358,17 @@ class TaskGenerator:
         # --- Negative signal: beyond frontier ---
         if beyond_ex:
             parts.append(
-                "\nSTRUCTURAL DEAD ENDS — the learner model never solved these across all attempts. "
-                "The WARNING entries in the chronicle show what made them unwinnable. "
-                "Do NOT generate scenarios with the same structural failure:\n"
+                "\nSTRUCTURAL DEAD ENDS — never solved across all attempts. Each entry's "
+                "beyond_frontier_diagnosis (stuck_knob) names the slot that made it unwinnable. "
+                "Do NOT reproduce the same structural failure:\n"
             )
             for i, fx in enumerate(beyond_ex):
-                parts.append(f"--- Dead End {i+1} ---")
-                parts.append(_format_scenario_for_prompt(fx, include_chronicle=True))
+                diag = ""
+                if fx.beyond_frontier_diagnosis:
+                    diag = (f"  stuck_knob: {fx.beyond_frontier_diagnosis.get('stuck_knob','')} — "
+                            f"{fx.beyond_frontier_diagnosis.get('rationale','')}")
+                parts.append(f"--- Dead End {i+1} ---{diag}")
+                parts.append(_format_scenario_for_prompt(fx, include_chronicle=False))
 
         if existing_types:
             type_str = ", ".join(sorted({t for t in existing_types if t}))
@@ -387,11 +425,13 @@ class TaskGenerator:
         if anchor is not None:
             parent_block = (
                 "=== PARENT SCENARIO (mutate THIS one) ===\n"
-                + _format_scenario_for_prompt(anchor, include_chronicle=True)
+                + _format_scenario_for_prompt(anchor, include_chronicle=False)
                 + f"\nclassification: {anchor.classification or 'unknown'}"
             )
             if anchor.too_easy_diagnosis:
                 parent_block += f"\ntoo_easy_diagnosis: {json.dumps(anchor.too_easy_diagnosis)}"
+            if anchor.beyond_frontier_diagnosis:
+                parent_block += f"\nbeyond_frontier_diagnosis: {json.dumps(anchor.beyond_frontier_diagnosis)}"
             parent_block += "\n\n=== RELATED ARCHIVE EXAMPLES (context only — do not mutate these) ===\n"
 
         archive_block = self._build_user_prompt(
@@ -454,7 +494,12 @@ class TaskGenerator:
         "fix_coherence": (
             "The scenario has coherence issues that must be fixed. Fix ONLY the identified "
             "issues; preserve the premise, characters, structured goals, interaction type "
-            "and partner_key except where an issue requires a change."
+            "and partner_key except where an issue requires a change. "
+            "CRITICAL — KEY-NARRATIVE SEPARATION: the partner_key fields (movement_conditions, "
+            "hardening_triggers, cost_coupling) are PRIVATE and must NEVER appear in the scenario "
+            "description, relationship_background, or any agent goal. When fixing relationship or "
+            "background issues, rewrite only the relationship label or background prose — do NOT "
+            "expand or rewrite the scenario description in a way that reveals hidden partner logic."
         ),
         "escalate": (
             "The parent was TOO EASY — the learner solved it on the first attempt. Choose 1–2 "
@@ -462,13 +507,20 @@ class TaskGenerator:
             "and tighten them; the too_easy_diagnosis above names the slack knob. Preserve all "
             "other slots (characters, premise, interaction type, goal_type, key_mechanism (e)). "
             "Do NOT make the scenario impossible: the movement_conditions must remain genuinely "
-            "satisfiable by a skilled, non-capitulating actor. Keep a zone of possible agreement."
+            "satisfiable by a skilled, non-capitulating actor. Keep a zone of possible agreement. "
+            "CRITICAL — SURVIVABILITY: tightening cost_coupling makes the outcome HARDER or "
+            "PARTIAL, never STRICTLY UNREACHABLE. After satisfying the movement_conditions, a "
+            "skilled actor must still have a path to a meaningful version of their stated outcome. "
+            "If satisfying the conditions makes the learner's stated target literally impossible "
+            "to reach (e.g. the goal requires a 60% shift but the conditions cap any change at a "
+            "tiny pilot), the scenario is cost-stuck, not hard — that is a failure, not escalation."
         ),
         "relax": (
-            "The parent was NEVER SOLVED across all K attempts (beyond_frontier). Identify from "
-            "the skills chronicle WARNINGs which slot made it unwinnable and loosen exactly that "
-            "slot. Prefer loosening (c) hardening_triggers or (d) cost_coupling first. Preserve "
-            "all other slots. The goal is a scenario that is hard but genuinely solvable."
+            "The parent was NEVER SOLVED across all attempts (beyond_frontier). The "
+            "beyond_frontier_diagnosis above names the stuck knob — loosen exactly that slot. "
+            "If the diagnosis is missing or 'unknown', loosen (c) hardening_triggers first, then "
+            "(d) cost_coupling. Preserve all other slots. The goal is a scenario that is hard but "
+            "genuinely winnable by a skilled, non-capitulating actor."
         ),
         "lateral": (
             "The parent is AT THE LEARNING FRONTIER (some attempts failed, some may have "
@@ -554,6 +606,50 @@ class TaskGenerator:
             "slack_knob": str(d.get("slack_knob", "partner_resistance")),
             "rationale": str(d.get("rationale", "")),
         }
+
+    def analyze_beyond_frontier(self, scenario: SocialScenario,
+                                key_checks: list, attempt_scores: list) -> dict:
+        """Diagnose which key slot made a beyond_frontier scenario unwinnable.
+
+        Pure code heuristic over the per-attempt key-check verdicts and the solved flags
+        already gathered in the K-loop — NO LLM call. Returns {stuck_knob, rationale} where
+        stuck_knob ∈ {hardening_triggers_too_congruent, surface_misdirection_undiscoverable,
+        cost_coupling_too_high, unknown}. The relax operator loosens the named slot
+        ((c)/(b)/(d) respectively); 'unknown' falls back to the blind (c)→(d) ordering.
+        """
+        checks = [k for k in (key_checks or []) if isinstance(k, dict)]
+        if scenario.partner_key is None or not checks:
+            return {"stuck_knob": "unknown", "rationale": "no partner_key or no key-check verdicts"}
+
+        n = len(checks)
+        n_unrepaired_trigger = 0    # attempts where a tripped trigger was never repaired
+        n_trigger_attempts = 0      # attempts where any trigger tripped
+        any_condition_met = False
+        for k in checks:
+            tripped = set(k.get("triggers_tripped") or [])
+            repaired = set(k.get("triggers_repaired") or [])
+            if tripped:
+                n_trigger_attempts += 1
+            if tripped - repaired:
+                n_unrepaired_trigger += 1
+            if k.get("conditions_met"):
+                any_condition_met = True
+        solved_any = any(bool(a.get("solved")) for a in (attempt_scores or []))
+
+        if n_unrepaired_trigger > 0 and n_unrepaired_trigger >= (n + 1) // 2:
+            return {"stuck_knob": "hardening_triggers_too_congruent",
+                    "rationale": f"unrepaired hardening triggers in {n_unrepaired_trigger}/{n} "
+                                 "attempts — the learner's natural moves lock the partner. Relax (c)."}
+        if not any_condition_met and n_trigger_attempts <= n // 2:
+            return {"stuck_knob": "surface_misdirection_undiscoverable",
+                    "rationale": "no movement condition ever satisfied and few triggers tripped — "
+                                 "the real objection was never discoverable. Relax (b)."}
+        if any_condition_met and not solved_any:
+            return {"stuck_knob": "cost_coupling_too_high",
+                    "rationale": "a movement condition was met but the scenario was never solved — "
+                                 "the cost of satisfying the key is too high. Relax (d)."}
+        return {"stuck_knob": "unknown",
+                "rationale": "heuristic inconclusive; use the blind relax ordering."}
 
     def generate_unconditioned(self) -> Optional[SocialScenario]:
         """Ablation: no archive conditioning."""

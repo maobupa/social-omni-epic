@@ -11,6 +11,8 @@ SOTOPIA seeds and Phase-1 archive records bypass this validator (they load via c
 import uuid as _uuid
 from typing import Optional
 
+from rapidfuzz import fuzz as _fuzz
+
 from .data_models import (
     AgentProfile,
     MECHANISM_LIBRARY,
@@ -116,6 +118,115 @@ def validate_scenario(d: dict) -> tuple[bool, str]:
     return True, ""
 
 
+# Slot label → partner_key field name(s). Only key slots (b/c/d) are mutation-fidelity
+# checked; surface slots (a/e/f/g) are not in partner_key and are covered by the
+# preservation side of the check instead.
+_KEY_SLOT_FIELDS: dict[str, list[str]] = {
+    "b": ["surface_misdirection"],
+    "c": ["hardening_triggers"],   # list — joined before comparison
+    "d": ["cost_coupling"],
+}
+
+
+def key_delta_check(
+    child: SocialScenario,
+    anchor: SocialScenario,
+    threshold: int = 90,
+    preservation_floor: int = 60,
+) -> list[str]:
+    """Two-sided mutation-fidelity check for escalate/relax children.
+
+    Skip entirely when anchor has no partner_key (seed parents — any key is novel).
+
+    Delta side: at least one mutated key-slot must differ from the parent
+    (rapidfuzz ratio ≤ threshold). Catches LLM returning a lazy near-copy that
+    ignored the mutation instruction.
+
+    Preservation side: character first names must match the parent AND scenario text
+    must clear a loose similarity floor (partial_ratio ≥ preservation_floor).
+    Catches an "escalate" that actually swapped characters/premise — which is really
+    an unlabeled lateral and must go through the embedding gate we just exempted
+    escalate/relax from.
+
+    Special violations:
+    - mutated_slots declares no key slots at all (e.g. only ["a"]) → reject; the
+      operator claims to have mutated difficulty knobs but didn't name any.
+    - anchor has partner_key but child does not → schema error, reject.
+
+    Returns a list of violation strings; empty = pass.
+    """
+    if anchor.partner_key is None:
+        return []
+
+    if child.partner_key is None:
+        return ["KEY-DELTA: child has no partner_key but anchor does"]
+
+    # Normalise mutated_slots: strip whitespace, lower-case
+    mutated = [s.strip().lower() for s in (child.mutated_slots or [])]
+    key_slots_declared = [s for s in mutated if s in _KEY_SLOT_FIELDS]
+
+    if not key_slots_declared:
+        # escalate/relax with zero declared key slots is a malformed mutation
+        return [
+            "KEY-DELTA: mutated_slots declares no partner_key slots (b/c/d); "
+            "escalate/relax must mutate at least one difficulty knob"
+        ]
+
+    violations: list[str] = []
+
+    # --- Delta side: require at least one declared slot to have actually changed ---
+    all_similar = True
+    for slot in key_slots_declared:
+        fields = _KEY_SLOT_FIELDS[slot]
+        for field in fields:
+            child_val = getattr(child.partner_key, field, None)
+            anchor_val = getattr(anchor.partner_key, field, None)
+            # Lists (hardening_triggers) → join for comparison
+            if isinstance(child_val, list):
+                child_val = " | ".join(str(x) for x in child_val)
+            if isinstance(anchor_val, list):
+                anchor_val = " | ".join(str(x) for x in anchor_val)
+            child_val = str(child_val or "").strip()
+            anchor_val = str(anchor_val or "").strip()
+            ratio = _fuzz.ratio(child_val.lower(), anchor_val.lower())
+            if ratio <= threshold:
+                all_similar = False
+                break
+        if not all_similar:
+            break
+
+    if all_similar:
+        violations.append(
+            f"KEY-DELTA: all declared key slots {key_slots_declared} are near-identical "
+            f"to parent (fuzz ratio > {threshold}); mutation instruction was ignored"
+        )
+
+    # --- Preservation side: surface must stay close to the parent ---
+    # Check 1: character first names
+    child_names = {p.first_name.strip().lower() for p in (child.agent_profiles or []) if p.first_name}
+    anchor_names = {p.first_name.strip().lower() for p in (anchor.agent_profiles or []) if p.first_name}
+    if anchor_names and not child_names.issuperset(anchor_names):
+        missing = anchor_names - child_names
+        violations.append(
+            f"KEY-DELTA-PRESERVATION: character first name(s) changed under escalate/relax "
+            f"(missing from child: {missing}); this is an unlabeled lateral mutation"
+        )
+
+    # Check 2: scenario text surface similarity (loose — only catches wholesale rewrites)
+    child_text = (child.scenario or "").strip()
+    anchor_text = (anchor.scenario or "").strip()
+    if anchor_text and child_text:
+        surface_sim = _fuzz.partial_ratio(child_text.lower(), anchor_text.lower())
+        if surface_sim < preservation_floor:
+            violations.append(
+                f"KEY-DELTA-PRESERVATION: scenario text drifted too far from parent "
+                f"(partial_ratio={surface_sim} < {preservation_floor}); "
+                "escalate/relax must preserve the surface premise"
+            )
+
+    return violations
+
+
 def _clean_str(s) -> str:
     if not isinstance(s, str):
         return s
@@ -147,8 +258,16 @@ def dict_to_scenario(d: dict) -> SocialScenario:
 
     profiles = [AgentProfile(**p) for p in d["agent_profiles"]]
 
-    # Learner structured goal (agent 0 only)
-    learner_sg = StructuredGoal(**d["agent_structured_goals"][0])
+    # Learner structured goal (agent 0 only).
+    # Normalize constraint: the renderer prepends "without ", so strip any leading "without "
+    # the LLM wrote literally — otherwise the rendered goal reads "without without ...".
+    sg_raw = dict(d["agent_structured_goals"][0])
+    if isinstance(sg_raw.get("constraint"), str):
+        c = sg_raw["constraint"].strip()
+        if c.lower().startswith("without "):
+            c = c[len("without "):].lstrip()
+        sg_raw["constraint"] = c
+    learner_sg = StructuredGoal(**sg_raw)
     structured = [learner_sg, None]
 
     # agent_goals: learner from triple, partner from natural-language string

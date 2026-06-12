@@ -3,6 +3,12 @@ from typing import Optional
 import uuid
 
 
+# Equivalent total_votes charged to too_easy children in the Thompson posterior.
+# K=4 episodes × 1.5 vote pairs average = 6 votes. Single source of truth (imported by
+# curriculum.py and archive.py) — lives here to avoid an archive→curriculum import edge.
+K_VOTES_EQUIV = 6
+
+
 # Theory-grounded mechanism library for PartnerKey.key_mechanism.
 # These tags are the only valid values; extend only with explicit instruction.
 MECHANISM_LIBRARY: dict[str, str] = {
@@ -161,15 +167,22 @@ class SocialScenario(BaseModel):
     mutation_rationale: Optional[str] = None  # one-sentence rationale from the generator
     classification: Optional[str] = None  # "too_easy" | "frontier" | "beyond_frontier"
     too_easy_diagnosis: Optional[dict] = None   # {slack_knob, rationale} from analyze_too_easy
+    beyond_frontier_diagnosis: Optional[dict] = None  # {stuck_knob, rationale} from analyze_beyond_frontier
     final_check_flag: Optional[list[str]] = None  # adversarial check_final issues when not approved
 
+    # Lineage (pointers only — full ancestor scenarios live in the archive by id).
+    parent_id: Optional[str] = None              # immediate anchor id; None for seeds
+    parent_is_sotopia_seed: bool = False         # was the immediate parent a raw SOTOPIA-90 seed?
+    root_seed_env_pk: Optional[str] = None        # env_pk of the SOTOPIA-90 ancestor at the lineage root
+    lineage_depth: int = 0                        # generations from the root seed (0 = seed)
+    ancestor_ids: list[str] = []                  # ids from root seed down to (and including) the parent
+
     def to_text_for_embedding(self) -> str:
-        parts = []
-        # scenario_title is the primary structural retrieval key (abstract, no proper nouns).
-        # Seeds that have been pre-titled populate this; others fall back to scenario text.
-        if self.scenario_title:
-            parts.append(f"Scenario type: {self.scenario_title}")
-        parts += [
+        # Title-free, deliberately: generated scenarios are embedded BEFORE their title is
+        # synthesized, so including scenario_title would make the seed/generated embedding
+        # spaces asymmetric (seeds pre-titled, children not). The abstract
+        # `social_dynamic | target_perspective` text is reserved for post-hoc niching only.
+        parts = [
             f"Scenario: {self.scenario}",
             f"Interaction type: {self.interaction_type}",
             f"Relationship: {self.relationship}",

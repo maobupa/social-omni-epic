@@ -224,7 +224,7 @@ def run_debug_pipeline(args, out_path: Path) -> dict:
             fm=tfm,
             seeds_path=args.seeds_path,
             limit=args.seed_limit,
-            both_perspectives=args.seed_both_perspectives,
+            both_perspectives=False,  # permanently False — agent 0 is always the learner
         )
     except FileNotFoundError as e:
         print_warn(f"Seeds not found ({e}). Using an empty archive — generation will be unconditioned.")

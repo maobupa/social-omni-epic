@@ -61,7 +61,7 @@ def _seed_archive(archive: Archive, fm: FM, config: DictConfig) -> None:
             fm=fm,
             seeds_path=config.get("seeds_path", "data/sotopia_90_seeds.jsonl"),
             limit=config.get("seed_limit"),
-            both_perspectives=config.get("seed_both_perspectives", True),
+            both_perspectives=False,  # permanently False — generated scenarios are role-asymmetric
         )
         print(f"Loaded {len(seed_scenarios)} Sotopia seed scenarios (embeddings from cache or freshly computed)")
     except FileNotFoundError as e:

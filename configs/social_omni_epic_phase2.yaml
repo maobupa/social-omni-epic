@@ -48,9 +48,8 @@ stopping:
 use_verbalized_sampling: false
 vs_num_candidates: 5
 
-# Seed loading
+# Seed loading (both_perspectives is permanently False — agent 0 is always the learner)
 seeds_path: "data/sotopia_90_seeds.jsonl"
-seed_both_perspectives: true
 seed_limit: null
 
 task_generator:

@@ -15,6 +15,12 @@ from .data_models import SocialScenario
 from .fm import FM
 
 
+class LPAllErrorsError(Exception):
+    """Raised when every LP judge vote errored (after the one-shot revote). The caller
+    routes this to the episode-quarantine path — LP is uncomputable, so the anchor must
+    not be charged a (0, K) penalty for what is an infrastructure failure."""
+
+
 # ---------------------------------------------------------------------------
 # Data classes
 # ---------------------------------------------------------------------------
@@ -25,6 +31,7 @@ class VoteRecord:
     order: str              # "A=1,B=j" or "A=j,B=1"
     verdict: str            # "A" | "B" | "no_difference"
     rationale: str
+    is_error: bool = False  # True when the judge call raised (verdict forced to no_difference)
 
 
 @dataclass
@@ -34,6 +41,7 @@ class LPResult:
     total_votes: int
     n_pairs: int
     votes: list[VoteRecord] = field(default_factory=list)
+    n_error_votes: int = 0   # votes whose judge call raised (after the one-shot revote)
 
 
 # ---------------------------------------------------------------------------
@@ -105,6 +113,7 @@ def _cast_vote(
         transcript_a=_truncate(a_text),
         transcript_b=_truncate(b_text),
     )
+    is_error = False
     try:
         data = fm.query_json(_JUDGE_SYSTEM, user, temperature=temperature)
         raw_verdict = str(data.get("verdict", "no_difference")).strip().lower()
@@ -119,8 +128,10 @@ def _cast_vote(
     except Exception as e:
         verdict = "no_difference"
         rationale = f"[judge error: {e}]"
+        is_error = True
 
-    return VoteRecord(pair=pair, order=order, verdict=verdict, rationale=rationale)
+    return VoteRecord(pair=pair, order=order, verdict=verdict, rationale=rationale,
+                      is_error=is_error)
 
 
 def _pair_improved_votes(
@@ -172,35 +183,53 @@ async def compute_lp(
 
     attempt1_text = _transcript_to_str(transcripts[0])
     pairs = [(1, j + 1) for j in range(1, len(transcripts))]
+    attemptj_texts = {p[1]: _transcript_to_str(transcripts[p[1] - 1]) for p in pairs}
 
-    all_votes: list[VoteRecord] = []
-    total_improved = 0
-    total_votes_count = 0
+    loop = asyncio.get_running_loop()
 
-    for pair in pairs:
-        j = pair[1]
-        attemptj_text = _transcript_to_str(transcripts[j - 1])
-
-        # Run both order-swapped votes in parallel
-        loop = asyncio.get_running_loop()
-        vote_ab, vote_ba = await asyncio.gather(
-            loop.run_in_executor(
-                None, _cast_vote,
-                fm_judge, attempt1_text, attemptj_text,
-                learner_goal, relational_stakes, pair, "A=1,B=j", lp_temperature,
-            ),
-            loop.run_in_executor(
-                None, _cast_vote,
-                fm_judge, attempt1_text, attemptj_text,
-                learner_goal, relational_stakes, pair, "A=j,B=1", lp_temperature,
-            ),
+    def _cast(pair: tuple[int, int], order: str):
+        return loop.run_in_executor(
+            None, _cast_vote,
+            fm_judge, attempt1_text, attemptj_texts[pair[1]],
+            learner_goal, relational_stakes, pair, order, lp_temperature,
         )
-        all_votes.extend([vote_ab, vote_ba])
-        improved = _pair_improved_votes(vote_ab, vote_ba, j)
-        total_improved += improved
-        total_votes_count += 2  # always 2 votes per pair
 
+    # Cast both order-swapped votes for every pair in parallel; keep them pair-adjacent.
+    jobs = []
+    for pair in pairs:
+        jobs.append(_cast(pair, "A=1,B=j"))
+        jobs.append(_cast(pair, "A=j,B=1"))
+    all_votes: list[VoteRecord] = list(await asyncio.gather(*jobs))
+
+    def _improved(votes: list[VoteRecord]) -> int:
+        total = 0
+        for i in range(0, len(votes), 2):  # votes are stored two-per-pair, in order
+            total += _pair_improved_votes(votes[i], votes[i + 1], votes[i].pair[1])
+        return total
+
+    total_votes_count = len(all_votes)
+    total_improved = _improved(all_votes)
     lp_value = total_improved / total_votes_count if total_votes_count > 0 else 0.0
+
+    # One-shot revote of errored votes when the result sits exactly on the lp==0 boundary —
+    # a single judge error on the decisive pair can spuriously flip frontier→beyond_frontier.
+    n_error_votes = sum(1 for v in all_votes if v.is_error)
+    if n_error_votes > 0 and lp_value == 0.0:
+        err_idx = [i for i, v in enumerate(all_votes) if v.is_error]
+        revoted = await asyncio.gather(
+            *[_cast(all_votes[i].pair, all_votes[i].order) for i in err_idx]
+        )
+        for i, vote in zip(err_idx, revoted):
+            all_votes[i] = vote
+        total_improved = _improved(all_votes)
+        lp_value = total_improved / total_votes_count if total_votes_count > 0 else 0.0
+        n_error_votes = sum(1 for v in all_votes if v.is_error)
+
+    # Every vote of every pair errored → LP uncomputable → quarantine (not a (0,K) penalty).
+    if total_votes_count > 0 and n_error_votes == total_votes_count:
+        raise LPAllErrorsError(
+            f"All {total_votes_count} LP judge votes errored across {len(pairs)} pair(s)."
+        )
 
     return LPResult(
         lp_value=round(lp_value, 4),
@@ -208,4 +237,5 @@ async def compute_lp(
         total_votes=total_votes_count,
         n_pairs=len(pairs),
         votes=all_votes,
+        n_error_votes=n_error_votes,
     )

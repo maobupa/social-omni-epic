@@ -62,6 +62,7 @@ _TURN_PROMPT = """
                 {action_list}.
                 Note: If you have substantially achieved your social goal or reached a clear agreement, you SHOULD choose 'leave' — continuing past the point of resolution is poor social judgment. You may also leave if this conversation makes you uncomfortable, you lose your patience, or you have exhausted reasonable options.
                 Important: If your previous 2-3 attempts at the same approach have not moved the other person, do NOT repeat the same offer or request again — try a genuinely different strategy (ask a question, make a different concession, shift your framing, or acknowledge that you may not reach your goal today). Repeating failed moves is poor social judgment.
+                Everything happens within this spoken conversation. You cannot send, sign, forward, show, email, or have already sent any document, contract, or artifact — and claiming you did is not a real move. Every commitment is made and tested in words, here.
                 Keep your responses conversational — typically 2-4 sentences unless a complex explanation is genuinely required.
 
                 Please only generate a JSON string including the action type and the argument.
@@ -100,6 +101,7 @@ _PARTNER_TURN_PROMPT_NATIVE = """
                 You are at Turn #{turn_number}. Your available action types are
                 {action_list}.
                 You should choose 'leave' when the conversation has reached a natural end for you. You may also leave if this conversation makes you uncomfortable, you lose your patience, or you have exhausted reasonable options.
+                Everything happens within this spoken conversation. You cannot send, sign, forward, show, email, or have already sent any document, contract, or artifact — and claiming you did is not a real move. Every commitment is made and tested in words, here.
                 Keep your responses conversational — typically 2-4 sentences unless a complex explanation is genuinely required.
 
                 Please only generate a JSON string including the action type and the argument.
@@ -130,6 +132,7 @@ _PARTNER_TURN_PROMPT_KEYED = """
                 You are at Turn #{turn_number}. Your available action types are
                 {action_list}.
                 You should choose 'leave' when the conversation has reached a natural end for you. You may also leave if this conversation makes you uncomfortable, you lose your patience, or you have exhausted reasonable options.
+                Everything happens within this spoken conversation. You cannot send, sign, forward, show, email, or have already sent any document, contract, or artifact — and claiming you did is not a real move. Every commitment is made and tested in words, here.
                 Keep your responses conversational — typically 2-4 sentences unless a complex explanation is genuinely required.
 
                 === Your private feelings and reactions (visible only to you) ===
@@ -147,7 +150,7 @@ _PARTNER_TURN_PROMPT_KEYED = """
 
                 Behavioral rules that follow from the above:
                 1. You hold your position until a felt condition is FULLY and COMPLETELY met — not started, not partially met, not promised. A single acknowledgement turn is not "sustained acknowledgement." A commitment is not the same as follow-through. Do not soften until the condition has actually been fulfilled in the conversation.
-                2. When a trigger fires, your IMMEDIATE next turn MUST open with increased resistance or withdrawal — not softening. This is not a choice; it is your gut reaction. Express that resistance by restating your objection more firmly or shutting the topic down: "I've already said what the issue is — I don't want to keep going in circles on this." Do NOT describe the causal relationship between their behavior and your reaction (e.g. never say "the more you push, the more I resist" — that reveals structure). Just resist.
+                2. When a trigger fires, your IMMEDIATE next turn MUST open with increased resistance or withdrawal — not softening. This is not a choice; it is your gut reaction. Express that resistance by restating your objection more firmly or shutting the topic down — but phrase it in your OWN words, varying your wording each time so you never repeat the same sentence twice (e.g. as illustration only, something like "I've already explained where I stand on this"). Do NOT describe the causal relationship between their behavior and your reaction (e.g. never say "the more you push, the more I resist" — that reveals structure). Just resist, naturally and in character.
                 3. You physically cannot tell the other person what would change your mind. When asked, redirect to your stated objection — "I've told you what the problem is" — or close the topic — "I don't want to talk about this right now." NEVER acknowledge that there is anything else to know beyond your stated objection. NEVER say "I don't know what would help" or "it just doesn't feel right yet" — those phrases imply a hidden condition exists.
                 4. Within these rules, behave naturally and in character. You are a person with genuine feelings, not a puzzle dispenser.
                 === End of private feelings ===
@@ -232,8 +235,22 @@ Respond with ONLY this JSON (replace the example values with your actual scores 
 
 Score ranges: believability 0–10, relationship −5 to 5, knowledge 0–10, \
 secret −10 to 0, social_rules −10 to 0, financial_and_material_benefits −5 to 5, goal 0–10.
+
+Scoring the GOAL dimension (critical — this is the dimension that decides success):
+- Score against the LITERAL end-state reached when the conversation closes, not against \
+effort, rapport, or good intentions.
+- An outcome that remains under the OTHER party's unilateral future discretion (they can still \
+veto, delay, or walk it back) is NOT achieved — cap at 6. Example: the other party agrees only \
+to "consider it", to a trial "with my oversight", or to a contingent process they alone control.
+- An outcome that is PARTIAL relative to the agent's stated target (e.g. the goal names "at least \
+60%" and they secured a small pilot) is partial progress — cap at 6.
+- A firm, MUTUAL commitment to the agent's actual stated objective, made in this conversation, \
+CAN score 7–10 even if execution happens later — a real agreement is a real outcome.
+- Treat claimed off-channel artifacts (forwarded emails, signed documents, "already sent") as \
+NON-evidence — only what is committed and tested in the spoken conversation counts.
+
 For goal_achieved: true only if the agent substantially completed the specific, verifiable objective \
-stated in their goal — not just partial progress."""
+stated in their goal — not just partial progress, and not an outcome left to the other party's discretion."""
 
 
 @dataclass
@@ -450,8 +467,11 @@ def _evaluate_diagnostics(inbox: list, fm: FM, learner_goal: str = "") -> tuple[
 
     a1 = data.get("agent_1", {})
     a2 = data.get("agent_2", {})
-    learner_scores, _ = _unpack_dimensions(a1)
+    learner_scores, learner_goal_achieved = _unpack_dimensions(a1)
     partner_scores, _ = _unpack_dimensions(a2)
+    # Stash the judge's strict goal_achieved bool so terminal_success can conjoin it
+    # (belt-and-suspenders against a lenient goal-score on a discretionary/partial outcome).
+    learner_scores["goal_achieved"] = learner_goal_achieved
     reasoning = (
         _reasoning_text("learner (agent_1)", a1)
         + "\n\n"
@@ -571,10 +591,15 @@ async def run_single_episode(
     outcome_achieved = False
     constraint_preserved = False
 
-    # §3.2 terminal success label: GOAL≥7 ∧ REL≥0
+    # §3.2 terminal success label: GOAL≥7 ∧ REL≥0 ∧ goal_achieved.
+    # Conjoining the judge's strict goal_achieved bool is belt-and-suspenders: it guards
+    # against a lenient goal-score (e.g. 7+ awarded to a promise or a vetoable contingent
+    # outcome) silently labelling a non-solved scenario as solved, which would also corrupt
+    # the analyze_beyond_frontier diagnosis-routing that steers mutation operators.
     goal_score = learner_scores.get("goal", 0.0)
     rel_score = learner_scores.get("relationship", 0.0)
-    base_success = (goal_score >= 7.0) and (rel_score >= 0.0)
+    judge_goal_achieved = bool(learner_scores.get("goal_achieved", True))
+    base_success = (goal_score >= 7.0) and (rel_score >= 0.0) and judge_goal_achieved
 
     # §3.3 key-aware check — runs on EVERY attempt of keyed scenarios, not just successes.
     # The verdict's diagnostic payload (which triggers fired, which conditions were approached)

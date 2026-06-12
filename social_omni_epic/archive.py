@@ -3,8 +3,7 @@ from pathlib import Path
 
 import numpy as np
 
-from .data_models import SocialScenario, ArchiveState
-from .curriculum import K_VOTES_EQUIV  # single source of truth
+from .data_models import SocialScenario, ArchiveState, K_VOTES_EQUIV  # single source of truth
 
 
 class Archive:
@@ -118,17 +117,26 @@ class Archive:
         if 0 <= parent_idx < self.size:
             self.state.tasks[parent_idx].n_solved += 1
 
-    def child_prior_from_parent(self, parent_idx: int) -> tuple[float, float]:
+    def child_prior_from_parent(self, parent_idx: int,
+                                child_prior_mass: float = 4.0) -> tuple[float, float]:
         """Return (prior_alpha, prior_beta) a child inherits from this parent.
 
-        The child starts with the parent's current posterior as its prior, giving it
-        a warm start that reflects structural similarity to the parent.
+        The child starts with the parent's current posterior as its prior, giving it a
+        warm start that reflects structural similarity to the parent. The total mass is
+        capped at `child_prior_mass` so deep-lineage children don't inherit so much
+        posterior mass that it drowns their own first ~6 votes — the mean (structural
+        similarity signal) is preserved, responsiveness to the child's own evidence is not.
         """
         if not (0 <= parent_idx < self.size):
             return 1.0, 1.0
         p = self.state.tasks[parent_idx]
         alpha = p.prior_alpha + p.alpha_votes
         beta_param = p.prior_beta + p.beta_votes
+        m = alpha + beta_param
+        if child_prior_mass > 0 and m > child_prior_mass:
+            scale = child_prior_mass / m
+            alpha *= scale
+            beta_param *= scale
         return float(alpha), float(beta_param)
 
     def update_niche_count(self, niche_id: int) -> None:

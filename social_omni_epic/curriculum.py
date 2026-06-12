@@ -10,36 +10,51 @@ Used by scripts/run_curriculum.py, scripts/run_debug.py, and scripts/run_phase2.
 """
 from copy import deepcopy
 
-from .data_models import SocialScenario
+from .data_models import SocialScenario, K_VOTES_EQUIV
 from .skills_chronicle import SkillsChronicle
 
-# Equivalent total_votes charged to too_easy children in the Thompson posterior.
-# K=4 episodes × 1.5 vote pairs average = 6 votes. Improved = 0 (solved immediately ⇒
-# no learning evidence), so the anchor is penalised by the full 6 failure-side votes.
-K_VOTES_EQUIV = 6
+# K_VOTES_EQUIV (defined in data_models) = equivalent total_votes charged to too_easy
+# children in the Thompson posterior. Re-exported here for back-compat importers.
 
 
 def run_coherence_gate(
     scenario, coherence_checker, task_gen, fm, config, anchor, iteration,
 ) -> tuple:
-    """Run the coherence check with patch-retry and re-embed. Returns (scenario_or_None, passed)."""
+    """Run the coherence check with patch-retry and re-embed.
+
+    Returns (scenario_or_None, passed, issues) where issues is the list of
+    failure reasons from the last check (empty on pass).
+    """
+    from .tracing_fm import print_info, print_warn
     if not config.get("enable_coherence_check", True):
-        return scenario, True
+        return scenario, True, []
     max_coherence = int(config.get("coherence_max_retries", 2))
-    for _c in range(max_coherence + 1):
+    last_issues: list[str] = []
+    for attempt in range(max_coherence + 1):
         c_result = coherence_checker.check(scenario)
+        last_issues = c_result.issues
         if c_result.passed:
-            return scenario, True
-        scenario = task_gen.patch_scenario(scenario, c_result.issues)
+            if attempt > 0:
+                print_info(f"  coherence: PASS after {attempt} patch(es)")
+            return scenario, True, []
+        is_fm_error = any("FM error" in i or "quarantined" in i for i in last_issues)
+        label = "FM error" if is_fm_error else "issues"
+        print_warn(f"  coherence attempt {attempt}: FAIL ({label}): {last_issues[0][:120]}")
+        if attempt == max_coherence:
+            break
+        scenario = task_gen.patch_scenario(scenario, last_issues)
         if scenario is None:
-            return None, False
+            print_warn(f"  coherence: patch_scenario returned None — aborting")
+            return None, False, last_issues
         scenario.iteration = iteration
         scenario.parent_example_ids = [anchor.id] if anchor else []
         try:
             scenario.embedding = fm.get_embeddings([scenario.to_text_for_embedding()])[0]
-        except Exception:
-            return None, False
-    return scenario, False
+        except Exception as e:
+            print_warn(f"  coherence: re-embed after patch failed: {e}")
+            return None, False, last_issues
+    print_warn(f"  coherence: FAIL after {max_coherence + 1} attempt(s) — dropping candidate")
+    return scenario, False, last_issues
 
 
 def build_episode_inputs(scenario: SocialScenario, scenario_to_sotopia_profiles):
@@ -96,7 +111,7 @@ async def run_episode_k_loop(
     outcome_int: 1=too_easy, 2=frontier_solved, 3=frontier_unsolved, 4=beyond_frontier.
     """
     from .episode_runner import clean_transcript
-    from .lp_judge import compute_lp, LPResult
+    from .lp_judge import compute_lp, LPResult, LPAllErrorsError
 
     K = int(config.get("max_attempts", 4))
     max_entries = int(config.get("chronicle_max_entries", 8))
@@ -269,6 +284,7 @@ async def run_episode_k_loop(
         except Exception as e:
             import traceback
             print(f"    [attempt {attempt}] episode error: {e}\n{traceback.format_exc()}")
+            loop_info["episode_error"] = f"attempt {attempt}: {e}"
             break
 
         transcript = clean_transcript(result.transcript)
@@ -312,6 +328,18 @@ async def run_episode_k_loop(
             )
 
     # ------------------------------------------------------------------ #
+    # Episode-error quarantine: an exception left LP uncomputable           #
+    # ------------------------------------------------------------------ #
+    # If the loop broke on an exception, the learner never solved, and fewer than 2 clean
+    # transcripts exist, LP cannot be computed — do NOT charge the anchor a (0, K) penalty
+    # for an infrastructure failure. Route to quarantine ("discarded"); the runner records
+    # no votes, does not archive, and does not count it toward stopping.N.
+    if loop_info.get("episode_error") and not solved and len(all_transcripts) < 2:
+        loop_info["terminal_state"] = "discarded"
+        loop_info["outcome"] = 0
+        return scenario, "discarded", 0, final_scores, loop_info
+
+    # ------------------------------------------------------------------ #
     # LP computation                                                       #
     # ------------------------------------------------------------------ #
     env_profile_lp, _, learner_goal_lp, _, _ = build_episode_inputs(scenario, scenario_to_sotopia_profiles)
@@ -329,6 +357,14 @@ async def run_episode_k_loop(
             learner_goal=learner_goal_text,
             relational_stakes=relational_stakes,
         )
+    except LPAllErrorsError as e:
+        # Every judge vote errored (even after the one-shot revote) → LP uncomputable.
+        # Quarantine instead of misclassifying as beyond_frontier and charging the anchor.
+        print(f"    [LP] all judge votes errored: {e} → quarantine")
+        loop_info["episode_error"] = f"lp_all_errors: {e}"
+        loop_info["terminal_state"] = "discarded"
+        loop_info["outcome"] = 0
+        return scenario, "discarded", 0, final_scores, loop_info
     except Exception as e:
         print(f"    [LP] compute_lp error: {e}")
         lp_result = LPResult(lp_value=0.0, improved_votes=0, total_votes=0, n_pairs=0)
@@ -336,6 +372,7 @@ async def run_episode_k_loop(
     loop_info["lp_value"] = lp_result.lp_value
     loop_info["lp_votes"] = lp_result.total_votes
     loop_info["lp_improved_votes"] = lp_result.improved_votes
+    loop_info["n_error_votes"] = lp_result.n_error_votes
 
     # ------------------------------------------------------------------ #
     # Classification                                                       #
@@ -354,6 +391,13 @@ async def run_episode_k_loop(
     outcome = 2 if solved else (3 if classification == "frontier" else 4)
     loop_info["terminal_state"] = classification
     loop_info["outcome"] = outcome
+
+    # Beyond-frontier diagnosis for structured relax targeting (pure heuristic, no LLM call).
+    if classification == "beyond_frontier":
+        scenario.beyond_frontier_diagnosis = task_gen.analyze_beyond_frontier(
+            scenario, all_key_checks, all_scores
+        )
+        loop_info["beyond_frontier_diagnosis"] = scenario.beyond_frontier_diagnosis
 
     # ------------------------------------------------------------------ #
     # Final memory synthesis                                               #
