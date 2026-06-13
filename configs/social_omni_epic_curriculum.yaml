@@ -96,6 +96,13 @@ adversarial:
 #   too_easy        → escalate
 #   frontier        → lateral
 #   beyond_frontier → relax
+#
+# anchor_selection: "thompson" (default) | "random" (DOF-1 ablation baseline — uniform anchor
+# selection, posteriors ignored for selection but still recorded). Override on the CLI:
+#   python scripts/run_curriculum.py run_name=gen90_random anchor_selection=random ...
+# Compare the random bank vs the thompson bank on INTRINSIC metrics only (frontier-yield,
+# coverage); do not downstream-eval it. See docs/post_run_experiments.md.
+anchor_selection: thompson
 
 hydra:
   run:
