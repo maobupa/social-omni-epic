@@ -91,13 +91,17 @@ def main() -> int:
     ap.add_argument("--seed", type=int, default=42, help="RNG seed (reproducible)")
     ap.add_argument("--seeds-path", type=Path, default=DEFAULT_SEEDS_PATH,
                     help="Training seeds file whose env_pks are excluded")
+    ap.add_argument("--exclude", type=Path, action="append", default=[],
+                    help="Additional seed files (canonical schema) whose env_pks are "
+                         "ALSO excluded. Repeatable. Use to hold out previously built "
+                         "sets (e.g. the eval-candidate 150) when sampling a fresh set.")
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT)
     args = ap.parse_args()
 
     for p in [DATA_DIR / "environment_profiles.jsonl",
               DATA_DIR / "agent_profiles.jsonl",
               DATA_DIR / "relationship_profiles.jsonl",
-              args.seeds_path]:
+              args.seeds_path, *args.exclude]:
         if not p.exists():
             print(f"ERROR: missing {p}", file=sys.stderr)
             return 1
@@ -115,8 +119,13 @@ def main() -> int:
                 (a1, a2, r.get("background_story", "") or "")
             )
 
-    # Step 2: exclude the training env_pks (the canonical 90).
+    # Step 2: exclude the training env_pks (the canonical 90) + any extra held-out
+    #         sets passed via --exclude (e.g. the eval-candidate 150).
     train_pks = {json.loads(l)["env_pk"] for l in open(args.seeds_path) if l.strip()}
+    for ex_path in args.exclude:
+        ex_pks = {json.loads(l)["env_pk"] for l in open(ex_path) if l.strip()}
+        print(f"  excluding {len(ex_pks)} env_pks from {ex_path}")
+        train_pks |= ex_pks
 
     # Step 3: keep only held-out, runnable envs.
     eligible = []

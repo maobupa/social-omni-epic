@@ -140,6 +140,18 @@ _SYSTEM_CRITIQUE_ALL_SUCCESS = (
     "a learner agent achieved its private social goal by talking with a partner "
     "agent."
 )
+_SYSTEM_CRITIQUE_IMPROVE = (
+    "You are an advanced reasoning agent that can add, edit or remove rules from "
+    "your existing rule set, based on forming new critiques of past social "
+    "interaction episodes. You will be given two previous episodes on the same "
+    "social scenario, in which a learner agent pursued a private social goal by "
+    "talking with a partner agent. In BOTH episodes the learner ultimately FAILED "
+    "to achieve its goal (its SOTOPIA GOAL score stayed below threshold), but in "
+    "one trial it did MEASURABLY BETTER (a higher GOAL score) than the other. "
+    "Identify what the better trial did right that moved it closer and should be "
+    "repeated, AND what was still missing that kept it from succeeding and must "
+    "change. Do NOT treat the better trial as a full success — it fell short too."
+)
 _SYSTEM_REFLECTION = (
     "You will be given a previous episode in which you played a character pursuing "
     "a private social goal in a conversation. You were unsuccessful: you did not "
@@ -167,6 +179,26 @@ Here are the EXISTING RULES:
 {existing_rules}
 
 By examining and contrasting the successful trial with the failed trial, and the list of existing rules, you can perform the following operations: add, edit, remove, or agree so that the new list of rules is GENERAL and HIGH LEVEL critiques that capture how to behave so as to avoid similar failures when encountered with different social scenarios in the future. Have an emphasis on critiquing how to choose better strategy and dialogue moves. Follow the below format:
+
+"""
+    + _FORMAT_RULES_OPERATION_TEMPLATE
+)
+
+_HUMAN_IMPROVE_TEMPLATE = (
+    """Here are the two previous episodes to compare and critique. BOTH fell short of the goal, but one improved on the other:
+SOCIAL SCENARIO:
+{task}
+
+IMPROVED TRIAL (higher GOAL score, but still below threshold):
+{success_history}
+
+WORSE TRIAL:
+{fail_history}
+
+Here are the EXISTING RULES:
+{existing_rules}
+
+By examining and contrasting the improved trial with the worse one, and the list of existing rules, you can perform the following operations: add, edit, remove, or agree so that the new list of rules is GENERAL and HIGH LEVEL critiques capturing BOTH what helped the learner do better AND what was still missing to fully achieve the goal, so they transfer to different social scenarios. Have an emphasis on critiquing how to choose better strategy and dialogue moves. Follow the below format:
 
 """
     + _FORMAT_RULES_OPERATION_TEMPLATE
@@ -440,7 +472,7 @@ def gather_trajectories(
 
 def _critique(
     fm: FM,
-    mode: str,                       # "compare" | "all_success"
+    mode: str,                       # "compare" | "all_success" | "improve"
     existing_rules: list[str],
     rule_count: int,
     max_num_rules: int,
@@ -458,6 +490,12 @@ def _critique(
     if mode == "compare":
         system = _SYSTEM_CRITIQUE_COMPARE
         user = _HUMAN_COMPARE_TEMPLATE.format(
+            task=task, success_history=success_history,
+            fail_history=fail_history, existing_rules=rules_block,
+        )
+    elif mode == "improve":
+        system = _SYSTEM_CRITIQUE_IMPROVE
+        user = _HUMAN_IMPROVE_TEMPLATE.format(
             task=task, success_history=success_history,
             fail_history=fail_history, existing_rules=rules_block,
         )
@@ -481,9 +519,19 @@ def _extract_one_fold(
     max_num_rules: int,
     success_critique_num: int,
     on_log: Optional[Callable[[str], None]] = None,
+    include_frontier_improvements: bool = True,
 ) -> list[tuple[str, int]]:
     """Build a rule list from one set of training task ids — the body of ExpeL
-    create_rules: compare critiques first, then batched success critiques."""
+    create_rules: compare critiques first, then frontier-improvement critiques,
+    then batched success critiques.
+
+    When include_frontier_improvements (default), tasks that NEVER reached a
+    success but whose later attempts improved on attempt 1 (objective GOAL gain)
+    also feed the rule set via an "improve" critique — contrasting the best later
+    (still-failed) attempt against attempt 1. This recovers the frontier-unsolved
+    band that standard ExpeL discards. Tasks with no objective improvement (flat /
+    beyond-frontier) are still excluded. The gate is objective GOAL gain rather
+    than the LP label, to avoid the LP judge's noise."""
     log = on_log or (lambda _m: None)
     rule_items_with_count: list[tuple[str, int]] = []
 
@@ -506,6 +554,41 @@ def _extract_one_fold(
                     list_full=(max_num_rules + 5 <= len(rule_items_with_count)),
                 )
                 log(f"    [compare tid={tid}] -> {len(rule_items_with_count)} rules")
+
+    # ----- Frontier-improvement critiques (never solved, but improved) -----
+    # For tasks with NO success, contrast the best later attempt (higher GOAL,
+    # still below threshold) against attempt 1. Gate on objective GOAL gain so
+    # genuinely flat (beyond-frontier) tasks are skipped.
+    if include_frontier_improvements:
+        for tid in training_ids:
+            if succeeded.get(tid):
+                continue  # has a success -> already covered by compare/all_success
+            fails = failed.get(tid, [])
+            if len(fails) < 2:
+                continue
+            base = min(fails, key=lambda t: t.trial)            # attempt 1
+            later = [t for t in fails if t.trial > base.trial]
+            if not later:
+                continue
+            best = max(later, key=lambda t: t.goal_score)       # best improved attempt
+            if best.goal_score <= base.goal_score:
+                continue  # no objective improvement -> beyond-frontier-like, skip
+            existing = [r for r, _ in rule_items_with_count]
+            llm_out = _critique(
+                fm, "improve", existing,
+                rule_count=len(rule_items_with_count),
+                max_num_rules=max_num_rules,
+                success_history=best.to_critique_block(),
+                fail_history=base.to_critique_block(),
+                task=idx2task[tid],
+            )
+            ops = parse_rules(llm_out)
+            rule_items_with_count = update_rules(
+                rule_items_with_count, ops,
+                list_full=(max_num_rules + 5 <= len(rule_items_with_count)),
+            )
+            log(f"    [improve tid={tid}] base_goal={base.goal_score:.1f} "
+                f"best_goal={best.goal_score:.1f} -> {len(rule_items_with_count)} rules")
 
     # ----- Success critiques (batches of successes) -----
     all_success = [
@@ -550,6 +633,7 @@ def extract_insights(
     k_folds: int = 1,
     seed: int = 42,
     on_log: Optional[Callable[[str], None]] = None,
+    include_frontier_improvements: bool = True,
 ) -> dict:
     """Run ExpeL insight extraction.
 
@@ -586,7 +670,8 @@ def extract_insights(
     if k_folds <= 1:
         log("Extracting insights on ALL training tasks (single fold)...")
         items = _extract_one_fold(all_ids, succeeded, failed, idx2task, fm,
-                                  max_num_rules, success_critique_num, on_log)
+                                  max_num_rules, success_critique_num, on_log,
+                                  include_frontier_improvements)
         result["all"] = {
             "rules": [r for r, _ in items],
             "rule_items_with_count": [[r, c] for r, c in items],
@@ -599,7 +684,8 @@ def extract_insights(
         log(f"Extracting insights for FOLD {k} (held out {len(eval_idxs)} tasks)...")
         training_ids = [i for i in all_ids if i not in set(eval_idxs)]
         items = _extract_one_fold(training_ids, succeeded, failed, idx2task, fm,
-                                  max_num_rules, success_critique_num, on_log)
+                                  max_num_rules, success_critique_num, on_log,
+                                  include_frontier_improvements)
         folds.append({
             "eval_idxs": list(eval_idxs),
             "rules": [r for r, _ in items],
@@ -608,7 +694,8 @@ def extract_insights(
     result["folds"] = folds
     # Also provide a combined set trained on everything, for external eval reuse.
     items_all = _extract_one_fold(all_ids, succeeded, failed, idx2task, fm,
-                                  max_num_rules, success_critique_num, on_log)
+                                  max_num_rules, success_critique_num, on_log,
+                                  include_frontier_improvements)
     result["all"] = {
         "rules": [r for r, _ in items_all],
         "rule_items_with_count": [[r, c] for r, c in items_all],

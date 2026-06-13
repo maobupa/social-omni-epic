@@ -220,6 +220,7 @@ def stage_extract(args, fm, out_dir, pool=None):
         max_num_rules=args.max_num_rules,
         success_critique_num=args.success_critique_num,
         k_folds=args.k_folds, seed=args.seed,
+        include_frontier_improvements=args.include_frontier_improvements,
         on_log=lambda m: (print(m), log_lines.append(m)),
     )
     (out_dir / "insights.json").write_text(json.dumps(insights, indent=2))
@@ -387,6 +388,12 @@ def main():
     ap.add_argument("--k-folds", type=int, default=1,
                     help="1 = train on all (external eval); >=2 = ExpeL k-fold CV")
     ap.add_argument("--seed", type=int, default=42)
+    ap.add_argument("--standard-extract", dest="include_frontier_improvements",
+                    action="store_false", default=True,
+                    help="Standard ExpeL extraction only (success-vs-failure compare + "
+                         "success batches). Default ALSO includes frontier-improvement "
+                         "critiques: never-solved tasks whose later attempts improved "
+                         "(objective GOAL gain) on attempt 1.")
     # eval
     ap.add_argument("--include-fewshots", action="store_true", default=True,
                     help="Full-ExpeL: inject retrieved few-shot trajectories (default on)")
