@@ -591,7 +591,14 @@ def main(config: DictConfig) -> None:
     metrics_path = run_dir / "metrics.json"
     metrics_log: list[dict] = json.loads(metrics_path.read_text()) if metrics_path.exists() else []
 
+    # Anchor selection mode: "thompson" (default) or "random" (the DOF-1 ablation baseline).
+    # Override on the CLI with anchor_selection=random. See docs/post_run_experiments.md §3.
+    anchor_selection_mode = str(config.get("anchor_selection", "thompson")).lower()
+    if anchor_selection_mode not in ("thompson", "random"):
+        anchor_selection_mode = "thompson"
+
     print(f"Run: iterations={config.iterations} | batch_size={batch_size} | "
+          f"anchor_selection={anchor_selection_mode} | "
           f"generated_so_far={generated_count} | stopping_N={stopping_N} | archive={archive.size}")
 
     async def _run_all() -> None:
@@ -611,7 +618,7 @@ def main(config: DictConfig) -> None:
             current_batch = min(batch_size, config.iterations - iterations_done)
             batch_anchor_indices: list[int] = []
             for b in range(current_batch):
-                idx = archive.thompson_select()
+                idx = archive.select_anchor(anchor_selection_mode)
                 archive.record_selection(idx, global_iter + b)
                 batch_anchor_indices.append(idx)
 
@@ -720,7 +727,12 @@ def main(config: DictConfig) -> None:
             _write_lineage(run_dir, archive)
             _write_compute_report(run_dir, fms)
 
-            # Direction-sanity registered stopping rule (reads the summary.json just flushed above).
+            # Direction-sanity monitor (reads the summary.json just flushed above).
+            # WARN-ONLY (Patch 10 §C downgraded from hard-halt per run-owner preference): the
+            # check fired on razor-thin margins (e.g. 0.286 vs 0.25 ≈ one child), so it now logs
+            # the trend and flags the gross-failure signature but NEVER stops the run. The
+            # per-operator classification table in summary.json remains the post-hoc direction
+            # evidence; halting was only a compute-saving safety, not required for the claim.
             ds = _direction_sanity(run_dir)
             print_info(
                 f"direction-sanity: escalate too_easy={ds['escalate_too_easy']}/{ds['escalate_total']} "
@@ -729,13 +741,11 @@ def main(config: DictConfig) -> None:
             )
             if ds["halt"]:
                 print_warn(
-                    f"DIRECTION-SANITY HALT: escalate too_easy-rate ({ds['escalate_rate']}) > lateral "
-                    f"({ds['lateral_rate']}) with {ds['escalate_too_easy']} too_easy escalate children — "
-                    "escalate is not escalating. Stopping (registered rule). Inspect summary.json; "
-                    "the run is losslessly resumable from archive_latest.json (re-run the same "
-                    "run_name to continue if this is judged noise)."
+                    f"direction-sanity FLAG (not halting): escalate too_easy-rate ({ds['escalate_rate']}) > "
+                    f"lateral ({ds['lateral_rate']}) with {ds['escalate_too_easy']} too_easy escalate "
+                    "children — escalate may be under-escalating. Continuing; review the per-operator "
+                    "split in summary.json."
                 )
-                break
 
         pbar.close()
 
