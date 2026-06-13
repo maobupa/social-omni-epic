@@ -49,7 +49,7 @@ except Exception:
 
 from social_omni_epic.fm import FM
 from social_omni_epic.seeds import load_sotopia_seeds
-from social_omni_epic.episode_runner import run_single_episode
+from social_omni_epic.episode_runner import run_single_episode, clean_transcript
 from social_omni_epic.sotopia_bridge import scenario_to_sotopia_profiles
 from social_omni_epic.expel_baseline import (
     trajectories_from_dict,
@@ -115,9 +115,17 @@ def _make_expel_builder(bank_dir: Path, fm: FM, top_k: int):
 # --------------------------------------------------------------------------- #
 
 async def _run_one(scenario, memory_prompt, fm, fm_judge, args) -> dict:
-    """Run one eval episode for one condition; return the learner's 7-dim scores + meta."""
+    """Run one eval episode for one condition; return the learner's 7-dim scores + meta.
+
+    The record is intentionally verbose for inspection: it carries the full scenario
+    text, both agent goals, the EXACT memory injected into the learner, the cleaned
+    transcript, and the judge's scoring rationale. `--no-transcript`/`--no-memory`
+    trim the heavy fields if you only need the numbers.
+    """
     env_profile, agent_profiles = scenario_to_sotopia_profiles(scenario)
-    learner_goal = scenario.agent_goals[0] if scenario.agent_goals else ""
+    goals = scenario.agent_goals or []
+    learner_goal = goals[0] if goals else ""
+    partner_goal = goals[1] if len(goals) > 1 else ""
     result = await run_single_episode(
         env_profile=env_profile,
         agent_profiles=agent_profiles,
@@ -134,18 +142,54 @@ async def _run_one(scenario, memory_prompt, fm, fm_judge, args) -> dict:
         fm_judge=fm_judge,           # cross-lab judge (mandatory)
     )
     scores = result.learner_scores or {}
-    return {
+    transcript = clean_transcript(result.transcript or [])
+    rec = {
         "scenario_id": scenario.id,
         "source_env_id": scenario.source_env_id,
+        "source": getattr(scenario, "interaction_type", None) or getattr(scenario, "source", None),
+        "scenario_title": getattr(scenario, "scenario_title", None),
+        # --- what was actually evaluated ---
+        "scenario": scenario.scenario,
+        "learner_goal": learner_goal,
+        "partner_goal": partner_goal,
+        "agent_names": [getattr(p, "first_name", None) for p in agent_profiles],
+        # --- scores ---
         "scores": {k: scores.get(k) for k in SOTOPIA_DIMS},
         "overall_score": scores.get("overall_score"),
         "goal_achieved": bool(scores.get("goal_achieved", False)),
         "terminal_success": bool(getattr(result, "terminal_success", False)),
         "success_goal_rel": (float(scores.get("goal", 0.0)) >= GOAL_THRESHOLD
                              and float(scores.get("relationship", 0.0)) >= REL_THRESHOLD),
+        "partner_scores": result.partner_scores or {},
+        # --- judge rationale + key check ---
+        "evaluation_reasoning": getattr(result, "evaluation_reasoning", ""),
+        "key_check_result": getattr(result, "key_check_result", None),
+        # --- meta ---
         "memory_chars": len(memory_prompt or ""),
         "num_turns": getattr(result, "num_turns", None),
     }
+    if not args.no_memory:
+        rec["memory_prompt"] = memory_prompt or ""
+    if not args.no_transcript:
+        rec["transcript"] = transcript
+    return rec
+
+
+def _echo_episode(name: str, rec: dict) -> None:
+    """Pretty-print the full scenario, injected memory, and transcript to the console."""
+    bar = "-" * 72
+    print(f"\n{bar}\n[{name}] {rec.get('scenario_id')}  ({rec.get('source')})")
+    print(f"  GOALS  learner: {rec.get('learner_goal')}")
+    print(f"         partner: {rec.get('partner_goal')}")
+    if rec.get("memory_prompt"):
+        print(f"  MEMORY INJECTED ({rec.get('memory_chars')} chars):\n{rec['memory_prompt']}")
+    # Same framing as run_debug.py: "[T{turn}] {speaker}: {content}" over a clean_transcript.
+    for t in rec.get("transcript", []):
+        spk = t.get("speaker", t.get("sender", "?"))
+        print(f"    [T{t.get('turn', '?')}] {spk}: {t.get('content', '')}")
+    if rec.get("evaluation_reasoning"):
+        print(f"  JUDGE: {rec['evaluation_reasoning']}")
+    print(bar)
 
 
 async def run_condition(name, scenarios, builder, fm, fm_judge, args, out_dir: Path) -> list[dict]:
@@ -158,15 +202,27 @@ async def run_condition(name, scenarios, builder, fm, fm_judge, args, out_dir: P
     async def _slot(scn):
         ep_path = cond_dir / f"{scn.id}.json"
         if ep_path.exists() and not args.overwrite:
+            print(f"  [{name}] {scn.id[:8]} CACHED (skip) — {ep_path}")
             return json.loads(ep_path.read_text())
         async with sem:
+            mem = builder(scn)
+            print(f"  [{name}] {scn.id[:8]} START  src={getattr(scn, 'interaction_type', '?')}  "
+                  f"mem_chars={len(mem or '')}")
+            print(f"      scenario: {scn.scenario[:120]}")
             try:
-                rec = await _run_one(scn, builder(scn), fm, fm_judge, args)
+                rec = await _run_one(scn, mem, fm, fm_judge, args)
             except Exception as e:
                 import traceback
                 print(f"  [{name}] {scn.id[:8]} ERROR: {e}\n{traceback.format_exc()[:400]}")
                 rec = {"scenario_id": scn.id, "error": str(e), "scores": {}}
             ep_path.write_text(json.dumps(rec, indent=2, default=str))
+            if not rec.get("error"):
+                sc = rec.get("scores", {})
+                print(f"  [{name}] {scn.id[:8]} DONE   GOAL={sc.get('goal')} REL={sc.get('relationship')} "
+                      f"overall={rec.get('overall_score')} turns={rec.get('num_turns')} "
+                      f"success={rec.get('success_goal_rel')} → {ep_path}")
+                if args.verbose:
+                    _echo_episode(name, rec)
             return rec
 
     print(f"\n=== Condition: {name} ({len(scenarios)} scenarios, concurrency={args.concurrency}) ===")
@@ -240,7 +296,16 @@ def main():
     ap.add_argument("--max-turns", type=int, default=20)
     ap.add_argument("--concurrency", type=int, default=4)
     ap.add_argument("--limit", type=int, default=None, help="limit eval scenarios (debug)")
+    ap.add_argument("--seed", type=int, default=None,
+                    help="random seed for sampling --limit scenarios; if unset, the first --limit "
+                         "in file order are used (so different seeds pick different scenarios)")
     ap.add_argument("--overwrite", action="store_true", help="re-run episodes even if cached on disk")
+    ap.add_argument("--verbose", action="store_true",
+                    help="echo full scenario, injected memory, and transcript to the console per episode")
+    ap.add_argument("--no-transcript", action="store_true",
+                    help="omit the transcript from per-episode JSON (smaller files)")
+    ap.add_argument("--no-memory", action="store_true",
+                    help="omit the injected memory_prompt from per-episode JSON")
     ap.add_argument("--out", default="results/eval_comparison")
     args = ap.parse_args()
 
@@ -258,8 +323,21 @@ def main():
     fm = FM(model=args.learner_model)
     fm_judge = FM(model=args.judge_model)
 
-    scenarios = load_sotopia_seeds(args.eval_seeds, limit=args.limit, both_perspectives=False)
-    print(f"Loaded {len(scenarios)} held-out eval scenarios from {args.eval_seeds}")
+    # Load the FULL set, then sample. `--seed` randomizes which --limit scenarios are picked
+    # (so reruns don't always hit the same first few); unset = deterministic first-N file order.
+    scenarios = load_sotopia_seeds(args.eval_seeds, limit=None, both_perspectives=False)
+    if args.limit is not None and args.limit < len(scenarios):
+        if args.seed is not None:
+            import random
+            total = len(scenarios)
+            picked = random.Random(args.seed).sample(scenarios, args.limit)
+            picked.sort(key=lambda s: s.id)  # stable on-disk/episode ordering within the sample
+            scenarios = picked
+            print(f"Sampled {len(scenarios)}/{total} eval scenarios with seed={args.seed}")
+        else:
+            scenarios = scenarios[:args.limit]
+    print(f"Loaded {len(scenarios)} held-out eval scenarios from {args.eval_seeds}"
+          + (f" (seed={args.seed})" if args.seed is not None else ""))
 
     # Build the memory builder for each requested condition (skip 'ours' if its bank isn't extracted).
     builders: dict = {}
@@ -285,6 +363,7 @@ def main():
     summary = summarize(per_condition)
     summary["config"] = {
         "eval_seeds": args.eval_seeds, "n_scenarios": len(scenarios),
+        "limit": args.limit, "sample_seed": args.seed,
         "learner_model": args.learner_model, "partner_model": args.partner_model,
         "judge_model": args.judge_model, "top_k": args.top_k, "max_turns": args.max_turns,
         "base_bank": args.base_bank, "gen_bank": args.gen_bank,
