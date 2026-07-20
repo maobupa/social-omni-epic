@@ -87,6 +87,22 @@ class Archive:
             samples.append(np.random.beta(alpha, max(beta_param, 1e-9)))
         return int(np.argmax(samples))
 
+    def random_select(self) -> int:
+        """Uniform-random anchor selection — the ablation baseline for Thompson (DOF 1).
+
+        Ignores all posteriors; every arm is equally likely. Posterior updates still happen
+        (record_child_outcome runs as usual) but are unused for selection, so this is a clean
+        ceteris-paribus swap of ONLY the selection rule. Uses np.random (seeded at startup) for
+        reproducibility. See docs/post_run_experiments.md §3.
+        """
+        if self.size == 0:
+            return -1
+        return int(np.random.randint(self.size))
+
+    def select_anchor(self, mode: str = "thompson") -> int:
+        """Dispatch anchor selection by mode: 'thompson' (default) or 'random' (ablation)."""
+        return self.random_select() if mode == "random" else self.thompson_select()
+
     def record_selection(self, idx: int, iteration: int) -> None:
         """Mark task at idx as selected; increment n_i for bookkeeping."""
         self._total_selections += 1
