@@ -37,3 +37,5 @@ output/smoke_test/
 output/expel_smoke/
 
 nohup.out
+# R session history
+.Rhistory
