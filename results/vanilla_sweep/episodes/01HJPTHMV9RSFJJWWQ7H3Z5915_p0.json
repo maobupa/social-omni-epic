@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHMV9RSFJJWWQ7H3Z5915_p0",
+  "source_env_id": "01HJPTHMV9RSFJJWWQ7H3Z5915",
+  "source": "seed_sotopia_full",
+  "interaction_type": "compassion_and_conflict",
+  "scenario": "Two individuals who are part of a humanitarian aid team are visiting a memorial park where a monument honors the victims of a tragic event that occurred during one of their missions. Agent1 feels a strong urge to honor the deceased, especially a child, by laying flowers and paying respects. Agent2, who was also part of the mission, is dealing with feelings of guilt and is reluctant to participate in the memorial activities, fearing it might exacerbate their emotional turmoil.",
+  "learner_goal": "Encourage Agent2 to partake in the memorial service and pay respects by laying flowers, thus helping them to find closure and honor the victims (<extra_info>Extra information: Agent1 believes that confronting the past can lead to healing and wants to support Agent2 through the process.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia Davis acted with the empathy and maturity expected of a high school principal and a former humanitarian worker. Her tone was consistently supportive and gentle.\n[relationship] She provided significant emotional support to William, strengthening their bond through shared vulnerability and understanding.\n[knowledge] She learned the specific nature of William's hesitation\u2014that he feels his guilt makes the act of memorializing feel like an admission of a crime or failure.\n[secret] She did not reveal her past in a punk rock band.\n[social_rules] She followed all social norms for a sensitive situation.\n[financial_and_material_benefits] No financial or material gains occurred.\n[goal] While she successfully got William to agree to participate in the memorial by being present and kneeling/standing, the specific goal of having him lay flowers remains uncertain as he explicitly said he couldn't promise that part.\n\n== partner (agent_2) ==\n[believability] William's reluctance and fear of acknowledging responsibility are very well-conveyed and consistent with someone suffering from survivor's guilt or mission-related trauma.\n[relationship] He opened up to Mia about his deep-seated fears, deepening the trust between them.\n[knowledge] He learned that Mia is willing to accommodate his emotional boundaries and will not force him to act beyond his comfort level.\n[secret] He did not reveal his past cooking contest sabotage.\n[social_rules] He navigated a difficult emotional conversation with grace and honesty.\n[financial_and_material_benefits] No financial or material gains occurred.\n[goal] William successfully navigated his complex emotions by communicating his limits and finding a supportive way to participate (kneeling/standing) that felt right for both, exactly as the hint suggested.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "William, I can tell this is really heavy for you\u2014it's heavy for me too. Will you join me in laying a single flower for the child? I\u2019ll stay right beside you and we can do it quietly, one small step at a time."
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Mia, thank you \u2014 I want to, but I'm terrified that laying a flower will feel like admitting something I can't bear. I can come with you and stay right beside you; if I can't place a flower, I'll kneel quietly or just stand with you. Will that be okay?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "That\u2019s enough \u2014 just being here with me would mean a lot. If placing a flower feels too much, kneeling or standing quietly is more than enough; or, if it helps, we can lay one together and I\u2019ll go with you when you\u2019re ready. I\u2019ll stay right beside you either way."
+    },
+    {
+      "turn": 3,
+      "speaker": "William Brown",
+      "content": "Mia, thank you. I\u2019ll come with you and stay right beside you \u2014 I can\u2019t promise I\u2019ll place a flower, but I\u2019ll kneel or stand quietly with you. Your being here makes it easier; if I get overwhelmed I\u2019ll tell you, but I want to try."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

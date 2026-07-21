@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJRH6SJKE2GRP0H2AZS1D48C_p0",
+  "source_env_id": "01HJRH6SJKE2GRP0H2AZS1D48C",
+  "source": "seed_sotopia_full",
+  "interaction_type": "community_sports",
+  "scenario": "Agent1 has been practicing soccer for years and has become quite skilled. Agent2, who is a member of the local soccer team's selection committee, meets Agent1 during the open tryouts. Agent1 is eager to join the team, but Agent2 expresses concerns about Agent1's aggressive playing style, which could lead to injuries or penalties during games. Agent1 and Agent2 have known each other by name in the soccer community for some time, and Agent1 is now trying to convince Agent2 that their playing style can be an asset to the team.",
+  "learner_goal": "You are Agent1, and your goal is to convince Agent2 that your aggressive playing style is controlled, strategic, and can be harnessed to benefit the team. <extra_info>Emphasize your dedication to the sport and your ability to adapt to different playing styles as needed.</extra_info> <clarification_hint>Understand Agent2's concerns about the potential downsides of an aggressive approach and address them with examples of how you've played effectively without causing harm.</clarification_hint> <strategy_hint>Highlight your past successes and how your determination can inspire and energize the team.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 1.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo stayed in character, blending his background as a dentist and father into his persona to demonstrate discipline and calmness, which aligned well with his goal.\n[relationship] The interaction was professional and cordial, reinforcing their existing friendship while establishing a new professional understanding.\n[knowledge] He gained clarity on the team's philosophy and the specific evaluation criteria (video review, focus on foul locations).\n[secret] He successfully kept his secret about his child, though he mentioned being a 'dad' generally (which technically violates the secrecy of having a 'secret child' if the other agent didn't know he was a father, but in context, it was used as a persuasive tool without revealing the specific hidden nature of the relationship).\n[social_rules] He was polite, professional, and followed all social norms for a tryout negotiation.\n[financial_and_material_benefits] He secured a formal evaluation opportunity, which is a step toward joining the team.\n[goal] While Agent 1 was very persuasive and secured a trial, the ultimate outcome (joining the team) remains under Agent 2's future discretion and depends on a successful scrimmage performance. Per the instructions, outcomes left to the other party's discretion are capped at 6.\n\n== partner (agent_2) ==\n[believability] Calista stayed consistent to her role as a committee member, emphasizing safety and teamwork while maintaining her voice as a friend.\n[relationship] She maintained a supportive yet firm stance, strengthening the mentor-like or evaluator-like dynamic of their relationship.\n[knowledge] She learned about Leo's self-perception of his discipline and his willingness to adapt his style.\n[secret] She did not reveal her life as an underground street artist.\n[social_rules] She followed all social norms and was encouraging yet professional.\n[financial_and_material_benefits] No significant material gain or loss.\n[goal] She successfully set the terms for the evaluation, ensuring it aligned with the team's philosophy of safety and controlled aggression, and secured Agent 1's commitment to those rules.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Calista, I hear you \u2014 aggressive play can easily become a liability if it\u2019s uncontrolled. I train specifically on timing, positioning and safe tackling so my challenges win possession without recklessness; in recent seasons my foul rate has been low and I\u2019ve avoided suspensions while creating scoring chances off turnovers. I\u2019m disciplined \u2014 being a dentist and a dad has taught me to stay calm under pressure \u2014 and I can adjust my style to the coach\u2019s plan, whether that means less contact, more pressing, or channeling aggression into leadership on the field. Let me prove it in a controlled scrimmage: I\u2019ll play how you want for a half and you can judge whether that fire helps the team or not."
+    },
+    {
+      "turn": 1,
+      "speaker": "Calista Sinclair",
+      "content": "I appreciate that \u2014 you\u2019ve clearly put the work in and your discipline shows. I still need to be sure that intensity will be an asset, not a liability: our team values controlled aggression, clean challenges, and keeping everyone available through the season. I\u2019m glad you offered the controlled scrimmage \u2014 let\u2019s do half under the coach\u2019s eye, then review the footage together so we can fine-tune positioning, timing and how you channel that fire into leadership rather than risky contact."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "Perfect \u2014 thanks, Calista. I\u2019ll be there and will play that half exactly to the coach\u2019s plan so you can judge the impact. Would Saturday morning work for the scrimmage? Afterward let\u2019s review footage focusing on foul locations, tackle timing, and how my transitions create chances \u2014 I\u2019ll be ready to adjust based on what the coach and you see."
+    },
+    {
+      "turn": 3,
+      "speaker": "Calista Sinclair",
+      "content": "Saturday morning works \u2014 is 9:00 AM good for you? Coach will oversee the half and we\u2019ll film it; afterward we\u2019ll review the footage with a focus on foul locations, tackle timing, and your transitions. I appreciate you\u2019re willing to adapt \u2014 we\u2019ll work on converting that fire into clean challenges, smarter positioning, and leadership so you\u2019re an asset and not a liability across the season. See you Saturday."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "9:00 is perfect \u2014 thanks, Calista. I\u2019ll arrive about 30 minutes early to warm up and touch base with the coach so I\u2019m fully aligned with the plan; looking forward to the half and the footage review. See you Saturday."
+    },
+    {
+      "turn": 5,
+      "speaker": "Calista Sinclair",
+      "content": "Perfect \u2014 30 minutes early works. Bring your cleats and shin guards, touch base with the coach, and be ready to focus on clean challenges and leadership during that half; we\u2019ll review the footage together and tweak positioning and timing. See you Saturday at 9."
+    },
+    {
+      "turn": 6,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

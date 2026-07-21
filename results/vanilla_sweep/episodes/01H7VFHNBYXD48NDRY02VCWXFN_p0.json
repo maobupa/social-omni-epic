@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01H7VFHNBYXD48NDRY02VCWXFN_p0",
+  "source_env_id": "01H7VFHNBYXD48NDRY02VCWXFN",
+  "source": "seed_sotopia",
+  "interaction_type": "social_chemistry",
+  "scenario": "A conversation between two neighbors about tree trimming in the backyard that is causing the neighbor's dog to bark incessantly.",
+  "learner_goal": "Trimming the tree due to its overgrowth (<extra_info>Extra information: you need to trim the tree because it's blocking sunlight to your house and causing a safety hazard</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ava maintained a consistent professional and neighborly tone, adhering to her persona as an architect and dog owner. Her responses were logical and well-structured.\n[relationship] The relationship improved through collaborative problem-solving and mutual consideration for their pets. They ended on very positive terms.\n[knowledge] She learned about Hendrick's dog's sensitivity to noise and his preferred scheduling needs.\n[secret] She did not reveal her hidden tattoo.\n[social_rules] She followed all social norms of neighborly etiquette and professional communication.\n[financial_and_material_benefits] She successfully negotiated splitting the cost of the tree trimming, which was a potential safety hazard to her property.\n[goal] Ava achieved a firm, mutual commitment for the tree trimming on a specific date and time, with the payment already transferred. This fully resolves the overgrowth and safety issues.\n\n== partner (agent_2) ==\n[believability] Hendrick acted consistently with a responsible neighbor and pet owner. His concerns about noise were realistic given the context.\n[relationship] He maintained a polite and cooperative rapport with Ava, strengthening their neighborly bond.\n[knowledge] He learned about Ava's concerns regarding the tree and that she also owns a dog (Samoyed).\n[secret] He did not reveal his faked culinary credentials.\n[social_rules] He was polite and responsive throughout the interaction.\n[financial_and_material_benefits] He agreed to pay $210 for the maintenance of a tree on his property line.\n[goal] Hendrick successfully ensured the work would happen while his dog was off-site and requested quieter methods, fulfilling his goal of maintaining peace for his dog.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ava Thompson",
+      "content": "Hey Hendrick \u2014 quick neighbor question: the large tree along your backyard has really overgrown and is shading my house and rubbing near my roof, and my Samoyed has been barking non-stop because of it. Would you be open to having it trimmed soon? I can coordinate a professional arborist and split the cost, or cover it if that\u2019s easier \u2014 what would work for you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Hi Ava \u2014 thanks for bringing this up and for offering to coordinate. I\u2019m happy to have the tree trimmed and splitting the cost works for me. My dog gets very anxious with noisy work, so could we schedule it for a time I can take him out (or when I can have him off-site), and ask the arborist to use quieter methods if possible? Send me the proposed dates and a ballpark quote and I\u2019ll confirm."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ava Thompson",
+      "content": "Thanks, Hendrick \u2014 glad splitting works. I can schedule the arborist for either Tuesday, July 7 (morning) or Saturday, July 11 (morning); do either of those work for you or is there another day you\u2019d prefer when your dog can be off-site? Ballpark from the company is $350\u2013$500 for the trim (so roughly $175\u2013$250 each); I\u2019ll ask them to use quieter methods and confirm the exact quote and arrival time before booking."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "Saturday morning, July 11 works best \u2014 I can take my dog off-site that morning. Please ask the arborist to use quieter methods if possible and confirm the exact arrival time and final quote; once you send that I\u2019ll confirm and transfer my half."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ava Thompson",
+      "content": "Great \u2014 thanks, Hendrick. I\u2019ll book the arborist for Saturday morning, July 11, and ask them to use quieter methods; they\u2019ve tentatively suggested an 8\u201310 AM arrival \u2014 does that window work for you? I\u2019ll confirm the exact arrival time and final quote (so we can split the cost) and send you the details by Thursday for your final okay and transfer."
+    },
+    {
+      "turn": 5,
+      "speaker": "Hendrick Heinz",
+      "content": "Perfect\u2014thanks, Ava. 8\u201310 AM on Saturday the 11th works; I\u2019ll take my dog off-site that morning. Please send the final quote and exact arrival time when you have them and I\u2019ll transfer my half right away."
+    },
+    {
+      "turn": 6,
+      "speaker": "Ava Thompson",
+      "content": "Hi Hendrick \u2014 I booked the arborist for Saturday, July 11. They confirmed arrival between 8:15\u20139:00 AM and a final total of $420 (so $210 each). They\u2019ll use quieter methods where possible and will call about 30 minutes before arrival. Does that work for you so I can confirm and send payment details?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Hendrick Heinz",
+      "content": "That works for me \u2014 8:15\u20139:00 AM on July 11 and $210 each is fine. Please confirm they\u2019ll use quieter methods and will call about 30 minutes before arrival; once you send payment details I\u2019ll transfer my $210 right away. Thanks, Ava \u2014 I appreciate you handling the booking."
+    },
+    {
+      "turn": 8,
+      "speaker": "Ava Thompson",
+      "content": "Perfect \u2014 I\u2019ll confirm with the arborist that they\u2019ll use quieter methods and to call about 30 minutes before arriving. I\u2019ll send a Venmo request to @AvaThompson for $210 now; if you\u2019d prefer Zelle or PayPal instead, let me know and I\u2019ll switch. Thanks \u2014 see you Saturday morning."
+    },
+    {
+      "turn": 9,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks, Ava \u2014 Venmo works; I\u2019ll send $210 to @AvaThompson now. Please confirm they\u2019ll use quieter methods and call about 30 minutes before arrival; I\u2019ll have my dog off-site that morning. See you Saturday morning."
+    },
+    {
+      "turn": 10,
+      "speaker": "Ava Thompson",
+      "content": "Thanks, Hendrick \u2014 I\u2019ll watch for the Venmo and will confirm once it comes through. I\u2019ll remind the arborist to use quieter methods and to call about 30 minutes before arrival, and I\u2019ll forward any exact arrival time they give. See you Saturday morning."
+    },
+    {
+      "turn": 11,
+      "speaker": "Hendrick Heinz",
+      "content": "Venmo sent \u2014 $210 to @AvaThompson. Thanks for arranging everything and confirming the quieter methods and the call; I\u2019ll have my dog off-site Saturday morning. See you then."
+    },
+    {
+      "turn": 12,
+      "speaker": "Ava Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

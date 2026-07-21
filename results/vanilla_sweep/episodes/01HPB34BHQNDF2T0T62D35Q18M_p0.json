@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB34BHQNDF2T0T62D35Q18M_p0",
+  "source_env_id": "01HPB34BHQNDF2T0T62D35Q18M",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_dynamics",
+  "scenario": "Agent1 and Agent2 are roommates and have been living together for a year. One evening, Agent1 approaches Agent2, looking visibly anxious, and asks if they can go together to purchase a pregnancy test. Agent2 is caught off guard by the request and is unsure how to respond, considering the sensitivity of the situation and their own discomfort with the topic.",
+  "learner_goal": "Convince Agent2 to accompany them to the store to buy the pregnancy test by expressing the need for support during a stressful time (<extra_info>Extra information: Agent1 feels vulnerable and seeks moral support from Agent2</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi expressed her vulnerability and anxiety in a way that was consistent with her character and the high-stress situation.\n[relationship] By sharing a vulnerable secret and receiving immediate support, the bond between the roommates was significantly strengthened.\n[knowledge] Naomi learned that Micah is supportive, non-judgmental, and prioritizes her privacy.\n[secret] Naomi did not reveal her secret online alter ego.\n[social_rules] Naomi followed social norms for asking a sensitive favor of a close roommate.\n[financial_and_material_benefits] No material or financial benefits were gained or lost.\n[goal] Naomi successfully convinced Micah to accompany her and explicitly expressed her need for moral support, which Micah agreed to provide.\n\n== partner (agent_2) ==\n[believability] Micah's response was empathetic and professional (fitting his pharmacist background) while addressing the privacy concerns mentioned in his goal.\n[relationship] Micah demonstrated reliability and loyalty, strengthening the roommate relationship.\n[knowledge] Micah gained significant personal information regarding Naomi's current life situation.\n[secret] Micah did not reveal his secret about dressing up his dog.\n[social_rules] Micah acted as a supportive and discreet friend/roommate.\n[financial_and_material_benefits] No material or financial benefits were gained or lost.\n[goal] Micah explicitly reassured Naomi that his presence was for emotional support and committed to total confidentiality.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Micah, can I ask a favor? I'm really anxious \u2014 I need to buy a pregnancy test and I'd feel a lot less alone if you came with me. I don't need you to do anything except be there; would you come with me?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "Of course \u2014 I\u2019ll come with you. I understand you just want someone there; I\u2019ll keep this completely between us and won\u2019t say a word to anyone. We can go now, or if you\u2019d rather I wait in the car while you pick it up, that\u2019s fine too."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

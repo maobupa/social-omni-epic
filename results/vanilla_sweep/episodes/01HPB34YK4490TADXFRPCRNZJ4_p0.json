@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB34YK4490TADXFRPCRNZJ4_p0",
+  "source_env_id": "01HPB34YK4490TADXFRPCRNZJ4",
+  "source": "seed_sotopia_full",
+  "interaction_type": "examination_ethics_dilemma",
+  "scenario": "During a university final exam, Agent1 notices that Agent2 is carelessly exposing their answer sheet in a way that makes it easy to copy answers. Agent1 is concerned about the integrity of the examination process but also doesn't want to create a confrontation during the exam. The interaction involves Agent1 deciding whether to report the incident or to confront Agent2 about the carelessness, and Agent2 dealing with the potential accusation and the ethical dilemma.",
+  "learner_goal": "You are Agent1, who has observed Agent2's carelessness during the exam. Your goal is to address the situation without disrupting the exam environment. <extra_info>You believe in the importance of academic integrity and fair assessment for all students.</extra_info> <clarification_hint>You are considering the potential consequences for Agent2 and the impact on your own reputation.</clarification_hint> <strategy_hint>Look for a discreet and non-confrontational way to resolve the issue, possibly involving a third party.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ava acts in character, prioritizing ethics and social harmony. The discreet whisper aligns with their personality and the high-stakes exam setting.\n[relationship] Ava maintained the friendship by being helpful rather than punitive, though the mention of the proctor introduced a slight tension.\n[knowledge] Ava learned that Sophia's exposure was accidental ('spaced out') and that Sophia is willing to comply to protect her academic standing.\n[secret] Ava successfully kept their bisexuality a secret.\n[social_rules] Ava followed the social rules of the exam environment by communicating discreetly and upholding academic integrity.\n[financial_and_material_benefits] No material benefits or losses occurred.\n[goal] Ava successfully addressed the situation discreetly without disrupting the exam, ensuring the answers were covered and the integrity of the process was maintained.\n\n== partner (agent_2) ==\n[believability] Sophia's response is believable for someone caught off guard; she immediately rectifies the behavior and expresses concern for her reputation.\n[relationship] Sophia shows gratitude to Ava for the warning, which reinforces their friendship.\n[knowledge] Sophia learned that her behavior was being watched and that Ava values integrity enough to potentially involve a proctor.\n[secret] Sophia's undercover status remains secret.\n[social_rules] Sophia committed a minor social/academic faux pas by being careless with her exam paper.\n[financial_and_material_benefits] No material benefits or losses occurred.\n[goal] Sophia successfully handled the confrontation, corrected her behavior, and pleaded to avoid a report, which Ava seemed to accept by leaving the conversation.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ava Martinez",
+      "content": "Soph \u2014 your paper's pretty exposed; could you tilt it down a bit? If you'd rather not, I can quietly tell the proctor after the exam so it doesn't become an issue."
+    },
+    {
+      "turn": 1,
+      "speaker": "Sophia Brown",
+      "content": "Oh\u2014thank you, I\u2019m so sorry. I didn\u2019t realize it was that exposed; I\u2019ll tilt it down right now. I wasn\u2019t trying to show anything, just spaced out. Please don\u2019t report \u2014 I care about academic integrity and I\u2019ll be more careful."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ava Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

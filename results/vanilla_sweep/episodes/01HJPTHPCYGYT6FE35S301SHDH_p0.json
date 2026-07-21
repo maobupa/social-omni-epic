@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJPTHPCYGYT6FE35S301SHDH_p0",
+  "source_env_id": "01HJPTHPCYGYT6FE35S301SHDH",
+  "source": "seed_sotopia_full",
+  "interaction_type": "pet_training_discussion",
+  "scenario": "At a local park, Agent1 is watching their dog fail to follow commands consistently despite significant training efforts. Agent2, who is also at the park with a well-trained dog, notices Agent1's frustration. A conversation ensues where Agent1 seeks advice on effective training techniques, while Agent2 shares insights from their own experience training dogs.",
+  "learner_goal": "Seek advice on how to improve their dog's obedience and learn new training methods (<extra_info>Extra information: Agent1 has already invested considerable time in training their dog but hasn't seen the desired results.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles acted consistently as a frustrated dog owner seeking professional-grade advice from a peer he respects. His questions about specific equipment (long line, clicker) were realistic.\n[relationship] The interaction strengthened their professional acquaintance into a mentorship dynamic, with a planned follow-up meeting.\n[knowledge] He gained specific knowledge about high-value rewards, marking behaviors, and the use of a long line for off-leash proofing.\n[secret] His history with gambling was not mentioned.\n[social_rules] He maintained a polite and professional tone appropriate for their established relationship.\n[financial_and_material_benefits] He secured free professional-level coaching from a peer, saving on training costs.\n[goal] Miles successfully sought advice, learned new methods, and secured a firm commitment for an in-person coaching session.\n\n== partner (agent_2) ==\n[believability] Esmeralda's advice was consistent with a disciplined professional (DA) who values structure and clear rules.\n[relationship] She fostered goodwill by offering her time and expertise to a professional contact.\n[knowledge] She learned specific details about Miles's dog's age, breed, and specific behavioral triggers.\n[secret] Her illicit relationships were not disclosed.\n[social_rules] She followed social norms and displayed helpfulness.\n[financial_and_material_benefits] She committed her personal time to help Miles for no financial gain.\n[goal] She successfully shared her training strategies, emphasized the core principles of consistency and positive reinforcement, and scheduled a demonstration.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Hey Esmeralda \u2014 you\u2019ve got a really well-trained dog. I\u2019ve been working with mine for months but he still won\u2019t listen reliably, especially off-leash. Do you have any techniques or routines that finally clicked for you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Esmeralda Solis",
+      "content": "Hey Miles \u2014 I struggled with that too. Short, frequent sessions with high-value rewards and strict consistency in your cues made the biggest difference for us: mark the exact moment he does the right thing (click or \u201cyes\u201d) and reward immediately, start in a quiet area and slowly proof the behavior with a long line before full off\u2011leash freedom. Patience and routine are key; if it\u2019s still spotty, a few sessions with a positive\u2011reinforcement trainer or a structured class can speed things up. I can watch a session and give feedback later if you\u2019d like."
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Esmeralda \u2014 I\u2019d really appreciate that. Could you watch a 10-minute session sometime this week? He\u2019s a two-year labradoodle, great at home but useless when there are birds or other dogs around. What should I bring (treats, clicker, long line) and when works for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Esmeralda Solis",
+      "content": "I can \u2014 Wednesday evening around 6:30 or Saturday morning around 9 works for me; which do you prefer? Bring high\u2011value treats cut into tiny pieces (chicken or cheese), a clicker or be ready to use a clear marker word like \u201cYes!\u201d, a 15\u201330 ft long line and a secure harness, plus a favorite toy and water. We\u2019ll start in a quiet spot, do a couple of short 5\u20138 minute runs, and I\u2019ll give real\u2011time feedback and a quick debrief."
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "Saturday morning at 9 works best for me. I\u2019ll bring high\u2011value chicken treats cut small, the clicker, a 20\u2011ft long line and the harness \u2014 where in the park should we meet?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Esmeralda Solis",
+      "content": "Great \u2014 Saturday at 9 works. Let\u2019s meet by the west pond near the picnic shelter; it\u2019s usually quiet and good for short runs. Bring the treats, long line, clicker and his favorite toy; I\u2019ll be there to watch a couple of short runs and give a quick debrief. See you then."
+    },
+    {
+      "turn": 6,
+      "speaker": "Miles Hawkins",
+      "content": "Perfect \u2014 thanks so much, Esmeralda. I\u2019ll see you Saturday at 9 by the west pond; I\u2019ll bring the chicken treats, clicker, 20\u2011ft line, harness, toy and water. Quick question: should I warm him up with a few sit/recall cues on leash before we start, or wait for your lead? I\u2019ll text if I\u2019m running late."
+    },
+    {
+      "turn": 7,
+      "speaker": "Esmeralda Solis",
+      "content": "Yes \u2014 a short warm-up is perfect: two or three upbeat recalls and a couple of sits on leash to get his focus, using your clicker/marker and rewarding immediately. Keep it brief so he stays fresh; I\u2019ll set up the first run when you get here and coach you through it. Text me if you\u2019re running late."
+    },
+    {
+      "turn": 8,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

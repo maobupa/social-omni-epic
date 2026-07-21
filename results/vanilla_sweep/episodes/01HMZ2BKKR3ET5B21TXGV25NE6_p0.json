@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BKKR3ET5B21TXGV25NE6_p0",
+  "source_env_id": "01HMZ2BKKR3ET5B21TXGV25NE6",
+  "source": "seed_sotopia_full",
+  "interaction_type": "peer_influence",
+  "scenario": "Agent1 and Agent2 are friends who have been discussing getting tattoos for a while. Agent1 is excited about the idea of getting a tattoo of their favorite cartoon character and sees it as a form of self-expression. Agent2 is hesitant, worrying about the permanence and the potential regret in the future. They are meeting at a local caf\u00e9 to finally make a decision about going to the tattoo parlor together.",
+  "learner_goal": "To persuade Agent2 to go ahead with getting the tattoo, emphasizing the joy of self-expression and the significance of the chosen cartoon character (<extra_info>Agent1 is very enthusiastic about the idea and believes in the importance of living in the moment</extra_info>, <clarification_hint>Highlight the meaning behind the tattoo and how it represents a cherished part of one's identity</clarification_hint>, <strategy_hint>Discuss the importance of personal expression and share stories of positive tattoo experiences</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Donovan stayed consistently in character as an enthusiastic software developer interested in design, successfully balancing his persuasion with empathy for Ava's caution.\n[relationship] The interaction was supportive and ended with a collaborative plan, strengthening their friendship.\n[knowledge] Donovan learned that Ava actually has a hidden tattoo, which was her secret and provides significant context for her hesitation.\n[secret] Donovan did not reveal his secret about releasing classified information.\n[social_rules] Donovan followed all social norms and was polite throughout.\n[financial_and_material_benefits] No financial or material gains or losses occurred.\n[goal] Donovan made significant progress by getting Ava to agree to a consultation and a plan, but the actual decision to get the tattoo is still contingent on a three-month trial period and remains under Ava's future discretion.\n\n== partner (agent_2) ==\n[believability] Ava's cautious approach and the revelation of her hidden tattoo were very consistent with her background as a long-term thinking architect.\n[relationship] Ava expressed appreciation for Donovan's thoughtfulness, deepening the trust between them.\n[knowledge] Ava learned about Donovan's friend's tattoo experience and his willingness to compromise on design.\n[secret] Ava revealed her secret about having a hidden tattoo to Donovan.\n[social_rules] Ava followed all social norms and was respectful.\n[financial_and_material_benefits] No financial or material gains or losses occurred.\n[goal] Ava successfully convinced Donovan to adopt a temporary alternative (temporary tattoos) and a firm waiting period before any permanent commitment, which was her primary objective.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "said: \"Ava, I get why you\u2019re worried, but I still think going for that cartoon tattoo could be a beautiful form of self\u2011expression \u2014 it\u2019s not just a picture, it\u2019s a little reminder of something that shaped you. A friend of mine got a small, tasteful version of their favorite character and said it made them smile every day; they never regretted it because it carried real meaning. How about we compromise: start small or book a consultation with a reputable artist together so we can design something timeless before committing \u2014 I\u2019ll come with you.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Thompson",
+      "content": "said: \"I really appreciate you offering to come with me \u2014 that means a lot. I do worry about how permanent tattoos are; tastes and priorities change, and I\u2019d hate for you to regret it later. I actually have a hidden tattoo, so I get the appeal, but that\u2019s why I\u2019m cautious. What if we try temporary versions for a few months and still book a consultation now, then take a set waiting period before committing?\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "said: \"I love that plan \u2014 temporary tattoos plus a consult is a smart middle ground. Let\u2019s book a consultation this week with a reputable artist I trust, try the temporaries for about three months, and if after that you still want it we\u2019ll get the real thing \u2014 I\u2019ll help design it to be small and timeless so it feels like a meaningful daily reminder, not a rush decision.\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Thompson",
+      "content": "That sounds perfect \u2014 thank you for being so thoughtful. Let\u2019s book the consultation this week with the artist you trust, try the temporary versions for three months (we can test placement and size with stick\u2011ons or henna), and set a firm waiting period before committing. I\u2019ll bring some design ideas so we can sketch something timeless at the consult."
+    },
+    {
+      "turn": 4,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

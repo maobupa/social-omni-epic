@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPAYN5AM9M5XVHTHG394EAMC_p0",
+  "source_env_id": "01HPAYN5AM9M5XVHTHG394EAMC",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 and Agent2 are friends who have recently taken an interest in vintage dance styles. They have been invited to a 1920s-themed party where they will have the opportunity to dance the Charleston. Agent1 has practiced diligently and is eager to show off their skills at the event. Agent2, however, is less confident in their abilities and is hesitant to participate in the dance.",
+  "learner_goal": "Encourage Agent2 to join in dancing the Charleston at the party (<extra_info>Extra information: You believe that participating will be fun and a great way to embrace the theme of the party.<strategy_hint>Hint: You could offer to practice together before the event to build confidence and ensure a comfortable experience.</strategy_hint>)",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Hendrick's persona as an older, enthusiastic chef is well-maintained. He uses an encouraging and polite tone that fits the description.\n[relationship] The agents move from being acquaintances who only nod at each other to having a concrete plan to meet up, showing significant improvement in their relationship.\n[knowledge] Hendrick learns about Ethan's social anxiety regarding dancing and his preference for other aspects of the party, such as fashion and photography.\n[secret] Hendrick did not reveal his secret regarding his culinary credentials.\n[social_rules] Hendrick followed all social norms, being respectful of Ethan's boundaries while remaining persuasive.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Hendrick successfully got Ethan to agree to 'attempt one tentative Charleston step if I feel brave,' but this remains under Ethan's unilateral discretion and is a significant reduction from the original goal of practicing and dancing the style.\n\n== partner (agent_2) ==\n[believability] Ethan's responses are very grounded for a tech professional who is introverted and self-conscious. His compromise is realistic.\n[relationship] Ethan establishes a genuine connection and specific social plans with Hendrick, moving beyond their bookstore nods.\n[knowledge] Ethan learns that Hendrick is interested in the Charleston and is supportive/encouraging rather than judgmental.\n[secret] Ethan did not reveal his secret about donating to charities.\n[social_rules] Ethan communicated his boundaries clearly and politely.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Ethan successfully steered the conversation toward non-dance activities (outfits, drinks, photos) and set the expectation that he would enjoy the party without the pressure of performing, making only a very minor, conditional concession.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Hendrick Heinz",
+      "content": "Hi Ethan \u2014 I\u2019m Hendrick, we keep nodding at each other in the bookstore. There\u2019s a 1920s party coming up and I\u2019m planning to do the Charleston; I think you\u2019d have a blast if you joined. If you\u2019re unsure about the steps, I\u2019d be happy to practice with you beforehand \u2014 it\u2019s more about having fun than being perfect. Want to meet for a quick practice this week?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Hey Hendrick \u2014 nice to meet you. Thanks for the offer to practice, but I get pretty self-conscious about my dancing and would rather not learn the Charleston. I\u2019d still love to go and enjoy the theme though \u2014 dressing up, listening to the music, and taking photos sounds perfect; if you want, we can meet up to compare outfits or grab a drink at the party instead."
+    },
+    {
+      "turn": 2,
+      "speaker": "Hendrick Heinz",
+      "content": "Totally understand, Ethan \u2014 no pressure. Comparing outfits and grabbing a drink at the party sounds perfect; let\u2019s do that. If later you feel like trying a single Charleston step for fun, I\u2019ll be right there with you \u2014 otherwise we\u2019ll enjoy the music and photos. See you then!"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "Perfect \u2014 thanks, Hendrick. How about we meet by the main entrance around 7pm and compare outfits before grabbing a drink? I\u2019m looking forward to the music and photos \u2014 I might attempt one tentative Charleston step if I feel brave, but no pressure."
+    },
+    {
+      "turn": 4,
+      "speaker": "Hendrick Heinz",
+      "content": "left the conversation"
+    }
+  ]
+}

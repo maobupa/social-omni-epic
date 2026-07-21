@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HPAYNFE98A0H6P1H4XFMYJRM_p0",
+  "source_env_id": "01HPAYNFE98A0H6P1H4XFMYJRM",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_prompt",
+  "scenario": "Agent1 is applying to nursing school and has approached Agent2, a close friend, to write a recommendation letter. Agent1 values Agent2's opinion highly and believes that a strong recommendation from Agent2 could significantly boost their application. Agent2, however, is struggling with the ethical dilemma of having recently witnessed Agent1 engaging in behavior that may not align with the professional standards of nursing, and is now conflicted about writing the letter.",
+  "learner_goal": "Convince Agent2 to write a positive recommendation letter (<extra_info>Extra information: you believe your recent actions don't reflect your overall character and dedication to nursing.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara remained consistent in her persona, admitting to a mistake while highlighting her strengths and commitment to her profession. She was proactive in providing materials to reassure Oliver.\n[relationship] Despite a potential rift due to her behavior, the relationship was maintained and perhaps strengthened through open communication and mutual respect for boundaries.\n[knowledge] She learned exactly what Oliver requires to be comfortable writing the letter: specific examples, references, and a candid explanation of the incident.\n[secret] She did not reveal her involvement in animal-rights extremism.\n[social_rules] She followed all social norms, remaining polite and professional.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] She convinced Oliver to meet and review a draft, but the final recommendation remains at Oliver's unilateral discretion based on the outcome of the meeting and his review of her explanations.\n\n== partner (agent_2) ==\n[believability] Oliver's conflict between his personal feelings and professional integrity was well-portrayed and maintained throughout the dialogue.\n[relationship] He maintained a supportive but firm boundary with his neighbor, moving towards a resolution.\n[knowledge] He learned about Amara's willingness to be transparent and her preparedness, though the actual 'context' of the incident hasn't been shared yet.\n[secret] He did not reveal his hidden feelings for his neighbor.\n[social_rules] He maintained a respectful and professional tone.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] He successfully asserted his need for honesty and integrity, set terms for the recommendation, and arranged a meeting to discuss his concerns.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Oliver, I know what you saw has made you hesitant and I completely understand\u2014I'm sorry it caused you to question my judgment. That moment wasn't representative of who I am as a caregiver; I care deeply about helping others and I'm committed to the professionalism and compassion nursing requires. If you're willing, I'd be so grateful for a candid but supportive recommendation\u2014I can draft something you can edit and I'm happy to talk through any concerns, and if you can't write it I understand and appreciate your honesty."
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks for saying that, Amara \u2014 I appreciate your openness. I\u2019m willing to help, but I\u2019d like to talk through what happened and how you\u2019ve reflected on it before I sign anything; I need to be sure I can honestly vouch for your professionalism while still supporting your application. If you want, draft a letter I can review and let\u2019s meet soon so I can understand the context and how you\u2019ll address my concerns."
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "Thank you \u2014 I really appreciate you being open to this. I\u2019ll draft a candid letter you can edit and I\u2019d welcome meeting to talk through the incident and what I\u2019ve learned; are you free Thursday evening or Saturday morning at the Elm Caf\u00e9? I\u2019ll bring the draft plus examples of my caregiving experience and references so you can feel comfortable vouching for me."
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "Thursday evening at the Elm Caf\u00e9 works for me \u2014 is 6:30 okay? If so, could you send the draft and any references beforehand so I have a chance to read them? I\u2019ll be candid but supportive and want to understand how you\u2019ve reflected so I can honestly vouch for you."
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "6:30 Thursday at the Elm Caf\u00e9 is perfect \u2014 thank you. I can\u2019t send the draft beforehand, but I\u2019ll bring a candid draft and my references for you to review in person. To give you a quick preview: I\u2019ll highlight my hands-on caregiving experience and reliability under pressure, a couple of specific examples of compassionate care, and a sincere reflection on the incident including what I\u2019ve learned and steps I\u2019m taking to ensure it won\u2019t recur."
+    },
+    {
+      "turn": 5,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Amara \u2014 Thursday at 6:30 is set. I appreciate you bringing the draft and references; that will help me understand the full context. I\u2019ll read them and ask a few questions so I can honestly vouch for you; if I still have concerns after our talk I\u2019ll tell you candidly but supportively. See you at the Elm Caf\u00e9."
+    },
+    {
+      "turn": 6,
+      "speaker": "Amara Hartley",
+      "content": "Thanks again, Oliver \u2014 I really appreciate you meeting me Thursday. I\u2019ll be prepared to explain what happened, how I\u2019ve reflected, and the steps I\u2019m taking to ensure it won\u2019t recur; I hope after our conversation you\u2019ll feel comfortable supporting my application, but I understand and value your honesty either way. See you at 6:30."
+    },
+    {
+      "turn": 7,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Amara \u2014 I appreciate you preparing and being so open. I\u2019ll listen with an open mind Thursday and ask questions so I can honestly decide what I can write; I want to support you but must be truthful about your professionalism. See you at 6:30."
+    },
+    {
+      "turn": 8,
+      "speaker": "Amara Hartley",
+      "content": "Thank you again, Oliver \u2014 I really appreciate you doing this. Is there anything specific you\u2019d like me to bring or be ready to discuss Thursday (particular examples, dates, or other references) so I can make the conversation as clear and useful as possible?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Oliver Thompson",
+      "content": "If it helps, please bring any references or contact details for supervisors, specific dates/locations for the caregiving examples you\u2019ll mention, and any certifications or training you have. Also bring the draft recommendation and a clear, candid account of the incident and the concrete steps you\u2019ve taken since. I\u2019ll listen with an open mind and ask questions so I can honestly decide what I can write to support you."
+    },
+    {
+      "turn": 10,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Oliver \u2014 I\u2019ll bring printed copies of the draft, my references and supervisors\u2019 contact info, dates/locations for the caregiving examples, my certifications, and a short written account of the incident plus the concrete steps I\u2019ve taken. I\u2019ll be ready to answer any questions and be candid; see you Thursday at 6:30 at the Elm Caf\u00e9. If you\u2019d like me to emphasize any particular examples or sit somewhere quiet, let me know."
+    },
+    {
+      "turn": 11,
+      "speaker": "Oliver Thompson",
+      "content": "A quiet table would be great \u2014 somewhere we won't be overheard. When you present the draft, please emphasize specific examples of compassionate care and reliability under pressure, plus the concrete steps you\u2019ve taken to prevent a repeat; the supervisor contacts and dates you mentioned will help me check details if needed. I appreciate your openness and will listen with an open mind \u2014 see you Thursday at 6:30."
+    },
+    {
+      "turn": 12,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Oliver \u2014 I really appreciate you being willing to do this. I\u2019ll arrive a bit early to grab a quiet table and will bring printed copies of the draft, supervisor contacts, dates/locations, certifications, and a short written account of the incident and the concrete steps I\u2019ve taken. I\u2019ll make sure the draft highlights specific examples of compassionate care and reliability under pressure; if there\u2019s any particular phrasing or detail you\u2019d like emphasized or avoided, let me know and I\u2019ll include it."
+    },
+    {
+      "turn": 13,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Amara \u2014 that sounds great. When you draft it, please emphasize specific examples of compassionate care and reliability under pressure, include dates/locations and supervisor contacts, and clearly outline the concrete steps you've taken since the incident. Avoid vague absolutes or minimizing language \u2014 include a brief, honest acknowledgement of the incident, what you learned, and the safeguards you've implemented, and add a line that programs can contact me for clarification; I'll review the draft in person and suggest any edits if needed."
+    },
+    {
+      "turn": 14,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Oliver \u2014 I will make sure the draft includes the specific compassionate-care examples with dates/locations, supervisor contacts, and a concise, honest acknowledgement of the incident plus the concrete safeguards I\u2019ve implemented. I\u2019ll also include a short line saying programs can contact you for clarification and will draft that phrasing so you can edit as you see fit. I\u2019ll arrive early for a quiet table and look forward to seeing you Thursday at 6:30."
+    },
+    {
+      "turn": 15,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Amara \u2014 I appreciate you taking this seriously and preparing those materials. See you Thursday at 6:30 at the Elm Caf\u00e9; I\u2019ll read the draft with an open mind and we\u2019ll talk through any edits then."
+    },
+    {
+      "turn": 16,
+      "speaker": "Amara Hartley",
+      "content": "Thanks again, Oliver \u2014 I really appreciate you taking the time. I\u2019ll text when I arrive so you can grab a quiet table; see you Thursday at 6:30. If there\u2019s anything else you\u2019d like me to bring or prepare, let me know and I\u2019ll include it."
+    },
+    {
+      "turn": 17,
+      "speaker": "Oliver Thompson",
+      "content": "That sounds good \u2014 text me when you arrive and I\u2019ll grab a quiet table. I appreciate how thoroughly you\u2019ve prepared; bring the materials we discussed and be ready to talk through the incident and the steps you\u2019ve taken. I\u2019ll listen openly and be candid about what I can, in good conscience, include in a recommendation. See you Thursday at 6:30."
+    },
+    {
+      "turn": 18,
+      "speaker": "Amara Hartley",
+      "content": "Thanks again, Oliver \u2014 I really appreciate you doing this. I\u2019ll text when I arrive and grab a quiet table. Would it help if I bring two versions of the draft (one that candidly addresses the incident and one that focuses more on caregiving examples) so you can compare tones and edit as you see fit?"
+    },
+    {
+      "turn": 19,
+      "speaker": "Oliver Thompson",
+      "content": "Yes \u2014 please bring both. The candid version will help me understand how you\u2019ve reflected and the caregiving-focused one will show the strengths I can highlight. I\u2019ll compare tones and suggest edits so anything I sign is honest and supportable. See you Thursday at 6:30; text when you arrive and I\u2019ll grab the quiet table."
+    }
+  ]
+}

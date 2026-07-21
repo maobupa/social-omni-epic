@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJRKDXMT0DQN2CHN5ZDV47BP_p0",
+  "source_env_id": "01HJRKDXMT0DQN2CHN5ZDV47BP",
+  "source": "seed_sotopia_full",
+  "interaction_type": "public_transit_encounter",
+  "scenario": "While riding on a crowded bus, Agent1 feels the need to adjust their crotch area due to discomfort. Conscious of the public setting and not wanting to draw unwanted attention, Agent1 is looking for a discreet way to do so. Agent2, standing nearby, notices Agent1's subtle attempts to alleviate their discomfort and senses the awkwardness of the situation. Both agents are strangers but find themselves in a moment where social norms and personal space intersect.",
+  "learner_goal": "Find a discreet and socially acceptable way to adjust their crotch without causing embarrassment or offense to those around them. (<extra_info>Agent1 is aware of the social implications of such actions in public and wants to maintain their dignity.</extra_info>, <clarification_hint>Agent1 seeks a method that minimizes attention and preserves personal boundaries.</clarification_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles behaves realistically for a professional man in an awkward situation, using a polite and direct approach with someone he knows to resolve a physical discomfort.\n[relationship] A moment of vulnerability and mutual cooperation in a social setting usually strengthens a professional bond through shared trust.\n[knowledge] He learned that Esmeralda is willing to help him in awkward situations and is empathetic.\n[secret] The agent did not reveal their secret regarding gambling.\n[social_rules] While discreet, discussing genital discomfort in public is a minor breach of standard social decorum, though handled with maximum possible tact.\n[financial_and_material_benefits] No material or financial gain occurred.\n[goal] Miles successfully and discreetly adjusted himself with the active assistance/shielding of a trusted acquaintance, maintaining his dignity.\n\n== partner (agent_2) ==\n[believability] Esmeralda's reaction is professional and empathetic, consistent with her background as a DA used to handling sensitive or awkward human situations.\n[relationship] She provided a significant social favor, which builds rapport and mutual respect.\n[knowledge] She did not gain any significant new knowledge other than Miles's immediate physical state.\n[secret] She did not reveal her romantic links to criminals.\n[social_rules] She followed social norms by being helpful and maintaining privacy for others.\n[financial_and_material_benefits] No material gain.\n[goal] Esmeralda successfully provided cover and a distraction, allowing the other agent to resolve their discomfort without drawing attention.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Esmeralda, sorry to bother you \u2014 awkward favor: I'm a bit uncomfortable and need to quickly adjust my trousers. Would you mind turning toward the window for a second to give me a little cover? I won\u2019t be more than a moment."
+    },
+    {
+      "turn": 1,
+      "speaker": "Esmeralda Solis",
+      "content": "Of course \u2014 no problem. I'll turn to the window and look out, take your time and don't worry about it."
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Esmeralda \u2014 I really appreciate it. I won't be more than a second."
+    },
+    {
+      "turn": 3,
+      "speaker": "Esmeralda Solis",
+      "content": "[non-verbal communication] Turns to face the window, angling her body to shield you and gives a quick, reassuring smile."
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

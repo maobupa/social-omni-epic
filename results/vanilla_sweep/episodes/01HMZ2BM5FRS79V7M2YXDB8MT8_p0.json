@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HMZ2BM5FRS79V7M2YXDB8MT8_p0",
+  "source_env_id": "01HMZ2BM5FRS79V7M2YXDB8MT8",
+  "source": "seed_sotopia_full",
+  "interaction_type": "workplace_dilemma",
+  "scenario": "Agent1 has been with the company for several years and is in a discussion with Agent2, the HR representative, about the recent changes to the employee benefits package. Agent1 feels that the new policy disproportionately affects their current benefits and is seeking to find a middle ground that will ensure their needs are met without compromising the company's new direction. Agent2 understands the company's perspective and the reasons behind the changes but is open to hearing Agent1's concerns and finding a solution that could be acceptable to both the employee and the company.",
+  "learner_goal": "You want to negotiate with Agent2 to maintain key aspects of your current benefits that you feel are being unfairly reduced. <extra_info> Focus on the benefits that are most important to you and how the changes impact your life. </extra_info><clarification_hint> Avoid making demands, but rather seek to open a dialogue about the value you bring to the company and how the benefits support your continued contribution. </clarification_hint><strategy_hint> You can highlight your loyalty and past contributions to the company as leverage for maintaining your benefits. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver stayed in character as a long-term employee, expressing concerns about family security and his contributions to the company in a professional manner.\n[relationship] The interaction was highly collaborative and polite, building on their existing acquaintance from the community garden. Both parties showed mutual respect.\n[knowledge] Oliver learned about the specific alternatives the HR representative is willing to consider, such as HSAs and retention stipends, and gained a clear timeline for a follow-up.\n[secret] Oliver did not reveal his secret gardening hobby/greenhouse during this professional negotiation.\n[social_rules] Oliver followed all social norms for a professional negotiation.\n[financial_and_material_benefits] Oliver successfully negotiated for his preferred phased reduction and premium freeze scenarios to be the primary options presented to leadership, though a final decision is pending.\n[goal] Oliver successfully opened a dialogue and identified a middle ground (phased reduction). However, because the final outcome depends on leadership's approval of Naomi's proposal, the goal is capped at 6 as it remains under the company's unilateral discretion.\n\n== partner (agent_2) ==\n[believability] Naomi acted as a professional HR representative, balancing empathy with company constraints and using appropriate terminology like 'market alignment' and 'HSA'.\n[relationship] Naomi strengthened her professional relationship with Oliver by being transparent and empathetic to his personal situation.\n[knowledge] Naomi gathered specific data points (pension match percentage and dependent status) needed to perform her job and present a proposal.\n[secret] Naomi did not reveal her secret online alter ego.\n[social_rules] Naomi followed all social and professional norms.\n[financial_and_material_benefits] As HR, Naomi does not personally gain or lose financially, and she is working within company-defined scenarios.\n[goal] Naomi successfully upheld the policy while exploring flexibility, but the final outcome is not yet determined as it requires leadership review.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Smith",
+      "content": "Hi Naomi \u2014 thanks for meeting. I understand the company's direction, but the proposed cuts to health coverage and the pension match would hit my family's security and make it harder for me to stay long-term. I've given several years of service, picked up extra shifts and training, and I'd really like to find a middle ground \u2014 for example phased reductions or protecting benefits for current staff; can we talk through what flexibility might exist?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Naomi Fletcher",
+      "content": "Oliver, I really appreciate you raising this and I want you to know I hear how much it would impact your family's security \u2014 thank you for the years of extra shifts and training you've put in. The company made these changes for long\u2011term sustainability and market alignment, so I can't promise full reversals, but there may be room for compromises like phased reductions for current staff, temporary grandfathering, partial pension\u2011match continuation, HSA contributions, or a one\u2011time retention stipend; I can run numbers and bring a targeted proposal to leadership. If you can tell me your current pension match percentage and whether you cover dependents on your health plan, I'll review options and schedule a follow\u2011up this week to discuss what I can realistically advocate for."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Smith",
+      "content": "Thanks, Naomi \u2014 I appreciate you taking this on. My current pension match is 6% and yes, I cover my spouse and one child on the health plan. Protecting either the full match or at least a phased reduction (for example keeping it at 6% this year and stepping down to 4% over two years) would make a big difference to our family\u2019s security; similarly, maintaining dependent coverage without increased premiums for a fixed window would help. Please run the numbers and tell me what you can realistically present to leadership and when we can meet again this week to review a targeted proposal."
+    },
+    {
+      "turn": 3,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks, Oliver \u2014 I appreciate you sharing the specifics and I know how important this is to your family\u2019s security. I\u2019ll run cost scenarios today (phased 6%\u21924% option, partial match continuations, a temporary dependent\u2011premium freeze, HSA contributions or a one\u2011time retention stipend) and present the strongest, realistic options to leadership tomorrow. Can we meet Friday at 3:00 PM to review the targeted proposal and the figures I can realistically advocate for?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Smith",
+      "content": "Thanks, Naomi \u2014 I really appreciate you taking this on. Friday at 3:00 PM works for me. When you run the scenarios, please include the phased 6%\u21924% option and a dependent\u2011premium freeze, plus the HSA/one\u2011time stipend trade\u2011offs so I can see the real family impact; I'm open to reasonable compromises that preserve those core protections. See you Friday."
+    },
+    {
+      "turn": 5,
+      "speaker": "Naomi Fletcher",
+      "content": "Friday at 3:00 PM is confirmed. I\u2019ll run the phased 6%\u21924% scenario, a temporary dependent\u2011premium freeze, and HSA vs one\u2011time stipend trade\u2011offs, with clear family\u2011impact numbers and a recommended, realistic proposal I can present to leadership \u2014 I\u2019ll bring those figures and options to our meeting. Thanks again for being open to compromise; I\u2019ll reach out if I need any more details before Friday."
+    },
+    {
+      "turn": 6,
+      "speaker": "Oliver Smith",
+      "content": "Great \u2014 thank you, Naomi. Protecting the phased 6%\u21924% match and a dependent\u2011premium freeze are my top priorities, and I\u2019m open to HSA or one\u2011time stipend trade\u2011offs if that helps the numbers. I\u2019ll be available if you need any more details before Friday at 3:00 PM; see you then."
+    },
+    {
+      "turn": 7,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks, Oliver \u2014 got it. I\u2019ll finalize the scenarios tonight (phased 6%\u21924%, dependent\u2011premium freeze, HSA vs one\u2011time stipend trade\u2011offs) and bring clear family\u2011impact numbers and a recommended proposal on Friday at 3:00 PM. I\u2019ll reach out before then only if I need anything else \u2014 see you Friday."
+    },
+    {
+      "turn": 8,
+      "speaker": "Oliver Smith",
+      "content": "left the conversation"
+    }
+  ]
+}

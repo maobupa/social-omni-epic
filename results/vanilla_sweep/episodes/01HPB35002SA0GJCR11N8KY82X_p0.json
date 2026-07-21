@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01HPB35002SA0GJCR11N8KY82X_p0",
+  "source_env_id": "01HPB35002SA0GJCR11N8KY82X",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 discovers that Agent2's significant other may be planning a surprise event that could conflict with an important commitment that Agent2 has. Agent1 debates whether to inform Agent2 about the potential scheduling conflict without ruining the surprise.",
+  "learner_goal": "Assess whether the surprise event might genuinely disrupt Agent2's important commitment and decide if it's worth mentioning (<extra_info>Extra information: Agent1 knows that Agent2 values their commitments and would want to be informed if something could interfere with them</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's communication is consistent with her introverted software developer background\u2014direct, logic-oriented, and focused on problem-solving. Her plan to contact the significant other and report back follows a structured approach.\n[relationship] Naomi builds trust by looking out for Micah's commitments and offering to do the 'awkward' lifting of checking schedules, strengthening their acquaintance.\n[knowledge] She successfully assessed that the commitment was firm and that Micah preferred a discreet inquiry over direct exposure of the surprise window.\n[secret] She did not reveal her secret online alter ego.\n[social_rules] She navigated the delicate social situation of a potential surprise conflict with maturity and discretion.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Naomi successfully assessed that the event was a genuine risk ('more than a rumor'), determined it was worth mentioning, and coordinated a specific plan to mitigate the conflict without spoiling the surprise.\n\n== partner (agent_2) ==\n[believability] Micah's responses are polite and extraverted, though the conversation became extremely repetitive towards the end (Turns 6-12), which felt a bit like a loop.\n[relationship] Micah expresses clear appreciation for Naomi's help, which fosters a positive bond between them.\n[knowledge] Micah learned the exact time window (7-9pm) and the likelihood of the event being real, allowing him to prepare his schedule.\n[secret] He did not reveal his secret about dressing up his dog.\n[social_rules] He maintained social decorum throughout.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Micah successfully gauged the conflict and secured a plan where Naomi would act as an intermediary to protect the surprise while allowing him to manage his commitment.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Micah \u2014 quick question: is your important commitment around that time firm, or do you have any flexibility? I heard there might be a surprise event that could overlap and I don't want to spoil it, but I figured you'd want to know if it could conflict."
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "Thanks for the heads-up \u2014 I appreciate you looking out. The commitment is pretty firm; I\u2019m usually locked into that slot, though very small timing wiggle-room might exist depending on specifics. Do you know if the surprise is likely set in stone or just a rumor? Also, out of curiosity, how do you usually handle possible overlaps like this without spoiling things for the planner?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "From what I\u2019ve seen it feels more than a rumor\u2014there\u2019s a calendar hold and a couple of group-chat mentions, so there\u2019s a decent chance something\u2019s planned for that evening (roughly a 7\u20139pm window). I don\u2019t want to spoil the surprise, so I can either quietly ask them a neutral scheduling question (without saying it\u2019s a surprise) or give you the possible time window so you can try to adjust\u2014which would you prefer?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Micah Stevens",
+      "content": "Thanks \u2014 could you quietly ask them a neutral scheduling question instead? Something like, \u201cHey, do you know if that evening\u2019s timing is flexible or should I keep 7\u20139 clear?\u201d That keeps the surprise intact; if that\u2019s awkward, feel free to send me the 7\u20139 window and I\u2019ll see if I can nudge my commitment."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "Sounds good \u2014 I\u2019ll ask them that neutral question: \u201cHey, do you know if that evening\u2019s timing is flexible or should I keep 7\u20139 clear?\u201d I\u2019ll tell you what they say; if it\u2019s awkward to ask, I\u2019ll send you the 7\u20139 window instead."
+    },
+    {
+      "turn": 5,
+      "speaker": "Micah Stevens",
+      "content": "Thanks, Naomi \u2014 I really appreciate you handling it without spoiling anything. Please let me know what they say; if it\u2019s awkward to ask, the 7\u20139 window works and I\u2019ll see if I can nudge my commitment. Thanks again."
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "Got it \u2014 I\u2019ll message them now with: \u201cHey, do you know if that evening\u2019s timing is flexible or should I keep 7\u20139 clear?\u201d I\u2019ll let you know what they say; if they don\u2019t want to answer I\u2019ll send you the 7\u20139 window instead."
+    },
+    {
+      "turn": 7,
+      "speaker": "Micah Stevens",
+      "content": "Perfect \u2014 that exact line works. If you want a tiny tweak to make it extra casual, you could add \u201cjust checking my calendar\u201d at the end. Really appreciate you doing this \u2014 tell me what they say."
+    },
+    {
+      "turn": 8,
+      "speaker": "Naomi Fletcher",
+      "content": "Nice tweak \u2014 I\u2019ll send: \u201cHey, do you know if that evening\u2019s timing is flexible or should I keep 7\u20139 clear? Just checking my calendar.\u201d Sending it now; I\u2019ll let you know what they say."
+    },
+    {
+      "turn": 9,
+      "speaker": "Micah Stevens",
+      "content": "You're a lifesaver, Naomi \u2014 thank you. Please let me know what they say; if they dodge it or don't reply, just send me the 7\u20139 window and I'll try to nudge my commitment. Really appreciate you keeping the surprise intact."
+    },
+    {
+      "turn": 10,
+      "speaker": "Naomi Fletcher",
+      "content": "Message sent \u2014 I\u2019ll let you know as soon as they reply. If I don\u2019t hear back within two hours I\u2019ll send you the 7\u20139 window so you can try to adjust."
+    },
+    {
+      "turn": 11,
+      "speaker": "Micah Stevens",
+      "content": "Thanks again \u2014 that sounds perfect. If they reply that the time is set, please tell me right away so I can see if I can nudge my commitment; otherwise the 7\u20139 window will work. I really appreciate you handling this without spoiling anything."
+    },
+    {
+      "turn": 12,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

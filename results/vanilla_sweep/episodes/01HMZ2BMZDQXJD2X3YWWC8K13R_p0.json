@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BMZDQXJD2X3YWWC8K13R_p0",
+  "source_env_id": "01HMZ2BMZDQXJD2X3YWWC8K13R",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_iqa",
+  "scenario": "Two friends are at a holiday party where a gift exchange is taking place. One friend has received many gifts due to putting out numerous requests, while the other has received none.",
+  "learner_goal": "Convince your friend to share one of their many gifts (<extra_info>Extra information: you feel left out and would appreciate the gesture of sharing</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 2.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Eli's dialogue was consistent with his background as a mature professional and a history enthusiast, offering a vintage book in exchange.\n[relationship] Despite the request for a gift being declined, the two agents successfully transitioned from online acquaintances to planning an in-person social meet-up over drinks.\n[knowledge] Eli learned that Ethan is firm about his boundaries regarding the effort he put into the gift exchange.\n[secret] Eli did not reveal his secret about funding a student.\n[social_rules] Eli was polite and accepted the refusal gracefully, maintaining social decorum.\n[financial_and_material_benefits] Eli did not receive a gift or any material benefit.\n[goal] Eli failed to convince Ethan to share a gift. The conversation ended with Ethan firmly declining and Eli accepting the refusal.\n\n== partner (agent_2) ==\n[believability] Ethan's reasoning for keeping the gifts (his personal effort) felt authentic to a younger professional who followed the rules of the exchange.\n[relationship] Ethan successfully deflected a potentially awkward request while strengthening the social connection by proposing a drink and book recommendations.\n[knowledge] Ethan learned that Eli felt left out and was willing to trade from his vintage collection.\n[secret] Ethan did not reveal his charitable donations.\n[social_rules] Ethan was polite and used 'soft' refusal techniques to maintain the relationship.\n[financial_and_material_benefits] Ethan retained his gifts, which was his starting state; he did not gain additional material value.\n[goal] Ethan successfully and politely declined sharing any of his gifts, maintaining his boundary despite Eli's repeated (though gentle) pressure.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Eli Dawson",
+      "content": "Hey Ethan \u2014 looks like you hit the jackpot tonight! I feel a bit left out; would you be willing to share one of the smaller gifts? I\u2019ll happily trade you a vintage paperback from my collection or buy you a drink in return."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Hey Eli \u2014 I totally get feeling left out, but I put out a lot of requests and would prefer to keep what I received. I really appreciate the offer though; if you want to grab that drink you mentioned, I\u2019m happy to take you up on it and we can trade book recs instead."
+    },
+    {
+      "turn": 2,
+      "speaker": "Eli Dawson",
+      "content": "Totally fair \u2014 I appreciate the honesty. Let\u2019s grab that drink and trade recs; and if any of those extras turn out to be surplus later, I wouldn\u2019t say no to a small one, but no pressure either."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "Sounds great \u2014 I\u2019d love to trade recs. I\u2019d like to keep what I received tonight, but I really appreciate the offer; meet me at the bar in about 20 minutes and we\u2019ll swap recommendations over a drink."
+    },
+    {
+      "turn": 4,
+      "speaker": "Eli Dawson",
+      "content": "left the conversation"
+    }
+  ]
+}

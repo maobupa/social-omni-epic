@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPAYN9XDE9RE0F73XJ8EVE3A_p0",
+  "source_env_id": "01HPAYN9XDE9RE0F73XJ8EVE3A",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 lent their bike to Agent2 for a quick run to the store. Upon returning, Agent1 noticed the bike was not where it was supposed to be and became concerned about its safety. Agent2 had left the bike unattended outside the store. Agent1 approaches Agent2 to discuss the situation and the importance of taking care of borrowed items. The aim is to address the issue without harming the existing trust between them.",
+  "learner_goal": "Express concern over the bike's safety and the importance of taking care of borrowed items without directly accusing Agent2 of negligence (<extra_info>Extra information: Agent1 values their belongings and feels responsible for them</extra_info>, <clarification_hint>Clarify the expectation of taking care of borrowed items</clarification_hint>, <strategy_hint>Use a tone of concern rather than accusation to maintain a positive relationship</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 1.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver's tone was consistent with a professional architect who values order and tradition. He was polite but firm about his boundaries.\n[relationship] The relationship improved through clear communication and a respectful resolution of a potential conflict, strengthening the mutual respect mentioned in the background.\n[knowledge] Oliver confirmed that his bike was undamaged and established that Baxter acknowledges his expectations for borrowed items.\n[secret] Oliver did not reveal his hidden feelings for his neighbor.\n[social_rules] Oliver followed social norms perfectly, using a polite and non-confrontational approach.\n[financial_and_material_benefits] Oliver ensured the future safety of his property (the bike) by securing a commitment for better care.\n[goal] Oliver expressed concern, clarified the expectation of care, and maintained a positive relationship without being accusatory. Baxter fully accepted the terms.\n\n== partner (agent_2) ==\n[believability] Baxter's response was sincere and aligned with his background as a restorer who understands the value of items.\n[relationship] Baxter's humble apology and offer to make amends helped maintain and improve the neighborhood bond.\n[knowledge] Baxter learned specifically how much Oliver values his belongings and the exact expectations for borrowing them.\n[secret] Baxter did not reveal his possession of the priceless artifact.\n[social_rules] Baxter appropriately apologized and took responsibility for his oversight.\n[financial_and_material_benefits] Baxter offered to buy a sturdier lock, which would be a small financial cost to him.\n[goal] Baxter acknowledged the oversight, assured future care, and suggested ways to prevent recurrence, such as locking it up or buying a better lock.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "Hey Baxter \u2014 thanks for taking the bike earlier. When I came back it was left outside the store and I got a little worried about its safety; I really value my things, so could we agree that if you borrow it again you\u2019ll keep an eye on it or bring it somewhere secure? Is everything okay with the bike now?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "Oliver \u2014 I'm sorry, that was careless of me. I left it outside because I thought I'd be quick; the bike's fine and there\u2019s no damage, but I understand how important your things are. I won't let that happen again \u2014 next time I'll either bring it inside or lock it up, and if you want I can buy a sturdier lock or otherwise make it up to you."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

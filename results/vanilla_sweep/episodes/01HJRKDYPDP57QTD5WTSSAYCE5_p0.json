@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJRKDYPDP57QTD5WTSSAYCE5_p0",
+  "source_env_id": "01HJRKDYPDP57QTD5WTSSAYCE5",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 is in a romantic relationship and has discovered that their partner's ex is spreading rumors that could potentially harm their partner's reputation. Agent1 knows that Agent2, who is a friend of the ex, might have influence over the situation. Agent1 is considering reaching out to Agent2 to discuss the issue and find a peaceful resolution. However, Agent1 is aware that this could also strain their own relationship with Agent2, who might be loyal to the ex.",
+  "learner_goal": "Convince Agent2 to intervene and use their influence to stop the ex from spreading harmful rumors (<extra_info>Extra information: Agent1 is worried about their partner's well-being and the impact of the rumors, but doesn't want to cause conflict with Agent2.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's dialogue was consistent with his introverted, conscientious personality. He was polite, cautious about the relationship, and clearly articulated the need for help without being aggressive.\n[relationship] The relationship strengthened as Noah agreed to help and Finnegan expressed sincere gratitude, maintaining a collaborative and respectful tone.\n[knowledge] Finnegan learned about Noah's boundaries regarding loyalty and the specific conditions under which Noah would be willing to intervene.\n[secret] Finnegan's past involvement in a cult was never mentioned.\n[social_rules] Finnegan followed all social norms, being exceptionally polite and sensitive to Noah's potential conflict of interest.\n[financial_and_material_benefits] There were no financial or material gains in this interaction.\n[goal] Finnegan successfully convinced Noah to agree to a 'low-key' intervention. However, the goal is capped at 6 because the intervention is contingent on Noah reviewing evidence (screenshots/quotes) and remains under Noah's unilateral future discretion ('I'll read everything first and tell you what I plan to say').\n\n== partner (agent_2) ==\n[believability] Noah's responses reflected his background as a coach\u2014he was structured, set clear boundaries, and asked for 'specifics' and 'context' before acting.\n[relationship] Noah demonstrated value as a friend by offering a compromise, though he remained protective of his other social ties.\n[knowledge] Noah learned about the conflict between Finnegan's partner and his friend, but did not yet receive the specific evidence he requested.\n[secret] Noah's identity as a stand-up comedian remained a secret.\n[social_rules] Noah navigated the social complexity of a 'friend-of-a-friend' conflict effectively and professionally.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Noah successfully advised Finnegan on the risks, emphasized loyalty to his own friend, and established a protocol that allows him to remain neutral and in control of the situation.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "Noah, I need a favour and I hope it's not asking too much. My partner's reputation is being hurt by rumours their ex is spreading, and I know you're friends with them \u2014 would you consider having a quiet word and asking them to stop? I don't want to put you in an awkward spot, so I understand if you can't, but it would mean a great deal to me and to my partner."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Finnegan, I\u2019m really sorry your partner\u2019s going through that \u2014 I hear you and I want to help where I can. I need to be upfront: loyalty matters to me, and going to my friend could put me in the middle and strain my relationship with them; they\u2019re likely to be reluctant to act on third\u2011hand claims. Before I step in, please talk with your partner and collect specifics; if you want, I can do a very low\u2011key, non\u2011accusatory check\u2011in (something like \u201cI\u2019ve heard some talk \u2014 can you help clear it up?\u201d) but I can\u2019t promise they\u2019ll stop. If it helps, I can also help you figure out what to say to your partner or to approach the ex more directly and safely."
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thank you, Noah \u2014 that really helps. I\u2019ll talk with my partner and gather specifics (what\u2019s been said, when, any screenshots) and send them to you; if you\u2019re willing, the low\u2011key line you suggested (\u201cI\u2019ve heard some talk \u2014 can you help clear it up?\u201d) would be perfect \u2014 would you be comfortable sending something like that when you have a moment?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Okay \u2014 I\u2019m willing to do that. Send over the specifics (what was said, when, screenshots) and I\u2019ll send a very low\u2011key, non\u2011accusatory message along the lines of: \"Hey, I\u2019ve heard some talk and just wanted to check in \u2014 is everything okay? Can you help clear something up?\" I can\u2019t promise they\u2019ll stop, but I\u2019ll keep it private and as neutral as possible; I\u2019ll reach out once I\u2019ve seen the details."
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thank you, Noah \u2014 I truly appreciate you doing this. I\u2019ll speak with my partner tonight, gather the dates, quotes and any screenshots, and send them over; please feel free to use whatever wording feels most natural to you. It means a great deal that you\u2019ll keep it low\u2011key, whatever the outcome."
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "Thanks, Finnegan \u2014 I appreciate you handling that. When you send the details, include dates, exact quotes, and any screenshots so I have the context. I\u2019ll keep my message short and neutral and won\u2019t escalate; I\u2019ll read everything first and tell you what I plan to say. Give me a heads-up when you send them."
+    },
+    {
+      "turn": 6,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

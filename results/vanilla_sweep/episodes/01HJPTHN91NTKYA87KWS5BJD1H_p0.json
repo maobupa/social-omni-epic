@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHN91NTKYA87KWS5BJD1H_p0",
+  "source_env_id": "01HJPTHN91NTKYA87KWS5BJD1H",
+  "source": "seed_sotopia_full",
+  "interaction_type": "unexpected_surprise",
+  "scenario": "Agent1 and Agent2, who are acquaintances, run into each other in a secluded part of a public park. Agent1, who enjoys playing practical jokes, had previously scared Agent2 by jumping out from behind a tree. Now, Agent1 wants to rebuild a sense of trust with Agent2, while Agent2 is wary and still shaken from the past experience.",
+  "learner_goal": "Rebuild trust with Agent2 by acknowledging the previous scare and demonstrating a more sensitive approach to humor. (<extra_info>Extra information: Agent2 values sincerity and may need to see a change in behavior to feel comfortable.</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle stays perfectly in character, using the correct pronouns and adopting a tone that aligns with a student trying to make amends for a social faux pas.\n[relationship] Giselle successfully moved the relationship from a state of wariness and discomfort back toward a positive trajectory by taking accountability.\n[knowledge] Giselle learned specifically how the scare affected Ethan and established a concrete protocol for future humor (heads-up).\n[secret] Giselle did not reveal the secret regarding forged paintings.\n[social_rules] Giselle followed all social norms regarding apologies and conflict resolution.\n[financial_and_material_benefits] No material benefits were gained.\n[goal] Giselle fully achieved the goal: acknowledged the scare, demonstrated sensitivity, and secured a mutual commitment to a future meeting (coffee/walk) where the new behavior would be applied.\n\n== partner (agent_2) ==\n[believability] Ethan's response is very realistic for a 34-year-old professional; he expresses his vulnerability clearly while maintaining boundaries.\n[relationship] Ethan's comfort level increased significantly as his boundaries were heard and respected.\n[knowledge] Ethan learned that Giselle is receptive to feedback and values their relationship enough to apologize.\n[secret] Ethan did not reveal his secret about being a romance novelist.\n[social_rules] Ethan communicated his boundaries effectively and politely.\n[financial_and_material_benefits] No material benefits were gained.\n[goal] Ethan explicitly communicated the discomfort caused by the scare and successfully set a boundary (heads-up before jokes) which the other agent explicitly accepted.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Ethan, I'm really sorry about jumping out from behind that tree \u2014 that was thoughtless and I can see it shook you. I like joking, but I realize that crossed a line and I won't do that again. If you're open to it, I'd like to make it up \u2014 a walk or a coffee, whatever you'd prefer, and I'll stick to gentler humor from now on."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Giselle \u2014 I appreciate you saying that. I was really shaken when you jumped out; my heart was racing and it left me on edge for a while. I like that you enjoy joking, but please don\u2019t startle me like that again; a heads-up would be fine, and I\u2019d be open to a coffee or walk if we stick to gentler humor \u2014 text me and we\u2019ll set something up."
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "Thanks, Ethan \u2014 I really appreciate you telling me. I won't startle you again; I'll give a heads-up before any joke and stick to gentler humor. I'll text you later today to pick a time for coffee or a walk."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "Thank you, Giselle \u2014 I really appreciate you hearing me. A simple heads-up is all I need, and I\u2019m glad you\u2019ll stick to gentler jokes. Text me when you know a time and we\u2019ll do that coffee or walk."
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

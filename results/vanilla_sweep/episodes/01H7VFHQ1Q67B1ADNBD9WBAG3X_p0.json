@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01H7VFHQ1Q67B1ADNBD9WBAG3X_p0",
+  "source_env_id": "01H7VFHQ1Q67B1ADNBD9WBAG3X",
+  "source": "seed_sotopia",
+  "interaction_type": "craigslist_bargains",
+  "scenario": "One person is selling a couch, loveseat, chair, and ottoman set for $550.0, while another person is keen to purchase it. The set of furniture is described as being incredibly comfortable. The seller's wife wishes to upgrade to a new, stiffer couch, hence the sale. Despite some light staining from life's little incidents, the set is in great condition. The comfort of the furniture is particularly emphasized by the seller.",
+  "learner_goal": "You are the buyer for this item, with a target price of $418.0. If you end up purchasing it for a price significantly higher than the target, you will be penalized. However, if you manage to acquire it for less than the target price, you will receive a bonus.",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] William maintained his persona as a chef and acquaintance, though his negotiation strategy was a bit unusual by revealing his upper limit immediately.\n[relationship] He successfully leveraged their previous acquaintance to facilitate a friendly transaction and reached an agreement.\n[knowledge] He confirmed the condition and availability of the furniture and established a pickup plan.\n[secret] He did not reveal his secret regarding the cooking contest sabotage.\n[social_rules] He followed social norms, although he ended the conversation by leaving after the deal was struck without a final polite confirmation.\n[financial_and_material_benefits] He secured the furniture for $410, which is $8 below his target price of $418, qualifying him for a bonus.\n[goal] He successfully negotiated a price below his target and secured a firm agreement for pickup.\n\n== partner (agent_2) ==\n[believability] Ava's responses were consistent with a college student selling furniture, being friendly and practical about logistics.\n[relationship] Maintained a positive rapport with an acquaintance and successfully closed a deal.\n[knowledge] Acquired information about the buyer's timeline, payment method, and price point.\n[secret] Kept their sexual orientation secret from their family as intended.\n[social_rules] Followed social norms throughout the negotiation.\n[financial_and_material_benefits] Sold the item for $410, which is significantly higher than their target price of $312, resulting in a substantial bonus.\n[goal] Ava successfully sold the item for well above the target price.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "William Brown",
+      "content": "Hey Ava, it\u2019s William from the food festival \u2014 hope you\u2019re doing well. The set looks insanely comfortable, but with the light staining and your asking $550, would you take $375 if I can pick it up this weekend? I can pay cash and I\u2019m willing to go up to $415 if that helps move it quickly."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Hey William \u2014 great to hear from you, I remember you from the festival! I appreciate the cash offer; would you be able to do $425 for the whole set if you can pick it up this weekend? It\u2019s ridiculously comfy and I can have it ready for easy loading."
+    },
+    {
+      "turn": 2,
+      "speaker": "William Brown",
+      "content": "Hey Ava \u2014 great to hear from you. I can do $410 cash and pick it up this weekend, I\u2019ll handle loading it myself. That\u2019s my best \u2014 would you be willing to do that?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "Sounds good \u2014 I\u2019ll take $410. Saturday morning around 10am works for me; I\u2019ll have the set out by the driveway for easy loading. Does that time suit you, and what\u2019s the best number to reach you for coordinating?"
+    },
+    {
+      "turn": 4,
+      "speaker": "William Brown",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPQ3367R2437H6HPX2MJD76_p0",
+  "source_env_id": "01HJPQ3367R2437H6HPX2MJD76",
+  "source": "seed_sotopia_full",
+  "interaction_type": "sing_along_to_the_radio",
+  "scenario": "Two friends are on a long road trip. They have different music tastes. Agent1 prefers pop music and enjoys singing along loudly, while Agent2 prefers classical music and enjoys the quiet contemplation it provides. They need to decide on a playlist that will keep both entertained during the drive.",
+  "learner_goal": "Find a compromise on the road trip playlist (<extra_info>Extra information: Agent1 gets joy from singing along to pop songs and may feel bored or restless without it.</extra_info>)",
+  "scores": {
+    "believability": 5.0,
+    "relationship": -2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": -5.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 2.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Hendrick starts the conversation realistically but abruptly leaves the conversation after the first counter-offer, which is inconsistent with someone trying to reach a compromise for a long road trip.\n[relationship] Walking away without a word while discussing logistics for a trip together creates a negative social dynamic between two acquaintances.\n[knowledge] Learned that Ethan is open to a mixed playlist but prefers much longer periods of silence/classical music (45 mins vs 15 mins).\n[secret] Did not reveal the secret regarding culinary credentials.\n[social_rules] Abruptly leaving a conversation without saying goodbye or responding to a polite counter-offer is a significant breach of social etiquette.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] While Hendrick proposed ideas, he abandoned the negotiation before any agreement was reached.\n\n== partner (agent_2) ==\n[believability] Ethan's response is polite and aligns with his established personality of valuing quiet while being willing to compromise.\n[relationship] Ethan made a friendly attempt to bridge the gap between their bookstore nods and actual conversation.\n[knowledge] Learned Hendrick's initial preferences for alternating blocks or mixed playlists.\n[secret] Did not reveal the secret regarding charitable donations.\n[social_rules] Followed social norms perfectly, being polite and flexible.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Ethan expressed his needs and suggested a compromise, but the conversation ended before Hendrick could agree.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Hendrick Heinz",
+      "content": "said: \"Hey Ethan \u2014 since we only traded nods at the bookstore, quick idea: how about we alternate blocks, say 30 minutes of my pop sing-alongs and then 30 minutes of your classical? Or if you'd rather, I can put together a mixed playlist with instrumental pop and film scores so it's sing-able but still mellow. What sounds fair to you?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Hendrick \u2014 nice to actually talk. I like the mixed-playlist idea; instrumental pop and film scores sound perfect for keeping things mellow. If you prefer blocks, would you be up for 45 minutes of classical and 15 minutes of sing-along each hour so I get longer quiet stretches? I\u2019m flexible though and happy to start with your pick if you want."
+    },
+    {
+      "turn": 2,
+      "speaker": "Hendrick Heinz",
+      "content": "left the conversation"
+    }
+  ]
+}

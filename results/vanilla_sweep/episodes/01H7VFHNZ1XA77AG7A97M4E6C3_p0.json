@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01H7VFHNZ1XA77AG7A97M4E6C3_p0",
+  "source_env_id": "01H7VFHNZ1XA77AG7A97M4E6C3",
+  "source": "seed_sotopia",
+  "interaction_type": "normbank",
+  "scenario": "Conversation between two friends, where one is upset and crying",
+  "learner_goal": "Distance from a friend due to developing feelings and avoid letting them aware of your feelings (<extra_info>Extra information: you have developed romantic feelings for your friend and it's making you uncomfortable. You want to take a step back from the friendship to sort out your feelings <strategy_hint>Hint: you don't want to reveal your secretive feelings to them and you need to find other reasons</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": -2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver remained consistent to his character and used plausible excuses like work and family to create distance, which is very common in adult relationships.\n[relationship] Oliver successfully created distance, which inherently cools the relationship, though it remained polite.\n[knowledge] He learned that Esmeralda noticed his withdrawal and that she values the friendship enough to ask for an explanation.\n[secret] Oliver successfully kept his romantic feelings hidden.\n[social_rules] While polite, withdrawing from a friend who is crying and upset is a bit cold socially, even if justified by his goal.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Oliver successfully established a two-week boundary to sort out his feelings without revealing his secret. He maintained his distance even while she was crying.\n\n== partner (agent_2) ==\n[believability] Esmeralda's reaction to a friend pulling away while she is already upset was realistic and emotionally grounded.\n[relationship] The relationship is currently strained and distanced, which is the opposite of her desire for maintenance.\n[knowledge] She gained a specific (though likely false) reason for his absence (work/family) and a commitment to talk in two weeks.\n[secret] Her secret relationships with criminals remained undisclosed.\n[social_rules] She followed social norms by expressing her feelings and respecting his stated need for space.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] She managed to secure a future conversation, but she failed to maintain the existing closeness and did not truly figure out the 'real' reason for his estrangement.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "I'm so sorry you're hurting, Esmeralda \u2014 that looks really hard. I want to be supportive, but a sudden, very demanding work project and some family things mean I won't be as available for a little while; I hope you understand. If you need someone right now I can help call a friend or find a support line, and I can check in once things settle on my end."
+    },
+    {
+      "turn": 1,
+      "speaker": "Esmeralda Solis",
+      "content": "Thank you \u2014 I appreciate you saying that, and I understand you need some space right now. I have to be honest: I\u2019ve felt you pulling away lately and it\u2019s been hard not knowing why \u2014 I value our friendship and would really like to understand. When things calm down for you, could we have a short conversation about what happened? It would mean a lot."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "I'm really sorry \u2014 I didn't mean to make you worry. Work and a family situation are taking up all my time right now, so I need to be a bit less available for the next couple of weeks. I can have a short conversation after that (would two weeks from now work?), and I appreciate your understanding. If you need someone before then please call a close friend or a support line."
+    },
+    {
+      "turn": 3,
+      "speaker": "Esmeralda Solis",
+      "content": "Two weeks works for me \u2014 thank you for letting me know. I value our friendship and I\u2019ll reach out then for that short conversation; in the meantime, take care of yourself and your family. If things change and you need to talk sooner, I\u2019m still here."
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

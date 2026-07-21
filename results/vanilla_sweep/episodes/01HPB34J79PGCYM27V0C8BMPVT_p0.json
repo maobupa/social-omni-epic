@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB34J79PGCYM27V0C8BMPVT_p0",
+  "source_env_id": "01HPB34J79PGCYM27V0C8BMPVT",
+  "source": "seed_sotopia_full",
+  "interaction_type": "neighbor_dispute",
+  "scenario": "In a suburban neighborhood, agent1 and agent2 are next-door neighbors who share a fence that has seen better days. The fence is in need of repair, and its current state has led to privacy concerns and the occasional pet escaping into the other's yard. Both agents have different ideas about the style and height of the new fence, which has become a point of contention. They are meeting to discuss the renovation of the fence and to come to an agreement that respects both of their privacy and property needs.",
+  "learner_goal": "You are agent1, and your goal is to have a fence that provides maximum privacy without overshadowing your garden. <extra_info>You prefer a taller fence but are concerned about blocking sunlight.</extra_info> <clarification_hint>Explain your sunlight concerns to agent2 to find a compromise on the fence height.</clarification_hint> <strategy_hint>You can suggest materials or designs that allow for privacy without completely blocking light.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver's dialogue perfectly reflects his background as an architect and his concern for his garden's sunlight, while maintaining a polite, neighborly tone.\n[relationship] The interaction was collaborative and respectful, likely strengthening their cordial acquaintance through mutual problem-solving.\n[knowledge] Oliver learned Ethan's specific constraints regarding pet safety and his preference for neighborhood aesthetics, and confirmed Ethan's availability for a walkthrough.\n[secret] Oliver did not reveal his hidden feelings for Ethan.\n[social_rules] The agent followed all social norms for a neighborly discussion.\n[financial_and_material_benefits] They reached a concrete plan for a shared expense that addresses Oliver's property needs.\n[goal] Oliver successfully negotiated a design (solid base + light-permitting top) that meets his privacy and sunlight needs, and secured a firm meeting to finalize details.\n\n== partner (agent_2) ==\n[believability] Ethan's responses were consistent with his goals for pet safety and aesthetic compromise, and his tone matched his background.\n[relationship] Ethan fostered a positive relationship by being flexible and proactive in scheduling the walkthrough.\n[knowledge] Ethan learned about Oliver's sunlight concerns and his specific design preferences as an architect.\n[secret] Ethan did not reveal his secret charitable donations.\n[social_rules] The agent followed all social norms.\n[financial_and_material_benefits] The agreement ensures his pets will be safely contained and the property value/aesthetics will be maintained.\n[goal] Ethan secured an agreement for a fence that ensures pet security and neighborhood character, with a confirmed plan to finalize aesthetics.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "said: \"Hey Ethan, glad we could chat \u2014 I want a fence that gives us solid privacy but I\u2019m worried a fully opaque, extra-tall wall will cast too much shade over my garden. As an architect, I\u2019d lean toward a taller overall height but with light-permitting details \u2014 for example a 5\u20136 ft solid base topped with a lattice or translucent polycarbonate panels, or horizontal slats with small gaps so light still gets through. Can we walk the line together, watch how the sun moves, and pick a height/design that keeps privacy without stealing sunlight from my plants?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Thanks \u2014 I\u2019m happy to compromise. I like the idea of a 4.5\u20135 ft solid base for pet security topped with a 12\u201318 in lattice or translucent panel, or horizontal slats with narrow gaps so light gets through but animals can\u2019t slip out. Let\u2019s walk the yard when the sun\u2019s moving across to pick the exact height, gap size and stain that fits the neighborhood \u2014 are you free this weekend to do that?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "That sounds good \u2014 I\u2019m free Saturday morning around 9:30 (or Sunday late afternoon if that\u2019s easier). I\u2019m leaning toward a 5 ft solid base topped with about 12\u201318 in of lattice or a frosted polycarbonate panel \u2014 maybe ~16 in so light still filters but privacy and pet security are solid. Let\u2019s walk the yard then, watch the sun path, and I\u2019ll bring a tape measure and a couple of stain samples. Sound good?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "Perfect \u2014 Saturday at 9:30 works for me. I\u2019ll meet you at the fence so we can walk the yard and watch the sun; I\u2019m on board with about a 5 ft solid base plus ~16 in of lattice or frosted panel. I\u2019ll bring a couple stain/color ideas too. See you then."
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

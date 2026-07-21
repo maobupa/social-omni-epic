@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HJPX4ZYKFGXXAZH7EARNMBX4_p0",
+  "source_env_id": "01HJPX4ZYKFGXXAZH7EARNMBX4",
+  "source": "seed_sotopia_full",
+  "interaction_type": "neighborhood_game",
+  "scenario": "On a sunny afternoon in a quiet suburban neighborhood, Agent1 notices a dented can lying in the middle of the sidewalk. As a long-time resident with a strong sense of community pride, Agent1 feels compelled to remove the can to keep the neighborhood clean. Before they can do so, Agent2, a new neighbor and an avid player of improvised games, suggests they play a game of 'kick the can' to decide who will dispose of the can properly. Agent1 is initially reluctant, concerned about the potential mess and lack of organization, while Agent2 sees it as an opportunity to have fun and make a new friend.",
+  "learner_goal": "Convince Agent2 to handle the can responsibly without engaging in the game, stressing the importance of maintaining the neighborhood's cleanliness and order. (<extra_info>Extra information: Agent1 values tidiness and is wary of activities that might lead to further littering.</extra_info>, <clarification_hint>Clarification hint: Agent1 wants to ensure that fun activities do not compromise the community's standards.</clarification_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": -1.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": false,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Hendrick maintained a consistent character voice as a meticulous chef and community-oriented resident, repeatedly emphasizing his concerns about cleanliness and order.\n[relationship] While Hendrick offered a wine tasting as an olive branch, the repeated rejection of Baxter's playful advances and his abrupt departure from the conversation likely caused some social friction.\n[knowledge] He learned that Baxter prioritizes 'the laugh' and is willing to compromise, but gained no deep insights into his neighbor.\n[secret] Hendrick's secret about his culinary credentials remained undisclosed.\n[social_rules] Leaving the conversation without a closing remark is slightly abrupt in a polite neighborhood setting.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Hendrick successfully held his ground and refused to participate in the game. Baxter eventually conceded in Turn 10 that he would pick up the can if Hendrick skipped the game, effectively achieving Hendrick's goal of disposal without play.\n\n== partner (agent_2) ==\n[believability] Baxter's persistence in trying to find compromises and his focus on 'the laugh' align perfectly with his persona as a restorer of old things and a lover of games.\n[relationship] Baxter attempted to build camaraderie, but ultimately failed to engage his neighbor in the way he intended.\n[knowledge] Baxter learned exactly where Hendrick's boundaries lie regarding community standards and his rigidity.\n[secret] Baxter's secret artifact was not mentioned.\n[social_rules] Baxter was polite and conciliatory throughout the negotiation.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Baxter failed to persuade Hendrick to play the game, though he did secure an invitation to the wine tasting.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Hendrick Heinz",
+      "content": "Baxter, I appreciate the spirit, but let\u2019s not make a game of this \u2014 that dented can could tear, roll into the street, or invite pests. Would you mind picking it up and dropping it in the recycling bin now? If you\u2019re up for something playful later, drop by for a casual wine-tasting tonight and we\u2019ll properly enjoy some fun."
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "Hendrick, I get it \u2014 I\u2019m picky about the neighborhood too. How about a quick, two-minute, low-impact game: gentle kicks, no rolling into the street, winner takes the can to the recycling bin? It\u2019s fast, harmless, and a bit of fun to break the day \u2014 you in?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Hendrick Heinz",
+      "content": "Baxter, I like the playful streak, but kicking litter isn't something I can get behind \u2014 it could tear or roll into the street. Do this instead: you carry it the few paces to the recycling bin now, no fuss, and I\u2019ll pour you a proper glass at tonight\u2019s tasting as thanks. Sound fair?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Baxter Sterling",
+      "content": "Hendrick, I like the no-fuss approach \u2014 but hear me out: a two-minute compromise. We do gentle toe-nudges only, place the can on the grass strip so it can't roll into the street, winner walks it to the recycling bin. Quick laugh, zero mess, and then I\u2019ll gladly join your wine tasting tonight."
+    },
+    {
+      "turn": 4,
+      "speaker": "Hendrick Heinz",
+      "content": "Baxter \u2014 I won't have litter kicked around, but here's a quick, harmless alternative: best-of-three rock\u2013paper\u2013scissors; loser picks the can up and drops it in the recycling bin immediately. Quick, clean, and still playful \u2014 you game?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Baxter Sterling",
+      "content": "Hendrick, fair offer \u2014 let\u2019s blend the two: best-of-three rock\u2013paper\u2013scissors to keep it quick and tidy, and the winner gets to give the can one gentle toe-nudge onto the grass strip (no rolling into the street) before carrying it to the recycling bin. Quick, harmless, and a good laugh before tonight\u2019s tasting \u2014 what do you say?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Hendrick Heinz",
+      "content": "Baxter \u2014 I appreciate the spirit, but I'm honestly puzzled: why make a game of something that could tear or roll into the street? If you want a quick laugh, join me tonight for a proper, harmless game at the tasting; for now please just pick up the can and drop it in the recycling bin \u2014 I'll pour you that special glass as thanks."
+    },
+    {
+      "turn": 7,
+      "speaker": "Baxter Sterling",
+      "content": "Hendrick \u2014 one last pitch: two minutes, toe-taps only on the grass strip, no rolling into the street; if it tears or I mess up I\u2019ll pick it up straight away and you keep that special glass. It\u2019s just a quick laugh and a tiny neighborhood moment; if you still say no, I\u2019ll fetch the bin now. So \u2014 two minutes for a bit of fun, or quiet victory for your wine tonight?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Hendrick Heinz",
+      "content": "Baxter \u2014 I love the spirit, but I won't have litter kicked around. Be straight with me: is this about the laugh or about avoiding the few steps to the bin? If it\u2019s the laugh, save it for tonight\u2019s tasting; if it\u2019s the steps, do the neighbourly thing now (or I\u2019ll grab it myself). Or for a harmless compromise, take a silly, non\u2011contact photo pretending to boot it onto the grass, then carry it to the recycling \u2014 your call."
+    },
+    {
+      "turn": 9,
+      "speaker": "Baxter Sterling",
+      "content": "Fair enough \u2014 it's about the laugh, not dodging the steps. One last try: I\u2019ll take the silly, non\u2011contact photo you suggested, then we do a two\u2011minute toe\u2011tap micro\u2011game on the grass (no rolling, no mess) and the winner carries the can to the recycling. If you\u2019d rather skip it, I\u2019ll pick it up now and I\u2019ll be at your tasting tonight for that special glass."
+    },
+    {
+      "turn": 10,
+      "speaker": "Hendrick Heinz",
+      "content": "left the conversation"
+    }
+  ]
+}

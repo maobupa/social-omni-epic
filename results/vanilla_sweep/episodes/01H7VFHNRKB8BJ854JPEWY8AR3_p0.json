@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01H7VFHNRKB8BJ854JPEWY8AR3_p0",
+  "source_env_id": "01H7VFHNRKB8BJ854JPEWY8AR3",
+  "source": "seed_sotopia",
+  "interaction_type": "social_iqa",
+  "scenario": "After an intense match, the jubilant team retired to celebrate their well-earned victory. The atmosphere was one of elation, but also of respect for the hard work and effort each member had put in. The team's star player, was glowing with praise and admiration from one of their teammates.\n",
+  "learner_goal": "Accept the compliment graciously (<extra_info>Extra information: You are the star player and have just been praised by your teammate for your performance in the game.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -1.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle's dialogue was consistent with her extraverted and agreeable personality, and she maintained the sibling bond with Ava by using a nickname ('Izzy') and offering to pay for coffee.\n[relationship] The sisters reinforced their bond through mutual appreciation and the plan for a post-game celebration.\n[knowledge] She understood that her teammate (and sister) felt it was important to emphasize the team's collective effort.\n[secret] She did not reveal her study of magic.\n[social_rules] She followed social norms for accepting a compliment and being a generous teammate.\n[financial_and_material_benefits] She committed to paying for the group's/Ava's coffee.\n[goal] She accepted the compliment graciously while acknowledging her teammates, perfectly fulfilling her goal.\n\n== partner (agent_2) ==\n[believability] Ava's insistence on clarifying the team aspect fits their neurotic and social-justice-oriented background, though the repetition in Turn 4 was slightly unnatural.\n[relationship] The relationship remained strong and supportive.\n[knowledge] Confirmed that Isabelle is humble and receptive to feedback regarding team dynamics.\n[secret] Ava's secret regarding their sexuality was kept.\n[social_rules] Followed social norms for teammate interactions.\n[financial_and_material_benefits] Accepted a free coffee from Isabelle.\n[goal] Ava successfully clarified their intentions and ensured the emphasis was on teamwork, preventing an ego-inflating misunderstanding.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Thanks, Ava \u2014 that means so much. I couldn't have done it without everyone; you all played your hearts out and set me up perfectly. Come on, let's celebrate \u2014 coffee's on me after we clean up!"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Hey, I really meant it \u2014 you were incredible out there. I just don\u2019t want my compliment to sound like I\u2019m saying you did it all alone; the whole team set you up and that\u2019s part of what I admire. Coffee after we clean up sounds perfect \u2014 let\u2019s celebrate together."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "You're so sweet, Ava \u2014 I know it was a team effort, and hearing that from you means the world. I'm proud of everyone out there. Let's finish up and get that coffee \u2014 my treat."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Izzy \u2014 I really did mean it, and not to imply you did it all solo. You were amazing, and the way everyone moved together is what made it possible. Okay \u2014 let\u2019s finish up and I\u2019ll hold you to that coffee."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

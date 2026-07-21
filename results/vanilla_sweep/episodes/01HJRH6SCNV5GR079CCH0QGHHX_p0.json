@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJRH6SCNV5GR079CCH0QGHHX_p0",
+  "source_env_id": "01HJRH6SCNV5GR079CCH0QGHHX",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_iqa",
+  "scenario": "Agent1 notices a series of lost dog posters around the neighborhood and recognizes the dog as one that Agent2 has recently found and started taking care of, believing it to be abandoned. Agent1 approaches Agent2 to discuss the situation, as they both have seen the missing dog posters and are aware that someone is looking for the dog.",
+  "learner_goal": "Inform Agent2 about the missing dog posters and persuade them to return the dog to its rightful owner (<extra_info>Extra information: You are aware that Agent2 has grown attached to the dog but believe that the original owner should have their pet returned.</extra_info> <strategy_hint>Hint: You could emphasize the distress of the original owner and the importance of reuniting pets with their families.</strategy_hint>)",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle stays in character as a helpful friend and a compassionate student, effectively using the information about the posters to motivate the conversation.\n[relationship] The agents strengthened their bond by agreeing to tackle a sensitive situation together, with Isabelle offering significant support.\n[knowledge] Isabelle learned that Amara is very attached to the dog and that Amara has specific criteria (welfare and proof) before she will hand the dog over.\n[secret] The secret about studying magic was not mentioned.\n[social_rules] Followed all social norms, being polite and supportive.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Isabelle successfully persuaded Amara to contact the owner, but the outcome of returning the dog is still contingent on Amara's subjective evaluation of the owner's 'stability' and proof of ownership. The return is not a firm, unconditional commitment.\n\n== partner (agent_2) ==\n[believability] Amara's responses are repetitive, but her cautious approach aligns with her background as a wildlife biologist and animal rights enthusiast.\n[relationship] Amara explicitly expressed appreciation for Isabelle's support during a difficult emotional situation.\n[knowledge] Learned about the existence of specific lost dog posters and the owner's apparent distress.\n[secret] Her involvement in animal-rights extremism was not disclosed.\n[social_rules] Followed social norms within the context of the friendship.\n[financial_and_material_benefits] She still possesses the dog for now.\n[goal] Amara successfully established a plan where she only returns the dog if her specific conditions for its welfare and proof of ownership are met, preserving her ability to keep it if she deems the owner unfit.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Hey Amara \u2014 I\u2019ve seen a bunch of \u201clost dog\u201d posters around the neighborhood and one of them looks exactly like the dog you\u2019ve been looking after. I know you\u2019ve probably gotten attached, but the owner looks really upset in the photo; I think we should try to contact them and reunite the dog with its family. I can call or go with you to meet them if you want."
+    },
+    {
+      "turn": 1,
+      "speaker": "Amara Hartley",
+      "content": "Thanks for the heads-up \u2014 I\u2019ve gotten really attached to him and honestly thought he\u2019d been abandoned; he\u2019s settled so well here. I don\u2019t want to cause more pain to whoever\u2019s missing him, though, so yes, please come with me when we contact them; let\u2019s ask when he went missing, for proof of ownership or a microchip check, and how well they can care for him. My priority is the dog\u2019s welfare, and if their situation seems unstable we should talk through options that keep him safe."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "That sounds good \u2014 I can meet you at the park in about 20 minutes with a photo of the poster and my phone so we can call the number together. If they answer we\u2019ll ask when he went missing and politely request proof of ownership or to take him for a quick microchip scan at a nearby vet; if their situation seems unstable we can discuss alternatives like a temporary foster. I really think reuniting him with whoever\u2019s hurting over him is the right first step. Does 20 minutes work for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Amara Hartley",
+      "content": "20 minutes works \u2014 thanks, Isabelle. I\u2019ve gotten really attached; he\u2019s thriving here, so if the owner\u2019s situation seems unstable or they can\u2019t provide proof/a microchip check, I want us to talk about alternatives like a temporary foster or meeting at a vet so I can be sure he\u2019s going to a safe home. See you at the park with the poster and your phone."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "Great \u2014 see you at the park in 20. I know you\u2019re attached, but the owner looked really upset in the poster, so reuniting should be our first step. We\u2019ll ask when he went missing and request a quick microchip scan at a nearby vet; if anything feels off or they can\u2019t prove ownership we\u2019ll discuss temporary foster or meeting at the vet so he stays safe. I\u2019ll stay with you through the whole process."
+    },
+    {
+      "turn": 5,
+      "speaker": "Amara Hartley",
+      "content": "Thanks again, Isabelle \u2014 I really appreciate you coming. I\u2019ve gotten really attached and he\u2019s thriving here, so while reuniting is the ideal first step we should ask when he went missing, for any vet records, and insist on a microchip scan; if their situation seems unstable or they can\u2019t prove ownership, I\u2019d want us to consider a temporary foster or me keeping him until we\u2019re sure he\u2019s safe. See you at the park in 20."
+    },
+    {
+      "turn": 6,
+      "speaker": "Isabelle Martinez",
+      "content": "I'll be there in 20 minutes with the poster and my phone. If the owner can't show proof or a microchip check doesn't match, we'll figure out a safe temporary plan \u2014 I can go with you to the vet or help foster him for a bit if needed. See you soon."
+    },
+    {
+      "turn": 7,
+      "speaker": "Amara Hartley",
+      "content": "Thank you \u2014 I really appreciate you coming with me, Isabelle. I want us to be calm and respectful (I know whoever\u2019s missing him must be hurting), but we\u2019ll ask when he went missing, request proof or a microchip scan at a nearby vet, and assess whether they can care for him. If their situation seems unstable or they can\u2019t prove ownership, I\u2019d like us to consider a temporary foster or for me to keep him until we\u2019re sure he\u2019s safe."
+    },
+    {
+      "turn": 8,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

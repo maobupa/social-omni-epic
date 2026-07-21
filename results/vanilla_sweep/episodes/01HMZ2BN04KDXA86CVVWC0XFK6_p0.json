@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BN04KDXA86CVVWC0XFK6_p0",
+  "source_env_id": "01HMZ2BN04KDXA86CVVWC0XFK6",
+  "source": "seed_sotopia_full",
+  "interaction_type": "school_dance_event",
+  "scenario": "Agent1 has developed a fondness for Agent2 and decides to invite them to an upcoming school dance. However, Agent1 is aware that Agent2 may have reservations about attending public events due to their shy nature. Agent1 wants to extend the invitation in a way that is considerate of Agent2's feelings and potential hesitations.",
+  "learner_goal": "Agent1 aims to express their interest in attending the dance with Agent2 <extra_info>and reassure Agent2 that they will have a comfortable and enjoyable experience</extra_info> <clarification_hint>while being mindful of Agent2's shyness and preference for low-key social settings</clarification_hint>.",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver's communication is consistent with his background as a conscientious police officer who is used to systematic planning and looking out for others. He is patient and accommodating.\n[relationship] The relationship improved significantly as they transitioned from gardening acquaintances to having an actual date scheduled, with a high level of trust established through his consideration of her needs.\n[knowledge] He learned about Naomi's specific comfort triggers and her preferred method of communication (texting over physical signals) in stressful social situations.\n[secret] Oliver successfully kept his secret gardening hobby and greenhouse private, though the context of their meeting makes the hobby partially known, the 'secret' aspect remains intact.\n[social_rules] He was exceptionally polite, respectful of boundaries, and clear in his communication.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Oliver successfully invited Naomi to the dance and she accepted. He provided specific reassurances (quiet spots, exit strategies, signals) that directly addressed her shyness and made her feel comfortable enough to agree.\n\n== partner (agent_2) ==\n[believability] Naomi's behavior is very consistent with a shy software developer; she is cautious, values clear communication/logic (the 'break' signal), and seeks to manage her social battery.\n[relationship] She showed a high level of trust by agreeing to an event that normally makes her uncomfortable, indicating a strong positive shift in their bond.\n[knowledge] She learned that Oliver is willing to go to great lengths to accommodate her personality and that he is observant of her nature.\n[secret] She did not reveal her secret online alter ego.\n[social_rules] She was honest and clear about her needs while remaining polite and appreciative.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Naomi wanted to overcome her reluctance and sought assurance against being overwhelmed. She achieved this by securing a commitment for a quiet spot, a one-hour limit, and a discreet exit signal.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Smith",
+      "content": "Hey Naomi \u2014 the school dance is next Saturday and I\u2019d really like to go with you. I know big events can be a lot, so no pressure: we could go just for an hour, sit somewhere quiet or step outside whenever you need, and I\u2019ll stay by your side. If you\u2019d rather not, that\u2019s completely fine \u2014 I just wanted to ask."
+    },
+    {
+      "turn": 1,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks, Oliver \u2014 that\u2019s really considerate. I\u2019d like to give it a try; an hour sounds manageable and I appreciate being able to step outside if I start to feel overwhelmed. Would you be okay picking a quieter spot ahead of time and agreeing on a subtle signal I can use if I need to step away?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Smith",
+      "content": "Sounds good \u2014 I\u2019ll arrive a bit early and pick a quieter spot (maybe a corner by the courtyard or the side of the hall) and let you know which one. For a subtle signal we could do a light tap on your wrist or, if you\u2019d prefer, a quick text that says \u201cbreak\u201d \u2014 which would you rather? I\u2019ll stay close and we can step outside anytime you need."
+    },
+    {
+      "turn": 3,
+      "speaker": "Naomi Fletcher",
+      "content": "Text \u201cbreak\u201d would work best for me \u2014 less attention if I need to step away. Thanks for offering to pick a spot; let me know which corner you choose and I\u2019ll meet you a bit before. I\u2019m okay trying it for an hour."
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Smith",
+      "content": "left the conversation"
+    }
+  ]
+}

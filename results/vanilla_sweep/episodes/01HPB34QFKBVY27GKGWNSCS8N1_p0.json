@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPB34QFKBVY27GKGWNSCS8N1_p0",
+  "source_env_id": "01HPB34QFKBVY27GKGWNSCS8N1",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 and Agent2 are friends who often play frisbee at the local park. During one of their games, Agent1 catches the frisbee in a way that accidentally injures Agent2. Agent2, who is a semi-professional athlete, is concerned about the injury affecting their performance in an upcoming event. Agent1 approaches Agent2 to apologize and discuss the incident.",
+  "learner_goal": "Agent1: Apologize for the accident and express your willingness to help Agent2 recover in time for the event (<extra_info>Extra information: You feel guilty about the accident and want to maintain the friendship with Agent2.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Benjamin's tone was consistently apologetic and helpful, which fits his character and the situation. He followed through with specific offers of assistance.\n[relationship] The friendship was preserved and likely strengthened through Benjamin's accountability and Ethan's forgiveness.\n[knowledge] Benjamin learned the specific nature of the injury (serious sprain), the logistics of the appointment, and the immediate needs (ice pack/cushion).\n[secret] Benjamin's secret regarding his family wealth was not mentioned.\n[social_rules] Benjamin adhered to social norms for apologizing and supporting a friend after an accident.\n[financial_and_material_benefits] Benjamin committed to covering treatment costs and using his own resources (time/car/ice packs) to help.\n[goal] Benjamin apologized sincerely and established a concrete plan to help Ethan recover, including rides to physio and financial support if needed, successfully maintaining the friendship.\n\n== partner (agent_2) ==\n[believability] Ethan's response was realistic for an athlete who is worried but values his friendship. He repeated the injury description in Turn 4, which was slightly repetitive, but otherwise natural.\n[relationship] Ethan expressed appreciation for Benjamin's support and explicitly stated he valued the friendship and did not blame him.\n[knowledge] Ethan learned that Benjamin was willing to rearrange his life and finances to ensure Ethan's recovery.\n[secret] Ethan's secret was not revealed.\n[social_rules] Ethan handled the situation with maturity, accepting help without being overly demanding.\n[financial_and_material_benefits] Ethan secured free transportation, rehabilitation help, and a potential safety net for medical costs.\n[goal] Ethan successfully communicated the seriousness of the injury and its impact while securing and accepting specific support from Benjamin.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Benjamin Jackson",
+      "content": "Ethan, I'm really sorry \u2014 I feel awful that my catch injured you before your event. I want to do whatever helps: I can drive you to physio, help with rehab exercises, cover treatment costs, or change my schedule so I can support your training recovery. Tell me what would help most and I'll do it; I don't want this to mess with your performance or our friendship."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Ben \u2014 I really appreciate you saying that. My knee\u2019s worse than I first thought; the doc says it\u2019s a pretty serious sprain and it could affect my performance at the upcoming event (maybe more than I want to admit). Could you drive me to physio tomorrow and help with the rehab exercises for the next few weeks? If treatment costs start piling up I may ask about that too, but please don\u2019t beat yourself up \u2014 I know it was an accident and I value our friendship."
+    },
+    {
+      "turn": 2,
+      "speaker": "Benjamin Jackson",
+      "content": "Absolutely \u2014 I\u2019ll pick you up for physio tomorrow. What time is the appointment? I can rearrange my schedule over the next few weeks to help with rehab and rides, and if costs start piling up please tell me and I\u2019ll cover what I can. Focus on getting better and lean on me \u2014 we\u2019ll get you ready for that event together."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Ben. The physio is at 10:30 AM tomorrow \u2014 could you pick me up around 10? The doc says it\u2019s a pretty serious sprain and could impact my event prep, so I really appreciate you offering to help with rides and rehab; I\u2019ll let you know if treatment costs start piling up."
+    },
+    {
+      "turn": 4,
+      "speaker": "Benjamin Jackson",
+      "content": "Sounds good \u2014 I\u2019ll pick you up at 10. Should I meet you at your place or at the park? I can bring an ice pack and anything the physio recommends; text me the address and any other instructions. We\u2019ll get you back to top shape for the event."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Smith",
+      "content": "Meet me at my place \u2014 text me and I\u2019ll send the address. An ice pack would be great; the physio said to keep weight off it before the appointment, so a cushion for the car would help. Thanks, Ben \u2014 I really appreciate you doing this."
+    },
+    {
+      "turn": 6,
+      "speaker": "Benjamin Jackson",
+      "content": "left the conversation"
+    }
+  ]
+}

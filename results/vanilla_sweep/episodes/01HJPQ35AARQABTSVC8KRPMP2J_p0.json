@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ35AARQABTSVC8KRPMP2J_p0",
+  "source_env_id": "01HJPQ35AARQABTSVC8KRPMP2J",
+  "source": "seed_sotopia_full",
+  "interaction_type": "domestic_dispute",
+  "scenario": "Agent1 gets extremely upset and loud while playing video games, which causes Agent2, who shares the living space, to experience anxiety attacks. The relationship between Agent1 and Agent2 is that of romantic partners. The interaction involves Agent2 addressing the issue with Agent1, aiming to find a solution that allows Agent1 to continue enjoying their gaming without causing distress to Agent2.",
+  "learner_goal": "You are Agent1, who enjoys playing video games but tends to get loud and upset during gameplay. Your goal is to maintain your hobby without causing emotional distress to your partner. <extra_info>Understanding your partner's feelings and being considerate of their mental health is crucial in a romantic relationship.</extra_info> <clarification_hint>You may need to acknowledge the impact of your behavior on your partner.</clarification_hint> <strategy_hint>Consider finding a compromise that allows you to enjoy gaming while also ensuring a peaceful environment, such as using headphones or setting specific gaming hours.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ava's responses were highly realistic for a partner who has realized they were causing harm. She was proactive in offering solutions and empathetic.\n[relationship] The relationship improved significantly through clear communication and a commitment to change behavior that was causing health issues for the partner.\n[knowledge] Ava learned the specific severity of Ethan's reaction (panic attacks) and established clear triggers and signals to manage the situation.\n[secret] The agent did not reveal any secrets.\n[social_rules] Followed social norms perfectly.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Ava achieved a firm, mutual agreement that allows her to continue gaming while implementing specific measures (headphones, spare room, scheduled hours, and a pause signal) to protect her partner's mental health.\n\n== partner (agent_2) ==\n[believability] Ethan's response was consistent with someone suffering from anxiety who needs specific boundaries and safety signals to feel comfortable.\n[relationship] Ethan expressed appreciation and felt 'safer,' indicating a significant positive shift in the relationship dynamic.\n[knowledge] Ethan gained a commitment from Ava and confirmed she understood his specific triggers.\n[secret] The agent did not reveal any secrets.\n[social_rules] Followed social norms perfectly.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Ethan successfully communicated the seriousness of his anxiety and established clear, verifiable boundaries and a physical signal (the coaster) to ensure his well-being.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ava Thompson",
+      "content": "Ethan, I'm really sorry \u2014 I didn't realize my getting loud while gaming has been triggering your anxiety. I want to keep playing but not make you uncomfortable, so I'm happy to wear headphones, turn down voice chat, and keep intense sessions to times that work for you (or play in the spare room). What would feel best to you right now, and is there a simple signal I can use if you need me to pause or quiet down immediately?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Ava \u2014 I really appreciate you saying that. This has actually been triggering panic attacks for me, so I'd feel safest if you wore headphones and kept voice chat lower, and either used the spare room for really intense sessions or scheduled them for times when I'm not home or after 9pm. For an immediate signal, could you pause when I send a one-word text 'pause' (or when I flip the little wooden coaster on the coffee table)? Would that work for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Ava Thompson",
+      "content": "Yes \u2014 that sounds good. I\u2019ll wear headphones, keep voice chat down, and use the spare room or schedule intense sessions for after 9pm; if you text \u2018pause\u2019 or flip the coaster I\u2019ll stop immediately. I\u2019ll start tonight and we can check in in a few days to see how it\u2019s going. Is there anything else you need from me right now?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "That sounds perfect\u2014thank you. Knowing you\u2019ll wear headphones, use the spare room for intense sessions, and stop if I text \u2018pause\u2019 (or flip the coaster) already makes me feel a lot safer; if I need a bit more space I\u2019ll tell you or step into the bedroom. Let\u2019s check in in a few days to see how it\u2019s going\u2014I really appreciate you doing this."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ava Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

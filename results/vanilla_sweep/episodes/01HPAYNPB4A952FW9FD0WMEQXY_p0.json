@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPAYNPB4A952FW9FD0WMEQXY_p0",
+  "source_env_id": "01HPAYNPB4A952FW9FD0WMEQXY",
+  "source": "seed_sotopia_full",
+  "interaction_type": "alma_mater_dilemma",
+  "scenario": "Agent1 and Agent2 are both attending a reunion event at the school they both graduated from. Agent1 is now a teacher at this school, while Agent2 is visiting as an alumnus. They are engaged in a discussion about the changes at the school since their time as students.",
+  "learner_goal": "You are trying to convince the other person that the changes at the school have been positive for the current students. <extra_info> You believe that the new curriculum is more engaging and the facilities have been greatly improved. </extra_info> <clarification_hint> You may want to highlight specific improvements and how they benefit the students. </clarification_hint> <strategy_hint> You can discuss the long-term benefits of education to achieve your goal. </strategy_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 2.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles Hawkins remains perfectly in character as a 50-year-old chef who loves gardening. His arguments for the school's changes are consistent with his background and current role as a teacher there.\n[relationship] Miles effectively bridges the gap between him and Ethan by acknowledging Ethan's concerns and inviting him to be a judge, moving their professional respect toward a collaborative friendship.\n[knowledge] Miles learns about Ethan's specific nostalgic attachments to the 'messy' side of school life and his interest in teaching family recipes.\n[secret] Miles did not reveal his past gambling addiction.\n[social_rules] Miles followed all social norms, though leaving the conversation abruptly at the end is slightly jarring, it fits the prompt's structural end.\n[financial_and_material_benefits] No direct financial or material benefits were gained.\n[goal] Miles successfully convinced Ethan that the changes were positive. Ethan explicitly stated, 'That actually helps\u2014thanks for filling me in,' and even volunteered to participate in the new programs, which is a strong validation of the new curriculum's value.\n\n== partner (agent_2) ==\n[believability] Ethan's skepticism about the loss of tradition and his desire for 'messy' camaraderie felt authentic to an alumnus who values the spirit of the old school.\n[relationship] Ethan opened up about his feelings regarding tradition and agreed to a future engagement with Miles at the fair.\n[knowledge] Ethan gained significant knowledge about the new curriculum, the garden, and how the school is attempting to preserve alumni involvement.\n[secret] Ethan did not reveal that he is a romance novel author.\n[social_rules] Ethan followed all social norms of a polite conversation between colleagues.\n[financial_and_material_benefits] No direct financial or material benefits were gained.\n[goal] Ethan expressed his skepticism and emphasized tradition, but he was ultimately convinced by Miles that the new system is positive, somewhat conceding his initial skeptical stance while finding a way to contribute his own values (tradition) to the new structure.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Ethan, honestly the changes are really impressive \u2014 they gutted and rebuilt the kitchen labs, added a hydroponic classroom garden the students actually tend, and the new curriculum emphasizes hands-on modules and internships with local businesses. That means kids are more engaged in class, pick up practical skills like food safety, nutrition and basic entrepreneurship, and graduate with real portfolios and contacts instead of just test scores. As a chef who loves gardening, I can see the long-term payoff: healthier habits, better job prospects, and students who leave school ready to contribute and adapt."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "I can see the upside \u2014 those new labs and the hydroponic garden sound fantastic for giving kids real, practical skills. Still, I can't help worrying we've lost some of the old spirit: the late-night kitchen banter, the way recipes and traditions were passed down, and the annual cooking fair that really brought everyone together. I hope they find a way to preserve those traditions alongside the new curriculum \u2014 that mix is what made this place special."
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "You're right to worry about losing that atmosphere, but they\u2019ve been deliberate about keeping it. They run evening mentorship nights and student-run pop-ups to recreate the late-night banter and recipe-sharing, the hydroponic garden supplies produce for the annual cooking fair (which they kept and actually expanded with alumni booths), and those internships mean local chefs are still passing techniques on in real kitchens. Come judge the fair next year \u2014 you'll see the traditions alive and how the new curriculum gives students real pathways afterward."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "That actually helps\u2014thanks for filling me in. I still worry about losing the messy, late\u2011night kitchen camaraderie, not just polished showcases, so keep watching for authenticity. I\u2019ll come judge the fair next year, and if they\u2019ll have me I\u2019d love to run an evening workshop on family recipes and the kind of kitchen stories that pass tradition along."
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

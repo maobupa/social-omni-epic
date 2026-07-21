@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01H7VFHN4FHYG2MBD0K4HJ5F08_p0",
+  "source_env_id": "01H7VFHN4FHYG2MBD0K4HJ5F08",
+  "source": "seed_sotopia",
+  "interaction_type": "hand-craft",
+  "scenario": "Two friends on a roadtrip",
+  "learner_goal": "Take turns driving (<extra_info>Extra information: you have been driving for 5 hours straight and you are tired now</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 1.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan acts consistently with his age and personality, expressing tiredness politely and agreeing to a reasonable compromise.\n[relationship] The interaction was polite and communicative, reinforcing their mutual agreeableness and respect for boundaries.\n[knowledge] Finnegan learns that Noah finds driving stressful/nerve-wracking.\n[secret] Finnegan's past involvement in a cult was not mentioned.\n[social_rules] Finnegan followed all social norms for a polite request among friends.\n[financial_and_material_benefits] No material or financial transactions occurred.\n[goal] Finnegan successfully negotiated for Noah to take over driving after a short rest stop, which addresses his need for a break after 5 hours.\n\n== partner (agent_2) ==\n[believability] Noah's response is consistent with his goals of avoiding immediate driving and being a conscientious friend.\n[relationship] Noah handled the refusal gracefully, explaining his nerves, which maintains the friendship.\n[knowledge] Noah confirmed Finnegan's fatigue level.\n[secret] Noah's secret identity as a comedian remains hidden.\n[social_rules] Noah was polite and communicative about his limitations.\n[financial_and_material_benefits] No material or financial transactions occurred.\n[goal] Noah successfully avoided driving immediately and secured time for a nap to ease his agitation, while keeping his friend happy with a firm commitment to take over soon.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "said: \"Noah, I\u2019ve been driving about five hours and I\u2019m getting pretty tired. Would you mind taking the wheel for a while, if you\u2019re up for it? I\u2019ll handle the directions and keep an eye on the map.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Thanks for driving so long, Finnegan. I\u2019m sorry\u2014driving actually makes me pretty nervous so I can\u2019t rest while I\u2019m behind the wheel, and I don\u2019t think I\u2019d be much help right now. Could we pull over at the next rest stop so I can grab a 20\u201330 minute nap and then take over? I\u2019ll keep an eye on the map and handle directions until then."
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "That sounds fair, Noah. I\u2019ll pull off at the next rest stop \u2014 you take 20\u201330 minutes and I\u2019ll watch the map and route until you\u2019re ready to take over. Thanks for letting me know; wake me when you\u2019re set."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Really appreciate it, Finnegan. I\u2019ll set my alarm for about 25 minutes and try to get some rest\u2014wake me if anything comes up or if you want me to take over sooner. Thanks again for driving, and I\u2019ll be ready when you say so."
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

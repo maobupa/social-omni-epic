@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BMRJMC23KDJYB8R73HN7_p0",
+  "source_env_id": "01HMZ2BMRJMC23KDJYB8R73HN7",
+  "source": "seed_sotopia_full",
+  "interaction_type": "vintage_game_exchange",
+  "scenario": "Agent1 has recently acquired a vintage video game console and is proud of their collection. Agent2, a fellow enthusiast of retro gaming, is interested in playing a specific rare game that Agent1 owns. Agent1 is protective of their collection and is hesitant to let others use it, while Agent2 believes that sharing the joy of retro gaming is part of the community spirit.",
+  "learner_goal": "You are Agent1, and your goal is to maintain the pristine condition of your vintage game console and its games. <extra_info>You value the items not only for their monetary worth but also for sentimental reasons.</extra_info> <clarification_hint>You are not opposed to sharing, but you need to be assured that your possessions will be handled with the utmost care.</clarification_hint> <strategy_hint>Consider proposing conditions that would ensure the safety of your items, such as supervision or collateral.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 5.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily Greenberg's communication was professional yet firm, reflecting her background as a lawyer and her protective stance over her collection. She clearly laid out conditions that aligned with her character's need for control and care.\n[relationship] The relationship maintained its professional mutual respect. Mia agreed to Lily's strict terms, showing respect for Lily's authority over her possessions.\n[knowledge] Lily learned that Mia is willing to comply with very strict protocols and even offer her ID as collateral to play the game.\n[secret] Lily did not reveal her secret about anonymous donations.\n[social_rules] Lily followed professional social norms, although she abruptly left the conversation after Mia's agreement.\n[financial_and_material_benefits] Lily successfully secured an agreement that protects her high-value items with strict rules, supervision, and collateral.\n[goal] Lily achieved her goal perfectly. She secured a commitment that the game will only be played under her direct supervision, with her handling the hardware, and with Mia providing collateral (ID).\n\n== partner (agent_2) ==\n[believability] Mia Davis acted according to her goal of experiencing the game by being conciliatory and agreeable to the conditions set by Agent 1.\n[relationship] By agreeing to all of Lily's terms, Mia fostered a sense of trust and cooperation, though the interaction was brief.\n[knowledge] Mia learned the specific boundaries and conditions Lily requires for her collection.\n[secret] Mia did not reveal her punk rock past.\n[social_rules] Mia was polite and cooperative throughout the exchange.\n[financial_and_material_benefits] Mia secured access to a rare game she wanted to play, although she has to surrender her ID and follow strict rules to do so.\n[goal] Mia successfully reached an agreement to play the rare game. While the conditions are restrictive, she achieved the primary objective of gaining access to the experience.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Mia, I\u2019m glad you want to try that game \u2014 it\u2019s one of my rarest and I keep it in pristine condition. I can\u2019t let it leave my care, but I\u2019m happy to have you play here with me present; I\u2019ll handle insertion/removal and ask for clean hands, no food or drink, and shoes off. If you\u2019d prefer to take it elsewhere, I\u2019d need collateral (an ID or a modest deposit) instead. Which option would you be comfortable with?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Thanks \u2014 I really appreciate how careful you are. Playing at your place under those rules works for me: I\u2019ll wash my hands, take my shoes off, and keep food and drink away, and I\u2019m happy for you to handle insertion and removal. If it makes you more comfortable, I can leave my ID with you while I play."
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

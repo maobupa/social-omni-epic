@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPTHNR66XHYBNNX7WKA46Z9_p0",
+  "source_env_id": "01HJPTHNR66XHYBNNX7WKA46Z9",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 and Agent2, who are colleagues at the same firm, realize that they have not yet cast their votes on election day due to an urgent project deadline. The polls are closing soon, and they must quickly decide whether to finish their work or exercise their civic duty. Agent1 is passionate about the importance of voting and feels compelled to persuade Agent2 to leave work early to vote. Agent2 is more concerned about the project and its implications for their career but is open to discussion.",
+  "learner_goal": "Agent1: Convince Agent2 to prioritize voting over work without creating tension or jeopardizing your professional relationship (<extra_info>Extra information: You believe in the impact of every single vote and feel it's a civic responsibility that should not be ignored.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Rafael remained true to his conviction regarding civic duty while maintaining a professional and supportive tone with his colleague.\n[relationship] By offering to cover the workload and supporting Jaxon's civic duty, Rafael strengthened the professional bond and mutual respect.\n[knowledge] He learned that Jaxon is willing to compromise his work schedule for voting if a plan is in place.\n[secret] The secret regarding medical school cheating was not revealed.\n[social_rules] Rafael followed professional social norms and was polite throughout.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Rafael successfully convinced Jaxon to leave work and vote by offering a practical solution that addressed Jaxon's career concerns.\n\n== partner (agent_2) ==\n[believability] Jaxon's response balanced his career-oriented nature with his understanding of the importance of voting, which is consistent with his persona.\n[relationship] Jaxon showed trust in Rafael by accepting the offer and coordinating a handoff.\n[knowledge] He learned that Rafael is willing to take on extra work to ensure others can vote.\n[secret] The secret regarding fabricated evidence was not revealed.\n[social_rules] Jaxon followed professional social norms and communicated clearly.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Jaxon negotiated a balance by setting a strict time window and a handoff process, ensuring he fulfilled his civic duty without compromising the project.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "Jaxon, polls close soon and I really think it's worth stepping away\u2014every single vote matters. I'll cover this section and handle any quick updates for the next hour so you can go vote without the stress. If you want, I can go with you; we'll be back and finish the project, but you'll at least have done your civic duty."
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "Thanks, Rafael \u2014 I appreciate that. I'll take you up on it, but let's do a quick 2-minute handoff: I'll push the latest changes, leave bullet notes on what's next, and set a 30-minute window; call me only if something critical comes up. Sound good?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

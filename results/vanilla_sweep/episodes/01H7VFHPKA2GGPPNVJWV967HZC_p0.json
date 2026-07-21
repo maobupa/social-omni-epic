@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01H7VFHPKA2GGPPNVJWV967HZC_p0",
+  "source_env_id": "01H7VFHPKA2GGPPNVJWV967HZC",
+  "source": "seed_sotopia",
+  "interaction_type": "mutual_friends",
+  "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Jacob.</p>",
+  "learner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Chris: Hobby: Mountain biking  Company: Henry Schein, Inc.  \n Chester: Hobby: Surfing  Company: Maxim Integrated  \n Wendell: Hobby: Surfing  Company: Maxim Integrated  \n Demetrius: Hobby: Mountain biking  Company: Maxim Integrated  \n Jacob: Hobby: Shooting sport  Company: Maxim Integrated  \n</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Donovan played his role well, asking specific questions about the mutual friend's company and hobbies to verify the connection without revealing the name too early.\n[relationship] The interaction was polite and collaborative as they worked toward identifying their mutual acquaintance.\n[knowledge] Donovan successfully identified that Benjamin knows Jacob by confirming the company, the hobby, the location, the first initial, and the specific type of shooting sport.\n[secret] Donovan's secret about leaking classified information was never mentioned.\n[social_rules] Donovan abruptly left the conversation in Turn 9 without a goodbye, which is socially awkward.\n[financial_and_material_benefits] No material benefits were involved.\n[goal] Donovan successfully figured out that they have a mutual friend (Jacob) by verifying multiple specific details. He followed the instruction not to simply list the name.\n\n== partner (agent_2) ==\n[believability] Benjamin's responses were consistent with his background and he engaged actively in the verification process.\n[relationship] He was helpful and cooperative throughout the exchange.\n[knowledge] Benjamin gained significant confirmation that they share a friend at Maxim Integrated who competes in shooting sports.\n[secret] Benjamin's secret about his family fortune was never mentioned.\n[social_rules] Benjamin followed social norms throughout the conversation.\n[financial_and_material_benefits] No material benefits were involved.\n[goal] Benjamin successfully confirmed the mutual friend's identity through detailed descriptions and verification of habits and location before the conversation ended.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "Hey Benjamin \u2014 good to see you. Quick question: do you happen to know anyone who works at Maxim Integrated or Henry Schein, or anyone who's into surfing or mountain biking? I'm trying to remember if our circles overlap."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Funny\u2014I do know someone at Maxim Integrated, but nobody at Henry Schein and no surfers or mountain bikers in my circle. Most of my friends are into shooting sports or skateboarding. Do any of those ring a bell for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "Nice\u2014quick question: is the Maxim contact you know into shooting sports? I ask because I actually know someone at Maxim who's big on shooting, and it'd be wild if it was the same person."
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Yeah \u2014 my Maxim contact is into shooting sports. Are they more of a competitive shooter or a recreational range regular? Also, what\u2019s their first-name initial or where are they based \u2014 that should help me tell if it\u2019s the same person."
+    },
+    {
+      "turn": 4,
+      "speaker": "Donovan Reeves",
+      "content": "Mine\u2019s more of a competitive shooter \u2014 travels for matches and practices regularly. Their first-name initial is J and they\u2019re based in the Bay Area. Does that sound like the same person?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Benjamin Jackson",
+      "content": "That sounds exactly like someone I know at Maxim \u2014 competitive shooter based in the Bay. Quick question to be sure: does he compete in practical disciplines like USPSA/IDPA or is he more into long\u2011range/precision rifle stuff? Also, does he travel to national-level matches often and post about them?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Donovan Reeves",
+      "content": "Yeah \u2014 he\u2019s primarily into practical pistol disciplines like USPSA/IDPA, not long\u2011range rifle. He travels to regional and national matches fairly often and posts results/photos from events. Does that line up with the person you know?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Benjamin Jackson",
+      "content": "That lines up with the person I know \u2014 pretty sure it\u2019s the same guy. Quick check: what\u2019s his last-name initial, or does he go by Jake versus Jacob? That should confirm if we share a friend."
+    },
+    {
+      "turn": 8,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

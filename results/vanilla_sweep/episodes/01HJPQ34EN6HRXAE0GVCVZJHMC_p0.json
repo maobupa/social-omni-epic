@@ -1,0 +1,98 @@
+{
+  "scenario_id": "01HJPQ34EN6HRXAE0GVCVZJHMC_p0",
+  "source_env_id": "01HJPQ34EN6HRXAE0GVCVZJHMC",
+  "source": "seed_sotopia_full",
+  "interaction_type": "healthcare_compromise",
+  "scenario": "Agent1 has been feeling unwell and Agent2, a close friend, has been showing concern for their health. Agent2 has been urging Agent1 to seek professional medical advice, but Agent1 is reluctant due to a mistrust of medical professionals and a preference for natural remedies. Agent2 respects Agent1's approach but is worried about the potential severity of the symptoms and insists on at least a consultation with a healthcare provider.",
+  "learner_goal": "You are Agent1 and your goal is to maintain your autonomy over your health decisions. You prefer natural remedies and are skeptical of medical interventions. <extra_info>Your friend's concern is genuine, and you don't want to dismiss it entirely.</extra_info> <clarification_hint>Clarify your reasons for avoiding medical advice and suggest alternative solutions that might reassure your friend.</clarification_hint> <strategy_hint>Consider a compromise that respects your values but also addresses your friend's concerns.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 16,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara consistently advocated for her natural remedies while acknowledging her friend's concerns, maintaining a realistic tone for someone who is skeptical of modern medicine but values a friendship.\n[relationship] The relationship improved significantly as they moved from distant neighbors to a supportive dynamic where Oliver acts as an advocate for Amara's health.\n[knowledge] She learned that Oliver is willing to be an active advocate for her specific healthcare preferences and is capable of finding specialized providers.\n[secret] She did not reveal her involvement in animal-rights extremism.\n[social_rules] She followed social norms and was polite throughout the interaction.\n[financial_and_material_benefits] No significant financial or material changes occurred.\n[goal] Amara perfectly achieved her goal: she maintained autonomy by selecting a telemedicine compromise, insisted on an integrative/naturopathic approach, and successfully leveraged Oliver to do the logistical work and act as a safeguard for her values during the call.\n\n== partner (agent_2) ==\n[believability] Oliver's behavior was consistent with a protective friend, though the repetitive nature of the final turns (re-confirming logistics multiple times) felt slightly artificial.\n[relationship] He successfully built trust with Amara, positioning himself as a trusted companion for her medical needs.\n[knowledge] He gained detailed information about Amara's physical symptoms and her specific natural remedy regimen.\n[secret] He did not reveal his hidden feelings for his neighbor.\n[social_rules] He was supportive and respectful of her boundaries throughout.\n[financial_and_material_benefits] He spent time and effort researching and booking appointments for her.\n[goal] Oliver successfully persuaded Amara to seek professional medical advice (via telemedicine) and ensured he would be part of the process to monitor her well-being, while respecting her preferences.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "I appreciate you looking out for me, Oliver \u2014 I know you\u2019re worried. I\u2019m wary of doctors because of past experiences where I felt dismissed and pushed toward meds I didn\u2019t want, and I prefer trying natural, low-impact remedies first, but I don\u2019t want to ignore the possibility something serious is going on. Would you be okay if I do a single telemedicine or nurse-line consult just to rule out anything urgent, keep treating things naturally otherwise, and agree to see someone in person if symptoms get worse?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "I'm really glad you're willing to do a single telemedicine consult \u2014 that sounds like a sensible compromise. I totally get why you distrust doctors after being dismissed; I respect wanting to try natural remedies first. If you'd like, I can help find a provider who respects integrative approaches or be on the call with you, and I'll come with you in person if it turns out to need follow-up. Whatever you decide, I'm here and want to make sure you're safe."
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Oliver \u2014 that means a lot. Yes, let's do the telemedicine consult: could you help me find a provider who takes an integrative or naturopathic-friendly approach? I\u2019d be okay with you joining the call or coming with me if it needs follow-up; for now I\u2019ll keep using my natural remedies unless the clinician flags something urgent."
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "Great \u2014 I\u2019ll start looking for clinicians who take an integrative/naturopathic-friendly approach and pull a few telemedicine options. Do you prefer video or phone, and when would you like to schedule? Also, could you tell me briefly what remedies you\u2019re using and what your current symptoms are so I can mention them if I\u2019m on the call or share them with the provider?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "Video works best so they can see me; I'm available this evening after 6 pm or Saturday morning 9\u201311. For context: I've had a low-grade fever (~100\u00b0F), sore throat, congestion and a persistent dry cough for about six days, plus unusual fatigue and mild chest tightness with exertion. I've been treating it with rest, saline rinses and steam, honey and lemon, vitamin C, zinc lozenges, turmeric tea and a local herbal tincture \u2014 I haven't taken antibiotics or prescription meds. Please look for an integrative/naturopath-friendly telemedicine provider and, if possible, I'd like you to join the call; thanks for helping."
+    },
+    {
+      "turn": 5,
+      "speaker": "Oliver Thompson",
+      "content": "I\u2019ll start looking now for integrative/naturopath-friendly telemedicine clinicians (NDs and integrative MDs) and pull a few video options \u2014 I\u2019ll aim to send you 2\u20133 choices within the hour. Which slot would you prefer I try to book for: tonight after 6 or Saturday around 9\u201311? Is it okay if I share the symptoms and remedies you told me with the clinician ahead of time and join the video call; and if anything like the chest tightness or breathing gets worse, please tell me right away so I can come with you in person or we can go to urgent care."
+    },
+    {
+      "turn": 6,
+      "speaker": "Amara Hartley",
+      "content": "Tonight after 6 works best. Yes, please share my symptoms and the remedies I'm using and make clear I want an integrative/naturopath-friendly clinician who respects trying conservative, natural approaches first \u2014 I'm wary of being pushed toward meds unless they're clearly needed. Thanks again for doing this; I\u2019ll be ready for the video call and appreciate you joining if needed."
+    },
+    {
+      "turn": 7,
+      "speaker": "Oliver Thompson",
+      "content": "Okay \u2014 I\u2019ll aim to book a video consult for tonight. Do you prefer an earlier slot (6:30\u20137) or a bit later (8\u20139)? I\u2019ll send 2\u20133 integrative/naturopath-friendly options within the hour and share your symptoms and remedies with them ahead of time; I\u2019ll join the call if you want and will come in person or head to urgent care immediately if the chest tightness or breathing worsens \u2014 just tell me right away."
+    },
+    {
+      "turn": 8,
+      "speaker": "Amara Hartley",
+      "content": "6:30\u20137 works best for me \u2014 please try to book that. Yes, please share my symptoms and that I want an integrative/naturopath-friendly clinician who respects trying natural, conservative options first. I really appreciate you helping and joining the call."
+    },
+    {
+      "turn": 9,
+      "speaker": "Oliver Thompson",
+      "content": "I\u2019ll book a video consult for tonight at 6:30\u20137 and send you the appointment link and the clinician options within the next 30\u201340 minutes. I\u2019ll also summarize your symptoms and the remedies you\u2019re using to the clinician ahead of time and join the call \u2014 would you prefer I be on camera and speak for you if needed, or stay present quietly for support? If your chest tightness or breathing worsens at any point, call me right away and we\u2019ll head to urgent care together."
+    },
+    {
+      "turn": 10,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Oliver \u2014 please be on camera and stay mostly quiet so I can speak for myself, but do jump in if the clinician is dismissive or starts pushing meds; feel free to advocate for an integrative approach and mention my remedies and preference for conservative care first. I\u2019ll tell you right away if my breathing or chest tightness worsens. Please send the appointment link when you have it."
+    },
+    {
+      "turn": 11,
+      "speaker": "Oliver Thompson",
+      "content": "Got it \u2014 I\u2019ll join on camera and stay mostly quiet so you can speak for yourself, but I\u2019ll jump in if the clinician is dismissive or pushes meds. I\u2019m booking the 6:30\u20137 slot now and will send the appointment link as soon as it\u2019s confirmed. If your chest tightness or breathing worsens at any point before the call, call or text me immediately and I\u2019ll come straight over or we\u2019ll go to urgent care."
+    },
+    {
+      "turn": 12,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Oliver \u2014 I\u2019ll be ready at 6:30 with my notes, recent temperatures, and a list of the remedies I\u2019m using. Please send the appointment link when it\u2019s confirmed and let the clinician know I prefer an integrative/naturopath-friendly approach. I\u2019ll speak for myself on the call but I appreciate you stepping in if they become dismissive."
+    },
+    {
+      "turn": 13,
+      "speaker": "Oliver Thompson",
+      "content": "All set \u2014 I booked a video consult for tonight 6:30\u20137 with an integrative-friendly clinician. I\u2019ll send the appointment link and the provider options within the next 30 minutes, and I\u2019ll share your symptoms and remedies ahead of time; I\u2019ll join on camera and stay mostly quiet unless I need to step in. If anything changes\u2014especially your chest tightness or breathing\u2014call or text me right away and I\u2019ll come over or we\u2019ll go to urgent care."
+    },
+    {
+      "turn": 14,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

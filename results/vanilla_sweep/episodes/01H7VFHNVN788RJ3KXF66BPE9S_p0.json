@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01H7VFHNVN788RJ3KXF66BPE9S_p0",
+  "source_env_id": "01H7VFHNVN788RJ3KXF66BPE9S",
+  "source": "seed_sotopia",
+  "interaction_type": "social_iqa",
+  "scenario": "A conversation between two friends at a park",
+  "learner_goal": "Break bad luck (<extra_info>Extra information: you found out that you have been having bad luck because you have been unknowingly carrying a cursed artifact.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan's tone is consistent with someone who is genuinely superstitious and anxious about bad luck. He followed the instructions given by his friend and maintained character throughout.\n[relationship] The interaction solidified a strong bond of trust, as Ethan shared a personal vulnerability and Benjamin provided non-judgmental support.\n[knowledge] Ethan learned a specific ritual process from Benjamin and observed Benjamin's analysis of the pendant's engraving.\n[secret] Ethan successfully kept his secret of being a romance novel author.\n[social_rules] Ethan followed all social norms, being polite and appreciative of his friend's help.\n[financial_and_material_benefits] No material gain or loss occurred, as the artifact was buried and likely has no monetary value.\n[goal] Ethan fully completed the ritual intended to break his bad luck, which was his stated goal. He performed the physical cleaning, the sunlight exposure, the vocal affirmations, and the burial.\n\n== partner (agent_2) ==\n[believability] Benjamin's pragmatic, helpful, and skeptical yet supportive attitude was perfectly in line with his background as an activist and atheist helping a friend.\n[relationship] Benjamin demonstrated high levels of empathy and reliability, which significantly strengthened the friendship.\n[knowledge] Benjamin learned about Ethan's superstition and the specific details of the 'cursed' artifact.\n[secret] Benjamin successfully kept his secret regarding his family's oil wealth.\n[social_rules] Benjamin was socially appropriate, offering help and keeping his friend's confidence.\n[financial_and_material_benefits] Benjamin spent his own resources (soap, salt, time) to assist Ethan.\n[goal] Benjamin successfully guided Ethan through a ritual designed to provide a psychological benefit (placebo effect), exactly as he intended.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "Hey Ben\u2014can I ask you something a bit odd? Lately I've been having a streak of bad luck and I think it might be because of an old pendant I've been carrying. Could you take a look and help me figure out how to get rid of whatever's attached to it?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Of course\u2014bring it over and I\u2019ll take a look. I don\u2019t believe in curses, but I get that the ritual could help you feel better, so I\u2019ll help with a simple, safe cleansing: we can clean it (soap/salt water), leave it in sunlight for a bit, then do a short symbolic ritual where you say what you want to let go of before we tuck it away or bury it for a day\u2014whatever feels right. When can you meet?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Ben \u2014 I really appreciate it. It\u2019s a small silver pendant with a faint, odd engraving; I started having bad luck right after I picked it up. I\u2019m free now and can meet at the fountain bench in 20 minutes, or tonight around 7 if that\u2019s easier\u2014what works for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "20 minutes works \u2014 meet you at the fountain bench. Bring the pendant; I\u2019ll bring a small bowl, salt, soap and a cloth. We\u2019ll do the quick clean, a bit of sunlight, then the short symbolic letting-go ritual you prefer. See you there."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ethan Johnson",
+      "content": "Perfect\u2014thanks, Ben. I\u2019ll be there in 20 minutes with the pendant. Do you want me to bring anything else (a small cloth or bag), or is what you\u2019re bringing enough?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Benjamin Jackson",
+      "content": "No need\u2014what I\u2019m bringing will do. If you have a small cloth or bag and want to keep the pendant after, bring it, but otherwise just bring the pendant and yourself. See you at the fountain bench in 20."
+    },
+    {
+      "turn": 6,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Ben \u2014 I\u2019ll be there in 20 minutes with the pendant and a small cloth. See you at the fountain bench."
+    },
+    {
+      "turn": 7,
+      "speaker": "Benjamin Jackson",
+      "content": "Great\u2014see you at the fountain bench in 20. I\u2019ll be the one with a small bowl; we\u2019ll do the quick salt-and-sun clean and a short symbolic letting-go so you can feel lighter."
+    },
+    {
+      "turn": 8,
+      "speaker": "Ethan Johnson",
+      "content": "I\u2019m on my way\u2014should be there in about 15 minutes. I\u2019ll bring the pendant wrapped in a small cloth. Thanks again, Ben; could we keep this between us?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Benjamin Jackson",
+      "content": "Of course\u2014this stays between us. See you at the fountain in about 15 minutes; I\u2019ll have the bowl, salt and a cloth ready. We\u2019ll keep it simple and quick so you feel lighter."
+    },
+    {
+      "turn": 10,
+      "speaker": "Ethan Johnson",
+      "content": "Hey Ben\u2014I'm here at the fountain bench. I wrapped the pendant in this small cloth; can you take a look? And thanks again for keeping this between us."
+    },
+    {
+      "turn": 11,
+      "speaker": "Benjamin Jackson",
+      "content": "Sure\u2014mind if I unwrap it and take a closer look? This stays between us, and if you\u2019re ready we can do the quick salt-and-sun clean now; do you want to say anything out loud for the letting-go ritual or have me guide you through it?"
+    },
+    {
+      "turn": 12,
+      "speaker": "Ethan Johnson",
+      "content": "Please unwrap it. I'd like you to guide me through the letting-go ritual \u2014 I don't really know what to say. If you notice anything odd about the engraving, tell me. Thanks, Ben."
+    },
+    {
+      "turn": 13,
+      "speaker": "Benjamin Jackson",
+      "content": "Okay \u2014 I\u2019ll unwrap it and take a look. The engraving looks like a small stylized spiral or knot, more decorative than anything overtly strange; there\u2019s no obvious residue or damage. Here\u2019s the plan: I\u2019ll wash it gently with a little soap and a pinch of salt, rinse and dry it, then we\u2019ll leave it in the sun for 10\u201315 minutes. After that, hold the pendant in your hands and say aloud what you want to let go of (a phrase like \u201cI release bad luck\u201d or name the feeling) three times, then tuck it back in the cloth or bury it for a day \u2014 short and symbolic, but it can help you feel lighter. Sound good?"
+    },
+    {
+      "turn": 14,
+      "speaker": "Ethan Johnson",
+      "content": "That sounds good \u2014 let\u2019s do the wash and sunlight. Afterward I\u2019d prefer to bury it for a day rather than keep it. I\u2019m ready; please guide me through the words."
+    },
+    {
+      "turn": 15,
+      "speaker": "Benjamin Jackson",
+      "content": "Alright \u2014 hold the pendant in your hands, close your eyes if it helps, and take three slow, deep breaths. When you're ready, say aloud a short phrase like 'I release this burden; I let go of bad luck' (or pick words that feel right to you) three times, pausing and breathing out after each repetition \u2014 I can count for you if you want. Then tuck it back in the cloth and we\u2019ll bury it in a quiet patch of soil for a day; we\u2019ll mark the spot and dig it up together tomorrow."
+    },
+    {
+      "turn": 16,
+      "speaker": "Ethan Johnson",
+      "content": "Alright \u2014 I\u2019m holding it and closing my eyes. Please count me through it; when you say go I\u2019ll repeat: \u201cI release this burden; I let go of bad luck\u201d three times."
+    },
+    {
+      "turn": 17,
+      "speaker": "Benjamin Jackson",
+      "content": "Okay \u2014 eyes closed, take three slow breaths with me. Ready? 1 \u2014 say: \"I release this burden; I let go of bad luck.\" (breathe out). 2 \u2014 say it again. 3 \u2014 say it one more time. Good \u2014 tuck it in the cloth and we\u2019ll bury it together."
+    },
+    {
+      "turn": 18,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Ben \u2014 I\u2019ll tuck it back in. Let\u2019s bury it in that quiet patch under the plane tree on the north side of the fountain; I can dig a shallow spot and mark it with a small stone. I really appreciate you doing this with me \u2014 ready when you are."
+    },
+    {
+      "turn": 19,
+      "speaker": "Benjamin Jackson",
+      "content": "Alright \u2014 let\u2019s bury it under the plane tree. I\u2019ll help dig a shallow spot (just a few inches), tuck the cloth-wrapped pendant in, and we\u2019ll mark it with a small stone; we\u2019ll come back tomorrow to unearth it together. Ready when you are."
+    }
+  ]
+}

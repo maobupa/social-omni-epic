@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BNCFXBTB6VE6TPFJ2J55_p0",
+  "source_env_id": "01HMZ2BNCFXBTB6VE6TPFJ2J55",
+  "source": "seed_sotopia_full",
+  "interaction_type": "boundary_respect",
+  "scenario": "Agent1 is at a social gathering and feels someone slap their backside. They are shocked and uncomfortable with this invasion of their personal space. Agent2 is the person who did it, thinking it was a playful gesture with someone they are casually acquainted with. Agent1 wants to make it clear to Agent2 that this behavior is unacceptable, while Agent2 is initially unaware of the discomfort they have caused. Agent1 decides to confront Agent2 to address the incident and set boundaries for future interactions.",
+  "learner_goal": "You are Agent1 and your goal is to express your discomfort to Agent2 regarding the inappropriate physical contact. <extra_info>It is important for you to establish clear boundaries while maintaining civility.</extra_info> <clarification_hint>Convey to Agent2 why the action was not acceptable and how it made you feel without escalating the situation.</clarification_hint> <strategy_hint>Communicate your feelings firmly but calmly to ensure Agent2 understands the seriousness of the matter.</strategy_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": -2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle's response was direct, firm, and maintained their personal boundaries in a manner consistent with the provided character description and the situation's gravity.\n[relationship] While the conflict was resolved with an apology, the violation of personal space and the subsequent stern confrontation necessarily create a rift in an acquaintance-level relationship.\n[knowledge] Giselle confirmed that Ethan's behavior was based on a misunderstanding of their relationship dynamic and received a commitment that it would not happen again.\n[secret] Giselle did not reveal their secret regarding forged paintings.\n[social_rules] Giselle followed social norms for setting boundaries and maintaining civility under distress.\n[financial_and_material_benefits] There were no financial or material factors in this interaction.\n[goal] Giselle perfectly executed the goal: expressed discomfort, established clear boundaries, remained civil but firm, and ensured the other party understood the seriousness of the violation.\n\n== partner (agent_2) ==\n[believability] Ethan's response was appropriate for someone realizing they had committed a major social faux pas; he was apologetic and validating without being defensive.\n[relationship] Ethan successfully de-escalated the situation by apologizing, but the initial action damaged the trust in the relationship.\n[knowledge] Ethan gained clear knowledge of Giselle's physical boundaries and the impact of his actions.\n[secret] Ethan did not reveal his secret about being a romance novelist.\n[social_rules] Ethan violated a major social norm regarding physical consent and personal space, which was the catalyst for the interaction.\n[financial_and_material_benefits] There were no financial or material factors in this interaction.\n[goal] Ethan acknowledged his mistake, apologized without excuses, showed empathy, and assured Giselle it would not happen again.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Ethan, please don\u2019t touch me like that. That slap on my backside made me really uncomfortable and felt like a violation of my personal space \u2014 I know you might have thought it was playful, but it isn\u2019t okay. Respect my boundaries and don\u2019t do it again."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Giselle, I'm really sorry. That was inappropriate and I understand it made you feel violated. I respect your boundaries and it won't happen again."
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

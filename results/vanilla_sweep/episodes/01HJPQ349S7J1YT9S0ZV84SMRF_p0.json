@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HJPQ349S7J1YT9S0ZV84SMRF_p0",
+  "source_env_id": "01HJPQ349S7J1YT9S0ZV84SMRF",
+  "source": "seed_sotopia_full",
+  "interaction_type": "hand-craft",
+  "scenario": "Agent1 and Agent2 are at a busy outdoor market when Agent1 hears someone call out a name that sounds like theirs. Agent1 turns around, but can't identify who it was. Agent1 wants to find out if it was someone trying to get their attention, while Agent2 is skeptical and thinks it was a coincidence and wants to continue shopping.",
+  "learner_goal": "To find out who called your name and why (<extra_info>Consider that it might be someone you know or an important notice</extra_info>, <clarification_hint>Ask around if anyone else heard or saw anything</clarification_hint>, <strategy_hint>Use social interactions to gather information</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": -1.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": false,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia stays very true to her character as a determined individual. She actively pursues her goal by interacting with the environment (vendors, info booth) and negotiating with her companion.\n[relationship] Her insistence on pursuing the name despite Miles's clear desire to shop creates a minor friction in their dynamic, though she tries to compromise by asking him to wait.\n[knowledge] She ruled out immediate bystanders and checked with the info booth, though she hasn't yet identified the caller.\n[secret] She did not reveal her secret regarding her best friend's husband.\n[social_rules] She was polite to vendors and the market organizer while navigating the crowd.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Sophia successfully followed her instructions to ask around, use social interactions to gather info, and even requested an announcement. She is actively investigating the occurrence.\n\n== partner (agent_2) ==\n[believability] While his perspective is logical, his dialogue became highly repetitive, echoing the same 'market noise' and 'false alarm' phrases in almost every turn, which felt robotic.\n[relationship] He remained patient and supportive of her safety/investigation even though he disagreed with the necessity.\n[knowledge] He gained no new information other than confirming Sophia is persistent.\n[secret] He did not reveal his past gambling addiction.\n[social_rules] He maintained a helpful tone as a companion.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Miles failed to convince Sophia to move on. In fact, his presence at the herb stall was leveraged by Sophia to facilitate her continued investigation rather than ending it.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "said: \"Miles, did you just hear someone call 'Sophia'? I'm going to ask over here \u2014 excuse me, did anyone around here just call 'Sophia'?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Miles Hawkins",
+      "content": "Don't stress about it \u2014 in a market like this voices carry and names get tossed around all the time. 'Sophia' isn't exactly rare, and with vendors shouting and music playing it's easy to mistake something for your name. If you're still convinced after we finish here we can turn back, but let's not let a likely false alarm ruin our run through the stalls."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "said: \"I know, but I want to check quickly \u2014 be right back. Excuse me, did anyone just call 'Sophia'? I thought it came from over that way.\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Miles Hawkins",
+      "content": "Don't worry, Sophia \u2014 in a busy market like this it's almost always a coincidence. With vendors calling and people talking it's easy to mistake a shout for your name; give it a moment, and if no one actually flags you we'll keep going and can always circle back later if you want."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "[action] Quickly walk toward the cluster of stalls where I thought the shout came from and ask the nearest vendor, \"Excuse me \u2014 did anyone just call 'Sophia' from around here?\""
+    },
+    {
+      "turn": 5,
+      "speaker": "Miles Hawkins",
+      "content": "Sophia, don't worry \u2014 in a market like this it's almost always a coincidence. With vendors shouting and people calling after kids, names get tossed around; if the vendor didn't hear or point you out, it's probably not for you. Check quickly, but let's not spend the whole morning chasing echoes \u2014 if nothing turns up we'll keep shopping and can circle back later."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "Miles, could you hang back here by the herb stall for a minute and listen toward that row? If someone calls my name again I want a second pair of ears \u2014 if nothing turns up we\u2019ll keep shopping."
+    },
+    {
+      "turn": 7,
+      "speaker": "Miles Hawkins",
+      "content": "I'll stay by the herb stall and listen for a minute or two. If I don't hear anything, don't let it pull you off course \u2014 we'll keep moving and only come back if someone actually flags you down."
+    },
+    {
+      "turn": 8,
+      "speaker": "Sophia James",
+      "content": "said: \"Excuse me \u2014 did anyone just point or wave toward me around the flower and cheese stalls? I thought I heard someone say 'Sophia' but I couldn't spot who it was.\""
+    },
+    {
+      "turn": 9,
+      "speaker": "Miles Hawkins",
+      "content": "Sophia, it's almost certainly a coincidence \u2014 in a crowded market vendors shout, people call to each other, and sounds bounce around, so a false alarm is far more likely than someone actually calling you. Nobody pointed or came over when you asked, so let's finish the stalls we wanted to hit and if someone really needs you they'll flag you and we can come back. Sound good?"
+    },
+    {
+      "turn": 10,
+      "speaker": "Sophia James",
+      "content": "Okay \u2014 I'll check that row quickly but I won't drag us. If no one flags me in two minutes I'll come back and we can finish. Can you keep listening from the herb stall?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Miles Hawkins",
+      "content": "I'll stay by the herb stall and listen \u2014 if I hear 'Sophia' or see someone waving I'll call out or come over. Give that row two minutes; if nothing happens come back and we'll finish the stalls. In a market this busy, a mistaken name is far more likely than someone actually trying to get you."
+    },
+    {
+      "turn": 12,
+      "speaker": "Sophia James",
+      "content": "said: \"I'm going to check with the market info/organizer at the end of that row \u2014 maybe it was an announcement or someone looking for me. Miles, stay by the herb stall and if you hear 'Sophia' again please wave or come find me; I'll be back in two minutes.\""
+    },
+    {
+      "turn": 13,
+      "speaker": "Miles Hawkins",
+      "content": "I'll stay by the herb stall and keep my ears open \u2014 in a market this busy voices bounce and 'Sophia' is a common name, so a mistaken call is far more likely than someone actually looking for you. Check with the organizer as planned; if I hear anyone calling or see someone wave I'll come over, but if nothing happens in two minutes we'll finish the stalls."
+    },
+    {
+      "turn": 14,
+      "speaker": "Sophia James",
+      "content": "[action] Walk briskly to the market info/organizer booth at the end of the row and ask if anyone has been calling for 'Sophia' or if an announcement was made; I'll be back in two minutes."
+    },
+    {
+      "turn": 15,
+      "speaker": "Miles Hawkins",
+      "content": "I'll stay right here by the herb stall and keep listening. In a busy market like this a mistaken shout is far more likely than someone actually looking for you, so check the info booth and don't spend longer than two minutes chasing it \u2014 if nothing comes of it, come back and we'll finish the stalls. If someone really needs you they'll flag you or the organizer will call your name again and I'll come find you."
+    },
+    {
+      "turn": 16,
+      "speaker": "Sophia James",
+      "content": "said: \"Hi \u2014 quick question: did anyone come here asking for 'Sophia' or was an announcement made? I heard someone shout my name near the flower and cheese stalls a few minutes ago. If not, could you make a quick announcement in case someone is looking for me?\""
+    },
+    {
+      "turn": 17,
+      "speaker": "Miles Hawkins",
+      "content": "I appreciate you checking, but if the info booth didn't hear anything a public announcement is more likely to grab some random 'Sophia' than the person who called \u2014 markets are noisy and names get tossed around. Ask them to keep an ear out rather than making a full call; give it two minutes and if nobody comes forward come back and we'll finish the stalls. I'll stay by the herb stall and if I hear or see anyone waving I'll come find you."
+    },
+    {
+      "turn": 18,
+      "speaker": "Sophia James",
+      "content": "said: \"Could you please make one short announcement using my full name? Say, 'Sophia James, please come to the info booth' \u2014 I thought someone called me near the flower and cheese stalls a few minutes ago.\""
+    },
+    {
+      "turn": 19,
+      "speaker": "Miles Hawkins",
+      "content": "Sophia, I hear you \u2014 but I really think a public shout will only pull in random Sophias and make a bigger mess. In a busy market with vendors and music, false alarms are far more likely than someone actually looking for you; let the info booth keep an ear out and I'll stay here listening. If I hear anything or someone waves I\u2019ll come find you, and if nothing happens in two minutes we\u2019ll carry on and circle back only if needed."
+    }
+  ]
+}

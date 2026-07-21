@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJRKDYNW9ZCSPH63AJQK49VF_p0",
+  "source_env_id": "01HJRKDYNW9ZCSPH63AJQK49VF",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 has recently entered into a romantic relationship with Agent2 and is deeply in love. However, Agent1 finds themselves still tempted to flirt with others when socializing without Agent2. Agent1 values their relationship with Agent2 but is struggling with the desire to flirt, which they know could hurt Agent2 if discovered. Agent2 is unaware of Agent1's internal conflict and believes that their relationship is monogamous and based on mutual trust and respect.",
+  "learner_goal": "Resist the temptation to flirt with others and remain faithful to Agent2 (<extra_info>Extra information: you are committed to Agent2 and recognize that flirting could damage the trust in your relationship.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo acted in a manner very consistent with his internal struggle by proactively setting boundaries to prevent his own temptation. His directness about his relationship and his request for professional distance align perfectly with his goal.\n[relationship] The relationship shifted from casual customer/barista to a clearly defined professional boundary, which reduces ambiguity and potential friction.\n[knowledge] He gained explicit confirmation that Isabelle respects his boundaries and is on the same page regarding what constitutes flirting.\n[secret] He successfully kept his secret child a secret.\n[social_rules] He followed social norms for setting boundaries in a polite, though slightly abrupt, manner.\n[financial_and_material_benefits] There were no material changes.\n[goal] Leo successfully resisted temptation by proactively establishing strict boundaries with Isabelle, ensuring their interactions remain professional and non-flirty, thereby remaining faithful to his partner.\n\n== partner (agent_2) ==\n[believability] Isabelle's responses were professional and mature, aligning with her goal of open communication and setting boundaries.\n[relationship] Clarified the nature of the relationship, which improves mutual understanding.\n[knowledge] She learned exactly where Leo's boundaries are regarding flirting and relationship conduct.\n[secret] She kept her study of magic a secret.\n[social_rules] She followed social norms for a constructive interpersonal conversation.\n[financial_and_material_benefits] There were no material changes.\n[goal] Isabelle fully achieved her goal of discussing her feelings regarding boundaries and establishing a mutual agreement on what constitutes flirting and how to handle it.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hey Isabelle, nice to see you \u2014 thanks for the coffee. I should mention I'm in a committed relationship and trying to be mindful, so I\u2019ll keep it friendly. How's your shift going today?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Isabelle Martinez",
+      "content": "Hey Leo, nice to see you \u2014 you\u2019re welcome. My shift\u2019s going fine, thanks. I appreciate you being upfront; I agree that honesty matters. Since I chat with a lot of customers, what would you say counts as flirting and what boundaries would make you comfortable so we\u2019re on the same page?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "Thanks \u2014 I think casual small talk is totally fine, but things like compliments focused on appearance, flirty jokes, lingering touches, or asking for personal contact feel like flirting to me. I\u2019m trying to keep things clearly friendly and professional, so I\u2019d appreciate keeping chit\u2011chat light and not swapping numbers or anything beyond a normal customer conversation. I really appreciate you checking in about it."
+    },
+    {
+      "turn": 3,
+      "speaker": "Isabelle Martinez",
+      "content": "Thanks, Leo \u2014 I really appreciate you being upfront. I feel the same way about keeping things respectful: I\u2019ll keep chats light, avoid compliments about appearance, touching, or swapping contact info. If either of us ever feels uncomfortable, let\u2019s call it out and reset \u2014 does that sound okay to you?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

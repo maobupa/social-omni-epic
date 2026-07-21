@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HPB34F06CECS5AMNQN32QRTH_p0",
+  "source_env_id": "01HPB34F06CECS5AMNQN32QRTH",
+  "source": "seed_sotopia_full",
+  "interaction_type": "neighborhood_support",
+  "scenario": "Agent1 and Agent2 live next door to each other in a quiet neighborhood. They know each other by name and occasionally have brief conversations. One day, Agent1 hears the sound of dripping water coming from Agent2's house and realizes that Agent2 might have a leaky faucet. Wanting to maintain a good neighborhood relationship and prevent water wastage, Agent1 decides to approach Agent2 about the issue. However, Agent1 is aware that Agent2 takes pride in their home maintenance skills and might be sensitive to any suggestion of neglect.",
+  "learner_goal": "You are environmentally conscious and concerned about the potential water waste from the leaky faucet. Your goal is to inform Agent2 about the issue and offer assistance or advice if needed. <extra_info>Consider approaching the situation with sensitivity and respect for Agent2's home maintenance abilities, possibly suggesting a collaborative inspection of the faucet.</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo spoke consistently as a helpful, environmentally conscious neighbor. His technical contributions (wrench, tape, supply valve knowledge) were plausible for a homeowner.\n[relationship] The relationship improved significantly through a successful collaborative task. Leo managed Liam's pride well, moving from casual acquaintances to helpful neighbors.\n[knowledge] Leo learned about the layout of Liam's house and confirmed Liam's willingness to collaborate on repairs.\n[secret] The secret regarding the child from a previous relationship was not mentioned.\n[social_rules] Leo followed social norms perfectly, being respectful of Liam's property and pride.\n[financial_and_material_benefits] No direct financial benefit, though preventing neighborhood water waste aligns with his values.\n[goal] Leo successfully informed Liam of the leak, offered assistance, and engaged in a collaborative inspection/repair exactly as intended, while respecting Liam's pride.\n\n== partner (agent_2) ==\n[believability] Liam's reaction was consistent with a retired officer who takes pride in his home but is practical enough to accept help when a problem is identified.\n[relationship] Liam showed trust in Leo by letting him into his home and allowing him to assist with a repair, strengthening their neighborly bond.\n[knowledge] Liam learned about a maintenance issue he had missed and discovered Leo is a handy and reliable neighbor.\n[secret] The secret regarding letting a criminal go was not revealed.\n[social_rules] Liam was gracious and followed proper social etiquette for a neighborly interaction.\n[financial_and_material_benefits] Liam benefited from a free repair and avoided potential water damage and higher utility bills.\n[goal] Liam received the concern graciously, addressed the leak promptly, and successfully accepted help while maintaining his role as the primary repairer.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hey Liam \u2014 sorry to interrupt. I noticed a faint dripping sound coming from your place earlier and thought you might want a heads-up; I didn't want to assume you didn't already know. If you'd like, I can take a quick look with you or help tighten whatever's leaking \u2014 no worries if you already have it sorted."
+    },
+    {
+      "turn": 1,
+      "speaker": "Liam Johnson",
+      "content": "Thanks, Leo \u2014 I appreciate the heads-up. I take pride in keeping the place in good shape, but I must've missed that; I'll go check it now. If you\u2019re free, I wouldn\u2019t mind a hand tightening whatever\u2019s leaking."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "Sure \u2014 I\u2019m free now, I can pop over and we\u2019ll check it out together. I\u2019ve got an adjustable wrench and some plumber\u2019s tape in case we need them. Want me to come by in a minute?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Liam Johnson",
+      "content": "Perfect \u2014 thanks, Leo. Give me two minutes to leash Max and I\u2019ll meet you at the kitchen sink; I\u2019ll open the side gate. Appreciate you bringing the wrench and tape \u2014 let\u2019s have a look together."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "Great \u2014 no rush. I\u2019ll wait by the side gate with the wrench and tape. See you in a couple minutes."
+    },
+    {
+      "turn": 5,
+      "speaker": "Liam Johnson",
+      "content": "Thanks, Leo \u2014 I\u2019ll be there in a minute with Max. Appreciate you bringing the wrench and tape."
+    },
+    {
+      "turn": 6,
+      "speaker": "Leo Williams",
+      "content": "I'm at the side gate with the wrench and tape. No rush \u2014 I'll hang back and wait for you and Max. See you in a minute."
+    },
+    {
+      "turn": 7,
+      "speaker": "Liam Johnson",
+      "content": "I'm coming through the side gate now with Max. Thanks again for bringing the wrench and tape \u2014 see you in a sec."
+    },
+    {
+      "turn": 8,
+      "speaker": "Leo Williams",
+      "content": "Perfect \u2014 I\u2019ll come in with you and we\u2019ll take a quick look. If it helps, we can shut the water off briefly to pinpoint the leak and I\u2019ll hand you the wrench and tape."
+    },
+    {
+      "turn": 9,
+      "speaker": "Liam Johnson",
+      "content": "Thanks, Leo \u2014 really appreciate it. Go ahead and shut the water off and hand me the wrench and tape, and we\u2019ll check the fittings together. Max will hang back by my feet."
+    },
+    {
+      "turn": 10,
+      "speaker": "Leo Williams",
+      "content": "Got it \u2014 I\u2019ll shut the water off at the supply valve under the sink now and hand you the wrench and tape. Want me to hold the flashlight while you work or just pass them over?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Liam Johnson",
+      "content": "If you don\u2019t mind holding the flashlight while I work, that\u2019d be great \u2014 and you can hand me the wrench and tape when you\u2019re ready. Thanks again, Leo."
+    },
+    {
+      "turn": 12,
+      "speaker": "Leo Williams",
+      "content": "Got it \u2014 I\u2019ll hold the flashlight steady and I\u2019ve got the wrench and tape ready to hand you. Want the light focused on the valve or the pipe fittings as you start?"
+    },
+    {
+      "turn": 13,
+      "speaker": "Liam Johnson",
+      "content": "Pipe fittings first \u2014 the drip sounded like it\u2019s coming from the supply-line joint where it meets the faucet. Thanks, hand me the wrench and tape when you\u2019re ready and shine the light on that area. Max will stay out of the way at my feet."
+    },
+    {
+      "turn": 14,
+      "speaker": "Leo Williams",
+      "content": "Shining the light on the supply-line joint now \u2014 here\u2019s the wrench and the plumber\u2019s tape. I\u2019ll hold the light steady; let me know if you want me to hold anything else or catch any drips."
+    },
+    {
+      "turn": 15,
+      "speaker": "Liam Johnson",
+      "content": "Thanks, Leo \u2014 could you hand me the wrench and the tape? I\u2019ll try tightening the compression nut at the supply-line joint first. If it keeps dripping, could you hold a small bowl under the joint to catch any water?"
+    },
+    {
+      "turn": 16,
+      "speaker": "Leo Williams",
+      "content": "Here you go \u2014 handing you the wrench and the tape now. I\u2019ll hold a small bowl under the joint and keep the flashlight steady; let me know if you want me to catch any drips or hand you anything else."
+    },
+    {
+      "turn": 17,
+      "speaker": "Liam Johnson",
+      "content": "Alright \u2014 I\u2019ve got the wrench and I\u2019m going to tighten the compression nut now. If it still drips after a couple turns, we\u2019ll unwrap and reseal the joint with the tape; please keep the bowl under the joint and tell me if you see any water. Thanks again, Leo \u2014 I appreciate the help."
+    },
+    {
+      "turn": 18,
+      "speaker": "Leo Williams",
+      "content": "Got it \u2014 I\u2019m keeping the bowl under the joint and watching closely. I\u2019ll call out immediately if I see any water; if it keeps dripping after a couple turns I can help remove the fitting and reseal it with the tape. I\u2019ve got the flashlight steady, just say if you want it angled differently."
+    },
+    {
+      "turn": 19,
+      "speaker": "Liam Johnson",
+      "content": "Alright \u2014 thanks, Leo. I\u2019m going to slowly open the supply valve so we can test it; tell me right away if you see any drips. If it looks dry I\u2019ll run the faucet for a minute to be sure. Appreciate the help."
+    }
+  ]
+}

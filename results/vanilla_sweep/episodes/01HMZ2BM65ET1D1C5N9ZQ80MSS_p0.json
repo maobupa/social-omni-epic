@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BM65ET1D1C5N9ZQ80MSS_p0",
+  "source_env_id": "01HMZ2BM65ET1D1C5N9ZQ80MSS",
+  "source": "seed_sotopia_full",
+  "interaction_type": "custom_scenario",
+  "scenario": "Agent1 and Agent2 are coworkers who are organizing the storage room of their workplace. A valuable item accidentally rolls under a heavy shelf. Agent1 has noticed it but is hesitant to crawl under the shelf due to a recent back injury. Agent2 is unaware of the dropped item but is known for their willingness to help and physical agility.",
+  "learner_goal": "Convince Agent2 to retrieve the item without explicitly asking them to crawl under the shelf (<extra_info>Extra information: Agent1 wants to maintain a professional demeanor and not impose on Agent2</extra_info>)",
+  "scores": {
+    "believability": 6.0,
+    "relationship": 1.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 5.0,
+    "goal": 3.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] While the character spoke naturally, Micah explicitly asked Noah to take a look and grab the item, which contradicts the prompt's constraint to avoid explicitly asking for the retrieval action. Additionally, the conversation was abruptly terminated.\n[relationship] The interaction was cooperative and respectful, maintaining their status as acquaintances.\n[knowledge] Micah confirmed that Noah was willing to help and aware of the item's location.\n[secret] No secrets were revealed.\n[social_rules] The agent left the conversation without a closing statement or acknowledging the other person's response, which is socially abrupt.\n[financial_and_material_benefits] The valuable item is being recovered.\n[goal] The agent failed a core constraint of the goal: they were told NOT to explicitly ask the other agent to crawl under the shelf, but they directly asked Noah to 'grab it' and mentioned his 'agility for tight spots'.\n\n== partner (agent_2) ==\n[believability] Noah's response was helpful and safety-conscious, which aligns well with his coach background and his established helpful nature.\n[relationship] Noah demonstrated his helpfulness, reinforcing his positive standing with his coworker.\n[knowledge] Noah learned about the valuable item and Micah's back injury.\n[secret] No secrets were revealed.\n[social_rules] Noah followed all social norms and was professional.\n[financial_and_material_benefits] No personal financial gain or loss occurred.\n[goal] Noah did not 'notice' the item proactively; he was told about it by Micah. However, he did offer help proactively once informed.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Micah Stevens",
+      "content": "Hey Noah, something valuable just rolled under that heavy shelf and my back's still acting up \u2014 I don't want to risk it. You\u2019ve got way more agility for tight spots; mind taking a quick look and grabbing it if it's reachable? I\u2019ll hand you a flashlight and move anything in the way."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "On it \u2014 I\u2019ll take a look. Hand me the flashlight and make sure there\u2019s nothing leaning on the shelf; I\u2019ll crawl in carefully and if it looks unstable I won\u2019t force it \u2014 we can use a hook or get another set of hands."
+    },
+    {
+      "turn": 2,
+      "speaker": "Micah Stevens",
+      "content": "left the conversation"
+    }
+  ]
+}

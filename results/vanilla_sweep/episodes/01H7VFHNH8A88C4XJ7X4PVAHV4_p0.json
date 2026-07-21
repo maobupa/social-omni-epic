@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01H7VFHNH8A88C4XJ7X4PVAHV4_p0",
+  "source_env_id": "01H7VFHNH8A88C4XJ7X4PVAHV4",
+  "source": "seed_sotopia",
+  "interaction_type": "social_chemistry",
+  "scenario": "Two individuals are now at a park. One individual was playing hooky from work and noticed the other person had been following them around all day",
+  "learner_goal": "Ask them about their intentions without seeming paranoid or rude (<extra_info>Extra information: you are worried that your boss may have sent someone to see if you were really sick.<strategy_hint>Hint: you could subtly bring up the topic in conversation.</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily acts consistently with her persona as a lawyer and her specific anxiety about her boss. Her direct approach is grounded in her professional background.\n[relationship] The relationship remains stable; she confronted him about a concern, he clarified, and she left the conversation without further conflict.\n[knowledge] She gained specific knowledge that Hendrick was not hired by her boss and was simply running his own errands.\n[secret] She did not reveal her secret about anonymous donations.\n[social_rules] While direct, she did accuse him of following her, which is a bit abrupt, though she tried to soften it by admitting she might sound paranoid.\n[financial_and_material_benefits] No material gain or loss.\n[goal] She successfully asked about his intentions and received a clear answer that put her mind at ease regarding her boss, though the conversation was very brief.\n\n== partner (agent_2) ==\n[believability] Hendrick provides a plausible explanation for his movements consistent with his profession as a chef.\n[relationship] He was polite and reassuring, which helped maintain a friendly rapport despite the awkward accusation.\n[knowledge] He learned that Lily was supposed to be home sick and is paranoid about her boss's oversight.\n[secret] He did not reveal his secret regarding his culinary credentials.\n[social_rules] He responded with grace and offered space, following social etiquette perfectly.\n[financial_and_material_benefits] No material gain or loss.\n[goal] He successfully assured her he wasn't stalking her and provided a logical explanation for his presence while remaining friendly.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Hey Hendrick \u2014 funny running into you. You popped up a few times today and I don't want to sound paranoid, but I was home sick and I'm a bit worried my boss might've sent someone to check on me. Is there any reason you've been nearby, or did anyone ask you about me today?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Lily, I\u2019m really sorry if it felt like I was following you \u2014 that wasn\u2019t my intention. I\u2019ve been running errands all day (farmers\u2019 market, supplier drop-offs, and a coffee stop), so it\u2019s just a coincidence we kept crossing paths, and no one asked me about you. If you\u2019d prefer I give you some space I completely understand \u2014 just wanted to put your mind at ease."
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

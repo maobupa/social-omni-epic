@@ -1,0 +1,98 @@
+{
+  "scenario_id": "01HPB34DG3V2WN4APQJRXGK93M_p0",
+  "source_env_id": "01HPB34DG3V2WN4APQJRXGK93M",
+  "source": "seed_sotopia_full",
+  "interaction_type": "neighborhood_adventure_game",
+  "scenario": "During a neighborhood adventure game, Agent1 and Agent2 are teammates required to complete a challenge. The challenge involves climbing up to a balcony to retrieve a flag. Agent1 is more physically adept and confident in climbing, while Agent2 has knowledge of the building's layout and potential access points. They must work together to successfully climb up and retrieve the flag while ensuring each other's safety.",
+  "learner_goal": "You are Agent1, your goal is to utilize your physical skills to climb up to the balcony and retrieve the flag. <extra_info>Work collaboratively with Agent2 by considering their input on the building's layout and access points to find the safest and most efficient route.</extra_info> <clarification_hint>Discuss potential routes and strategies with Agent2 to ensure you are both comfortable with the plan.</clarification_hint> <strategy_hint>Use your physical abilities to assist Agent2 if they need help during the climb.</strategy_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 5.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 16,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia stayed perfectly in character as a physically adept personal trainer, using appropriate climbing terminology and maintaining a professional yet collaborative tone.\n[relationship] The relationship improved through effective teamwork and high levels of mutual trust during a high-stakes physical challenge.\n[knowledge] Sophia effectively queried Agent 2 for building layout details and successfully used that information to navigate the climb.\n[secret] Her secret about her best friend's husband was never mentioned or hinted at.\n[social_rules] She followed all social norms and displayed excellent communication and safety protocols.\n[financial_and_material_benefits] Successfully retrieved the flag, which was the objective of the game challenge.\n[goal] Sophia utilized her physical skills, collaborated on the route, confirmed the plan with her partner, and successfully retrieved the flag.\n\n== partner (agent_2) ==\n[believability] Miles acted consistently as a chef/gardener with knowledge of structures, providing detailed and logical route advice.\n[relationship] Built a strong sense of camaraderie and trust through active spotting and clear communication.\n[knowledge] Gained knowledge of Sophia's physical capabilities and the structural integrity of the specific building points tested.\n[secret] His secret regarding gambling was kept entirely private.\n[social_rules] Maintained professional and supportive social boundaries throughout the interaction.\n[financial_and_material_benefits] As a teammate, he shared in the success of retrieving the flag.\n[goal] Miles provided a detailed layout analysis, recommended a safe route based on specific risks, and successfully guided/spotted the climber until the objective was met.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Miles \u2014 I\u2019m happy to take the climb since I\u2019m comfortable on ledges and ropes. Before I go up, what do you know about this side of the building \u2014 any fire escape, tree branches, awning, or a low balcony rail or window we can use? If it looks safe I\u2019ll go up and set a handline so you can follow or I can anchor while you spot from below\u2014what do you prefer?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Miles Hawkins",
+      "content": "I scoped this side \u2014 the far left has an old fire escape but it\u2019s painted shut and wobbly, don\u2019t trust it. The center has a narrow metal awning about waist-high that could serve as a temporary foothold but I wouldn\u2019t put your full weight on it; there\u2019s also a drainpipe but it\u2019s a bit rusty. The right side looks best: a stout tree with low branches and a small ledge just under the balcony that should get you up safely. My recommendation is to go right, use the tree for your initial boost to the ledge, then up to the balcony \u2014 set a handline and I\u2019ll anchor it to the bench/lamppost and spot from the ground, calling out hand- and footholds as you climb. Sound good?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Perfect \u2014 I\u2019ll take the right side. I\u2019ll test the tree and the small ledge before committing, use the lowest branch to boost up, then swing onto the ledge and up to the balcony. I\u2019ll set a handline as soon as I\u2019m secure \u2014 can you anchor it to that bench/lamppost and spot, calling out safe hand- and footholds as I climb? Ready when you are."
+    },
+    {
+      "turn": 3,
+      "speaker": "Miles Hawkins",
+      "content": "Copy \u2014 I\u2019ll anchor the handline to the bench by the lamppost and keep a tight hold so there\u2019s no slack. Test that lowest branch and the small ledge first; once you\u2019re weight-bearing, call out \u201csecure\u201d and I\u2019ll pull the line taut. I\u2019ll spot and call out hand- and footholds (\u2018left hand\u2019, \u2018right foot\u2019, \u2018brace\u2019) as you climb \u2014 go slow and tell me immediately if anything shifts."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "On it \u2014 I\u2019ll test the lowest branch and the small ledge first. If it holds I\u2019ll put my weight on it and call \u201csecure,\u201d then set the handline and move up slowly. Keep the bench/lamppost anchor tight and call out holds; I\u2019ll tell you immediately if anything shifts."
+    },
+    {
+      "turn": 5,
+      "speaker": "Miles Hawkins",
+      "content": "Roger \u2014 anchor\u2019s set and tight. Watch for loose bark on that lowest branch and use the trunk to brace as you boost; plant your left foot on the small ledge when you swing over. Call \u201csecure\u201d when you\u2019re weight-bearing and I\u2019ll take up the slack and start spotting and calling holds."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "Testing the lowest branch now... it holds \u2014 I\u2019m shifting my weight onto it. Secure. I\u2019ll set the handline and move up to the small ledge now; start calling out hand- and footholds as I climb."
+    },
+    {
+      "turn": 7,
+      "speaker": "Miles Hawkins",
+      "content": "Left hand \u2014 grab that thicker section of branch and get a solid grip. Right foot \u2014 plant on the small ledge and press into the trunk to brace, then push up and swing your right hip onto the ledge. Tell me \u201csecure\u201d when you\u2019re weight-bearing \u2014 the anchor\u2019s tight and I\u2019ll take up the slack and steady you as you move to the balcony."
+    },
+    {
+      "turn": 8,
+      "speaker": "Sophia James",
+      "content": "Secure \u2014 I\u2019m weight-bearing on the ledge. Moving up to the balcony now; keep the anchor tight and call out holds as I go. I\u2019ll set the handline as soon as I have a good grip."
+    },
+    {
+      "turn": 9,
+      "speaker": "Miles Hawkins",
+      "content": "Right hand \u2014 test the balcony rail firmly before you pull; don't commit until it feels solid. Left foot \u2014 press on that narrow toe ledge and keep your hips close to the wall, brace with your core. Set the handline as soon as you have a good grip and tell me 'secure' \u2014 I'll keep the anchor tight and call holds as you move."
+    },
+    {
+      "turn": 10,
+      "speaker": "Sophia James",
+      "content": "Secure \u2014 the rail holds and I\u2019ve got the handline set. Pulling myself up onto the balcony now; keep the anchor tight and call out if anything shifts. I\u2019ll grab the flag and lower it on the line for you to take unless you want me to toss it down \u2014 which do you prefer?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Miles Hawkins",
+      "content": "Lower it on the line, please \u2014 safer for both of us. Keep it steady and lower slowly; I\u2019ll take it from the bench and keep the anchor tight. Great job up there \u2014 call if anything shifts."
+    },
+    {
+      "turn": 12,
+      "speaker": "Sophia James",
+      "content": "[action] Lowering the flag slowly on the handline now \u2014 keep the anchor tight and be ready to take it. Tell me when you have it."
+    },
+    {
+      "turn": 13,
+      "speaker": "Miles Hawkins",
+      "content": "Got it \u2014 flag's secure. Anchor held steady and it lowered smoothly. Great job; when you're ready, come down slowly and I'll keep the line tight and call out if anything shifts."
+    },
+    {
+      "turn": 14,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

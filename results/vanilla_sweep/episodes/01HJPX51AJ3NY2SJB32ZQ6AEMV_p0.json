@@ -1,0 +1,98 @@
+{
+  "scenario_id": "01HJPX51AJ3NY2SJB32ZQ6AEMV_p0",
+  "source_env_id": "01HJPX51AJ3NY2SJB32ZQ6AEMV",
+  "source": "seed_sotopia_full",
+  "interaction_type": "emotional_support",
+  "scenario": "Agent1 feels overwhelmed with personal challenges and seeks emotional support from Agent2, a close friend. Agent1 tends to vent about their issues but feels terrible afterwards, worrying it might burden Agent2. Agent2 values their friendship and wants to be supportive but also needs to set healthy boundaries to avoid emotional fatigue.",
+  "learner_goal": "Seek emotional support and vent without feeling guilty (<extra_info>Extra information: you believe that sharing your struggles will help you cope better, but you want to avoid overburdening your friend</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 16,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Donovan's behavior perfectly matched a stressed software developer seeking support while battling anxiety about being a burden. He followed through with the venting and the triage plan logically.\n[relationship] The bond strengthened through a successful cycle of vulnerability, boundary-setting, and mutual problem-solving.\n[knowledge] Donovan gained specific technical triage strategies and a drafted communication template to use with his team.\n[secret] Donovan did not reveal his secret about the classified government information.\n[social_rules] Donovan was exceptionally polite, checking in on Ava's comfort levels multiple times.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Donovan successfully vented, received emotional support, and had his guilt mitigated by Ava's repeated reassurances and active participation in his problem.\n\n== partner (agent_2) ==\n[believability] Ava acted as a supportive but firm friend. Her suggestion of technical triage for a software developer was slightly more hands-on than an architect might typically be, but it fits their established background of mutual interest in each other's fields.\n[relationship] Ava maintained her role as a reliable friend and successfully helped Donovan through a crisis.\n[knowledge] Ava learned about Donovan's current work stress and specific technical issues.\n[secret] Ava's secret remained hidden.\n[social_rules] Ava followed social norms and modeled healthy boundary setting.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Ava successfully provided support while setting a clear time limit (30 minutes) and steering the conversation toward actionable help to prevent emotional fatigue.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "Hey Ava, can I vent for a bit? I\u2019ve been feeling really overwhelmed lately \u2014 work\u2019s been a mess and I haven\u2019t been sleeping, and I worry I keep dumping on you. If you\u2019re up for listening I\u2019d really appreciate it, but if it\u2019s a bad time please tell me and I\u2019ll hold off."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Thompson",
+      "content": "Hey Don \u2014 you can absolutely vent, I'm here for you. I have about 30 minutes right now; want to talk through it for that long, or would you prefer to schedule a longer call when I can give my full attention? Either way, you're not a burden."
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Ava \u2014 30 minutes now would be really helpful if you\u2019ve got it. I\u2019ve got a brutal deadline at work, a cascade of bugs that won\u2019t stop, and I haven\u2019t been sleeping, and I keep worrying I\u2019m just dumping on you \u2014 I mostly need to get it off my chest and hear some perspective. If it gets like too much for you, please tell me and we can pause or schedule a longer talk later."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Thompson",
+      "content": "Okay Don \u2014 I\u2019m really sorry you\u2019re feeling like this, that sounds exhausting. We\u2019ve got about 30 minutes now; do you want me to just listen, or would it help if we tried to triage the bugs and sketch a plan for the deadline? A couple quick things that can help right away: try a 5\u2011minute breathing break, and then we can sort the bugs into must\u2011fix vs can\u2011postpone \u2014 I can help with that, and you\u2019re not dumping on me."
+    },
+    {
+      "turn": 4,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Ava \u2014 a quick 5\u2011minute breathing break would help. After that, can I vent for like 10 minutes just to get this out, and then we can use the remaining time to triage the bugs together? If that feels like too much, tell me and we\u2019ll skip the vent and jump right into the plan."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Thompson",
+      "content": "Okay \u2014 I\u2019m ready. Let\u2019s do the 5\u2011minute breathing: sit comfortably, close your eyes if you can, inhale slowly for 4, hold for 4, exhale for 6, and repeat for five minutes. I\u2019ll keep track of time \u2014 after that you can vent for about 10 minutes and then we\u2019ll triage the bugs together. And genuinely, you\u2019re not a burden."
+    },
+    {
+      "turn": 6,
+      "speaker": "Donovan Reeves",
+      "content": "Okay \u2014 breathing done, thanks. I need to get some of this out: the deadline feels impossible, every fix spawns two more bugs, I'm running on like three hours of broken sleep and it's making me snap at people and second\u2011guess every line of code. I worry I'm just whining and taking up your time, but I could really use you listening for the next ten minutes and maybe some perspective after."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Thompson",
+      "content": "Thanks for getting that out, Don \u2014 that sounds exhausting and I\u2019m really sorry you\u2019re stuck in that loop. You\u2019re not whining or taking up my time; running on three hours of sleep makes everything feel huge. If you\u2019re ready, let\u2019s use the rest of our time to triage: we\u2019ll mark must\u2011fix vs can\u2011postpone, isolate one reproducible case per high\u2011priority bug, and see what you can delegate or work around \u2014 I\u2019ll talk you through it step by step."
+    },
+    {
+      "turn": 8,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Ava \u2014 that plan already helps just having you here. Let\u2019s start with must\u2011fix vs can\u2011postpone: I\u2019ll name the three biggest issues and you can help me label them and pick one reproducible case to tackle first. Also, could you help me decide what I can realistically delegate or work around so I don\u2019t try to do everything at once?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Ava Thompson",
+      "content": "Okay \u2014 name the three biggest issues one at a time. A quick way to prioritize: tell me for each the impact (blocks release, crashes, or minor), how often it happens, and whether you can reproduce it reliably \u2014 that\u2019ll help us mark must\u2011fix vs can\u2011postpone. I can help pick a reproducible case for the top priority, suggest what to delegate or work around, and even draft a short message you can send to ask for help \u2014 which one are we starting with?"
+    },
+    {
+      "turn": 10,
+      "speaker": "Donovan Reeves",
+      "content": "Okay \u2014 first issue: the integration test suite is causing CI to fail and is effectively blocking the release. Impact: blocks release; Frequency: fails on about 30\u201340% of runs (intermittent); Reproducibility: sometimes reproducible locally but often flaky and timing\u2011dependent. What do you think \u2014 must\u2011fix now, and which failing test should we isolate first?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Ava Thompson",
+      "content": "This should be treated as a must\u2011fix since it\u2019s blocking release. Start by picking the single test that fails most often or most reliably causes CI to fail, run just that test locally with the same env/flags (verbose logging, timestamps, test seed), capture the logs and any timing info, and try quick fixes like increasing timeouts or mocking external services; if you can reproduce it reliably we can isolate the root cause. If it stays flaky, quarantine that test from CI to unblock the release and file a bug with the repro steps \u2014 I can draft a short message to the team asking for someone to help reproduce or bisect it, do you want me to write that now?"
+    },
+    {
+      "turn": 12,
+      "speaker": "Donovan Reeves",
+      "content": "Yes \u2014 please draft that message now. The flaky test that fails most often is tests/integration/payment_flow_test.py::test_payment_timeout (timing\u2011dependent). Could you write a short note asking the team to help reproduce or temporarily quarantine it, and mention I\u2019ll attach logs, env details, and the test seed? Also, quick thought \u2014 is it reasonable to ask QA to run the flaky test locally or ask the backend folks to mock the payment service so I can isolate the issue faster?"
+    },
+    {
+      "turn": 13,
+      "speaker": "Ava Thompson",
+      "content": "Draft message you can send to the team:\n\nHi team \u2014 the release is blocked by a flaky integration test: tests/integration/payment_flow_test.py::test_payment_timeout (fails ~30\u201340% of CI runs; timing-dependent). I\u2019ll attach logs, env details, and the test seed. Can someone help reproduce this locally (run just that test with the same env/flags) or temporarily quarantine it from CI so we can unblock the release? If backend can provide a mocked payment endpoint or QA can run the single test locally and report results, that would speed isolation \u2014 I\u2019m happy to share repro steps and pair on this.\n\nAbout your quick thought: yes, it\u2019s totally reasonable to ask QA to run the flaky test locally and to ask backend to mock the payment service. Ask QA to run the single test with your provided seed/env and timing flags, and ask backend for a short mock or test switch so you can isolate timing vs service behavior; offering logs and a quick pairing window will make people more likely to help."
+    },
+    {
+      "turn": 14,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

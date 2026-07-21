@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPX5129SET0ZFPJA7N2KVGD_p0",
+  "source_env_id": "01HJPX5129SET0ZFPJA7N2KVGD",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_dynamics",
+  "scenario": "Agent1 has become increasingly aware of Agent2, a peer at school, who seems to be present wherever Agent1 goes. Agent2's behavior is causing Agent1 to feel flustered and uncomfortable. Agent1 is unsure of Agent2's intentions and wants to address the situation without creating conflict or misunderstanding. The goal is to establish clear boundaries while understanding Agent2's behavior.",
+  "learner_goal": "Express feelings of discomfort to Agent2 regarding their constant presence and seek clarification on Agent2's intentions (<extra_info>Extra information: Agent1 values personal space and is sensitive to perceived intrusions</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles is direct and professional, which fits his background as an older, experienced chef. He effectively communicated his discomfort without being overly hostile.\n[relationship] While there was discomfort, the air was cleared through honest communication, preventing future friction.\n[knowledge] He learned that William's intentions were professional admiration and a desire for collaboration, rather than anything malicious.\n[secret] He kept his secret about being a recovering gambling addict.\n[social_rules] He maintained social decorum and spoke directly to resolve the tension.\n[financial_and_material_benefits] No material gains or losses.\n[goal] Miles expressed his discomfort and received a clear explanation of William's intentions. He successfully established the need for personal space.\n\n== partner (agent_2) ==\n[believability] William's apology and explanation (admiration and collaboration) are plausible for a peer relationship in a creative field.\n[relationship] William avoided a conflict by being apologetic and proposing a way to interact more comfortably in the future.\n[knowledge] He learned about Miles's specific boundaries and that his own behavior was being perceived as intrusive.\n[secret] He did not reveal his secret about sabotaging a competitor.\n[social_rules] He responded appropriately to a peer's expression of discomfort and offered a resolution.\n[financial_and_material_benefits] No material gains or losses.\n[goal] William negotiated a plan to give space and agreed on a more structured way to socialize or collaborate.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Hey William \u2014 can I be straight with you for a minute? I\u2019ve noticed you\u2019ve been around a lot at events and it\u2019s started to make me a bit uncomfortable; I value my personal space and don\u2019t want to jump to conclusions. I respect you and what you do, so could you tell me what your intentions are so we can clear the air?"
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Thanks for being direct \u2014 I\u2019m sorry I made you uncomfortable, that wasn\u2019t my intention. I do admire your work and have been showing up to learn and sometimes to see if there\u2019s a chance to collaborate, but I can see how that could feel like hovering. I\u2019ll give you more space and won\u2019t linger around your stations; if you want, we can agree on when it\u2019s okay to chat or work together so there\u2019s no awkwardness."
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

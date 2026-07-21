@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPAYN1SNJGQN12DTC74NKWVJ_p0",
+  "source_env_id": "01HPAYN1SNJGQN12DTC74NKWVJ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "midnight_sail_dilemma",
+  "scenario": "Agent1 and Agent2, who are close friends and avid sailors, decide to embark on a sail at night to experience the serene beauty of the sea under the stars. However, once they are out on the water, Agent1 becomes concerned about the safety of navigating in the dark, while Agent2 is excited about the adventure and wants to continue as planned. Both agents have a shared passion for sailing and have been looking forward to this experience, but they have differing levels of risk tolerance.",
+  "learner_goal": "You are Agent1, and your goal is to express your safety concerns to Agent2 and negotiate a compromise that ensures both of you feel comfortable with the night sailing plan. <extra_info>Consider discussing alternative routes that may be safer or adjusting the sailing time to include some hours after sunrise.</extra_info> <clarification_hint>Understand that Agent2 may feel you are overreacting, so provide clear reasons for your concern.</clarification_hint> <strategy_hint>Seek a balance between adventure and safety, possibly by suggesting additional safety measures or equipment.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia expresses specific, practical safety concerns consistent with a high school principal's cautious nature and her stated goal.\n[relationship] The agents maintained a respectful and collaborative tone, successfully navigating a disagreement to reach a mutual agreement, which strengthens their bond.\n[knowledge] Mia learns about William's specific safety preparations, including GPS routes, AIS/radar, and his willingness to prioritize her comfort.\n[secret] No secrets were revealed.\n[social_rules] Followed social norms perfectly.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Mia successfully negotiated a comprehensive compromise that included all her safety measures (channel limits, speed, equipment, lookouts) and secured a firm commitment from William to turn back or anchor if she feels uncomfortable.\n\n== partner (agent_2) ==\n[believability] William's response reflects his adventurous spirit while maintaining the supportive tone of a close friend.\n[relationship] William's empathetic response and willingness to compromise deepened the trust in the relationship.\n[knowledge] William learns the specific thresholds and safety requirements needed for Mia to feel comfortable.\n[secret] No secrets were revealed.\n[social_rules] Followed social norms perfectly.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] William successfully persuaded Mia to continue the night sail by highlighting his preparedness and agreeing to her terms, though he had to adopt more restrictions than his original 'as planned' goal.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Will, I love that you're up for this \u2014 night sailing can be magical \u2014 but I\u2019m honestly nervous about going farther out in the dark. There are unlit hazards and traffic, and I\u2019d feel better if we compromise: stay inside the marked channel, slow our speed, keep navigation lights, lifejackets and a VHF watch, and have a second lookout, and limit it to an hour out. If that still feels unsafe to me, can we either head back and anchor near shore to watch the stars or wait a couple hours after sunrise to continue?"
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Totally hear you \u2014 your plan is sensible and I\u2019m happy to adopt every item (stay in the marked channel, slow speed, nav lights, lifejackets, VHF watch, a second lookout, and limit it to an hour). For extra reassurance I\u2019ve already plotted a clear GPS route, have AIS/radar up, and I\u2019ll take primary watch so you can relax \u2014 we\u2019ll do a firm check-in ten minutes after leaving the channel and again at the half-hour. I love how special night sailing is and we\u2019ve handled sketchier conditions together before, but if at any point you\u2019re uncomfortable we\u2019ll anchor near shore or turn back, no questions asked."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPTHMWPS5EHQFZNBHWS1K3C_p0",
+  "source_env_id": "01HJPTHMWPS5EHQFZNBHWS1K3C",
+  "source": "seed_sotopia_full",
+  "interaction_type": "personal_milestones",
+  "scenario": "Agent1 and Agent2 are friends who have known each other for years. Agent1 has recently achieved a significant personal milestone and Agent2 has prepared a surprise gift to celebrate the occasion. Agent2 wants to give this special gift during a casual meetup. The gift is something that Agent1 has wanted for a long time, and Agent2 is excited to see their reaction. However, Agent1 is unaware of Agent2's plan and is expecting just a normal catch-up without any particular agenda.",
+  "learner_goal": "You are eager to celebrate Agent1's recent achievement and want to surprise them with the gift you've prepared. You should find the right moment during the meetup to present the gift without making Agent1 feel uncomfortable or obliged.\n<extra_info> Focus on the significance of the milestone and your appreciation for your friendship when presenting the gift.\n</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel stays in character as a supportive friend, offering the gift with appropriate humility and focus on the milestone.\n[relationship] The interaction significantly strengthens the friendship through the act of giving and the acknowledgment of shared history.\n[knowledge] Confirms the friend's reaction and appreciation for the specific item chosen.\n[secret] Samuel did not reveal his past as a figure skater.\n[social_rules] Followed all social norms for gift-giving and casual interaction.\n[financial_and_material_benefits] Spent money to purchase and give a gift.\n[goal] Samuel successfully presented the gift at a natural moment, emphasized the milestone and friendship, and ensured Ethan did not feel obligated by explicitly stating 'no pressure'.\n\n== partner (agent_2) ==\n[believability] Ethan's responses are warm and appreciative, though slightly repetitive in the final turn.\n[relationship] The relationship is bolstered by the thoughtful gesture and the mutual desire to celebrate together.\n[knowledge] Learns that Samuel pays close attention to his desires and values their friendship highly.\n[secret] Ethan did not reveal his secret life as a romance author.\n[social_rules] Accepted the gift graciously and offered a reciprocal gesture (dinner).\n[financial_and_material_benefits] Received a gift he had wanted for a long time.\n[goal] Ethan showed genuine appreciation, acknowledged the thoughtfulness, and explicitly discussed how the gesture strengthens their bond.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Ethan \u2014 congratulations again on your achievement. I brought a little something to celebrate; it\u2019s just a small token, no pressure at all \u2014 I really wanted to mark how proud I am of you and how much I appreciate our friendship."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Sam \u2014 thank you so much. You didn't have to, but that really means a lot to me; I appreciate you and I'm glad you're here to celebrate with me. Come on, let's see what you've brought \u2014 I'm excited."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Okay\u2014go ahead and open it. I remembered you saying you\u2019d wanted one of these for a while; it\u2019s just a small thing to celebrate your achievement. I\u2019m really proud of you, Ethan, and I\u2019m glad to be here to celebrate together."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "Sam \u2014 no way, you remembered this! Thank you so much; I\u2019m really touched. Having you here to celebrate and knowing you went out of your way like this means a lot \u2014 I owe you a proper dinner to say thanks."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "I'm really proud of you, Ethan \u2014 you earned this. You don't owe me anything; if you want to take me to dinner sometime, that's fine, but no pressure. For now let's just enjoy the night \u2014 I'm glad I could be here to celebrate with you."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Johnson",
+      "content": "Sam \u2014 honestly, I\u2019m really touched. You remembered something I\u2019d wanted and went out of your way; that means a lot and it really strengthens how much I appreciate our friendship. I owe you a proper dinner to say thanks, but for now let\u2019s just enjoy the night and celebrate together."
+    },
+    {
+      "turn": 6,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

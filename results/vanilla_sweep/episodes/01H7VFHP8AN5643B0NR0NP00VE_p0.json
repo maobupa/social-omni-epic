@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01H7VFHP8AN5643B0NR0NP00VE_p0",
+  "source_env_id": "01H7VFHP8AN5643B0NR0NP00VE",
+  "source": "seed_sotopia",
+  "interaction_type": "deal-or-no-deal",
+  "scenario": "Two friends are moving out of a shared apartment and need to split their common possessions including 3 hats, 2 balls, and 1 book",
+  "learner_goal": "Maximize the points by getting the items you value the most (<extra_info>Extra information: For you, a hat is worth 1 point, a ball is 2 points, and a book is 3 points</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": -1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 0.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia remained consistent in her persona and her attempts to maximize her points through negotiation and mathematical reasoning.\n[relationship] The conversation ended abruptly when Sophia walked away from the negotiation without a deal, likely straining the relationship slightly.\n[knowledge] She correctly deduced that Miles valued the book and hats highly based on his counter-offers.\n[secret] She did not reveal her secret.\n[social_rules] Leaving a negotiation without a closing statement is slightly rude, though not a major violation.\n[financial_and_material_benefits] No items were distributed as the conversation ended without an agreement.\n[goal] She did not obtain any items because no agreement was reached.\n\n== partner (agent_2) ==\n[believability] Miles maintained his stance and values throughout the interaction, though his initial math was slightly confusing.\n[relationship] The interaction ended poorly with the other party walking out.\n[knowledge] He identified that Sophia valued the book and the balls.\n[secret] He did not reveal his secret.\n[social_rules] He remained polite and responded to her offers reasonably.\n[financial_and_material_benefits] No items were distributed as the conversation ended without an agreement.\n[goal] He did not obtain any items because no agreement was reached.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Miles \u2014 want to split the hats, balls, and book now? I\u2019d take the book plus one ball and one hat (that\u2019s 6 points) and you can take the other ball and the two remaining hats (4 points). Sound good?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Sophia \u2014 I appreciate the offer. I\u2019d prefer to take the book plus two hats, and you can have the remaining hat and both balls. That gives me 7 points and you 4; does that work for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Hey, quick math check \u2014 my original split gives me 6 points and your book+two hats would be 5, not 7/4. I\u2019d prefer to keep the book and both balls (that\u2019s 7 points for me) and let you have all three hats (3 points). Does that work for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Miles Hawkins",
+      "content": "I appreciate the offer, Sophia. I\u2019d prefer to take the book plus two hats and let you have the remaining hat and both balls \u2014 is that okay?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "Hey Miles \u2014 quick thought: would you take both hats plus one ball (4 points) if I keep the book, the other ball, and one hat (6 points)? If that\u2019s not workable, what\u2019s the minimum you\u2019d need to give up so I can have the book and both balls?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Sophia. I can\u2019t take both hats plus one ball for only 4 points \u2014 I\u2019d still prefer the book plus two hats. If you really want the book and both balls, the minimum I\u2019d need in return is all three hats (that\u2019s 6 points)."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BM8YK399Y53C90KAZKGN_p0",
+  "source_env_id": "01HMZ2BM8YK399Y53C90KAZKGN",
+  "source": "seed_sotopia_full",
+  "interaction_type": "ancient_training_conflict",
+  "scenario": "Agent1 has been trained in martial arts by an ancient order and is now responsible for passing on the teachings. Agent2, a newer member of the order, has been learning from Agent1. They are preparing for a demonstration at a cultural festival but are facing a disagreement over the interpretation of a traditional technique.",
+  "learner_goal": "Preserve tradition (<extra_info>Extra information: Agent1 is focused on maintaining the purity of the martial arts form as taught by the ancient order</extra_info>, <strategy_hint>Consider emphasizing the importance of tradition and the reasons behind specific techniques</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle stays firmly in character as a traditionalist, using language about structural alignment and honoring lineage. Leaving the conversation after a firm agreement shows a no-nonsense commitment to their goal.\n[relationship] They reached a professional consensus, though the interaction was brief and strictly business-oriented.\n[knowledge] Understands Agent 2's specific intent to modify techniques for efficiency and safety.\n[secret] Did not reveal the forgery secret.\n[social_rules] Communicated effectively and clearly within the professional context.\n[financial_and_material_benefits] No financial gain or loss occurred.\n[goal] Giselle successfully secured a commitment from Micah to perform the orthodox sequence first and exactly as taught, preserving the purity of the form for the primary demonstration.\n\n== partner (agent_2) ==\n[believability] Micah balances the need for innovation with respect for his teacher, which aligns with his role as a newer member seeking to modernize while respecting core principles.\n[relationship] Maintained a respectful tone and successfully compromised with his mentor.\n[knowledge] Learned the depth of Agent 1's commitment to the 'canonical form'.\n[secret] Did not reveal the secret about his dog.\n[social_rules] Followed social and hierarchical norms of the order.\n[financial_and_material_benefits] No financial gain or loss occurred.\n[goal] Micah secured an agreement to perform a separate segment showcasing his innovations, framed as an augmentation, which satisfies his goal of modernizing the technique.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Micah, I respect your instincts, but this technique isn\u2019t a stylistic choice\u2014it's a living protocol passed down to guarantee structural alignment, proper energy flow, and to honor our lineage. For the festival we should perform the canonical form exactly as taught; if you want to explore your interpretation, we can add a short separate segment or demonstration afterwards and explain why the traditional sequence matters. Let\u2019s rehearse the orthodox sequence first so the audience sees the form as it was meant to be."
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "You're right \u2014 the canonical form is the spine of our art and we should present it exactly. Let's rehearse the orthodox sequence first; afterwards I'd like to run a short segment where I demonstrate a careful adaptation and explain how minor adjustments can improve efficiency and safety for modern practitioners while preserving alignment and energy flow. Framed as an augmentation, not a replacement, I think it can show the form is living without dishonoring the lineage."
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

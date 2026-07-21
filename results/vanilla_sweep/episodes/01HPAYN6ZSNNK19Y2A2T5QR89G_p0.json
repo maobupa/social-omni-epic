@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HPAYN6ZSNNK19Y2A2T5QR89G_p0",
+  "source_env_id": "01HPAYN6ZSNNK19Y2A2T5QR89G",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 notices Agent2 smoking outside the entrance of a building. Agent1, who is trying to quit smoking, is suddenly hit with a craving and debates internally whether to ask Agent2 for a cigarette. Agent2, who is aware of Agent1's attempts to quit, is approached by Agent1. The interaction is delicate as Agent1 is tempted, yet conflicted, and Agent2 wants to be supportive of Agent1's quitting efforts while also respecting their current choice.",
+  "learner_goal": "Resist the urge to smoke and seek support from Agent2 (<extra_info>Extra information: You are Agent1 and you've been trying to quit smoking. You're tempted to ask for a cigarette, but you also want to stay committed to your goal of quitting.</extra_info>)",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver's dialogue accurately reflects the struggle of a smoker trying to quit, using distractions and specific instructions for support to manage his cravings.\n[relationship] The interaction significantly strengthened the bond between the two, moving from cordial acquaintances to a supportive dynamic where Oliver feels comfortable relying on Ethan.\n[knowledge] Oliver learned specific technical details about modular smartwatches and Raspberry Pi power management from Ethan.\n[secret] Oliver did not reveal his hidden feelings for his neighbor.\n[social_rules] Oliver followed social norms, being polite and appreciative while asking for help.\n[financial_and_material_benefits] There was no material gain or loss.\n[goal] Oliver successfully resisted the urge to smoke and secured active, effective support from Ethan through distraction and accountability.\n\n== partner (agent_2) ==\n[believability] Ethan's responses were consistent with his software developer background and his stated goal of being supportive without being judgmental.\n[relationship] Ethan's willingness to drop what he was doing to help Oliver likely fostered a deeper level of trust and friendship.\n[knowledge] Ethan did not learn any significant new information from Oliver.\n[secret] Ethan did not reveal his secret charitable donations.\n[social_rules] Ethan acted as a helpful and considerate neighbor.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Ethan successfully supported Oliver's quitting attempt by providing distraction and commitment to intervene if needed, all while respecting Oliver's autonomy.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "Hey Ethan \u2014 quick thing: I'm trying to quit smoking and passing by you just hit me with a craving. I don't want a cigarette; could you help me out for a minute\u2014chat with me or keep me from caving?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Hey Oliver \u2014 absolutely, I can hang out for a few minutes. Want to chat here, walk around the block, or just do a couple deep breaths together? I can stay until the craving passes or check in later if that helps \u2014 proud of you for sticking with quitting."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Ethan \u2014 walking around the block sounds good. Could we do that and talk for a few minutes? I really appreciate you sticking around."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "Sounds good \u2014 let\u2019s walk. We can circle the block and talk about whatever helps distract you: tech news, your art projects, or just vent. I\u2019ll stick with you for as long as you need \u2014 ready when you are."
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Thompson",
+      "content": "Let's go \u2014 walking to the park sounds good. Can we talk about that gadget you mentioned last week? If I start getting shaky, please call me out or steer the conversation \u2014 I really appreciate you doing this."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Smith",
+      "content": "Sounds good \u2014 let\u2019s head to the park. The gadget I mentioned is that modular smartwatch \u2014 the offline AI and battery life are pretty crazy; I\u2019ll fill you in as we walk. If you start getting shaky I\u2019ll call you out and we\u2019ll do some deep breaths, grab water or gum \u2014 I\u2019ve got your back until the craving passes."
+    },
+    {
+      "turn": 6,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Ethan \u2014 I really appreciate you sticking with me. Tell me about that modular smartwatch: how does the offline AI work and does the battery really last as long as they claim? Keep talking \u2014 and if I start to wobble, tell me to breathe or hand me that gum."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ethan Smith",
+      "content": "Okay \u2014 the modular watch uses an on-device neural engine so the core AI runs locally for things like voice replies and activity recognition without needing the cloud; that cuts down constant radios and is a big reason the makers claim multi-day battery life, especially with the removable battery modules and aggressive low-power modes. If you start to wobble I\u2019ll call a pause and we\u2019ll do three slow breaths together, or you can say \u201cgum\u201d and I\u2019ll hand one over \u2014 whatever you need, I\u2019ve got you. Ready to keep walking and nerding out about the features?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Ethan \u2014 seriously, I appreciate you sticking with me. Tell me more about swapping those battery modules: is it a simple click-on, and are they proprietary or interchangeable? And if I start to wobble, don\u2019t hesitate to say \u201cbreathe\u201d and hand me the gum."
+    },
+    {
+      "turn": 9,
+      "speaker": "Ethan Smith",
+      "content": "Yep \u2014 the modules snap on with a simple click/magnetic latch so swapping takes a couple seconds; they\u2019re mostly proprietary today because of the tiny custom contacts, though a few third parties are starting to make compatibles. Hot\u2011swapping is fine for short swaps, and adding modules can seriously extend runtime like the makers claim. If you start wobbling I\u2019ll say \u201cbreathe\u201d and hand you the gum \u2014 I\u2019ve got you."
+    },
+    {
+      "turn": 10,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks \u2014 seriously appreciate you doing this. If you see me falter, say \u201cbreathe\u201d and hand me the gum, and don\u2019t let me ask for one \u2014 remind me I\u2019m quitting. Also, while we walk, quick question: do those battery modules make the watch noticeably thicker?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Ethan Smith",
+      "content": "Absolutely \u2014 if you falter I\u2019ll say \u201cbreathe,\u201d hand you the gum, and flat-out remind you you\u2019re quitting; I won\u2019t let you talk yourself into one. The modules do add a noticeable bit of thickness (roughly a few millimetres per module, depending on capacity), but the design keeps it balanced so it still wears comfortably. How\u2019re you feeling right now \u2014 steady or creeping back toward the urge?"
+    },
+    {
+      "turn": 12,
+      "speaker": "Oliver Thompson",
+      "content": "I\u2019m a bit on edge \u2014 the craving\u2019s there but manageable. Keep talking about the watch and toss in something about your weekend projects; if I start to wobble, say \u201cbreathe\u201d and hand me the gum, and don\u2019t let me talk myself into one. Seriously, thanks \u2014 it really helps having you here."
+    },
+    {
+      "turn": 13,
+      "speaker": "Ethan Smith",
+      "content": "Glad it\u2019s manageable. Over the weekend I set up a tiny Raspberry Pi server to self-host notes and tried running a local model for quick voice replies\u2014got distracted debugging power settings for hours, which is a good diversion to talk about if you want. If you start to wobble I\u2019ll say \u201cbreathe\u201d and hand you the gum\u2014no cigarettes, promise. Want me to keep going with the nerdy details or switch to something else to distract you?"
+    },
+    {
+      "turn": 14,
+      "speaker": "Oliver Thompson",
+      "content": "Keep going with the nerdy details \u2014 the Pi power debugging is a perfect distraction. If I start to wobble, say \u201cbreathe\u201d and hand me the gum; if it gets worse, tell me to sit down and we\u2019ll count breaths together. Really appreciate you sticking with me, Ethan."
+    },
+    {
+      "turn": 15,
+      "speaker": "Ethan Smith",
+      "content": "So the Pi saga was mostly power quirks: a flaky USB\u2011C supply and an overzealous watchdog causing reboots, so I swapped supplies, added a ferrite and disabled unused peripherals to cut draw \u2014 tweaking the governor settings helped too. Kept me distracted for hours. How\u2019s the urge right now? If you start to wobble I\u2019ll say \u201cbreathe\u201d and hand you the gum, and if it gets worse we\u2019ll sit and count breaths together."
+    },
+    {
+      "turn": 16,
+      "speaker": "Oliver Thompson",
+      "content": "I\u2019m feeling a bit steadier \u2014 the craving\u2019s still there but it\u2019s fading. Keep going with the Pi tweaks; what governor settings did you try and how did you monitor the power draw? If I wobble, say \u201cbreathe\u201d and hand me the gum, and if it gets worse tell me to sit so we can count breaths together \u2014 seriously, thanks for staying with me."
+    },
+    {
+      "turn": 17,
+      "speaker": "Ethan Smith",
+      "content": "On the Pi I tried switching governors (ondemand \u2192 powersave and schedutil) and lowered the CPU max frequency plus disabled unused peripherals like HDMI and Bluetooth to cut idle draw. I monitored power with an inline USB power meter while running stress tests and used powertop to spot wakeups and services to disable\u2014those tweaks dropped idle current noticeably. How\u2019s the urge now? If you start to wobble I\u2019ll say \u201cbreathe\u201d and hand you the gum, and if it gets worse we\u2019ll sit and count breaths together."
+    },
+    {
+      "turn": 18,
+      "speaker": "Oliver Thompson",
+      "content": "I\u2019m feeling steadier \u2014 the craving\u2019s definitely fading. Keep going with the powertop findings and any other tweaks you tried; if it flares up, say \u201cbreathe\u201d and hand me the gum, and if it gets worse tell me to sit and we\u2019ll count breaths together. Seriously, thanks for being here \u2014 really helps."
+    },
+    {
+      "turn": 19,
+      "speaker": "Ethan Smith",
+      "content": "Powertop called out wakeups from USB and network drivers plus a few systemd timers and journald activity \u2014 I enabled USB autosuspend for unused devices, disabled Bluetooth/HDMI if they weren\u2019t needed, masked noisy timers/services, set the governor to powersave and lowered the max CPU frequency; I also tweaked swappiness and reduced logging so idle wakeups dropped a lot. If it flares up I\u2019ll say \u201cbreathe\u201d and hand you the gum, and if it gets worse we\u2019ll sit and count breaths together \u2014 I won\u2019t let you talk yourself into one. How are you feeling now? I can keep walking until it\u2019s totally gone or hang back if you want a bit of space."
+    }
+  ]
+}

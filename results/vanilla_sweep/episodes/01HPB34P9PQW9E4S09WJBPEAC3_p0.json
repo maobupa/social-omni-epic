@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB34P9PQW9E4S09WJBPEAC3_p0",
+  "source_env_id": "01HPB34P9PQW9E4S09WJBPEAC3",
+  "source": "seed_sotopia_full",
+  "interaction_type": "movie_theater_experience",
+  "scenario": "Agent1 and Agent2 are at a movie theater watching a suspenseful film. During an intense scene, Agent1, who is easily frightened, instinctively reaches for Agent2's hand for comfort. Agent2, who is more composed, is surprised by the sudden contact but understands the need for reassurance in a tense moment. Both agents are friends and want to enjoy the movie without causing discomfort to each other.",
+  "learner_goal": "Seek reassurance (<extra_info>Agent1 is scared and seeks physical comfort but does not want to impose on Agent2</extra_info>, <strategy_hint>Look for non-verbal cues from Agent2 to gauge their comfort with the gesture</strategy_hint>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel's actions are consistent with someone who is anxious but socially aware. He uses non-verbal cues to check for consent and comfort throughout the interaction.\n[relationship] The physical touch and mutual reassurance strengthened the bond between these acquaintances in a high-stakes (though fictional) moment.\n[knowledge] Samuel learned that Ethan is comfortable with physical touch and supportive during tense situations.\n[secret] Samuel did not reveal his past as a figure skater.\n[social_rules] Samuel followed social norms by being discreet in a theater and seeking non-verbal consent for physical contact.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Samuel successfully sought reassurance through physical contact, did not impose (checked for comfort), and successfully gauged Ethan's positive reaction.\n\n== partner (agent_2) ==\n[believability] Ethan's response is calm, supportive, and perfectly aligned with his background as a composed professional and a romance author (suggesting a sensitive side).\n[relationship] Ethan's supportive response deepened the friendship.\n[knowledge] Ethan learned that Samuel can be easily frightened and seeks comfort through touch.\n[secret] Ethan did not reveal his secret life as a romance author.\n[social_rules] Ethan maintained theater etiquette and provided comfort within the bounds of their friendship.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Ethan provided comfort and support while maintaining personal space and theater etiquette.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "[non-verbal communication] Reach for Ethan's hand and squeeze it gently, then offer a quick apologetic smile and a soft, questioning raise of the eyebrows to check if he's comfortable with it."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "[non-verbal communication] Give Samuel a brief, reassuring squeeze back, offer a small warm smile and a subtle nod to say \"it's okay\" without drawing attention."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "[non-verbal communication] Return the squeeze briefly, give a relieved, grateful half-smile and a soft, apologetic nod, then relax back into my seat."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "[non-verbal communication] Gently rub the back of Samuel's hand with my thumb for a moment, offer a tiny reassuring smile, then relax my hand and turn attention back to the screen."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

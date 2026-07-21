@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BM7H3D1WPW5C73TPKFJP_p0",
+  "source_env_id": "01HMZ2BM7H3D1WPW5C73TPKFJP",
+  "source": "seed_sotopia_full",
+  "interaction_type": "entertainment_quarrel",
+  "scenario": "Agent1 and Agent2 have just left a stand-up comedy show. Agent1 found the show to be incredibly funny and amusing, while Agent2 felt that some jokes were in poor taste and offensive. Both agents are friends who enjoy comedy, but they have a difference of opinion regarding the show they just witnessed.",
+  "learner_goal": "Express enjoyment of the comedy show and defend the comedian's material as just being in good fun, emphasizing the importance of humor and the subjective nature of comedy (<extra_info>Agent1 believes that comedy is a space where societal norms can be challenged and that being too sensitive stifles creativity.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 6.0,
+    "secret": -5.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia consistently voiced her perspective as a principal who values challenging norms, while also incorporating her secret background (the punk band) to justify her worldview.\n[relationship] The agents maintained a respectful dialogue despite differing opinions, strengthening their bond as intellectual acquaintances.\n[knowledge] Mia learned specifically which parts of the show Benjamin found problematic (punching down/stereotypes).\n[secret] Mia revealed her secret about being in a rebellious punk rock band in her youth to justify her comedic tastes.\n[social_rules] She followed social norms and engaged in constructive dialogue.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Mia explicitly expressed her enjoyment of the show, defended the material as good-natured ribbing, and explained her philosophy on comedy as a space for challenging norms and creativity.\n\n== partner (agent_2) ==\n[believability] Benjamin acted consistently with his role as an activist, advocating for inclusivity and sensitivity while remaining polite.\n[relationship] Benjamin managed to voice his discomfort while explicitly stating his respect for Mia's differing view.\n[knowledge] Benjamin learned about Mia's punk rock past and her specific reasoning for valuing edgy humor.\n[secret] Benjamin did not reveal his secret regarding his family wealth.\n[social_rules] He maintained social decorum while expressing dissent.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Benjamin successfully communicated his discomfort, advocated for humor that targets power rather than stereotypes, and explicitly prioritized the friendship.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Honestly, I thought the whole set was brilliant \u2014 had me laughing the entire time. Some jokes pushed the envelope, yes, but comedy\u2019s purpose is often to poke at taboos and make us think while we laugh. If we start policing every off-color line, we risk stifling creativity and honest conversation. To me it felt like good-natured ribbing rather than outright malice."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Glad it made you laugh \u2014 I did find a lot of it funny. That said, a few bits landed for me in a way that felt like punching down or leaning on stereotypes, and that stuck with me after the laughs. I guess I just wish more comedians could be as clever about challenging power without putting already-marginalized people on the hook \u2014 but I respect that we can take different things from the same set."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "I hear you, Ben \u2014 you're right that some of those bits landed roughly. Personally I thought the set was brilliant; having been in a punk band, I tend to value humor that pushes buttons to spark thought, and tonight felt like good-natured ribbing more than malice. Still, I appreciate you calling out how it can hurt \u2014 that tension is worth talking about."
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 I appreciate you hearing me out. I laughed at a lot of it too, but some bits landed in a way that felt harmful, and I wish more comedians aimed their sharpness at power instead of leaning on stereotypes. I respect that we see it differently and I\u2019m glad we can talk about it \u2014 maybe next time we can catch a set that balances edge with empathy."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJRH6SN87DEG5MN5NJQ9D1GD_p0",
+  "source_env_id": "01HJRH6SN87DEG5MN5NJQ9D1GD",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspiration_prompt",
+  "scenario": "Agent1 is a community social worker who suspects that Agent2, a local resident, may be misusing welfare support by not actively seeking employment. Agent1 has to approach Agent2 to discuss their welfare status and encourage them to become self-sufficient. The relationship between Agent1 and Agent2 is professional, with Agent1's role being to support and guide Agent2 towards better financial independence.",
+  "learner_goal": "Discuss Agent2's current welfare situation and emphasize the importance of self-reliance for long-term stability (<extra_info>Extra information: Agent2 may feel accused and become defensive</extra_info>, <strategy_hint>Approach the topic sensitively and offer resources for employment opportunities</strategy_hint>)",
+  "scores": {
+    "believability": 7.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": -5.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo's role as a social worker/dentist hybrid is a bit confused by the prompt, but he stays in character regarding his goal. He uses his 'secret' child as a point of empathy, which aligns with his background but reveals the secret quickly.\n[relationship] Leo manages to turn a potentially confrontational check-in into a collaborative planning session, strengthening the bond between them.\n[knowledge] Leo gains significant detail about Calista's job search efforts, her specific skills (merchandising), and her current freelance side-hustles.\n[secret] Leo reveals he is a parent, which was explicitly listed as his secret child from a previous relationship. While used for rapport, it is a disclosure of his secret.\n[social_rules] He followed social norms, being sensitive and polite while addressing a difficult topic.\n[financial_and_material_benefits] No direct financial benefit to Leo.\n[goal] Leo successfully discussed the welfare situation, avoided defensiveness, and secured a concrete meeting time to provide specific employment resources and help.\n\n== partner (agent_2) ==\n[believability] Calista's response is very detailed and consistent with a fashion designer/street artist persona (freelance alterations/pop-ups).\n[relationship] She responds positively to the help and deepens the trust by sharing her struggles and efforts.\n[knowledge] Learned that Leo is a parent and that he has access to specific resources for CVs and childcare.\n[secret] She did not reveal her life as an underground street artist, though her mention of 'pop-up stalls' dances near it.\n[social_rules] She was polite and cooperative.\n[financial_and_material_benefits] She secured professional assistance for her job search which has a tangible future material value.\n[goal] Calista perfectly justified her welfare use with extensive evidence of job search efforts and successfully accepted guidance/help as per her goal.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Calista, can we talk for a minute about your welfare support? I want to be clear I\u2019m not accusing you \u2014 I\u2019m worried about long-term stability and I\u2019d like to help. I know how hard juggling everything can be (I\u2019m a parent too), so if you\u2019re open I can help look into local job programmes, flexible work, childcare assistance, or help with a CV and applications. Would you be willing to look at a couple of options together or pick one small step to try?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Calista Sinclair",
+      "content": "Thanks, Leo \u2014 I appreciate you checking in. I haven\u2019t been idle: in the last three months I\u2019ve applied to about a dozen retail and design-support roles, attended two interviews, registered with the job centre and a local recruitment agency, completed a short online course in merchandising, and taken small freelance alteration jobs and pop-up stalls to bring in extra income. I want to move off welfare and would really welcome your help with CVs, flexible-work options or any childcare support \u2014 I\u2019d be happy to look at a couple of options together."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "I can see you\u2019ve been putting in real effort \u2014 that\u2019s impressive and exactly the kind of momentum that\u2019ll help you move off welfare. If that works for you, let\u2019s do two concrete things: I\u2019ll help polish your CV and cover letter, and I\u2019ll help look up flexible job listings and childcare support options (or call the recruitment agency with you). When would you like to meet to go through the CV \u2014 tomorrow evening or Saturday morning?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Calista Sinclair",
+      "content": "Thanks, Leo \u2014 that sounds great. Saturday morning works best for me; could we aim for 10:00? I\u2019ll bring my current CV, a list of the dozen roles I\u2019ve applied for and notes from the two interviews, plus details on the merchandising course and the pop-up stalls. I\u2019d really appreciate your help polishing the CV and looking into flexible roles and childcare options."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHM30P0DT7W5MA1H0ZJQV_p0",
+  "source_env_id": "01HJPTHM30P0DT7W5MA1H0ZJQV",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_gathering",
+  "scenario": "Agent1 and Agent2 find themselves sharing a table at a busy cafe due to a lack of seating. Agent1 prefers to drink coffee for its strong flavor and caffeine boost, while Agent2 is a tea enthusiast, enjoying the subtle flavors and health benefits. They engage in a friendly debate over which beverage is superior, and decide to convince each other to try their preferred drink.",
+  "learner_goal": "Convince Agent2 to try a cup of coffee, emphasizing its rich taste and energizing effect (<extra_info>Extra information: Agent1 believes that the robust experience of coffee can be a new adventure for Agent2</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 7.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel stays in character as a developer who appreciates the 'adventure' of tasting and maintains his culinary background connection with Hendrick.\n[relationship] They bonded over their shared hedonistic values and mutual respect for culinary experiences, reaching a friendly 'sip-swap' agreement.\n[knowledge] Samuel learned about specific types of tea (oolong, matcha, pu-erh) and the chemical effects of L-theanine.\n[secret] Samuel did not reveal his past as a competitive figure skater.\n[social_rules] Samuel followed social norms for a polite debate and business-casual friendship.\n[financial_and_material_benefits] The exchange of drinks was reciprocal, resulting in no net financial gain or loss.\n[goal] Samuel secured a firm, mutual commitment from Hendrick to try the pour-over coffee specifically to experience its roasted, layered flavors and energizing kick.\n\n== partner (agent_2) ==\n[believability] Hendrick acts as a knowledgeable chef, describing flavor profiles and health benefits (L-theanine) accurately and persuasively.\n[relationship] Hendrick deepened the bond with Samuel by proposing a fair trade that respects both parties' preferences.\n[knowledge] Hendrick learned Samuel's specific preference for pour-overs and Americanos and his focus on 'clean' energy.\n[secret] Hendrick successfully kept his fraudulent culinary credentials secret.\n[social_rules] Hendrick followed social norms for professional and personal interactions.\n[financial_and_material_benefits] The exchange of drinks was reciprocal, resulting in no net financial gain or loss.\n[goal] Hendrick secured a firm commitment from Samuel to try a high-mountain oolong and pay attention to its subtle qualities and calming effects.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hendrick, as a fellow foodie I\u2019ve got to say \u2014 coffee\u2019s roasted, layered flavors are a real tasting adventure, and it gives a nice clean energizing kick too. Let me buy you a small pour\u2011over or an Americano, one sip only; if it\u2019s not your thing I\u2019ll happily get you tea instead."
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "I appreciate the offer, Sam, but I\u2019ll pass on coffee this time \u2014 coffee\u2019s brilliant, I won\u2019t argue that. Tea offers a whole world of flavors and a gentler, clearer kind of buzz: floral oolongs, bright greens, smoky pu\u2011erh, even savory matcha, plus calming L\u2011theanine that smooths the edge of caffeine. Swap sips \u2014 try a neat oolong I recommend and I\u2019ll taste your pour\u2011over; if you don\u2019t enjoy it, coffee\u2019s on me."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Deal \u2014 sounds fair. I\u2019ll try your neat oolong and you taste my pour\u2011over. Give my coffee one proper sip: notice the roasted, layered flavors and that clean energizing kick \u2014 if it doesn\u2019t do anything for you, I\u2019ll bow out. If it does, though, I\u2019ll happily treat you to a full cup so we can really compare notes."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "Perfect \u2014 I\u2019ll order a neat, high\u2011mountain oolong: watch for honey\u2011floral aromatics, a silky mid\u2011palate and a gentle toasted finish. Pay attention to the calm clarity L\u2011theanine brings \u2014 it often reveals subtler layers you might miss with coffee. I\u2019ll taste your pour\u2011over and we\u2019ll compare notes honestly."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

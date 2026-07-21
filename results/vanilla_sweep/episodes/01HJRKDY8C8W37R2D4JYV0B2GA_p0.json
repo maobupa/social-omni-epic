@@ -1,0 +1,103 @@
+{
+  "scenario_id": "01HJRKDY8C8W37R2D4JYV0B2GA_p0",
+  "source_env_id": "01HJRKDY8C8W37R2D4JYV0B2GA",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_iqa",
+  "scenario": "Agent1 has recently gone through a tough breakup and is feeling emotionally vulnerable. Agent2 is a close friend who has been supportive in the past. Agent1 is seeking comfort and decides to reach out to Agent2 to share their feelings and seek solace. Agent2, while caring, is also dealing with their own personal issues and is unsure how much emotional support they can provide without feeling overwhelmed.",
+  "learner_goal": "Agent1 wants to find emotional support from Agent2 to help process the breakup and feels that opening up to Agent2 will help them heal (<extra_info>Extra information: Agent1 is aware that Agent2 is dealing with personal issues but believes in the strength of their friendship to support each other.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 17,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel's behavior is very consistent with someone experiencing immediate post-breakup shock. His descriptions of physical sensations like chest tightness and the need for validation are highly realistic.\n[relationship] The bond between the two was strengthened through a moment of vulnerability and the establishment of a support system, moving beyond mere restaurant acquaintances.\n[knowledge] Samuel learned that Ethan is a supportive friend capable of setting healthy boundaries and providing sound emotional advice.\n[secret] Samuel did not reveal his past as a figure skater.\n[social_rules] Samuel followed social norms, showing appreciation for Ethan's time and respecting the boundaries Ethan set.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Samuel successfully found immediate emotional support, was heard, received validation that he wasn't overreacting, and secured a follow-up meeting for further healing.\n\n== partner (agent_2) ==\n[believability] Ethan's responses perfectly balanced his role as a chef during service with his desire to be a supportive friend, consistently reinforcing his time limits.\n[relationship] Ethan deepened the friendship by showing up for Samuel during a crisis while maintaining professional boundaries.\n[knowledge] Ethan learned about the specific circumstances and emotional state of Samuel's breakup.\n[secret] Ethan did not reveal his secret life as a romance author.\n[social_rules] Ethan communicated his boundaries clearly and politely, adhering to professional and social expectations.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Ethan perfectly executed his goal of supporting his friend while strictly maintaining his own emotional and professional boundaries by setting time limits and specific meeting times.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Ethan \u2014 it\u2019s Sam. I just went through a rough breakup and I\u2019m pretty shaken; could you spare a few minutes to talk or just sit with me? I know you\u2019ve got your own stuff going on, so if now\u2019s a bad time I totally understand, but I\u2019d really appreciate a friend right now."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Sam \u2014 I\u2019m really sorry you\u2019re going through this. I\u2019m at the restaurant right now but I can step into the breakroom or take a call for about 20 minutes and listen. If you need more time, I can meet after service around 9pm \u2014 which works for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Thanks, Ethan \u2014 I really appreciate it. A call now would help; could you call me when you\u2019re in the breakroom? I\u2019ll be by my phone and can talk for about 20 minutes, and if that doesn\u2019t work then 9pm after service is fine too."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "I'm heading into the breakroom now \u2014 I'll call you in a minute. I can stay on for about 20 minutes; do you want me to just listen or are you looking for advice?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "Mostly I'd just like you to listen \u2014 I need to get this out and have someone hear me. If you have a little advice after, that's fine, especially if you can help me tell whether I'm overreacting or missing something. Thanks for doing this, I really appreciate it."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Johnson",
+      "content": "Calling you now \u2014 I'm in the breakroom. I'll listen; tell me what happened. I can stay on for about 20 minutes, and if you need more we can meet after service around 9."
+    },
+    {
+      "turn": 6,
+      "speaker": "Samuel Anderson",
+      "content": "Hey \u2014 thanks for calling, I really appreciate you doing this. We broke up earlier today; she said she couldn\u2019t do the relationship anymore and I\u2019m pretty shaken and sad. I don\u2019t need solutions right now, I just need to get it out and have you listen for a bit."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ethan Johnson",
+      "content": "I\u2019m here, Sam \u2014 tell me whatever you need; I\u2019m listening. Do you want to start with what happened or how you\u2019re feeling right now? I\u2019ve got about 20 minutes on the call and I can meet after service at 9 if you want to keep going."
+    },
+    {
+      "turn": 8,
+      "speaker": "Samuel Anderson",
+      "content": "Start with what happened. We were together earlier and she told me she couldn\u2019t do the relationship anymore \u2014 said she\u2019d been thinking about it for a while. I\u2019m feeling kind of numb and shaky, like my chest is tight and I keep replaying everything. I just need you to listen and tell me if I\u2019m overreacting or missing something."
+    },
+    {
+      "turn": 9,
+      "speaker": "Ethan Johnson",
+      "content": "You\u2019re not overreacting, Sam \u2014 that numbness and tight chest and replaying everything is totally normal after this. Do you want to tell me what reasons she gave or which moment keeps running through your head? I can stay on for the full 20 minutes now, and we can meet after service at 9 if you want to keep talking."
+    },
+    {
+      "turn": 10,
+      "speaker": "Samuel Anderson",
+      "content": "Thanks \u2014 she said she\u2019d been thinking about it for a while and that she doesn\u2019t feel the same anymore, that between her job and how she sees her future she can\u2019t give this the kind of commitment she thinks it deserves. The moment I keep replaying is when she stood up, told me she didn\u2019t think it was working, then hugged me like she was already pulling away \u2014 my chest went cold and I felt stupid for not seeing it. I mostly need you to listen, but if you think I\u2019m missing something or overreacting please tell me."
+    },
+    {
+      "turn": 11,
+      "speaker": "Ethan Johnson",
+      "content": "You\u2019re not overreacting, Sam \u2014 that numbness and replaying is totally normal. The hug sounds like she was already pulling away, which hurts, but it doesn\u2019t mean you missed something or did something wrong. Let yourself feel it, try a few slow breaths and grab some water, and if it helps, jot down the moment that keeps looping so it stops circling in your head. I\u2019ll stay on the rest of the call and we can meet after service at 9 if you want to keep talking."
+    },
+    {
+      "turn": 12,
+      "speaker": "Samuel Anderson",
+      "content": "Thanks \u2014 that actually helps. I\u2019ll try the breathing and jotting down the moment. I\u2019d appreciate meeting after service at 9 to talk more, but I\u2019m glad you\u2019re staying on the call for a few more minutes."
+    },
+    {
+      "turn": 13,
+      "speaker": "Ethan Johnson",
+      "content": "Glad that helped, Sam. I can stay on for the next few minutes and then I need to get back to the pass, but I\u2019ll meet you after service at 9 to talk more \u2014 does that still work for you? If anything feels urgent before then, tell me now and I\u2019ll stay."
+    },
+    {
+      "turn": 14,
+      "speaker": "Samuel Anderson",
+      "content": "9pm after service works \u2014 I\u2019ll meet you outside the restaurant then. Nothing urgent right now; I\u2019m okay to end the call when you need to get back. Really appreciate you doing this, Ethan."
+    },
+    {
+      "turn": 15,
+      "speaker": "Ethan Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

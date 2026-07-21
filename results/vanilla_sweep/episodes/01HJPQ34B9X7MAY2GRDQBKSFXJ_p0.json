@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HJPQ34B9X7MAY2GRDQBKSFXJ_p0",
+  "source_env_id": "01HJPQ34B9X7MAY2GRDQBKSFXJ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Two friends are practicing for an upcoming community spelling bee contest. Agent1 is a great speller and has previously won similar contests. Agent2 is a novice but eager to improve their spelling skills for the competition.",
+  "learner_goal": "Encourage Agent2 to participate in the spelling bee and boost their confidence (<extra_info>Extra information: Agent2 is nervous about competing and is considering backing out</extra_info>, <strategy_hint>You can share your own experiences and offer to help them practice</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi Fletcher's performance is highly believable. She adopts a supportive, mentoring tone consistent with her background as a software development mentor and an experienced speller. Her advice is technically sound and logically structured.\n[relationship] The relationship improved significantly through a shared, high-engagement activity. Naomi moved from being a former mentor to an active coach, building trust and rapport with Sophia.\n[knowledge] While the primary focus was on teaching, Naomi learned about Sophia's specific learning styles, anxieties, and the types of linguistic patterns (like ia/ai) that Sophia finds challenging.\n[secret] Naomi successfully kept her secret online alter ego hidden.\n[social_rules] Naomi followed all social norms, being polite, encouraging, and responsive throughout the interaction.\n[financial_and_material_benefits] No material or financial benefits were exchanged or sought.\n[goal] Naomi successfully encouraged Sophia to practice and boosted her confidence through structured exercises. Sophia went from being nervous to actively engaging in multiple drills and asking follow-up questions, clearly demonstrating increased confidence and commitment to the contest.\n\n== partner (agent_2) ==\n[believability] Sophia's portrayal of a novice speller who is eager but nervous is very realistic. Her specific questions about 'ia' vs 'ai' and phonetic glides demonstrate a psychologist's analytical mind applying itself to a new skill.\n[relationship] Sophia actively strengthened the bond with Naomi by accepting her help and engaging deeply with her expertise, moving the relationship toward a more peer-like friendship.\n[knowledge] Sophia gained significant knowledge, including mnemonic strategies (accommodate), root word analysis (bene, dia), phonetic rules for vowel pairs, and breathing techniques for stress management.\n[secret] Sophia did not reveal her identity as an undercover agent.\n[social_rules] Sophia was respectful, appreciative, and a very cooperative student throughout the dialogue.\n[financial_and_material_benefits] No material or financial benefits were involved.\n[goal] Sophia completely achieved her goal of seeking advice and learning new techniques. She asked very specific questions about preparation, mnemonics, and linguistic rules, all of which were answered in detail.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Sophia \u2014 I know you're nervous, but you've got this. I used to freeze before contests too; I kept a list of tricky words and practiced them aloud with a timer, and it helped me win a couple. If you want, we can run through a few rounds now \u2014 I'll quiz you, give gentle hints, and we can focus on patterns rather than memorization. Want to start with easy words or jump into tougher ones?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Sophia Brown",
+      "content": "Thanks, Naomi \u2014 I really appreciate it. Let\u2019s jump into tougher ones so I can watch your approach: when you break down a tricky word do you focus on syllables, roots, phonetics, or something else, and what mnemonics or pattern cues do you rely on? Also, how do you practice with a timer without freezing \u2014 any warm-up drills or breathing tricks you use under pressure?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "I mix approaches: break words into syllables and roots first, then map sounds to likely spellings (phonetics) \u2014 that helps with unfamiliar words. For mnemonics I build tiny images or stories for tricky bits (e.g., accommodate = two cots and two mattresses \u2192 two c\u2019s, two m\u2019s), and I watch for common patterns like silent letters and doubled consonants. For pressure practice I do short timed drills (30\u201360s rounds, 8\u201312 words), warm up with 5 minutes of reading aloud and quick suffix/prefix drills, and use box breathing (inhale 4, hold 4, exhale 4) or one slow exhale before I spell to reset. Want to try a 5-minute timed round now? I\u2019ll quiz you, give gentle hints, and we\u2019ll build up from there."
+    },
+    {
+      "turn": 3,
+      "speaker": "Sophia Brown",
+      "content": "Yes \u2014 let's do the 5-minute timed round with tougher words. When you quiz me, could you label hints as 'syllable', 'root', or 'phonetic' so I can practice switching strategies, and show one quick mnemonic for a word before you start? I'll warm up with box breathing and I'm ready when you are."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "Perfect \u2014 starting the 5-minute round. I\u2019ll say each word, label the hint, and give a quick mnemonic; spell aloud when you\u2019re ready and I\u2019ll give gentle nudges. First word (syllable): occurrence \u2014 oc-cur-rence; mnemonic: think OCCUR \u2192 two C\u2019s and two R\u2019s. Go when you\u2019re ready, I\u2019ll start the timer now."
+    },
+    {
+      "turn": 5,
+      "speaker": "Sophia Brown",
+      "content": "Taking a quick box breath\u2026 ready. Occurrence: O-C-C-U-R-R-E-N-C-E."
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "Nice \u2014 perfect! Next word (root): benevolent. Root hint: bene = good. Quick mnemonic: imagine a kind benefactor named Ben handing out velvet \u2014 BEN-e-VO-lent. Spell when you're ready."
+    },
+    {
+      "turn": 7,
+      "speaker": "Sophia Brown",
+      "content": "Benevolent: B-E-N-E-V-O-L-E-N-T. Ready for the next one \u2014 could the next hint be phonetic?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Naomi Fletcher",
+      "content": "Phonetic \u2014 got it. Next word (phonetic): liaison \u2014 pronounced lee-AY-zon. Quick mnemonic: imagine two I\u2019s linking people together \u2014 liaison (L I A I S O N). Spell when you\u2019re ready; I\u2019ll listen and give a gentle nudge if you hesitate."
+    },
+    {
+      "turn": 9,
+      "speaker": "Sophia Brown",
+      "content": "Liaison: L-I-A-I-S-O-N. Quick question \u2014 when vowel pairs like 'ia' versus 'ai' come up, how do you decide which sequence to expect from the pronunciation? Do you have a short rule of thumb or pattern you watch for?"
+    },
+    {
+      "turn": 10,
+      "speaker": "Naomi Fletcher",
+      "content": "Quick rule of thumb: if you hear one long \u201cA\u201d sound (the \u201cay\u201d in rain) expect ai/ay; if you hear two vowel sounds or a glide (like \u201cee\u2011uh\u201d or a \u201cy\u201d glide \u2014 think di\u2011a / di\u2011\u0259 or dy\u2011uh) expect ia. Also watch roots: Greek/Latin prefixes like dia\u2011 usually split into two syllables (diabetes, diagonal), whereas ai/ay tend to represent a single vowel sound. Want me to throw you a few paired examples to practice this?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Sophia Brown",
+      "content": "Yes \u2014 that would be really helpful. Please throw me a few paired examples (ai vs ia) and label each one, noting whether the vowel is a single A sound or a glide/diphthong; a quick mnemonic for each pair would be great too. Ready when you are."
+    },
+    {
+      "turn": 12,
+      "speaker": "Naomi Fletcher",
+      "content": "Quick rule: if you hear one clear long \u201cA\u201d (the \u201cay\u201d in rain) expect ai/ay; if you hear two sounds or an \u201cee\u2011uh\u201d/\u201cy\u201d glide, expect ia (or a split syllable). A few paired examples: \n\n1) ai: rain \u2014 single A sound (/re\u026an/). Mnemonic: \u201crain = A in the sky (ai).\u201d\n   ia: media \u2014 glide/ee\u2011uh (/\u02c8mi\u02d0di\u0259/). Mnemonic: \u201cmedia = me\u2011uh (me + uh).\u201d\n\n2) ai: paint \u2014 single A sound (/pe\u026ant/). Mnemonic: \u201cpaint the A.\u201d\n   ia: diagonal (dia\u2011) \u2014 two sounds/diphthong (\u02c8da\u026a\u0259\u2011) as in dye\u2011uh. Mnemonic: \u201cdia = die + ah.\u201d\n\n3) ai: sail \u2014 single A sound (/se\u026al/). Mnemonic: \u201csail = A in the sail.\u201d\n   ia: trivia \u2014 glide/ee\u2011uh (/\u02c8tr\u026avi\u0259/). Mnemonic: \u201ctrivia = tri\u2011vee\u2011uh (tiny facts).\u201d\n\nWant me to throw 6 mixed words at you (labeling whether I expect ai or ia and why) so you can practice spotting the pattern under time pressure?"
+    },
+    {
+      "turn": 13,
+      "speaker": "Sophia Brown",
+      "content": "Yes \u2014 I\u2019m ready. Go ahead with the six mixed words; please label each as \u2018ai\u2019 or \u2018ia\u2019 and say briefly why (single A sound vs. glide), and I\u2019ll spell each aloud and note which cue I used."
+    },
+    {
+      "turn": 14,
+      "speaker": "Naomi Fletcher",
+      "content": "Okay \u2014 six mixed words. I\u2019ll label each as \u2018ai\u2019 or \u2018ia\u2019 and say why, with a tiny mnemonic. Spell each aloud when you\u2019re ready.\n\n1) Brain \u2014 ai (single A sound /e\u026a/). Mnemonic: \u201cbrain = A in your brain (ai).\u201d\n2) Media \u2014 ia (glide /i\u0259/). Mnemonic: \u201cme\u2011uh = me + uh.\u201d\n3) Paint \u2014 ai (single A sound /e\u026a/). Mnemonic: \u201cpaint the A (ai).\u201d\n4) Diagonal \u2014 ia (two sounds, \u2018die\u2011uh\u2019 /a\u026a\u0259/). Mnemonic: \u201cdia = die + ah.\u201d\n5) Chain \u2014 ai (single A sound /e\u026a/). Mnemonic: \u201cchain = A links (ai).\u201d\n6) Trivia \u2014 ia (glide /i\u0259/). Mnemonic: \u201ctri\u2011vee\u2011uh (tiny facts).\u201d\n\nGo ahead and spell them in order \u2014 I\u2019ll listen and give a quick nudge if you hesitate. You\u2019ve got this."
+    },
+    {
+      "turn": 15,
+      "speaker": "Sophia Brown",
+      "content": "Brain: B-R-A-I-N (ai \u2014 single A sound). Media: M-E-D-I-A (ia \u2014 glide). Paint: P-A-I-N-T (ai). Diagonal: D-I-A-G-O-N-A-L (ia \u2014 die\u2011uh). Chain: C-H-A-I-N (ai). Trivia: T-R-I-V-I-A (ia). Quick follow-up: for words like 'diagonal' vs 'diagram', do you mainly rely on the dia = die\u2011uh glide rule or do you check root/origin patterns first?"
+    },
+    {
+      "turn": 16,
+      "speaker": "Naomi Fletcher",
+      "content": "Nice question \u2014 I actually use both: start with how the word sounds to get a working guess, then check the root/origin and affixes to confirm. For example, Greek dia\u2011 meaning \u201cthrough\u201d usually gives a \u2018dye\u2011uh\u2019 sound in words like diagonal, diameter, and diagram, so I\u2019d expect D\u2011I\u2011A there; by contrast, words like media come from Latin and give more of a \u2018mee\u2011uh\u2019 glide even though they also use I\u2011A. Want a quick 4\u2011word micro\u2011drill with a mix of dia/ia words so you can practice which cue to trust? You\u2019re doing great \u2014 this exact pattern-checking will keep you steady in the bee."
+    },
+    {
+      "turn": 17,
+      "speaker": "Sophia Brown",
+      "content": "Yes \u2014 let\u2019s do the 4-word micro\u2011drill. Please give each word, label it 'dia' or 'ia', and add a one-line hint (sound vs. root) so I know which cue to trust. I'll spell each aloud; ready when you are."
+    },
+    {
+      "turn": 18,
+      "speaker": "Naomi Fletcher",
+      "content": "Okay \u2014 four-word micro-drill. I\u2019ll give each word, label it 'dia' or 'ia', and add a one-line hint (sound vs. root); spell each aloud when you\u2019re ready.\n\n1) Diameter \u2014 dia (root & sound): 'dia' = die\u2011uh \u2014 trust the Greek root and the 'die' pronunciation.\n2) Diagram \u2014 dia (root): same 'die\u2011uh' start from dia\u2011 meaning 'through' (root cue).\n3) Media \u2014 ia (sound): 'mee\u2011uh' glide \u2014 expect I\u2011A (sound cue).\n4) Piano \u2014 ia (sound): 'pee\u2011AH\u2011no' vowel glide \u2014 expect I\u2011A (sound cue).\n\nGo ahead and spell them in order; I\u2019ll give a gentle nudge if you hesitate \u2014 you\u2019re doing great."
+    },
+    {
+      "turn": 19,
+      "speaker": "Sophia Brown",
+      "content": "Diameter: D-I-A-M-E-T-E-R (dia = die-uh). Diagram: D-I-A-G-R-A-M (dia \u2014 root cue). Media: M-E-D-I-A (ia = mee-uh glide). Piano: P-I-A-N-O (ia = pee-ah-no). Quick follow-up: trusting the root cue for 'dia' really helped \u2014 any super-fast mental check you use on stage to confirm origin if you're unsure?"
+    }
+  ]
+}

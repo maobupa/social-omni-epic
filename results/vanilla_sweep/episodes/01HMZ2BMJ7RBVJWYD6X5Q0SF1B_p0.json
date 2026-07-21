@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BMJ7RBVJWYD6X5Q0SF1B_p0",
+  "source_env_id": "01HMZ2BMJ7RBVJWYD6X5Q0SF1B",
+  "source": "seed_sotopia_full",
+  "interaction_type": "coming_home_late",
+  "scenario": "Agent1 arrives home late at night after an evening out with friends, only to find Agent2, their roommate, waiting up for them. Agent2 is concerned about the late hours that Agent1 keeps and the noise they make when coming home, which has been disturbing Agent2's sleep. Agent1 values their social life but also wants to maintain a good relationship with Agent2. They initiate a conversation to find a compromise that respects both of their needs.",
+  "learner_goal": "Agent1 seeks to balance their social activities with being considerate of Agent2's need for rest <extra_info>and is looking for a way to minimize disruption when returning home late</extra_info> <clarification_hint>without sacrificing their social engagements</clarification_hint>.",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo spoke in a manner consistent with a professional adult looking for a compromise. His suggestions were practical and empathetic.\n[relationship] The relationship improved significantly from acquaintance to cooperative roommates through proactive communication and respect for boundaries.\n[knowledge] Learned Hendrick's specific sleep requirements and preferred quiet hours.\n[secret] He did not reveal his secret child.\n[social_rules] Followed social norms perfectly, offering an apology and proactive solutions.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Leo achieved exactly what he set out to do: he secured an agreement for one or two late nights a week without sacrificing social engagements, while establishing clear methods to minimize disruption.\n\n== partner (agent_2) ==\n[believability] Hendrick's response was realistic for a mature professional who values his sleep but wants to be a reasonable roommate.\n[relationship] The relationship improved as Hendrick felt heard and respected by his roommate.\n[knowledge] Learned that Leo is willing to adjust his habits to accommodate Hendrick's needs.\n[secret] He did not reveal his faked culinary credentials.\n[social_rules] Exhibited good social manners and clear communication.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Hendrick secured a commitment for quiet hours and specific noise-reduction behaviors, though he noted he will monitor the situation to see if it actually results in undisturbed sleep.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hey Hendrick, I\u2019m really sorry \u2014 I didn\u2019t mean to wake you coming in so late. I value my nights out but I also want us both to get sleep, so would you be open to agreeing on quiet hours on weeknights and me sending a quick text if I\u2019m going to be late? I can be much quieter coming in (take my shoes off in the hall, close the door gently) if you can give me one or two nights a week to stay out later."
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks, Leo \u2014 I appreciate you saying that. I can agree to quiet hours on weeknights \u2014 11:00 PM to 7:00 AM Monday\u2013Thursday \u2014 and I\u2019m okay with you having one or two nights a week to stay out later if you send me a quick text when you\u2019ll be late. Please take your shoes off in the hall and close the door gently; if it\u2019s still waking me I\u2019ll tell you and we\u2019ll tweak the arrangement."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

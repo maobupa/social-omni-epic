@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HMZ2BNP6Y41Y84KTT4EX5MTR_p0",
+  "source_env_id": "01HMZ2BNP6Y41Y84KTT4EX5MTR",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 has been working closely on a project with their boss, Agent2. During the process, Agent1 comes across a critical error that could lead to significant data loss. Agent1 knows that pointing out the mistake might embarrass Agent2 or even damage their professional relationship. However, Agent1 also understands the importance of the project's success and the potential consequences of not addressing the error. They need to find a way to communicate the issue to Agent2 without causing offense or undermining their boss's authority.",
+  "learner_goal": "Find a tactful way to bring up the error to Agent2, emphasizing the importance of collaboration and the shared goal of project success (<extra_info>Extra information: you value the working relationship with Agent2 and want to maintain a respectful and constructive dialogue.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabella's tone was consistently professional, humble, and collaborative, aligning perfectly with her described personality and her goal to be tactful.\n[relationship] The interaction significantly strengthened the bond of trust between the two, with Isabella showing respect for Lena's authority and Lena responding with high praise.\n[knowledge] Isabella confirmed that Lena is receptive to feedback and values diligence over ego, which is crucial for their working relationship.\n[secret] Isabella's secret about the animals was not mentioned.\n[social_rules] Isabella followed all professional and social norms perfectly.\n[financial_and_material_benefits] By preventing significant data loss, she protected the project's value and her own job security/reputation.\n[goal] Isabella successfully brought up the error tactfully, emphasized collaboration, maintained the relationship, and secured a meeting to implement fixes.\n\n== partner (agent_2) ==\n[believability] Lena's response was logical for an analytical architect who values project integrity and was consistent with the goal of fostering a safe environment.\n[relationship] Lena reinforced a culture of psychological safety, making Isabella feel more comfortable and valued.\n[knowledge] Lena learned about a critical technical risk and the specific nature of the bug before it caused damage.\n[secret] Lena's secret about the boyfriend was not mentioned.\n[social_rules] Lena followed professional social norms and displayed good leadership.\n[financial_and_material_benefits] The prevention of data loss saves the project from significant financial and structural damage.\n[goal] Lena effectively encouraged the discussion, reassured Agent 1, and set up a supportive environment for the review.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabella White",
+      "content": "Lena, I came across something in the project that looks like it could cause significant data loss if left as-is. I might be misunderstanding it, but because I care about the project's success and our working relationship, could we take a few minutes to review it together so I can show you what I found?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Thank you for flagging this \u2014 I really appreciate your diligence. I\u2019d much rather catch a potential problem now than deal with data loss later, and you won\u2019t be causing any offense by bringing it up. Can you show me the details now or in the next 15 minutes so we can review it together?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabella White",
+      "content": "Thanks, Lena \u2014 I can meet in about 10 minutes and walk you through what I found. It's a subtle config/merge issue that could overwrite recent records if a routine runs; I'll show where I think it is and a couple of safe fixes. Is 10 minutes okay, or would you prefer I join you now?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "Ten minutes works perfectly \u2014 thank you for flagging this. Meet me in the project workspace/meeting room in 10 minutes and bring that config snippet and the fixes you mentioned; we\u2019ll walk through it together. I really appreciate your diligence \u2014 you\u2019re doing the right thing by bringing it up."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabella White",
+      "content": "Perfect \u2014 I\u2019ll meet you in the project workspace in 10 minutes with the config snippet and two safe fixes. Would you like me to pause the routine that runs the job before we start, or shall we review first? See you soon."
+    },
+    {
+      "turn": 5,
+      "speaker": "Lena Goodwin",
+      "content": "Please pause the routine if you can \u2014 better to stop any chance of overwrite before we look. If you can\u2019t pause it right now, come as planned and we\u2019ll review the snippet in read-only, then pause before applying any fixes. See you in 10 minutes."
+    },
+    {
+      "turn": 6,
+      "speaker": "Isabella White",
+      "content": "On it \u2014 I\u2019ll pause the routine now and meet you in the project workspace in 10 minutes with the config snippet and two safe fixes. I won\u2019t apply anything without your okay; we\u2019ll review in read-only first. See you soon."
+    },
+    {
+      "turn": 7,
+      "speaker": "Lena Goodwin",
+      "content": "Thank you \u2014 I appreciate you pausing it. I\u2019ll meet you in the workspace in 10 minutes with my laptop; we\u2019ll review the snippet in read-only, walk through your two fixes, and pick the safest option, then document whatever we decide. I really appreciate you flagging this \u2014 you did the right thing."
+    },
+    {
+      "turn": 8,
+      "speaker": "Isabella White",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJRH6SPYNF4NT0M54SZYTH24_p0",
+  "source_env_id": "01HJRH6SPYNF4NT0M54SZYTH24",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 and Agent2 have been friends for several years and often hang out in the same social circle. Recently, Agent1 has felt emotionally drained and is considering creating some distance in the friendship to recharge. Agent1 wants to discuss this with Agent2 without hurting their feelings or causing misunderstandings about the value of their friendship.",
+  "learner_goal": "Express to Agent2 the need for personal space and time to focus on self-care while ensuring the friendship remains intact (<extra_info>Extra information: you value your friendship with Agent2 but feel the need to step back for your own well-being. You want to communicate this without making Agent2 feel rejected or unappreciated.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver is polite and direct, reflecting his professional architect background and the described mutual respect. He incorporates the background information about Baxter's plants naturally.\n[relationship] The relationship is strengthened through clear communication and mutual understanding, preventing a potential rift that could have been caused by Oliver's withdrawal.\n[knowledge] Oliver confirms that Baxter values the friendship and is willing to accommodate his need for space.\n[secret] Oliver did not reveal his hidden feelings for his neighbor.\n[social_rules] Oliver followed social norms for setting boundaries within a friendship.\n[financial_and_material_benefits] There were no financial or material gains in this interaction.\n[goal] Oliver successfully expressed his need for space, ensured the friendship remained intact, and received a supportive response from Baxter, achieving all components of his goal.\n\n== partner (agent_2) ==\n[believability] Baxter's response is consistent with his role as a supportive friend who values tradition and security. His tone is empathetic and respectful.\n[relationship] Baxter solidified the bond by providing the support Oliver needed during a difficult time.\n[knowledge] Baxter learned why Oliver had been acting differently and understands the specific needs Oliver has for the near future.\n[secret] Baxter did not reveal his possession of the priceless artifact.\n[social_rules] Baxter followed social norms for being a supportive and understanding friend.\n[financial_and_material_benefits] There were no financial or material gains in this interaction.\n[goal] Baxter listened to Oliver's concerns, supported his need for space, and received explicit reassurance that the friendship is still valued.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "Hey Baxter, do you have a minute? I\u2019ve been feeling pretty drained lately and I need to step back a bit to focus on some self-care \u2014 it\u2019s not about you, I really value our friendship and the way you bring life to the neighborhood with your plants. I might be quieter for a little while, but I hope we can still check in occasionally; I appreciate you and don\u2019t want you to take this personally."
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "Thanks for telling me, Oliver \u2014 I really appreciate your honesty. Take whatever time you need; I\u2019ll respect the space and won\u2019t take it personally, but if you\u2019d like the odd check-in I\u2019m happy to do a quick text or call \u2014 whatever suits you. Your friendship matters to me, and I\u2019m here if you need anything."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

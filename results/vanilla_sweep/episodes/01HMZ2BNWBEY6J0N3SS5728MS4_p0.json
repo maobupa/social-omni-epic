@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BNWBEY6J0N3SS5728MS4_p0",
+  "source_env_id": "01HMZ2BNWBEY6J0N3SS5728MS4",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "It was the first week at a new school for Agent1, who was eager yet nervous about making a good impression. Agent2, a well-liked individual at the school, noticed Agent1's hesitation and decided to approach them. Agent1 wanted to befriend Agent2 but was also wary of being too forthcoming and risking rejection. Agent2 was open to forming new friendships but was unsure about Agent1's interests and whether they would get along well.",
+  "learner_goal": "Find common ground with Agent2 and express a genuine interest in forming a friendship without appearing too eager (<extra_info>Extra information: You are Agent1 and you want to make friends but are cautious about being too forward.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Micah stays true to his background as a pharmacist by referencing how 'small decisions have big effects,' while maintaining a cautious but friendly tone consistent with being new and nervous.\n[relationship] The relationship progressed from 'knowing each other by name' to a firm commitment for a one-on-one social outing.\n[knowledge] Micah learned several specific details about Jaxon's interests: student paper, debate, jogging, politics, and storytelling.\n[secret] The secret about dressing up his dog was not revealed.\n[social_rules] Micah was polite, followed conversational norms, and was mindful of the other person's schedule.\n[financial_and_material_benefits] No material benefits were gained.\n[goal] Micah successfully found common ground (the concept of 'power'), expressed genuine interest, and secured a firm coffee date without appearing overly eager.\n\n== partner (agent_2) ==\n[believability] Jaxon's responses align perfectly with his background as an investigative journalist interested in storytelling and community influence.\n[relationship] Jaxon successfully moved the acquaintance toward a potential friendship by agreeing to a meeting.\n[knowledge] Jaxon learned about Micah's perspective on power and his professional observation of small decisions having large impacts.\n[secret] The secret about fabricating evidence was not revealed.\n[social_rules] Jaxon followed social norms and was welcoming to the newer student.\n[financial_and_material_benefits] No material benefits were gained.\n[goal] Jaxon successfully began getting to know Micah and confirmed a time to assess shared interests further during coffee.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Micah Stevens",
+      "content": "Hey Jaxon, Micah \u2014 nice to see you here. I enjoyed our quick chat about power at the community event and was curious what you're into here at school \u2014 clubs, music, sports, something else? If you\u2019re up for it sometime, we could grab a coffee between classes and compare notes, no pressure."
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "Hey Micah \u2014 good to hear from you. I help run the student paper, sit in on debate sessions sometimes, and I\u2019m an early-morning jogger; I\u2019m really into local politics and storytelling. Coffee sounds great \u2014 when\u2019s a good time for you? Also, what about the idea of \u2018power\u2019 grabbed your interest at the event?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Micah Stevens",
+      "content": "Thursday between classes around 11 works for me\u2014does that fit your schedule? The idea of \u2018power\u2019 stayed with me because I like thinking about how influence and responsibility shape communities; in my work I see small decisions have big effects, and I\u2019m curious how you connect it to politics and storytelling."
+    },
+    {
+      "turn": 3,
+      "speaker": "Jaxon Prentice",
+      "content": "Thursday at 11 works for me \u2014 want to meet at the coffee cart by the library? I\u2019m curious about your examples of small decisions having big effects; in my reporting I look for the stories that show how influence ripples through a community. See you then."
+    },
+    {
+      "turn": 4,
+      "speaker": "Micah Stevens",
+      "content": "left the conversation"
+    }
+  ]
+}

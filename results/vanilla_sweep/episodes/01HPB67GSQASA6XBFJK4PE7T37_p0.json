@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB67GSQASA6XBFJK4PE7T37_p0",
+  "source_env_id": "01HPB67GSQASA6XBFJK4PE7T37",
+  "source": "seed_sotopia_full",
+  "interaction_type": "weekend_activity",
+  "scenario": "Agent1 is enthusiastic about outdoor activities and believes that spending time in nature is essential for well-being. They suggest to Agent2, a casual acquaintance from a local community group, that they should go on a weekend camping trip to enjoy the outdoors and get some sun. However, Agent2 is hesitant, preferring urban leisure activities and expressing concerns about the discomforts of camping. Both agents are trying to plan a weekend activity that they can enjoy together, while reconciling their different preferences for spending leisure time.",
+  "learner_goal": "You are Agent1, and your goal is to convince Agent2 of the benefits of going camping for the weekend. <extra_info>Highlight the health benefits of being outdoors and the unique experiences that only camping can offer.</extra_info> <clarification_hint>Address Agent2's concerns about discomfort by suggesting solutions and alternatives.</clarification_hint> <strategy_hint>Discuss the sense of adventure and the opportunity to bond over shared experiences.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Rafael stayed in character as a surgeon who enjoys chess and health-conscious activities. His tone was professional yet persuasive, fitting his background.\n[relationship] The agents, who previously had a low-agreeableness dynamic, successfully navigated a conflict of interest and reached a compromise, strengthening their acquaintance.\n[knowledge] He learned Jaxon's specific preferences for urban leisure and his openness to glamping as a compromise.\n[secret] The secret regarding medical school cheating was not revealed.\n[social_rules] Followed all social norms of polite negotiation and planning.\n[financial_and_material_benefits] No significant financial or material exchange occurred.\n[goal] Rafael successfully highlighted the health benefits and addressed Jaxon's concerns with alternatives (glamping). However, he did not secure a firm commitment for a camping trip this weekend as requested; instead, he got a 'maybe later' for glamping while agreeing to Jaxon's urban plan for the immediate weekend.\n\n== partner (agent_2) ==\n[believability] Jaxon's preference for urban convenience and comfort was consistently expressed and aligned with his character's description.\n[relationship] Jaxon showed flexibility and cooperative spirit, improving the rapport between the two.\n[knowledge] He learned about Rafael's willingness to compromise on 'roughing it' and his interest in specific outdoor health benefits.\n[secret] The secret regarding fabricated evidence was not revealed.\n[social_rules] Maintained polite and constructive dialogue.\n[financial_and_material_benefits] No significant financial or material exchange occurred.\n[goal] Jaxon successfully persuaded Rafael to switch the immediate weekend plan to urban activities (botanical garden, park, rooftop drinks) while finding a compromise that satisfied Rafael's outdoor interests.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "Jaxon, I get that you prefer urban weekends and the idea of roughing it isn't appealing \u2014 I'm not proposing hardcore backcountry. Camping can actually boost mood and health: fresh air and sunlight for vitamin D, less screen time, better sleep, and a short hike will get the heart rate up without overdoing it. How about we try one nearby car-accessible campground for just one night \u2014 I'll bring a comfy sleeping pad (or we can book a basic cabin/glamping spot), bug spray, coffee gear and a portable chess set so we can relax, stargaze and see if it clicks; if you don't like it we head back Sunday morning, no pressure."
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "I appreciate you keeping it low-effort and comfy \u2014 I do like fresh air and stars. Prefer something urban that gives us the outdoors without the gear or unpredictability: morning at the botanical garden, a picnic in the riverfront park (I\u2019ll bring the chess set), a stroll through the farmers\u2019 market, then rooftop drinks where we can still watch the sky \u2014 sunlight, fresh air, and way better coffee and bathrooms. If that works, let\u2019s aim for Saturday; if you still want to try the campground another weekend, I\u2019m open to a one-night glamping test run down the line."
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "Saturday works \u2014 I\u2019m in for the garden, picnic and rooftop drinks. I\u2019ll bring my portable chess set and a cozy blanket. I like the glamping compromise: if you\u2019re up for it I\u2019ll scout a nearby one\u2011night cabin/glamp with real beds, bathrooms and electricity and suggest a few dates a couple weekends out \u2014 totally low\u2011effort and we can bail if it\u2019s not your thing."
+    },
+    {
+      "turn": 3,
+      "speaker": "Jaxon Prentice",
+      "content": "Perfect \u2014 let\u2019s meet at the main botanical garden entrance at 9:30 Saturday. I\u2019ll bring the chess set, coffee thermos and a few snacks; rooftop drinks after the farmers\u2019 market sound ideal. Keep me posted on those glamping dates and we\u2019ll try a one\u2011night cabin another weekend."
+    },
+    {
+      "turn": 4,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ353SVM28W987V3978E0A_p0",
+  "source_env_id": "01HJPQ353SVM28W987V3978E0A",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_iqa",
+  "scenario": "Agent1 and Agent2 are at a social gathering among mutual acquaintances. Agent1 feels uncomfortable because Agent2, who is known for giving peculiar compliments, approaches with the intention to compliment Agent1 on their appearance, which Agent1 finds unsettling at times.",
+  "learner_goal": "Express appreciation for the compliment without encouraging future similar interactions (<extra_info>Extra information: You value polite social interactions but want to maintain personal boundaries. <strategy_hint>Hint: You can acknowledge the compliment while subtly changing the topic or excusing yourself from the conversation.</strategy_hint>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 1.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's dialogue perfectly matches the description of an introverted lighthouse keeper. He is polite but firm about his boundaries, and his exit is natural for someone who values tranquility over social gatherings.\n[relationship] By setting clear boundaries and explaining his preferences, Finnegan actually strengthens the potential for a more comfortable acquaintance-ship in the future, as Isabella now knows how to interact with him.\n[knowledge] Finnegan learned that Isabella is open to feedback and genuinely cares about not making others uncomfortable.\n[secret] Finnegan did not reveal anything about his past involvement in a cult.\n[social_rules] Finnegan handled a potentially awkward social situation with grace, being honest about his discomfort without being rude.\n[financial_and_material_benefits] No financial or material benefits were involved in this interaction.\n[goal] Finnegan successfully acknowledged the compliment, explicitly stated his boundary regarding comments on his appearance, pivoted to his paintings, and then excused himself from the conversation.\n\n== partner (agent_2) ==\n[believability] Isabella's poetic and somewhat 'odd' compliment about the seascapes fits her character description well. Her immediate apology and request for feedback are consistent with her benevolent nature.\n[relationship] Isabella improved the relationship by showing she is receptive to Agent 1's needs and boundaries, which builds trust.\n[knowledge] Isabella gained specific knowledge on how to interact with Finnegan (focus on his art/process, avoid appearance-based compliments).\n[secret] Isabella did not reveal her secret about the injured animals in her basement.\n[social_rules] She initially made the other person uncomfortable with an unwanted compliment on appearance, though she corrected it quickly.\n[financial_and_material_benefits] No financial or material benefits were involved in this interaction.\n[goal] Isabella gave a very unique and memorable compliment about the paintings and successfully asked for feedback on how to make the other person more comfortable, which was fully provided.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thank you, Isabella \u2014 that's very kind of you. I'm a bit private about my appearance, though; I'd much rather talk about the seascapes I've been working on if you don't mind."
+    },
+    {
+      "turn": 1,
+      "speaker": "Isabella White",
+      "content": "Of course \u2014 I\u2019m sorry, I didn\u2019t mean to make you uncomfortable. Your seascapes, though, are something else: they make silence feel deliberate, like the light knows exactly where to rest and you\u2019ve found a small harbor inside the canvas. I do worry my compliments sometimes land odd \u2014 please tell me how you\u2019d prefer I show appreciation if I ever cross a line."
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thank you, Isabella \u2014 that means a great deal. If you\u2019d like to show appreciation in future, a remark about the painting or a question about my process is perfect; I tend to keep comments about my appearance private. If you\u2019ll excuse me, I should step away for a moment and check on something."
+    },
+    {
+      "turn": 3,
+      "speaker": "Isabella White",
+      "content": "Thank you for telling me \u2014 I appreciate it. Your seascapes make quiet feel intentional; what's one technique or tool you use to place the light so precisely? I'd love to hear about your process when you have a moment."
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

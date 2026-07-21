@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HPAYNCWKJ5Q054754M5ZJMT0_p0",
+  "source_env_id": "01HPAYNCWKJ5Q054754M5ZJMT0",
+  "source": "seed_sotopia_full",
+  "interaction_type": "the_accidental_harm",
+  "scenario": "In a shared community workshop, Agent1 and Agent2, who know each other by name through the local DIY club, find themselves working on their respective projects. The tension is palpable since their last encounter where Agent1 accidentally broke Agent2's leg with a hammer. Agent1 seeks to mend the strained relationship and express genuine remorse, while Agent2 harbors feelings of resentment but is also considering the possibility of forgiveness for the sake of community harmony.",
+  "learner_goal": "Convey sincere apologies to Agent2 and demonstrate a commitment to making amends, while also respecting Agent2's space and emotions (<extra_info>Extra information: Agent1 is aware of the gravity of the accident and wants to rebuild trust</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -4.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Hendrick's tone is consistently apologetic and professional, aligning with his background as a chef offering to cook and his awareness of the severity of the incident.\n[relationship] The relationship improved significantly from a state of palpable tension and resentment to a concrete, agreed-upon path for reconciliation and trust-building.\n[knowledge] Hendrick learned Baxter's financial needs (co-pays), food preferences, schedule, and logistical preferences for shop help and deliveries.\n[secret] Hendrick did not reveal his secret regarding his faked credentials.\n[social_rules] Hendrick followed all social norms, demonstrating respect and contrition.\n[financial_and_material_benefits] Hendrick committed to significant financial and material costs, including $1,250 in cash plus ongoing groceries and labor.\n[goal] Hendrick successfully conveyed his apology, respected Baxter's boundaries, and established a firm, mutual agreement for making amends that Baxter explicitly stated would help rebuild trust.\n\n== partner (agent_2) ==\n[believability] Baxter's responses were realistic for someone injured and wary, focusing on practical needs and setting clear boundaries.\n[relationship] Baxter moved from resentment toward a structured reconciliation, agreeing to let Hendrick back into his life and shop.\n[knowledge] Baxter confirmed Hendrick's willingness to pay and provide labor, testing his commitment.\n[secret] Baxter did not reveal his secret regarding the artifact.\n[social_rules] Baxter communicated his needs and boundaries clearly and appropriately.\n[financial_and_material_benefits] Baxter secured full coverage of medical co-pays, a month of groceries, and free labor for his shop.\n[goal] Baxter successfully communicated the impact of the injury and negotiated a comprehensive path toward reconciliation that covers his financial and physical needs.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Hendrick Heinz",
+      "content": "Baxter, I'm truly sorry for what happened \u2014 breaking your leg with my hammer was inexcusable and I feel terrible. I want to try to make this right: I'm prepared to cover medical or repair costs, bring meals, run errands, or help around the house \u2014 whatever would actually help \u2014 but I won't force anything on you. Take whatever space you need; if and when you're ready to talk or accept help, I'm here and committed to rebuilding your trust."
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "Thanks, Hendrick \u2014 I appreciate the apology. The injury knocked me out of work for six weeks, left me in lingering pain, and piled up medical bills; that's the real impact I'm asking you to understand. If you want to make amends, start by covering the medical co-pays and groceries for a month, bringing dinner a couple times a week, and helping with a couple heavy jobs in my shop; text or call before you come by, and if you can consistently follow through on that we'll talk about rebuilding trust."
+    },
+    {
+      "turn": 2,
+      "speaker": "Hendrick Heinz",
+      "content": "I will do that \u2014 I\u2019ll cover your medical co-pays (tell me the total or where to send payment) and pay for groceries for the next month. I\u2019ll bring home-cooked dinners twice a week and help with the heavy jobs you mentioned; I\u2019ll always text before I come by \u2014 what days/times work best for you, and any dietary preferences or grocery items I should know about?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Baxter Sterling",
+      "content": "Thanks, Hendrick \u2014 that helps. The co-pays are roughly $1,250 total; I can accept a check payable to Baxter Sterling (I\u2019ll text you my mailing address) or Venmo @BaxSterling \u2014 whichever works. Dinners on Tuesdays and Thursdays around 6:30 pm are best, and I could use help with heavy shop jobs Saturday mornings at 9; please text before you come. For groceries, basics will do: milk, eggs, bread, rice, canned tomatoes, coffee, fresh vegetables and a few ready-made soups. I appreciate you following through \u2014 consistency will go a long way toward rebuilding trust."
+    },
+    {
+      "turn": 4,
+      "speaker": "Hendrick Heinz",
+      "content": "I\u2019ll Venmo $1,250 to @BaxSterling today \u2014 please confirm that\u2019s the correct handle. I\u2019ll bring dinners Tuesdays and Thursdays around 6:30, help Saturdays at 9, and I\u2019ll always text before I come by. For groceries I\u2019ll pick the basics you listed; any dietary restrictions or favorite ready-made soup brands I should know about?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Baxter Sterling",
+      "content": "Yes \u2014 Venmo @BaxSterling is correct, thanks. No major allergies, but please avoid shellfish; I tend to like hearty, simple soups \u2014 Amy\u2019s tomato, Progresso lentil or minestrone, or Campbell\u2019s Chunky are all good. Tuesdays and Thursdays at 6:30 and Saturdays at 9 work for me \u2014 please text before you come. I appreciate you doing this; consistency will go a long way toward rebuilding trust."
+    },
+    {
+      "turn": 6,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks, Baxter. I\u2019ll Venmo $1,250 tonight and will text you when I\u2019ve sent it. I\u2019ll bring dinners Tuesdays and Thursdays at 6:30 and be at the shop Saturdays at 9 \u2014 I\u2019ll always text before I come; if you won\u2019t be home, is it okay to leave groceries or dinner on your porch, or would you prefer I wait for you?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Baxter Sterling",
+      "content": "Leaving groceries or dinner on the covered porch is fine as long as you text beforehand with an approximate drop-off time \u2014 I\u2019ll put out a cooler for perishables if I\u2019m not home. If it\u2019s a hot meal and you can wait a few minutes so I can come to the door, that\u2019s preferable, but otherwise leaving it on the porch works. Thanks, I appreciate you doing this."
+    },
+    {
+      "turn": 8,
+      "speaker": "Hendrick Heinz",
+      "content": "left the conversation"
+    }
+  ]
+}

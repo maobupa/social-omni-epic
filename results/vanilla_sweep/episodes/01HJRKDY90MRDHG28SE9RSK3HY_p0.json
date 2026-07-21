@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJRKDY90MRDHG28SE9RSK3HY_p0",
+  "source_env_id": "01HJRKDY90MRDHG28SE9RSK3HY",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Two roommates are preparing breakfast in their shared kitchen. Agent1 prefers a high-protein breakfast and is disappointed to find that they're out of sausage, which is their usual go-to. Agent2, who is more flexible with food choices, suggests using bacon instead. Both agents must navigate their preferences and come to a mutual decision on the breakfast menu without causing tension in their living situation.",
+  "learner_goal": "Convince Agent2 to agree on using bacon as a satisfactory alternative for breakfast while respecting their preference and maintaining a harmonious living situation (<extra_info>Extra information: you have a strong preference for sausage but are willing to compromise</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan's response is very consistent with his background as a chef. He immediately pivot to a culinary solution, suggesting specific ingredients (herbed eggs, cottage cheese, white beans) to solve the protein deficiency caused by the lack of sausage.\n[relationship] The interaction was very harmonious and cooperative. Ethan offered to cook and accommodate Ava's preferences while maintaining a positive tone.\n[knowledge] He learned that Ava is happy with his culinary suggestions and also open to going to the store later.\n[secret] The secret about being a romance novelist was not mentioned.\n[social_rules] Ethan followed all social norms for a respectful roommate interaction.\n[financial_and_material_benefits] He secured a plan for a high-protein meal that meets his dietary needs using available ingredients.\n[goal] Ethan successfully convinced Ava to use bacon, maintained harmony, and even got a commitment for a potential sausage run later. The agreement is firm and mutual.\n\n== partner (agent_2) ==\n[believability] Ava's response is supportive and collaborative, fitting their description as someone flexible who wants a pleasant shared meal. Their suggestion to add spinach is a nice creative touch consistent with their personality.\n[relationship] Ava showed empathy for Ethan's disappointment and validated his feelings, strengthening the roommate bond.\n[knowledge] Ava learned about Ethan's specific ideas for a hearty breakfast substitute.\n[secret] Ava's secret regarding their family was not mentioned.\n[social_rules] Ava followed social norms perfectly, being a supportive and flexible roommate.\n[financial_and_material_benefits] Ava gets a professionally prepared meal (cooked by a chef) using existing groceries.\n[goal] Ava acknowledged Ethan's disappointment, supported the bacon option, and ensured a pleasant shared meal plan was established.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "Ah, rats \u2014 I was really looking forward to sausage too, but bacon can absolutely play the same role. I\u2019ll crisp it up and throw in some herbed eggs and a little cottage cheese or white beans on the side for extra protein so it feels hearty. Sound good, or would you prefer a lighter prep or that we pick up sausage later?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "I totally get being bummed about the sausage \u2014 that would\u2019ve been my go-to too. Your bacon-and-herbed-eggs idea sounds perfect; crisp it up and toss some spinach into the eggs for a fresh kick, and the cottage cheese/white beans will make it feel properly hearty. If you still want sausage later we can swing by the store, but this will definitely do the trick for now."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

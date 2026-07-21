@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPX51Q5JWN9W2JEDKYD4BXN_p0",
+  "source_env_id": "01HJPX51Q5JWN9W2JEDKYD4BXN",
+  "source": "seed_sotopia_full",
+  "interaction_type": "post_hangout_dilemma",
+  "scenario": "Agent1 and Agent2, who are close friends, have recently spent the day hanging out together. After the hangout, Agent1 has noticed that Agent2 has been unusually silent and not responding to messages or calls. Agent1 is concerned about this sudden change in behavior and wants to understand the reason behind Agent2's silence. Agent1 suspects that something that happened during their time together might have upset Agent2, but is unsure what it could be. Agent1's goal is to re-establish communication and resolve any potential misunderstandings.",
+  "learner_goal": "Approach Agent2 to discuss their recent silence and express concern for their well-being (<extra_info>Extra information: Agent1 values open communication and is worried that they may have unintentionally offended Agent2</extra_info>, <clarification_hint>Seek to understand the situation from Agent2's perspective and offer an apology if necessary</clarification_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's tone is consistent with a mentor-turned-friend who values open communication. She expresses concern clearly and respectfully.\n[relationship] Naomi successfully re-established communication and maintained the bond by being patient and non-confrontational, which Sophia appreciated.\n[knowledge] She learned that Sophia is not avoiding her specifically, but needs time to process 'things from yesterday,' confirming that the hangout was indeed the catalyst.\n[secret] Did not reveal her online alter ego.\n[social_rules] Followed social norms for addressing conflict in a friendship.\n[financial_and_material_benefits] Not applicable to this scenario.\n[goal] Naomi successfully approached Sophia and expressed concern, and they agreed to talk. However, the resolution of the misunderstanding and the 'understanding the situation from Agent2's perspective' is deferred to a future conversation at Sophia's discretion.\n\n== partner (agent_2) ==\n[believability] Sophia's response is consistent with her introspective nature and her background as a psychologist/undercover agent who might need to carefully process interactions.\n[relationship] She expressed appreciation for Naomi's reaching out and patience, which reinforced their friendship.\n[knowledge] She learned that Naomi is sensitive to her silence and cares enough to offer an apology upfront.\n[secret] Did not reveal her status as an undercover agent.\n[social_rules] Handled the request for space politely.\n[financial_and_material_benefits] Not applicable to this scenario.\n[goal] Sophia successfully reflected on the silence, decided how to address it (by asking for more time), and secured the time she needed to process her feelings before a deeper discussion.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Sophia \u2014 I noticed you've been unusually quiet since yesterday and haven't answered my messages. I'm worried I might've said or done something during our hangout that upset you, and if I did I'm really sorry. Can we talk when you're ready? I care about you and want to make sure you're okay."
+    },
+    {
+      "turn": 1,
+      "speaker": "Sophia Brown",
+      "content": "Hey Naomi \u2014 thank you for checking in. I really appreciate you and I\u2019m sorry for the silence; I need a little time to process some things from yesterday. I\u2019m not avoiding you \u2014 can we talk tomorrow evening? I\u2019ll message you then."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks for letting me know \u2014 take the time you need. I\u2019ll be here tomorrow evening when you\u2019re ready; if you\u2019d prefer a quick call or a shorter message beforehand, that\u2019s totally fine. Take care and reach out whenever you\u2019re ready."
+    },
+    {
+      "turn": 3,
+      "speaker": "Sophia Brown",
+      "content": "Thanks, Naomi \u2014 I really appreciate your patience. I\u2019m taking tonight to sort through a few thoughts; I\u2019ll message you tomorrow evening like I said. It means a lot that you reached out."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

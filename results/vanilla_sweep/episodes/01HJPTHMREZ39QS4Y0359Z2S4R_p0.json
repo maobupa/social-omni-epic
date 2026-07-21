@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHMREZ39QS4Y0359Z2S4R_p0",
+  "source_env_id": "01HJPTHMREZ39QS4Y0359Z2S4R",
+  "source": "seed_sotopia_full",
+  "interaction_type": "university_campus",
+  "scenario": "On a university campus, two students (Agent1 and Agent2) are in line at the crowded campus coffee shop ahead of final exams. Agent1 is extremely hung over and desperately needs a large coffee to focus for an important final exam. Agent2, who is behind Agent1 in line, is also in a hurry for their own final exam and is becoming impatient. The coffee shop is short-staffed and the line is moving slowly, causing tension between Agent1, who feels too ill to hurry, and Agent2, who is anxious about the time.",
+  "learner_goal": "You are Agent1, and your goal is to get your coffee as quickly as possible without conflict, so you can prepare for your final exam. <extra_info>You are feeling very hung over and are worried that any additional stress could worsen your condition before the exam.</extra_info> <clarification_hint>Explain to Agent2 the severity of your hangover and the importance of the exam you're about to take.</clarification_hint> <strategy_hint>You can acknowledge Agent2's urgency and suggest they order first or find another solution that allows you both to get your coffee in time.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sasha clearly articulated her physical state (hangover) and the stakes of her exam, staying consistent with her persona and the scenario constraints.\n[relationship] The interaction was highly cooperative and polite, strengthening the existing acquaintance through mutual support during a stressful situation.\n[knowledge] Learned that Emily was also in a hurry for a final exam and was willing to coordinate to save time.\n[secret] The secret regarding her brother's crime was not mentioned.\n[social_rules] Followed social norms perfectly, being apologetic and proposing fair solutions to the line bottleneck.\n[financial_and_material_benefits] Secured the coffee she needed through a cooperative payment arrangement that ensured she didn't lose her place or time.\n[goal] Sasha successfully communicated her hangover severity and exam importance, and reached a firm agreement with Emily to get her coffee quickly and without conflict.\n\n== partner (agent_2) ==\n[believability] Emily acted reasonably, acknowledging the shared pressure of exams while proposing a practical solution to the slow-moving line.\n[relationship] Developed a stronger bond of trust with Sasha by helping her out in a vulnerable moment.\n[knowledge] Learned about Sasha's immediate situation and specific coffee order.\n[secret] Her secret as a romance novelist was not disclosed.\n[social_rules] Exhibited pro-social behavior by helping a person in distress and streamlining the line process.\n[financial_and_material_benefits] While she paid upfront, she established a Venmo agreement and ensured she got her own coffee quickly.\n[goal] Emily achieved her goal of getting coffee quickly for her exam by proposing a combined order, effectively managing the understaffed situation.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "Hey Emily, I hate to ask but I'm absolutely wrecked\u2014massive hangover, my head's pounding and I have a major final in thirty minutes. I know you're in a rush too; would you be willing to go ahead and order first so you don't miss your exam? If that won't work, could you quickly order a large black for me and I'll Venmo you\u2014I'll step aside and grab it when it's ready so I don't hold up the line."
+    },
+    {
+      "turn": 1,
+      "speaker": "Emily Harrison",
+      "content": "Ugh, that sounds awful \u2014 I'm really sorry. I'm also running late for my own final, but we can save time: let's order together now and I'll say two large black coffees so you can step aside while they're made. If you'd rather, I can put yours on my card and you can Venmo me."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "Emily, thank you \u2014 that would be a lifesaver. Please order two large black coffees and put mine on your card; I'll Venmo you right now and step aside so you don't miss your exam. I really appreciate it."
+    },
+    {
+      "turn": 3,
+      "speaker": "Emily Harrison",
+      "content": "Got it \u2014 I'll order two large black coffees now and put yours on my card. Send the Venmo when you can, and try to rest your head while you wait. Good luck on your exam \u2014 you'll do fine."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sasha Ramirez",
+      "content": "left the conversation"
+    }
+  ]
+}

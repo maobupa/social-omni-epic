@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ34R24ZGW7R7ERK4K0VWA_p0",
+  "source_env_id": "01HJPQ34R24ZGW7R7ERK4K0VWA",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_iqa",
+  "scenario": "Agent1 has been feeling sluggish and lazy lately but is determined to start exercising. Agent2 is a neighbor who jogs every morning. Agent1 decides to ask Agent2 to join them for a morning run to overcome their laziness.",
+  "learner_goal": "Agent1 wants to start running in the morning to combat their laziness and thinks that joining Agent2 will help them stay committed (<extra_info>Extra information: Agent1 knows that Agent2 jogs every morning and believes that having a partner will provide the necessary motivation.</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 1.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ava's communication is direct, consistent with her background as an architect, and aligns perfectly with her motivation to overcome her recent sluggishness.\n[relationship] The relationship transitioned from a professional acquaintance based on architecture/events to a personal, supportive one through the commitment to shared morning activities.\n[knowledge] Ava learned Hendrick's specific running route, his preferred start time, his willingness to be a supportive partner, and the meeting location.\n[secret] Ava did not reveal her hidden tattoo.\n[social_rules] Ava followed social norms, being polite and appreciative in her request and confirmation.\n[financial_and_material_benefits] Ava is set to receive water and a snack from Hendrick during their first run.\n[goal] Ava successfully secured a firm commitment from Hendrick to meet the next morning at a specific time and place to help her stay committed to her new exercise routine.\n\n== partner (agent_2) ==\n[believability] Hendrick acts as a gracious host, which fits his background as a chef and host of wine tastings. His offer of water and snacks is very consistent with his character.\n[relationship] Hendrick successfully deepened his connection with a neighbor and acquaintance by offering mentorship and support for her fitness goals.\n[knowledge] Hendrick learned that Ava has been feeling sluggish and wants to change her lifestyle.\n[secret] Hendrick did not reveal his faked credentials.\n[social_rules] Hendrick was very polite and supportive throughout the interaction.\n[financial_and_material_benefits] Hendrick is providing the water and snacks for the run out of his own pocket.\n[goal] Hendrick successfully considered the benefits of a partner, agreed to the run, and coordinated the logistics to improve his own routine while helping Ava.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ava Thompson",
+      "content": "Hey Hendrick \u2014 quick question: I've been feeling pretty sluggish lately and want to start running in the mornings. I know you jog every day; would you be up for showing me your route and joining me tomorrow at 7? Having a running buddy would really help me stick to it."
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Hey Ava \u2014 I'd be happy to join you tomorrow at 7. I usually start at the park entrance on Elm and do a relaxed 5K loop, so we can take it at whatever pace feels good for you. Want to meet at my place or at the park?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Ava Thompson",
+      "content": "Park entrance on Elm works great \u2014 see you there at 7. Thanks for offering to take it easy; I\u2019ll probably be slow at first, so a relaxed pace sounds perfect."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "Great \u2014 see you at the Elm park entrance at 7. I\u2019ll keep it relaxed; we can run or walk as you need. I\u2019ll bring a couple bottles of water and a banana in case you want a little fuel \u2014 looking forward to it."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ava Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

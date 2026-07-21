@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPQ34C2EME19P31F4462QVA_p0",
+  "source_env_id": "01HJPQ34C2EME19P31F4462QVA",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Two friends, both avid fans of a famous wizarding series, meet up to attend a movie marathon of their favorite saga. They have a tradition of dressing up as characters from the series for each screening, but this time, they both want to dress up as the same beloved character.",
+  "learner_goal": "Negotiate with your friend to let you dress up as the character this time (<extra_info>Extra information: you've recently experienced some personal challenges and you feel that taking on the role of this character would be particularly meaningful for you</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": -1.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan's opening was natural and incorporated his background as a chef by offering a meal as a trade. However, he left the conversation abruptly after the first reply without confirming the agreement, which is slightly odd for a social interaction.\n[relationship] The relationship seems strengthened by Ethan's vulnerability regarding his rough month and his willingness to provide food for his friend.\n[knowledge] He learned that Ava is willing to compromise and is supportive of his emotional needs.\n[secret] He kept his secret romance novel writing hidden.\n[social_rules] Leaving the conversation immediately after the other person's first response without a 'thanks' or 'deal' is slightly abrupt.\n[financial_and_material_benefits] He committed to cooking a 'proper Italian spread', which involves material costs and labor.\n[goal] Ethan successfully negotiated to wear the character's 'full iconic look' by leveraging his personal challenges and offering a culinary trade. Ava explicitly agreed to let him take the lead role.\n\n== partner (agent_2) ==\n[believability] Ava's response was very in-character for a poetry-writing, social-justice-minded student\u2014demonstrating empathy and creative problem-solving.\n[relationship] Ava showed deep support for Ethan's emotional state, fostering trust between the two.\n[knowledge] Ava learned that Ethan has been going through a difficult personal time.\n[secret] Ava kept their bisexuality secret from the conversation.\n[social_rules] Ava followed all social norms and was exceptionally polite.\n[financial_and_material_benefits] Ava gets a free high-quality Italian meal cooked by a professional chef.\n[goal] Ava achieved a perfect compromise where they both get to enjoy the character (Ethan as classic, Ava as reimagined/casual) without any conflict.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "said: \"Hey Ava \u2014 quick thing: I know we both want to wear the same character this marathon, but could I take it this time? It\u2019s been a rough few months and stepping into that character would mean a lot to me. I\u2019ll cook a proper Italian spread for the marathon and you can pick the character for the next two screenings \u2014 deal?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Hey Ethan, you deserve a pick-me-up after a rough few months and your Italian spread sounds amazing \u2014 I\u2019m happy for you to take the full iconic look this time. What if we both do the same character but different interpretations? You go full-on classic and I\u2019ll do a reimagined/genderbent or casual-watching version so we both get to enjoy it, and I\u2019ll gladly pick the next two screenings like you offered."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

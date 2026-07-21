@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HJPQ334Y2Z7PP3P3SPFTGGCM_p0",
+  "source_env_id": "01HJPQ334Y2Z7PP3P3SPFTGGCM",
+  "source": "seed_sotopia_full",
+  "interaction_type": "charity-event",
+  "scenario": "Two acquaintances attending a luxury charity gala where attendees are known to show off their wealth and status. Agent1 and Agent2 are trying to outshine each other by bidding on the most prestigious items in the auction.",
+  "learner_goal": "Establish a reputation as a generous donor and a person of high status (<extra_info>Extra information: The items you bid on are not only valuable but also carry social prestige. Your goal is to be seen as the top contributor at the event.</extra_info><clarification_hint>Clarification: You are not trying to spend the most money, but to gain the most recognition.</clarification_hint><strategy_hint>Hint: Focus on items that will give you visibility and status among peers.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": -2.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -3.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver's communication is consistent with his background as a conscientious police officer. He uses a systematic approach to plan the public appearance and ensures clear communication with Naomi.\n[relationship] Oliver and Naomi move from acquaintances to collaborators. They form a mutually beneficial alliance that strengthens their bond through shared community goals and social coordination.\n[knowledge] Oliver identifies the specific lot (Community Park Renovation) that will maximize his visibility and secures Naomi's cooperation to enhance the public performance of his donation.\n[secret] While he didn't explicitly state 'I have a secret greenhouse,' his intense focus on the community garden and public association with it borders on revealing his private passion to a wider audience, though it remains professionally managed within the gala context.\n[social_rules] Oliver adheres to the etiquette of the gala while skillfully navigating the social hierarchy.\n[financial_and_material_benefits] Oliver is committing to a significant financial donation (the renovation lot), which represents a material cost, though it serves his status goal.\n[goal] Oliver secures a firm agreement with Naomi to orchestrate a high-visibility moment where his name is read aloud as a primary donor, followed by a choreographed transition that frames him as a leader in the community. This directly satisfies the goal of gaining status and recognition as a top contributor.\n\n== partner (agent_2) ==\n[believability] Naomi acts as a savvy software developer, looking for 'leverage' and a 'marquee lot.' Her negotiation for the hand-off from Oliver is logical and tactical.\n[relationship] She builds a strong rapport with Oliver, turning a casual acquaintance into a strategic partner for the evening.\n[knowledge] She gains confirmation of Oliver's bidding intentions and secures his assistance in making her entrance to the marquee lot auction as impactful as possible.\n[secret] Naomi keeps her secret online alter ego completely hidden.\n[social_rules] She follows gala social norms and coordinates her 'performance' with Oliver to avoid social friction.\n[financial_and_material_benefits] Naomi is committing to winning the 'marquee lot,' which implies a very high financial cost.\n[goal] Naomi successfully secures Oliver's commitment to use his high-status moment to introduce her and 'hold the floor' for her. This ensures she has the social leverage and focused attention needed to secure the most coveted item at the auction.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Smith",
+      "content": "Naomi\u2014good to see you. I\u2019m planning to lead the bid on the \u201cCommunity Park Renovation\u201d lot tonight; it\u2019s front-and-center and the organisers will read donors\u2019 names aloud. I\u2019ll make a notable show of support so our gardening group gets the recognition it deserves\u2014would you mind standing with me when I do?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Naomi Fletcher",
+      "content": "Absolutely \u2014 I\u2019ll stand with you and back the Community Park Renovation bid. Let\u2019s time it so I can say a quick line about the garden\u2019s impact when they read your name; once your moment\u2019s done I\u2019ll be ready to go for that marquee lot everyone\u2019s talking about. Could you give me a little nod or mention to keep the attention rolling when you finish?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Smith",
+      "content": "Perfect \u2014 I\u2019ll make a conspicuous show when they call the Community Park Renovation. I\u2019ll say a short line praising the garden, give you a clear nod and step back so you can take the spotlight for that marquee lot. Does \u201cour garden\u2019s future depends on this \u2014 thank you\u201d work for my line?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Naomi Fletcher",
+      "content": "Perfect \u2014 that line is great. Give me a clear nod and hold applause for one beat after you finish so I can step forward; I\u2019ll say a very short line about keeping the garden thriving and then go straight into bidding on the marquee lot. See you at the lectern \u2014 I\u2019ll be ready."
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Smith",
+      "content": "Perfect \u2014 that line works. I\u2019ll make it conspicuous: deliver the line, hold applause for one beat with a clear nod toward you, then step back and gesture you forward so the organisers and crowd zero in. Appreciate you backing this \u2014 see you at the lectern."
+    },
+    {
+      "turn": 5,
+      "speaker": "Naomi Fletcher",
+      "content": "Great \u2014 thanks, Oliver. I\u2019ll keep my line really short ('For the garden\u2019s future') and immediately bid on the marquee lot; when you give the nod and hold applause for that beat I\u2019ll step forward. If anyone jumps in, I\u2019ll be ready to push the next increment \u2014 we\u2019ll make it count."
+    },
+    {
+      "turn": 6,
+      "speaker": "Oliver Smith",
+      "content": "Perfect \u2014 I'm all set. I'll say, 'Our garden's future depends on this \u2014 thank you,' hold the applause for a beat, give a clear nod to you and step back so you can take the spotlight. I'll also catch the organisers' eye so they announce our names together \u2014 see you at the lectern."
+    },
+    {
+      "turn": 7,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks \u2014 one last favor: when you step back, could you catch the auctioneer\u2019s eye and either say \u2018Naomi Fletcher will follow\u2019 or give that unmistakable nod so they announce me? I\u2019ll be ready to push the increments and I\u2019ll stand with you for the applause after it\u2019s done."
+    },
+    {
+      "turn": 8,
+      "speaker": "Oliver Smith",
+      "content": "Got it \u2014 when I step back I\u2019ll catch the auctioneer\u2019s eye and say, \u201cNaomi Fletcher will follow,\u201d then give the clear nod. I\u2019ll hold the applause for one beat as planned so you can step forward; I\u2019ll stand with you for the applause after it\u2019s done. See you at the lectern."
+    },
+    {
+      "turn": 9,
+      "speaker": "Naomi Fletcher",
+      "content": "You're a star \u2014 thank you. I\u2019ll move in on your nod, raise the first increment decisively and push until it\u2019s locked; I\u2019ll stand with you for the applause. See you at the lectern."
+    },
+    {
+      "turn": 10,
+      "speaker": "Oliver Smith",
+      "content": "left the conversation"
+    }
+  ]
+}

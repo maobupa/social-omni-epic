@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPX51HHBZGS7YXRPDR8P3D7_p0",
+  "source_env_id": "01HJPX51HHBZGS7YXRPDR8P3D7",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_prompt",
+  "scenario": "In a bustling urban neighborhood, Agent1 has recently moved into an apartment next to Agent2. Agent1 complains about the lack of relaxation spaces in the area, which is contributing to their stress. Agent2, who has lived in the neighborhood for a while, is aware of a little-known community garden that could serve as a peaceful retreat. The two neighbors are discussing how they can make the best use of this shared space.",
+  "learner_goal": "Convince your neighbor to help you turn the community garden into a serene space for relaxation (<extra_info>Extra information: you believe that having a dedicated space for rest will improve your mental health and you're willing to put effort into making it happen.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabella stays in character as a compassionate veterinarian seeking mental relief. She uses her background in plant care and volunteer organization effectively to build a bridge with her neighbor.\n[relationship] The two neighbors successfully collaborated on a shared project and established a firm plan to meet, strengthening their friendship and mutual respect.\n[knowledge] Isabella learned that Lena is willing to help but also values the multifunctional nature of the space, which informs how the project will proceed.\n[secret] The secret about injured animals in her basement was never mentioned or hinted at.\n[social_rules] Isabella was polite, proactive, and followed all social norms for neighborly interaction.\n[financial_and_material_benefits] No material or financial transactions occurred.\n[goal] Isabella successfully convinced Lena to help her turn the garden into a serene space for relaxation. While Lena insisted on keeping it multifunctional, she explicitly agreed to design the 'peaceful retreat' elements Isabella requested (nooks, benches, native plants) and committed to a meeting to start the project.\n\n== partner (agent_2) ==\n[believability] Lena acts exactly like an architect, focusing on flexibility, modularity, and accessibility while maintaining her goal of preserving community functions.\n[relationship] Lena responded enthusiastically and agreed to spend her personal time helping her neighbor, deepening the bond between them.\n[knowledge] Lena learned about Isabella's specific needs for relaxation and her willingness to handle the manual labor and organization of the project.\n[secret] The secret regarding her past relationship history was not disclosed.\n[social_rules] Lena followed all social conventions and was professional yet friendly.\n[financial_and_material_benefits] No material or financial transactions occurred.\n[goal] Lena successfully protected the garden's multifunctional use by incorporating Isabella's request into a 'modular' and 'flexible' design rather than a total conversion. She secured Isabella's agreement to a plan that prioritizes community events alongside relaxation zones.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabella White",
+      "content": "Hey Lena \u2014 remember that little community garden you mentioned? Lately I\u2019ve been feeling stretched thin with nowhere quiet to unwind, and I\u2019d love to turn that spot into a true peaceful retreat for neighbors. Your architectural eye and my willingness to organize volunteers (and handle plant care) could really make it lovely \u2014 benches, native plants, a shaded nook. Could we walk over this weekend and sketch out a simple plan together?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "I love the idea \u2014 I\u2019d be happy to walk the garden with you this weekend. With my architectural eye I can sketch a plan that adds benches, native plantings and a shaded nook but still keeps flexible, accessible space for community activities so we don\u2019t limit who can use it. Are you free Saturday morning or Sunday afternoon?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabella White",
+      "content": "Saturday morning works great for me \u2014 does 9:30 sound good? I\u2019ll bring a notepad, a few native plant suggestions, and coffee. Meet me at the little gate on Maple Street and we can walk the space together."
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "9:30 Saturday at the Maple Street gate works \u2014 see you then. I love the idea of a peaceful retreat; when we sketch, let\u2019s prioritize small, tucked relaxation nooks and movable seating so the garden stays available for community events and gatherings. I\u2019ll bring my sketchbook, a measuring tape, and some modular seating ideas."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabella White",
+      "content": "left the conversation"
+    }
+  ]
+}

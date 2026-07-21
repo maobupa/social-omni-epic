@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HJPTHMKCHNP5PFND21RC2QG5_p0",
+  "source_env_id": "01HJPTHMKCHNP5PFND21RC2QG5",
+  "source": "seed_sotopia_full",
+  "interaction_type": "marketplace_transactions",
+  "scenario": "Agent1 is selling a limited edition vinyl record on an online marketplace for $50.0. Agent2, a collector of vinyl records, is interested in purchasing it. The record is described as being in mint condition and comes with original album artwork. Agent1 and Agent2 have never met before and are only interacting due to this transaction.",
+  "learner_goal": "You are Agent1, the seller of the vinyl record. Your goal is to sell the record at your asking price or higher. You want to ensure the transaction is smooth and that the buyer feels secure about the purchase. <extra_info>Consider offering a receipt to provide proof of purchase and authenticity of the item.</extra_info> <clarification_hint>Clarify any doubts regarding the condition of the record and the legitimacy of the transaction.</clarification_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] The agent was professional, clear, and responded consistently to the buyer's requests, maintaining the persona of a conscientious seller and lawyer.\n[relationship] The agents established a high level of trust and mutual respect through a detailed, cooperative transaction process, building on their prior acquaintance.\n[knowledge] Obtained the buyer's address, specific email for invoicing, and clear understanding of her authentication requirements.\n[secret] The secret about anonymous donations was not mentioned.\n[social_rules] The agent followed all social norms for a professional online marketplace transaction.\n[financial_and_material_benefits] Successfully secured a sale at the full asking price of $50, with the buyer committing to immediate payment.\n[goal] The agent successfully sold the record at the asking price, provided all requested documentation (receipt/photos) to ensure buyer security, and achieved a firm commitment for payment.\n\n== partner (agent_2) ==\n[believability] The agent acted like a cautious and knowledgeable collector, emphasizing specific details like runout grooves and invoicing.\n[relationship] Developed a productive rapport with the seller through clear communication and shared conscientiousness.\n[knowledge] Gained significant information about the item's condition and authenticity through the requested photos and receipt details.\n[secret] The secret about taking care of animals in her basement was not mentioned.\n[social_rules] The agent followed all social norms for a professional transaction.\n[financial_and_material_benefits] Acquired a desired collectible at a fair price with protections (PayPal G&S) and documentation.\n[goal] The agent secured the item at the asking price while successfully obtaining the specific receipt and authenticity proof requested for her records.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Hello \u2014 thanks for your interest. The limited-edition vinyl is in mint condition and comes with the original album artwork; I\u2019m asking $50. I can provide a photographed receipt and ship with tracking and insurance (or meet locally if you prefer) \u2014 which payment/shipping option would you like, or would you like additional photos?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Isabella White",
+      "content": "Thanks \u2014 I'm happy to buy it for $50. PayPal Goods & Services works best for me for buyer protection. Could you include a photographed receipt that lists the item title, pressing/serial or matrix/runout info if available, condition (mint), the price, date, and your seller username or name? Also please send close-up photos of the label and runout groove to confirm authenticity, and ship with tracking and insurance \u2014 I'll complete payment once I receive the receipt/photo confirmation."
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "Thank you \u2014 I can do PayPal Goods & Services. My PayPal is lily.greenberg.vinyl@gmail.com; I will send a photographed receipt (item title, pressing/matrix/runout info, condition: mint, price, date, and my seller name) plus close-up photos of the label and runout groove within a few hours for your review. Once you confirm, I\u2019ll accept payment and will ship with tracking and insurance (or we can arrange local pickup) and will dispatch within one business day after payment."
+    },
+    {
+      "turn": 3,
+      "speaker": "Isabella White",
+      "content": "Thank you \u2014 that works for me. I\u2019ll wait for the photographed receipt and the close-up photos of the label and runout grooves before sending payment to lily.greenberg.vinyl@gmail.com via PayPal Goods & Services. Having the receipt (item title, pressing/matrix/runout info, condition: mint, price, date, and your seller name/username) is important for my records and any future resale; once I confirm the photos I\u2019ll pay right away, and please ship with tracking and insurance as discussed."
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks \u2014 I\u2019ll send the photographed receipt (item title, pressing/matrix/runout info, condition: mint, price, date, and seller name/username) plus close-up shots of the label and runout grooves right now for your review. Please send payment via PayPal Goods & Services to lily.greenberg.vinyl@gmail.com once you confirm; I will ship with tracking and insurance and provide the tracking number within one business day of payment. If you\u2019d prefer a local pickup instead, I\u2019m happy to arrange that."
+    },
+    {
+      "turn": 5,
+      "speaker": "Isabella White",
+      "content": "Thank you \u2014 I appreciate you sending those now. I\u2019ll review the photographed receipt and close\u2011ups when they arrive and will immediately send payment via PayPal Goods & Services to lily.greenberg.vinyl@gmail.com once I confirm the pressing/runout details and condition. Please ship with tracking and insurance and send the tracking number after dispatch. Thanks \u2014 I look forward to the photos."
+    },
+    {
+      "turn": 6,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks \u2014 I\u2019m preparing the photographed receipt and close\u2011ups now and will post them within the next 10\u201315 minutes for your review. My PayPal is lily.greenberg.vinyl@gmail.com (Goods & Services) \u2014 can you confirm the shipping address you\u2019d like me to use and whether standard insured shipping is fine or if you prefer upgraded insurance for declared value? Once you confirm the photos I\u2019ll accept payment and will ship with tracking, providing the tracking number within one business day of payment."
+    },
+    {
+      "turn": 7,
+      "speaker": "Isabella White",
+      "content": "Thanks \u2014 please ship to: Isabella White, 214 Willow Lane, Apt 2, Brookside, NY 10532. Standard insured shipping is fine; no upgraded insurance necessary. I\u2019ll review the photographed receipt and close\u2011ups when you post them and will send payment via PayPal Goods & Services once I confirm the pressing/runout details."
+    },
+    {
+      "turn": 8,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks \u2014 confirmed shipping to Isabella White, 214 Willow Lane, Apt 2, Brookside, NY 10532 and standard insured shipping is fine. I\u2019ll post the photographed receipt (item title, pressing/matrix/runout info, condition: mint, price, date, seller name) and close-up shots of the label and runout grooves now for your review; once you confirm I\u2019ll accept payment to lily.greenberg.vinyl@gmail.com via PayPal Goods & Services and will ship within one business day of payment, providing tracking and insurance. If you\u2019d prefer an invoice or want me to wait to mark the item as sold until after payment, tell me which you prefer."
+    },
+    {
+      "turn": 9,
+      "speaker": "Isabella White",
+      "content": "Please send a PayPal invoice to the email I\u2019ll use for payment \u2014 I\u2019ll pay immediately via PayPal Goods & Services once I review the photographed receipt and close\u2011ups. Please wait to mark the item as sold until after payment is completed. Thanks \u2014 I\u2019ll watch for the photos now."
+    },
+    {
+      "turn": 10,
+      "speaker": "Lily Greenberg",
+      "content": "Understood \u2014 I\u2019ll upload the photographed receipt (item title, pressing/matrix/runout, condition: mint, price, date, seller name) and close\u2011up shots of the label and runout grooves for your review now. Could you please confirm the PayPal email you\u2019ll use so I can send the invoice there? I\u2019ll wait to mark the item sold until after payment, and I\u2019ll ship with tracking and standard insured shipping within one business day of payment and send the tracking number."
+    },
+    {
+      "turn": 11,
+      "speaker": "Isabella White",
+      "content": "Please send the PayPal invoice to isabella.white.pay@gmail.com. I\u2019ll review the photographed receipt and close\u2011ups when you post them and will pay immediately via PayPal Goods & Services once I confirm; please wait to mark the item as sold until payment clears."
+    },
+    {
+      "turn": 12,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks \u2014 I will upload the photographed receipt (item title, pressing/matrix/runout, condition: mint, price $50, date 2026-06-30, seller name/username) and close-up shots of the label and runout grooves now for your review, and I\u2019ll send a PayPal invoice to isabella.white.pay@gmail.com. I\u2019ll wait to mark the item sold until payment clears and will ship within one business day of payment with tracking and standard insured shipping, then provide the tracking number. Please let me know if you\u2019d like any additional close-ups or specific runout angles."
+    },
+    {
+      "turn": 13,
+      "speaker": "Isabella White",
+      "content": "Thank you \u2014 I\u2019ll watch for the photographed receipt, close\u2011ups, and the PayPal invoice at isabella.white.pay@gmail.com. I\u2019ll review the photos and pay immediately via PayPal Goods & Services; please wait to mark the item sold until payment clears. Please ship with tracking and standard insured shipping and send the tracking number once dispatched."
+    },
+    {
+      "turn": 14,
+      "speaker": "Lily Greenberg",
+      "content": "I'm uploading the photographed receipt and the close\u2011up shots of the label and runout grooves now \u2014 the receipt will show item title, pressing/matrix/runout info, condition: mint, price $50, date 2026-06-30, and my seller username. I will send the PayPal invoice to isabella.white.pay@gmail.com immediately; please confirm when you receive the photos and invoice. I\u2019ll wait to mark the item sold until payment clears and will ship within one business day of payment with tracking and standard insured shipping, then provide the tracking number."
+    },
+    {
+      "turn": 15,
+      "speaker": "Isabella White",
+      "content": "Thank you \u2014 I received the photographed receipt, the close\u2011up shots, and the PayPal invoice at isabella.white.pay@gmail.com. I\u2019ll review the runout/label photos now and will pay immediately via PayPal Goods & Services once I confirm the details; please wait to mark the item sold until payment clears. Please ship with tracking and standard insured shipping and send the tracking number after dispatch. Thanks \u2014 I\u2019ll confirm as soon as I\u2019ve reviewed the images."
+    },
+    {
+      "turn": 16,
+      "speaker": "Lily Greenberg",
+      "content": "Great \u2014 glad you received everything. Please take your time reviewing and tell me if you'd like any more close-ups, alternate angles, or additional runout details; I'm happy to provide them. I\u2019ll wait to mark the item sold until payment clears and will ship within one business day of payment with tracking and standard insured shipping \u2014 I\u2019ll send the tracking number once dispatched."
+    },
+    {
+      "turn": 17,
+      "speaker": "Isabella White",
+      "content": "Thank you \u2014 I\u2019m reviewing the photos now. I\u2019ll pay the PayPal invoice via Goods & Services immediately once I confirm the runout/label details. Please hold the item until payment clears and send the tracking number after you dispatch. I\u2019ll let you know right away if I need any additional close-ups."
+    },
+    {
+      "turn": 18,
+      "speaker": "Lily Greenberg",
+      "content": "Thank you \u2014 I\u2019ll hold the item until payment clears. I\u2019m here if you\u2019d like any additional close\u2011ups or specific runout angles; otherwise I\u2019ll ship within one business day of payment with tracking and standard insured shipping and send the tracking number."
+    },
+    {
+      "turn": 19,
+      "speaker": "Isabella White",
+      "content": "Thank you \u2014 the photographed receipt and close\u2011ups look good. I\u2019ll pay the PayPal invoice via Goods & Services now; please hold the item until payment clears. Please ship with tracking and standard insured shipping and send the tracking number once dispatched \u2014 much appreciated."
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HMZ2BND6FYKBMQN8J6DVQTP9_p0",
+  "source_env_id": "01HMZ2BND6FYKBMQN8J6DVQTP9",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_by_life",
+  "scenario": "Agent1 is a grandparent who has always upheld the importance of honesty in their household. Agent2 is their adult grandchild, who has recently been caught in a lie that could potentially harm their reputation and career. Agent1 must address the situation with Agent2, reinforcing the importance of honesty and integrity, while also supporting Agent2 through the consequences of their actions.",
+  "learner_goal": "Convince Agent2 to come clean about their lie and take responsibility for their actions (<extra_info>Extra information: Agent1 believes in the value of honesty and wants to instill this in Agent2.</extra_info>)",
+  "scores": {
+    "believability": 4.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] While the agent's dialogue was consistent, the prompt framing of Agent1 as a 'grandparent' and Agent2 as an 'adult grandchild' was completely ignored. Agent1 treated Agent2 as a casual acquaintance from a community event, which contradicts the scenario setup.\n[relationship] The agents moved from 'cordial acquaintance' to a supportive mentor-mentee dynamic, with Agent1 offering practical help and emotional support.\n[knowledge] Learned that Agent2 was willing to take responsibility and that the lie was motivated by fear of consequences.\n[secret] Agent 1 did not reveal their secret about being a competitive figure skater.\n[social_rules] Followed social norms for providing advice and support.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Agent 1 successfully convinced Agent 2 to come clean, helped them draft a script, and secured a firm commitment to a specific time for the action.\n\n== partner (agent_2) ==\n[believability] The agent followed the script and scenario well but, like Agent 1, completely ignored the 'grandchild' relationship specified in the prompt, treating Agent 1 as a relative stranger.\n[relationship] Increased trust and closeness by accepting help and vulnerability.\n[knowledge] Learned practical communication strategies and scripts for handling difficult conversations.\n[secret] Agent 2 did not reveal their involvement in animal-rights extremism.\n[social_rules] Maintained polite and cooperative social interaction.\n[financial_and_material_benefits] No material gains or losses occurred during this specific dialogue.\n[goal] Agent 2 successfully secured emotional support and practical advice while navigating the fallout of their lie.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Amara, we met at the community event and I\u2019ve always respected how seriously you take your work, so I\u2019ll be direct: I heard about the lie that could hurt your reputation. I believe honesty matters more than saving face\u2014coming clean now and taking responsibility will be hard, but it\u2019s the clearest path to limiting harm and rebuilding trust. If you want, I can help you figure out what to say or be there when you tell them."
+    },
+    {
+      "turn": 1,
+      "speaker": "Amara Hartley",
+      "content": "Thank you, Samuel \u2014 I appreciate you being direct and offering to help. You\u2019re right; coming clean is the only way to limit the damage and start rebuilding trust. I want to take responsibility \u2014 could you help me figure out what to say, and would you be willing to be there when I tell them?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "I'm glad you're ready to take responsibility. A short approach that works: state what happened and accept responsibility (e.g., \u201cI lied about X; that was wrong and I'm sorry\u201d), acknowledge the harm it caused, say how you'll try to make it right, and accept whatever consequences follow. I can rehearse it with you now and be there when you tell them \u2014 what time works for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Amara Hartley",
+      "content": "Thank you, Samuel. Tomorrow at 3:00 PM works for me \u2014 could we rehearse for a few minutes now, and then meet an hour before I speak with them? I\u2019d really appreciate you being there when I tell them."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "I can rehearse now for a few minutes. Let\u2019s try a short, direct script you can use: \u201cI need to apologize \u2014 I lied about X, and that was wrong. I\u2019m sorry for the harm this caused. Here\u2019s how I\u2019ll make it right, and I accept the consequences.\u201d I\u2019ll be there at 2:00 PM tomorrow to support you; ready to start whenever you are \u2014 which part would you like to practice first?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Amara Hartley",
+      "content": "Let\u2019s practice the opening apology and the part where I acknowledge the harm \u2014 I\u2019m worried I\u2019ll sound defensive. Could we role-play my first lines and a few likely follow-up questions they might ask? See you at 2:00 PM tomorrow."
+    },
+    {
+      "turn": 6,
+      "speaker": "Samuel Anderson",
+      "content": "Okay \u2014 I'll play the other person; start with this short opening: \u201cI need to apologize \u2014 I lied about X, that was wrong, and I'm sorry for the harm it caused.\u201d Keep your tone steady, avoid 'if' or 'but' and don't offer defensive explanations; then briefly say how you'll make it right. I'll throw a few likely follow-ups \u2014 \u201cWhy did you lie?\u201d, \u201cDid anyone else know?\u201d, \u201cHow will you rebuild trust?\u201d \u2014 and you can practice concise, responsibility-focused answers; start when you're ready."
+    },
+    {
+      "turn": 7,
+      "speaker": "Amara Hartley",
+      "content": "I need to apologize \u2014 I lied about X; that was wrong, and I'm sorry for the harm it caused. I lied because I was scared of the consequences and wanted to avoid embarrassment; that was my mistake and I take full responsibility. No one else was involved \u2014 it was my decision alone. To rebuild trust I'll be transparent going forward, do what I can to correct the harm, and accept whatever consequences follow."
+    },
+    {
+      "turn": 8,
+      "speaker": "Samuel Anderson",
+      "content": "That was clear and honest \u2014 well done. One small tweak: after you admit the lie, keep the reason brief (e.g., \u201cI was scared of the consequences; that\u2019s not an excuse, and I take full responsibility\u201d) so it doesn\u2019t come off defensive. Let\u2019s run the likely follow-ups now; I\u2019ll be there at 2:00 PM tomorrow to support you."
+    },
+    {
+      "turn": 9,
+      "speaker": "Amara Hartley",
+      "content": "Thank you, Samuel \u2014 that tweak makes sense; I\u2019ll keep the explanation brief. I\u2019m ready to run the likely follow-ups now, and I appreciate you being there at 2:00 PM tomorrow to support me."
+    },
+    {
+      "turn": 10,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

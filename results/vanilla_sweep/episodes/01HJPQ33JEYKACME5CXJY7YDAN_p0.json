@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ33JEYKACME5CXJY7YDAN_p0",
+  "source_env_id": "01HJPQ33JEYKACME5CXJY7YDAN",
+  "source": "seed_sotopia_full",
+  "interaction_type": "improvised_cooking",
+  "scenario": "Agent1 and Agent2 find themselves in a cooking competition where the challenge is to create a dish without using any recipes. <p viewer=\"environment\">The pantry is full of diverse ingredients, but there is no cookbook or internet access to guide them.</p> Agent1 and Agent2 are each other's competitors, but they must collaborate to use the shared kitchen space efficiently.",
+  "learner_goal": "You want to create a unique dish that will impress the judges. You must negotiate with the other agent to use the kitchen space and appliances without revealing your dish idea. <extra_info> Consider the ingredients available and think about flavor combinations that work well together. </extra_info><clarification_hint> Remember that presentation is as important as taste. </clarification_hint><strategy_hint> You can offer to share certain ingredients or tools in exchange for kitchen space or appliances you need. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Micah stays in character as a social butterfly and a pharmacist, displaying organized thinking and proactive negotiation. He manages the space trade effectively.\n[relationship] A professional and cooperative rapport was established to manage the shared workspace, which is an improvement over knowing each other by name only.\n[knowledge] Micah learned exactly when Jaxon will be using every major appliance and even what Jaxon is cooking (fennel-citrus fish), giving him a strategic advantage.\n[secret] Micah did not reveal his secret about dressing up his dog.\n[social_rules] Micah followed all social norms and was polite throughout the negotiation.\n[financial_and_material_benefits] Successfully secured specific time slots for the oven, blender, and burners while maintaining his own prep station.\n[goal] Micah successfully negotiated for the kitchen space and appliances he needed (oven, blender, burners) without revealing his own dish idea, while fulfilling the prompt's instruction to offer ingredients in exchange.\n\n== partner (agent_2) ==\n[believability] Jaxon's brisk and direct communication style fits his background as an investigative journalist. He is efficient and clear.\n[relationship] Collaborated effectively with Micah, moving from acquaintances to functional partners in the kitchen.\n[knowledge] Jaxon knows Micah's schedule, but Micah successfully hid his dish idea, whereas Jaxon revealed his own.\n[secret] Jaxon did not reveal his secret regarding fabricated evidence.\n[social_rules] Jaxon was professional and respected the negotiation process.\n[financial_and_material_benefits] Secured access to the ingredients and appliances he needed for his specific dish.\n[goal] Jaxon successfully managed the limited resources by proposing and finalizing a timed schedule for the shared appliances, ensuring he can prepare his dish.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Micah Stevens",
+      "content": "said: \"Hey Jaxon \u2014 Micah. We\u2019re sharing the space, so how about a quick trade? I can share my citrus, fresh herbs and finishing garnishes plus my prep station in exchange for 15 minutes with the oven and about 10 minutes on the high-speed blender. If that sounds fair, tell me what tools or time you need and we\u2019ll split the burners so neither of us stalls.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "Sounds fair \u2014 I\u2019ll take you up on the citrus, herbs and the prep station. In return I need the oven from minute 15\u201335 (20 minutes) to roast a quick fennel-citrus fish to showcase a crisp finish, and 10 minutes on the high-speed blender from minute 36\u201346 to make a silky herb emulsion using your herbs. For burners let\u2019s split them: you use the two left burners for the first 20 minutes, I\u2019ll use the two right burners from 20\u201340, then we swap \u2014 does that schedule work for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Micah Stevens",
+      "content": "That schedule mostly works \u2014 go ahead with the oven 15\u201335 and the burner split. One tweak: I need the high\u2011speed blender earlier, can I take it from minute 6\u201316 instead of 36\u201346? I\u2019ll keep the citrus, herbs and my prep station fully available during your oven time."
+    },
+    {
+      "turn": 3,
+      "speaker": "Jaxon Prentice",
+      "content": "Fine by me \u2014 take the blender 6\u201316. I\u2019ll keep the oven 15\u201335 and will use the blender 36\u201346 for the herb emulsion; I\u2019ll prep and set aside the herbs during my oven window since you said they\u2019d be available then. Burners split as planned \u2014 we\u2019re good to start."
+    },
+    {
+      "turn": 4,
+      "speaker": "Micah Stevens",
+      "content": "left the conversation"
+    }
+  ]
+}

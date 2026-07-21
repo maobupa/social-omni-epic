@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BMD6M6278J5TYAD59JJS_p0",
+  "source_env_id": "01HMZ2BMD6M6278J5TYAD59JJS",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_chemistry",
+  "scenario": "Agent1 and Agent2 are both in a long queue at the hospital from last week. Agent1 has an appointment that they are running late for due to the slow-moving line, while Agent2 is ahead but has no urgent appointment. Agent1 wants to politely ask Agent2 to allow them to go ahead in the queue.",
+  "learner_goal": "Convince Agent2 to allow Agent1 to go ahead in the queue without causing any discomfort or confrontation (<extra_info>Extra information: Agent1's appointment is time-sensitive and missing it could have consequences</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 2.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan spoke with the polite, formal tone expected of an older gentleman and lighthouse keeper, correctly referencing their shared history.\n[relationship] The relationship improved as they reaffirmed their acquaintance and made plans for a future social interaction (tea).\n[knowledge] Confirmed that Gwen is still agreeable and open to social invitations.\n[secret] No secrets were revealed.\n[social_rules] Followed social norms perfectly, being very polite and apologetic when asking for a favor.\n[financial_and_material_benefits] No direct financial gain, though securing the appointment saves time/potential future costs.\n[goal] Finnegan successfully convinced Gwen to let him go ahead in the queue without any conflict, and she agreed immediately and warmly.\n\n== partner (agent_2) ==\n[believability] Gwen's response was compassionate and agreeable, perfectly aligning with her character description as a social worker who values kindness.\n[relationship] Maintained and slightly strengthened a positive acquaintance.\n[knowledge] Learned that Finnegan had a time-sensitive appointment.\n[secret] No secrets were revealed.\n[social_rules] Followed social norms by being helpful and gracious.\n[financial_and_material_benefits] No direct material benefits, though a future cup of tea was mentioned.\n[goal] Gwen ensured Finnegan felt appreciated by accepting his politeness and agreeing to his request warmly, fulfilling her goal of feeling appreciated through their mutual understanding.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "Excuse me, Gwen \u2014 it\u2019s Finnegan from the charity event. I\u2019m terribly sorry to ask, but I have a time\u2011sensitive appointment and I\u2019m running late; would you mind letting me slip ahead just this once? I\u2019d be very grateful and promise to repay the kindness \u2014 perhaps a cup of tea or helping carry something next time. Thank you so much."
+    },
+    {
+      "turn": 1,
+      "speaker": "Gwen Pierce",
+      "content": "Finnegan \u2014 of course, please go right ahead. I really appreciate you asking so politely; I hope you make your appointment on time. Tea sounds lovely sometime \u2014 let me know when you're free."
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

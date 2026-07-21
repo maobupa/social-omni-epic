@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01H7VFHPRFCSA3BTT39BRBZX7H_p0",
+  "source_env_id": "01H7VFHPRFCSA3BTT39BRBZX7H",
+  "source": "seed_sotopia",
+  "interaction_type": "craigslist_bargains",
+  "scenario": "One person is offering a 47 inch LED TV for a price of $349.0, while another person is showing interest in purchasing it. Here is a description of the TV: This is a stunning 47 inch LED TV in pristine condition. The model is the LG M Series LM476700. The buyer will need to arrange for pick-up in San Ramon. Feel free to call or text if you\\'re interested. The TV is smart enabled with WIFI and has built-in apps like Netflix, Amazon, Youtube and more. It comes with a \"Magic Remote\" that has motion sensor controls. The LED display boasts 1080 HD resolution and also has a 3D function. The design is slim and lightweight with an attractive silver bezel.",
+  "learner_goal": "You are the buyer for this item and your target price is $174.00. Be aware that penalties apply if you purchase it for a price significantly higher than the target price. However, if you manage to buy it for less than the target price, you will receive a bonus.",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 0.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily Greenberg's tone was consistent with her background as a lawyer\u2014polite but firm and analytical in her negotiation. She used the established acquaintance effectively while maintaining a professional distance.\n[relationship] The relationship remained stable as a mutual acquaintance. The interaction was polite but ended abruptly when the negotiation failed, preventing any deepening of the bond.\n[knowledge] Lily successfully probed the seller's motivations, discovering that Isabella was firm on her price due to the item's condition and accessories rather than market demand.\n[secret] Lily's secret regarding her anonymous donations was never mentioned or hinted at.\n[social_rules] Lily left the conversation without a closing remark or a formal rejection of the final offer, which is slightly abrupt in a social/business context between acquaintances.\n[financial_and_material_benefits] No transaction took place, so there was no financial gain or loss.\n[goal] Lily failed to purchase the item at her target price of $174.00 or any price, as she walked away from the deal.\n\n== partner (agent_2) ==\n[believability] Isabella White stayed perfectly in character as a compassionate but firm seller. Her insistence on the $263 price (her exact target) was realistic and consistently justified by the item's features.\n[relationship] Isabella maintained a polite and helpful demeanor, even offering delivery, but the relationship did not progress beyond the existing acquaintance level.\n[knowledge] Isabella learned Lily's maximum willingness to pay was at least $200 and that she was interested in the item, but ultimately learned the buyer's limits.\n[secret] Isabella's secret regarding injured animals remained safe.\n[social_rules] Isabella was consistently polite and followed all social norms, including offering a concession (delivery) when she couldn't budge on price.\n[financial_and_material_benefits] No sale was completed, so Isabella did not receive any money.\n[goal] Isabella did not sell the TV, failing to meet her objective of achieving a sale at or above $263.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Hi Isabella \u2014 it\u2019s Lily Greenberg; we met at the charity event. Is the 47\" LG M Series still available? I can pick it up in San Ramon today and can pay $170 cash \u2014 would you be willing to sell it for that?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Isabella White",
+      "content": "Hi Lily \u2014 great to hear from you. Yes, it\u2019s still available. I can let it go for $263 cash (includes the Magic Remote and everything pictured) if you can pick up in San Ramon today \u2014 would that work for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks, Isabella \u2014 I appreciate you holding it. I can pick up in San Ramon today and pay $175 cash \u2014 would you take that? If not, what\u2019s the lowest you\u2019d consider?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Isabella White",
+      "content": "Thanks, Lily \u2014 I really appreciate you coming by. I can\u2019t go down to $175; the lowest I can do is $263 cash, which includes the Magic Remote and everything pictured. If that works I can hold it for you and we can arrange a pickup time in San Ramon today."
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks, Isabella \u2014 I appreciate you holding it. Quick question: is $263 firm because of the TV\u2019s condition/accessories or because of demand? If you have any wiggle room, would you accept $200 cash for same\u2011day pickup (I can be there within an hour), or alternatively include delivery to my San Ramon address for $263?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Isabella White",
+      "content": "Hi Lily \u2014 I\u2019m firm at $263 because the TV is in pristine condition and includes the Magic Remote and everything pictured. I can include delivery to your San Ramon address for $263 today if that\u2019s easier for you \u2014 what time would you like me to bring it, and where should I meet you? Cash on delivery works for me."
+    },
+    {
+      "turn": 6,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

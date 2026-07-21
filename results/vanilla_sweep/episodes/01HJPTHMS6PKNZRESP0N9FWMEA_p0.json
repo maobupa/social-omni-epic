@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPTHMS6PKNZRESP0N9FWMEA_p0",
+  "source_env_id": "01HJPTHMS6PKNZRESP0N9FWMEA",
+  "source": "seed_sotopia_full",
+  "interaction_type": "sun_protection_dilemma",
+  "scenario": "Agent1 and Agent2 are friends who have come to the beach to enjoy a relaxing day by the sea. <p viewer=\"environment\">Agent1, who has sensitive skin, is very cautious about sun exposure and prefers to stay under the shade of an umbrella. Agent2 loves sunbathing and prefers to lie in the direct sunlight. They have only one umbrella between them.</p>",
+  "learner_goal": "You are seeking to convince Agent2 to spend more time under the umbrella to protect your sensitive skin from the sun, while also respecting their desire to sunbathe.\n<extra_info> You have had bad experiences with sunburn in the past and are very concerned about UV exposure. </extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia speaks in a way that reflects her status as a principal\u2014organized, fair, and practical\u2014while acknowledging her personal concern about skin sensitivity.\n[relationship] The relationship improved through a respectful negotiation and a mutual agreement that prioritized both parties' needs.\n[knowledge] Mia learned that Benjamin is willing to cooperate, cares about her safety, and has appropriate supplies like reef-safe sunscreen.\n[secret] Mia's secret about her punk rock past was not revealed.\n[social_rules] Mia followed social norms and was polite throughout the interaction.\n[financial_and_material_benefits] No financial or material assets were gained or lost.\n[goal] Mia successfully convinced Benjamin to spend half his time under the umbrella (45-minute rotations) while maintaining his comfort, ensuring her skin protection.\n\n== partner (agent_2) ==\n[believability] Benjamin's response is consistent with his character as an environmental activist (mentioning reef-safe sunscreen) and a caring acquaintance.\n[relationship] Benjamin established a cooperative dynamic with Mia and showed consideration for her health.\n[knowledge] Benjamin learned about Mia's specific history with bad sunburns and her preference for a structured time-sharing arrangement.\n[secret] Benjamin's secret regarding his family wealth was not revealed.\n[social_rules] Benjamin followed social norms and was agreeable.\n[financial_and_material_benefits] No financial or material assets were gained or lost.\n[goal] Benjamin achieved his goal of getting sun exposure while ensuring Mia's safety, though he did agree to spend significant time in the shade to accommodate her.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Ben, I know you want to soak up some sun \u2014 I get it, but my skin burns really easily and I\u2019ve had nasty sunburns before. Could we compromise and take turns? Maybe you get forty-five minutes in the sun, then we move under the umbrella for forty-five minutes (especially through midday), and I\u2019ll bring extra sunscreen and a hat so you can still catch some rays near the umbrella\u2019s edge. Sound fair?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Sounds fair \u2014 I\u2019m happy with that. I\u2019ll take the first 45 in the sun and stay close to the umbrella\u2019s edge so I can move back quickly if you need me; I\u2019ve also got reef-safe sunscreen and a hat we can use near the shade. Thanks for thinking of both our comfort \u2014 I want you to be safe out here too."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

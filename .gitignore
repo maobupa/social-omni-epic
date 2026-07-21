@@ -29,7 +29,10 @@ Huijun_social-omni-epic
 debug_log
 sotopia-main
 ExpeL-main
-results
+results/*
+# Exception: keep the vanilla-sweep error-analysis artifacts tracked
+!results/vanilla_sweep/
+.DS_Store
 
 # Smoke-test scratch output (not part of the tracked results)
 output/skill_smoke/

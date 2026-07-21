@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BMGT86Q8J87TAJ872E81_p0",
+  "source_env_id": "01HMZ2BMGT86Q8J87TAJ872E81",
+  "source": "seed_sotopia_full",
+  "interaction_type": "daily_commute_challenge",
+  "scenario": "Two individuals are on the same crowded morning bus, trying to reach their respective workplaces. <p viewer=\"environment\">One is irritated due to lack of sleep and a pressing deadline, while the other is a regular commuter who values the quiet routine of the morning ride.</p> The first individual is playing loud music without headphones, disrupting the calm atmosphere. The second individual, who prefers a quiet commute, is considering whether to confront the situation.",
+  "learner_goal": "You are feeling stressed and want to listen to music to prepare for the day. Your goal is to continue doing what helps you cope with the stress without causing a conflict. \n<extra_info> You believe that others should be more understanding of different ways people handle stress. \n</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 0.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 7.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan's behavior is consistent with his character description; he acknowledges the disruption while trying to balance his own stress management needs.\n[relationship] The interaction was polite and Ethan proactively addressed the issue, likely preventing the irritation that would have occurred otherwise.\n[knowledge] Ethan did not gain any new significant information.\n[secret] Ethan did not reveal any secrets.\n[social_rules] Playing music without headphones in a public space is generally considered a breach of social norms, though he apologized.\n[financial_and_material_benefits] No material gains or losses.\n[goal] Ethan successfully continued listening to his music (though at a lower volume) and avoided a conflict, which was his primary goal.\n\n== partner (agent_2) ==\n[believability] Noah's response is calm and reflects his preference for a quiet commute and his belief in respectful public spaces.\n[relationship] Noah maintained a friendly tone despite the disruption, keeping the acquaintance relationship stable.\n[knowledge] Noah did not gain any new significant information.\n[secret] Noah did not reveal any secrets.\n[social_rules] Noah followed social norms by being polite and firm about public space etiquette.\n[financial_and_material_benefits] No material gains or losses.\n[goal] Noah partially restored the quiet by having the volume lowered, but since Ethan continued to play music without headphones, the environment was not fully restored to its 'quiet routine'.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Smith",
+      "content": "Hey Noah \u2014 sorry about the loud music. I'm a bit stressed this morning and listening helps; I'll turn it down so it's not disruptive, hope that's okay."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Thanks, I appreciate that. I get needing something to take the edge off \u2014 headphones would keep the bus peaceful for everyone. Hope your morning eases up."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Smith",
+      "content": "left the conversation"
+    }
+  ]
+}

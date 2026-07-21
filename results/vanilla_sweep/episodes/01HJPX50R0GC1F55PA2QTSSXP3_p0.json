@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPX50R0GC1F55PA2QTSSXP3_p0",
+  "source_env_id": "01HJPX50R0GC1F55PA2QTSSXP3",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_etiquette",
+  "scenario": "Agent1 had received two tickets to a highly anticipated play and decided to invite Agent2's partner as a guest, because they share a common interest in theater. Agent2, who was not invited, feels left out and somewhat betrayed, as Agent1 and Agent2 are close friends. The interaction between Agent1 and Agent2 is aimed at addressing the feelings of exclusion and reaffirming the value of their friendship.",
+  "learner_goal": "Express understanding of Agent2's feelings and apologize for any hurt caused (<extra_info>Extra information: Agent1 did not intend to make Agent2 feel excluded and values their friendship.</extra_info> <clarification_hint>Clarification hint: Agent1 should acknowledge Agent2's perspective and the importance of inclusion.</clarification_hint> <strategy_hint>Hint: you can suggest a future activity that includes both agents to reinforce the bond.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel stays in character as a polite and empathetic friend, quickly addressing the conflict with a genuine apology and a thoughtful reconciliation plan.\n[relationship] Samuel successfully moves the relationship from a state of tension and hurt feelings to a restored state with a concrete plan for a future social gathering.\n[knowledge] He learns how Noah prefers to be treated regarding social invitations involving his inner circle.\n[secret] The competitive figure skating secret was not revealed.\n[social_rules] He followed all social norms for apologizing and conflict resolution.\n[financial_and_material_benefits] No significant material gains or losses occurred, though he committed to the cost of a dinner.\n[goal] Samuel fully achieved his goal: he expressed understanding, apologized, clarified his intentions, and successfully proposed a future activity that Noah accepted.\n\n== partner (agent_2) ==\n[believability] Noah responds realistically to the apology, expressing his feelings while remaining open to reconciliation, which is consistent with their established mutual respect.\n[relationship] Noah's feelings of betrayal are resolved, and he reaffirms the friendship.\n[knowledge] Noah gains clarity on Samuel's thought process and intentions regarding the theater tickets.\n[secret] The secret identity as a stand-up comedian was not revealed.\n[social_rules] He communicated his boundaries effectively and accepted the apology gracefully.\n[financial_and_material_benefits] He receives an invitation for a home-cooked dinner.\n[goal] Noah's goal description in the prompt actually mirrors Samuel's situation (choosing a guest). As the agent feeling left out, he communicated his feelings well, but the prompt instructions for Noah's goal seem to have been a copy-paste error from Samuel's logic, making 'clarifying the reason for choosing the partner' inapplicable to him as the one who was excluded.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Noah, I\u2019m really sorry \u2014 I can see why you\u2019d feel left out and I didn\u2019t mean to make you feel excluded. I invited your partner because I thought they\u2019d be into that particular play\u2019s style, but I should have checked with you first. I value our friendship and want to make it right \u2014 would you and your partner be up for going to the next show together, or if you prefer just us, I can cook dinner this weekend so we can catch up?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Thanks, Sam \u2014 I appreciate you saying that and I can see why you thought my partner would enjoy that play. I did feel a bit left out, but your explanation helps and I trust you didn\u2019t mean anything by it. We\u2019d be up for the next show together, and dinner this weekend sounds great too; going forward, a quick check-in before inviting someone close would mean a lot to me."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

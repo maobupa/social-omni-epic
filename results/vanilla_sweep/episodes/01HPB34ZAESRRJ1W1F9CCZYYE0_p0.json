@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01HPB34ZAESRRJ1W1F9CCZYYE0_p0",
+  "source_env_id": "01HPB34ZAESRRJ1W1F9CCZYYE0",
+  "source": "seed_sotopia_full",
+  "interaction_type": "neighborhood_dispute",
+  "scenario": "Agent1 has found an injured bird on their property and has taken it inside to care for it. Agent2 is a wildlife enthusiast and neighbor who notices the bird is missing from its usual habitat. Agent2 approaches Agent1, concerned about the bird's well-being and the legality of possessing wildlife. The two must navigate the situation to ensure the bird's safety while respecting each other's concerns and the law.",
+  "learner_goal": "Ensure the bird's safety and recovery by explaining your actions to Agent2 and finding a collaborative solution to care for the bird (<extra_info>Extra information: You have a basic understanding of bird care but are not an expert in wildlife rehabilitation.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Rafael maintained a professional yet helpful tone consistent with his role as a surgeon and his established personality. He took immediate action while respecting Mia's expertise.\n[relationship] The relationship improved significantly through a successful high-stakes collaboration. They moved from mere professional acknowledgment to active cooperation and mutual trust.\n[knowledge] Rafael learned specific protocols for bird care (warm, dark box, minimal handling) and the legal necessity of licensed rehabilitators from Mia.\n[secret] Rafael did not reveal his secret regarding cheating on medical school exams.\n[social_rules] Rafael followed all social and professional norms, showing courtesy and respect for Mia's expertise.\n[financial_and_material_benefits] No material or financial benefits were exchanged or lost, other than the usage of his car and home space.\n[goal] Rafael ensured the bird's safety and recovery by collaborating with Mia and contacting a professional rehabilitator, exactly as his goal specified.\n\n== partner (agent_2) ==\n[believability] Mia stayed in character as a knowledgeable nurse and wildlife enthusiast, providing clear instructions and adhering to local laws.\n[relationship] Mia successfully navigated a potentially awkward situation with a colleague, building rapport and professional trust.\n[knowledge] Mia learned the location and status of the bird and confirmed Rafael's willingness to follow legal procedures.\n[secret] Mia did not reveal her secret about her painting talent.\n[social_rules] Mia acted professionally and politely throughout the interaction.\n[financial_and_material_benefits] No material or financial benefits were gained or lost.\n[goal] Mia successfully convinced Rafael to release the bird into professional care and maintained a good relationship, fulfilling all components of her goal.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "Mia \u2014 thanks for coming by. I found an injured bird on my property and brought it inside to keep it safe; I\u2019ve put it in a warm, dark box with a towel and haven\u2019t handled it much. I\u2019m not a wildlife expert and I don\u2019t want to run afoul of the law, so I think we should call the local wildlife rehabilitator or animal control and get professional advice \u2014 I can call them now, or we can take the bird in together. Which would you prefer?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Sanders",
+      "content": "Good call \u2014 and thanks for how you\u2019ve handled it so far. I\u2019d prefer we call the licensed wildlife rehabilitator now; they have the permits and medical expertise, and it can be illegal to keep a wild bird at home without one. I can call with you, or if you\u2019d rather I can drive the bird to the rehab with you once they give instructions."
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "Good \u2014 let\u2019s call the licensed rehabilitator together now. I\u2019ll set the bird\u2019s box by the door, grab an extra towel, and have my car keys ready in case they ask us to transport it; I can drive. Do you want to place the call while I hand you the phone, or should I call first and put you on speaker so you can talk to them directly?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Sanders",
+      "content": "Could you call them and put me on speaker? I know the local rehabilitator and what questions they'll ask \u2014 I'll talk to them, and if they ask us to bring the bird in I'm happy to come along (or I can drive if you prefer). Thanks again for keeping it warm and quiet; avoid handling it unless they tell us otherwise."
+    },
+    {
+      "turn": 4,
+      "speaker": "Rafael Cortez",
+      "content": "Okay \u2014 I\u2019ll call them now and put you on speaker so you can speak directly. The bird\u2019s box is by the door with an extra towel; I\u2019ll avoid handling it and be ready to drive if they ask us to bring it in. Calling now."
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Sanders",
+      "content": "Thanks \u2014 I really appreciate you doing that. I\u2019ll be on speaker; when they pick up, please tell them where and when you found it and that it\u2019s in a warm, dark box. If they ask us to bring it in, I\u2019m happy to come and can drive \u2014 we\u2019ll hand it over to the licensed rehabilitator so it gets proper care and we stay within the law."
+    },
+    {
+      "turn": 6,
+      "speaker": "Rafael Cortez",
+      "content": "They just picked up \u2014 I\u2019m putting you on speaker now so you can speak with them directly. I\u2019ll tell them I found the bird by the back fence near the oak around 9:15 and that it\u2019s in a warm, dark box with a towel; go ahead when you\u2019re ready."
+    },
+    {
+      "turn": 7,
+      "speaker": "Mia Sanders",
+      "content": "said: \"Hi, this is Mia Sanders \u2014 thanks for taking the call. Rafael found the bird by the back fence near the oak around 9:15; it\u2019s in a warm, dark box with a towel and hasn\u2019t been handled. Do you want us to bring it in now? I can drive and we\u2019ll hand it directly to your licensed rehabilitator so it gets proper care and we stay within the law.\""
+    },
+    {
+      "turn": 8,
+      "speaker": "Rafael Cortez",
+      "content": "Got it \u2014 we\u2019ll bring it in. I can drive; the box is by the door and I won\u2019t handle the bird. What\u2019s the address and are there any specific transport instructions we should follow (covering, temperature, etc.)?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Mia Sanders",
+      "content": "I can drive. Ask them for their address and any specific transport instructions \u2014 typically they want the bird kept warm (not hot), dark and quiet in the box with minimal handling; they\u2019ll tell us if gloves or a carrier are needed. Once they give the address I\u2019ll meet you at the door and we\u2019ll hand it directly to their licensed rehabilitator."
+    },
+    {
+      "turn": 10,
+      "speaker": "Rafael Cortez",
+      "content": "I\u2019ll call them now and put you on speaker so you can get the address and any transport instructions directly. Can you meet me at the door in two minutes with the car ready? I\u2019ll keep the box by the door and won\u2019t handle the bird."
+    },
+    {
+      "turn": 11,
+      "speaker": "Mia Sanders",
+      "content": "I\u2019ll be at the door in two minutes with the car ready \u2014 thank you for calling them and for keeping the bird calm. Keep the box covered and quiet; I\u2019ll bring gloves and we\u2019ll hand it directly to their licensed rehabilitator when we arrive."
+    },
+    {
+      "turn": 12,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

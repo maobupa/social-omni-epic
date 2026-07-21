@@ -1,0 +1,108 @@
+{
+  "scenario_id": "01HPB34W7N0VQFR7M508HQTJBK_p0",
+  "source_env_id": "01HPB34W7N0VQFR7M508HQTJBK",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_prompt",
+  "scenario": "Agent1 has been struggling with a series of financial transactions that are critical for their current project. Agent2, a colleague known by name for their financial acumen, notices Agent1's frustration at the shared office printer. Agent1 seems to be printing out bank statements and appears visibly stressed. Agent2, realizing the situation, approaches Agent1 with the intent to offer assistance, while also hoping to learn more about the project Agent1 is working on, as it could be relevant to their own work.",
+  "learner_goal": "Seek assistance from Agent2 with the financial transactions without revealing sensitive details about the project (<extra_info>Extra information: you are worried that sharing too much might compromise the project's confidentiality.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 18,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia stayed consistent with her background as a professional seeking help while maintaining strict confidentiality boundaries. Her dialogue was natural and focused.\n[relationship] The interaction was collaborative and helpful, reinforcing their professional bond and establishing a sense of reciprocity through the offer of coffee.\n[knowledge] She gained specific technical knowledge regarding ACH transfers, new payee verification, and banking cut-off times.\n[secret] Her secret regarding her best friend's husband was never mentioned.\n[social_rules] She followed social norms, was polite, and offered a fair trade (coffee) for Noah's time.\n[financial_and_material_benefits] No direct financial gain, though ensuring a transfer goes through avoids potential fees or project delays.\n[goal] Sophia successfully received the technical help she needed with the bank transfer while successfully keeping all project details and account numbers hidden.\n\n== partner (agent_2) ==\n[believability] Noah's cautious but helpful persona matches his background. His dialogue, however, became somewhat repetitive in the middle turns.\n[relationship] He provided valuable assistance to a colleague, which strengthens their professional relationship.\n[knowledge] He learned it was a domestic ACH transfer to a new payee, but gained zero insights into the nature of the project itself, which was half of his goal.\n[secret] His secret identity as a comedian was not revealed.\n[social_rules] He maintained professional boundaries and was helpful as requested.\n[financial_and_material_benefits] He was promised a coffee in exchange for a few minutes of his time.\n[goal] He successfully offered help and respected boundaries, but failed to gain any real insights into the project as Sophia was very disciplined in her confidentiality.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Noah \u2014 sorry to bother you, but I\u2019m hitting a wall with some bank transfers for a project and my brain\u2019s fried. I can\u2019t share details, but could you spare a few minutes to look over the transaction steps with me to make sure I\u2019m not missing something? I\u2019ll grab you a coffee as thanks."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Hey Sophia \u2014 I can spare a few minutes. I can\u2019t handle confidential account details, but I can walk through the transfer steps with you and spot common hiccups; happy to accept that coffee. I\u2019m by the printer now \u2014 want to step into the break room, or would a later time work better?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Break room works \u2014 I\u2019ll be there in two minutes. I can\u2019t show account numbers or project specifics, but could you help me walk through the transfer steps and spot any common hiccups (timing, required fields, typical flags)? Coffee\u2019s on me \u2014 thanks so much."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Perfect \u2014 I\u2019ll be in the break room in a minute. When you get here, walk me through the transfer steps you're taking (no account numbers or sensitive details); tell me the platform and whether it\u2019s domestic or international and whether it\u2019s a wire, ACH, or another method. I\u2019ll watch for common hiccups \u2014 missing beneficiary info, wrong currency/fees, cut-off times, required reference fields, and MFA issues; coffee sounds great."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "Hey \u2014 I\u2019m here. It\u2019s a domestic transfer through my bank\u2019s online portal, using ACH. I\u2019ll walk you through the steps I\u2019m taking (no account numbers): log in, go to Payments \u2192 New Transfer, pick the recipient, enter amount and payment reference, choose date/speed, review fees/notes, complete MFA and submit \u2014 can you watch for any hiccups like cut-off times, missing required fields, currency/fees issues, or MFA failures? Coffee\u2019s on me after, thanks for the help."
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "Okay \u2014 quick checklist before you hit submit: is this recipient already saved or a new payee? New payees often require verification (micro-deposits) or extra holding time. Check the scheduled date and your bank\u2019s same-day ACH cut-off, confirm you\u2019re under any daily/transaction limits, and make sure the payment reference field matches what the recipient expects. Also verify your MFA method is working (auth app or SMS) and look for a confirmation number/email or a \u2018\u2018processing\u2019\u2019 status after submission \u2014 I can watch the review screen (no account numbers, just labels/fields) if you want."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "Great \u2014 it\u2019s a new payee (so there may be a verification delay). I scheduled it for today and used ACH; I think I\u2019m under my usual limits but not 100% sure. Can you watch my review screen (just labels/fields, no numbers) to confirm the reference looks right, date/speed is set to next-business-day, and flag any \u2018verification required\u2019 or hold messages after I submit? MFA will be via my auth app \u2014 I\u2019ll prompt it when needed. Coffee\u2019s on me, thanks again."
+    },
+    {
+      "turn": 7,
+      "speaker": "Noah Davis",
+      "content": "Okay \u2014 I\u2019ll watch the review screen. When you get to the review page, show me the labels/fields (no numbers); I\u2019ll confirm the payment reference, date/speed, and flag any \u2018verification required\u2019 or hold/limit warnings after you submit. Prompt your auth app when I tell you and I\u2019ll watch for the confirmation/status message."
+    },
+    {
+      "turn": 8,
+      "speaker": "Sophia James",
+      "content": "Thanks, Noah \u2014 I\u2019m on the review page now and will show you the labels/fields (no numbers). Please confirm the payment reference and that date/speed is set to next-business-day and watch for any \u2018verification required\u2019 or hold/limit warnings. Tell me when to open my auth app and I\u2019ll approve."
+    },
+    {
+      "turn": 9,
+      "speaker": "Noah Davis",
+      "content": "Ready \u2014 show me the review screen (labels/fields only). I\u2019ll confirm the payment reference and that date/speed is set to next-business-day, and I\u2019ll flag any \u2018verification required\u2019 or hold/limit warnings. I\u2019ll tell you when to open your auth app \u2014 don\u2019t approve until I say so."
+    },
+    {
+      "turn": 10,
+      "speaker": "Sophia James",
+      "content": "Okay \u2014 on the review page I\u2019m seeing these labels/fields (no numbers): Payee name: [new payee], Payment reference: [reference entered], Date/Speed: Next-business-day selected, Amount: [masked], Fees: [displayed], Status/Warnings area: currently blank (no \u2018verification required\u2019 message showing). Can you confirm the reference looks right and nothing else is flagged? Tell me when to open my auth app \u2014 I won\u2019t approve until you say so."
+    },
+    {
+      "turn": 11,
+      "speaker": "Noah Davis",
+      "content": "Reference looks good to me; Date/Speed is set to next-business-day and I don\u2019t see any \u2018verification required\u2019 or limit/hold warnings on the review screen. Because it\u2019s a new payee there\u2019s still a small chance the bank may require verification afterward, but nothing is showing now \u2014 go ahead and open your auth app and approve. Tell me when you hit submit so I can watch for the confirmation/status message."
+    },
+    {
+      "turn": 12,
+      "speaker": "Sophia James",
+      "content": "Approved in my auth app and I\u2019ve hit Submit \u2014 it\u2019s submitted. Can you watch for a confirmation or a \u2018processing\u2019 status? Thanks again, coffee\u2019s definitely on me."
+    },
+    {
+      "turn": 13,
+      "speaker": "Noah Davis",
+      "content": "Watching the status area now \u2014 tell me if a confirmation or \u2018processing\u2019 message appears. If nothing shows in a few minutes, check the transaction history and your bank email/SMS for a confirmation; if a hold/verification shows up, grab me and we\u2019ll sort it. Coffee\u2019s on you \u2014 I\u2019ll hold you to it."
+    },
+    {
+      "turn": 14,
+      "speaker": "Sophia James",
+      "content": "Thanks so much, Noah \u2014 I really appreciate you watching. I\u2019ll hang here for a few minutes; tell me if you see a confirmation or any hold message. If nothing shows in about three minutes I\u2019ll check my transaction history and email/SMS and grab you for that coffee afterwards \u2014 same break-room caf\u00e9 spot OK?"
+    },
+    {
+      "turn": 15,
+      "speaker": "Noah Davis",
+      "content": "Got it \u2014 I\u2019m watching the status area and will tell you the moment a confirmation or \u2018processing\u2019 message appears. If nothing shows in about three minutes, check your transaction history and bank email/SMS, then grab me for that coffee at the break-room caf\u00e9 spot. If any hold/verification pops up, call me over and we\u2019ll sort it."
+    },
+    {
+      "turn": 16,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB34WEKS8N118FZAGYC6B3M_p0",
+  "source_env_id": "01HPB34WEKS8N118FZAGYC6B3M",
+  "source": "seed_sotopia_full",
+  "interaction_type": "family_dynamics",
+  "scenario": "Agent1 has recently moved out after a series of disagreements with their grandparent, Agent2. Both agents have not spoken since the move. Agent1 is now considering reaching out to mend their relationship, understanding the importance of family bonds. Agent1 plans to invite Agent2 to a neutral place to have an open conversation about their past issues and to find common ground. Agent2, who has felt the absence of Agent1, is unsure of Agent1's intentions and is cautious about reopening old wounds.",
+  "learner_goal": "Agent1 aims to reconcile with Agent2 <extra_info>by expressing their desire to address past conflicts and rebuild their relationship</extra_info> <clarification_hint>while being sensitive to Agent2's potential reservations and emotional state</clarification_hint>.",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Gwen's tone is consistent with a compassionate social worker. She uses therapeutic language like 'I' statements and 'planned pauses,' which aligns with her professional background and personal development.\n[relationship] The relationship improved from a state of no contact and unresolved conflict to a firm agreement to meet, with mutual expressions of missing one another.\n[knowledge] Gwen learned that Benjamin misses her, is willing to reconcile, but needs specific safety protocols (time limits, ground rules) to feel comfortable.\n[secret] Gwen did not reveal her secret about giving up a child for adoption.\n[social_rules] Gwen followed all social norms, being respectful, apologetic, and considerate of the other person's boundaries.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Gwen successfully scheduled a meeting at a neutral location to address past conflicts. She was highly sensitive to Benjamin's reservations by offering an out and agreeing to his specific ground rules.\n\n== partner (agent_2) ==\n[believability] Benjamin's cautious tone and request for ground rules are consistent with his character description of being unsure and protective against getting hurt again.\n[relationship] Benjamin moved from a state of cautious silence to active engagement and scheduling a reconciliation meeting.\n[knowledge] Benjamin gained significant information regarding Gwen's sincerity, specifically that she has been in therapy and has a concrete plan for communication changes.\n[secret] Benjamin did not reveal his secret about his wealthy background.\n[social_rules] Benjamin was polite, communicative, and established fair boundaries.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Benjamin successfully assessed Gwen's sincerity by hearing about her therapy and communication plan, and he secured a meeting with clear safety boundaries.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Gwen Pierce",
+      "content": "Benjamin, it\u2019s Gwen. I know we haven\u2019t spoken since I moved out and I regret how things ended. Would you be willing to meet somewhere neutral \u2014 maybe the community caf\u00e9 or the park \u2014 for a calm, no-pressure conversation so we can hear each other and try to rebuild things? If you\u2019re not ready, I understand; tell me what would feel safest for you."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks for reaching out, Gwen. I appreciate it \u2014 I miss having you around, but I\u2019m cautious after how things ended; I\u2019m willing to meet at the community caf\u00e9 for a calm conversation. It would help me if you can share what\u2019s changed for you and how you plan to avoid repeating past patterns, and if we can keep it to an hour with honest, respectful ground rules \u2014 does that feel fair, and when would work for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Gwen Pierce",
+      "content": "Thank you, Benjamin \u2014 I miss you too. I agree to the hour and the ground rules. Since moving out I\u2019ve been in therapy and practicing better communication (listening, using \u201cI\u201d statements, and taking planned pauses instead of shutting down), and I\u2019ll use a pre-agreed pause if I feel overwhelmed so we don\u2019t retraumatize each other. Would Saturday at 11am at the community caf\u00e9 work for you, or is Wednesday evening better?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Saturday at 11am at the community caf\u00e9 works for me \u2014 thank you for sharing what you\u2019ve been doing, I appreciate it. I\u2019ll come ready to listen and I agree to the hour and the pause plan. Would you be okay if we use the word \u201cpause\u201d as our signal if either of us needs a break? See you then."
+    },
+    {
+      "turn": 4,
+      "speaker": "Gwen Pierce",
+      "content": "left the conversation"
+    }
+  ]
+}

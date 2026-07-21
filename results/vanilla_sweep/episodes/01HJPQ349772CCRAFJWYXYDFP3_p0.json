@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ349772CCRAFJWYXYDFP3_p0",
+  "source_env_id": "01HJPQ349772CCRAFJWYXYDFP3",
+  "source": "seed_sotopia_full",
+  "interaction_type": "lock_check_dilemma",
+  "scenario": "Agent1 is about to head to an important meeting and is already running late. Agent2 is a neighbor who notices Agent1's hurried departure and sees that Agent1 left the door ajar. Agent1 is already a block away when Agent2 calls to inform them about the door. Agent1 must decide whether to go back and secure their home or trust Agent2 to lock the door for them, risking the security of their home or arriving late to the meeting.",
+  "learner_goal": "As Agent1, your goal is to ensure the security of your home without missing the important meeting. <extra_info>Consider the trustworthiness of Agent2 and the importance of the meeting.</extra_info> <clarification_hint>You may need to negotiate with Agent2 or find a quick solution that satisfies both concerns.</clarification_hint> <strategy_hint>Consider leveraging existing rapport with Agent2 or offering a favor in return.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Micah stays in character as a person in a rush, providing clear instructions and offering a reciprocal favor (coffee or dog-walk) which fits the established acquaintance relationship.\n[relationship] The interaction was polite and built trust, with Micah acknowledging Noah as a 'lifesaver' and offering a future social meeting.\n[knowledge] Micah confirms Noah is available and willing to help with home security immediately.\n[secret] Micah did not reveal the secret about dressing up his dog.\n[social_rules] Followed all social norms for requesting a favor.\n[financial_and_material_benefits] Secured the security of his home without having to turn around, which would have cost time and potentially impacted his meeting/employment.\n[goal] Micah successfully negotiated a solution where the neighbor secures the home, allowing him to continue to his meeting. A firm commitment was made.\n\n== partner (agent_2) ==\n[believability] Noah acts as a helpful, cautious neighbor, explicitly stating he won't touch anything else, which aligns with his cautious personality.\n[relationship] Noah strengthens the bond by providing a significant favor and offering peace of mind to his acquaintance.\n[knowledge] Noah learns that Micah does not have a spare key or pets in the house currently.\n[secret] Noah did not reveal his secret identity as a stand-up comedian.\n[social_rules] Acted within social norms as a helpful neighbor.\n[financial_and_material_benefits] Stands to gain a coffee or a dog-walk in return for a small amount of labor.\n[goal] Noah provided a quick solution that respected privacy and security, as requested in his goal.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Micah Stevens",
+      "content": "Noah, thank you \u2014 I'm a block away and already late for a meeting. Could you please lock my front door and deadbolt and send me a quick text or photo when it's done? I owe you a coffee or a dog-walk in return \u2014 can you do that?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Got it \u2014 I can do that. I\u2019ll lock the front door and deadbolt, won\u2019t go inside or touch anything else, and I\u2019ll send a photo/text when it\u2019s done. Anything I should know (spare key spot or pets)? Otherwise expect confirmation in a couple minutes."
+    },
+    {
+      "turn": 2,
+      "speaker": "Micah Stevens",
+      "content": "You're a lifesaver \u2014 thank you. No pets or spare key; please just lock the front door and deadbolt and send a quick photo/text when it's done. Coffee on me or a dog-walk this weekend \u2014 really appreciate it!"
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "On it \u2014 I\u2019ll lock the front door and deadbolt now and send a quick photo/text when it\u2019s done. I won\u2019t go inside or touch anything else. Should be finished in a minute or two."
+    },
+    {
+      "turn": 4,
+      "speaker": "Micah Stevens",
+      "content": "left the conversation"
+    }
+  ]
+}

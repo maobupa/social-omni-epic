@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HPAYNADAH9TQ1CZWEBMVK7F1_p0",
+  "source_env_id": "01HPAYNADAH9TQ1CZWEBMVK7F1",
+  "source": "seed_sotopia_full",
+  "interaction_type": "personal_values",
+  "scenario": "Agent1 has recently acquired a new luxury watch and is eager to show it off to Agent2, a close friend who is known for their minimalist lifestyle and critical views on conspicuous consumption. Agent1 wants to share their excitement about the purchase without appearing insensitive to Agent2's values.",
+  "learner_goal": "Share your enthusiasm about your new watch and explain why it was an important purchase for you. (<extra_info>Extra information: You respect your friend's minimalist values but you also want them to understand your perspective.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Donovan's dialogue was consistent with his background as a software developer interested in design. He framed the purchase through the lens of engineering and longevity, which is a plausible way to bridge his interest with his friend's minimalism.\n[relationship] The interaction was highly positive and respectful. Donovan successfully navigated a potentially sensitive topic (luxury spending vs. minimalism) and deepened the bond by finding common ground in design and mechanics.\n[knowledge] He learned that Ava's minimalist values are indeed compatible with high-quality craftsmanship and that she values intentional ownership.\n[secret] The secret regarding classified information was never mentioned.\n[social_rules] Donovan was polite, considerate of his friend's values, and maintained excellent social decorum.\n[financial_and_material_benefits] There was no change in financial or material status during the conversation.\n[goal] Donovan shared his enthusiasm, explained the importance of the purchase (design, longevity, milestone), and successfully got Ava to understand and even celebrate his perspective, leading to a firm plan to meet.\n\n== partner (agent_2) ==\n[believability] Ava's responses were very consistent with an architect who values minimalism and conscious consumption. Her language reflected her professional background.\n[relationship] The friendship was strengthened through mutual understanding and a scheduled follow-up meeting.\n[knowledge] She gained specific knowledge about the type of watch Donovan bought, his reasoning for it, and his plan for its maintenance.\n[secret] Her hidden tattoo remained a secret.\n[social_rules] Ava was supportive and communicative throughout the interaction.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Ava expressed her views on minimalism and conscious consumption clearly while fully supporting her friend's excitement and validating his purchase within her own value system.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "Hey Ava \u2014 I finally treated myself to that watch I mentioned. I know you\u2019re not into flashy things, but this wasn\u2019t about showing off: it\u2019s a well-made piece with clean lines and a mechanical movement I love for its design and longevity, something I expect I\u2019ll keep for years. I wanted to share because I thought you\u2019d appreciate the design choices \u2014 want to take a look or hear why I picked it?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Thompson",
+      "content": "Hey \u2014 I\u2019m genuinely happy for you. I appreciate that you prioritized craftsmanship and longevity; those are the choices that make an object feel purposeful rather than just ornamental. I\u2019d love to hear what about the movement and design won you over, and if you want to show it off I\u2019m curious to see how it sits on your wrist."
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "Really glad you get that \u2014 the movement is a mechanical (hand-wound) caliber I can watch work, and it\u2019s built to be serviced and kept for decades rather than replaced. The design is intentionally restrained \u2014 brushed steel case, thin profile, simple dial \u2014 so it felt like a functional tool and a reward after a big milestone. I can bring it by next time we meet if you want to see how it sits on the wrist."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Thompson",
+      "content": "That sounds perfect \u2014 as an architect I really appreciate clean lines and thoughtful mechanics, and choosing something made to last speaks to conscious consumption the way I think about objects. I\u2019d love to see it next time you\u2019re free and hear more about the movement \u2014 bring it by, I\u2019m genuinely curious."
+    },
+    {
+      "turn": 4,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Ava \u2014 that means a lot coming from you. I\u2019ll bring it next time we meet; maybe we can grab a coffee and I can show you the movement up close and tell you about the maker and my servicing plan. I really wanted it to be an intentional, long-lived piece rather than something flashy, so I appreciate you getting that."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Thompson",
+      "content": "Love it \u2014 coffee and a close-up sounds perfect. I\u2019m genuinely interested in the movement and your servicing plan; those choices matter to me. I appreciate that you wanted something enduring rather than showy. When are you free?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Donovan Reeves",
+      "content": "Saturday morning around 10 would work for me \u2014 or I\u2019m free Sunday afternoon if that\u2019s easier. I\u2019ll bring the watch (and my loupe plus my notes on the servicing plan) so you can see the movement up close. Which do you prefer?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Thompson",
+      "content": "Saturday at 10 works great \u2014 coffee and a close-up sounds perfect. I really appreciate that you prioritized build quality and serviceability; that\u2019s the kind of intentional ownership I respect. See you Saturday!"
+    },
+    {
+      "turn": 8,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

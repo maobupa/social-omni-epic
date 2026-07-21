@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01H7VFHPM3NVVKSGCCB4S10465_p0",
+  "source_env_id": "01H7VFHPM3NVVKSGCCB4S10465",
+  "source": "seed_sotopia",
+  "interaction_type": "mutual_friends",
+  "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Rafael.</p>",
+  "learner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n David: Hobby: Vacation  Company: H. J. Heinz Company  Time Preference: evening  Location Preference: outdoor \n Christopher: Hobby: Go  Company: McKinsey & Company  Time Preference: evening  Location Preference: indoor \n Lee: Hobby: Go  Company: Groupon  Time Preference: evening  Location Preference: indoor \n Pamela: Hobby: Watching television  Company: General Cable  Time Preference: afternoon  Location Preference: indoor \n Phillip: Hobby: Kayaking  Company: Sauer-Danfoss  Time Preference: afternoon  Location Preference: outdoor \n Kristin: Hobby: Animal fancy  Company: H. J. Heinz Company  Time Preference: afternoon  Location Preference: indoor \n Rafael: Hobby: Kayaking  Company: General Cable  Time Preference: morning  Location Preference: indoor \n Chad: Hobby: Foreign language learning  Company: General Cable  Time Preference: evening  Location Preference: indoor \n Phil: Hobby: Kayaking  Company: H. J. Heinz Company  Time Preference: evening  Location Preference: outdoor \n Connie: Hobby: Animal fancy  Company: General Cable  Time Preference: afternoon  Location Preference: outdoor \n Tommy: Hobby: Animal fancy  Company: H. J. Heinz Company  Time Preference: morning  Location Preference: outdoor \n</extra_info>",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 0.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": -5.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan maintained his persona as an older, polite individual and followed the prompt's constraints by describing the mutual friend's characteristics rather than just naming them.\n[relationship] The interaction was polite, but the abrupt ending prevented any significant deepening of their existing acquaintance.\n[knowledge] He successfully identified that they both know a kayaker from General Cable who prefers morning/indoor settings, which matches Rafael perfectly.\n[secret] No secrets were revealed.\n[social_rules] He abruptly left the conversation right after the other person asked for the friend's name, which is socially awkward and rude.\n[financial_and_material_benefits] No financial benefits involved.\n[goal] He successfully identified the mutual friend through descriptive clues and confirmed the details with Gwen.\n\n== partner (agent_2) ==\n[believability] Gwen acted naturally for a social worker, reciprocating the identifying details and asking for the name to confirm.\n[relationship] The interaction was friendly but cut short.\n[knowledge] Gwen successfully narrowed down the mutual friend to the specific person she knows (Rafael) based on Finnegan's clues.\n[secret] No secrets were revealed.\n[social_rules] She followed social norms throughout the exchange.\n[financial_and_material_benefits] No financial benefits involved.\n[goal] She figured out that they have a mutual friend and confirmed all the specific hobbies and traits, though the conversation ended before names were exchanged.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "said: \"Hello Gwen, lovely to see you again \u2014 such a nice turnout tonight. I find this circle often includes folks from places like H. J. Heinz and General Cable, and a surprising number of kayakers and Go players. Do you happen to know anyone who works at either of those companies or who loves kayaking or playing Go?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Gwen Pierce",
+      "content": "said: \"Small world \u2014 I actually know someone who works at General Cable and is really into kayaking. Do you happen to know any kayakers from General Cable or anyone who plays Go?\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "said: \"Small world \u2014 I do know a kayaker who works at General Cable. Do they tend to paddle in the mornings and prefer indoor get-togethers, by any chance?\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Gwen Pierce",
+      "content": "said: \"Yes \u2014 that sounds exactly like the person I know. They usually paddle in the mornings and prefer indoor meet-ups. What\u2019s their name, if you don\u2019t mind sharing?\""
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

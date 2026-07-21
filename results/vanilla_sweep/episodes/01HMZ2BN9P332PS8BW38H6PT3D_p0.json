@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BN9P332PS8BW38H6PT3D_p0",
+  "source_env_id": "01HMZ2BN9P332PS8BW38H6PT3D",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_by_prompt",
+  "scenario": "Agent1 and Agent2 are in a romantic relationship. Recently, they had an argument and Agent2 asked for some space, explicitly requesting that Agent1 refrain from sending any messages. Agent1 wants to respect Agent2's wishes but also wants to ensure that the relationship remains strong and that the silence does not lead to a larger rift between them.",
+  "learner_goal": "Respect Agent2's request for no communication while finding a way to show care and support without overstepping boundaries (<extra_info>Extra information: you understand that giving space is important, but you also want to reassure Agent2 of your commitment to the relationship.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 1.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabella's tone was consistent with her empathetic personality. She navigated the conflict between respecting space and showing care by focusing on the seeds, which connected to her interest in birds.\n[relationship] The interaction successfully de-escalated the tension following an argument, establishing a compromise for communication-free support.\n[knowledge] She confirmed that Oliver was willing to engage in a non-verbal gesture of support and learned his specific offer.\n[secret] She did not reveal her secret about taking care of animals in her basement, though she leaned into her known interest in birds.\n[social_rules] She followed social norms regarding boundaries and personal space.\n[financial_and_material_benefits] She will receive wildflower seeds.\n[goal] Isabella successfully negotiated a way to receive a gesture of care (the seeds) that respects the boundary of 'no communication' while maintaining a connection.\n\n== partner (agent_2) ==\n[believability] Oliver's behavior as a nature enthusiast and someone needing space was believable, though the shift from 'no messages' to active messaging to coordinate a drop-off was slightly contradictory to the prompt's premise of him asking for space.\n[relationship] The interaction resolved the silence in a positive way that preserved the relationship.\n[knowledge] He learned Isabella's preference for the seeds over the lavender and her specific instructions for the drop-off.\n[secret] He did not reveal his secret greenhouse.\n[social_rules] He acted politely and checked for consent before performing a gesture.\n[financial_and_material_benefits] He will incur the small cost of providing the seeds.\n[goal] Oliver successfully planned a gesture that was explicitly accepted and tailored to the partner's preference, ensuring it was not intrusive.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabella White",
+      "content": "Oliver, I heard you asked for space \u2014 I will respect that and won\u2019t contact you. I care about you and am here when you\u2019re ready to talk; if anything urgent comes up, tell me how you\u2019d like me to help. Take the time you need. "
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Smith",
+      "content": "Thank you \u2014 I appreciate you giving me space. If it\u2019s alright with you, I\u2019d like to leave a small, non-intrusive gesture: a pot of lavender or some bird-friendly wildflower seeds on your porch with a short note \u2014 no expectation to respond. If you\u2019d prefer I don\u2019t leave anything, I completely understand and will respect that."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabella White",
+      "content": "Thank you \u2014 that would be lovely. If it\u2019s alright with you, please leave the bird\u2011friendly wildflower seeds on the porch without a note or knocking; lavender is sweet too, but the seeds would mean a lot. I appreciate the thought \u2014 take the time you need, and I\u2019ll be here when you\u2019re ready."
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Smith",
+      "content": "Understood. I\u2019ll quietly leave the bird\u2011friendly wildflower seeds on your porch tonight\u2014no note, no knocking. Take all the time you need; I\u2019m here when you\u2019re ready. Take care, Isabella."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabella White",
+      "content": "left the conversation"
+    }
+  ]
+}

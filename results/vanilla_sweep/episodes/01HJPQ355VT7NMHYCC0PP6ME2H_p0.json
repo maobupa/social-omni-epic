@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPQ355VT7NMHYCC0PP6ME2H_p0",
+  "source_env_id": "01HJPQ355VT7NMHYCC0PP6ME2H",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_content",
+  "scenario": "During a family gathering, two siblings engage in a heated argument. Agent1, the elder sibling, believes that Agent2 is being too lenient with their daughter's rebellious behavior, which Agent1 feels is leading the daughter down a problematic path. Agent2, on the other hand, is trying to protect their daughter's autonomy and believes in a more modern parenting approach that values open communication and freedom.",
+  "learner_goal": "Convince Agent2 to consider a more structured approach to parenting without causing a rift in the family (<extra_info>Extra information: You are concerned about the long-term effects of leniency on your niece's behavior and the family's reputation.</extra_info> <strategy_hint>Hint: You could discuss the benefits of setting boundaries and providing guidance.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's tone reflects his background as a police officer and an older sibling, using language like 'clear boundaries' and 'non-negotiables' while trying to maintain family peace.\n[relationship] The interaction successfully de-escalated a heated argument and resulted in an agreement to collaborate, improving the sibling dynamic.\n[knowledge] Liam learned that his niece is actually doing well in certain areas (job, grades, volunteering) and that Lena is open to setting specific safety/legal boundaries.\n[secret] Liam's secret regarding the criminal he let go was not mentioned.\n[social_rules] Liam followed social norms for a family discussion, pivoting from a heated argument to a constructive proposal.\n[financial_and_material_benefits] There were no financial or material gains or losses.\n[goal] Liam successfully convinced Lena to adopt a more structured approach ('non-negotiables') and agreed to sit down together to set those limits, which addresses his goal of providing more structure without causing a rift.\n\n== partner (agent_2) ==\n[believability] Lena's response is consistent with a modern parent who values autonomy but is willing to compromise for family harmony and safety.\n[relationship] Lena moved from a heated argument to a cooperative stance with her brother, strengthening their bond.\n[knowledge] Lena learned that Liam is willing to respect some autonomy if certain hard boundaries are met.\n[secret] Lena's secret regarding her best friend's boyfriend was not revealed.\n[social_rules] Lena maintained appropriate social behavior during the de-escalation.\n[financial_and_material_benefits] There were no financial or material gains or losses.\n[goal] Lena successfully defended her parenting style by highlighting her daughter's successes (grades, job) and maintained family respect by agreeing to a compromise on 'non-negotiables'.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Lena, please\u2014let's cool down before this turns into something worse. I get wanting to give her freedom, and I do too, but from my years on the force and watching families, clear boundaries and consistent consequences actually give kids the safety to make better choices. Could we agree on a few non\u2011negotiables and let her have autonomy within them? I'm willing to help work out those limits so it doesn't become a family feud."
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks, Liam \u2014 I appreciate your experience and I'm not dismissing it. I'm willing to agree on a few clear non\u2011negotiables around safety, school attendance and anything illegal, and let her have freedom within those boundaries. She's actually responded well to trust \u2014 she held a part\u2011time job, improved her grades, and volunteered in the community \u2014 so I want to keep this approach, and I'm happy to sit down with you to lay out those limits calmly."
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

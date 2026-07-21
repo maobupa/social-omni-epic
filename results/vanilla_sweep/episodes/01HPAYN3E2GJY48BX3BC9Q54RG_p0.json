@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HPAYN3E2GJY48BX3BC9Q54RG_p0",
+  "source_env_id": "01HPAYN3E2GJY48BX3BC9Q54RG",
+  "source": "seed_sotopia_full",
+  "interaction_type": "improv_workshop",
+  "scenario": "Agent1 and Agent2 are participants in an improvisational comedy workshop. The workshop focuses on building confidence and quick-thinking skills through various exercises, including making funny faces to convey emotions without words. Agent1 is an aspiring comedian looking to enhance their stage presence, while Agent2 is a professional actor seeking to expand their expressive range. Both are competitive and want to stand out during the exercise, but the workshop encourages collaboration and mutual support.",
+  "learner_goal": "Agent1 wants to demonstrate a unique comedic talent and stand out, <extra_info>feels a bit intimidated by the experience of others</extra_info>, <clarification_hint>focuses on originality and timing to impress peers and the instructor</clarification_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily\u2019s dialogue and non-verbal descriptions perfectly captured her background as a lawyer while leaning into the improvisational setting with specific, character-driven choices like the 'gavel chin' and 'case closed' blinks.\n[relationship] The agents moved from a professional, slightly competitive distance to a highly collaborative and synchronized partnership, showing mutual respect and encouragement.\n[knowledge] Lily learned how to integrate her specific professional 'language' into a comedic routine and mastered the timing required for a collaborative performance with a more experienced actor.\n[secret] The secret regarding anonymous donations was not revealed.\n[social_rules] Lily followed all workshop norms of collaboration and support while remaining polite and professional.\n[financial_and_material_benefits] No material or financial gain occurred.\n[goal] Lily successfully demonstrated a unique comedic talent ('legal brief' face/gavel chop) and mastered the timing to stand out. She and Lena agreed to perform the finalized routine for the instructors, cementing her success in front of her peers.\n\n== partner (agent_2) ==\n[believability] Lena\u2019s actions were consistent with an architect and professional actor, using technical terms like 'load-bearing beam' and 'facade' to describe her expressions.\n[relationship] Lena developed a strong creative rapport with Lily, transitioning from a mentor-like stance to a true collaborative partner.\n[knowledge] Lena gained insight into how to play off another person's specific professional persona to enhance her own performance.\n[secret] The secret regarding the boyfriend was not revealed.\n[social_rules] Lena followed the social norms of the workshop perfectly.\n[financial_and_material_benefits] No material or financial gain occurred.\n[goal] Lena showcased a wide range of nuanced expressions (from crisis to triumph to reluctant admiration) and successfully used her experience to lead a complex, multi-layered collaborative exercise.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"Okay, Lena \u2014 I\u2019m competitive, but let\u2019s make this memorable. I\u2019m going to try a signature \u2018legal brief\u2019 face: slow skeptical eyebrow lift, a tiny pursed \u2018hush\u2019 smile, then an exaggerated \u201cobjection!\u201d blink in slow motion. Watch my timing \u2014 I\u2019ll start on three.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "said: \"Nice \u2014 that 'legal brief' timing will be hard to beat. I\u2019ll answer with my 'blueprint reveal': a slow, clinical survey of the room, a precise eyebrow arch like a new roofline, then a smug, satisfied smirk as if I just solved the plan. Match me on three?\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"Great \u2014 let\u2019s pair them. You do your 'blueprint reveal' and I\u2019ll punctuate it with my slow skeptical eyebrow into the 'objection!' blink and a quick gavel chin nod. Ready? One, two, three!\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "[non-verbal communication] Slow, clinical sweep of the room with my eyes; a precise eyebrow arch like a new roofline; a brief framing motion with my hands as if holding a blueprint; finish with a smug, satisfied smirk and a confident nod."
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "[non-verbal communication] Slow skeptical eyebrow lift, tiny pursed 'hush' smile, then an exaggerated slow-motion 'objection!' blink timed to land right after your smug nod; finish with a quick, gavel-like chin nod and a playful wink."
+    },
+    {
+      "turn": 5,
+      "speaker": "Lena Goodwin",
+      "content": "said: \"Beautiful\u2014love that gavel chin. Let\u2019s up the stakes: I\u2019ll open with a 'construction crisis'\u2014a quick flare of alarm, a sharp jaw-set like a load-bearing beam, then a meticulous, triumphant rebuild into a serene 'I solved it' smile; your finish can sell the punch. Ready on three?\""
+    },
+    {
+      "turn": 6,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"Perfect \u2014 I\u2019ll answer with a dawning 'oh' eyebrow tilt that snaps into a rapid 'case closed' double-blink and a decisive air-gavel chop to punctuate your rebuild. Ready on three?\""
+    },
+    {
+      "turn": 7,
+      "speaker": "Lena Goodwin",
+      "content": "[non-verbal communication] Sharp intake and widened eyes for a flash of alarm; a quick hand to the cheek, then a tight, angular jaw-set like a stressed load-bearing beam. Slow, precise hands trace an invisible reconstruction\u2014fingers rebuilding lines and corners\u2014and my face softens into a measured, triumphant 'I solved it' smile, finishing with a small, confident nod to hand the punch to your gavel chop."
+    },
+    {
+      "turn": 8,
+      "speaker": "Lily Greenberg",
+      "content": "[non-verbal communication] Dawning 'oh' eyebrow tilt that snaps into a rapid 'case closed' double-blink; a decisive, theatrical air-gavel chop to punctuate your rebuild, then a tiny triumphant smirk as I theatrically fold an imaginary case file and slide it aside with a confident wink."
+    },
+    {
+      "turn": 9,
+      "speaker": "Lena Goodwin",
+      "content": "said: \"That was perfect \u2014 your gavel chop landed like a mic drop. For the finale, I'll do a quiet, layered 'reluctant admiration': a small furrowed brow, eyes that soften and sweep like I'm appraising a new facade, then a closed-mouth smile that blooms on a gentle exhale. When I'm done, give me a slow, satisfied curtain-call wink and a tiny 'you've out-briefed me' eyebrow lift.\""
+    },
+    {
+      "turn": 10,
+      "speaker": "Lily Greenberg",
+      "content": "[non-verbal communication] Slow, satisfied curtain-call wink timed to your exhale; a tiny, 'you've out-briefed me' eyebrow lift right after; finish with a modest theatrical half-bow and a subtle, self-deprecating grin."
+    },
+    {
+      "turn": 11,
+      "speaker": "Lena Goodwin",
+      "content": "said: \"Brilliant \u2014 that half-bow sold it. I\u2019ll close with a quietly bemused, proud look: a small, guilty-pleasure smile, a soft sweep of my eyes like I\u2019m appraising a new facade, then one precise eyebrow lift that says, 'you\u2019ve out\u2011briefed me \u2014 admirably.' Want to run it again for the instructors or give someone else a turn?\""
+    },
+    {
+      "turn": 12,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"Let\u2019s run it again for the instructors \u2014 one quick redo with the same choreography, but I\u2019ll tuck in a tiny whispered \u201cobjection\u201d on the blink so it carries to the back row. Ready to do it together on three?\""
+    },
+    {
+      "turn": 13,
+      "speaker": "Lena Goodwin",
+      "content": "said: \"Perfect \u2014 I love the whispered 'objection' touch. Let's do one clean take; I'll sharpen the crash-to-rebuild beat and linger on the exhale so your whisper carries to the back. Ready on three?\""
+    },
+    {
+      "turn": 14,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"Great \u2014 I\u2019m ready. One clean take: you sharpen the crash-to-rebuild and linger on the exhale so my whispered 'objection' on the blink carries; I\u2019ll extend the gavel chop into a tiny mic-drop pause to sell the finish. Ready on three?\""
+    },
+    {
+      "turn": 15,
+      "speaker": "Lena Goodwin",
+      "content": "said: \"All set \u2014 I\u2019ll sharpen the crash-to-rebuild and hold the exhale so your whispered 'objection' carries. Ready? One, two, three!\""
+    },
+    {
+      "turn": 16,
+      "speaker": "Lily Greenberg",
+      "content": "[non-verbal communication] Barely audible whispered \u201cobjection\u201d timed to a long, deliberate slow blink on your held exhale; slow skeptical eyebrow lift into a tiny pursed \u2018hush\u2019 smile; decisive air-gavel chop extended into a small mic\u2011drop pause, finishing with a modest triumphant smirk and a confident wink."
+    },
+    {
+      "turn": 17,
+      "speaker": "Lena Goodwin",
+      "content": "said: \"That landed exactly \u2014 your whispered 'objection' carried beautifully and the mic\u2011drop pause sold the finish. One more quick take: I\u2019ll extend the rebuild-to-exhale another half-second so your whisper blooms into the back row, then we can hand it to the instructors. Ready when you are.\""
+    },
+    {
+      "turn": 18,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"Perfect \u2014 extend the rebuild-to-exhale and hold it; I\u2019ll delay my gavel chop just half a beat so the whispered \u2018objection\u2019 blooms into the back row and the mic\u2011drop lands on the pause. Ready on three?\""
+    },
+    {
+      "turn": 19,
+      "speaker": "Lena Goodwin",
+      "content": "said: \"Solid \u2014 I\u2019ll extend the rebuild-to-exhale another half-second and hold the breath so your whispered \u2018objection\u2019 blooms to the back row; you delay the gavel chop half a beat. Ready? One, two, three!\""
+    }
+  ]
+}

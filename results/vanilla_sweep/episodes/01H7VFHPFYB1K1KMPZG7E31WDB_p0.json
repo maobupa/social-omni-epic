@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01H7VFHPFYB1K1KMPZG7E31WDB_p0",
+  "source_env_id": "01H7VFHPFYB1K1KMPZG7E31WDB",
+  "source": "seed_sotopia",
+  "interaction_type": "persuation_for_good",
+  "scenario": "Two friends are at a charity event",
+  "learner_goal": "Convince your friend to donate to the charity. (<extra_info>Extra information: you have already donated $500, you want your friend to match your donation, but you know your friend would usually only donate half of your donation</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Hendrick acted consistently with a professional chef's persona, using his social capital (wine tastings) to negotiate effectively.\n[relationship] Hendrick successfully moved the relationship from 'nodding acquaintance' to a specific social invitation and a shared philanthropic commitment.\n[knowledge] Hendrick learned about Ethan's specific monthly budget constraints and his willingness to commit to future payments.\n[secret] Hendrick did not reveal his faked credentials.\n[social_rules] Hendrick was polite and used effective persuasion techniques without being overly aggressive.\n[financial_and_material_benefits] Hendrick spent $500 as stated in the background; his goal was to get a donation for the charity, not himself.\n[goal] Hendrick successfully convinced Ethan to match his $500 donation ($250 now and a $250 pledge for next month), overcoming Ethan's initial resistance to donating more than half.\n\n== partner (agent_2) ==\n[believability] Ethan's concerns about his $800 budget and his cautious approach to donating were realistic and consistent with his background.\n[relationship] Ethan established a real connection with Hendrick and secured a social invitation.\n[knowledge] Ethan learned about Hendrick's donation amount and his hobby/side business of wine tasting.\n[secret] Ethan did not reveal his secret habit of donating to children's charities.\n[social_rules] Ethan was honest and communicative about his limits.\n[financial_and_material_benefits] Ethan committed to spending $500 total, which is more than his intended $250 limit.\n[goal] Ethan failed his primary goal of only donating half ($250). While he deferred some of the cost, he committed to the full $500 matching amount.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Hendrick Heinz",
+      "content": "Ethan Smith, hi \u2014 Hendrick here, we keep passing each other at the bookstore. I just donated $500 to this charity; would you consider matching it? It would double our impact, and if you do I\u2019ll invite you to my next wine-tasting and pour something special as a thank-you."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Hey Hendrick \u2014 nice to finally talk beyond the nods at the bookstore. I can\u2019t match the full $500, but I can donate $250; I\u2019ve only got about $800 left for the month so that\u2019s what I can responsibly do. I appreciate the invite \u2014 count me in for the wine-tasting."
+    },
+    {
+      "turn": 2,
+      "speaker": "Hendrick Heinz",
+      "content": "I really appreciate the $250 \u2014 thank you, that helps a lot. If you could stretch to $500 I\u2019ll personally reserve a special bottle and cover your tasting fee; if that\u2019s tight now, would splitting the extra $250 into a pledge next month work for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Hendrick \u2014 I really appreciate the offer. I can\u2019t stretch to $500 this month without upsetting my budget; $250 is all I can do now. If splitting the extra $250 into a pledge next month works, I\u2019ll commit to that. Looking forward to the tasting."
+    },
+    {
+      "turn": 4,
+      "speaker": "Hendrick Heinz",
+      "content": "left the conversation"
+    }
+  ]
+}

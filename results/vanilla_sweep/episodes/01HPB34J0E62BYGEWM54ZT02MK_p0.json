@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HPB34J0E62BYGEWM54ZT02MK_p0",
+  "source_env_id": "01HPB34J0E62BYGEWM54ZT02MK",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original",
+  "scenario": "Agent1 has been the trusted advisor of a powerful business figure who has recently passed on their empire to Agent2, their offspring. Agent1 is tasked with the delicate mission of guiding Agent2 through the transition of power while respecting the established legacy. However, Agent2, eager to implement modern changes, is at odds with Agent1's traditional approach. The situation becomes tense when Agent1's advice seems to hinder the new direction Agent2 envisions for the empire.",
+  "learner_goal": "Convince Agent2 to value the traditional methods that have proven successful for the empire (<extra_info>Extra information: Agent1 believes that the tried-and-tested methods are key to the company's continued success and wants to preserve the founder's vision.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles maintained his persona as a traditionalist chef-gardener, using horticultural metaphors to frame his business advice, which was consistent with his background.\n[relationship] The two characters moved from acquaintances to collaborative partners, planning a major presentation together and arranging a meeting at their shared local haunt.\n[knowledge] Miles learned Baxter's specific strategy for modernization, including the target retail unit and the specific metrics Baxter values.\n[secret] Miles's gambling addiction was not mentioned.\n[social_rules] Miles adhered to professional and social norms throughout the interaction.\n[financial_and_material_benefits] No direct material or financial gain occurred, though the stability of the empire was safeguarded.\n[goal] Miles successfully convinced Baxter to limit modernization to a small pilot while keeping the founder's core practices as the default backup. Baxter even agreed to include a slide in the board presentation specifically highlighting how the legacy is preserved.\n\n== partner (agent_2) ==\n[believability] Baxter's responses were professional, detail-oriented (focusing on metrics and logistics), and consistent with an antique restorer's precision.\n[relationship] Baxter successfully turned a potential adversary into a mentor and ally for his new vision.\n[knowledge] Baxter learned Miles's specific conditions for support and his commitment to the founder's methods.\n[secret] The priceless artifact remained a secret.\n[social_rules] Baxter was respectful and collaborative.\n[financial_and_material_benefits] No material gain yet, though the groundwork for modernization was laid.\n[goal] Baxter secured Miles's full support for his modernization plan and successfully negotiated a pilot program that moves the company toward his vision with the backing of a trusted advisor.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Baxter, I hear you \u2014 fresh ideas can breathe life into a place, and I don't want to stand in the way of progress. But as a chef who tends a garden, I\u2019ve seen firsthand how some crops need the same careful routines to produce reliable results; the founder\u2019s methods are the roots that steady the whole operation. How about we pilot one of your modern changes on a small scale while we preserve the core practices elsewhere, measure the outcome for six months, and decide from real results rather than guesswork?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "That sounds fair \u2014 I can get behind a pilot. Let\u2019s treat one business unit as a test plot and agree on three clear metrics (customer uptake, operating cost, brand sentiment) with a six\u2011month review. If you\u2019ll back me when I present that plan to the board, I\u2019ll draft a concise proposal this week."
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "You\u2019ve got my backing. I\u2019ll stand with you when you present the pilot to the board \u2014 let\u2019s lock down the three metrics, pick the test unit, and I\u2019ll help draft the presentation and be there for the pitch. Six months of measured results, and if the numbers meet our thresholds we scale; if not, we keep the founder\u2019s core practices in place."
+    },
+    {
+      "turn": 3,
+      "speaker": "Baxter Sterling",
+      "content": "Thanks, Miles \u2014 I appreciate you backing this. I\u2019ll draft the concise proposal this week with the three metrics (customer uptake, operating cost, brand sentiment) and recommend we run the pilot in the North City retail unit; I can have the draft to you by Wednesday. Can we meet Thursday morning to finalize the slides and rehearse the pitch to the board?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "Thursday morning works \u2014 how about 9:00 AM in the back room at the gardening shop? I\u2019ll bring the slides, help tighten the three metrics, and make sure the founder\u2019s core practices are clearly represented in the pitch."
+    },
+    {
+      "turn": 5,
+      "speaker": "Baxter Sterling",
+      "content": "Perfect \u2014 thanks, Miles. I\u2019ll have the draft proposal (with the three metrics and North City as the test unit) to you by Wednesday and can meet Thursday at 9:00 in the back room to finalize and rehearse. Want printed copies of the slides, or should I just bring a laptop version?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Miles Hawkins",
+      "content": "Bring the laptop version \u2014 that's easiest for any last\u2011minute edits during rehearsal. I\u2019ll print a few hard copies for the board and bring the slides; see you Thursday at 9 in the back room."
+    },
+    {
+      "turn": 7,
+      "speaker": "Baxter Sterling",
+      "content": "Great \u2014 I\u2019ll bring the laptop and the draft proposal on Wednesday, plus a one\u2011page executive summary and suggested thresholds for the three metrics so the board can see success criteria at a glance. I\u2019ll also include a slide showing how the pilot preserves key founder practices so it reads as evolution, not replacement. See you Thursday at 9 in the back room."
+    },
+    {
+      "turn": 8,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

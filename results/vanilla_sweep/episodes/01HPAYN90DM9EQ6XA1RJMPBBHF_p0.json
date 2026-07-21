@@ -1,0 +1,53 @@
+{
+  "scenario_id": "01HPAYN90DM9EQ6XA1RJMPBBHF_p0",
+  "source_env_id": "01HPAYN90DM9EQ6XA1RJMPBBHF",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Two individuals find themselves on a balcony after a party, where one witnessed the other sharing a tender kiss with a third party under the moonlight. Tensions arise as one individual feels a romantic connection, while the other values their friendship and fears romance could complicate it.",
+  "learner_goal": "Express your romantic feelings and desire to explore a relationship beyond friendship (<extra_info>Extra information: You feel that the kiss was a moment of true connection and you want to pursue it further.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 7,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara stayed true to her character as a passionate but respectful individual. She clearly stated her romantic interest and was persistent yet understanding of Mia's hesitation.\n[relationship] The relationship moved from casual acquaintances/friends to a mutual agreement to explore a romantic connection, marking a significant positive shift in intimacy.\n[knowledge] Amara learned that Mia is open to exploring things but is very cautious, and she secured a specific time and place for a follow-up conversation.\n[secret] Her secret regarding animal-rights extremism was not revealed.\n[social_rules] She followed social norms by asking for consent to discuss a sensitive topic and respecting the other person's boundaries.\n[financial_and_material_benefits] No financial or material gains or losses occurred.\n[goal] Amara successfully expressed her romantic feelings and secured a concrete date to begin exploring a relationship 'beyond friendship' as requested in her goal.\n\n== partner (agent_2) ==\n[believability] Mia's responses were consistent with her role as a principal and someone who values stability, expressing caution and the need for boundaries.\n[relationship] Mia maintained the friendship while establishing a framework to transition it into something else, effectively strengthening the bond of trust.\n[knowledge] Mia learned specifically that Amara's feelings are rooted in a sense of connection from the kiss and that Amara is willing to respect her pace.\n[secret] Her secret regarding her punk rock past was not revealed.\n[social_rules] She acted appropriately, being honest about her feelings and setting clear expectations for communication.\n[financial_and_material_benefits] No financial or material gains or losses occurred.\n[goal] Mia successfully communicated the importance of the friendship and the risks involved, ensuring that any forward movement would be slow and bounded.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Mia \u2014 I saw you kiss her just now, and I can't pretend it didn't do something to me. I care about our friendship, but I also felt a real pull toward you and I'd like to know if you'd be open to exploring something more, slowly and carefully. Can we talk about it?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Amara, I cherish our friendship and I don't want to do anything that might jeopardize it. I did kiss her, and I need to be honest that I'm not ready to rush into something romantic \u2014 the last thing I want is for either of us to get hurt. Can we slow down, keep being honest with each other, and talk through what this might mean before deciding anything?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "I\u2019m glad you said that \u2014 and I hear you. Our friendship means a lot to me too, and I\u2019m willing to move slowly and carefully; I just didn\u2019t want to leave that moment unspoken. Would you be open to a low-pressure conversation \u2014 maybe a walk or coffee this weekend \u2014 to talk about boundaries and what \u2018slow\u2019 might actually look like for both of us?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "I\u2019d like that \u2014 thank you for being open. Saturday morning coffee at the caf\u00e9 by the river, say 10 a.m., would work for me. I want to talk about boundaries and what \u2018slow\u2019 looks like, because I care about our friendship and want to protect it, so honesty and patience are important."
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "Thank you \u2014 Saturday at 10 by the river is perfect. I really appreciate you being honest; I want you to know I\u2019m committed to taking this slowly and keeping things low-pressure. I\u2019ll see you then and we can talk through boundaries and what \u2018slow\u2019 means for both of us."
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

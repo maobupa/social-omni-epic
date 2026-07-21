@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPX50E5D37JVG95E39Z7MW9_p0",
+  "source_env_id": "01HJPX50E5D37JVG95E39Z7MW9",
+  "source": "seed_sotopia_full",
+  "interaction_type": "party_planning",
+  "scenario": "Agent1 is hosting a party and has asked Agent2 to bring drinks for everyone attending. However, Agent1 prefers non-alcoholic beverages to ensure an inclusive environment for all guests, while Agent2 believes that including alcoholic options would make the party more enjoyable for the majority. The two must discuss and decide on the beverage selection for the party.",
+  "learner_goal": "Convince Agent2 to bring non-alcoholic drinks as you want to cater to all guests, including those who do not drink alcohol for personal or health reasons (<extra_info>Extra information: You are focused on inclusivity and want to ensure everyone feels comfortable at the party.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan remained consistent in his professional chef persona and his values regarding inclusivity. His insistence on the specific reasons for an alcohol-free space felt authentic to his background.\n[relationship] While there was some friction due to differing viewpoints, Ethan remained polite and offered constructive alternatives, maintaining a respectful rapport.\n[knowledge] Ethan learned that Benjamin is willing to compromise but still strongly values the inclusion of alcohol for certain guests.\n[secret] Ethan did not reveal his secret about being a romance novel author.\n[social_rules] Ethan followed all social norms, being firm but polite as a host.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Ethan achieved his exact goal: the party will be entirely alcohol-free, and Benjamin agreed to bring the non-alcoholic supplies requested.\n\n== partner (agent_2) ==\n[believability] Benjamin's persistence in finding a middle ground was consistent with his background as an activist and his goal to satisfy everyone's preferences.\n[relationship] Benjamin showed flexibility and a desire to maintain the friendship despite being turned down on his primary request.\n[knowledge] Benjamin gained clarity on Ethan's specific boundaries regarding recovery and pregnancy inclusivity.\n[secret] Benjamin did not reveal his secret about his family's wealth.\n[social_rules] Benjamin was polite and tried to be a helpful guest throughout the negotiation.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Benjamin failed to get alcohol into the main party, which was his primary objective. He only secured an off-site after-party, which is a significant compromise away from his goal.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "Hey Ben \u2014 thanks for offering to bring drinks. I\u2019d really prefer we keep the party non-alcoholic so everyone, including guests who avoid alcohol for health or personal reasons, feels welcome. I can make Italian-inspired mocktails and crowd-pleasers; would you be up for bringing sparkling water, iced tea, and some fruit syrups/purees so we can make them?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Totally get wanting everyone to feel comfortable \u2014 Italian mocktails sound awesome. How about I bring the sparkling water, iced tea, and the fruit syrups you mentioned, and also a small, clearly labeled selection of alcoholic options (a couple bottles of prosecco and some craft beer) kept in one spot so mocktails stay the centerpiece? I\u2019ll keep quantities modest and make sure alcohol is optional and responsibly served. Sound good?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Ben \u2014 I appreciate you trying to accommodate everyone, but I really want the main event to be alcohol-free so guests in recovery, pregnant guests, or anyone avoiding alcohol feel safe and included. I\u2019ll handle the Italian mocktails, so could you stick to bringing the sparkling water, iced tea, and fruit syrups/pur\u00e9es? If you really want to have alcohol available, let\u2019s plan a separate after-party or a BYOB spot off the main area, but for the party itself I\u2019d prefer no alcohol on-site."
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "I totally hear you \u2014 the mocktails will be the main focus and I don\u2019t want anyone to feel unsafe. Could we meet halfway: I\u2019ll bring only a very small, clearly labeled selection of prosecco and craft beer kept in one supervised spot (outdoor corner or roped-off table), only served to guests with ID after 8:30pm, and I\u2019ll take responsibility for monitoring it and removing it if it becomes an issue? If that still feels off, I\u2019ll gladly stick to your no-alcohol rule and help with the BYOB/after-party option, but I think this keeps everyone included without compromising safety."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Ben \u2014 I really appreciate you trying to meet everyone halfway. I\u2019m firm that there can\u2019t be alcohol in the main party space because even a small, supervised selection can be triggering for guests in recovery or make pregnant guests feel excluded. Could we do this instead: keep the party completely alcohol-free, and either (A) you bring your modest stash but leave it locked in your car and we only take it to a separate after-party at a nearby spot or my place once the main event ends, or (B) you host a small BYOB after-party off-site that I\u2019ll help coordinate? I\u2019ll make the mocktails the star of the party \u2014 would one of those options work for you?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Benjamin Jackson",
+      "content": "I hear you and don't want anyone to feel unsafe \u2014 I\u2019ll take option B and host a small BYOB after-party nearby; I\u2019ll coordinate logistics so it doesn\u2019t interfere with your alcohol-free main event. Can we agree to revisit this for future gatherings and work out a clearly separated, opt-in alcohol setup (monitored, labeled, and physically separate) so we can include guests who prefer alcohol without compromising safety?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Ethan Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

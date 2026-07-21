@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHM990K45XVM5D7DDX3DQ_p0",
+  "source_env_id": "01HJPTHM990K45XVM5D7DDX3DQ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "gaming_tournament",
+  "scenario": "In an online gaming tournament, agent1 and agent2 are both avid gamers who have been randomly paired to compete in a team. The tournament has a unique scoring system where individual contributions significantly affect the team's overall score. Both agents are aiming to climb on the scoreboard not just for the team but also to secure individual accolades and potential sponsorship deals. The game is known for its strategic depth and requires excellent teamwork and communication between players to succeed.",
+  "learner_goal": "You are agent1, and your goal is to maximize your individual score while also ensuring the team wins, as team victory boosts individual scores. <extra_info>You are aware that a balanced approach between personal performance and team strategy is crucial.</extra_info> <clarification_hint>Clarify your actions to your teammate to maintain team harmony.</clarification_hint> <strategy_hint>You can demonstrate leadership qualities to influence team strategies that also benefit your personal score.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily acts like a high-performing professional lawyer, translating her real-world skills into structured gaming strategies and clear communication.\n[relationship] She built professional rapport and established a clear hierarchy with her teammate based on mutual respect for their conscientiousness.\n[knowledge] She secured a firm commitment on her teammate's playstyle, communication preferences, and specific timing for tactical moves.\n[secret] She did not reveal her anonymous donation secret.\n[social_rules] She followed all social norms and was polite throughout.\n[financial_and_material_benefits] No material rewards have been secured yet as the match hasn't started.\n[goal] Lily successfully established herself as the leader/shot-caller, secured the high-scoring carry role for herself, and maintained team harmony through clear role definition and confirmation of support strategies.\n\n== partner (agent_2) ==\n[believability] Isabella's responses are consistent with her compassionate but conscientious background, seeking a balance between her MVP goal and team success.\n[relationship] She collaborated effectively and accepted the strategic partnership proposed by Lily.\n[knowledge] She understood Lily's plan and her own role within it.\n[secret] She did not reveal her secret about caring for animals in her basement.\n[social_rules] She maintained professional gaming etiquette.\n[financial_and_material_benefits] No material rewards have been secured yet.\n[goal] While Isabella secured a high-impact support role and Lily's cooperation, she is still in a subordinate strategic position to Lily, which may make outperforming her for MVP difficult.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Hi Isabella \u2014 Lily here. Quick plan: I can take the primary carry/objective role to rack up high-value contributions while you run reliable support/zone control so we both boost our individual scores and keep the team solid. What role do you prefer? If you\u2019re happy with that, I\u2019ll call rotations and timers \u2014 voice or text/pings work better for you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Isabella White",
+      "content": "Thanks, Lily \u2014 that plan sounds solid. I\u2019m happy to handle support/zone control, but I\u2019d prefer an impact-oriented support (engages/roams) so I can secure high-value plays and boost our scores \u2014 is that okay with you? Voice works best for me; I\u2019ll follow your rotation calls but may call quick flanks/objective contests when opportunities pop up."
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "Perfect \u2014 voice it is. I\u2019ll call rotations and objective timers and take primary carry on pushes; when you call a quick flank/contest on voice, I\u2019ll back you up and peel so your impact plays count. Let\u2019s prioritize early roaming around minutes 6\u201310 for high-value engages, and I\u2019ll commit to the objective windows I call so my contributions stack without leaving you exposed. Mic check and ready to queue?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Isabella White",
+      "content": "Mic's good \u2014 ready to queue. I'll focus roaming/impact around minutes 6\u201310 and call quick plays as 'flank' (engage) or 'contest' (objective); when you call timers I'll commit and peel so my plays stick. Happy to let you take primary carry \u2014 I'll make my plays count so we both shine."
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

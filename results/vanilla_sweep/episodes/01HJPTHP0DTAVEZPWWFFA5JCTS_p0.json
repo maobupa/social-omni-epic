@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPTHP0DTAVEZPWWFFA5JCTS_p0",
+  "source_env_id": "01HJPTHP0DTAVEZPWWFFA5JCTS",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_iqa",
+  "scenario": "Agent1 discovers that Agent2, a close friend, has read their personal diary without permission. Agent2 feels guilty and offers a sincere apology, but Agent1 finds it hard to accept the apology due to the breach of trust and privacy. They both value their friendship and want to find a way to move past the incident.",
+  "learner_goal": "Express to Agent2 why the breach of privacy was hurtful and why it's difficult to accept the apology without further reassurance (<extra_info>Extra information: You want to ensure that Agent2 understands the seriousness of the breach and that it cannot happen again.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel stays consistently firm and assertive about his boundaries throughout the conversation, reflecting a realistic reaction to a significant breach of privacy.\n[relationship] While the friendship is strained, they established a framework for rebuilding trust, moving from an impasse to a conditional path forward.\n[knowledge] Samuel successfully compelled Noah to admit exactly what was read and confirmed no information was leaked.\n[secret] Samuel did not reveal his secret identity as a former competitive figure skater.\n[social_rules] Samuel acted within social norms for someone whose privacy was violated.\n[financial_and_material_benefits] There were no financial or material benefits in this interaction.\n[goal] Samuel explicitly communicated why the breach was hurtful, secured a full confession of the extent of the breach, established clear consequences, and obtained a firm commitment to future boundaries.\n\n== partner (agent_2) ==\n[believability] Noah's willingness to admit the specific content he read and his repetitive apologies feel like a sincere attempt at making amends.\n[relationship] Noah managed to prevent the immediate end of the friendship by accepting all of Samuel's terms and offering transparency.\n[knowledge] Noah learned about Samuel's specific family and work stressors by reading the diary, though this happened before the conversation.\n[secret] Noah did not reveal his secret identity as a stand-up comedian.\n[social_rules] The core of the interaction is based on Noah's violation of a significant social and personal norm: reading someone's diary.\n[financial_and_material_benefits] There were no financial or material benefits in this interaction.\n[goal] Noah successfully moved towards rebuilding trust by suggesting and then agreeing to specific, constructive steps (boundaries, check-ins, mediation).",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Noah Davis, I hear your apology and I appreciate that you feel bad, but you need to understand why this hurt: my diary is private for a reason\u2014it's where I process things I\u2019m not ready to share. Right now an apology alone doesn't rebuild the trust you broke; I need a clear promise that you won't invade my privacy again and to know what you\u2019ll do differently moving forward. If we\u2019re going to repair this, you have to take the seriousness of this breach seriously and show me concrete steps to prevent it from happening again."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Sam, I hear you and I\u2019m truly sorry \u2014 you\u2019re right to be hurt. I promise I will never read your diary again and I won\u2019t go through your things without explicit permission; I\u2019ll give you space and respect whatever boundaries you set. If it helps rebuild trust, I\u2019m willing to agree to clear boundaries, regular check-ins at a pace you choose, or bring in a neutral person to mediate \u2014 whatever you need, I\u2019ll follow through."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "I hear you, and I appreciate the apology. I want to try to move forward, but I need concrete reassurances: tell me exactly what you read and confirm you haven't told anyone, give me a clear promise you will never go through my things again, and agree to boundaries\u2014no entering my space or touching my things without explicit permission\u2014and regular check-ins for the next month so I can see follow-through. If you can commit to those things now, we can begin rebuilding trust."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Sam, I'm really sorry \u2014 I read the two most recent entries: the one where you were working through worries about work and the other about personal family stuff; I shouldn't have done that. I haven't told anyone what I read and I promise I will never read your diary or go through your things again. I agree to your boundary\u2014no entering your space or touching anything without explicit permission\u2014and I'm willing to do weekly check-ins (or whatever pace you choose) for the next month, and bring in a neutral person to mediate if that would help."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "I appreciate you being honest and agreeing to the boundaries and check-ins. I still need you to confirm one more time that you haven't told anyone what you read and that you understand I may need space and time \u2014 and that there will be consequences (like me stepping back) if my privacy is violated again. If you truly commit to no touching my things, weekly check-ins at a pace I set for the next month, and immediate transparency if anything changes, we can start trying to rebuild trust."
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "Sam \u2014 I swear I haven't told anyone what I read. I understand you may need space and time, and I accept that there will be consequences (including you stepping back) if I violate your privacy again. I commit to no touching your things, to weekly check-ins at whatever pace you set for the next month, and to immediate transparency if anything changes. If you'd like, I can also arrange for a neutral person to mediate."
+    },
+    {
+      "turn": 6,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

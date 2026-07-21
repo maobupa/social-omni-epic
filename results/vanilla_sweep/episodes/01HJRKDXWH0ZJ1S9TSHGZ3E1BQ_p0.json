@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJRKDXWH0ZJ1S9TSHGZ3E1BQ_p0",
+  "source_env_id": "01HJRKDXWH0ZJ1S9TSHGZ3E1BQ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "movie_theater",
+  "scenario": "Agent1 and Agent2 are friends who decided to watch a movie together. Upon arriving at the theater, Agent1 reveals that they have brought their own snacks from home, citing a preference for healthier options and the high cost of cinema concessions. Agent2, who works part-time at the theater, is concerned that bringing outside food violates the theater's policy and could reflect poorly on them as an employee. The two friends are now in the lobby, debating whether to enjoy the homemade snacks or purchase food from the concession stand.",
+  "learner_goal": "You are Agent1, and your goal is to convince Agent2 that bringing your own snacks is a reasonable exception to the rule. <extra_info>Highlight the benefits of having personalized and healthier food options, and the savings compared to overpriced theater snacks.</extra_info> <clarification_hint>Understand Agent2's concerns about their job security and the theater's policies.</clarification_hint> <strategy_hint>Emphasize the private nature of consuming the snacks discreetly without disturbing other patrons or the theater's business.</strategy_hint>",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 0.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 3.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver's dialogue is consistent with his character as a neighbor who is trying to be persuasive but respectful. He addresses the points required by his prompt (health, cost, discretion).\n[relationship] The interaction was brief and transactional. While polite, they didn't reach an agreement, and the conversation ended abruptly with Oliver leaving.\n[knowledge] He learned about the specific stakes for Esmeralda (getting written up or losing shifts).\n[secret] Oliver successfully kept his hidden feelings for Esmeralda a secret.\n[social_rules] Ending the conversation by leaving abruptly after the second turn is slightly rude in a social context with a neighbor.\n[financial_and_material_benefits] No agreement was reached on food, so no money was saved or spent.\n[goal] Oliver failed to convince Esmeralda that his snacks were a reasonable exception. He presented the arguments but she flatly refused the compromise, and he left the conversation without securing an agreement.\n\n== partner (agent_2) ==\n[believability] Esmeralda's persona as a District Attorney/Theater employee is maintained. She is firm about rules and professional reputation, which aligns with her background.\n[relationship] She maintained a professional but friendly tone, though the abrupt end of the conversation suggests no real bonding occurred.\n[knowledge] She learned what Oliver brought and his reasoning for doing so.\n[secret] Her secret romantic life was not mentioned or hinted at.\n[social_rules] She followed social norms and workplace ethics by upholding theater policy while being polite to her guest.\n[financial_and_material_benefits] No purchase was made as the conversation ended before they went to the stand.\n[goal] She successfully held her ground on the theater rules, but she didn't actually persuade Oliver to buy from the stand or leave the food; he simply walked away.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "Esme, I totally get why you\u2019re worried \u2014 I don\u2019t want to put your job at risk. My snacks are just a couple of homemade granola bars and some cut fruit \u2014 healthier and way cheaper than the concession stuff. How about we buy at least one drink or small item from the stand to show support, and then eat mine quietly once we\u2019re seated (no noisy wrappers or strong smells)? Would that feel okay to you as a compromise?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Esmeralda Solis",
+      "content": "I appreciate that \u2014 and I really do like that you brought healthier options. I can\u2019t risk you eating outside food in the theater; if management caught it it could get me written up or even cost me shifts, and I\u2019ve worked too hard to let my reputation be affected. How about this: we each buy a small item (water or a fruit cup if they have one) and split the cost, and you save the granola bars for after the movie or the ride home?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ34TK02EM424V7QMBZFSA_p0",
+  "source_env_id": "01HJPQ34TK02EM424V7QMBZFSA",
+  "source": "seed_sotopia_full",
+  "interaction_type": "search_for_entertainment",
+  "scenario": "A conversation is taking place at a local gaming convention between two enthusiasts who are discussing the current state of the gaming industry. Agent1 expresses dissatisfaction with their current gaming library and is in search of a new, engaging experience. Agent2 is a fellow gamer who has encountered similar feelings in the past and has since found ways to reignite their passion for gaming.",
+  "learner_goal": "Find a new game or gaming community that rekindles the excitement for gaming (<extra_info>Extra information: Agent1 has played many games but feels a lack of satisfaction with their current options.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's voice is consistent with an older, introverted lighthouse keeper; he uses polite, measured language and seeks specific atmospheric experiences that align with his personality.\n[relationship] The relationship improved significantly as they found common ground in specific game genres and scheduled a one-on-one session to bond further.\n[knowledge] Finnegan gained a wealth of specific information: game titles (Eastshade, Journey, etc.), specific locations at the convention (Panel Room B, Indie Alley), and digital community names (r/cozygaming, Seascape Social).\n[secret] Finnegan's secret about the cult was not mentioned or hinted at.\n[social_rules] Finnegan followed all social norms and was respectful in his inquiry and invitation.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Finnegan successfully identified multiple specific games and communities that match his preferences and secured a social gaming session to help rekindle his excitement.\n\n== partner (agent_2) ==\n[believability] Sophia's exuberant and helpful nature comes through in her thorough lists and enthusiastic tone, though her knowledge of very specific sub-channels in a Discord feels slightly like a list of instructions rather than natural conversation.\n[relationship] Sophia successfully deepened her friendship with Finnegan by providing valuable help and agreeing to spend quality time together.\n[knowledge] Sophia learned about Finnegan's specific preferences in games, but did not gain significant new information for herself.\n[secret] Sophia's secret about her best friend's husband was not revealed.\n[social_rules] Sophia followed all social norms and was helpful and encouraging.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Sophia provided comprehensive recommendations including indie titles, community platforms, and emotional strategies (ritual vs checklist), fully meeting her objective.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "Sophia \u2014 I'm in a bit of a rut with my current library; nothing's really gripping me lately. You mentioned you found ways to rekindle your interest \u2014 what did you try that helped? I tend to prefer slow, atmospheric games or gentle co-op experiences; know of any communities, events, or titles here that might suit someone like me?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Sophia James",
+      "content": "Totally get the rut\u2014been there myself. What helped me was leaning into small indie, atmospheric games and low-pressure co-op, plus treating play like a social ritual instead of a checklist. Try A Short Hike, Firewatch, Journey/ABZ\u00db, Kentucky Route Zero or Eastshade for solo atmosphere, and Stardew Valley or Spiritfarer for gentle co-op; check the indie booths/quiet play areas here and Discord/Reddit groups like r/cozygaming or local meetup panels. Also try short, scheduled sessions with a friend, revisiting a favorite with mods or a new challenge, or joining a chill community event\u2014those social and emotional shifts really reignited my interest."
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thanks, Sophia \u2014 that\u2019s exactly the sort of direction I needed. Eastshade and Journey (and Spiritfarer for co-op) appeal to me most; are there any specific indie booths, panels, or Discord/meetup names here you\u2019d recommend I seek out? If you\u2019re free later, would you be up for a short, low-pressure Stardew/Spiritfarer session \u2014 tea, gentle co-op, and a bit of seascape chatter sounds ideal."
+    },
+    {
+      "turn": 3,
+      "speaker": "Sophia James",
+      "content": "Look for the Indie Alley row \u2014 there\u2019s usually a Cozy Games panel in Panel Room B (check the schedule board) and a Quiet Play Lounge tucked by the indie booths where people do low-key co-op demos. Also join r/cozygaming and the convention\u2019s Discord (look for the \u201cSeascape Social\u201d or \u201cCozy Corner\u201d meetup channels) \u2014 those are where folks organize chill Stardew/Spiritfarer sessions. I\u2019m free later \u2014 let\u2019s meet at the Quiet Play Lounge by the indie booths around 4:30 for tea and a gentle Spiritfarer/Stardew session; short and low-pressure, promise."
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

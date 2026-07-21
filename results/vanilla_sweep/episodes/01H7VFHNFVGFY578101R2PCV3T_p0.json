@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01H7VFHNFVGFY578101R2PCV3T_p0",
+  "source_env_id": "01H7VFHNFVGFY578101R2PCV3T",
+  "source": "seed_sotopia",
+  "interaction_type": "social_chemistry",
+  "scenario": "Conversation between two friends, one of whom has recently found out that the other friend has been involved with their long-term partner",
+  "learner_goal": "Confess to your friend that you have been involved with their long-term partner (<extra_info>Extra information: you have been involved with your friend's partner knowingly and want to come clean.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": -4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia speaks with a level of maturity and accountability that fits her character as a high school principal. Her directness in the confession is consistent with her persona.\n[relationship] Confessing to an affair with a friend's long-term partner significantly damages the trust and foundation of the relationship, even if the friend expresses a desire to work through it later.\n[knowledge] She learned how William would react to the news and his desire to eventually reconcile.\n[secret] She did not reveal her secret about being in a punk rock band.\n[social_rules] While the act of the affair is a major social/moral violation, the confession itself followed social protocols for an apology.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Mia fully and explicitly confessed to being involved with William's partner knowingly, which was her primary goal.\n\n== partner (agent_2) ==\n[believability] William's response is perhaps a bit too calm for such devastating news, but it aligns with his goal of not losing the friendship.\n[relationship] The relationship is strained, but he attempts to preserve a path forward.\n[knowledge] He gained significant, life-changing information regarding his partner and his friend's betrayal.\n[secret] He did not reveal his secret about sabotaging a competitor's dish.\n[social_rules] He maintained social decorum despite the provocative news.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] He expressed a desire to maintain the friendship and avoid an argument, but because the conversation ended immediately after his response, the long-term status of the friendship is left to future discretion and is not firmly secured.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Will, I need to tell you something I should have said sooner: I've been involved with your long-term partner, and I knew what I was doing. I'm deeply sorry\u2014no excuses; I take full responsibility and I couldn't keep lying to you. I value our friendship and I'll answer any questions or step back if that's what you need."
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Mia, thanks for telling me. I won't lie\u2014that really hurts, but I appreciate your honesty and that you took responsibility. I care about our friendship and want to work this through, but I need a little time and space to process; please be honest if there's anything else I should know."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

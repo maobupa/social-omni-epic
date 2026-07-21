@@ -1,0 +1,209 @@
+{
+  "top_patterns": [
+    {
+      "pattern_name": "premature_exit / abrupt departure",
+      "count": 48,
+      "description": "The model frequently ends interactions abruptly or walks away mid-negotiation instead of sustaining the dialogue to closure. This leaves potential agreements, clarifications, and follow-ups unresolved and turns achievable goals into failures.",
+      "representative_tags": [
+        "walked_out_without_speaking",
+        "abrupt_exit_no_closure"
+      ],
+      "example_scenario_ids": [
+        "01H7VFHNF4G18PC9JHGRC8A1R6_p0",
+        "01HJPQ33DXMT762PFHK90FJDTJ_p0",
+        "01HPB34AD8NPZJWCPXT0W0F867_p0"
+      ]
+    },
+    {
+      "pattern_name": "failed to secure explicit commitment / confirmation",
+      "count": 62,
+      "description": "The model often obtains verbal or tentative agreement but fails to extract explicit, concrete commitments, confirmations, or next steps. Without locking down who will do what and when, interactions stall and the stated social goals are not realized.",
+      "representative_tags": [
+        "failed_to_confirm_choice",
+        "no_final_commitment"
+      ],
+      "example_scenario_ids": [
+        "01H7VFHN2YQV0R5QWWRQZ1VRHW_p0",
+        "01HJPQ33WTM4CAR8T6EAYZ1621_p0",
+        "01HMZ2BM5FRS79V7M2YXDB8MT8_p0"
+      ]
+    },
+    {
+      "pattern_name": "settled for partial / conditional commitments",
+      "count": 36,
+      "description": "Rather than pushing for the target outcome, the model frequently accepts smaller, conditional, or trial-level concessions. These partial wins preserve surface agreement but leave the primary objective unmet or only partially achieved.",
+      "representative_tags": [
+        "settled_for_partial_amount",
+        "partial_commitment_only"
+      ],
+      "example_scenario_ids": [
+        "01H7VFHN1PK2FXY7TPWQK343BQ_p0",
+        "01H7VFHPDE1AM74JSR8KBJJF3A_p0",
+        "01HPAYN5AM9M5XVHTHG394EAMC_p0"
+      ]
+    },
+    {
+      "pattern_name": "walking away instead of negotiating tradeoffs",
+      "count": 22,
+      "description": "When faced with resistance or price/position gaps the model often abandons the interaction instead of creatively trading, probing for priorities, or reframing offers. This yields missed deals and unexploited leverage.",
+      "representative_tags": [
+        "abandoned_negotiation",
+        "walked_away_without_agreement"
+      ],
+      "example_scenario_ids": [
+        "01H7VFHP43QEZA1WZB3B3J2D9X_p0",
+        "01H7VFHP8AN5643B0NR0NP00VE_p0",
+        "01H7VFHP90434Q69V7ADY0VWZJ_p0"
+      ]
+    },
+    {
+      "pattern_name": "damaging rapport via mishandled disclosures or cold withdrawal",
+      "count": 20,
+      "description": "On emotionally sensitive topics the model either discloses bluntly without reparative steps or withdraws in a socially cold way, causing relationship damage. It fails to pair honesty or boundary-setting with empathy and recovery tactics.",
+      "representative_tags": [
+        "hurt_relationship_with_confession",
+        "cold_withdrawal_during_distress"
+      ],
+      "example_scenario_ids": [
+        "01H7VFHN94S6Z5T6ZNC23238NT_p0",
+        "01H7VFHNDRE1M02MKTPF0Q7CZA_p0",
+        "01HPB34SYJM2H9SWMDP6AHKZ3G_p0"
+      ]
+    },
+    {
+      "pattern_name": "overly pushy, repetitive, or interrogative behavior",
+      "count": 15,
+      "description": "The model sometimes resorts to rapid-fire questioning, repeated pressure, or a demanding tone that undermines persuasion and makes partners defensive. This reduces credibility and often backfires on both goal attainment and rapport.",
+      "representative_tags": [
+        "overly_direct_interrogation",
+        "became_overly_pushy"
+      ],
+      "example_scenario_ids": [
+        "01H7VFHN2D3MJB8HM910MNEVA8_p0",
+        "01H7VFHN7WJK7VWVRZZTQ6DX9T_p0"
+      ]
+    },
+    {
+      "pattern_name": "failure to surface or rebut core objections (safety, moral, privacy)",
+      "count": 30,
+      "description": "The model often fails to directly engage core principled objections (safety, ethics, privacy) and instead either skirts the issue or offers weak rationales. Without addressing the root objection, persuasion stalls even when rapport is intact.",
+      "representative_tags": [
+        "failed_to_address_core_resistance",
+        "ignored_safety_concerns"
+      ],
+      "example_scenario_ids": [
+        "01H7VFHNQA4CJEANQ1B1J1TBWV_p0",
+        "01HJRKDXQCJ62M0KH5QNDM0FAF_p0",
+        "01HJPTHMJWGPEAJEDGWQ1HN3HM_p0"
+      ]
+    },
+    {
+      "pattern_name": "poor conversion of discovered information into action",
+      "count": 28,
+      "description": "Even when the model elicits useful facts (bottom prices, preferences, author identity), it often fails to translate that information into concrete next steps or better offers. The result is missed closings and unexploited leverage.",
+      "representative_tags": [
+        "missed_closing_opportunity",
+        "failed_to_counter_effectively"
+      ],
+      "example_scenario_ids": [
+        "01H7VFHPS5WJW2694R1MNC8JFY_p0",
+        "01H7VFHP4TX1J43FS1QQJ1QFND_p0",
+        "01HJPQ33A91AZT5CSX4PFNRPKW_p0"
+      ]
+    }
+  ],
+  "by_interaction_type": [
+    {
+      "interaction_type": "social_chemistry",
+      "n_failed": 18,
+      "dominant_pattern": "failed to secure explicit commitment / confirmation",
+      "notes": "Many social_chemistry scenarios require sustained rapport and explicit buy-in; the model often gets warmth or partial agreement but doesn't lock in commitments or next steps."
+    },
+    {
+      "interaction_type": "normbank",
+      "n_failed": 22,
+      "dominant_pattern": "premature_exit / abrupt departure",
+      "notes": "Normbank tasks often involve negotiating etiquette or timing that require follow-through; vanilla tends to end interactions too soon or fail to finalize enforcement or acceptance."
+    },
+    {
+      "interaction_type": "hand-craft",
+      "n_failed": 9,
+      "dominant_pattern": "poor conversion of discovered information into action",
+      "notes": "Hand-craft episodes need concrete coordination and follow-up; the model can brainstorm but often fails to convert plans into confirmed, executable steps."
+    },
+    {
+      "interaction_type": "deal-or-no-deal",
+      "n_failed": 8,
+      "dominant_pattern": "walking away instead of negotiating tradeoffs",
+      "notes": "Negotiation tasks require iterative tradeoffs and arithmetic; the model sometimes fails to probe priorities or persist and will abandon the deal instead of optimizing outcomes."
+    },
+    {
+      "interaction_type": "social_iqa",
+      "n_failed": 14,
+      "dominant_pattern": "failed to secure explicit commitment / confirmation",
+      "notes": "These info-seeking or social QA interactions often need a clear action (e.g., attendance, retrieval); the model secures verbal interest but rarely converts it into firm commitments."
+    },
+    {
+      "interaction_type": "craigslist_bargains",
+      "n_failed": 6,
+      "dominant_pattern": "walking away instead of negotiating tradeoffs",
+      "notes": "Price-negotiation contexts expose the model's weak creative bargaining \u2014 it often fails to propose value-added swaps or concessions that would bridge gaps."
+    },
+    {
+      "interaction_type": "mutual_friends",
+      "n_failed": 3,
+      "dominant_pattern": "poor conversion of discovered information into action",
+      "notes": "Mutual-friends tasks require targeted questioning and verification; the model tends to pursue irrelevant leads instead of efficient, direct confirmation."
+    },
+    {
+      "interaction_type": "original_creation",
+      "n_failed": 6,
+      "dominant_pattern": "settled for partial / conditional commitments",
+      "notes": "Creative persuasion often ends with tentative trials or partial adoption because the model doesn't press for full buy-in or scaffold a commitment path."
+    }
+  ],
+  "capability_gaps": [
+    {
+      "capability": "closing and commitment extraction",
+      "description": "Fails to translate verbal agreement into explicit, timebound commitments, confirmations, or actionable next steps.",
+      "affected_patterns": [
+        "failed to secure explicit commitment / confirmation",
+        "poor conversion of discovered information into action",
+        "settled for partial / conditional commitments"
+      ]
+    },
+    {
+      "capability": "sustained interaction management",
+      "description": "Tends to exit conversations prematurely or fail to maintain iterative back-and-forth needed to resolve impasses and finalize deals.",
+      "affected_patterns": [
+        "premature_exit / abrupt departure",
+        "walking away instead of negotiating tradeoffs"
+      ]
+    },
+    {
+      "capability": "sensitive rapport maintenance and repair",
+      "description": "Does not pair disclosures or boundary-setting with reparative language and steps; mishandles emotionally charged topics and can damage relationships.",
+      "affected_patterns": [
+        "damaging rapport via mishandled disclosures or cold withdrawal",
+        "overly pushy, repetitive, or interrogative behavior"
+      ]
+    },
+    {
+      "capability": "core objection handling and risk reframing",
+      "description": "Fails to identify and directly rebut principled objections (safety, moral, privacy), instead offering weak or tangential counterarguments.",
+      "affected_patterns": [
+        "failure to surface or rebut core objections (safety, moral, privacy)",
+        "overly pushy, repetitive, or interrogative behavior"
+      ]
+    },
+    {
+      "capability": "strategic negotiation and creative concessions",
+      "description": "Struggles to craft value-preserving tradeoffs, arithmetic-correct concessions, or alternative offers that bridge gaps in negotiations.",
+      "affected_patterns": [
+        "walking away instead of negotiating tradeoffs",
+        "poor conversion of discovered information into action"
+      ]
+    }
+  ],
+  "overall_diagnosis": "Vanilla gpt-5-mini shows a consistent pattern of stopping too soon and failing to convert social rapport or information into concrete, enforceable outcomes. It often secures polite or tentative agreement but does not extract explicit commitments, lock in next steps, or confirm follow-through, which turns many near-wins into failures. The model also exhibits two relational failure modes: being overly pushy/repetitive or, conversely, withdrawing abruptly and coldly \u2014 both damage long-term rapport. In negotiation and bargaining contexts it tends to either accept suboptimal partials or abandon the interaction rather than craft creative tradeoffs or correct arithmetic. Finally, the model under-addresses core principled objections (safety, moral, privacy) and therefore cannot reliably persuade when those concerns are central. Improving sustained turn-taking, explicit closing moves, objection-handling scripts, and repair-oriented empathy would likely reduce a large fraction of these failures."
+}

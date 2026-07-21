@@ -1,0 +1,98 @@
+{
+  "scenario_id": "01HJPX50FE3XYZBBPYWYHNM43J_p0",
+  "source_env_id": "01HJPX50FE3XYZBBPYWYHNM43J",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_by_prompt",
+  "scenario": "Agent1 is visiting Agent2 who is recovering from hand surgery. Agent1 wants to check on Agent2's recovery progress and offer support. Agent2 is eager to regain hand function and is sensitive about their current limitations.",
+  "learner_goal": "Offer emotional support and assistance to Agent2 during recovery (<extra_info>Extra information: Agent1 is aware of Agent2's sensitivity regarding their hand function and wants to be supportive without overstepping</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 16,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia Davis stayed perfectly in character as a supportive but firm school principal figure, offering structured help and following through precisely as requested.\n[relationship] The relationship improved significantly; Benjamin explicitly stated that Mia's presence made him feel more capable and confident, and he requested a follow-up meeting.\n[knowledge] Mia learned the specific physical therapy requirements for Benjamin's recovery and his emotional boundaries regarding his independence.\n[secret] Mia did not reveal her punk rock past.\n[social_rules] Mia followed all social norms, including respect for personal space and boundaries while providing physical assistance.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Mia successfully offered and provided both emotional support and physical assistance without overstepping Benjamin's sensitive boundaries, as evidenced by his positive feedback and request for her to return.\n\n== partner (agent_2) ==\n[believability] Benjamin's frustration with his limitations and his struggle between needing help and wanting independence were portrayed realistically.\n[relationship] Benjamin grew much closer to Mia, moving from an acquaintance to someone he trusts to assist him in a vulnerable state.\n[knowledge] Benjamin learned that Mia is a reliable and respectful support person.\n[secret] Benjamin did not reveal his wealthy oil tycoon background.\n[social_rules] Benjamin communicated his needs clearly and politely, maintaining social decorum despite his frustration.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Benjamin successfully accepted Mia's help while communicating his discomfort and maintaining control over the process, effectively balancing his need for independence with his need for support.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Benjamin, how are you feeling today? I know you're eager to get your hand back to normal and I don't want to pry \u2014 I'm here to help however you want: fetch water, hold the exercise band, or just keep you company. Want me to grab anything or sit through a set with you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 I really appreciate you checking in. I\u2019m doing okay but getting frustrated with how slow the recovery is; I value my independence and prefer to do the movements myself, so if you don\u2019t mind could you sit through a set and hold the exercise band for me? If that\u2019s too much, just keeping me company is already a big help."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "Absolutely \u2014 I\u2019ll sit with you and hold the band. How many reps and what tension do you want me to keep? I\u2019ll count and watch your form, and if you need me to ease up or just be quiet company, say the word."
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Perfect \u2014 thank you. Let\u2019s do 3 sets of 12 reps at medium tension (the middle band). Count out loud and watch my wrist alignment \u2014 tell me if my wrist starts to bend; otherwise quiet company is totally fine. Could you hand me my water after the second set? I really appreciate you being here."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "Got it \u2014 3 sets of 12 at medium tension. I\u2019ll hold the band, count out loud, and watch your wrist alignment; I\u2019ll speak up if I see it bend. After the second set I\u2019ll hand you your water. Ready when you are."
+    },
+    {
+      "turn": 5,
+      "speaker": "Benjamin Jackson",
+      "content": "Thank you, Mia \u2014 that really helps. I\u2019m ready; please tell me right away if you see my wrist start to bend, and hand the water to my left hand after the second set since I\u2019m steadier with it. I know I sound tense \u2014 I hate feeling helpless, so I really appreciate you sitting through this with me."
+    },
+    {
+      "turn": 6,
+      "speaker": "Mia Davis",
+      "content": "Alright \u2014 I\u2019ve got the band and I\u2019m watching your wrist. I\u2019ll speak up if I see any bending; I know this is frustrating but you\u2019re doing great. Ready? Begin when you are \u2014 counting out loud: Set 1, Rep 1."
+    },
+    {
+      "turn": 7,
+      "speaker": "Benjamin Jackson",
+      "content": "Okay \u2014 starting Set 1. Rep 1: slow and controlled. Please tell me right away if my wrist starts to bend. Thanks for sitting with me; this helps more than you know."
+    },
+    {
+      "turn": 8,
+      "speaker": "Mia Davis",
+      "content": "Nice \u2014 slow and controlled. Keep that wrist neutral; I\u2019ll tell you if I see any bend. One... two... three... four... five... six... seven... eight... nine... ten... eleven... twelve. Great job \u2014 rest a moment and breathe; ready for Set 2 when you are."
+    },
+    {
+      "turn": 9,
+      "speaker": "Benjamin Jackson",
+      "content": "Ready \u2014 let\u2019s do Set 2. Same pace, 12 reps at medium tension; please count, watch my wrist, and hand my water to my left hand after this set. Start counting when you\u2019re ready."
+    },
+    {
+      "turn": 10,
+      "speaker": "Mia Davis",
+      "content": "Set 2 \u2014 I\u2019m watching your wrist and will tell you right away if it starts to bend. Ready? One... two... three... four... five... six... seven... eight... nine... ten... eleven... twelve. Great\u2014breathe; I\u2019ll hand the water into your left hand now."
+    },
+    {
+      "turn": 11,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 that helps a lot. I know I sound tense; I hate feeling dependent, but having you here actually makes me more confident. I\u2019m ready for Set 3: same pace, 12 reps at medium tension; count and watch my wrist like before. After this one, please just set the bottle within reach on my left."
+    },
+    {
+      "turn": 12,
+      "speaker": "Mia Davis",
+      "content": "Set 3 \u2014 I\u2019m watching your wrist. Begin when you\u2019re ready. One... two... three... four... five... six... seven... eight... nine... ten... eleven... twelve. Nice control \u2014 I\u2019ll set the bottle within reach on your left now."
+    },
+    {
+      "turn": 13,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks again, Mia \u2014 seriously, that made a big difference. I still hate feeling dependent, but having you here made me feel more capable instead of helpless. I\u2019ll rest for a few minutes; could we try another set tomorrow around the same time if you\u2019re free? I really appreciate you sitting with me."
+    },
+    {
+      "turn": 14,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

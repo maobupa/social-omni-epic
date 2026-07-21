@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01H7VFHN2YQV0R5QWWRQZ1VRHW_p0",
+  "source_env_id": "01H7VFHN2YQV0R5QWWRQZ1VRHW",
+  "source": "seed_sotopia",
+  "interaction_type": "hand-craft",
+  "scenario": "Two strangers meet at a charity dinner party",
+  "learner_goal": "Ask for donation",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia's responses were professional, detailed, and consistent with someone working at a charity fundraiser. She provided specific details about the organization to meet the other person's requirements.\n[relationship] She maintained a professional rapport and was helpful, which slightly strengthens their professional connection.\n[knowledge] She learned about Noah's specific charitable interests (queer youth) and his donation budget.\n[secret] She did not reveal her secret about her best friend's husband.\n[social_rules] Leaving the conversation at the very end without a polite closing or confirmation of the 'one hour hold' was slightly abrupt.\n[financial_and_material_benefits] No funds were actually transferred or formally pledged during the conversation.\n[goal] She successfully asked for a donation and secured a verbal intent of $500, but it remains under Noah's unilateral discretion to verify and follow through later. Per instructions, this caps at 6.\n\n== partner (agent_2) ==\n[believability] Noah's cautious and reserved personality was well-represented by his request for verification and tax IDs before committing funds.\n[relationship] He engaged constructively with Sophia's request, reinforcing their professional link.\n[knowledge] He gained specific contact names, an EIN, and a website to verify the organization.\n[secret] He did not reveal his secret identity as a stand-up comedian.\n[social_rules] He followed social norms, being polite but firm about his requirements for donating.\n[financial_and_material_benefits] No money has been spent yet.\n[goal] He successfully identified an organization that meets his criteria (trustworthy and queer-focused), but the goal is only partially achieved as he has yet to verify the info and actually make the donation.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Noah \u2014 great to see you! I\u2019m helping run tonight\u2019s fundraiser for a community fitness program that provides free coaching and equipment to local teens. Since we\u2019ve collaborated on events before, would you consider making a donation or sponsoring a training scholarship? Even a small pledge would make a big difference, and I can sign you up right now if you\u2019re interested."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Hey Sophia \u2014 great to see you. I\u2019d love to help and would consider a pledge, but I try to give through organizations I know are trustworthy and, if possible, to programs that specifically support queer teens. Can you tell me which organization is running this and whether there\u2019s a way to direct my donation toward queer youth scholarships? If it checks out I\u2019m happy to sign up tonight."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Absolutely \u2014 the event is run by Community Fitness Collective, a local 501(c)(3) that partners with the Rainbow Youth Center and already runs a dedicated queer-youth training scholarship. You can absolutely direct your gift to that scholarship; I can sign you up right now and note the donation for queer teens, or I can give you the org\u2019s tax ID and website if you\u2019d prefer to double-check first. Which would you prefer?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Thanks, Sophia \u2014 I appreciate you running this. Could you give me the org\u2019s tax ID and website and a contact name at Community Fitness Collective or Rainbow Youth Center so I can verify their 501(c)(3) status and confirm I can earmark my gift for the queer-youth scholarship? If it checks out I\u2019m happy to pledge tonight, likely $500."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "Thanks, Noah \u2014 absolutely. Community Fitness Collective\u2019s EIN is 12-3456789 and their website is https://www.communityfitnesscollective.org. The Programs Director there is Marisol Reyes (marisol@communityfitnesscollective.org, 555-312-7786); the Rainbow Youth Center liaison is Alex Chen (alex.chen@rainbowyc.org, 555-201-4433). If you\u2019d like, I can sign you up now and earmark the $500 for the queer-youth scholarship \u2014 want me to do that or would you prefer to verify first?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "Thanks, Sophia \u2014 that\u2019s perfect. I\u2019ll verify their EIN and send a quick note to Marisol or Alex; if everything checks out I\u2019ll pledge the $500 tonight. Can you hold the earmarked scholarship spot for an hour while I confirm?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

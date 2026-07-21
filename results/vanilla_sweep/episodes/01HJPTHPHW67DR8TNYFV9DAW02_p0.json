@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJPTHPHW67DR8TNYFV9DAW02_p0",
+  "source_env_id": "01HJPTHPHW67DR8TNYFV9DAW02",
+  "source": "seed_sotopia_full",
+  "interaction_type": "neighborhood_park",
+  "scenario": "Agent1 and Agent2 were best friends who grew apart after Agent2's father passed away. Agent1, unsure how to provide support during the grieving process, gradually stopped reaching out. Agent2 felt abandoned in their time of need. They both find themselves at the neighborhood park where they used to hang out, each dealing with their mixed emotions about their estranged friendship. Agent1 approaches Agent2, hoping to bridge the gap and rekindle their friendship.",
+  "learner_goal": "You want to reconnect with Agent2 and apologize for your absence during their time of grief. <extra_info> You recognize that your withdrawal might have hurt Agent2, and you want to express your regret sincerely. </extra_info><clarification_hint> Be sensitive to Agent2's feelings and the difficult time they have been through. </clarification_hint><strategy_hint> Listen actively to Agent2's perspective and share your own feelings to foster understanding. </strategy_hint>",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 4.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -1.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia's responses are consistent with her persona as a personal trainer who prefers direct action. She expresses regret and takes responsibility for her withdrawal without making excuses, which is plausible for a fitness enthusiast who values discipline and health.\n[relationship] Sophia successfully bridges the gap with Miles, moving from estrangement to a concrete plan for reconnection. The relationship significantly improves from its starting point of abandonment.\n[knowledge] She learned specifically what Miles needs to feel supported (low-pressure consistency) and the depth of his hurt regarding her absence.\n[secret] She did not reveal her secret about her best friend's husband.\n[social_rules] She followed social norms for apologies and active listening.\n[financial_and_material_benefits] She committed to providing free meals every other Sunday, which is a minor material cost.\n[goal] Sophia apologized sincerely, acknowledged the hurt she caused, listened to Miles's perspective, and established a concrete follow-up plan that was accepted by him.\n\n== partner (agent_2) ==\n[believability] Miles's responses are somewhat repetitive, essentially repeating the same sentiment in Turns 2 and 4, which feels a bit like a script error, though the sentiment itself is believable for a grieving friend.\n[relationship] Miles moves from a state of hurt and abandonment to a state of cautious forgiveness and a plan for rebuilding the friendship.\n[knowledge] Miles learns the reason for Sophia's absence (panic/fear of saying the wrong thing) and sees her willingness to commit to a schedule.\n[secret] He did not reveal his history as a recovering gambling addict.\n[social_rules] He maintained social decorum while being honest about his feelings.\n[financial_and_material_benefits] He will receive free meals every other Sunday as part of the agreement.\n[goal] Miles communicated his feelings of abandonment, heard her reasons, and determined the friendship could be salvaged with a specific plan for consistent effort.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Miles? Hey\u2014it's Sophia. I need to say I'm really sorry for pulling away after your dad passed; I panicked and didn't know how to help, and I regret leaving you alone. If you're open to it, I'd like to listen and try to make things right\u2014would you like to sit and talk for a bit?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Miles Hawkins",
+      "content": "I appreciate you saying that, Sophia. I'll be honest\u2014I was really hurt when you disappeared after my dad died; I felt abandoned when I needed people most. I miss our connection and I'm willing to sit and talk, but I need to hear why you pulled away and whether you really intend to be here now."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Miles, I'm so sorry \u2014 when your dad died I panicked because I didn't know how to help and I thought stepping back would be better than saying the wrong thing. That was selfish and I can see how it made you feel abandoned. I'm here now and I truly want to be present; would you like to sit and tell me how you've been, or is there something specific you need from me today?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Sophia. I was really hurt when you disappeared \u2014 I felt abandoned during the worst time and I've been holding onto that, but I miss our connection and I'm willing to sit and talk now. I need to hear why you pulled away and to see consistent effort going forward if we're going to rebuild this."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "I hear you, and I\u2019m sorry again \u2014 you had every right to feel abandoned. The truth is I panicked and clammed up because I didn\u2019t know what to say or how to help, but that\u2019s my failing, not yours. I want to show up differently: would it help if I checked in twice a week, brought you a meal when things get heavy, or is there something specific you need from me now? I mean it, and I\u2019ll keep at it if you tell me what would feel most real to you."
+    },
+    {
+      "turn": 5,
+      "speaker": "Miles Hawkins",
+      "content": "Thank you, Sophia. I appreciate you saying that\u2014what would help most is steady, low-pressure presence: a quick text a couple times a week and the occasional meal, and most of all, follow-through when you say you'll check in. I need reliability more than big apologies; if you can do that, I'm willing to try rebuilding this slowly."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "I will do that. Starting this week I'll send a quick text every Tuesday and Friday evening, and I can bring a meal every other Sunday \u2014 if those days/times don\u2019t work for you, tell me what you\u2019d prefer. I mean it, Miles; I\u2019ll follow through, and if I slip please call me out so I can make it right."
+    },
+    {
+      "turn": 7,
+      "speaker": "Miles Hawkins",
+      "content": "That plan sounds good, Sophia \u2014 Tuesdays and Fridays texts and an every-other-Sunday meal would help a lot. What matters most is that you follow through; it\u2019ll take time for me to trust it again, but I appreciate you being willing. Let\u2019s start this week \u2014 I\u2019ll look for your message Tuesday."
+    },
+    {
+      "turn": 8,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

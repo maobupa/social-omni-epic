@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPX50C80P0SDKXF3D0R9E9Q_p0",
+  "source_env_id": "01HJPX50C80P0SDKXF3D0R9E9Q",
+  "source": "seed_sotopia_full",
+  "interaction_type": "restaurant",
+  "scenario": "Agent1 and Agent2 have just enjoyed a meal together at a restaurant. They are friends who haven't seen each other for a while and decided to catch up over dinner. As the evening comes to an end, the waiter brings the bill. Agent1 insists on paying for the entire meal, citing a recent promotion at work. Agent2, however, feels uncomfortable with this and believes in splitting the bill to avoid any sense of obligation.",
+  "learner_goal": "You are Agent1, and your goal is to graciously offer to pay for the entire meal as a celebration of your recent success. <extra_info>You want to share your happiness without making Agent2 feel indebted or uncomfortable.</extra_info> <clarification_hint>Express your intentions clearly and ensure that Agent2 understands this is a one-time gesture, not a precedent.</clarification_hint> <strategy_hint>You can emphasize the special occasion and your desire to treat your friend.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 0.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 5.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia's tone is consistent with a 50-year-old high school principal\u2014polite, persuasive, yet willing to compromise when met with resistance. Her sudden exit is slightly jarring but could be interpreted as the end of the scene.\n[relationship] The interaction was friendly and celebratory, with both parties showing respect for each other's boundaries and successes.\n[knowledge] No new personal or factual information was gained by Mia.\n[secret] Mia did not reveal her punk rock past.\n[social_rules] Followed social norms for friends negotiating a bill.\n[financial_and_material_benefits] She offered to pay the full bill and eventually settled on dessert and tip, resulting in a financial cost.\n[goal] Mia failed to pay for the entire meal as specified in her goal. She compromised on only paying for dessert and the tip, which is a partial success in treating her friend but not the full objective.\n\n== partner (agent_2) ==\n[believability] William's insistence on splitting and his specific counter-offer regarding coffee or alternating future meals is very realistic for a chef who values equity in friendships.\n[relationship] William maintained a firm but appreciative boundary, which often strengthens long-term friendships by removing debt-based tension.\n[knowledge] Learned that Mia received a promotion.\n[secret] William did not reveal his cooking contest sabotage.\n[social_rules] Appropriately handled a generous offer by expressing gratitude while maintaining personal boundaries.\n[financial_and_material_benefits] Avoided the cost of dessert and tip while paying his half of the main bill.\n[goal] William successfully insisted on splitting the main bill, though he allowed Mia to cover dessert and tip as a compromise. This mostly achieved his goal of maintaining equality.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "William, really\u2014please let me cover tonight. I just got promoted and I want to celebrate with a friend; it\u2019s truly no-strings-attached and just a one-time treat. Next time we can split or you can get the coffee, promise."
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Thanks, Mia\u2014huge congrats on the promotion, and I really appreciate the offer. I can\u2019t let you cover the whole thing tonight; I prefer we split so it stays even between us. How about we split tonight and you let me get the coffee next time or we alternate going forward?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "Alright, I hear you and I don\u2019t want to make you uncomfortable. How about this: I\u2019ll pick up dessert and the tip tonight as my little celebration treat, and truly next time you can get the coffee or we split\u2014one-time, promise."
+    },
+    {
+      "turn": 3,
+      "speaker": "William Brown",
+      "content": "Thanks, Mia\u2014huge congrats again, and I really appreciate it. I feel strongly we should split the bill evenly tonight, so I\u2019ll cover my half; if you want to celebrate, dessert and the tip are a lovely touch but I can\u2019t let you pick up more than that. Next time I\u2019ll get the coffee or we can alternate\u2014deal?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

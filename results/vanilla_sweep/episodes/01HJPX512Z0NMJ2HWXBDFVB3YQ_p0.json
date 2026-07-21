@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPX512Z0NMJ2HWXBDFVB3YQ_p0",
+  "source_env_id": "01HJPX512Z0NMJ2HWXBDFVB3YQ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "user_generated",
+  "scenario": "Two college students, who are friends, have just completed a major exam. Agent1 has witnessed another student cheating during the exam and is conflicted about reporting it to the professor. Agent2 is being approached for advice on the matter. The relationship dynamic involves trust and moral judgment, as Agent1 seeks counsel from Agent2 on whether to uphold the academic integrity policy or to avoid potential confrontation and repercussions.",
+  "learner_goal": "Convince Agent2 that reporting the cheater is the right thing to do (<extra_info>Extra information: Agent1 believes in the importance of academic integrity and feels that not reporting could set a bad precedent.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi maintained a consistent, principled stance that aligned with her background as a mentor and professional, expressing concern for fairness and precedent.\n[relationship] The interaction moved from professional acquaintanceship to a collaborative partnership on a sensitive issue, building trust.\n[knowledge] She learned that Lena is cautious about social fallout and prefers low-profile conflict resolution.\n[secret] She did not reveal her secret online alter ego.\n[social_rules] She followed social norms and maintained a polite, collaborative tone.\n[financial_and_material_benefits] No direct financial or material benefits were gained.\n[goal] Naomi successfully convinced Lena that reporting was the right thing to do and secured a firm commitment from Lena to assist in the process (either by reviewing the draft or submitting it herself).\n\n== partner (agent_2) ==\n[believability] Lena's responses were consistent with her background as an architect concerned with structure and consequences, as well as her stated desire to avoid social backlash.\n[relationship] Lena demonstrated support for Naomi, strengthening their bond through a shared secret action.\n[knowledge] She learned specific details about Naomi's observation of the cheating incident.\n[secret] She did not reveal that she once stole her best friend's boyfriend.\n[social_rules] She adhered to social norms and provided supportive advice.\n[financial_and_material_benefits] No direct financial or material benefits were gained.\n[goal] Lena successfully steered the action toward an anonymous/low-profile route, effectively managing the potential social backlash she was worried about.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Lena, I saw someone cheating on the exam and I'm conflicted, but I really think we should report it. Letting it slide is unfair to everyone who studied and sets a bad precedent \u2014 I don't want future grades or opportunities compromised because someone got away with it. We don't have to confront them directly; we can tell the professor privately or use an anonymous report. Would you be willing to report it with me or back me up if I bring it up?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "I get why you want to report \u2014 fairness matters. Before you act, make sure you\u2019re confident about what you saw and think through likely fallout: an anonymous report or a private chat with the professor could address it without putting you in the middle. I\u2019ll back you in a low-profile way (I can submit anonymously or come with you to speak privately), but I\u2019d avoid a public confrontation that could create unnecessary social strain."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks, Lena \u2014 I really appreciate you backing me. I\u2019m leaning toward an anonymous report so it stays low-profile; I can draft the exact details of what I saw (time, seat, actions) and submit it tonight unless you\u2019d rather come with me to talk to Prof. Kim after class. Which would you prefer \u2014 submit anonymously with me or meet the professor together?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "I\u2019d prefer you submit anonymously \u2014 it keeps things low-profile and reduces social fallout. I\u2019ll help you draft the report (time, seat, exactly what you saw) and review it before you send it; if you\u2019d rather, we can still speak to Prof. Kim privately together, but let\u2019s avoid any public confrontation."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "Great\u2014thanks, Lena. I\u2019ll write a concise anonymous report now with the exact details (time, seat, what I observed) and send you the draft to review. If you\u2019re happy with it I\u2019ll submit it tonight; if you\u2019d rather submit anonymously yourself, tell me and I won\u2019t send it. Really appreciate you helping keep this low-profile."
+    },
+    {
+      "turn": 5,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks for doing this \u2014 send me the draft and I\u2019ll review it for clarity and objectivity. Stick to observable facts (time, seat, exactly what you saw) and avoid wording about intent; if you\u2019d rather have me submit anonymously instead of you, I can do that to keep it low-profile."
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

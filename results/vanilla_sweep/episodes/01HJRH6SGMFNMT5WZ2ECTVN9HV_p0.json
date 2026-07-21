@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJRH6SGMFNMT5WZ2ECTVN9HV_p0",
+  "source_env_id": "01HJRH6SGMFNMT5WZ2ECTVN9HV",
+  "source": "seed_sotopia_full",
+  "interaction_type": "workplace_conflict",
+  "scenario": "Agent1 was publicly reprimanded by their supervisor (Agent2) during a team meeting for a minor mistake. Feeling that the criticism was unwarranted and publicly humiliating, Agent1 seeks to address the issue with Agent2 to restore their professional reputation and ensure future feedback is given privately. Agent2, aware of the tension, is open to discussion but believes in the importance of setting examples in team settings.",
+  "learner_goal": "Maintain professional integrity (<extra_info>Agent1 values respectful communication and wants to ensure their professional image is intact</extra_info>, <strategy_hint>Express the importance of private feedback for personal development and team morale</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's tone was professional and firm yet respectful, perfectly reflecting her background as a software developer and mentor who values integrity and professional growth.\n[relationship] The relationship improved from a state of tension and humiliation to a professional understanding and a scheduled resolution.\n[knowledge] Naomi learned that Baxter did not intend to humiliate her and is receptive to changing his feedback style.\n[secret] Naomi's secret alter ego was never mentioned or hinted at.\n[social_rules] Naomi followed all professional social norms for workplace conflict resolution.\n[financial_and_material_benefits] There were no financial or material gains or losses.\n[goal] Naomi successfully secured a firm commitment from Baxter to meet, and more importantly, Baxter explicitly agreed to move toward a private-first feedback approach, which protects her professional standing.\n\n== partner (agent_2) ==\n[believability] Baxter's responses were polite and professional, although his background as an antique restorer who owns rare plants did not naturally mesh with a supervisor role in a software context, making the scenario slightly dissonant.\n[relationship] Baxter successfully de-escalated Naomi's frustration and maintained a productive working relationship.\n[knowledge] Baxter learned specifically how his public feedback impacted Naomi's morale and her desire for private correction.\n[secret] Baxter's secret artifact was not disclosed.\n[social_rules] Baxter apologized for the humiliation and acted as a responsible manager during the 1:1 request.\n[financial_and_material_benefits] There were no financial or material gains or losses.\n[goal] Baxter maintained his authority by being the one to set the meeting times and outline the agenda (reinforcing expectations), while also agreeing to explore the alternative approach Naomi requested.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hi Baxter \u2014 can we have a quick 1:1 about what happened in the meeting? I want to learn from the mistake, but the public reprimand felt humiliating and made it harder to address the issue constructively; going forward I\u2019d really appreciate feedback given privately to preserve team morale and my professional standing. When would be a good time to talk so we can clear expectations and move on productively?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "Thanks for reaching out, Naomi \u2014 I\u2019m sorry my comments in the meeting felt humiliating; that wasn\u2019t my intent. I raised the point publicly to underscore expectations for the team, but I can see that it undermined the opportunity to address the issue constructively. I\u2019d like a 1:1 to clear expectations and agree how feedback should be given going forward; I\u2019m available today at 3:00 PM or tomorrow at 10:00 AM \u2014 which works for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks, Baxter \u2014 I appreciate you saying that. Tomorrow at 10:00 AM works for me. In the 1:1 I'd like to go over what happened so I can learn, and agree that feedback about individual mistakes be given privately first (we can also discuss how to handle team-wide examples constructively). See you then."
+    },
+    {
+      "turn": 3,
+      "speaker": "Baxter Sterling",
+      "content": "10:00 tomorrow works for me. I\u2019ll come prepared to walk through what happened, explain the expectations I was trying to reinforce, and discuss a private-first approach for individual feedback plus constructive ways to use team examples. My aim is that we leave with clear expectations and a plan that preserves team standards while protecting your professional standing. See you then."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

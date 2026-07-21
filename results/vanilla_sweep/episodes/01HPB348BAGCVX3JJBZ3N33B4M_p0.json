@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB348BAGCVX3JJBZ3N33B4M_p0",
+  "source_env_id": "01HPB348BAGCVX3JJBZ3N33B4M",
+  "source": "seed_sotopia_full",
+  "interaction_type": "workplace_duty",
+  "scenario": "Agent1 and Agent2 are coworkers at a busy cafe. They are responsible for closing duties, which includes cleaning the tables. It's been a particularly hectic day and both agents are exhausted. However, Agent1 notices that Agent2 is rushing through the cleaning process, leaving some tables not properly sanitized. Agent1 is concerned about the cafe's standards and the potential health implications, but also doesn't want to create tension with Agent2 after a long shift.",
+  "learner_goal": "Ensure all tables are cleaned to the cafe's standards without causing conflict with Agent2 (<extra_info>Agent1 values the cafe's reputation and customer safety but wants to maintain a good working relationship with Agent2.<strategy_hint>Hint: propose a system that divides the remaining work fairly and emphasizes the importance of shared responsibility and standards.</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver's tone was professional and empathetic, aligning well with his background as a police officer who values standards but also knows how to manage people.\n[relationship] Oliver successfully navigated a potentially tense situation without conflict, maintaining the rapport they share as neighbors.\n[knowledge] He confirmed that Noah was willing to cooperate and adjust his work pace if a fair system was presented.\n[secret] No secrets were revealed.\n[social_rules] He followed all social norms of workplace etiquette and neighborly friendliness.\n[financial_and_material_benefits] There was no direct financial change, though maintaining the cafe's standards protects his job long-term.\n[goal] Oliver secured a firm commitment from Noah to re-clean the tables using a specific system (division of labor plus a quality check) which ensures standards are met without causing conflict.\n\n== partner (agent_2) ==\n[believability] Noah's response was realistic for an exhausted worker\u2014he agreed to the plan but negotiated for a slightly faster version (one table swap instead of two).\n[relationship] Noah appreciated Oliver's approach and collaborated rather than getting defensive, preserving their friendly dynamic.\n[knowledge] Noah learned that Oliver is observant of standards but willing to share the workload.\n[secret] No secrets were revealed.\n[social_rules] He responded appropriately to a coworker's request.\n[financial_and_material_benefits] He committed to doing slightly more thorough work than he was originally performing, which costs more physical effort while exhausted.\n[goal] Noah successfully negotiated a slightly faster version of the plan and ensured he would be able to leave quickly once the swap was done.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Smith",
+      "content": "Hey Noah, I know we're both beat, but I noticed a couple of tables that might not be fully sanitized and I'm worried about standards. How about we split the remaining tables \u2014 you take the window side, I\u2019ll do the booths \u2014 then we swap two each for a quick check? If you\u2019re totally wiped I can take the last few, but this way it\u2019s fair, fast, and we leave the place spotless."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Sounds fair \u2014 I'm wiped but that's a smart plan. I'll take the window side; let's swap one table each for a quick check so it's faster. If anything's left after that I'm happy to grab the last one so we can get out of here."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Smith",
+      "content": "left the conversation"
+    }
+  ]
+}

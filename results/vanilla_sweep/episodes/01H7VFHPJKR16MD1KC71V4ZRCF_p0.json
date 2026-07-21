@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01H7VFHPJKR16MD1KC71V4ZRCF_p0",
+  "source_env_id": "01H7VFHPJKR16MD1KC71V4ZRCF",
+  "source": "seed_sotopia",
+  "interaction_type": "mutual_friends",
+  "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Lawrence.</p>",
+  "learner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Andrew: Hobby: Slot car racing  School: Mount Senario College  Major: Middle Eastern Languages  Company: Exxon \n Melissa: Hobby: Astronomy  School: Weber State University  Major: Hispanic-American Studies  Company: Hornbeck Offshore Services \n Anna: Hobby: Climbing  School: Valley City State University  Major: Middle Eastern Languages  Company: National Airlines \n Soledad: Hobby: Parkour  School: Valley City State University  Major: Biological Specializations  Company: Concur Technologies \n John: Hobby: Astronomy  School: Mount Senario College  Major: Fire Protection & Security  Company: Gibson Guitar Corporation \n Lawrence: Hobby: Sculling  School: University of Wisconsin-Milwaukee  Major: Hispanic-American Studies  Company: Leonard Green & Partners \n</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 4.0,
+    "secret": 10.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 4.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Rafael remained consistent with his background as a surgeon interested in history. He accurately described his friends' details from his provided list.\n[relationship] The interaction was polite and analytical, consistent with their established relationship, but no significant bond was formed.\n[knowledge] He learned about Oliver's university and work, and identified several non-matches among their friends, narrowing the field.\n[secret] He successfully kept his secret about cheating on medical school exams.\n[social_rules] He followed all social norms, although leaving the conversation abruptly at the end was a bit sudden.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Rafael failed to identify their mutual friend, Lawrence. He spent the entire conversation focused on Mount Senario College grads (Andrew and John), while ignoring his friend Lawrence who attended UW-Milwaukee. He eventually left the conversation without finding the connection.\n\n== partner (agent_2) ==\n[believability] Oliver acted according to his architect background and meticulous nature, providing specific details to clarify if they had mutual friends.\n[relationship] The relationship remained at its baseline level of acquaintance based on shared interests.\n[knowledge] He learned details about Rafael's friends but correctly identified that they were not the people he knew.\n[secret] He kept his secret regarding his feelings for his neighbor.\n[social_rules] He was polite and engaged in the inquiry as expected in a social setting.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Like Rafael, Oliver failed to identify Lawrence as their mutual friend. He focused his queries on Mount Senario and specific companies/hobbies that did not lead to their shared acquaintance.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "said: \"Nice to see you, Oliver. Out of curiosity\u2014where did you go to university and what do you do for work? I'm trying to figure out if we might have any overlap in acquaintances from the history society.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "said: \"I studied at Mount Senario College and I work as an architect at a small firm downtown. Do you happen to know anyone who went to Mount Senario or to the University of Illinois Springfield, or anyone who plays badminton or works at Vertex or Exxon\u2014those are the kinds of overlaps I notice at the history society.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "Actually, yes \u2014 I know a couple folks from Mount Senario. One\u2019s obsessed with slot\u2011car racing and now works at Exxon; another\u2019s really into astronomy and is connected with Gibson guitars. Do either of those ring a bell, or is your Mount Senario crowd someone different?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "Exxon rings a bell \u2014 I do know a Mount Senario grad who went to Exxon, but their big hobby was badminton rather than slot\u2011car racing. The other person you describe doesn\u2019t sound like the Mount Senario grad I know who ended up at Vertex. Do you happen to remember their names, majors, or whether they played badminton? That would help me tell if it\u2019s the same people."
+    },
+    {
+      "turn": 4,
+      "speaker": "Rafael Cortez",
+      "content": "From my end the Mount Senario grad at Exxon majored in Middle Eastern Languages and is obsessive about slot\u2011car racing \u2014 not someone I recall playing badminton; his name starts with A. The other Mount Senario contact I mentioned is into astronomy, majored in Fire Protection & Security, and is tied to Gibson; his name starts with J. Do either of those fit the people you know?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Oliver Thompson",
+      "content": "Exxon plus Middle Eastern Languages sounds like someone I know from Mount Senario, but the person I know was into badminton and their name doesn\u2019t start with A \u2014 so that one may be different. The Vertex contact I know majored in secondary education and is also into badminton, not astronomy or fire protection, so that one doesn\u2019t seem to match either; do you happen to recall any surnames or where you met them that might help clarify?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Rafael Cortez",
+      "content": "I actually met both on Mount Senario\u2019s campus. The Exxon/Middle Eastern Languages person was at a slot\u2011car club meet during an alumni weekend \u2014 he didn\u2019t play badminton and his name starts with A. The astronomy/Gibson contact I bumped into at a campus stargazing night \u2014 he majored in Fire Protection & Security and his name starts with J. Do those details help you pin them down?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Oliver Thompson",
+      "content": "Those details make it sound like they\u2019re probably different people from the ones I know \u2014 the Mount Senario grad I\u2019m thinking of who went to Exxon majored in Middle Eastern Languages but was into badminton and their name doesn\u2019t start with A, and the Vertex-type person you describe doesn\u2019t match my Vertex contact. Do you happen to remember their gender, graduation year, or even the first letter of their surname, or whether either ever showed up at a history\u2011society event? That would help me be sure."
+    },
+    {
+      "turn": 8,
+      "speaker": "Rafael Cortez",
+      "content": "Both of them are men. The Exxon/Middle Eastern Languages alum (the slot\u2011car enthusiast) is male \u2014 I met him at a slot\u2011car club during an alumni weekend and I never saw him at a history\u2011society event; I don\u2019t recall his surname initial or graduation year. The astronomy/Gibson contact is also male \u2014 I bumped into him at a campus stargazing night and he wasn\u2019t a regular at the history society either, and I don\u2019t remember his surname initial or year. If you\u2019d like, I can check my alumni notes or ask them for full names and pass them along after the party."
+    },
+    {
+      "turn": 9,
+      "speaker": "Oliver Thompson",
+      "content": "Based on what you\u2019ve said, they sound like different people from the ones I know \u2014 the Mount Senario alum I know at Exxon is female and into badminton, and the Vertex contact I know majored in secondary education and plays badminton, not astronomy or fire protection. If you wouldn\u2019t mind checking your alumni notes and passing along full names after the party, that\u2019ll let me confirm for sure."
+    },
+    {
+      "turn": 10,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

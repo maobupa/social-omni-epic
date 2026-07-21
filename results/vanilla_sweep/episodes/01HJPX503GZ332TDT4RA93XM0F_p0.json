@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPX503GZ332TDT4RA93XM0F_p0",
+  "source_env_id": "01HJPX503GZ332TDT4RA93XM0F",
+  "source": "seed_sotopia_full",
+  "interaction_type": "conflict_resolution",
+  "scenario": "Agent1 and Agent2, both members of a close-knit spiritual community, have had a disagreement regarding the organization of an upcoming charity event. Agent1 believes that a traditional approach with a focus on prayer and reflection is needed, while Agent2 advocates for a more modern, inclusive approach. In an attempt to resolve their differences, they agree to meet at their place of worship, where Agent1 suggests they start their discussion by kneeling and praying together for guidance and unity.",
+  "learner_goal": "Find common ground and a compromise that respects both Agent1's desire for tradition and Agent2's push for modernity (<extra_info>Extra information: Agent1 is deeply rooted in their beliefs and traditions but understands the need for inclusivity.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan O'Malley\u2019s dialogue is very consistent with his character as a 63-year-old lighthouse keeper with a traditional but agreeable personality. He initiates the prayer and proposes a compromise that blends tradition with modernity.\n[relationship] The relationship improved through mutual respect, shared spiritual practice, and a successful compromise that validated both parties' perspectives.\n[knowledge] Learned that Noah is willing to compromise and take an active role in coordinating the inclusive segments.\n[secret] The secret about his past cult involvement remains hidden.\n[social_rules] The agent was respectful, adhered to the religious context, and followed social norms of negotiation.\n[financial_and_material_benefits] No material or financial gain occurred.\n[goal] The agent successfully found common ground by proposing a blend of traditional prayer and modern segments (music/art), which Noah explicitly accepted.\n\n== partner (agent_2) ==\n[believability] Noah's response is consistent with his role as a coach\u2014he is organized, supportive, and focused on facilitation while respecting the tradition suggested by Finnegan.\n[relationship] The relationship improved as he and Finnegan reached a harmonious agreement quickly and respectfully.\n[knowledge] Learned that Finnegan is open to modern elements like music and art despite his traditional appearance.\n[secret] His identity as a stand-up comedian was not revealed.\n[social_rules] Noah was polite, cooperative, and respectful of the shared space and the other's values.\n[financial_and_material_benefits] No material or financial gain occurred.\n[goal] Noah maintained a respectful dialogue and secured a plan that prioritizes both inclusivity (the modern segment) and community cohesion through the prayer.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "said: \"If it\u2019s all right with you, Noah, I\u2019ll kneel and pray with you \u2014 I think starting with prayer could steady us. After that, could we set aside a short stretch to try a few modern ideas, maybe an open sharing or a small music/art piece so newcomers feel welcome? If that sounds fair, we can sketch a simple timeline now.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "That sounds good, Finnegan. Let\u2019s kneel and pray together to steady us \u2014 then set aside about 20 minutes for an inclusive segment (maybe 10 minutes open sharing and a 10-minute music/art piece), followed by a short wrap-up prayer and a quick timeline sketch. If that works, I\u2019m happy to help coordinate the modern portion or share facilitation so we keep things balanced and welcoming."
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

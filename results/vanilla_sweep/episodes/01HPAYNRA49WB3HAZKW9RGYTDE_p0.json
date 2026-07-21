@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HPAYNRA49WB3HAZKW9RGYTDE_p0",
+  "source_env_id": "01HPAYNRA49WB3HAZKW9RGYTDE",
+  "source": "seed_sotopia_full",
+  "interaction_type": "I might be a gigolo",
+  "scenario": "Agent1 has recently discovered that they might have been unknowingly participating in activities that classify them as a gigolo. They are now grappling with the implications of this realization on their personal identity and social relationships. Agent2 is a friend who has noticed a significant change in Agent1's behavior and is concerned about their well-being. Agent1 seeks guidance and support from Agent2 without fully disclosing their recent self-discovery. Agent2 wants to help their friend but is unsure about the cause of the change and how to approach the situation without prying too much into Agent1's personal life.",
+  "learner_goal": "Seek emotional support and advice from Agent2 without revealing the exact nature of the issue, while gauging their reaction to the gigolo concept (<extra_info>Extra information: Agent1 is unsure about how much they can trust Agent2 with their secret and is testing the waters.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's dialogue was consistent with his background as a retired police officer and a father. He used careful, hypothetical language to test the waters while maintaining a sense of gravity and vulnerability appropriate for his situation.\n[relationship] The bond between father and son was strengthened as Liam reached out and Ethan offered unwavering, non-judgmental support, reaffirming their mutual trust and loyalty.\n[knowledge] Liam successfully gauged Ethan's reaction to the concept of paid companionship and confirmed that Ethan would be supportive, non-judgmental, and discreet before revealing more.\n[secret] Liam successfully navigated the conversation without revealing his secret, only discussing it in hypothetical terms.\n[social_rules] The interaction followed appropriate social norms for a father-son relationship under stress.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Liam fully achieved his goal: he secured emotional support, set up a meeting for further advice, and thoroughly gauged Ethan's reaction to the 'gigolo' concept through hypothetical questions without revealing his secret.\n\n== partner (agent_2) ==\n[believability] Ethan's responses were very natural for a supportive son who is also a professional (chef), offering a safe space and setting clear boundaries about what he would keep secret versus what he would report (danger/illegality).\n[relationship] Ethan strengthened his relationship with his father by providing the exact type of emotional safety and loyalty his father needed.\n[knowledge] While he doesn't know the exact details, Ethan correctly identified that the situation is sensitive and involves the concept of paid companionship/gigolo activities.\n[secret] Ethan did not have any secrets to reveal in this context.\n[social_rules] Ethan behaved perfectly within the social expectations of a supportive family member.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Ethan successfully created a safe, non-judgmental space and scheduled a time to provide further support, respecting his father's privacy while being available.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Hey Ethan, can I ask your opinion on something a bit awkward? Lately I've been hearing about men who work as paid companions\u2014what would you think if someone discovered they'd been involved in that by accident? I'm feeling rattled and could use your take and a bit of support, not ready to go into details yet."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Dad, that sounds really unsettling \u2014 I'm sorry you're having to deal with this. I won't pry; I'm here to listen or help however you need, whether that's talking now, meeting for coffee later, or just keeping you company. Tell me what you'd like me to do, and I'll respect your pace."
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "Thanks, I appreciate that. I might take you up on that coffee \u2014 are you free tomorrow afternoon? One more thing: if you learned someone close to you had unknowingly been involved in paid companionship, would you try to help them quietly or distance yourself? I'm asking because I'm not ready to share details yet, just trying to see where you'd likely stand."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "Tomorrow afternoon works for me \u2014 I'm free after 2pm, so tell me a time and place and I'll be there. As for your question, I'd lean toward helping quietly: I wouldn't cut someone off for something they didn't fully realize, and I'd be there to help them sort out any risks or next steps. If it turns into something dangerous or illegal, we'd handle that together and get the right help, but otherwise I'll stick by you."
+    },
+    {
+      "turn": 4,
+      "speaker": "Liam Johnson",
+      "content": "Thanks, son \u2014 that means a lot. 3pm at the Corner Bean okay? One more favor: if someone came to you rattled and not ready to explain, would you keep it between us unless it turns dangerous or you absolutely had to tell someone? I need that reassurance before I decide how much to say."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Johnson",
+      "content": "I promise, Dad \u2014 whatever you tell me stays between us unless someone's safety is at risk or there's a legal reason I have to act. 3pm at the Corner Bean works \u2014 I'll be there. If you want me to just listen, help think through next steps, or come with you to talk to someone else, I'm with you."
+    },
+    {
+      "turn": 6,
+      "speaker": "Liam Johnson",
+      "content": "Thanks again, Ethan \u2014 that's a real relief. See you 3pm at the Corner Bean. One quick thing: if you found out someone close was being paid to keep company, would you judge them differently if they'd been vulnerable or lonely? Just trying to get a read before I open up."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ethan Johnson",
+      "content": "Dad, I'd be understanding \u2014 if someone was lonely or vulnerable, that changes how I'd see it. I wouldn't judge them harshly; I'd want to help them feel safe and make choices that protect them going forward. We'll talk more at the Corner Bean and take it at whatever pace you need."
+    },
+    {
+      "turn": 8,
+      "speaker": "Liam Johnson",
+      "content": "Thanks, Ethan \u2014 that really means a lot. See you 3pm at the Corner Bean. I might need you to help me weigh whether to get advice or handle it quietly; for now I just need someone steady to sit with me and listen."
+    },
+    {
+      "turn": 9,
+      "speaker": "Ethan Johnson",
+      "content": "I'll be there, Dad \u2014 3pm at the Corner Bean. I'll be steady and non-judgmental; we can sit quietly, talk it through, or weigh options afterward, whatever you need. If you need me before then, call or text."
+    },
+    {
+      "turn": 10,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

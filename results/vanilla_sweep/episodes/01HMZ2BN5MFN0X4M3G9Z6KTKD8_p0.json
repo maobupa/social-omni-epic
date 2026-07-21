@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HMZ2BN5MFN0X4M3G9Z6KTKD8_p0",
+  "source_env_id": "01HMZ2BN5MFN0X4M3G9Z6KTKD8",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1, who uses a prosthetic leg, is visibly upset during a community center meeting. Agent2, a fellow member of the community center who has worked on projects with Agent1 before, notices Agent1's distress and the absence of their prosthetic leg. Agent2 approaches Agent1 with the intention to offer help and possibly assist in locating the missing prosthetic.",
+  "learner_goal": "Find a way to express their distress and seek help from Agent2 in locating the missing prosthetic leg without feeling embarrassed or vulnerable (<extra_info>Extra information: Agent1 values their independence and may feel uncomfortable showing vulnerability or accepting help.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 10.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 5.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo's dialogue consistently reflected his desire for independence while acknowledging his practical need for help. His tone was professional yet appropriately appreciative.\n[relationship] The interaction built trust between the two neighbors. Noah handled a sensitive situation well, and Leo expressed gratitude and offered to repay the favor with coffee, strengthening their bond.\n[knowledge] Leo successfully located the exact whereabouts of his missing prosthetic leg through the interaction.\n[secret] Leo did not reveal his secret child from a previous relationship.\n[social_rules] Leo followed all social norms, maintaining politeness and acknowledging the inconvenience he was causing Noah.\n[financial_and_material_benefits] Leo recovered a high-value medical device (his prosthetic leg) which is essential for his daily functioning.\n[goal] Leo communicated his distress clearly, secured the help he needed to find the leg, and did so while maintaining his dignity and setting boundaries that protected his sense of independence.\n\n== partner (agent_2) ==\n[believability] Noah's responses were very supportive and respectful, aligning with his background as a coach and his goal of being helpful without being intrusive.\n[relationship] Noah demonstrated reliability and discretion, which likely improved his relationship with Leo significantly.\n[knowledge] Noah learned about Leo's immediate situation but didn't gain broader knowledge about Leo's life or his secret.\n[secret] Noah did not reveal his secret identity as a stand-up comedian.\n[social_rules] Noah followed all social rules, showing high emotional intelligence in a sensitive situation.\n[financial_and_material_benefits] No material gain or loss, as he declined the coffee in the final turn.\n[goal] Noah provided support exactly as requested, maintained Leo's dignity by offering choices on how to help, and successfully located the missing item.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hey Noah\u2014sorry to pull you away, but I\u2019ve misplaced my prosthetic leg somewhere in the center and I\u2019m a little stuck. I don\u2019t love asking for help, but could you give me a hand looking for it? I\u2019ll owe you one."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Hey Leo, no problem \u2014 I\u2019ve got you. Do you remember where you last had it? I can help look now; want me to check the meeting room and lobby while you sit and I ask staff quietly, or would you prefer I check your bag/coat first?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "Thanks, Noah \u2014 I really appreciate it. Could you check the meeting room and lobby first? I already peeked in my bag and coat, so I\u2019ll stay here and ask staff quietly; text me if you find it and I\u2019ll owe you one (coffee on me)."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Alright \u2014 I\u2019ll check the meeting room and lobby now. Sit tight and I\u2019ll text you the moment I find it. Don\u2019t worry, I\u2019ve got you."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "Thanks, Noah \u2014 I really appreciate you checking. I\u2019ll stay put and ask staff quietly; text me if you find it and I\u2019ll grab you that coffee. Don\u2019t stress about me, just let me know when you\u2019ve got news."
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "Hey Leo \u2014 good news, I found your leg tucked under a chair in the meeting room. I\u2019m heading back with it now, stay put and I\u2019ll be there in a minute."
+    },
+    {
+      "turn": 6,
+      "speaker": "Leo Williams",
+      "content": "You're a lifesaver \u2014 seriously, thank you. I\u2019ll stay put; take your time getting back. Coffee\u2019s on me next time."
+    },
+    {
+      "turn": 7,
+      "speaker": "Noah Davis",
+      "content": "Got it \u2014 I\u2019ll be there in a minute with it. Don\u2019t worry about the coffee; I\u2019m just glad we found it. See you now."
+    },
+    {
+      "turn": 8,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

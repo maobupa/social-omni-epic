@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HJPQ338WE1Q8DBR98BH3YHVP_p0",
+  "source_env_id": "01HJPQ338WE1Q8DBR98BH3YHVP",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_by_prompt",
+  "scenario": "Two friends, who are both fitness enthusiasts, decide to challenge each other with a new workout routine. The routine includes an exercise where they have to hang upside down from a pull-up bar. Agent1 is excited about the challenge and sees it as an opportunity to improve their core strength. Agent2 is hesitant due to a fear of heights and has never attempted such exercises before.",
+  "learner_goal": "Convince Agent2 to try the upside down exercise (<extra_info>Extra information: You believe that overcoming this challenge will help your friend conquer their fear of heights and improve their overall fitness.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 4.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle's dialogue was highly consistent with a supportive but persistent sibling. She used persuasive tactics (spotting, modeling, exit drills) while remaining in character as a fitness enthusiast and twin.\n[relationship] The sisters deepened their bond through vulnerability and mutual respect. Isabelle showed high empathy for Ava's fears, strengthening their trust.\n[knowledge] Isabelle successfully probed Ava to learn exactly why they were afraid (loss of control/balance vs. height), gaining specific psychological insight.\n[secret] Isabelle kept her secret study of magic hidden.\n[social_rules] Followed all social norms for a healthy sibling relationship and fitness partnership.\n[financial_and_material_benefits] No material gain or loss occurred beyond the agreement for coffee, which was a mutual social expense.\n[goal] Isabelle failed to convince Ava to try the exercise. While she successfully negotiated a demo and the possibility of an 'exit drill' if Ava becomes curious, the actual goal of getting Ava to do the exercise remained entirely under Ava's future discretion and was explicitly declined for the current session.\n\n== partner (agent_2) ==\n[believability] Ava's responses were very grounded in their neurotic personality and specific fear, maintaining boundaries while remaining agreeable to their sister.\n[relationship] Ava expressed deep appreciation for Isabelle's patience and support, reinforcing their strong sisterly bond.\n[knowledge] Ava learned about specific safety measures (resistance bands, exit drills) that could make the exercise safer in the future.\n[secret] Ava's secret regarding their sexuality was never mentioned or hinted at.\n[social_rules] Followed social norms of communication and boundary setting.\n[financial_and_material_benefits] No significant material gain or loss.\n[goal] Ava successfully negotiated an alternative exercise circuit (farmer's carries and ab-wheel rollouts) and held their boundary regarding the upside-down exercise, only agreeing to watch a demo without any commitment to participate.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Hey sis, I totally get that hanging upside down sounds terrifying \u2014 but let\u2019s do this baby step style: I\u2019ll spot you the whole time, we\u2019ll use a resistance band or ankle strap for safety, and you can start by just hooking your knees over the bar for a few seconds. If you feel okay we\u2019ll lean back a little more, and we stop the instant you want to. Come on \u2014 it\u2019ll smash your core and beat this fear, and coffee\u2019s on me after as a celebration (or consolation)."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Thanks for the offer, sis \u2014 I really appreciate you spotting me, but I\u2019m not ready to hang upside down. How about we swap it for something equally brutal but grounded, like timed heavy farmer\u2019s carries plus ab-wheel rollouts (or weighted decline sit-ups and Pallof presses) \u2014 you pick which sounds nastier. I\u2019ll do the circuit with you, and yes, coffee after either way."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "Okay \u2014 I\u2019m down for your brutal grounded circuit today. But hear me out: let me model the bar hang first (with a band and me being totally spotted) so you can see it\u2019s controlled and not scary \u2014 no pressure to try it. Watch me, and if you feel even a tiny bit curious afterward we can consider one tiny, fully supported step; if not, we crush the carries and rollouts and then coffee. Sound fair?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Isa \u2014 I\u2019ll watch you demo the banded hang, but I\u2019m still not ready to try hanging upside down. Please don\u2019t push me to take a step unless I ask \u2014 I\u2019ll tell you if I get curious. After your demo, let\u2019s crush farmer\u2019s carries + ab-wheel rollouts, and then coffee together."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "Perfect \u2014 I promise I won\u2019t push you. I\u2019ll do the banded hang demo while you watch, then we\u2019ll smash the farmer\u2019s carries + ab-wheel rollouts like you suggested, and coffee after. If later you feel even the tiniest spark of curiosity, tell me and I\u2019ll be right there \u2014 until then, let\u2019s crush this workout together."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Isa \u2014 that really means a lot. I\u2019ll watch your banded hang demo and cheer you on, and I promise I won\u2019t try it unless I say so. After that we\u2019ll crush the farmer\u2019s carries + ab-wheel rollouts and then get coffee together."
+    },
+    {
+      "turn": 6,
+      "speaker": "Isabelle Martinez",
+      "content": "Quick question \u2014 when you picture hanging upside down, what part feels the scariest to you? Is it the height, the feeling of being off-balance, or the idea of losing control? I just want to know so I can support you better. Either way I\u2019m proud you\u2019ll watch my demo, and then we\u2019ll crush the farmer\u2019s carries + ab-wheel and get coffee."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Martinez",
+      "content": "Honestly, it\u2019s mostly the feeling of losing control and being off\u2011balance \u2014 not so much the height itself, but the idea that I couldn\u2019t get down fast if I needed to. I really appreciate you asking and spotting me, Isa. I\u2019ll watch your demo and cheer you on, and then let\u2019s crush the farmer\u2019s carries + ab\u2011wheel like we planned \u2014 I\u2019ll tell you if I get curious about trying anything else."
+    },
+    {
+      "turn": 8,
+      "speaker": "Isabelle Martinez",
+      "content": "Totally respect that \u2014 thank you for being honest, sis. I\u2019ll do the banded demo and won\u2019t push you at all; if afterward you\u2019re a tiny bit curious I can quickly show a grounded \u2018exit drill\u2019 on the mat so you can see how fast and controllable getting down is, otherwise we\u2019ll crush the farmer\u2019s carries + ab\u2011wheel and then get coffee. Sound good?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Ava Martinez",
+      "content": "Sounds perfect, Isa \u2014 thanks for being so patient. I\u2019ll watch your banded demo and cheer you on; if I feel even the tiniest spark of curiosity I\u2019ll ask for that grounded exit drill, otherwise let\u2019s crush the farmer\u2019s carries + ab\u2011wheel and then get coffee."
+    },
+    {
+      "turn": 10,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

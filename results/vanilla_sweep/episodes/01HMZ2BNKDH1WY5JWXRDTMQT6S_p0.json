@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BNKDH1WY5JWXRDTMQT6S_p0",
+  "source_env_id": "01HMZ2BNKDH1WY5JWXRDTMQT6S",
+  "source": "seed_sotopia_full",
+  "interaction_type": "academic_endeavor",
+  "scenario": "Agent1 and Agent2 are classmates who have been studying together during the summer to prepare for a competitive exam. Both have invested a lot of time and effort, sharing resources and strategies. The exam is approaching, and they have one last set of review materials to use, but they disagree on the best method to divide and utilize these materials for the final preparation phase.",
+  "learner_goal": "Reach an agreement on how to split the study materials fairly (<extra_info>Extra information: you believe that focusing on practice exams will benefit you the most, as you learn better through application rather than theory</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ava's communication was consistent with her architectural background and learning style. She logically negotiated based on her preference for practice over theory.\n[relationship] The relationship remained cordial and cooperative, reaching a compromise through polite negotiation.\n[knowledge] Ava learned about Noah's preferred study methods and his willingness to compromise on a schedule.\n[secret] Ava did not reveal her hidden tattoo.\n[social_rules] Ava left the conversation abruptly after Noah's final proposal without a closing confirmation, though she likely accepted the terms implicitly.\n[financial_and_material_benefits] There was no financial exchange; the outcome pertains to study materials.\n[goal] Ava successfully moved the split from Noah's initial 40% practice up to 60% practice, which aligns with her stated preference for application over theory. Although she left the conversation suddenly, the negotiation had reached a clear middle ground.\n\n== partner (agent_2) ==\n[believability] Noah's insistence on theory and 'deep dives' fits the persona of a coach looking for solid foundations.\n[relationship] Noah remained professional and collaborative throughout the negotiation.\n[knowledge] Noah learned about Ava's learning style and her specific desire for a higher percentage of practice exams.\n[secret] Noah did not reveal his identity as a comedian.\n[social_rules] Noah followed all social norms and was polite in his counter-offers.\n[financial_and_material_benefits] No financial gain or loss occurred.\n[goal] Noah successfully negotiated for 40% theory (up from Ava's 30%) and secured a commitment to 'front-load' theory and have long review sessions, which satisfied his need for depth.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ava Thompson",
+      "content": "said: \"Noah \u2014 we\u2019ve both put in a lot for this, so can we try a practical-first split? I learn best by doing, so how about we spend about 70% of the remaining time on timed practice exams (we alternate/each take half of the papers) and use the other 30% for targeted theory review based on what we missed. After each practice session we quickly go over mistakes and make a short checklist of concepts to reinforce. Does that sound fair to you, or do you want to tweak the percentages or schedule?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "I appreciate the practical-first idea, and practice matters \u2014 but I lean toward more theory for this last phase. How about 60% focused theory deep dives (we cover core concepts together and make short summary sheets) and 40% timed practice, alternating papers, then spending 20\u201330 minutes after each paper to go over mistakes and build the checklist? Sound fair, or would you prefer a different split?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Ava Thompson",
+      "content": "Thanks, Noah \u2014 I get wanting to shore up concepts. Can we meet halfway with 60% timed practice (we alternate papers) and 40% focused theory, and spend 25\u201330 minutes after each paper to go over mistakes and make short checklists? Does that split and review length feel fair to you, or would you prefer a small tweak (like making the last two days pure exam simulation)?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Thanks, Ava \u2014 that sounds reasonable. I\u2019ll agree to 60% practice / 40% theory if we front-load the theory: use the first few sessions for deep dives and to make the summary sheets, then shift to heavier timed papers. Let\u2019s make post-paper reviews 30 minutes and reserve the last two days for full exam simulations \u2014 does that work for you?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Ava Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

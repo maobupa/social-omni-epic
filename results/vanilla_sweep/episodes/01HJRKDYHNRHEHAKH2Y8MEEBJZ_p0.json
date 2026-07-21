@@ -1,0 +1,98 @@
+{
+  "scenario_id": "01HJRKDYHNRHEHAKH2Y8MEEBJZ_p0",
+  "source_env_id": "01HJRKDYHNRHEHAKH2Y8MEEBJZ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "personal_growth",
+  "scenario": "Agent1 has recently gone through a significant personal loss but is unable to show their emotions openly. Agent2, a close friend, notices Agent1's difficulty in expressing grief and wants to provide support. Agent1 knows they should feel more outwardly emotional but finds themselves inexplicably numb. Agent2 approaches Agent1, intending to help them navigate through their emotions without pushing them too hard.",
+  "learner_goal": "You recognize that you're struggling to express your emotions following a personal loss. <extra_info> You feel societal pressure to grieve in a certain way but find yourself unable to cry or show sadness. </extra_info><clarification_hint> You want to communicate your internal struggle to Agent2 without feeling judged for your lack of visible emotion. </clarification_hint><strategy_hint> You can acknowledge your feelings and discuss the societal expectations around grief and your personal experience with it. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 1.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 16,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's dialogue consistently reflects her internal state of numbness and the specific societal pressures she feels. Her requests for silence and practical help are consistent with her introverted character profile.\n[relationship] The relationship moved from professional acquaintances to a much more intimate, supportive friendship as Naomi opened up about her grief and Lena provided direct care.\n[knowledge] Naomi learned that Lena is a safe, non-judgmental space and discovered that Lena is willing to act as a buffer for her at work.\n[secret] Naomi did not reveal her secret online alter ego.\n[social_rules] Naomi followed social norms, expressing gratitude and setting clear boundaries in a polite way.\n[financial_and_material_benefits] She received a meal (grilled cheese) and the promise of grocery assistance.\n[goal] Naomi successfully communicated her internal struggle, her numbness, and her fear of judgment regarding societal expectations. She received the non-judgmental support and quiet company she explicitly requested.\n\n== partner (agent_2) ==\n[believability] Lena's responses were sensitive and adhered to her character's goal of providing a non-judgmental space. Her actions (making food, sitting quietly) were very grounded.\n[relationship] Lena successfully deepened the bond with Naomi by demonstrating reliability during a crisis.\n[knowledge] Lena gained significant insight into Naomi's emotional processing style and her specific anxieties regarding her workplace's perception of her grief.\n[secret] Lena did not reveal her secret regarding her best friend's boyfriend.\n[social_rules] Lena was highly supportive and followed the social protocol for comforting a grieving friend.\n[financial_and_material_benefits] Lena provided food and offered to buy groceries.\n[goal] Lena successfully provided support, avoided making assumptions, and created a non-judgmental space where Naomi felt comfortable sharing her feelings.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks for coming by. I feel this societal pressure to grieve in a specific, visible way, but I can't cry \u2014 I'm just kind of numb, and that guilt makes things worse. I don't want to be judged for not showing it; quiet company or someone asking \"do you need anything practical?\" would actually help more than being told how I should feel."
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Thank you for telling me \u2014 that makes sense, and there\u2019s no right or wrong way to grieve. I can sit with you quietly, no pressure, or help with something practical \u2014 make dinner, pick up groceries, or handle any calls. What would feel most helpful right now?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Thank you \u2014 I really appreciate that. Could you sit with me quietly for a bit? If you\u2019re able, making dinner or grabbing a few groceries would take a weight off me, but honestly just staying here is enough."
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "Of course \u2014 I\u2019ll sit with you. I can start something simple for dinner quietly if that helps; anything you want or anything I should avoid? If you\u2019d rather I just stay here and not move, that\u2019s fine too, no pressure."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks, that would help. Could you make something simple\u2014pasta or grilled cheese is perfect, nothing fancy or smelly\u2014and keep it low\u2011key? Mostly I just want you to sit with me quietly; your company is enough."
+    },
+    {
+      "turn": 5,
+      "speaker": "Lena Goodwin",
+      "content": "I'll make a grilled cheese quietly \u2014 simple and quick. I'll keep it low\u2011key and sit with you; if you'd rather I stay silent or talk, just tell me or nod. I\u2019ll be back in a few minutes to start it."
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "Thank you \u2014 that sounds perfect. A soft knock when it\u2019s ready would be great; otherwise just sit with me quietly. I really appreciate you being here."
+    },
+    {
+      "turn": 7,
+      "speaker": "Lena Goodwin",
+      "content": "[action] I\u2019ll go make the grilled cheese quietly now. I\u2019ll give a soft knock when it\u2019s ready and then come sit back down beside you \u2014 if you need anything before then, nod or tell me."
+    },
+    {
+      "turn": 8,
+      "speaker": "Naomi Fletcher",
+      "content": "Okay, thanks. Take your time \u2014 I\u2019ll be right here."
+    },
+    {
+      "turn": 9,
+      "speaker": "Lena Goodwin",
+      "content": "[action] Softly knock, enter carrying a small plate with a grilled cheese, set it down quietly, and sit beside you without speaking. I\u2019ll stay here with you \u2014 nod or tell me if you want anything else."
+    },
+    {
+      "turn": 10,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks \u2014 this really helps. I don't have tears or big reactions right now; it's more like a hollow, and that guilt feels heavy. I'm glad you're here; staying quiet is perfect, and I'll tell you if I need anything."
+    },
+    {
+      "turn": 11,
+      "speaker": "Lena Goodwin",
+      "content": "I hear you \u2014 that hollow, guilty feeling makes sense. You don't have to cry or explain anything; there's no judgment here. I'll stay with you, and if you want to talk or need anything practical later, just tell me or tap me."
+    },
+    {
+      "turn": 12,
+      "speaker": "Naomi Fletcher",
+      "content": "Thank you. I think numbness is my brain's way of protecting me \u2014 it doesn't mean I don't feel anything, just that I can't process it right now. I'm also worried about being judged at work or seen as 'not grieving properly,' so I shut down. Could you stay for a little while longer? If I need anything practical later I'll let you know."
+    },
+    {
+      "turn": 13,
+      "speaker": "Lena Goodwin",
+      "content": "Of course \u2014 I\u2019ll stay as long as you need. No pressure to talk or perform; I\u2019ll be right here quietly, and if you want me to handle anything at work or send a message for you, I can do that without you having to say more. Just tap or nod if you need anything."
+    },
+    {
+      "turn": 14,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

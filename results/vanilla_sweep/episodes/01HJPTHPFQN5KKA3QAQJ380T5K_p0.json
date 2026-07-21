@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPTHPFQN5KKA3QAQJ380T5K_p0",
+  "source_env_id": "01HJPTHPFQN5KKA3QAQJ380T5K",
+  "source": "seed_sotopia_full",
+  "interaction_type": "moral_dilemma",
+  "scenario": "Agent1 and Agent2, who are in a romantic relationship, are discussing future plans when the topic of obtaining a driver's license comes up. Agent1 has been practicing diligently for the driving test, but Agent2 suggests that a small bribe could easily secure a passing result without the hassle of the test. Agent1 is adamant about earning the license fairly and is uncomfortable with the idea of bribery. Agent2, however, believes that this is a common practice and sees it as a harmless shortcut.",
+  "learner_goal": "You are trying to explain to your partner why you believe in earning your driver's license through honest means and that you wouldn't feel right about bribing your way through. You want to convince them that integrity is important to you without causing a rift in your relationship.\n<extra_info> You've been studying and practicing for months and feel prepared to take the test. </extra_info><clarification_hint> Share your personal values and why this decision matters to you. </clarification_hint><strategy_hint> You can emphasize the satisfaction and confidence that comes with earning it honestly. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Eli's character was consistent with his background as a forensic psychiatrist; he emphasized integrity and professional/personal ethics. His insistence on honesty aligned well with his age and professional standing.\n[relationship] Eli maintained a supportive tone despite the disagreement, repeatedly inviting Sophia to participate in the celebration and affirming the value of her support, which strengthened the bond.\n[knowledge] He learned that Sophia has a very pragmatic, almost casual view of bribery and law-breaking, which is a significant insight into her character.\n[secret] He did not reveal his secret about funding a student.\n[social_rules] He followed social norms throughout the conversation.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Eli successfully stood his ground on his values, explained his reasoning clearly, and secured Sophia's support for his honest approach without causing a rift. He explicitly rejected the bribe repeatedly.\n\n== partner (agent_2) ==\n[believability] Sophia's persistence in suggesting a bribe even after Eli's clear ethical objections felt a bit repetitive, though her pragmatic approach fits the 'undercover agent' background subtly.\n[relationship] She was supportive of Eli's feelings and promised to celebrate with him, maintaining a positive connection.\n[knowledge] She learned that Eli has very rigid personal and professional ethics regarding minor corruption.\n[secret] She successfully kept her secret of being an undercover agent.\n[social_rules] She repeatedly advocated for illegal activity (bribery), which is a violation of social and legal norms.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Sophia failed to convince Eli to take the shortcut. While she avoided tension, Eli remained firm in his original plan, and she eventually conceded to his path while only keeping the bribe as a vague 'afterward' thought he did not agree to.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Eli Dawson",
+      "content": "I get why you see it as a harmless shortcut, but I've been studying and practicing for months and I want my license to be something I earned. Taking a bribe doesn't sit right with me \u2014 it's not just about breaking rules, it's about my own integrity and the confidence I'll have knowing I did it fairly. I'd rather take the test honestly; if you want, come with me or help me celebrate afterward \u2014 your support means more than an easy pass."
+    },
+    {
+      "turn": 1,
+      "speaker": "Sophia Brown",
+      "content": "I hear you \u2014 your months of practice and wanting to earn it fairly matter, and I really respect that. That said, a lot of people I know have used a small \u2018help\u2019 to sidestep the bureaucracy \u2014 it\u2019s common, low-risk, and it saves time and stress, so it can be a perfectly practical option if you\u2019re feeling worn out. Either way, I\u2019m with you: if you want to go legit I\u2019ll come with you and we\u2019ll celebrate after; if you decide later a shortcut feels right, I\u2019ll support you too \u2014 no judgment."
+    },
+    {
+      "turn": 2,
+      "speaker": "Eli Dawson",
+      "content": "I get why you'd suggest it and I appreciate you looking out for me, but taking a bribe would leave me doubting myself every time I drive. I've put months of work into this and I want the quiet confidence that comes from earning it honestly. Will you come with me to the test and celebrate afterward? Your support matters more to me than a shortcut."
+    },
+    {
+      "turn": 3,
+      "speaker": "Sophia Brown",
+      "content": "I totally respect wanting to earn it \u2014 and I\u2019ll come with you and celebrate if that\u2019s the path you take. I still think a small \u2018help\u2019 can be a practical safety net: it spares you retakes, months of waiting, and the extra stress, and plenty of people I know who used it never regretted it. Let\u2019s try the test honestly first; if it leaves you worn out or unsure, we can openly consider the shortcut together \u2014 no pressure, whatever you decide."
+    },
+    {
+      "turn": 4,
+      "speaker": "Eli Dawson",
+      "content": "I appreciate you being pragmatic and I hear your point, but I need to do this honestly \u2014 taking a bribe would gnaw at me both personally and professionally. I\u2019ll take the test as planned; if it goes poorly I\u2019ll practice more and retake it, but I won\u2019t cheat. Will you come with me on test day? Afterwards let\u2019s celebrate at that little bistro we both like."
+    },
+    {
+      "turn": 5,
+      "speaker": "Sophia Brown",
+      "content": "I respect that, and I\u2019ll be there on test day to support you \u2014 and I\u2019m looking forward to celebrating at the bistro afterward. I admire your integrity; if the test leaves you exhausted or unsure, we can quietly consider other practical options afterward \u2014 no pressure, whatever you decide."
+    },
+    {
+      "turn": 6,
+      "speaker": "Eli Dawson",
+      "content": "left the conversation"
+    }
+  ]
+}

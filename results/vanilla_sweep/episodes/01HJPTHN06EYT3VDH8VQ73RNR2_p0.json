@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHN06EYT3VDH8VQ73RNR2_p0",
+  "source_env_id": "01HJPTHN06EYT3VDH8VQ73RNR2",
+  "source": "seed_sotopia_full",
+  "interaction_type": "school_dynamics",
+  "scenario": "In a high school classroom, agent1 and agent2 are both students who have been struggling with group projects due to differing opinions on how to approach the work. The tension has been building, and they are now tasked with creating a presentation together. <p viewer=\"environment\">They have to find common ground to successfully collaborate and complete the assignment.</p>",
+  "learner_goal": "You want to propose a compromise where each person can contribute to the project in a way that plays to their strengths. <extra_info> You believe that a balanced approach can satisfy both parties and lead to a successful project. </extra_info><clarification_hint> You should listen to the other person's ideas and concerns before suggesting a compromise. </clarification_hint><strategy_hint> You can highlight the benefits of combining different skills and perspectives. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles stayed in character as a collaborative individual, using professional yet friendly language appropriate for the scenario. He successfully balanced the chef's creative side with the project requirements.\n[relationship] The interaction significantly reduced tension between the two students, moving from a place of conflict to a clear, agreed-upon collaborative plan.\n[knowledge] Miles learned exactly what Mia's priorities were (structure, research, editing) and her specific constraints regarding deadlines.\n[secret] Miles did not reveal his past gambling addiction.\n[social_rules] Miles followed all social norms, was polite, and listened before proposing his ideas as instructed.\n[financial_and_material_benefits] This was an academic collaboration; no financial exchange occurred.\n[goal] Miles perfectly executed his goal: he listened first, identified strengths, proposed a compromise that played to those strengths, and secured a firm mutual commitment to a timeline.\n\n== partner (agent_2) ==\n[believability] Mia's behavior was very consistent with a high school principal's personality\u2014focused on structure, deadlines, and clear expectations.\n[relationship] Mia showed willingness to negotiate and found a productive way to work with someone she previously clashed with.\n[knowledge] Mia learned that Miles was willing to follow her lead on organization if he could handle the creative aspects.\n[secret] Mia did not reveal her history in a punk rock band.\n[social_rules] Mia was professional and clear in her communication.\n[financial_and_material_benefits] No financial gain or loss occurred.\n[goal] Mia successfully advocated for the parts of the project she found most important (structure and research), ensured her voice was heard, and established a plan that requires reciprocation from Miles.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Hey Mia \u2014 I know group projects have been tense between us. I\u2019ve got a couple ideas, but I want to hear yours first: what parts of the presentation do you feel strongly about, and where do you think your strengths lie? If we can split it so each of us leads what we do best, I think we can make something that really works."
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Thanks for reaching out, Miles. I feel strongly about owning the project\u2019s structure, research and the speaking/editing parts \u2014 that\u2019s where my strengths are (keeping things organized and on time, and making the argument clear). I\u2019m willing to let you lead creative visuals or any demo you have in mind, but I need us to agree on an outline and deadlines first \u2014 I\u2019ll give your ideas a fair shot if you meet me halfway and follow the plan."
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Mia \u2014 I appreciate you being direct. I\u2019ll take lead on creative visuals and the demo (I can bring props/visual samples from my ideas). Can you draft the outline/headings and assign the research/speaking parts by Wednesday after school? I\u2019ll get a rough visual/demo draft to you by Friday so you can slot it in, and we meet Saturday morning for a run\u2011through and final edits \u2014 does that timeline work? I\u2019ll stick to the plan if you do."
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "That timeline works for me. I\u2019ll draft the outline and assign research/speaking parts by Wednesday after school; please send your rough visual/demo by Friday evening (photos or a short walkthrough video are fine) so I can slot it in. Let\u2019s meet Saturday at 10 a.m. for a run\u2011through in the library \u2014 I\u2019ll stick to this plan if you do the same."
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

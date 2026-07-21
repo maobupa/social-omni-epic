@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB346GQY6EAW4VFMHRZMWMA_p0",
+  "source_env_id": "01HPB346GQY6EAW4VFMHRZMWMA",
+  "source": "seed_sotopia_full",
+  "interaction_type": "creativityvault",
+  "scenario": "Agent1 and Agent2 are friends who have recently joined a local amateur theatre group. During a rehearsal for an upcoming play, Agent1 is assigned a role that requires minimal movement, especially avoiding moving the head or neck too much due to the character's backstory. Agent2 is the play's director and is concerned about the static nature of Agent1's portrayal, feeling it might affect the audience's engagement with the character.",
+  "learner_goal": "Convince Agent2 to allow the portrayal with limited movement, emphasizing the authenticity it brings to the character and the unique challenge it presents to the actor (<extra_info>Extra information: Agent1 believes that the physical restriction can be used creatively to add depth to the performance.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi Fletcher stays perfectly in character as a software developer turned amateur actor, using structured thinking to propose a logical compromise that respects her goal of character authenticity.\n[relationship] The interaction was professional, collaborative, and respectful, which strengthens their bond as acquaintances working on a project.\n[knowledge] Naomi gained specific technical insights from the director on how to translate 'static' into 'micro-movements' like breath and tension.\n[secret] Naomi did not reveal her secret online alter ego.\n[social_rules] The agent followed all social norms and professional etiquette.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Naomi successfully convinced Lena to allow the static portrayal (starting with a pure static run-through) and gained recognition for the creative challenge it presents. While Lena added her own layer of micro-gestures, Naomi's core desire for stillness as a foundation was accepted.\n\n== partner (agent_2) ==\n[believability] Lena Goodwin acts exactly as a director/architect would\u2014focusing on the structure of the performance and finding a technical solution to make the performance 'dynamic' within constraints.\n[relationship] Lena established a productive working dynamic with Naomi, moving from a disagreement to a shared plan.\n[knowledge] Lena learned about Naomi's specific artistic vision and commitment to the character's backstory.\n[secret] Lena did not reveal the secret about her past relationship.\n[social_rules] Lena maintained professional boundaries and constructive feedback.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Lena successfully persuaded Naomi to incorporate subtle movements (breath, tension, finger beats) to ensure a dynamic performance, which was her primary goal.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Lena, I really think the limited movement suits the character \u2014 it\u2019s authentic to their backstory and gives the actor a rare challenge to convey everything through stillness, voice, eyes and timing. We can lean on lighting, blocking and subtle micro-expressions so the audience stays engaged rather than distracted. Could we try one run-through with the static approach and then one with more movement, then pick whichever reads stronger on its own merits?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "I like that plan \u2014 let\u2019s do both run\u2011throughs, but make the \u2018movement\u2019 pass about tiny, controlled gestures rather than any obvious head or neck turns. Things like breath, shoulder tension/release, minute torso leans, fingers on a prop, and micro\u2011expressions around the eyes will sell inner life without breaking the restriction. I can work with you and the actor to choreograph and rehearse those subtleties so they feel truthful onstage."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks, Lena \u2014 that approach sounds perfect. I\u2019ll work with the actor on breath rhythm, shoulder micro\u2011tensions and prop/finger beats so the stillness reads as intent, and we can mark beats for lighting cues. Do you want to run the static take first and then the micro\u2011gesture pass, or the other way around?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "Static first \u2014 I\u2019d like to see the pure stillness on stage so we know what we\u2019re building from, then run the micro\u2011gesture pass to layer in tiny, rehearsed movements and adjust what reads best. I\u2019ll warm the actor with breath and shoulder/hand exercises beforehand and help mark beats for lighting."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

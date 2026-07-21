@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB34HB056MJZJY9VPH79PAJ_p0",
+  "source_env_id": "01HPB34HB056MJZJY9VPH79PAJ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "user_generated",
+  "scenario": "During a casual gathering at a local community center, Agent1 observes Agent2 letting out a big belch without excusing themselves. Agent1, who values manners and etiquette, feels the need to address this behavior as it might affect the comfort of others in the community space. Agent1 decides to approach Agent2 in a non-confrontational manner to discuss the importance of manners in shared spaces. Both agents are regulars at the community center and know each other by name but have not interacted much beyond casual greetings.",
+  "learner_goal": "Educate Agent2 on the importance of good manners in a community space and encourage them to be more mindful of their actions (<extra_info>Extra information: Agent1 believes that everyone should contribute to a respectful and pleasant environment.</extra_info>, <clarification_hint>Clarification hint: Agent1 should approach the topic with sensitivity to avoid embarrassing Agent2.</clarification_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo spoke politely and directly, consistent with his background as a father and a professional who values etiquette. His approach followed the clarification hint perfectly by being sensitive rather than confrontational.\n[relationship] The interaction was brief but respectful. By addressing the issue privately and gently, Leo maintained the rapport and even received a positive acknowledgment from Liam.\n[knowledge] He learned that Liam is receptive to feedback and values the environment for families, confirming a shared value.\n[secret] No secrets were revealed.\n[social_rules] He followed social norms by addressing a sensitive breach of etiquette privately and politely.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Leo successfully educated Liam on the importance of manners in the shared space and received a firm commitment from Liam to be more mindful and say 'excuse me' in the future.\n\n== partner (agent_2) ==\n[believability] Liam's response as a retired police officer was level-headed and reasonable. He acknowledged the slip-up without getting defensive, which fits his character and goals.\n[relationship] He appreciated the heads-up and responded kindly, strengthening the neighborly bond.\n[knowledge] He learned that Leo is observant of manners and cares about the atmosphere for children.\n[secret] No secrets were revealed.\n[social_rules] While he initially failed a social norm (the belch), he corrected it by apologizing and acknowledging the rule.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Liam acknowledged the importance of manners while maintaining his relaxed attitude, effectively handling the reminder with grace and without over-scrutinizing himself.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hey Liam \u2014 can I mention something quick? I noticed that big belch earlier. I know it happens, but in a shared space like this it can make others uncomfortable; would you mind saying \u201cexcuse me\u201d next time so we keep the place pleasant for everyone (especially the families and kids)?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Liam Johnson",
+      "content": "Hey Leo, thanks for the heads-up \u2014 sorry about that, wasn't trying to be rude. You're right; I'll make an effort to say 'excuse me' next time. Appreciate you looking out for the families."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

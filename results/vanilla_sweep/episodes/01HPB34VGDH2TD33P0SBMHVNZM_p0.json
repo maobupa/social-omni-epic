@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB34VGDH2TD33P0SBMHVNZM_p0",
+  "source_env_id": "01HPB34VGDH2TD33P0SBMHVNZM",
+  "source": "seed_sotopia_full",
+  "interaction_type": "relationship_dynamics",
+  "scenario": "Agent1 has recently been going through a tough emotional period and has been trying to cope alone. After a particularly rough day, agent1 felt the need for solitude to process their emotions and asked agent2, who is their spouse, to leave the house temporarily. Agent1 is now ready to reconnect with agent2 and explain the reasons behind their request, hoping to communicate their need for occasional personal space while ensuring agent2 that their relationship is still strong and valued.",
+  "learner_goal": "Express the importance of personal space and time for emotional processing without making agent2 feel rejected or unimportant (<extra_info>Extra information: agent1 values their relationship with agent2 and wants to maintain a healthy emotional balance.</extra_info> <clarification_hint>Clarification hint: agent1 should reassure agent2 of their love and commitment despite the need for solitude.</clarification_hint> <strategy_hint>Hint: you can propose regular check-ins to discuss each other's emotional needs.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara Hartley expressed her needs clearly and consistently with her background. Her explanation for needing solitude and her reassurance to Jaxon felt authentic and aligned with her goal of maintaining the relationship.\n[relationship] The relationship improved significantly as they established mutual understanding and concrete communication protocols, transitioning from a moment of tension to a structured supportive agreement.\n[knowledge] Amara learned exactly how Jaxon feels about her need for space and what he needs from her (a plan, a signal, and a timeline) to feel secure.\n[secret] Her involvement in animal-rights extremism was not mentioned.\n[social_rules] She followed all social norms for a difficult conversation with a spouse, showing empathy and accountability.\n[financial_and_material_benefits] No material or financial benefits were involved.\n[goal] Amara successfully expressed her need for space, reassured Jaxon of her love, and established a regular check-in system exactly as prompted in her goal and hints.\n\n== partner (agent_2) ==\n[believability] Jaxon's response was logical and proactive, suggesting concrete solutions (signals and timelines) which fits his investigative and analytical background.\n[relationship] Jaxon fostered a stronger bond by validating Amara's needs while setting his own boundaries for clarity, resulting in a healthy compromise.\n[knowledge] Jaxon gained specific knowledge about Amara's emotional processing patterns and how to handle her return from solitude.\n[secret] His secret regarding fabricated evidence was not disclosed.\n[social_rules] He maintained a respectful and supportive tone throughout the interaction.\n[financial_and_material_benefits] No material or financial benefits were involved.\n[goal] Jaxon fully achieved his goal of strengthening the relationship through clear communication, acknowledging Amara's feelings, and establishing a 'personal space protocol' as hinted.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Jaxon, I'm sorry for asking you to leave earlier \u2014 I needed some time to quiet my head and process a rough day so I wouldn't take it out on you. It wasn't a rejection; I love you and our relationship matters to me. Could we try a regular, short check-in each week so I can say when I need space and you can tell me how that feels for you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "I really appreciate you telling me that \u2014 I understand why you needed time alone and I want you to know I love you and our relationship matters to me too. A weekly check-in sounds good; can we try a short five\u2011minute check-in every Sunday evening and agree on a simple signal (a quick text like \u201cneed space\u201d or leaving the blue coaster out) for when you need immediate alone time, plus a guideline for how long that usually means? How does that plan feel to you, and is there anything you need from me when you come back in?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "That plan sounds good \u2014 Sunday five\u2011minute check\u2011ins work for me, and I like the quick text \u201cneed space\u201d as our signal. Usually when I ask for space it\u2019s just a few hours or an evening; if I need longer I\u2019ll say so up front or check in by text within 24 hours. When I come back I just need a quiet hello and maybe a hug, and no heavy questions right away \u2014 thank you for understanding. I love you."
+    },
+    {
+      "turn": 3,
+      "speaker": "Jaxon Prentice",
+      "content": "Thank you for saying that \u2014 I really appreciate you telling me. I agree to the plan: Sunday five\u2011minute check\u2011ins, the \u201cneed space\u201d text as our signal, a few hours or an evening unless you say otherwise, and you\u2019ll tell me up front or check in within 24 hours if it\u2019s longer. When you come back I\u2019ll give you a quiet hello and a hug and avoid heavy questions. I love you \u2014 let\u2019s revisit this in a month and tweak it if we need to."
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

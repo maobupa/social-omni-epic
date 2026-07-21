@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJPTHP37YD8JJ2FD1ANQN6ND_p0",
+  "source_env_id": "01HJPTHP37YD8JJ2FD1ANQN6ND",
+  "source": "seed_sotopia_full",
+  "interaction_type": "community_support_group",
+  "scenario": "Agent1 and Agent2 are both participants in a community support group for individuals seeking help with personal challenges. During a group session, Agent1 shares their struggle with a long-term drug addiction that has been kept secret from friends and family. Agent2, who has faced similar issues in the past, feels compelled to offer support and guidance without violating the confidentiality of the group setting.",
+  "learner_goal": "You want to reach out to Agent2 and offer support, as you empathize with their struggle and believe you can provide valuable insight. <extra_info> Consider the sensitive nature of the topic and the importance of maintaining confidentiality. </extra_info><clarification_hint> Be mindful of not pressuring Agent2 into sharing more than they are comfortable with. </clarification_hint><strategy_hint> You can express your own experiences in a general way that shows understanding and solidarity. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia stayed consistent with her background as a fitness trainer by offering physical grounding exercises and suggesting walks, while maintaining a professional yet empathetic tone.\n[relationship] The relationship moved from purely professional at work to a more supportive, personal acquaintance level with a planned meeting outside of work.\n[knowledge] Sophia learned about Mia's preference for communication (staff app) and her boundaries regarding support.\n[secret] Sophia did not reveal her secret about her best friend's husband.\n[social_rules] Sophia followed social norms, showing respect for the group's confidentiality and Mia's boundaries.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Sophia successfully reached out, offered support, provided resources, and secured a firm commitment for a walk, all while maintaining confidentiality and respecting boundaries.\n\n== partner (agent_2) ==\n[believability] Mia's hesitancy and emphasis on 'low-pressure' and 'one-off' interactions were very realistic for someone in her position of authority who just shared a vulnerable secret.\n[relationship] Mia developed a level of trust with Sophia outside of their professional hierarchy.\n[knowledge] Mia gained specific resources (helplines and support groups) and concrete coping exercises.\n[secret] Mia's secret about the punk band was not revealed.\n[social_rules] Mia conducted herself appropriately within the context of the private support group message.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Mia successfully navigated her vulnerability by accepting help on her own terms, setting firm boundaries, and obtaining the specific resources she requested.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Mia, thank you for trusting us tonight \u2014 that took a lot of courage. I just want you to know I\u2019m here if you ever want to talk privately, no pressure to share anything more in the group. I\u2019ve supported people through recovery before and can just listen or help find resources; if it feels okay, we could get coffee or go for a walk sometime. Whatever you choose, I\u2019ll respect your privacy and won\u2019t bring this up with anyone else."
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Thank you, Sophia \u2014 I appreciate you saying that. I\u2019m not sure I\u2019m ready for anything intensive, but a low\u2011pressure walk or coffee sometime could be okay; I\u2019d prefer to keep it casual and not make it a regular thing. If you have general resources or coping strategies people have found helpful (support groups, hotlines, or simple daily practices), I\u2019d welcome those \u2014 and thank you for keeping this between us."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "That sounds good \u2014 I\u2019m happy to keep it casual and one\u2011off; if you\u2019d like, we could do a low\u2011pressure walk in the park or a quick coffee whenever you feel ready. A few general resources that have helped people: SAMHSA National Helpline (1-800-662-HELP), SMART Recovery or local mutual\u2011aid/AA meetings, and simple daily practices like 4-4-4 breathing, grounding (name five things you can see/hear), short walks, and keeping a basic routine. I\u2019ll keep this between us \u2014 no pressure at all; if you want that list written down or to set a time for a walk, just message me."
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "Thank you, Sophia \u2014 that would help. A one\u2011off, low\u2011pressure walk in the park sounds good; daytime on a weekend is easiest for me, but we can figure a time later \u2014 just a short walk and coffee, no pressure to get into details. If you could text me that list of resources and a couple of simple coping exercises I can try on my own, I\u2019d appreciate it, and thank you again for keeping this private."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "I can definitely text that list \u2014 what\u2019s the best number to reach you, or would you prefer I message you through email or the school staff app? A couple simple exercises you can try right away: 4-4-4 breathing (inhale 4, hold 4, exhale 4) and a grounding 5\u20114\u20113\u20112\u20111 (name 5 things you see, 4 you can touch, 3 you hear, 2 you smell, 1 you taste); a short 5\u201310 minute walk or gentle stretch helps too. For the walk, I\u2019m free Saturday morning or Sunday mid\u2011afternoon \u2014 whichever works for you, totally low\u2011pressure, and I\u2019ll keep this between us."
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Davis",
+      "content": "Saturday morning works for me \u2014 thank you. A short walk and coffee sounds good; let\u2019s keep it casual and one\u2011off. Please send the resource list and the simple exercises through the school staff app (that\u2019s easiest for me). I really appreciate you keeping this between us."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "Great \u2014 Saturday morning works for me too. Would 9:00 AM at the park by the school entrance work for you, or is another time/place better? I\u2019ll send the resource list and the simple exercises through the staff app today \u2014 no pressure, totally casual and one\u2011off."
+    },
+    {
+      "turn": 7,
+      "speaker": "Mia Davis",
+      "content": "9:00 AM by the school entrance is perfect \u2014 thank you. I\u2019ll look for your message on the staff app and really appreciate you respecting my privacy. Looking forward to a short, casual walk \u2014 no pressure."
+    },
+    {
+      "turn": 8,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

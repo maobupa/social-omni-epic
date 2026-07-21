@@ -1,0 +1,98 @@
+{
+  "scenario_id": "01HPB67GJ80P7SNX2S0548TAXA_p0",
+  "source_env_id": "01HPB67GJ80P7SNX2S0548TAXA",
+  "source": "seed_sotopia_full",
+  "interaction_type": "user_generated",
+  "scenario": "Agent1, who has recently overcome a significant personal fear, attends a local community event aimed at sharing personal growth stories. Agent2, a key organizer of the event, is known to be skeptical about the authenticity of such stories. Agent1 is motivated to share their experience with the community, including Agent2, to inspire others and validate their own journey.",
+  "learner_goal": "Share personal growth story with the community to inspire others and validate personal achievements (<extra_info>Extra information: Agent1 has recently faced and overcome a significant fear and believes in the power of sharing such stories for communal inspiration</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 16,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's dialogue was consistent with his background as a lighthouse keeper and painter, using evocative language and maintaining a humble, introverted tone that felt authentic to the character's growth journey.\n[relationship] Finnegan successfully navigated the interaction with Sophia, turning a potential skeptic into a supportive ally who publicly validated his story and offered to host conversations with him.\n[knowledge] He learned that Sophia is supportive and that she believes the community might have skeptics, which helped him refine his approach.\n[secret] Finnegan did not reveal his past involvement in a cult.\n[social_rules] He followed all social norms for a public speaking engagement and was respectful throughout.\n[financial_and_material_benefits] No financial or material benefits were gained.\n[goal] Finnegan fully shared his story, provided tangible evidence (the paintings), and engaged the audience with a call to action (raising hands), effectively validating his journey and seeking to inspire others.\n\n== partner (agent_2) ==\n[believability] Sophia's personality as an exuberant trainer came through, though her repetitive insistence on 'skepticism' felt a bit forced by the prompt's requirements toward the end.\n[relationship] She strengthened her bond with Finnegan by acting as his advocate and public supporter.\n[knowledge] She gained detailed insight into Finnegan's specific struggles and his creative process.\n[secret] Sophia did not reveal her secret feelings for her best friend's husband.\n[social_rules] She performed her role as an organizer effectively, maintaining a supportive yet inclusive atmosphere.\n[financial_and_material_benefits] No financial or material benefits were gained.\n[goal] Sophia perfectly executed her goal of engaging with the potential skepticism of the event in a constructive way, repeatedly inviting honest questioning while validating the authenticity of the personal growth story.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "said: \"Hello\u2014I'm Finnegan O'Malley, lighthouse keeper and an avid painter. For most of my life I was quietly afraid: afraid to leave the lantern room, and afraid to speak about my life. This year I began taking tiny steps\u2014joining a painting group, walking into town more, and, most frightening for me, standing up and talking to strangers\u2014and those small steps changed everything. If my clumsy story helps even one person take a small step toward something they'd been avoiding, then sharing it here was worth it.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Sophia James",
+      "content": "said: \"Finnegan, that was beautiful \u2014 thank you for being brave enough to share. As a trainer I\u2019ve seen how tiny, consistent steps add up into big change, and hearing the messy, real details is what makes stories like yours so convincing. I know some here might be skeptical, but if anyone wants to understand the whole journey, come chat with him after \u2014 authenticity often lives in the small, awkward moments we don\u2019t tidy up for an audience.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "said: \"Thank you, Sophia \u2014 that means more than I can say. I won't pretend it was tidy; there were many nights I fumbled my words and almost turned back to the lantern room. If anyone's curious about those awkward, stubborn little steps or wants to see the paintings that kept me going, I'll be by the refreshment table afterward and would be glad to chat.\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Sophia James",
+      "content": "said: \"Absolutely \u2014 Finnegan, that honesty is what makes this resonate. I know skepticism's healthy; stories can be polished, and I respect anyone who questions that. If you're curious about the messy parts, come find him after the event\u2014those awkward nights and the paintings tell the real story far better than words alone. Thank you for sharing, Finnegan.\""
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "said: \"Thank you again, Sophia. If anyone\u2014organizers, skeptics, or curious neighbors\u2014wants to hear more or ask the awkward questions I stumbled through, please come by the refreshment table after the event; I\u2019ll have a few seascapes with me and I\u2019d welcome the company and the honest conversation.\""
+    },
+    {
+      "turn": 5,
+      "speaker": "Sophia James",
+      "content": "said: \"Finnegan, that was powerful\u2014thank you for showing the messy middle of change. To anyone who's skeptical: healthy questions are welcome, and if you'd like to hear the unglossed details, please come by the refreshment table after\u2014I'll be there to help make space for an honest, no-pressure conversation. Authenticity often lives in the awkward bits, and I'm glad you shared them.\""
+    },
+    {
+      "turn": 6,
+      "speaker": "Finnegan O'Malley",
+      "content": "said: \"If it helps anyone trust this wasn't polished: one night I painted seven canvases and threw them all away because they wouldn't look like the sea \u2014 then the eighth surprised me, and that kept me going. I'll have those messy studies and the finished pieces by the entrance afterward; please come find me if you'd like an honest look at the messy middle.\""
+    },
+    {
+      "turn": 7,
+      "speaker": "Sophia James",
+      "content": "said: \"I\u2019ll just add that skepticism is healthy \u2014 it keeps stories honest. I\u2019ll be at the refreshment table with Finnegan if anyone wants to ask the awkward, specific questions that show whether this journey really happened. No pressure, just straight talk and the paintings to back it up.\""
+    },
+    {
+      "turn": 8,
+      "speaker": "Finnegan O'Malley",
+      "content": "said: \"Thank you \u2014 I\u2019m glad my messy middle resonated. I\u2019ll be at the refreshment table with the canvases for the next half hour; skeptics, curious neighbors, and anyone with awkward questions are welcome \u2014 no flourish, just honest answers and the paintings to look through.\""
+    },
+    {
+      "turn": 9,
+      "speaker": "Sophia James",
+      "content": "said: \"Finnegan, truly moving \u2014 thank you for sharing that messy courage. To anyone still doubtful (organizers included), skepticism is welcome here \u2014 it keeps stories real. I\u2019ll be at the refreshment table to support Finnegan and to answer any blunt questions honestly, no performative gloss.\""
+    },
+    {
+      "turn": 10,
+      "speaker": "Finnegan O'Malley",
+      "content": "said: \"Thank you, Sophia \u2014 truly. If anyone here, organizer or skeptic, wants to ask one awkward question now, I\u2019ll answer it honestly; otherwise I\u2019ll be by the refreshments with the canvases for anyone who prefers a quiet chat.\""
+    },
+    {
+      "turn": 11,
+      "speaker": "Sophia James",
+      "content": "said: \"Finnegan \u2014 that was honest and brave. If any organizers or skeptics want to ask one awkward question now, please do \u2014 I\u2019ll stay here to support a straight, no-flourish answer. Otherwise we\u2019ll be at the refreshment table for quieter conversations and to look at the paintings.\""
+    },
+    {
+      "turn": 12,
+      "speaker": "Finnegan O'Malley",
+      "content": "said: \"Before we close, may I ask the room a small thing? If you've taken one tiny step this year\u2014anything at all\u2014would you quietly raise your hand; seeing even a few hands would mean a great deal and remind us how those small steps add up.\""
+    },
+    {
+      "turn": 13,
+      "speaker": "Sophia James",
+      "content": "said: \"If you\u2019re skeptical, that\u2019s valid \u2014 and a raised hand right now or a quick visit to the refreshment table afterward is a great, low-pressure way to bridge that doubt to understanding. I\u2019ll be there with Finnegan to listen, answer blunt questions, and show the messy work that proves the journey wasn\u2019t staged. Small gestures like this are the same tiny steps he\u2019s been talking about.\""
+    },
+    {
+      "turn": 14,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

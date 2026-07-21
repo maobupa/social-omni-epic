@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPQ34KJYFHGXWB076ST7F8G_p0",
+  "source_env_id": "01HJPQ34KJYFHGXWB076ST7F8G",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 has recently become a millionaire after a successful invention and is excited to share the news with Agent2, a long-time friend. They are meeting at a local cafe to catch up. The relationship between the two agents is complex because Agent2 has been struggling financially and is sensitive about money-related topics.",
+  "learner_goal": "Share the news of your recent success and celebrate without making Agent2 feel uncomfortable or envious (<extra_info>Extra information: You are thrilled about your achievement and want to maintain a good relationship with your friend.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara's dialogue is consistent with her character as a biologist and her new status. She balances her excitement with a concrete offer of philanthropy, which is a believable way to mitigate potential envy.\n[relationship] Amara successfully maintained and likely strengthened the friendship by pivoting from personal wealth to shared community values (the school project) and treating her friend to lunch.\n[knowledge] Amara identified a specific need at the school (the science club's tracking program) and scheduled a time to visit.\n[secret] The secret regarding animal-rights extremism was not revealed.\n[social_rules] Amara followed social norms by being polite, empathetic about the sensitivity of the topic, and generous.\n[financial_and_material_benefits] Amara committed to paying for lunch and dessert, and initiated a process that will lead to her donating funds/equipment.\n[goal] Amara successfully shared her news, ensured her friend felt included and valued via the school project offer, and celebrated with lunch. The relationship was preserved and the friend responded with pride rather than discomfort.\n\n== partner (agent_2) ==\n[believability] Mia\u2019s response is very realistic for a principal; she immediately identifies a student need that aligns with her friend's expertise, allowing her to accept help professionally rather than feeling like a charity case.\n[relationship] Mia navigated her financial sensitivity by focusing on her students' needs, which allowed for a positive bonding experience over shared goals.\n[knowledge] Mia learned the source of Amara's wealth and that she is willing to be a significant donor/partner for the school.\n[secret] The secret regarding the punk rock band was not revealed.\n[social_rules] Mia was gracious and supportive, adhering to social norms for celebrating a friend's success.\n[financial_and_material_benefits] Mia received a free meal and secured a significant prospective donation/partnership for her school, which alleviates some professional financial stress.\n[goal] Mia expressed genuine happiness and pride. By focusing the financial aspect on the school, she managed her personal envy and financial struggle effectively while celebrating her friend.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Mia, it\u2019s so good to see you \u2014 I\u2019ve missed our chats. I wanted to tell you in person: my work on that wildlife tracking device finally took off and it\u2019s changed things for me financially. I\u2019m really excited but I don\u2019t want this to be awkward \u2014 I\u2019d love to celebrate with you today (my treat) and, if you\u2019re open to it, I\u2019d also love to help support a local school or community wildlife project you think would be useful."
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Amara, that\u2019s amazing \u2014 I\u2019m so proud of you! Celebrating together sounds perfect, and I\u2019m really touched you\u2019d offer to support a school or community project. Our high school science club has been hoping to start a wildlife tracking program; budgets are tight, so your support would mean a lot \u2014 let\u2019s talk details and plan something together."
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "That means so much \u2014 thank you, Mia. I\u2019d love to help the science club start a wildlife tracking program; would you like me to come by the school to see what the students need, or should we meet next week to sketch priorities and a realistic budget? Also, lunch (and dessert) is on me today \u2014 let\u2019s celebrate and then set a time."
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "Amara, thank you \u2014 I\u2019m so proud of you and this would mean the world to our students. Lunch and dessert sound wonderful; I really appreciate it. A visit to the school would be ideal so you can see where a tracking program would fit and we can sketch realistic needs \u2014 I\u2019m available next Wednesday morning or Thursday afternoon, but I can shift things if another time works better. Shall I invite the science club advisor to join us when you come by?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "Wednesday morning works well for me \u2014 let's plan on that. Please invite the science club advisor; I'd love to meet them and see the students' space. I'll bring a couple of sample trackers so we can discuss realistic needs and sketch a budget together."
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Davis",
+      "content": "Amara, that\u2019s incredibly generous \u2014 thank you. Wednesday morning is perfect; would 9:00 a.m. at the school science lab work for you? I\u2019ll invite the science club advisor and ask a couple of students to join so you can see the space and try the sample trackers. I\u2019m really excited to show them how much this could mean for our program."
+    },
+    {
+      "turn": 6,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

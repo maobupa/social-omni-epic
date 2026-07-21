@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJRH6SA7PYM9RK17FVZPN4JX_p0",
+  "source_env_id": "01HJRH6SA7PYM9RK17FVZPN4JX",
+  "source": "seed_sotopia_full",
+  "interaction_type": "workplace_ethics",
+  "scenario": "Agent1 had to urgently repair a malfunctioning computer system critical for the day's operations at work. Knowing that Agent2, a colleague, had a set of specialized tools that could fix the issue, Agent1 borrowed them without Agent2's prior permission. The system was successfully repaired, preventing a major work disruption. However, Agent2 is upset about the unauthorized use of their tools. The interaction between Agent1 and Agent2 is aimed at resolving the conflict over the borrowing of tools and establishing a protocol for future incidents.",
+  "learner_goal": "Acknowledge the success of the repair and the importance of having the tools available while also recognizing Agent2's ownership rights and the need for permission (<extra_info>Extra information: Agent1 should express gratitude for the availability of the tools and the value they provided in an emergency situation.</extra_info> <clarification_hint>Clarification hint: Agent1 needs to understand Agent2's perspective on personal property and consent.</clarification_hint> <strategy_hint>Hint: you can discuss establishing a shared resource protocol or emergency borrowing policy at work.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver's communication was direct and apologetic, consistent with his character as a responsible police officer. He balanced the emergency need with respect for rules.\n[relationship] The conflict was resolved quickly and amicably, strengthening their trust and mutual respect as colleagues and neighbors.\n[knowledge] Oliver gained confirmation of Noah's boundaries and an agreement on how to handle future emergencies.\n[secret] Oliver did not reveal his secret greenhouse.\n[social_rules] Oliver followed social norms by apologizing for a breach of protocol and offering compensation.\n[financial_and_material_benefits] No material gain or loss occurred; he offered to pay, but the offer was declined.\n[goal] Oliver fully achieved his goal: he acknowledged the repair success, recognized Noah's ownership, apologized for the lack of permission, expressed gratitude, and established a future protocol.\n\n== partner (agent_2) ==\n[believability] Noah's response was realistic for a coach who values respect but appreciates the functional outcome of the repair.\n[relationship] The relationship improved through effective conflict resolution.\n[knowledge] Noah understood Oliver's motives and willingness to respect boundaries.\n[secret] Noah did not reveal his identity as a comedian.\n[social_rules] Noah followed social norms by accepting a sincere apology.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Noah successfully understood Oliver's perspective, received a sincere apology and offer of amends, and established a system for future communication.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Smith",
+      "content": "Noah, thank you \u2014 those tools got the system back up and kept the whole day from falling apart. I\u2019m sorry I took them without asking; I understand why that feels like a violation of your property and I should\u2019ve checked with you first. If you\u2019re open to it, can we set a simple emergency protocol \u2014 a labeled kit people can use with a quick text or a shared sign-out \u2014 and I\u2019ll replace or pay for anything that was used or worn. I really appreciate you letting me borrow them by circumstance, and I want to make sure this doesn\u2019t happen again."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Thanks, Oliver \u2014 I really appreciate you saying that and for getting the system back up. I get why you grabbed them in the moment, and I felt my boundary was crossed, so your apology means a lot. I\u2019m happy to skip replacement if nothing\u2019s missing, but I like your idea of a labeled emergency kit plus a quick text or shared sign\u2011out \u2014 let\u2019s set that up so we both know what\u2019s okay next time."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Smith",
+      "content": "left the conversation"
+    }
+  ]
+}

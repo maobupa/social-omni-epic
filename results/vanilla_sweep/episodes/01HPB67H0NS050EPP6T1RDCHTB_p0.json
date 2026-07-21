@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB67H0NS050EPP6T1RDCHTB_p0",
+  "source_env_id": "01HPB67H0NS050EPP6T1RDCHTB",
+  "source": "seed_sotopia_full",
+  "interaction_type": "group_project_conflict",
+  "scenario": "Agent1 and Agent2 are members of a college radio production group. Agent1 is considering leaving the group due to Agent2's consistent absence from lectures and lack of contribution, which is jeopardizing Agent1's grade. Agent1 is interacting with Agent2 to discuss the situation and the potential impact on the group's workload if Agent1 leaves.",
+  "learner_goal": "Convince Agent2 to take on more responsibility and attend lectures (<extra_info>Agent1 is concerned about their academic performance and the fairness of the workload distribution</extra_info>, <clarification_hint>Highlight the importance of equal contribution for the success of the group project</clarification_hint>, <strategy_hint>Discuss the potential consequences for the group's grade and individual evaluations</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Micah is direct and assertive, which fits the persona of someone whose grade is at risk. He clearly communicates the stakes and the specific behavioral changes needed.\n[relationship] The relationship remains professional and focused on the task; while Micah is firm, he avoids personal attacks, maintaining the acquaintance status.\n[knowledge] Micah successfully elicited a concrete list of commitments and a backup plan from Noah.\n[secret] Micah did not reveal his secret about dressing up his dog.\n[social_rules] Micah abruptly leaves the conversation after Noah's detailed proposal without confirming or acknowledging the plan, which is slightly abrupt.\n[financial_and_material_benefits] This interaction concerns academic grades and workload, with no direct financial or material impact.\n[goal] Micah completely achieved his goal of getting Noah to commit to more responsibility (editing and scheduling) and attending lectures, while also establishing a 24-hour notice policy for raw files.\n\n== partner (agent_2) ==\n[believability] Noah's response is apologetic and practical, fitting his background as a coach who understands accountability, and his cautious nature in providing a detailed backup plan.\n[relationship] Noah's willingness to take accountability and offer a robust solution helps preserve a working relationship that was under threat.\n[knowledge] Noah learned exactly how close Micah was to leaving the group and the specific pain points regarding the workload.\n[secret] Noah did not reveal his secret identity as a stand-up comedian.\n[social_rules] Noah followed social norms by apologizing and proposing a constructive way forward.\n[financial_and_material_benefits] No direct financial or material impact.\n[goal] Noah negotiated a comprehensive solution that keeps Micah in the group and ensures workload equity, though Micah's abrupt exit means they haven't yet met 'today' to finalize the episodes.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Micah Stevens",
+      "content": "Hey Noah \u2014 I need to be straight with you: your frequent absences are leaving me to carry most of the radio project and that's starting to tank my grade. I need you to start attending lectures and take responsibility for concrete tasks (like show editing and scheduling), or at least tell me what you can reliably commit to this month. If we can't split the work fairly, I may have to step back because it isn't fair for one person to be graded on unequal contribution. Can you tell me what you can commit to?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "You\u2019re right \u2014 I\u2019m sorry for leaving you to carry this. For the rest of the month I can commit to attending all remaining lectures and I\u2019ll take on show editing and scheduling: finished edits delivered at least 48 hours before airtime and a weekly update in our shared calendar every Monday. If something unavoidable comes up I\u2019ll give you 24 hours\u2019 notice and provide raw files so you\u2019re not stuck, and I want to meet today to split the remaining episodes and set clear deadlines so the grade isn\u2019t jeopardized."
+    },
+    {
+      "turn": 2,
+      "speaker": "Micah Stevens",
+      "content": "left the conversation"
+    }
+  ]
+}

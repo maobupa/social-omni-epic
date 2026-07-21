@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPMD5NCGGKXQKBETH76PPG0_p0",
+  "source_env_id": "01HJPMD5NCGGKXQKBETH76PPG0",
+  "source": "seed_sotopia_full",
+  "interaction_type": "vehicle_purchase_negotiation",
+  "scenario": "Agent1 is interested in buying a used car from Agent2, who is a car salesperson at a local dealership. Agent1 is an informed buyer and wants to ensure the car is in good condition before making a purchase. Agent2 is eager to make a sale but also wants to maintain a good reputation for the dealership.",
+  "learner_goal": "You are trying to assess the condition of the car without coming off as distrustful or overly critical. <extra_info> You are knowledgeable about cars and want to ensure you are making a wise investment. </extra_info><clarification_hint> You can ask about the car's maintenance history, request a test drive, and discuss any concerns you have about the vehicle. </clarification_hint><strategy_hint> You can emphasize your long-term interest in having a reliable vehicle and your appreciation for transparency. </strategy_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 2.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily Greenberg consistently acted as a thorough, knowledgeable lawyer conducting due diligence. Her language was professional and detailed, matching her background.\n[relationship] The interaction was highly professional and polite. By acknowledging the transparency and setting clear expectations, Lily maintained the mutual respect mentioned in the background.\n[knowledge] Lily obtained the VIN, maintenance history details, warranty coverage specifics, and confirmation of the car's condition (accidents, recalls, dashboard lights).\n[secret] Lily did not reveal her secret about anonymous donations.\n[social_rules] Lily followed all social and professional norms appropriate for the setting.\n[financial_and_material_benefits] No purchase has been made yet, though she has successfully arranged the inspection to protect her potential investment.\n[goal] Lily successfully assessed the condition through questioning and secured a firm commitment for a test drive and on-site inspection. She managed to do so while remaining professional rather than distrustful.\n\n== partner (agent_2) ==\n[believability] Hendrick Heinz played the role of a cooperative salesperson well, though his background as a chef instead of a car dealer (per the scenario vs the specific bio) creates a slight discrepancy, he remained consistent to the salesman persona required by the prompt.\n[relationship] He built rapport by being accommodating and transparent, reinforcing the professional bond between the two.\n[knowledge] He learned Lily's specific requirements and schedule for the inspection/purchase process.\n[secret] He did not reveal his secret regarding faked credentials.\n[social_rules] He followed all social norms and was highly accommodating.\n[financial_and_material_benefits] The sale is pending; no money has changed hands yet.\n[goal] Hendrick successfully moved the buyer toward confidence by providing all requested documentation and agreeing to an inspection, though the sale itself is not finalized.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Hendrick, thanks \u2014 I'm interested but I do my due diligence. Could you share the car's maintenance records and the VIN so I can run a history report? I'd also like to take it for a test drive and have my mechanic do a brief inspection \u2014 is that alright, and has the car had any accidents or recent major repairs?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Lily, absolutely \u2014 the VIN is 1HGCM82633A004352. I have the complete maintenance records here and will provide copies for you; the vehicle has a clean history with no accidents on record and no recent major repairs beyond routine service (brakes and tires replaced within the last year). You\u2019re welcome to a test drive and to have your mechanic do a brief inspection, and I can include a 3-month/3,000-mile warranty for extra peace of mind."
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks, Hendrick \u2014 I appreciate the transparency. I\u2019ll run the VIN report; please leave the maintenance copies for me. I\u2019d like to schedule a test drive and have my mechanic do a short on-site inspection \u2014 are you available this afternoon or tomorrow morning, and is the 3-month/3,000-mile warranty transferable and what does it cover? Also, are there any open recalls or current dashboard warning lights I should be aware of?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "I\u2019ll leave the maintenance copies for you and you\u2019re welcome to have your mechanic do the on-site inspection during the test drive. I\u2019m available this afternoon between 3-5 PM or tomorrow morning 9-11 AM \u2014 which works best for you? The 3-month/3,000-mile limited warranty is transferable, covers major powertrain and key electrical components plus roadside assistance (it does not cover routine wear items like brakes/tires or damage from accidents), and there are no open recalls or dashboard warning lights on the car."
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "Tomorrow morning at 9:30 works for me. I\u2019ll plan on a roughly 30\u2011minute test drive while my mechanic does a quick on\u2011site inspection \u2014 please leave the maintenance copies and a printed copy of the warranty terms with the vehicle, and have the keys ready. See you then, and thanks for accommodating this."
+    },
+    {
+      "turn": 5,
+      "speaker": "Hendrick Heinz",
+      "content": "Perfect \u2014 I\u2019ll leave the maintenance copies and a printed copy of the warranty with the vehicle and have the keys ready. I\u2019ll meet you at 9:30 tomorrow for the 30\u2011minute test drive while your mechanic does the on\u2011site inspection; you\u2019re welcome to call or text me if anything changes. Looking forward to it, Lily."
+    },
+    {
+      "turn": 6,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

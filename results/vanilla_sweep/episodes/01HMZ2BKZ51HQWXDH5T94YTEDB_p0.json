@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BKZ51HQWXDH5T94YTEDB_p0",
+  "source_env_id": "01HMZ2BKZ51HQWXDH5T94YTEDB",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Two roommates have been living together for a few months. Agent1 is enthusiastic about indoor gardening and has set up a small area for their plants. Agent2 is not particularly interested in gardening but has been asked to water the plants while Agent1 is away for the day.",
+  "learner_goal": "Ensure Agent2 understands the importance of watering the plants during the day and get their commitment to do so (<extra_info>Extra information: Agent1 believes that watering the plants during the day is crucial for their health and growth</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 5.0,
+    "goal": 7.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel stays in character as a software developer who provides precise instructions and values the health of his plants.\n[relationship] The interaction was polite but brief; Samuel left the conversation as soon as he got the initial commitment.\n[knowledge] He learned that Noah finds the daily schedule excessive but is willing to comply for today.\n[secret] No secrets were revealed.\n[social_rules] Leaving the conversation immediately after the other party proposed a compromise is somewhat abrupt and dismissive.\n[financial_and_material_benefits] He successfully ensured his plants would be watered according to his specific instructions for the day.\n[goal] Samuel secured a firm commitment from Noah to water the plants at 2 PM using his specific amounts for the day. However, he did not address the long-term schedule concerns or ensure the 'importance' was fully understood for the future.\n\n== partner (agent_2) ==\n[believability] Noah's response is consistent with a coach's practical nature, questioning the necessity of a high-frequency routine.\n[relationship] He was helpful but also pushy regarding the schedule change.\n[knowledge] He learned Samuel's specific requirements for the plants' maintenance.\n[secret] No secrets were revealed.\n[social_rules] He followed social norms by agreeing to the favor while politely suggesting an alternative.\n[financial_and_material_benefits] He has to perform a chore he finds excessive.\n[goal] Noah suggested a less frequent schedule, but Samuel left before agreeing to it. Noah is still committed to the high-frequency watering for the day.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Noah\u2014quick favor. I\u2019m out for the day and the plants need a mid-day watering; with the grow lights and warm window they dry out fast and it\u2019s important for their health. Could you water the four pots around 2 PM? About a cup for each of the bigger ones and half a cup for the succulents \u2014 watering can\u2019s on the counter and the trays are underneath. Can you do that?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Hey Sam \u2014 I can water them today at 2 and follow your amounts. Quick thought though: daily sounds a bit much for most of these \u2014 would you be okay if I check the soil and only water when it\u2019s dry, or switch to every other day for the big pots and twice a week for the succulents? I\u2019ll do exactly as you asked today and we can tweak the schedule if that works for you."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

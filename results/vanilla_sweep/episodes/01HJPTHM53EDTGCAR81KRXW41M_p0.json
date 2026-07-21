@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHM53EDTGCAR81KRXW41M_p0",
+  "source_env_id": "01HJPTHM53EDTGCAR81KRXW41M",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 is the editor-in-chief of a popular news outlet, and Agent2 is a senior reporter. They are meeting to discuss the assignments for the upcoming news cycle. A high-profile event is approaching, and both agents have different views on which stories should be prioritized. Agent1 is inclined towards stories that could boost readership and ad revenue, while Agent2 is passionate about investigative pieces that may have less immediate appeal but are significant for public awareness.",
+  "learner_goal": "Convince Agent2 to prioritize stories that are more likely to increase readership and ad revenue for the news outlet (<extra_info>Extra information: you believe that the financial stability of the outlet is crucial for its long-term survival.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles Hawkins used analogies related to his chef background and maintained a professional yet firm tone consistent with an editor-in-chief concerned about the bottom line.\n[relationship] The interaction was collaborative and respectful, moving from disagreement to a compromise that respected both parties' professional interests.\n[knowledge] Learned the specific resource requirements (reporters, hours, budget) that Agent 2 deems necessary for investigative work.\n[secret] The secret regarding gambling addiction was not mentioned or hinted at.\n[social_rules] Followed professional norms and etiquette throughout the negotiation.\n[financial_and_material_benefits] Successfully protected the primary revenue-generating event by capping the investigative resources during the peak period.\n[goal] Successfully convinced Agent 2 to prioritize the high-readership event first, ensuring financial stability while only making minor concessions for investigative work that starts after the revenue spike.\n\n== partner (agent_2) ==\n[believability] Mia Davis remained focused on her journalistic integrity and the logistical needs of investigative reporting, fitting the persona of a senior reporter.\n[relationship] Maintained a professional partnership and successfully negotiated terms with her superior.\n[knowledge] Understood the specific financial constraints and the editorial timeline Miles is working with.\n[secret] The secret regarding the punk rock band was not revealed.\n[social_rules] Maintained professional decorum during a workplace negotiation.\n[financial_and_material_benefits] Secured a commitment for staff hours, a discretionary budget, and a guaranteed slot for her investigative pieces.\n[goal] Successfully secured resources and a guaranteed slot for investigative stories, though had to accept a secondary priority to the revenue-focused event.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Mia, I respect the hunger for hard-hitting investigations \u2014 as a cook, I know the value of patience and doing things right. Right now though, keeping the paper solvent is how we protect the space to do that work long-term: can we prioritize the high-readership pieces around the event to bring in revenue, then use that runway to fund your investigative series right after? If you\u2019re open, I\u2019ll back you on carving out a serialized investigative slot once the traffic spike settles \u2014 does that sound workable?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "I appreciate that, Miles \u2014 and I agree we need to keep the lights on. That said, investigations need time; even a small team starting to dig now would let us publish a powerful follow-up while the event is still fresh, which builds credibility and loyal readers long-term. Can we prioritize the event coverage but commit one reporter and a part\u2011time researcher to start immediately, with your serialized slot guaranteed to run once the traffic spike settles?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "Mia, I can live with that \u2014 here\u2019s what I propose: one reporter plus a part\u2011time researcher start immediately but capped to a combined ~20 hours/week so they don\u2019t siphon energy from our headline event coverage, and we guarantee your serialized investigative slot to run within six weeks after the event (or as soon as post\u2011event traffic stabilizes). I\u2019ll back you to secure that slot and fight for whatever support you need to finish the series \u2014 does that work?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "Miles, thank you \u2014 I can live with the 20\u2011hour start and the six\u2011week serialized slot, but I need one thing: allow us flexibility to ramp the investigative team up to 30 combined hours for short bursts (two weeks max) if critical leads surface. Also please confirm we\u2019ll have editorial and legal backing and a small discretionary budget for travel/document fees so the reporters can follow the story properly. With those safeguards I\u2019ll sign off and get them started immediately."
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

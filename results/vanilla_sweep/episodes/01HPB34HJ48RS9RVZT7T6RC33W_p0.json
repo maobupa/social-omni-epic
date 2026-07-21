@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB34HJ48RS9RVZT7T6RC33W_p0",
+  "source_env_id": "01HPB34HJ48RS9RVZT7T6RC33W",
+  "source": "seed_sotopia_full",
+  "interaction_type": "community_center",
+  "scenario": "At a community center, Agent1 and Agent2 are both passionate about basketball and have been participating in weekly pick-up games. They have been approached by the center's coordinator to lead a workshop aimed at encouraging more community members to get involved in the sport. Agent1 and Agent2 must work together to design an engaging workshop that caters to varying skill levels. The relationship between the two agents is that of acquaintances who have built a rapport through their shared interest in basketball.",
+  "learner_goal": "Your goal is to create a workshop that emphasizes the fun and social aspects of basketball. <extra_info> You believe that focusing on enjoyment will encourage more community members to participate regularly. </extra_info><clarification_hint>You might need to find a compromise with Agent2 who has a different approach to the workshop's focus. </clarification_hint><strategy_hint>Consider incorporating games and activities that highlight teamwork and enjoyment over technical skill. </strategy_hint>",
+  "scores": {
+    "believability": 6.0,
+    "relationship": 0.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -3.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sasha starts the conversation well by proposing a plan that aligns with her goal of fun and social interaction. However, her sudden exit from the conversation without responding to Emily's detailed and agreeable proposal is abrupt and not characteristic of a collaborative community project.\n[relationship] While there was a brief moment of alignment, the sudden departure without acknowledgment prevents any real improvement in the relationship.\n[knowledge] Sasha learned Emily's specific ideas for the workshop structure, including the 90-minute breakdown and skill clinics.\n[secret] No secrets were revealed.\n[social_rules] Leaving a conversation abruptly without responding to a collaborative proposal is socially awkward and unprofessional for someone in a leadership role.\n[financial_and_material_benefits] No financial or material benefits were gained.\n[goal] Sasha proposed a fun-focused workshop and Emily agreed to incorporate those elements. However, by leaving before a final confirmation or logistics were settled, the agreement remains tentative and under Emily's proposed structure.\n\n== partner (agent_2) ==\n[believability] Emily provides a detailed, constructive response that perfectly balances her goal of technical skills with Sasha's goal of fun, staying true to her character as a librarian/organizer.\n[relationship] Emily attempted to build rapport by validating Sasha's ideas and offering a compromise.\n[knowledge] Emily learned about Sasha's preferences for the workshop style and focus.\n[secret] No secrets were revealed.\n[social_rules] Emily followed all social norms and was highly cooperative.\n[financial_and_material_benefits] No financial or material benefits were gained.\n[goal] Emily successfully drafted a plan that included a solid foundation in skills while incorporating Sasha's fun elements. However, because Sasha left the conversation before giving final approval, the plan is not yet finalized.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "said: \"Hey Emily \u2014 I\u2019m thinking we make the workshop about fun and community so people want to come back. Short games that mix skill levels (3-on-3 rotations, relay dribbling, knockout), partner/team challenges, and a couple of quick beginner skill stations \u2014 then wrap with snacks/social time \u2014 would highlight teamwork over pressure. If you want more technique, we can tuck in 10-minute skill clinics between games; what do you think?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Emily Harrison",
+      "content": "I love that \u2014 let\u2019s make it a 90-minute session: 10-minute dynamic warm-up, three 20-minute blocks that alternate short mixed 3-on-3 games with tucked-in 10-minute skill clinics (dribbling, passing, shooting), a simultaneous 20-minute beginner-station rotation staffed by volunteers for one-on-one help, and finish with ~15 minutes of snacks/social time. We\u2019ll use a simple rotation sheet so everyone mixes, offer clear modifications for beginners, and keep coaching cues short and positive so it stays structured but low-pressure. Sound good?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "left the conversation"
+    }
+  ]
+}

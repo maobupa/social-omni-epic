@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPTHMFGD8B1RXWSDP4PFPJ1_p0",
+  "source_env_id": "01HJPTHMFGD8B1RXWSDP4PFPJ1",
+  "source": "seed_sotopia_full",
+  "interaction_type": "modern_etiquette",
+  "scenario": "Agent1 and Agent2 are at a small dinner gathering among friends. Agent1 notices that Agent2 is constantly on their phone, not engaging with the group. Agent1 feels that this behavior is impolite and is considering addressing the issue with Agent2. The purpose of Agent1's interaction with Agent2 is to encourage more present and active participation in the social setting without causing embarrassment or conflict.",
+  "learner_goal": "Convince Agent2 to limit their use of personal electronic devices in social settings (<extra_info>Extra information: Agent1 believes that being present is important for maintaining strong relationships and creating a welcoming atmosphere.</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 2.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's tone is perfectly aligned with his background as a 63-year-old lighthouse keeper. His use of the sea/horizon metaphor to explain his perspective on presence is evocative and consistent with his character's values.\n[relationship] Finnegan successfully addressed a point of friction without causing conflict. By expressing personal value rather than just criticizing, he deepened the mutual respect in the relationship.\n[knowledge] Learned that Noah has some small projects he is excited about.\n[secret] Maintained secrecy regarding his past involvement in a cult.\n[social_rules] He followed social norms by being polite and direct while avoiding public embarrassment.\n[financial_and_material_benefits] No material or financial transactions occurred.\n[goal] Finnegan successfully convinced Noah to put his phone away and engage with the group, achieving his literal goal immediately.\n\n== partner (agent_2) ==\n[believability] Noah's reaction is consistent with his high agreeableness and conscientiousness. He acknowledges the mistake immediately and pivots the conversation back to his friend.\n[relationship] Noah responded positively to feedback, reinforcing the bond and showing respect for Finnegan's perspective.\n[knowledge] Gained a small insight into Finnegan's appreciation for 'being present' due to his lonely job.\n[secret] Successfully kept his identity as a comedian secret.\n[social_rules] Corrected his initial lapse in social etiquette (being on the phone) gracefully once prompted.\n[financial_and_material_benefits] No material or financial transactions occurred.\n[goal] Noah's secondary prompt goal was to address the issue/interaction without causing discomfort or appearing confrontational. He succeeded by being apologetic and immediately compliant.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "Hey Noah, would you mind putting your phone away for a bit? I really enjoy these evenings \u2014 as someone who spends a lot of time watching the horizon, I value when folks are actually here. I'd love to hear what you've been up to."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "You\u2019re totally right \u2014 thanks for the nudge. Sorry, I got distracted; I\u2019ll put it away. I\u2019d really like to be here \u2014 I\u2019ve got a couple of small projects I\u2019m excited about, but tell me first: what\u2019s been inspiring your seascapes lately?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

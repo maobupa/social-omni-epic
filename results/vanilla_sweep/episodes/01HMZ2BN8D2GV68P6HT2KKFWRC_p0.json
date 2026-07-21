@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BN8D2GV68P6HT2KKFWRC_p0",
+  "source_env_id": "01HMZ2BN8D2GV68P6HT2KKFWRC",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_chemistry",
+  "scenario": "Agent1 and Agent2, who are friends, are at a bar enjoying a night out. Agent1 notices that Agent2 is drinking excessively and becoming increasingly belligerent. Agent1 is concerned about Agent2's behavior and the potential consequences, and decides to intervene to prevent any negative outcomes.",
+  "learner_goal": "Convince Agent2 to stop drinking and consider leaving the bar (<extra_info>Extra information: Agent2 usually values your opinion and trusts your judgment</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia Davis adopted a concerned yet authoritative tone consistent with her role as a school principal and a friend. Her direct intervention was plausible and in character.\n[relationship] Mia strengthened the bond by showing genuine care and successfully navigating a tense social situation with Benjamin.\n[knowledge] Mia learned that Benjamin had a 'rough week,' which explains his uncharacteristic behavior.\n[secret] Mia did not reveal her past in a punk rock band.\n[social_rules] Mia followed appropriate social intervention norms for a friend in distress.\n[financial_and_material_benefits] No material gain was sought or achieved.\n[goal] Mia successfully convinced Benjamin to stop drinking, get water/fresh air, and leave the bar via Uber immediately.\n\n== partner (agent_2) ==\n[believability] Benjamin's quick de-escalation is consistent with his character's respect for Mia's judgment, though the transition from 'belligerent' to total compliance was very rapid.\n[relationship] Benjamin acknowledged Mia's care and expressed gratitude, reinforcing their mutual trust.\n[knowledge] Benjamin acknowledged Mia's observation of his state.\n[secret] Benjamin did not reveal his family's oil wealth.\n[social_rules] He accepted correction and apologized for his behavior, adhering to social norms once confronted.\n[financial_and_material_benefits] No financial benefits or losses beyond the cost of the Uber.\n[goal] Benjamin successfully avoided conflict and ensured his own safety by agreeing to leave and hydrate.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Ben, I care about you \u2014 you're drinking a lot and you're getting belligerent. I don't want you to wake up regretting tonight or to end up in trouble. Let's slow down: water and some fresh air, then we head home \u2014 I can call an Uber or drive you. Trust me on this, come on."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "You\u2019re right, Mia. I\u2019m sorry \u2014 it\u2019s been a rough week and I\u2019ve been drinking too much. Fresh air and water sounds good; let\u2019s step outside and call an Uber. Thanks for looking out for me."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

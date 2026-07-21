@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJRH6S425D565RGA23NF9GGJ_p0",
+  "source_env_id": "01HJRH6S425D565RGA23NF9GGJ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "stationery_borrow",
+  "scenario": "Agent1 is in the middle of an important meeting and realizes they have forgotten their pen. Agent2 is seated next to them and has several pens visible in their pocket. Agent1 needs to take notes and decides to ask Agent2 to borrow a pen. Agent2 values their stationery and is known to be particular about their pens. Agent1 is aware of this and wants to approach the situation delicately to avoid offending Agent2.",
+  "learner_goal": "You are Agent1 and your goal is to borrow a pen from Agent2 for the duration of the meeting. <extra_info>You are aware of Agent2's particular nature regarding their stationery.</extra_info> <clarification_hint>Politely ask for a pen and acknowledge the value Agent2 places on their belongings.</clarification_hint> <strategy_hint>Offer reassurance about taking good care of the pen and returning it promptly after the meeting.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 1.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles speaks in a manner consistent with a professional chef who respects his colleague's boundaries. The tone is polite and acknowledges the context of the meeting.\n[relationship] The interaction was polite and respectful of boundaries, maintaining the professional respect mentioned in the background.\n[knowledge] Miles learned that Ethan has different tiers of pens (nicer vs. cheap ballpoint) and is willing to help in alternative ways.\n[secret] Miles did not reveal his gambling addiction.\n[social_rules] Miles followed social norms for interrupting a colleague during a meeting.\n[financial_and_material_benefits] He successfully acquired the temporary use of a pen for the meeting.\n[goal] Miles successfully borrowed a pen, acknowledged Ethan's particular nature, and offered reassurance, fulfilling all parts of his goal.\n\n== partner (agent_2) ==\n[believability] Ethan's response perfectly captures his 'particular' nature about stationery by distinguishing between his nice pens and a cheap ballpoint, while still being helpful.\n[relationship] Ethan was helpful despite his hesitance, which slightly reinforces the professional bond.\n[knowledge] Ethan learned that Miles is unprepared for the meeting notes.\n[secret] Ethan did not reveal that he is a romance novelist.\n[social_rules] Ethan followed social norms by being helpful while setting personal boundaries.\n[financial_and_material_benefits] He temporarily lost possession of one of his pens, though it was one he valued less.\n[goal] Ethan maintained the integrity of his nice stationery collection by offering a cheap alternative and suggesting digital options, thus successfully balancing his values with being helpful.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Ethan, sorry to interrupt \u2014 I'm in the middle of notes and just realized I left my pen. I know you're particular about your stationery, so if you're comfortable could I borrow one for the meeting? I promise to treat it carefully and hand it straight back when we're done."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Hey Miles \u2014 I try not to lend my nicer pens, but I do have a cheap ballpoint in my jacket I can spare for the meeting. You can use it and hand it back afterwards. If you'd prefer, I can also snap a photo of any slides/notes or type the key points into your phone instead."
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

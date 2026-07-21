@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HMZ2BN1CZQGTXTHZVMADZ1G1_p0",
+  "source_env_id": "01HMZ2BN1CZQGTXTHZVMADZ1G1",
+  "source": "seed_sotopia_full",
+  "interaction_type": "family_concern",
+  "scenario": "Agent1 is increasingly worried about their younger sibling, Agent2, who is living with their father. The father has shown signs of instability and erratic behavior recently. Agent1 is concerned for Agent2's safety and well-being but knows that Agent2 has a strong sense of loyalty and may resist leaving their father's side. Agent1 needs to approach Agent2 with care, aiming to persuade them to consider alternative living arrangements for their own safety.",
+  "learner_goal": "Convince Agent2 to explore other living arrangements for their safety (<extra_info>Extra information: Agent1 believes that the current living situation is not safe for Agent2 and is willing to provide support for a transition</extra_info>, <clarification_hint>Highlight the potential risks of staying with their father and the benefits of a stable environment</clarification_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia Davis stayed very consistent in her role as a concerned high school principal and elder sister figure, using clear, structured communication to ensure safety.\n[relationship] The bond strengthened significantly as Mia moved from an acquaintance to a primary support system, gaining Lena's trust and setting up recurring check-ins.\n[knowledge] Mia successfully identified Lena's emergency contacts, specific safety plan details, and a clear timeline for when Lena might leave her father's home.\n[secret] Mia did not reveal her punk rock past.\n[social_rules] Mia followed social norms and professional boundaries appropriate for her role as a principal/elder sibling figure.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Mia successfully convinced Lena to explore and commit to a concrete backup living arrangement. Lena agreed to involve a cousin for housing, a counselor for support, and to prepare a packed bag for departure, representing a clear commitment to exploring other options.\n\n== partner (agent_2) ==\n[believability] Lena's internal conflict between her loyalty to her father and her self-preservation was well-articulated and consistent with the scenario.\n[relationship] Lena leaned heavily into Mia's support, moving from a professional acquaintance to a vulnerable family member/prot\u00e9g\u00e9 role.\n[knowledge] Lena learned that Mia has a specific support network available through her school and is willing to be an active participant in her safety plan.\n[secret] Lena did not reveal the secret about her best friend's boyfriend.\n[social_rules] Lena maintained appropriate social conduct during a high-stress conversation.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Lena successfully reassured Mia that she was managed for the moment, but her goal of maintaining the decision to stay was partially compromised by her setting up an active exit strategy (packing a bag and prepping a cousin to host her immediately).",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Lena, can I be frank? I'm really worried about you \u2014 your dad's recent behavior seems unstable and I\u2019m concerned for your safety. I know loyalty matters to you, but staying could put you at risk; if you\u2019re open to it, I can help you explore other options like temporary housing, staying with a trusted friend or relative, or getting support through school. Are you safe right now, and would you be willing to talk about some practical next steps I can help with?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks, Mia \u2014 I really appreciate you saying that. I know he\u2019s been unpredictable, but he\u2019s my dad and I feel responsible for him; right now I\u2019m staying because I believe I can keep things steady. I\u2019m okay at the moment, and I would appreciate help putting together a backup plan or temporary options I could use if things escalate \u2014 can we keep checking in?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "Okay \u2014 thank you for being honest, Lena. Let\u2019s make a very simple backup plan now: one safe place you could go (friend, relative, or short-term housing), a packed bag with essentials, and two emergency contacts. I can help call someone, connect you with our school counselor, or meet you to sort this out in person, and I\u2019ll check in twice a week \u2014 would you like to work on it now or set a time this week?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks, Mia \u2014 I can do this now if you have a few minutes. He\u2019s my dad and I feel like I should be here for him, but I don\u2019t want to be blind to the risks; let\u2019s put together one safe place I can go, a packed-bag checklist, and two emergency contacts. Could you also connect me with the school counselor and check in twice a week like you offered?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "Okay, let\u2019s do this now. Who would you pick as the one safe place to go (a friend, relative, or short-term option)? Can you give me two emergency contacts (names and best numbers) I can keep on hand? I\u2019ll contact our school counselor today and set up twice-weekly check-ins \u2014 would Monday and Thursday evenings work for you, or do other days/times suit you better? If you want, I can meet you afterward to help pack a bag and make sure it\u2019s ready."
+    },
+    {
+      "turn": 5,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks, Mia \u2014 I really appreciate you stepping in. Safe place: my cousin Claire Bennett (she\u2019s offered a spare room) \u2014 555-412-0789. Emergency contacts: Claire Bennett 555-412-0789 and my friend Zoe Malik 555-781-3342. Packed-bag checklist: change of clothes, toiletries, any meds + prescriptions, phone charger/power bank, ID/insurance cards, small cash, keys. Please connect me with the school counselor; Monday and Thursday evenings at 7 pm work for the twice-weekly check-ins, and I can meet you afterward to pack if that\u2019s still possible."
+    },
+    {
+      "turn": 6,
+      "speaker": "Mia Davis",
+      "content": "I\u2019ll reach out to our school counselor today and let them know you\u2019d like support, and I\u2019ll propose Monday and Thursday at 7 pm for our check\u2011ins \u2014 would you prefer a text reminder or a quick phone call for those? I can meet you after either check\u2011in to help pack the bag; which night would you prefer I come by? Also, would you like me to call Claire now to let her know she may be hosting you so she\u2019s prepared?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Lena Goodwin",
+      "content": "Text reminders are best for the check\u2011ins. Monday at 7 works \u2014 please meet me afterward and we can pack the bag then. Yes, please call Claire now so she\u2019s prepared if I need to go. I want to be here for Dad and support him, but having this plan and your help makes me feel a lot safer \u2014 thank you."
+    },
+    {
+      "turn": 8,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

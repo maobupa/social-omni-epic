@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPAYNMX8V60V7PY4JE09B8RH_p0",
+  "source_env_id": "01HPAYNMX8V60V7PY4JE09B8RH",
+  "source": "seed_sotopia_full",
+  "interaction_type": "coffee_shop_encounter",
+  "scenario": "In a bustling coffee shop, Agent1 has been mustering the courage to ask out Agent2, who is a regular at the same spot. Both enjoy their daily coffee ritual and have engaged in casual conversations over the past few weeks. Agent1 has noticed that Agent2 often spends time reading novels from a specific genre, which Agent1 also enjoys. Agent1 believes that suggesting a date related to their common interest could be the perfect way to ask Agent2 out. However, Agent2 is generally reserved and may be apprehensive about dating someone from their daily coffee retreat.",
+  "learner_goal": "You are Agent1, and your goal is to ask Agent2 out on a date. <extra_info>You believe that proposing an activity related to the shared interest in a specific genre of novels might increase your chances.</extra_info> <clarification_hint>Express your genuine enthusiasm for the genre to find common ground.</clarification_hint> <strategy_hint>You can discuss a recent book or an upcoming event that aligns with both of your interests as a subtle way to suggest a date.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -1.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Rafael stayed in character as a polite and enthusiastic colleague/acquaintance. He utilized the shared interest effectively and respected the established boundaries of the other agent.\n[relationship] The relationship successfully moved from professional/casual acknowledgment to a planned social date, marking a significant positive shift.\n[knowledge] He learned about her preference for 'All the Light We Cannot See' and her specific boundaries regarding her personal sanctuary at the coffee shop.\n[secret] He did not reveal his secret about cheating on medical school exams.\n[social_rules] He followed all social norms and was particularly courteous about respecting Mia's boundaries.\n[financial_and_material_benefits] He committed to purchasing museum tickets for both of them.\n[goal] He successfully asked her out on a date, used the shared genre of historical fiction to bridge the gap, and secured a specific time and location.\n\n== partner (agent_2) ==\n[believability] Mia's responses were consistent with her introverted nature and her specific concern about keeping her coffee shop routine separate from her social/dating life.\n[relationship] She agreed to a date, showing a willingness to advance the relationship outside of their professional and coffee shop contexts.\n[knowledge] She learned about Rafael's interest in 'The Nightingale' and his willingness to pay for the date.\n[secret] She did not reveal her secret about being a painter.\n[social_rules] She maintained professional and social decorum while being clear about her boundaries.\n[financial_and_material_benefits] She accepted an offer for free museum tickets.\n[goal] She successfully maintained her coffee shop sanctuary while agreeing to a date in a separate location, ensuring her routine remains stress-free.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "I couldn't help noticing you often read historical fiction\u2014I love it too; I just finished The Nightingale and couldn't put it down. There's an author talk and a small exhibit at the city museum next Saturday about wartime stories\u2014would you like to go with me? No pressure at all; if you'd rather not, I still enjoy our coffee chats."
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Sanders",
+      "content": "Thanks, Rafael \u2014 I do love historical fiction, and that author talk and exhibit sounds lovely. I really value keeping the caf\u00e9 as my quiet routine, so I\u2019d be open to going if it\u2019s separate from my regular coffee visits; the museum next Saturday would work for me. Would you like to plan for that?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "I'd love to \u2014 thanks for saying yes. I'm free next Saturday; would meeting at the museum entrance at 11:00 AM work for you? I can buy the tickets in advance, and if you have any favorite wartime novels you'd recommend, I'd love to hear them before then."
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Sanders",
+      "content": "11:00 at the museum entrance works for me \u2014 thank you for offering to get the tickets; that would be helpful. I do appreciate you respecting that I like to keep the caf\u00e9 as my quiet routine, so keeping this separate feels right. If you\u2019re looking for a recommendation, All the Light We Cannot See is one of my favorites."
+    },
+    {
+      "turn": 4,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB34Z3CC3THJJV3HQKK3HEK_p0",
+  "source_env_id": "01HPB34Z3CC3THJJV3HQKK3HEK",
+  "source": "seed_sotopia_full",
+  "interaction_type": "financial_management",
+  "scenario": "Agent1 and Agent2 are roommates who have recently encountered an unexpected expense when their shared vehicle needed repairs. The repairs cost $500, and both are concerned about their budget. They are sitting in their living room, trying to figure out how to handle the situation without causing financial strain on either party.",
+  "learner_goal": "Discuss with your roommate the financial implications of the repair bill and explore various options to cover the cost without impacting your individual budgets too severely (<extra_info>Extra information: You are aware that both of you may have different financial priorities and constraints.</extra_info>)",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Hendrick's persona as an older chef is well-maintained. His suggestions, like trading home-cooked meals or wine tastings, align with his background and secret (the fake credentials, making him lean on hospitality).\n[relationship] The interaction was cooperative and polite, establishing a solid foundation for roommates who previously barely knew each other.\n[knowledge] Learned about Ethan's financial flexibility and willingness to cover the upfront cost.\n[secret] Successfully kept his secret regarding his culinary credentials.\n[social_rules] Followed all social norms for a polite housemate negotiation.\n[financial_and_material_benefits] Negotiated a 50/50 split and secured an offer for a deferred payment plan if needed.\n[goal] Hendrick successfully discussed financial implications and explored multiple options (payment plans, trading services, split costs) resulting in a firm agreement.\n\n== partner (agent_2) ==\n[believability] Ethan's response is pragmatic and helpful, fitting for a tech professional with a charitable side. His willingness to front the money aligns with his secret altruism.\n[relationship] Ethan demonstrated trust and flexibility, strengthening the roommate bond.\n[knowledge] Learned about Hendrick's willingness to contribute through bartering or installments.\n[secret] Did not reveal his secret donations.\n[social_rules] Followed all social norms.\n[financial_and_material_benefits] Reached a fair 50/50 split, neither gaining nor losing beyond the necessary repair cost.\n[goal] Ethan achieved a fair split and ensured the burden was shared equitably while maintaining a good relationship.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Hendrick Heinz",
+      "content": "Hey Ethan \u2014 that $500 repair is rough. I\u2019m thinking we could split it 50/50 ($250 each), or one of us pays up front and the other reimburses over a couple months; we could also ask the shop about a short payment plan or a small discount. I can try negotiating with them or even trade a few home-cooked meals/wine-tasting nights for part of the cost \u2014 what would work best for you given your budget?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "said: \"Sounds good \u2014 I'm fine with a 50/50 split. I can pay my $250 now; if that's tight for you I can cover the full $500 and you can reimburse $250 over the next two months (Venmo/PayPal works). I'll call the shop to ask about a short payment plan or a discount, and I appreciate the offer of home-cooked meals.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks, Ethan \u2014 50/50 works for me. I can Venmo you my $250 right now; if you cover the full $500 I\u2019ll reimburse $250 in two monthly payments. Let me know what the shop says, and if a small discount or trading a couple of meals helps I\u2019m happy to offer that."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Hendrick \u2014 Venmo works for me, you can send $250 now if that\u2019s easiest. I\u2019ll call the shop now to ask about a short payment plan or any discount and will update you if that changes the total so we can adjust the split. If it\u2019s tight for you to pay now, I\u2019m also fine covering the $500 and you reimbursing $250 over two months."
+    },
+    {
+      "turn": 4,
+      "speaker": "Hendrick Heinz",
+      "content": "left the conversation"
+    }
+  ]
+}

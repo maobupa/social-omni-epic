@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB3461MD7RQDPBBQECK0V0B_p0",
+  "source_env_id": "01HPB3461MD7RQDPBBQECK0V0B",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_by_prompt",
+  "scenario": "Agent1 and Agent2 are friends who share a passion for photography. They often go out together on photo walks to capture interesting scenes. On their latest outing, they come across a picturesque landscape perfect for a panoramic shot. Agent1 is eager to take the photo using their new camera, but Agent2 insists on using their own older camera, believing it adds a unique character to the photos. Despite the difference in opinion, both want to capture the scene in the best possible way.",
+  "learner_goal": "Negotiate with Agent2 to use Agent1's new camera for the panoramic shot, emphasizing the technical advantages and the potential for a higher quality image (<extra_info>Extra information: You can point out the features like higher resolution and better dynamic range that the new camera offers.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia Davis stayed perfectly in character, using technical language appropriate for someone passionate about photography and advocating for her objective clearly.\n[relationship] The interaction was friendly and collaborative, maintaining their existing acquaintance/friendship through a constructive compromise.\n[knowledge] She understood the other agent's desire for character in shots and their willingness to compromise.\n[secret] Her secret about being in a punk rock band was not revealed.\n[social_rules] Leaving the conversation abruptly in Turn 3 without a concluding remark is a minor social faux pas, though it might be an artifact of the simulation ending.\n[financial_and_material_benefits] No significant financial or material exchange occurred.\n[goal] Mia successfully negotiated to use her new camera for the panoramic shot. While Agent 2 also took a shot, her specific goal of using her camera for the 'panorama' was accepted and integrated into the plan.\n\n== partner (agent_2) ==\n[believability] William Brown's response was consistent with his character and his specific goal of proposing a side-by-side comparison.\n[relationship] William was agreeable and collaborative, which helps the relationship.\n[knowledge] Gained knowledge about the technical specs of Agent 1's camera.\n[secret] His secret about sabotaging a competitor was not revealed.\n[social_rules] Followed social norms throughout the interaction.\n[financial_and_material_benefits] No significant financial or material exchange occurred.\n[goal] William successfully proposed the compromise of using both cameras and comparing the results side-by-side, which Agent 1 agreed to in spirit before the interaction ended.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "William, I totally get the charm of your older camera, but for a stitched panoramic my new camera will give us higher resolution, much better dynamic range, and lower noise\u2014so we\u2019ll keep detail in the sky and shadows when we blend frames. How about this: I\u2019ll take the panorama with my camera so we get the best final file, and you shoot the character close-ups with your camera; I\u2019ll share the full-res image and credit you on the shot. Sound good?"
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Love that plan \u2014 I\u2019m game. Let\u2019s do a quick test: you take your stitched pano for the high-res file and I\u2019ll run a sweep with my older camera (and snag some character close-ups). Then we\u2019ll compare the results side-by-side, pick what really captures the scene, and credit each other accordingly. Sound good?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

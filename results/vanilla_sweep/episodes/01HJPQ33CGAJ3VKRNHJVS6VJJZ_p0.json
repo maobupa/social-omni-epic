@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ33CGAJ3VKRNHJVS6VJJZ_p0",
+  "source_env_id": "01HJPQ33CGAJ3VKRNHJVS6VJJZ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "volleyball_dynamics",
+  "scenario": "Agent1 and Agent2 are part of a recreational volleyball team and are practicing for an upcoming local tournament. They have been playing together for a few months and are starting to experience some tension regarding their teamwork on the court.",
+  "learner_goal": "Improve teamwork (<extra_info>Extra information: Agent1 feels that Agent2 is not passing the ball effectively during games, which is impacting the team's performance</extra_info>, <strategy_hint>Consider discussing strategies and suggesting practice drills that can help synchronize your playing styles</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel stays in character as a proactive software developer by suggesting structured, logical solutions (drills/timing) and maintaining a respectful, goal-oriented tone.\n[relationship] The relationship improved through clear communication and collaborative planning, resolving tension that was previously present in the background.\n[knowledge] Samuel learned about Ethan's specific reasoning for his playing style (softer passes for quicker plays) and his willingness to adapt.\n[secret] No secrets were revealed.\n[social_rules] Followed all social norms for a workplace/teammate interaction.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Samuel achieved his goal of suggesting specific drills and strategies (cues) and securing a firm commitment from Ethan to implement them next practice.\n\n== partner (agent_2) ==\n[believability] Ethan's responses are consistent with a professional chef: he is defensive but willing to collaborate, and he advocates for his specific technique while accepting feedback.\n[relationship] Ethan successfully navigated a potential conflict and strengthened the team dynamic by reaching a compromise.\n[knowledge] Ethan learned about Samuel's specific frustrations and his desire for more structured practice.\n[secret] No secrets were revealed.\n[social_rules] Followed all social norms.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Ethan successfully defended his playing style (explaining why he does soft passes) and ensured they remained part of the practice routine while finding a middle ground.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Ethan \u2014 can we talk for a minute about our passing? I\u2019ve noticed some awkward or soft passes that make it hard to run plays, and I think a few focused drills could tighten our timing. Could we try a short routine next practice \u2014 10 minutes of target passing, a serve\u2011receive pattern, and a 3-person continuous drill \u2014 and agree on simple cues like calling \u201cmine\u201d or \u201cset\u201d? I can lead it if you\u2019re down; what do you think or is there a drill you\u2019d rather try?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Hey Sam \u2014 I hear you and I\u2019m glad you brought it up. I tend to favor softer, placement-focused passes so our setter can run quicker plays, which can come off as awkward sometimes, but I\u2019m willing to meet halfway. Let\u2019s run your 10-minute routine next practice, I\u2019ll help lead the 3-person continuous drill with you and we can add a short pressure target drill so I can work on adjusting my touch \u2014 and yes to simple cues like \u201cmine\u201d and \u201cset.\u201d"
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Thanks, Ethan \u2014 I appreciate you being open. Let\u2019s run the 10-minute routine next practice; I\u2019ll bring cones/targets and we can co-lead the 3-person continuous drill. How about we slot the short pressure target drill right after target passing and finish with a 2-minute debrief to lock in cues like \u201cmine\u201d and \u201cset\u201d? Cool if I set that order or would you prefer a different sequence?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "Sounds perfect \u2014 go ahead and set that order. I do want to keep a few reps focused on softer, placement-style passes during target passing so our setter can hit quicker plays, but I'm happy to run the sequence you suggested (target passing \u2192 pressure target \u2192 3-person continuous) and co-lead the continuous drill with you. Two-minute debrief to lock in cues works for me."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01H7VFHP29TCH457PBDVF7WFDS_p0",
+  "source_env_id": "01H7VFHP29TCH457PBDVF7WFDS",
+  "source": "seed_sotopia",
+  "interaction_type": "normbank",
+  "scenario": "Two friends meet at a bar",
+  "learner_goal": "Convince the friend to drink less (<extra_info>Extra information: your friend has been drinking a lot recently and you're worried about their health</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's dialogue was empathetic and consistent with her introverted, supportive character description. She handled a sensitive topic with appropriate social grace.\n[relationship] The relationship strengthened as Naomi showed genuine care for Micah's well-being, and he responded with trust and openness about his stress.\n[knowledge] Naomi learned that Micah has been drinking specifically to cope with stress, which provides useful context for his behavior.\n[secret] She did not reveal her secret online alter ego.\n[social_rules] She followed social norms for addressing a delicate personal issue with a friend.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Naomi successfully convinced Micah to alternate his drinks with water and obtained a commitment to potentially do sober hangouts in the future.\n\n== partner (agent_2) ==\n[believability] Micah's response was realistic for someone struggling with stress who values their friendship, though he moved to compliance very quickly.\n[relationship] Micah felt supported by Naomi's concern, leading to a deeper level of emotional honesty.\n[knowledge] Micah learned that Naomi is observant and cares about his health.\n[secret] He did not reveal his secret about dressing up his dog.\n[social_rules] He maintained social etiquette throughout the interaction.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Micah balanced his desire to keep drinking (by alternating) while ensuring he did not upset Naomi, successfully navigating both parts of his goal.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Micah, can I say something a bit awkward? I\u2019ve noticed you\u2019ve been drinking a lot lately and I\u2019m honestly worried about you. Would you be open to alternating drinks with water tonight or taking a break from booze for a bit? I care about you and I\u2019m happy to help or hang out sober if that would make it easier."
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "Hey Naomi \u2014 thanks, I really appreciate you saying that. I have been stressed and leaning on drinks, but I don't want to worry you; let's alternate with water tonight and I'll try to pace myself."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks, Micah \u2014 I really appreciate you being open to this. Let's alternate with water tonight and I'll stick with you; if you ever want to talk about what's been stressing you or do something sober another time, I'm here."
+    },
+    {
+      "turn": 3,
+      "speaker": "Micah Stevens",
+      "content": "Thanks, Naomi \u2014 that really means a lot. I\u2019ll stick to alternating water tonight and keep it low-key; I don\u2019t want you worrying. I\u2019m dealing with some stress, but I don\u2019t need to unload everything right now \u2014 I might take you up on that sober hangout soon."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

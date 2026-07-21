@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPAYNP48D42KYDCQPTG4M7AA_p0",
+  "source_env_id": "01HPAYNP48D42KYDCQPTG4M7AA",
+  "source": "seed_sotopia_full",
+  "interaction_type": "room_cleaning",
+  "scenario": "Agent1 has spent the entire day meticulously cleaning their shared apartment in anticipation of a visit from Agent2's family. Agent2, who had been busy with other commitments, returns to find the apartment spotless. Agent1 expects some form of appreciation or help in maintaining the cleanliness, while Agent2 feels they should not be burdened with extra chores since they did not contribute to the mess. The two must navigate this situation while preparing for the family visit.",
+  "learner_goal": "Seek acknowledgment for the effort put into cleaning and establish a mutual understanding for maintaining the apartment's cleanliness (<extra_info>Extra information: Agent1 believes that maintaining a clean living space is a shared responsibility and hopes for Agent2's cooperation.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle stays in character as a tired but firm roommate seeking acknowledgement for their work. Their tone is consistent with their background.\n[relationship] The relationship improved as they resolved a conflict and reached a mutual agreement, though the abrupt exit limits the score.\n[knowledge] Giselle learned that Micah is willing to cooperate and take on specific responsibilities.\n[secret] Giselle did not reveal their secret of selling forged paintings.\n[social_rules] Leaving the conversation immediately after the proposal without a verbal confirmation is slightly abrupt, though it implies acceptance.\n[financial_and_material_benefits] Secured a promise of shared labor, reducing the future physical burden of maintenance.\n[goal] Giselle successfully sought acknowledgment (Micah thanked them) and Micah proposed a concrete, mutual plan for maintaining cleanliness, fulfilling the shared responsibility objective.\n\n== partner (agent_2) ==\n[believability] Micah's response is polite and solution-oriented, which aligns with his goal and his personality as a detail-oriented pharmacist.\n[relationship] Micah showed empathy and willingness to adjust his behavior to maintain harmony.\n[knowledge] Micah learned about Giselle's expectations regarding shared living duties.\n[secret] Micah did not reveal his secret about dressing up his dog.\n[social_rules] Micah followed all social norms and was apologetic.\n[financial_and_material_benefits] Avoided being saddled with all the cleaning by negotiating a split, though he did commit to more work than he was doing previously.\n[goal] Micah acknowledged the effort and successfully proposed a fair distribution of future tasks by area, which was his primary goal.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Micah, I spent the whole day cleaning for your family's visit \u2014 I was hoping you'd notice. It would mean a lot to get a thanks, and I really want us to share keeping the place tidy; can we agree on a simple plan (like alternating quick tidies or splitting chores) so it doesn't always fall on one of us?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "Giselle, thank you \u2014 the place looks amazing and I really appreciate you doing that. You're right: I didn't help today and I should've, so I'm sorry; I don't want upkeep to fall only on you. Can we try a simple plan: alternate a 10-minute evening tidy and split bigger tasks by area (I take kitchen/trash, you take living room/laundry) and rotate weekly or before visits? Does that sound fair?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

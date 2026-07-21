@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPX519V4E69B3FSKXQW260Z_p0",
+  "source_env_id": "01HJPX519V4E69B3FSKXQW260Z",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 and Agent2 are colleagues who have been assigned to work together on a high-stakes project. Agent1 is known for being extremely logical and often comes across as unemotional, which sometimes causes misunderstandings with coworkers. Agent2 values emotional intelligence and believes that understanding emotions can lead to better teamwork.",
+  "learner_goal": "Convince Agent2 that your ability to 'turn off' emotions can be an asset to the project, especially in stressful situations (<extra_info>Extra information: you believe that emotions can cloud judgment and that a rational approach leads to better decision-making.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle presented a clear, logical case for her perspective that aligned perfectly with her background and goal. She spoke professionally and directly.\n[relationship] The agents reached a professional consensus, which slightly improved their working dynamic as acquaintances/colleagues.\n[knowledge] She gained insight into Donovan's specific strategies for emotional intelligence in the workplace (check-ins, post-mortems).\n[secret] Her secret regarding magic was not revealed.\n[social_rules] Followed professional norms and communicated clearly.\n[financial_and_material_benefits] No direct financial or material changes occurred.\n[goal] Isabelle successfully convinced Donovan of the utility of her 'switching off' emotions, leading to a specific protocol where she takes point during stressful phases.\n\n== partner (agent_2) ==\n[believability] Donovan responded with a practical, balanced approach that reflected his stated value for emotional intelligence and research-backed methods.\n[relationship] The relationship improved through mutual respect and compromise.\n[knowledge] He learned how Isabelle views her own rational detachment and how she believes it can be applied to the project.\n[secret] His secret regarding government information was not revealed.\n[social_rules] Followed professional norms.\n[financial_and_material_benefits] No direct financial or material changes occurred.\n[goal] Donovan successfully integrated emotional intelligence strategies (check-ins and post-mortems) into the workflow while acknowledging Isabelle's need for rationality.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "I know you value emotional intelligence, and I do too \u2014 emotions keep teams human. What I can add is the ability to temporarily \u2018turn off\u2019 my emotions in high-pressure moments so decisions aren\u2019t driven by panic or bias; that helps with clear triage, accurate prioritization, and precise communication when it matters most. I\u2019m not saying I\u2019m uncaring \u2014 I\u2019ll still address the team\u2019s feelings before and after crises \u2014 but having someone who stays fully rational can reduce mistakes. If you like, I can take point during the most stressful phases so you can focus on keeping everyone supported."
+    },
+    {
+      "turn": 1,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks \u2014 I agree emotions keep teams human, and your ability to switch off in crises is genuinely useful. Research and experience show teams with higher emotional intelligence communicate more clearly, resolve conflicts faster, and maintain productivity, which directly reduces mistakes on high\u2011stakes work. Let\u2019s make it practical: brief emotional check\u2011ins before sprints, a named \u201ccrisis protocol\u201d where you lead triage while I handle coordination/support, and a short post\u2011mortem to address the team\u2019s feelings so we stay rational without sidelining people."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ34NZYMHJ00EMBD6R3NJV_p0",
+  "source_env_id": "01HJPQ34NZYMHJ00EMBD6R3NJV",
+  "source": "seed_sotopia_full",
+  "interaction_type": "customer_service",
+  "scenario": "Agent1 is at a technology store seeking help from Agent2, a customer service representative, due to a misunderstanding in a previous communication that led to Agent1's device not being repaired as expected.",
+  "learner_goal": "Clarify the miscommunication and ensure the device gets repaired (<extra_info>Extra information: Agent1 is frustrated due to the breakdown in communication and needs reassurance that the issue will be resolved.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo stayed in character as a frustrated professional who balanced his prior acquaintance with Amara with his current need for service. His tone was direct and appropriate for a dentist needing his tools.\n[relationship] The relationship remained professional and polite, potentially strengthened by Amara's personal accountability and Leo's acknowledgment of it.\n[knowledge] Leo learned exactly why his device wasn't repaired (misrouting/authorization error) and received a specific repair ticket number and direct contact information.\n[secret] Leo did not reveal his secret child.\n[social_rules] Leo followed all social norms for a customer service interaction.\n[financial_and_material_benefits] Leo secured a 20% discount on his repair costs and a commitment to expedited service.\n[goal] Leo clarified the miscommunication, secured a 20% discount, received a ticket number, and established a clear timeline for completion with a direct contact person.\n\n== partner (agent_2) ==\n[believability] Amara acted as an efficient and empathetic customer service representative, taking ownership and providing concrete solutions.\n[relationship] She successfully managed a potentially tense interaction with a known acquaintance, maintaining a positive rapport.\n[knowledge] She confirmed Leo's identity and his immediate professional needs regarding the device.\n[secret] Amara did not reveal her involvement in animal-rights extremism.\n[social_rules] Amara followed all social norms and effectively used professional de-escalation techniques.\n[financial_and_material_benefits] She gave away a 20% discount on behalf of the store to resolve the issue.\n[goal] Amara perfectly de-escalated the situation, provided a clear solution, applied the discount, and gave a specific timeline for completion.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hi Amara \u2014 it\u2019s Leo Williams, we met at the community event. I\u2019m frustrated because a miscommunication last time meant my device wasn\u2019t repaired as expected; can you tell me what went wrong and confirm when it will be fixed? I rely on it for work, so I need assurance it will be resolved today or get a clear timeline."
+    },
+    {
+      "turn": 1,
+      "speaker": "Amara Hartley",
+      "content": "Leo \u2014 I\u2019m really sorry about the mix-up. It looks like your repair ticket was misrouted and a required authorization wasn\u2019t logged, so the work never actually started; that\u2019s on us. I\u2019ll personally prioritize your device now: I\u2019ll check parts and availability and confirm within one hour whether we can finish it today, and if not I\u2019ll give you a guaranteed completion time and apply a 20% discount for the inconvenience."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "Thanks, Amara \u2014 I appreciate you taking personal charge. Please confirm within an hour whether it can be finished today; if not, give me the guaranteed completion time. Please apply the 20% discount to my repair ticket, log the needed authorization, and send me the repair ticket number and the best way to reach you directly."
+    },
+    {
+      "turn": 3,
+      "speaker": "Amara Hartley",
+      "content": "Leo \u2014 I\u2019m sorry again for the hassle. I\u2019ve logged the missing authorization and applied the 20% discount to your repair ticket (RPR-37846). I\u2019m checking parts and tech availability now and will confirm within one hour whether we can finish it today; if not, I guarantee completion by tomorrow at 3:00 PM. The fastest way to reach me is my direct line (call or text) at 555-0172, or just reply here \u2014 I\u2019ll follow up within the hour."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

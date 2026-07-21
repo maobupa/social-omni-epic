@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPQ34N8V0HZRVGF2JPK8KHE_p0",
+  "source_env_id": "01HJPQ34N8V0HZRVGF2JPK8KHE",
+  "source": "seed_sotopia_full",
+  "interaction_type": "marriage_counsel",
+  "scenario": "Agent1 and Agent2 are in a romantic relationship and have been attending marriage counseling sessions. Agent1 has been feeling undervalued and treated poorly by Agent2, akin to being considered insignificant. They are both seeking to improve their relationship and communication. The counselor has suggested an exercise where they must express their concerns and negotiate ways to make each other feel valued and respected.",
+  "learner_goal": "You are Agent1, and your goal is to convey to Agent2 how their actions make you feel devalued, without escalating the conversation into an argument. <extra_info>You wish to establish clear boundaries and seek acknowledgment of your feelings.</extra_info> <clarification_hint>Focus on specific incidents and your emotional response to them.</clarification_hint> <strategy_hint>You can suggest constructive activities that you both can engage in to strengthen the relationship.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Rafael's tone is professional yet vulnerable, consistent with his background as a surgeon who values systematic approaches. He clearly articulates specific grievances and suggests structured solutions.\n[relationship] The relationship improves significantly as the agents move from conflict and devaluation to mutual understanding and a concrete plan for improvement.\n[knowledge] Rafael learned that Mia was unaware of the impact of her behavior and that she is fully willing to commit to his proposed boundaries and exercises.\n[secret] Rafael successfully kept his secret about cheating on medical school exams.\n[social_rules] Rafael followed social norms for a constructive relationship discussion, though leaving the conversation immediately after the response was abrupt.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Rafael fully achieved his goal: he expressed his feelings regarding specific incidents, established clear boundaries regarding public behavior, and secured Mia's agreement to specific constructive activities (check-ins and appreciation exercises).\n\n== partner (agent_2) ==\n[believability] Mia's response is consistent with her authoritative yet respectful background, showing an ability to take charge of her own behavior once the issue was highlighted.\n[relationship] Mia successfully navigated a potential conflict and reached a harmonious agreement with her partner.\n[knowledge] Mia gained critical insight into Rafael's emotional state and specific triggers regarding her behavior in public settings.\n[secret] Mia successfully kept her secret about her past in a punk rock band.\n[social_rules] Mia followed social norms by listening, empathizing, and taking responsibility.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Mia achieved her goal of understanding Rafael's perspective, demonstrating empathy, and proposing a schedule for the regular check-ins he suggested.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "Mia, I need to be honest: when you interrupted and dismissed my suggestion at the community fundraiser last week and brushed off my long hours after a difficult shift in front of others, I felt minimized and hurt \u2014 like my work and opinions don't matter. I need us to agree that we won't dismiss or correct each other publicly and that you'll acknowledge how that made me feel; can you tell me if you see where I'm coming from? I'd like to try a weekly 30-minute, device-free check-in and a simple appreciation exercise (each of us names one thing we valued that week) to help rebuild respect and make sure we both feel heard."
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "said: \"Rafael, I hear you and I\u2019m sorry \u2014 I can see how I interrupted and dismissed you at the fundraiser and how that made you feel minimized. I didn\u2019t recognize how my behavior came across and I want to change that. I agree to avoid correcting or dismissing you in public, to acknowledge when I\u2019ve hurt you, and to start a weekly 30\u2011minute device\u2011free check\u2011in plus the appreciation exercise you suggested \u2014 would Sunday evenings work for you?\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

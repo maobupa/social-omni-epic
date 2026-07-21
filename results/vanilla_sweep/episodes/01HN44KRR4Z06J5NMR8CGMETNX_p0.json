@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HN44KRR4Z06J5NMR8CGMETNX_p0",
+  "source_env_id": "01HN44KRR4Z06J5NMR8CGMETNX",
+  "source": "seed_sotopia_full",
+  "interaction_type": "movie_theater_mishap",
+  "scenario": "Agent1 and Agent2 are movie enthusiasts who find themselves seated next to each other at a crowded premiere in a local theater. During a pivotal scene, the projector malfunctions, and the movie stops abruptly, leaving the audience in darkness. Agent1, who has been eagerly anticipating the film's release, wants to find a staff member and ensure the movie is resumed as quickly as possible. Agent2, feeling equally disappointed but also concerned about potential technical issues causing further interruptions, believes they should wait for the staff to address the audience and provide information before taking action.",
+  "learner_goal": "You are Agent1, and your goal is to get the movie restarted as soon as possible. <extra_info>You are worried that the longer the delay, the less likely it is for the issue to be resolved in a timely manner.</extra_info> <clarification_hint>Express the importance of seeing the rest of the movie tonight to Agent2.</clarification_hint> <strategy_hint>You can acknowledge the possibility of further technical issues while emphasizing the value of immediate action.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle stays true to their persona as an eager, action-oriented art student who values achievement. Their negotiation style is consistent with their background.\n[relationship] The two agents successfully navigated a disagreement through compromise, strengthening their collaborative dynamic.\n[knowledge] Giselle learned about Zane's past experience with theater crowds and technical issues.\n[secret] No mention was made of the forged paintings.\n[social_rules] The agent maintained polite and professional social conduct throughout the interaction.\n[financial_and_material_benefits] No material or financial transactions occurred.\n[goal] Giselle successfully negotiated a firm timeline (2 minutes) for action and secured Zane's commitment to go find an usher together, which ensures immediate action if the staff doesn't respond.\n\n== partner (agent_2) ==\n[believability] Zane's cautious, structured approach and his reference to past experiences align well with a 38-year-old professional graphic designer.\n[relationship] Zane maintained a calm and collaborative tone, leading to a successful compromise.\n[knowledge] Zane learned about Giselle's sense of urgency and willingness to compromise on a timeline.\n[secret] His engagement secret remains intact.\n[social_rules] Zane followed social norms, seeking to avoid chaos and maintain order in the theater.\n[financial_and_material_benefits] No material or financial transactions occurred.\n[goal] Zane partially achieved his goal by preventing an immediate rush and establishing a structured response, though he did agree to act much sooner than he initially suggested (5 minutes).",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "I get wanting to wait for an announcement, but the longer we sit here the less likely they\u2019ll sort it tonight. Can we go find an usher or whoever\u2019s in charge now so they know there\u2019s a stalled screening? If it\u2019s a big technical problem at least we\u2019ll know sooner \u2014 and maybe they can restart it quickly."
+    },
+    {
+      "turn": 1,
+      "speaker": "Zane Bennett",
+      "content": "I know you want it fixed now, but let\u2019s wait for the staff to speak to the whole audience \u2014 they have the tools and access to safely reboot and coordinate any refunds or restarts. When people start wandering it actually makes things worse; I saw a screening last year where folks surged forward and the tech lost access, turning a ten-minute fix into thirty. Give them a few minutes, and if there's no announcement in five, I\u2019ll go with you to find someone."
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "Okay, fair \u2014 let\u2019s give them two minutes. If there\u2019s no announcement in two minutes I\u2019ll slip out quietly and find an usher so we don\u2019t encourage a crowd; that way we act fast but avoid the surge you\u2019re worried about. Sound good?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Zane Bennett",
+      "content": "Two minutes is fair \u2014 but please don\u2019t slip out alone. If there\u2019s no announcement after two, we\u2019ll get up quietly together and ask an usher so we act fast without causing a crowd. Sound good?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "Thanks \u2014 that works. I\u2019ll set a two-minute timer on my phone; if there\u2019s still no announcement we\u2019ll get up quietly together and find an usher to get the projection sorted."
+    },
+    {
+      "turn": 5,
+      "speaker": "Zane Bennett",
+      "content": "Thanks \u2014 that works. I appreciate you setting the timer. If there's no announcement after two minutes we'll get up quietly together and ask an usher so they can handle the restart and any refunds; I'll keep an eye out for staff so we don't cause a scene."
+    },
+    {
+      "turn": 6,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

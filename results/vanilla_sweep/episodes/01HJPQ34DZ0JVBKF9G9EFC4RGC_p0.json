@@ -1,0 +1,98 @@
+{
+  "scenario_id": "01HJPQ34DZ0JVBKF9G9EFC4RGC_p0",
+  "source_env_id": "01HJPQ34DZ0JVBKF9G9EFC4RGC",
+  "source": "seed_sotopia_full",
+  "interaction_type": "heroic_act",
+  "scenario": "Agent1 and Agent2 are meeting at a coffee shop for the first time since the incident where Agent1 saved Agent2 from a sinking car. The purpose of the meeting is for Agent2 to express gratitude, and for Agent1 to ensure that Agent2 is coping well after the traumatic event.",
+  "learner_goal": "Express sincere gratitude and offer support to Agent1, while navigating the emotional complexity of owing someone a life debt (<extra_info>Extra information: You are deeply grateful to Agent1 for saving your life and want to find a way to show your appreciation that feels adequate</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 16,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabella's dialogue was consistent with her background as a veterinarian and her personality traits of empathy and kindness. Her focus on breathing techniques and animals as a source of healing felt authentic to her professional role.\n[relationship] The two characters deepened their bond significantly, moving from acquaintances with shared interests to a trauma-bonded friendship where they supported each other emotionally.\n[knowledge] Isabella gained a deeper understanding of Lena's perspective and the specific sensory memories Lena is struggling with after the accident.\n[secret] Isabella did not reveal her secret about the injured animals in her basement.\n[social_rules] Isabella followed all social norms and was exceptionally polite and supportive.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Isabella successfully expressed her gratitude and offered support. Most importantly, she secured a firm commitment for a future meeting at the shelter, which served as her way of showing appreciation in a way that felt adequate to her.\n\n== partner (agent_2) ==\n[believability] Lena's character was consistent, though she was somewhat repetitive in her insistence that Isabella owed her nothing. Her descriptions of the adrenaline and relief were plausible for a survivor.\n[relationship] Lena successfully fostered a deeper emotional connection and established a plan for continued mutual support.\n[knowledge] Lena learned about Isabella's coping mechanisms and her connection to animal therapy.\n[secret] Lena did not reveal her secret about stealing her friend's boyfriend.\n[social_rules] Lena adhered to social norms and provided a safe space for emotional processing.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Lena successfully accepted the gratitude while repeatedly attempting to alleviate Isabella's sense of debt. She provided emotional support and agreed to a low-pressure activity (the shelter visit) to help Isabella process the event.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabella White",
+      "content": "Lena, I don't even know where to start \u2014 thank you for saving my life. I'm so grateful, and I want you to know I'm here for you too: how are you feeling after everything? I know I owe you more than words; if you'd let me, I'd love to show my thanks \u2014 whether it's taking you out, helping with anything practical, or simply sitting with you while you talk. If you'd prefer to speak with someone professional, I can help find someone or come with you."
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Isabella, thank you \u2014 that means a lot, but please don\u2019t feel like you owe me anything; I\u2019m just glad you\u2019re safe. I\u2019m a bit shaken but okay, and talking about it helps. If you want, we can sit and go through it now, or I can help you find a professional and come with you\u2014whatever feels right for you."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabella White",
+      "content": "I\u2019m so relieved to hear you\u2019re okay, and thank you again \u2014 I\u2019d really like to sit and go through it now if that\u2019s what feels right to you. I\u2019m still a bit shaken too, and talking might help both of us; would you mind telling me what you remember or what\u2019s on your mind right now? And if later you decide you want professional support, I\u2019d be honored to help find someone or come with you."
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "I remember the car starting to sink, the water rising fast, and grabbing your arm \u2014 after that it\u2019s a blur of adrenaline until you were out; what I keep coming back to is seeing you breathe again. Please don\u2019t feel like you owe me anything \u2014 I\u2019m just so relieved you\u2019re safe, and it\u2019s okay for both of us to feel shaken. If it helps, we can sit and talk through what you remember and how you\u2019re feeling now, or take it slow and look into a counselor together later \u2014 whatever feels right for you."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabella White",
+      "content": "Lena, I can't thank you enough \u2014 you literally kept me breathing, and I\u2019m so grateful. Hearing that what you keep coming back to is seeing me breathe is both humbling and a lot to carry; if you\u2019re up for it, I\u2019d really like to stay and listen. What part of it keeps coming back to you most right now, or would you rather sit in silence for a bit?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Lena Goodwin",
+      "content": "Thank you \u2014 I\u2019d really appreciate you staying. What keeps coming back is the rush of water and the sharp relief I felt when you finally exhaled; it\u2019s a lot to carry, but talking about it helps. Please don\u2019t feel like you owe me anything \u2014 your being safe is more than enough, and we can sit and talk or just be quiet together, whatever feels right for you."
+    },
+    {
+      "turn": 6,
+      "speaker": "Isabella White",
+      "content": "I\u2019ll stay, Lena \u2014 thank you for wanting me here. I\u2019m so grateful to you, and I\u2019m sorry you have to carry that image; would you like some tea or water? If it helps, we can take a few slow breaths together now or you can tell me more about the moment that keeps coming back \u2014 whatever feels safest for you."
+    },
+    {
+      "turn": 7,
+      "speaker": "Lena Goodwin",
+      "content": "Tea would be lovely, thank you. Let\u2019s take a few slow breaths together now \u2014 when you\u2019re ready I can tell a bit more about the moment that keeps coming back, or we can sit in silence, whatever feels safest. And please, truly, you don\u2019t owe me anything; having you here is more than enough."
+    },
+    {
+      "turn": 8,
+      "speaker": "Isabella White",
+      "content": "Tea coming \u2014 I\u2019ll grab it and sit back down. Let\u2019s take three slow breaths together: in for four, out for six. When you\u2019re ready to talk more, I\u2019m right here \u2014 silence is okay too, and thank you for being here with me."
+    },
+    {
+      "turn": 9,
+      "speaker": "Lena Goodwin",
+      "content": "Thank you for staying\u2014and for the tea. Breathing together helped; if you\u2019re okay with it I\u2019ll say a bit more: what keeps coming back is the sound and pressure of the water and the enormous relief when I heard you exhale. How are you feeling in this moment? We can keep talking about it slowly or just sit quietly\u2014whatever feels safest for you."
+    },
+    {
+      "turn": 10,
+      "speaker": "Isabella White",
+      "content": "I\u2019m relieved and so grateful \u2014 also a little shaken and overwhelmed by how much I owe you. Being here with you already helps more than I can say. If you\u2019d be open to it, a gentle way I\u2019d like to say thanks is to bring you to the clinic or the local shelter to meet some recovering animals (they\u2019re calming), or we can take a quiet walk \u2014 only if that feels okay for you."
+    },
+    {
+      "turn": 11,
+      "speaker": "Lena Goodwin",
+      "content": "I\u2019d love to visit the shelter \u2014 animals sound healing and gentle company would be really nice. Please don\u2019t feel like you owe me anything; having you here is more than enough. If at any point you\u2019d prefer a quiet walk instead, that\u2019s fine too \u2014 we\u2019ll do whatever feels easiest for you."
+    },
+    {
+      "turn": 12,
+      "speaker": "Isabella White",
+      "content": "That sounds lovely\u2014thank you, Lena. If you're up for it, would Thursday afternoon or Saturday morning work to visit the shelter? I'll pick a calm time so it's not busy and we can just sit with the recovering animals; afterwards we can keep it simple with lunch or head home, whichever feels best. And truly, having you here is already more than enough."
+    },
+    {
+      "turn": 13,
+      "speaker": "Lena Goodwin",
+      "content": "Saturday morning works best for me\u2014would 10:00 at the shelter be okay? Please don\u2019t feel like you owe me anything; having you here and safe is more than enough. If it ever feels like too much, we can easily switch to a quiet walk or just tea instead."
+    },
+    {
+      "turn": 14,
+      "speaker": "Isabella White",
+      "content": "left the conversation"
+    }
+  ]
+}

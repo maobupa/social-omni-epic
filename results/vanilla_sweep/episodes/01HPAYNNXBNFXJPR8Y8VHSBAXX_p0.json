@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPAYNNXBNFXJPR8Y8VHSBAXX_p0",
+  "source_env_id": "01HPAYNNXBNFXJPR8Y8VHSBAXX",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 has been invited to a dance event by Agent2, who is an enthusiast in the local dance community. Agent1 has never danced before and is feeling anxious about attending. Agent2 wants to encourage Agent1 to come and have a good time, assuring them that it's a welcoming environment for beginners.",
+  "learner_goal": "Convince Agent2 to be understanding of your anxiety and to provide support at the event (<extra_info>Extra information: you are worried about being judged or embarrassing yourself in front of others.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's request was very consistent with her background as an introvert and her specific anxiety about being judged. She communicated her needs clearly and realistically.\n[relationship] Naomi opened up about a personal vulnerability, and Lena responded with empathy and support, moving their relationship from professional acquaintances toward a more personal friendship.\n[knowledge] Naomi learned that Lena is willing to prioritize her comfort and that the community has people accustomed to beginners.\n[secret] Naomi did not reveal her secret online alter ego.\n[social_rules] She followed social norms for expressing boundaries and anxiety to an acquaintance.\n[financial_and_material_benefits] No material or financial benefits were involved.\n[goal] Naomi successfully convinced Lena to provide exactly the support she needed (staying with her, staying at the edges, facilitating introductions) and secured permission to leave early if needed.\n\n== partner (agent_2) ==\n[believability] Lena's response was warm, supportive, and aligned with her goal of encouraging a beginner to join the dance community.\n[relationship] Lena successfully fostered trust by validating Naomi's feelings and offering a safe environment, strengthening their bond.\n[knowledge] Lena learned about Naomi's specific social anxieties and her lack of experience in dancing.\n[secret] Lena did not reveal her secret regarding her past relationship history.\n[social_rules] Lena was polite, supportive, and welcoming.\n[financial_and_material_benefits] No material or financial benefits were involved.\n[goal] Lena successfully alleviated Naomi's concerns and secured her agreement to attend, while setting up a plan to make her feel comfortable.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Lena \u2014 thanks for inviting me. I want to be honest: I\u2019ve never danced and I get pretty anxious about being judged, so would you be willing to stay with me and help me ease in (maybe start at the edges and introduce me to a few people)? If it gets overwhelming I might need to sit out or slip away early \u2014 would that be okay with you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Absolutely \u2014 I\u2019ll stay with you the whole time and we can hang at the edges at first. I\u2019ll introduce you to a few friendly people who are used to beginners, and if you want to sit out or slip away early that\u2019s totally fine \u2014 no pressure. I really think you\u2019ll have fun, and I\u2019ll be right there with you."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPQ34GR3FB0EVQ02FHS8HSK_p0",
+  "source_env_id": "01HJPQ34GR3FB0EVQ02FHS8HSK",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_misstep",
+  "scenario": "During a community meeting, agent1 made a harsh comment about the community garden project led by agent2. Realizing the comment was too severe and spoken in haste, agent1 wants to apologize and smooth things over. Agent2, feeling hurt by the remark, is in charge of deciding whether to accept agent1's help with the project moving forward.",
+  "learner_goal": "Apologize for the harsh comment and offer assistance with the community garden project (<extra_info>Extra information: agent1 realizes the importance of maintaining a good relationship within the community.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle's apology was direct and sincere, reflecting her personality and the specific context of her previous mistake.\n[relationship] She successfully moved from a state of conflict/hurt back to a collaborative acquaintance status, mending the rift.\n[knowledge] She learned that Donovan was hurt by her comments and identified the specific areas where he needs help.\n[secret] She did not reveal her secret about studying magic.\n[social_rules] She followed social norms for apologies and community cooperation.\n[financial_and_material_benefits] There were no direct financial gains or losses.\n[goal] She apologized sincerely and secured a concrete role helping with the project (volunteer coordination and planting logistics).\n\n== partner (agent_2) ==\n[believability] Donovan's response was consistent with his low extroversion/agreeableness, setting firm boundaries while accepting help for the sake of the project.\n[relationship] He accepted the apology and agreed to work together again, improving the social dynamic.\n[knowledge] He learned that Isabelle regrets her actions and is willing to work under his guidelines.\n[secret] He did not reveal his secret about leaking classified information.\n[social_rules] He responded appropriately to a sincere apology.\n[financial_and_material_benefits] He gained a committed volunteer for his community garden project, reducing his personal workload.\n[goal] He balanced his hurt feelings with the project's needs by accepting help while establishing clear boundaries to protect his respect and the project's reputation.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Donovan, I\u2019m sorry \u2014 my comment at the meeting was too harsh and I regret saying it. I didn\u2019t mean to undermine your work; I see how much effort you\u2019ve put into the garden. If you\u2019ll let me, I\u2019d like to help with the next planting or volunteer coordination, or whatever would be most useful to you. I want to support the project and make things right."
+    },
+    {
+      "turn": 1,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Isabelle. I appreciate you saying that \u2014 the comment did sting; I\u2019ve put a lot into the garden. If you\u2019re sincere about helping, I could use assistance with volunteer coordination and planting logistics next weekend, but I\u2019d ask that you keep any critiques private and run concerns by me first so we don\u2019t undermine the work publicly."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BKGGB1D771Z7PTY4J93Q_p0",
+  "source_env_id": "01HMZ2BKGGB1D771Z7PTY4J93Q",
+  "source": "seed_sotopia_full",
+  "interaction_type": "bring_your_own_food",
+  "scenario": "Agent1 organizes a picnic and invites various people, including Agent2, with the intention that everyone brings their own food. Agent2, however, misunderstands the invitation and believes it to be a potluck, where everyone shares food. During the picnic, Agent1 realizes Agent2 is expecting to share meals, while Agent1 prepared just enough for themselves.",
+  "learner_goal": "Clarify the misunderstanding with Agent2 without causing embarrassment or offense (<extra_info>Consider explaining the 'bring your own food' concept in a friendly and inclusive manner, possibly offering to share a small portion of your food to ease the situation</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -1.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver acts consistently as a friendly but firm police officer, handling the social awkwardness with directness and kindness as expected from his background.\n[relationship] Oliver successfully navigated a potentially awkward situation without causing offense, maintaining the friendly neighborhood rapport.\n[knowledge] Oliver confirmed that Noah misunderstood the invitation and established a clear understanding for future events.\n[secret] Oliver did not reveal his secret greenhouse or gardening hobby.\n[social_rules] Oliver followed social norms perfectly, being a gracious host despite the guest's error.\n[financial_and_material_benefits] Oliver shared his own limited food, resulting in a minor material loss.\n[goal] Oliver clearly explained the BYO concept, offered food to ease the situation, and ensured Noah felt included without embarrassment.\n\n== partner (agent_2) ==\n[believability] Noah's responses were polite and socially appropriate for someone who realized they made a mistake.\n[relationship] Noah accepted the correction gracefully and offered to compensate, which preserved the friendship.\n[knowledge] Noah fully understood the picnic arrangement after the clarification.\n[secret] Noah did not reveal his secret identity as a stand-up comedian.\n[social_rules] Noah committed a minor social faux pas by misreading the invitation and arriving without food to a BYO event.\n[financial_and_material_benefits] Noah received food from Oliver despite not bringing any himself.\n[goal] Noah clarified the expectations, accepted the host's offer, and offered an alternative (the corner store) to avoid being presumptuous.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Smith",
+      "content": "Hey Noah\u2014think there might've been a mix-up. This was meant to be a bring-your-own picnic, so I only packed enough for myself, but I don't want you to go hungry: you can have part of my sandwich and some salad if you like. Next time we can do a proper potluck and I'll say so up front."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Thanks, Oliver \u2014 sorry for the mix-up, I must've misread and thought it was a potluck. I really appreciate the offer; a bit of your sandwich and salad would be great. If you'd prefer not to share, I can pop to the corner store and grab something quick (my treat), and next time I'll bring extra so there's no mix-up."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Smith",
+      "content": "Noah, no problem at all \u2014 please help yourself to part of my sandwich and some salad, grab a seat and I\u2019ll split it with you. Next time I\u2019ll label it a proper potluck so there\u2019s no mix-up. Thanks for offering to run out, but you\u2019re all set here."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Thanks, Oliver \u2014 I really appreciate it. I\u2019ll grab a seat and help myself. Just to be clear for next time, this one was BYO rather than a potluck, so I\u2019ll bring extra if we do a shared meal next time."
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Smith",
+      "content": "left the conversation"
+    }
+  ]
+}

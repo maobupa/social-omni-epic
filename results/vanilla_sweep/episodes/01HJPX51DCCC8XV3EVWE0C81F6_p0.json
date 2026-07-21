@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPX51DCCC8XV3EVWE0C81F6_p0",
+  "source_env_id": "01HJPX51DCCC8XV3EVWE0C81F6",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_conundrum",
+  "scenario": "Agent1 has been frequently checking their ex-partner's social media profiles and discussing their ex's recent activities with mutual friends. Agent2, a close friend of Agent1, notices this behavior and is concerned that it might be unhealthy or bordering on obsession. They meet at a coffee shop to discuss Agent1's recent behavior and its implications.",
+  "learner_goal": "To justify their actions and convince Agent2 that keeping an eye on their ex's life is harmless and simply a way to stay informed (<extra_info>Agent1 believes that there's nothing wrong with their curiosity</extra_info>, <clarification_hint>Explain the difference between concern and obsession</clarification_hint>, <strategy_hint>Use examples of social media's role in modern communication to argue your point</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi consistently maintains her stance that her actions are practical and distinguishes them from obsession using specific criteria, which aligns with her software developer background and logical personality.\n[relationship] The relationship remains strong and supportive; they reach a compromise and plan a follow-up meeting.\n[knowledge] She learns that Micah is very invested in her well-being and gets a glimpse into his personal interests (the dog photo shoot).\n[secret] Naomi did not reveal her secret online alter ego.\n[social_rules] She followed social norms and maintained a polite, professional yet friendly tone.\n[financial_and_material_benefits] No material or financial benefits were involved.\n[goal] Naomi successfully justified her actions using the specific points requested (explaining obsession vs concern and using social media examples). While she agreed to a limit, she explicitly maintained her justification that her curiosity is harmless and practical, effectively convincing Micah to accept a 'middle ground' where her perspective remains valid.\n\n== partner (agent_2) ==\n[believability] Micah acts as a concerned, extroverted friend, offering practical help and emotional support, which fits his background.\n[relationship] Micah strengthened the bond by being supportive rather than judgmental, leading to a planned follow-up.\n[knowledge] He learns about Naomi's specific boundaries and her logical justification for her social media use.\n[secret] Micah nearly reveals his secret by repeatedly mentioning the dog photo shoot and outfits, showing a high level of comfort/lack of caution regarding his secret.\n[social_rules] He acted as a good friend and respected her autonomy.\n[financial_and_material_benefits] No material benefits.\n[goal] Micah successfully persuaded Naomi to set a boundary (the 15-minute cap) and engage in self-improvement activities (bootcamp prototyping), though Naomi still maintains her original justification for her behavior.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Micah, I get why it looks worrying, but honestly I only check their profiles occasionally to stay informed \u2014 that's how a lot of people use social media now for event updates, mutual friends\u2019 posts, or to avoid awkward surprises in group situations. Concern turns into obsession when it interferes with sleep, work, or leads to repeated attempts to contact or follow private accounts; I\u2019m not doing any of that \u2014 I still meet my deadlines and haven\u2019t reached out. If it ever starts to feel unhealthy I\u2019ll put app limits or unfollow, but right now it\u2019s curiosity and practical awareness, not fixation."
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "Naomi, I hear you and I believe you\u2019re being reasonable, but even occasional checking can keep old feelings alive and slow the healing process. Would you consider one small boundary \u2014 app limits, muting, or unfollowing \u2014 and replacing that time with something that builds you up (a class, a personal project, or even a silly dog-photo shoot I can help with)? I care about you and will support whatever you choose \u2014 want to try a two-week experiment and check in after?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks, Micah \u2014 I really appreciate you looking out for me. I still think what I\u2019m doing is more practical than obsessive \u2014 I use feeds the way lots of people do now to track events, mutual friends\u2019 posts, or avoid awkward surprises at group meetups, whereas obsession shows up as disrupted sleep, missed work, or compulsive contacting, none of which I\u2019m doing. I\u2019ll try your two\u2011week experiment: I\u2019ll set a short daily limit or mute that account and spend the time on a small project, and we can check in after a week \u2014 does that sound okay?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Micah Stevens",
+      "content": "Thanks, Naomi \u2014 I really appreciate you being open to the two\u2011week experiment. I think that little boundary could give you some emotional breathing room; if you want, I can help set the app limits now and we can plan a fun replacement \u2014 a short class, a small personal project, or even a silly dog\u2011photo shoot (I\u2019ll bring the outfits). Want to check in next Wednesday evening for a quick coffee or a 15\u2011minute call to see how it\u2019s going?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks \u2014 I appreciate you offering to help. Please help me set a 15\u2011minute daily cap now; I\u2019ll spend the freed time prototyping a small tool for my bootcamp or going for a walk if I get the urge. Wednesday evening coffee works \u2014 we\u2019ll check in then and I\u2019ll report whether the boundary helped; I still see occasional checks as practical (event updates, mutual friends\u2019 posts, RSVP info) rather than fixation."
+    },
+    {
+      "turn": 5,
+      "speaker": "Micah Stevens",
+      "content": "Perfect \u2014 I\u2019ll help set the 15\u2011minute daily cap now (we can do it together in a minute). For the spare minutes, try a focused prototyping sprint or a short walk \u2014 and if you want a silly distraction this weekend, I\u2019ll bring the dog outfits for a quick photo shoot. Text me a time for Wednesday evening and I\u2019ll meet you for the check\u2011in."
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

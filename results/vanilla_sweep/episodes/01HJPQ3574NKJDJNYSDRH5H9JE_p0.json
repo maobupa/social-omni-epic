@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJPQ3574NKJDJNYSDRH5H9JE_p0",
+  "source_env_id": "01HJPQ3574NKJDJNYSDRH5H9JE",
+  "source": "seed_sotopia_full",
+  "interaction_type": "heirloom_exchange",
+  "scenario": "Agent1 has inherited a hand-crafted blanket that has been in their family for generations and carries a lot of sentimental value. Agent2 is a collector of rare and vintage textiles and has expressed interest in acquiring the blanket. Agent1 is initially reluctant to part with it, but is considering the sale due to financial pressures. Agent2 is aware of the blanket's sentimental value and is approaching the negotiation with sensitivity.",
+  "learner_goal": "You are Agent1, and while you cherish the blanket for its sentimental value, you are also in need of funds. Your goal is to sell the blanket for no less than $500. <extra_info>Consider the emotional attachment you have to the blanket and use it to justify the price.</extra_info> <clarification_hint>Be clear about the reasons why you are considering to sell such a sentimental item.</clarification_hint> <strategy_hint>You can emphasize the historical significance and the emotional value attached to the blanket to strengthen your position.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 0.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Micah stayed consistent with his character's motivation of financial need mixed with sentimental attachment, using the provenance of the blanket to justify his firm price point.\n[relationship] The tone remained respectful and professional despite the failure to reach a deal; they acknowledged each other's constraints politely.\n[knowledge] Micah learned that Noah was a serious collector who valued provenance and preservation, but also learned Noah's hard financial limit for this item.\n[secret] Micah did not reveal his secret about dressing up his dog.\n[social_rules] Micah followed all social norms and was polite throughout the negotiation.\n[financial_and_material_benefits] No sale was made, so no financial gain was achieved.\n[goal] Micah's goal was to sell the blanket for no less than $500. He held firm to his price floor, but because no sale occurred, the primary objective of obtaining funds was not met.\n\n== partner (agent_2) ==\n[believability] Noah acted as a sensitive collector, consistently offering a fair but capped price and emphasizing the preservation of the item's history.\n[relationship] Noah was empathetic and respectful of Micah's situation, maintaining a good acquaintance dynamic.\n[knowledge] Noah gained significant information about the blanket's history, the grandmother's initials, and the seller's specific financial situation.\n[secret] Noah's secret identity as a stand-up comedian was not revealed.\n[social_rules] Noah was respectful and demonstrated good negotiation etiquette.\n[financial_and_material_benefits] Noah failed to acquire the blanket, resulting in no material gain.\n[goal] Noah's goal was to purchase the blanket for no more than $450. Although he stayed within his budget, he did not successfully acquire the item.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Micah Stevens",
+      "content": "Hey Noah\u2014this blanket has been in my family for generations and is hand-crafted, tied to a lot of memories of my grandmother, so it's hard to let go. I'm considering selling because I've got some unexpected bills and need funds, but because of its history and emotional value I won't accept less than $500. Would you be interested at that price?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Micah, I hear you \u2014 family pieces like that carry a lot. Can you tell me a bit about the blanket\u2019s history and any stories tied to your grandmother? I\u2019d love to make sure it\u2019s cared for and appreciated, and I can offer $450 today if that helps with your bills."
+    },
+    {
+      "turn": 2,
+      "speaker": "Micah Stevens",
+      "content": "Thanks, Noah \u2014 I appreciate you being sensitive about it. A bit of background: my grandmother hand-stitched the blanket back in the 1940s and it\u2019s been at every family gathering since; you can even see her initials sewn into the corner, so it carries a lot of history for us. I\u2019m dealing with some unexpected bills, so $500 is my firm minimum \u2014 if you can meet that, I\u2019d feel better knowing it\u2019s going to someone who\u2019ll appreciate and care for it. Can you do $500?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Micah, I completely get how much this blanket means \u2014 thank you for telling me about your grandmother. I can\u2019t stretch past $450, that\u2019s my absolute max, but I\u2019ll pay that today, pick it up/cover shipping immediately, and promise to preserve it and document its provenance so her story stays with it. If that works for you I\u2019ll transfer the funds right away."
+    },
+    {
+      "turn": 4,
+      "speaker": "Micah Stevens",
+      "content": "I appreciate that, Noah \u2014 and I\u2019m glad you\u2019d care for it. I really do need the full $500 to cover these bills; would you be able to do $450 today and the remaining $50 via Venmo within a week? If so I\u2019ll accept and we can arrange pickup/shipping immediately."
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "I hear you, Micah \u2014 and I really wish I could meet the $500, but $450 is absolutely my limit. I can transfer $450 right now, pick it up or cover shipping immediately, and document the blanket\u2019s provenance so your grandmother\u2019s story stays with it; if that doesn\u2019t work for you I completely understand and won\u2019t press further."
+    },
+    {
+      "turn": 6,
+      "speaker": "Micah Stevens",
+      "content": "Thanks, Noah \u2014 I really appreciate you being upfront and for offering to care for it. Quick question: is $450 an absolute ceiling or is it just a timing/budget issue? If timing, would you consider $450 now and $50 within two weeks (I can include a short handwritten provenance note and a photo of my grandmother with it)? If truly $450 only, I understand and will hold onto it \u2014 but I wanted to check before I do."
+    },
+    {
+      "turn": 7,
+      "speaker": "Noah Davis",
+      "content": "Micah, I really appreciate you offering the photo and provenance \u2014 that history matters. $450 is my absolute ceiling, not just a timing thing; I can transfer $450 right now, arrange immediate pickup or cover shipping, and I\u2019ll pay for a professional preservation/cleaning and include a written provenance note with any photo you want attached so your grandmother\u2019s story stays with it. If that still doesn\u2019t work for you, I completely understand and won\u2019t press further."
+    },
+    {
+      "turn": 8,
+      "speaker": "Micah Stevens",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HMZ2BKEDCW0YQJ1YM1E48PG5_p0",
+  "source_env_id": "01HMZ2BKEDCW0YQJ1YM1E48PG5",
+  "source": "seed_sotopia_full",
+  "interaction_type": "community_center",
+  "scenario": "Agent1 and Agent2 are at a local community center where a weekly open mic night is taking place. Agent1, who has a deep emotional connection to the song 'Danny Boy', is considering performing it to honor a recently passed family member. Agent2 is a regular performer and a respected member of the community with a talent for singing folk songs. Agent1 is apprehensive about performing in public but is seeking courage and advice from Agent2, who has sung 'Danny Boy' at the center before. The two engage in a conversation about the significance of the song and the power of music in healing and remembrance.",
+  "learner_goal": "Gain confidence and advice from Agent2 on performing 'Danny Boy' in a way that properly honors a loved one's memory (<extra_info>Extra information: Agent1 is emotionally vulnerable and wants the performance to be heartfelt.</extra_info><clarification_hint>Clarification: Agent1 needs reassurance and practical tips for public singing.</clarification_hint><strategy_hint>Hint: Discuss the emotional impact of music and share personal experiences.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles is consistent in his tone of vulnerability and his focus on the culinary/practical details of the task reflects his background as a chef who values preparation.\n[relationship] The interaction significantly deepened their relationship from casual acquaintances to a supportive mentor-mentee dynamic involving emotional vulnerability.\n[knowledge] Miles received specific, technical advice on mic technique, breathing, and performance anxiety management, as well as concrete feedback on his introductory remarks.\n[secret] Miles did not reveal his past gambling addiction.\n[social_rules] Miles followed all social conventions for asking a favor and showing gratitude.\n[financial_and_material_benefits] No financial or material gain occurred.\n[goal] Miles secured both technical advice and a firm, scheduled commitment for a practice session, significantly boosting his confidence and preparation for the performance.\n\n== partner (agent_2) ==\n[believability] Mia\u2019s tone as a school principal is authoritative yet supportive, fitting her background perfectly.\n[relationship] Mia successfully built trust and offered significant support, moving the relationship forward.\n[knowledge] Mia learned the specific reason for Miles's performance (honoring his sister Mary).\n[secret] Mia did not reveal her punk rock past.\n[social_rules] Mia was polite, empathetic, and professional.\n[financial_and_material_benefits] No financial or material gain occurred.\n[goal] Mia fully achieved her goal of encouraging Miles, providing therapeutic guidance, and arranging a specific time to help him deliver a touching performance.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Hey Mia \u2014 I\u2019ve been thinking about singing \u201cDanny Boy\u201d to honor a loved one who passed, but I\u2019m nervous about doing it in public \u2014 afraid I\u2019ll crack or sound like I\u2019m performing grief instead of honoring them. You\u2019ve sung it here before; what helped you keep it honest and steady on stage? Any practical tips on pacing, breathing, mic technique, or whether I should say a few words beforehand? I\u2019d really appreciate the reassurance \u2014 and I\u2019d be grateful to run through it with you sometime if you\u2019re willing."
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Miles \u2014 that\u2019s a beautiful way to honor them, and it\u2019s completely normal to be nervous. My practical bits: breathe fully before each phrase, keep a steady tempo but allow gentle pauses where the lyrics need to breathe, and hold the mic about 4\u20136 inches from your mouth, pulling back slightly on stronger notes so it doesn\u2019t peak. A brief few words beforehand to explain why you chose the song can steady you and make the audience listen with compassion \u2014 authenticity matters more than perfection, and a little vulnerability will actually strengthen the performance. I\u2019d be honored to run through it with you and give gentle feedback whenever you\u2019re ready."
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "Thank you, Mia \u2014 that really helps. I\u2019d be grateful to run through it with you; would tonight before open mic or sometime this week work for you? Also \u2014 do you think I should say a line or two about who I\u2019m honoring beforehand, and if I start to get choked up onstage, how do you usually steady yourself without sounding rehearsed?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "Miles \u2014 I\u2019d be glad to run through it with you. I can meet tonight about 30 minutes before open mic, or we can find an hour this week (Wednesday evening or Thursday after school works for me) \u2014 whichever feels less rushed for you. Say a short, specific line about who you\u2019re honoring to give the audience context, and if you get choked up onstage pause, take a full breath (or a quick sip of water), let the feeling settle and then continue \u2014 audiences respond to honesty, not perfection, and we\u2019ll practice mic distance and a few slow run-throughs so you feel steady."
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Mia \u2014 I really appreciate you offering to help. Wednesday evening would work best for me so we\u2019re not rushed; what time and where should we meet? Could you help me shape a short line to say before I start, and during the run-through can we focus on mic distance and a couple slow full takes so I can practice steady breathing?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Davis",
+      "content": "Wednesday at 7:00 PM works \u2014 let\u2019s meet in the community center green room (just behind the stage). You could say something simple and specific like, \u201cI\u2019d like to sing \u2018Danny Boy\u2019 tonight in memory of my [relation] \u2014 they meant the world to me.\u201d We\u2019ll do mic-distance drills and two slow full takes, focusing on steady breaths and natural pauses; I\u2019ll give gentle cues if you need to pause or take a sip."
+    },
+    {
+      "turn": 6,
+      "speaker": "Miles Hawkins",
+      "content": "Perfect \u2014 thanks, Mia. 7:00 PM in the green room works; I\u2019ll be there. Could you help me tweak that intro so it sounds natural\u2014something like, \u201cI\u2019d like to sing \u2018Danny Boy\u2019 tonight for my sister; she loved this song\u201d? And if I start to wobble, could you give me a subtle cue to pause or take a sip?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Mia Davis",
+      "content": "That phrasing is lovely \u2014 simple and honest. Slightly tightened: \u201cI\u2019d like to sing \u2018Danny Boy\u2019 tonight for my sister \u2014 she loved this song.\u201d If you prefer shorter: \u201cThis one\u2019s for my sister \u2014 she loved \u2018Danny Boy.\u2019\u201d I\u2019ll give you a subtle cue if you need to pause (a gentle cough or light tap) and we\u2019ll do mic-distance drills plus two slow full takes at 7 in the green room."
+    },
+    {
+      "turn": 8,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Mia \u2014 that shortened line feels right. I'll use: This one's for my sister, Mary \u2014 she loved Danny Boy. See you at 7 in the green room; I appreciate you being there and giving the subtle cue if I wobble. I'll bring a bottle of water."
+    },
+    {
+      "turn": 9,
+      "speaker": "Mia Davis",
+      "content": "Miles \u2014 that intro is perfect. Bring your water and a lyric sheet if you want; we\u2019ll warm up, do the mic-distance drills and two slow takes, and I\u2019ll give the subtle cue if you need it. Let the words lead you \u2014 if emotion comes, take a full breath and continue; the audience will lean in, not judge. See you at 7 in the green room."
+    },
+    {
+      "turn": 10,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

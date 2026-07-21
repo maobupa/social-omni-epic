@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ344HEEFGZSP55A12A9ES_p0",
+  "source_env_id": "01HJPQ344HEEFGZSP55A12A9ES",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_chemistry",
+  "scenario": "Agent1 and Agent2 are friends who both enjoy live music. Agent1 has purchased tickets for a highly anticipated concert and invites Agent2 to join. However, Agent2 has a prior commitment to volunteer at a local charity event on the same evening.",
+  "learner_goal": "Attend the concert with a friend (<extra_info>Extra information: Agent1 has been looking forward to the concert for months and wants to share the experience with Agent2, whom they know also loves the band.</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 3.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's dialogue perfectly matches his persona as a retired police officer and a father who values loyalty and his son's integrity.\n[relationship] The interaction reinforces their strong bond and mutual respect; the father expresses pride in the son's commitment to charity.\n[knowledge] Confirmed that Ethan is unavailable for the concert but open for a dinner next weekend.\n[secret] Did not reveal the secret about letting a criminal go.\n[social_rules] Followed all social norms for a healthy family interaction.\n[financial_and_material_benefits] No material gain; actually has to find another person for the ticket or lose its value for the intended purpose.\n[goal] Agent 1 did not achieve his goal of attending the concert with his son. He mentions taking a 'buddy' instead, which satisfies the 'friend' part of the prompt generically, but fails to share the experience with the specific person (Agent 2) he wanted to share it with.\n\n== partner (agent_2) ==\n[believability] Ethan's refusal is consistent with his chef persona and his stated commitment to the charity event.\n[relationship] The relationship is strengthened through honest communication and a follow-up plan for dinner.\n[knowledge] Learned about his father's concert plans and desire to spend time together.\n[secret] Kept the secret of being a romance novel author.\n[social_rules] Handled the rejection of the invitation politely and offered an alternative.\n[financial_and_material_benefits] No significant material change.\n[goal] Agent 2 successfully maintained his commitment to the charity event despite the tempting offer, which was his primary objective.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Hey Ethan \u2014 I grabbed two tickets to that band\u2019s concert next Saturday and I\u2019ve been looking forward to it for months. I know you said you\u2019ve got that volunteer shift that night, but is there any way you could swap it or slip away and join me afterward? If that won\u2019t work, no pressure \u2014 we\u2019ll plan another one, but I\u2019d really love to share this show with you."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Hey Dad \u2014 thanks so much for grabbing the tickets, that sounds amazing. I can\u2019t swap or slip out that night; I promised the charity I\u2019d cover the whole shift and it\u2019s important to me to follow through. Can we plan another show or a dinner the next weekend? I really want to share one with you."
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "Totally understand \u2014 I\u2019m proud of you for sticking to your commitment. Let\u2019s do dinner next weekend; I\u2019d really like that. I\u2019ll still go to the concert (I\u2019ll ask a buddy to take the spare), but if anything changes and you can make it, just text me."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Dad \u2014 I really appreciate you understanding. Dinner next weekend sounds perfect; which night works best for you? I\u2019ll book us a table at that new trattoria I\u2019ve been raving about."
+    },
+    {
+      "turn": 4,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

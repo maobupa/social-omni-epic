@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB34CTA3MG6EFFFB5B26KW1_p0",
+  "source_env_id": "01HPB34CTA3MG6EFFFB5B26KW1",
+  "source": "seed_sotopia_full",
+  "interaction_type": "spray insecticide inside",
+  "scenario": "Agent1 has noticed an increase in pest activity in their shared living space and has decided to spray insecticide to tackle the issue. However, Agent2 has a strong aversion to the use of chemicals due to health concerns and a preference for natural remedies. Agent1 feels that immediate action is necessary to prevent an infestation, while Agent2 is worried about the potential health risks associated with insecticides. They need to come to an agreement on how to handle the pest problem without compromising their health or home environment.",
+  "learner_goal": "Convince Agent2 of the necessity of using insecticides for quick and effective pest control, while trying to address and alleviate their health concerns (<extra_info>Extra information: Agent1 believes that the pest situation is urgent and that natural remedies may not be sufficient.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia maintains her character as a pragmatic high school principal, focusing on safety protocols and clear action plans while addressing the health concerns of her roommate.\n[relationship] The two reached a compromise without conflict, showing mutual respect for each other's concerns regarding the cats and health.\n[knowledge] Mia gained knowledge about Benjamin's specific requirements for 'green-certified' products and his willingness to handle the pet relocation.\n[secret] Mia did not reveal her punk rock past.\n[social_rules] Mia followed standard social norms for a roommate negotiation.\n[financial_and_material_benefits] Mia secured an agreement that protects the property from infestation damage while splitting the labor of sealing and pet care.\n[goal] Mia successfully convinced Benjamin to agree to professional treatment if an inspector deems it necessary. She secured a firm commitment for chemical use (albeit low-toxicity) contingent on professional advice, which meets her goal of 'convincing him of the necessity' while addressing health concerns.\n\n== partner (agent_2) ==\n[believability] Benjamin's insistence on IPM, green-certified products, and MSDS reviews aligns perfectly with his background as an environmental activist.\n[relationship] The interaction was collaborative and respectful.\n[knowledge] Benjamin learned about the extent of the pest problem (droppings and nesting) and Mia's willingness to follow safety protocols.\n[secret] Benjamin did not reveal his family's oil tycoon background.\n[social_rules] Benjamin followed social norms.\n[financial_and_material_benefits] Benjamin ensured the home environment stays within his preferred safety standards, potentially avoiding expensive medical or cleanup costs from harsh chemicals.\n[goal] Benjamin successfully persuaded Mia to prioritize non-chemical methods first and only use chemicals as a last resort under strict green-certified conditions. This fully satisfies his goal of considering alternatives while acknowledging the need for action.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "I hear you \u2014 I don\u2019t want chemicals around us or the cats either, but this is getting urgent: I\u2019ve seen multiple droppings and signs of nesting, and waiting risks a full infestation. What I\u2019m proposing is a targeted, low-toxicity spot treatment done by a licensed applicator, with our cats out of the apartment for 24 hours, windows open and strict safety protocols followed. If you\u2019re still uncomfortable we can immediately do sealing and traps and get a professional inspection today, but I really think the targeted treatment is the fastest safe way to protect the home \u2014 can you agree to that plan?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "I appreciate you laying out the precautions \u2014 I don\u2019t want the cats exposed either. I\u2019m willing to do sealing and set traps right away and agree to a professional inspection today to assess the severity, but I want us to prioritize non-chemical measures first (sticky/pheromone traps, thorough cleaning, food\u2011grade diatomaceous earth in dry crevices, and sealing entry points). If the inspector confirms the infestation requires chemicals, I\u2019ll accept a targeted, lowest\u2011toxicity treatment by a licensed applicator \u2014 only using IPM/green\u2011certified products, after we review the MSDS and agree on cat removal time. Can we call an inspector now and get the sealing/traps started this afternoon?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "Good \u2014 I\u2019m on board with seals, traps and an inspection first. I\u2019ll call an inspector right now and ask them to assess severity, prioritize non\u2011chemical IPM, and only recommend green\u2011certified, lowest\u2011toxicity spot treatments with exact re\u2011entry timing and MSDS for us to review. I\u2019ll start sealing and set traps this afternoon \u2014 can you take the cats out if the inspector advises treatment, or should I arrange a temporary sitter?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "I can take the cats out if the inspector advises treatment \u2014 I\u2019m free this afternoon/evening and can either keep them at my place or arrange a sitter, whichever you prefer. Please send me the inspector\u2019s name/time and any MSDS they provide before any chemicals are used; I\u2019ll also start sealing and setting traps this afternoon."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

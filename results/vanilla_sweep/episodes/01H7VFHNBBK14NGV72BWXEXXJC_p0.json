@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01H7VFHNBBK14NGV72BWXEXXJC_p0",
+  "source_env_id": "01H7VFHNBBK14NGV72BWXEXXJC",
+  "source": "seed_sotopia",
+  "interaction_type": "social_chemistry",
+  "scenario": "Conversation between two friends, one who has written a play based on their parents' life, and the other owns a production company.",
+  "learner_goal": "Sell the rights of the play to your friend (<extra_info>Extra information: you believe that the play is worth a lot and you would like a fair price for it</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara stayed in character as a professional yet passionate writer, providing specific numbers and details about the play's logistics.\n[relationship] The tone remained professional and friendly, reinforcing their acquaintance through a potential business partnership.\n[knowledge] Amara gained significant insight into Mia's budget constraints and preferred licensing structure before the meeting even occurred.\n[secret] Amara's secret involvement in animal-rights extremism was not revealed.\n[social_rules] The agent followed standard social and professional norms for a business pitch.\n[financial_and_material_benefits] No money has exchanged hands yet, though a range has been discussed.\n[goal] Amara successfully moved the deal toward her preferred terms and secured a formal meeting. However, the final sale is still pending and subject to Mia's final approval after the meeting, so it is not a fully completed sale.\n\n== partner (agent_2) ==\n[believability] Mia acted as a responsible production owner, repeatedly emphasizing budget constraints while showing genuine interest in the creative work.\n[relationship] A constructive professional rapport was established.\n[knowledge] Mia successfully elicited pricing options, character breakdowns, and staging notes from Amara.\n[secret] Mia's past in a punk rock band was not mentioned.\n[social_rules] Mia was polite and transparent about her constraints.\n[financial_and_material_benefits] No financial transaction occurred during the dialogue.\n[goal] Mia successfully negotiated the proposal down to her preferred low-budget ranges ($1,000-$1,500 advance), but the actual acquisition depends on the face-to-face meeting.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Hi Mia \u2014 it\u2019s Amara. I\u2019ve written a play based on my parents\u2019 life that\u2019s been getting great reactions, and I think your production company would be the perfect place for it. I\u2019d like to sell the rights for a fair price; could we meet for coffee this week so I can give you a short pitch and discuss terms?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Hi Amara \u2014 it\u2019s Mia. I\u2019d love to hear the pitch; quick heads-up that our budget for new scripts is limited so I can\u2019t promise a large advance, but I\u2019m genuinely interested in discussing rights. Could you send a one\u2011page synopsis beforehand, and would you be free for coffee Wednesday morning or Thursday afternoon to talk?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "Wednesday morning works well \u2014 would 9:00 a.m. at The Corner Caf\u00e9 be good for you? I can bring a printed one\u2011page synopsis to the meeting, or if you prefer I can give you a very short verbal summary now so you have a heads-up before we talk terms. Looking forward to it."
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "Wednesday at 9:00 at The Corner Caf\u00e9 is perfect. Could you email the one\u2011page synopsis beforehand so I can read it ahead of time; bringing a printed copy as backup is great. I\u2019ll be upfront that our new\u2011play budget is limited, but I\u2019m very interested\u2014looking forward to your pitch."
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "Great \u2014 Wednesday at 9 works for me. I\u2019ll email the one\u2011page synopsis today and bring a printed copy to the caf\u00e9. If there\u2019s anything specific you\u2019d like included (a sample scene, estimated running time, or notes on rights/licensing), tell me and I\u2019ll add it."
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Davis",
+      "content": "Thanks \u2014 that sounds great. Could you email the one\u2011page plus a 2\u20133 page sample scene, an estimated running time, and a note on what rights you\u2019re offering (exclusive, performance license, etc.) and your expected price or preferred terms? I\u2019ll read everything before Wednesday \u2014 I\u2019ll be upfront that our new\u2011play budget is limited, but I\u2019m keen to discuss realistic options and see if we can make it work."
+    },
+    {
+      "turn": 6,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Mia \u2014 I\u2019ll email the one\u2011page synopsis, a 2\u20133 page sample scene, an estimated running time (about 95\u2013100 minutes), and a short note on rights/terms by the end of today, and I\u2019ll bring printed copies on Wednesday. For transparency, I\u2019m hoping for either an exclusive stage\u2011rights fee in the $5,000\u20138,000 range (term/territory negotiable) or a non\u2011exclusive performance license with per\u2011performance fees around $250\u2013500 plus a modest advance (I\u2019m open to smaller advance + royalty if that fits your budget). Do you want me to frame the emailed paperwork around exclusive or non\u2011exclusive options? See you Wednesday at 9 at The Corner Caf\u00e9."
+    },
+    {
+      "turn": 7,
+      "speaker": "Mia Davis",
+      "content": "Thanks, Amara \u2014 that sounds good. Please include both options in the email but prioritize a non\u2011exclusive performance\u2011license proposal (modest advance + per\u2011performance fee or royalty), since our new\u2011play budget is tight; if you do include an exclusive fee, note whether you\u2019d consider the lower end of your $5k\u20138k range or a limited-term/territory exclusive and what minimum advance you\u2019d expect. I\u2019ll read everything before Wednesday \u2014 see you at 9 at The Corner Caf\u00e9."
+    },
+    {
+      "turn": 8,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Mia \u2014 I will. I\u2019ll prioritize a non\u2011exclusive performance\u2011license in the email (proposing a modest advance of $1,000\u20132,000 plus a per\u2011performance fee of $250\u2013350, with a royalty alternative noted). For the exclusive option I\u2019ll indicate I could consider the lower end ($5,000) as a limited 2\u2011year regional exclusive (or up to $8,000 for broader/longer rights) with a minimum advance of about $2,500. Do you have a preference between per\u2011performance fee vs. royalty, or a specific territory/term you\u2019d like me to model?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Mia Davis",
+      "content": "Thanks, Amara \u2014 that sounds great. If I have to pick, please prioritize a non\u2011exclusive performance license framed around a modest advance ($1,000\u20131,500) plus a per\u2011performance fee for budgeting predictability (I'd prefer $250\u2013300), and you can include a royalty kicker after a threshold (for example, after 10 paid performances) as an alternative. For the exclusive option, model the 2\u2011year regional exclusive at the $5,000 level with a $2,500 minimum advance so I can compare apples to apples. See you Wednesday at 9."
+    },
+    {
+      "turn": 10,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Mia \u2014 I\u2019ll prioritize the non\u2011exclusive performance\u2011license with a modest advance of $1,000\u20131,500 and a per\u2011performance fee of $250\u2013300, with a royalty kicker after 10 paid performances. I\u2019ll also include the 2\u2011year regional exclusive at $5,000 with a $2,500 minimum advance for comparison. I\u2019ll email the one\u2011page synopsis, the 2\u20133 page sample scene, estimated running time, and the rights/terms breakdown today and bring printed copies Wednesday at 9 at The Corner Caf\u00e9 \u2014 see you then."
+    },
+    {
+      "turn": 11,
+      "speaker": "Mia Davis",
+      "content": "Thanks, Amara \u2014 that all sounds perfect. I\u2019ll watch for your email today and read everything before Wednesday; I\u2019ll come to the meeting with a few realistic term options that fit our limited new\u2011play budget so we can talk specifics. Looking forward to 9 a.m. at The Corner Caf\u00e9 \u2014 see you then."
+    },
+    {
+      "turn": 12,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Mia \u2014 perfect. I\u2019ll email the one\u2011page, the 2\u20133 page sample scene, the running time, and the rights/terms summary by late afternoon and I\u2019ll bring printed copies Wednesday at 9. If there\u2019s anything else you\u2019d like included (a brief character breakdown or staging notes), let me know and I\u2019ll add it \u2014 looking forward to coffee."
+    },
+    {
+      "turn": 13,
+      "speaker": "Mia Davis",
+      "content": "Yes \u2014 a brief character breakdown and any staging notes would be really helpful, thank you. I\u2019ll watch for your email this afternoon and will send a quick confirmation once I\u2019ve read the materials. Looking forward to coffee Wednesday at 9."
+    },
+    {
+      "turn": 14,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Mia \u2014 absolutely. I\u2019ll include a brief character breakdown (one\u2011line per character) and concise staging notes highlighting set needs and suggested mood/lighting, and I\u2019ll email everything by late afternoon. Quick question \u2014 would you prefer the character breakdown expanded (2\u20133 lines each) for casting purposes, or is one line per character fine? See you Wednesday at 9."
+    },
+    {
+      "turn": 15,
+      "speaker": "Mia Davis",
+      "content": "One line per character is fine for the email \u2014 keeps it concise. If you can spare 2\u20133 lines for the principal roles, that would be really helpful for casting, but no need to expand every minor part. I\u2019ll read everything when it arrives and send a quick confirmation this afternoon \u2014 see you Wednesday at 9."
+    },
+    {
+      "turn": 16,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Mia \u2014 perfect. I\u2019ll include one-line descriptions for minor characters and 2\u20133 line notes for the principal roles, along with the staging notes and the rights/terms summary. I\u2019ll email everything this afternoon and bring printed copies on Wednesday at 9 \u2014 see you then."
+    },
+    {
+      "turn": 17,
+      "speaker": "Mia Davis",
+      "content": "Thanks, Amara \u2014 that sounds perfect. I\u2019ll watch for your email and will send a quick confirmation once I\u2019ve read everything. I\u2019ll bring a few realistic term options and a notepad for numbers; see you Wednesday at 9 at The Corner Caf\u00e9."
+    },
+    {
+      "turn": 18,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Mia \u2014 perfect. I\u2019ll email the materials this afternoon and bring printed copies plus a simple term\u2011sheet so we can compare the non\u2011exclusive/performance\u2011fee option and the 2\u2011year regional exclusive. I\u2019m open to being flexible on advance/per\u2011performance splits to fit your budget \u2014 see you Wednesday at 9 at The Corner Caf\u00e9."
+    },
+    {
+      "turn": 19,
+      "speaker": "Mia Davis",
+      "content": "Thanks, Amara \u2014 I\u2019ll watch for your email this afternoon and will send a quick confirmation once I\u2019ve read everything. I\u2019ll come to the meeting with a few realistic, budget\u2011friendly term options (prioritizing the modest non\u2011exclusive performance\u2011license we discussed) so we can compare them side\u2011by\u2011side. If you have any absolute must\u2011haves or time constraints before Wednesday, please let me know; otherwise, see you at 9 a.m. at The Corner Caf\u00e9."
+    }
+  ]
+}

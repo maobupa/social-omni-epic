@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPTHP1TX99RW6MSR2WJDKC7_p0",
+  "source_env_id": "01HJPTHP1TX99RW6MSR2WJDKC7",
+  "source": "seed_sotopia_full",
+  "interaction_type": "user_generated",
+  "scenario": "Two friends share a small art studio where they both work on their individual projects. Agent1 has just completed a large piece and wants to celebrate by throwing a small party at the studio. Agent2 is in the middle of an intricate project that requires concentration and worries that a party could disrupt their work process. They need to find a way to honor both Agent1's achievement and Agent2's work needs.",
+  "learner_goal": "Convince Agent2 to agree to the celebration party (<extra_info>Extra information: you feel that celebrating milestones is important for motivation and community building.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle's tone is warm and considerate of her sister's boundaries while expressing her own desire for celebration, which aligns perfectly with her personality and the shared studio context.\n[relationship] Isabelle showed high empathy for her sister's work needs, strengthening their bond through compromise and mutual respect.\n[knowledge] Learned Ava's specific schedule requirements and boundaries regarding studio equipment.\n[secret] Her secret regarding studying magic was not mentioned or revealed.\n[social_rules] Followed all social norms for a shared professional/creative space.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Isabelle successfully convinced Ava to allow the celebration in the studio by offering a highly specific, low-impact plan that addressed all of Ava's concerns.\n\n== partner (agent_2) ==\n[believability] Ava's response is consistent with a nonbinary artist who values both their sister's success and their own focused workspace, providing clear boundaries.\n[relationship] The negotiation was supportive and collaborative, reinforcing the close twin bond.\n[knowledge] Learned that Isabelle's project was officially completed.\n[secret] Ava's secret regarding their sexuality was not revealed.\n[social_rules] Followed social norms of communication and negotiation.\n[financial_and_material_benefits] Maintained the integrity of their workspace without material loss.\n[goal] Ava successfully negotiated a compromise that allows for the celebration while strictly protecting their concentration and work schedule.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Hey Ava \u2014 I finished the big piece and really want to celebrate, but I don\u2019t want to wreck your flow. What if we do a short, super-quiet congratulations break: 20\u201330 minutes, no music, just a little cake and sparkling water in the corner with only a couple friends, I\u2019ll keep lights and noise down and clean up immediately. If that still feels disruptive we can move it to the courtyard or after you hit your next milestone \u2014 what would you need to feel okay about a tiny celebration now?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Congrats, Iz \u2014 that\u2019s awesome! I can do a short celebration if it\u2019s really quiet and contained: can we make it 30 minutes about 45 minutes from now (that\u2019s when I expect to hit a natural pause)? Keep it to a couple friends, whispers only, cake in the far corner, studio door closed, and please don\u2019t move my tools \u2014 if timing\u2019s bad we can do courtyard or after my next milestone."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

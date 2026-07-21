@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPAYNAM82W3DQ8DC7N8FXC8H_p0",
+  "source_env_id": "01HPAYNAM82W3DQ8DC7N8FXC8H",
+  "source": "seed_sotopia_full",
+  "interaction_type": "personal_invitation",
+  "scenario": "Agent1 has planned to host a game night and is excited about the event. Agent2, a close friend of Agent1, was supposed to attend, but Agent1 hears from a mutual acquaintance that Agent2 may have made other plans for the same evening. Agent1 decides to approach Agent2 to discuss the situation and ensure there are no misunderstandings.",
+  "learner_goal": "Express your disappointment that Agent2 might not attend your game night and find out the reasons behind the potential change of plans (<extra_info>Extra information: You value Agent2's presence at your events and feel that their attendance contributes significantly to the group's dynamic.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Benjamin's tone was consistent with an impassioned activist who values community and interpersonal dynamics. He clearly expressed his desire for Ethan's presence.\n[relationship] The relationship was strengthened through open communication and flexibility, moving from potential misunderstanding to a collaborative solution.\n[knowledge] Benjamin confirmed that there was indeed a scheduling clash and established a clear timeline for confirmation.\n[secret] The secret regarding the oil tycoon family fortune was not mentioned.\n[social_rules] Benjamin followed social norms by addressing the rumor directly but politely.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Benjamin expressed his disappointment, highlighted Ethan's value to the group, identified the reason for the potential absence (scheduling clash), and successfully negotiated a potential time shift to ensure attendance.\n\n== partner (agent_2) ==\n[believability] Ethan's responses were polite and professional, reflecting his background as a software developer and a respectful friend.\n[relationship] Ethan showed appreciation for Benjamin's effort and flexibility, which deepened the mutual respect in the friendship.\n[knowledge] Ethan learned how much Benjamin values his presence and the specific efforts Benjamin puts into organizing.\n[secret] The secret regarding donations to charities was not revealed.\n[social_rules] Ethan was courteous and apologetic about the uncertainty, adhering to social standards.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Ethan successfully communicated the importance of commitments and the impact of changes while maintaining a positive relationship and avoiding pressure/guilt.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Benjamin Jackson",
+      "content": "Hey Ethan \u2014 I heard from Alex that you might have other plans for game night. I\u2019d be really disappointed if you can\u2019t make it; you seriously lift the group's vibe. Did something come up, or is there a timing clash? If it\u2019s timing, I can try to shift things or save you a spot \u2014 what\u2019s going on?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Hey Ben \u2014 thanks for checking. I do have a possible scheduling clash that night, and I'm sorry for the uncertainty; I know you put a lot into organizing game night and last-minute changes can really throw you for a loop. I don't want to leave you hanging \u2014 can we either confirm my spot earlier today or would shifting the start time by an hour help? I really enjoy the group and want to make it if possible."
+    },
+    {
+      "turn": 2,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks for the update, Ethan \u2014 I\u2019d be bummed if you couldn\u2019t make it; you really lift the group's vibe. I can push the start back an hour to accommodate, so let\u2019s tentatively plan that \u2014 could you confirm by 4 PM today? If that won\u2019t work, tell me when you\u2019ll know and I\u2019ll hold a spot either way."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Ben \u2014 really appreciate you being flexible. I\u2019ll check my schedule and confirm by 4 PM at the latest; if it looks like I can\u2019t make it I\u2019ll let you know immediately so you aren\u2019t left scrambling. I know how much work you put into this and I don\u2019t want to make things harder for you."
+    },
+    {
+      "turn": 4,
+      "speaker": "Benjamin Jackson",
+      "content": "left the conversation"
+    }
+  ]
+}

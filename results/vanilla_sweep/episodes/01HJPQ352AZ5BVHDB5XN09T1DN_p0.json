@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HJPQ352AZ5BVHDB5XN09T1DN_p0",
+  "source_env_id": "01HJPQ352AZ5BVHDB5XN09T1DN",
+  "source": "seed_sotopia_full",
+  "interaction_type": "online_privacy_dilemmas",
+  "scenario": "Agent1 has recently taken up an interest in genealogy and has been using various online platforms to research their family history. During their research, they come across a profile that appears to belong to Agent2, who is a distant relative according to the findings. Agent1 is excited about the discovery and wants to reach out to Agent2 to share information and possibly meet up. However, Agent2 is a private person and is uncomfortable with the idea of their personal information being accessed and shared online without their consent.",
+  "learner_goal": "You are Agent1, and your goal is to establish a connection with Agent2 by sharing the exciting family history findings. <extra_info>Consider that Agent2 may not be aware of your research and might value their privacy.</extra_info> <clarification_hint>Clarify your intentions and the potential benefits of sharing this information.</clarification_hint> <strategy_hint>You can emphasize the importance of family connections and historical knowledge.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Micah stays in character as a polite, enthusiastic genealogy hobbyist. He responds patiently to Jaxon's high level of caution and follows through with the requested throwaway communication method.\n[relationship] The relationship improved from 'name only' to a tentative but respectful connection where boundaries were established and honored.\n[knowledge] Micah confirmed Jaxon's identity and his desire for privacy, and established a specific communication channel for further exchange.\n[secret] Micah did not reveal his secret about dressing up his dog.\n[social_rules] Micah followed all social norms, including respecting the other person's boundaries and privacy.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Micah successfully established a connection with Jaxon, shared initial findings, and secured a commitment to continue the conversation through a specific, mutually agreed-upon channel.\n\n== partner (agent_2) ==\n[believability] Jaxon's behavior is very consistent with a private investigative journalist. His skepticism and demand for specific sources and secure communication methods are highly plausible.\n[relationship] Jaxon began very guardedly but ended with a collaborative plan to exchange information, showing a slight increase in trust.\n[knowledge] Jaxon learned exactly how Micah found his information and received a summary of the alleged family connection.\n[secret] Jaxon did not reveal his secret regarding the fabrication of evidence.\n[social_rules] Jaxon maintained firm boundaries while remaining professional and respectful.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Jaxon successfully protected his primary privacy by preventing the sharing of sensitive documents and establishing a throwaway communication channel, while also verifying how his data was accessed.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Micah Stevens",
+      "content": "Hey Jaxon \u2014 it\u2019s Micah Stevens, we met at the community event. I stumbled on some genealogy records that suggest we might be distant relatives and I\u2019d love to share what I found if you\u2019re open to it. I totally respect your privacy and won\u2019t share any personal info without your consent; it might be a neat way to connect and learn more about our family history. Would you prefer I send a short summary here or just talk it through first?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "Hi Micah \u2014 thanks for reaching out. I\u2019m pretty protective of my info, so could you tell me exactly where/how you found my profile (which site or database) and what details it shows, and what you intend to do with that information? I\u2019m fine with a short summary here as long as it omits contact details and sensitive docs, or we could meet briefly at a public community event or use a throwaway email/messaging handle if more is needed. Please don\u2019t share screenshots or private records of mine without my consent."
+    },
+    {
+      "turn": 2,
+      "speaker": "Micah Stevens",
+      "content": "Thanks, Jaxon \u2014 I appreciate the boundary. I found your profile through public genealogy sources (mostly FamilySearch and public Ancestry trees plus a searchable census index); what shows there are names, approximate birth years/places and a likely shared ancestor (around the great\u2011great\u2011grandparent level). My intent is just to compare trees and sources so we can confirm the connection \u2014 I will not publish your contact details or share screenshots/private records without your explicit consent. I can post a short summary here omitting any contact info, meet briefly at a community event, or we can use a throwaway email/handle \u2014 which would you prefer?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Jaxon Prentice",
+      "content": "Thanks \u2014 a short summary here works. Please include only names, approximate years/places and the likely shared ancestor (no screenshots, private records, or any contact details). If it looks promising and we need to dig deeper, I\u2019d prefer to continue via a throwaway email/handle or meet briefly at the next community event \u2014 could you create/share a throwaway address for that? Also please confirm you won\u2019t add my profile to public trees or contact other relatives using my info without my explicit consent."
+    },
+    {
+      "turn": 4,
+      "speaker": "Micah Stevens",
+      "content": "Short summary: public genealogy entries link a Prentice family in Ohio in the late 1800s \u2014 your profile shows a Thomas Prentice (b. \u22481894, Ohio) and my tree has an Eleanor Prentice (b. \u22481892, Ohio); both appear to trace back to a William Prentice (b. \u22481846, likely born in County Cork and later in Ohio), who would be a probable shared ancestor at about the great\u2011great\u2011grandparent level. I confirm I will not add your profile to any public trees or contact other relatives using your info without your explicit consent. If you want to pursue this, I can either meet briefly at the next community event or create a throwaway email/handle and share it here \u2014 would you like me to create one or would you prefer to propose one yourself?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Jaxon Prentice",
+      "content": "Thanks \u2014 that summary is helpful and acceptable. Please create and share a throwaway email or messaging handle here (use no personal identifiers in the address); once I review there we can decide whether to meet briefly at the next community event. Also confirm you won't add my profile to public trees or contact other relatives without my explicit permission."
+    },
+    {
+      "turn": 6,
+      "speaker": "Micah Stevens",
+      "content": "Thanks, Jaxon \u2014 I set up a throwaway email you can use: treeconnect2026@mailinator.com. I confirm I will not add your profile to any public trees or contact other relatives without your explicit permission. If you email there, I\u2019ll send the source list (names, years, places) and we can decide whether to meet at the next community event."
+    },
+    {
+      "turn": 7,
+      "speaker": "Jaxon Prentice",
+      "content": "Thanks, Micah \u2014 that throwaway address works. I\u2019ll send a brief message to treeconnect2026@mailinator.com within 48 hours requesting the source list (names, approximate years/places and the specific databases/record IDs); please include only public citations \u2014 no screenshots or scanned private records. I appreciate your confirmation about not publishing my profile or contacting relatives without explicit permission; after I review we can decide whether a short meet at the next community event makes sense."
+    },
+    {
+      "turn": 8,
+      "speaker": "Micah Stevens",
+      "content": "Great \u2014 thanks, Jaxon. I\u2019ll watch for your message at treeconnect2026@mailinator.com and when you email I\u2019ll reply with a list of public citations (names, approximate years/places and the database/record IDs) \u2014 no screenshots or private scans. I confirm again I won\u2019t publish your profile or contact relatives without your explicit permission; looking forward to hearing from you and potentially meeting at the next community event."
+    },
+    {
+      "turn": 9,
+      "speaker": "Jaxon Prentice",
+      "content": "Thanks, Micah \u2014 appreciate you setting that up. I\u2019ll email treeconnect2026@mailinator.com within 48 hours with a brief request (subject: \u201cGenealogy source request \u2014 Jaxon Prentice\u201d) \u2014 please reply with the public citations only (names, approximate years/places and the database/record IDs), no screenshots or private scans. And thanks again for confirming you won\u2019t add my profile to public trees or contact relatives without my explicit permission."
+    },
+    {
+      "turn": 10,
+      "speaker": "Micah Stevens",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HJPTHMGRHN4HP2Q4H0ZA5FAA_p0",
+  "source_env_id": "01HJPTHMGRHN4HP2Q4H0ZA5FAA",
+  "source": "seed_sotopia_full",
+  "interaction_type": "compassion_for_animals",
+  "scenario": "Agent1 finds a sick stray animal and decides to bring it to an animal shelter where Agent2 is a volunteer. Agent1 is concerned about the animal's health and wants to ensure it receives proper care, while Agent2 is focused on the shelter's policies and capacity.",
+  "learner_goal": "Convince Agent2 to accept and care for the sick animal despite the shelter's current resources being stretched thin (<extra_info>Extra information: the shelter has limited space and funds, but the animal requires immediate attention</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -4.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily Greenberg's character is consistent, professional, and authoritative, fitting her background as a lawyer. Her actions and communication style align perfectly with her described conscientiousness.\n[relationship] Lily leverages a professional acquaintance to build trust in a high-stakes situation, strengthening the bond through reliability and shared values.\n[knowledge] Lily successfully gained critical procedural knowledge regarding isolation protocols, triage, and the specific requirements for shelter intake.\n[secret] Lily's secret remains intact; her offer to pay for the bills is open, not anonymous in this context, but her habit of anonymous donation is not revealed.\n[social_rules] Lily followed all social and professional norms, maintaining a polite and cooperative tone.\n[financial_and_material_benefits] Lily committed significant personal financial resources and time to cover all vet bills and organize foster care.\n[goal] While Lily secured a high level of cooperation and a tentative plan for intake, the final decision remains under the manager's unilateral discretion and pending triage, capping the score at 6 per instructions.\n\n== partner (agent_2) ==\n[believability] Lena Goodwin's response is highly realistic for a shelter volunteer, focusing on PPE, isolation, manager approval, and resource management.\n[relationship] Lena responded positively to Lily's proactive approach, reinforcing their professional connection through a shared mission.\n[knowledge] Lena obtained specific details about the animal's condition, photos, and a firm commitment for financial and logistical coverage.\n[secret] Lena's secret regarding her past relationship was never mentioned.\n[social_rules] Lena maintained professional boundaries and followed shelter protocols throughout the interaction.\n[financial_and_material_benefits] Lena secured a full financial guarantee and external logistical support for a high-resource case, benefiting the shelter's bottom line.\n[goal] Lena successfully protected the shelter's existing population by enforcing isolation/PPE protocols and offloading all financial and logistical burdens onto Lily.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Lena \u2014 it\u2019s Lily Greenberg, we met at the community design event. I just found a very sick stray that needs immediate care; I know you\u2019re stretched thin, but I can cover emergency vet bills and help arrange a temporary foster or extra volunteer support so you won\u2019t be left holding all of it. Please \u2014 can your shelter take him in now? I\u2019ll handle payment and logistics so you don\u2019t have to worry about the cost or space long-term."
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Hi Lily \u2014 thank you for stepping in. I want to help but our isolation space and resources are limited; can you tell me species/size, visible injuries or symptoms, behavior (aggressive/quiet), and where you are now \u2014 photos would help. If possible, please take it to the nearest emergency vet for immediate triage; if you can\u2019t, I\u2019ll check with our manager right away and, given your offer to cover bills and arrange foster/volunteers, we may be able to accept it \u2014 can you come to the shelter and how soon would that be?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "It\u2019s a medium-sized dog (about 25\u201330 lbs), very lethargic, emaciated, dehydrated with shallow/labored breathing and a crusted wound on the left flank \u2014 quiet and not aggressive, lets me approach. I\u2019m two blocks from the shelter (8th & Maple) and can be there in 10 minutes to bring him to your isolation space, or I can take him straight to the nearest emergency vet if you think that\u2019s better. I\u2019ll cover immediate vet costs and arrange a foster/extra volunteers; what\u2019s the best number to text photos to right now?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "Please text photos here right away so I can assess and forward them to our manager. With the shallow/labored breathing, an emergency vet is ideal if it\u2019s closer \u2014 if you can get him to one faster, please do that; if not, come to the shelter in ~10 minutes and I\u2019ll alert staff and push to make room given your offer to cover costs and arrange foster. When you arrive, keep him warm, don\u2019t force food, offer only small sips of water if he can swallow, bring him in a towel or on a leash, and wait outside briefly so we can prep isolation/PPE."
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "I\u2019m texting photos to you right now. I\u2019ll bring him to the shelter in ~10 minutes (I\u2019m two blocks away) and will follow your instructions \u2014 wrapped in a towel, kept warm, no forced food, only small sips if he can swallow. Do you want me to call when I arrive or just wait outside so staff can prep isolation/PPE?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Lena Goodwin",
+      "content": "I\u2019ll watch for the photos and forward them to our manager right away. Please call or text when you arrive and wait just outside the shelter entrance \u2014 we\u2019ll meet you there in PPE and have isolation prepped if the manager signs off. If his breathing worsens on the way, please take him to the nearest emergency vet instead."
+    },
+    {
+      "turn": 6,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks, Lena \u2014 I\u2019ll call when I arrive and wait just outside the entrance. Please let your manager know I\u2019m authorizing emergency treatment and will cover all bills and arrange foster/extra volunteers immediately; if they need urgent sign\u2011off they can call the number my texts are from. I\u2019m on my way and will take him to an emergency vet only if his breathing worsens en route."
+    },
+    {
+      "turn": 7,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks \u2014 I\u2019ve forwarded the photos and alerted our manager; they\u2019re on standby and will call your number if they need urgent sign\u2011off. We\u2019ll prep isolation and PPE; please call or text when you arrive and wait just outside the entrance. If his breathing worsens on the way, please take him to the nearest emergency vet immediately. I\u2019ll meet you at the door."
+    },
+    {
+      "turn": 8,
+      "speaker": "Lily Greenberg",
+      "content": "I\u2019m almost there \u2014 two blocks away, about 5 minutes. I\u2019ll wait just outside the entrance and can stay to sign intake forms, arrange immediate payment/authorizations, and coordinate a temporary foster and extra volunteers so the shelter isn\u2019t left holding this long-term. If the manager needs anything urgently they can call or text the number my photos came from."
+    },
+    {
+      "turn": 9,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks, Lily \u2014 I really appreciate you bringing him. Our manager is likely to accept with your offer, but final triage and their sign\u2011off are required before he goes into isolation to protect the other animals. Please call or text as you arrive and if his breathing worsens on the way take him to the nearest emergency vet; I\u2019ll meet you at the door in PPE."
+    },
+    {
+      "turn": 10,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

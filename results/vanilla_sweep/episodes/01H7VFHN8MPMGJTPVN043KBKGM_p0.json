@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01H7VFHN8MPMGJTPVN043KBKGM_p0",
+  "source_env_id": "01H7VFHN8MPMGJTPVN043KBKGM",
+  "source": "seed_sotopia",
+  "interaction_type": "social_chemistry",
+  "scenario": "Two acquaintances run into each other at Target, one of them volunteers there (a special event) and is in charge of giving away free samples",
+  "learner_goal": "Give away free samples (<extra_info>Extra information: your manager has told you to clear out the samples before your shift ends.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver's behavior is consistent with his persona as a polite architect and his professional goal to clear out inventory. He maintains the cordial relationship through small talk about tech.\n[relationship] The interaction was friendly and mutually beneficial, reinforcing their cordial neighborhood relationship.\n[knowledge] Oliver learned specific details about on-device AI and its privacy implications from Ethan.\n[secret] Oliver successfully kept his secret feelings for his neighbor hidden.\n[social_rules] Oliver followed social norms and was polite throughout the interaction.\n[financial_and_material_benefits] Oliver did not personally gain material benefits, as his role was to give items away.\n[goal] Oliver successfully arranged to give away five samples to Ethan, significantly helping him clear out the table as instructed by his manager.\n\n== partner (agent_2) ==\n[believability] Ethan's interest in free samples and his tech-heavy conversation are consistent with his character profile.\n[relationship] Ethan responded positively to Oliver's offer and engaged in a subject he enjoys, strengthening the bond.\n[knowledge] Ethan did not learn any significant new information.\n[secret] Ethan did not reveal his secret donations to charity.\n[social_rules] Ethan framed his request for extra samples as a favor to Oliver, avoiding appearing greedy.\n[financial_and_material_benefits] Ethan secured five free food samples.\n[goal] Ethan successfully obtained a large number of free samples (five) while maintaining his social standing by framing it as helping Oliver clear the table.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "Hey Ethan \u2014 fancy running into you! I'm manning the sample table today and my manager wants me to clear everything out before my shift ends. Want to grab a free sample? I can set one aside for you; how've you been?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Hey Oliver \u2014 thanks, I'd love one, whatever's easiest. If your manager needs things cleared out, I'm happy to take an extra or two to share with a neighbor \u2014 don't want you stuck with leftovers. I've been good, thanks; how's the shift going?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "Great \u2014 I\u2019ll set aside three for you to share: rosemary crackers, the herb dip, and a lemon bar. Swing by the table in about five minutes and I\u2019ll hand them over, or I can drop them off at your place if that\u2019s easier. By the way, anything new in tech you\u2019ve been excited about lately?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "Perfect \u2014 three sounds great, I\u2019ll swing by in about five. If there are any extras your manager still wants cleared, I\u2019m happy to take a few more off your hands so you\u2019re not stuck with them. Lately I\u2019ve been geeking out over on-device AI models and how they can run without sending everything to the cloud \u2014 pretty neat stuff."
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Thompson",
+      "content": "Awesome \u2014 thanks, Ethan. I\u2019ll add two more so you can share them: garlic hummus and apple slices, five total. Swing by the table in about five and I\u2019ll hand them over \u2014 by the way, that on-device AI stuff sounds cool; do you think it\u2019ll actually make phones noticeably more private?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Oliver \u2014 really appreciate it. I\u2019ll swing by in about five. And yeah, on-device AI should make phones noticeably more private since data stays local, though there are trade-offs like smaller models, less frequent updates, and more battery/CPU use; if your manager still needs more cleared after I stop by, happy to take any extras off your hands."
+    },
+    {
+      "turn": 6,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

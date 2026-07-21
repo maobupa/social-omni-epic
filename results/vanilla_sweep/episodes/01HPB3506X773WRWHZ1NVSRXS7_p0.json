@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB3506X773WRWHZ1NVSRXS7_p0",
+  "source_env_id": "01HPB3506X773WRWHZ1NVSRXS7",
+  "source": "seed_sotopia_full",
+  "interaction_type": "mutual_interest",
+  "scenario": "Agent1 and Agent2 are friends who have both made a pact to exercise daily for the past week. Agent1 has successfully adhered to the pact, but has noticed that Agent2 has been making excuses and skipping their workout sessions. Agent1 decides to approach Agent2 to discuss the importance of their commitment and to find ways to motivate each other to stick to their exercise goals.",
+  "learner_goal": "Encourage Agent2 to resume daily exercise and uphold the pact (<extra_info>Agent1 believes in the benefits of regular exercise and wants to help Agent2 overcome their lack of motivation.<strategy_hint>Hint: discuss the positive changes that come with exercise and suggest setting smaller, achievable goals to build momentum.</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara stayed in character as a supportive friend and wildlife biologist, using clear communication that reflected her goal of encouragement and focus on health.\n[relationship] Amara showed empathy and support, strengthening the bond between the two acquaintances.\n[knowledge] She learned why Mia was struggling (feeling overwhelmed) and what schedule would work better for her.\n[secret] No secrets were revealed.\n[social_rules] She followed social norms, though she abruptly left the conversation without a closing acknowledgment after Mia's proposal.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Amara successfully encouraged Mia to resume exercise and set smaller goals. However, since she left the conversation immediately after Mia's counter-proposal without confirming her agreement to the new terms, the outcome remains slightly unresolved even though a plan was proposed.\n\n== partner (agent_2) ==\n[believability] Mia\u2019s response was very realistic for a busy professional feeling overwhelmed but wanting to maintain a friendship and health commitment.\n[relationship] Mia responded positively to Amara's outreach and proposed a collaborative way forward.\n[knowledge] Mia learned that Amara values their pact and is willing to be flexible.\n[secret] No secrets were revealed.\n[social_rules] Mia followed all social norms.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Mia proposed a clear, flexible schedule that accommodated her needs. However, Amara left before formally agreeing to the specific terms (three 20-minute sessions and walks), leaving the negotiation unfinalized.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Hey Mia \u2014 I know life gets hectic, but I\u2019ve noticed you\u2019ve missed a few workouts and wanted to check in because our pact mattered to me. Exercise has honestly given me more energy, better focus, and a steadier mood, and maybe a smaller step \u2014 like 15 minutes a day or three short sessions a week \u2014 would feel doable. I can be your accountability buddy (morning check-ins or a quick walk after work) \u2014 what would make getting back on track easiest for you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Thanks, Amara \u2014 I really appreciate you checking in. I\u2019ve been feeling overwhelmed and daily felt unsustainable; I like the smaller-step idea. How about we switch to three 20-minute workouts a week plus a few 15-minute walks on busier days, and use morning texts or two after-work walks as our accountability? If that works for you I\u2019ll commit to starting next Monday."
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

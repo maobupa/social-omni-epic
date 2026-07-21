@@ -1,0 +1,108 @@
+{
+  "scenario_id": "01HPB347DHKTRE0V16ZC944GC2_p0",
+  "source_env_id": "01HPB347DHKTRE0V16ZC944GC2",
+  "source": "seed_sotopia_full",
+  "interaction_type": "texting_misunderstanding",
+  "scenario": "Agent1 and Agent2 are friends who have planned to meet up for coffee. Agent1 arrives at the coffee shop on time, but Agent2 is running late. While waiting, Agent1 begins texting on their phone. Agent2 arrives and sees Agent1 engrossed in their phone and feels ignored, leading to feelings of frustration. The situation needs to be handled delicately to avoid harming their friendship.",
+  "learner_goal": "You are Agent1, and your goal is to acknowledge Agent2's presence and feelings, and explain that you were using your phone to pass time while waiting, not to be rude or dismissive. <extra_info>You value your friendship with Agent2 and want to ensure they feel respected and important.</extra_info> <clarification_hint>Communicate the reason for your phone usage and reassure Agent2 of your intentions.</clarification_hint> <strategy_hint>Express your happiness at seeing them and suggest putting away your phone to give them your full attention during your meet-up.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 18,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle consistently maintained her persona as a busy coffee shop worker and student. She handled the conflict with empathy and remained within character throughout the interaction.\n[relationship] The sisters successfully navigated a potential conflict, established a new boundary regarding phone usage to respect each other's time, and moved into a collaborative phase supporting each other's interests (the rally and latte art).\n[knowledge] Isabelle learned about Ava's specific progress with the campus rally (planning meetings, speaker finalization, route mapping) and her creative work (sketchbook and poetry).\n[secret] Isabelle kept her secret about studying magic hidden.\n[social_rules] Isabelle followed all social norms, apologized for her phone usage, and actively listened to her sister.\n[financial_and_material_benefits] No significant financial or material exchange occurred, though Isabelle offered to buy the drinks.\n[goal] Isabelle fully achieved her goal: she acknowledged Ava's feelings, explained her phone usage, reassured Ava of her intentions, expressed happiness at seeing her, and successfully suggested putting the phone away to give full attention.\n\n== partner (agent_2) ==\n[believability] Ava's reactions were realistic for a highly neurotic and agreeable twin. They expressed hurt feelings clearly and were quick to reconcile once the boundary was set.\n[relationship] Ava strengthened the bond by communicating their needs effectively and securing a commitment for mutual respect in the future.\n[knowledge] Ava learned about Isabelle's busy week at the coffee shop, her new latte art skill, and specific anecdotes about customers.\n[secret] Ava kept their secret about their bisexuality hidden.\n[social_rules] Ava maintained social decorum and expressed their feelings in a constructive, non-escalating manner.\n[financial_and_material_benefits] Ava received a coffee (chai latte) from Isabelle.\n[goal] Ava successfully expressed their feelings without escalation, felt valued, understood Isabelle's perspective, and established a mutual agreement for future meet-ups.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Hey, Ava \u2014 I\u2019m so glad you\u2019re here. I\u2019m sorry if it seemed like I was ignoring you; I was just passing time on my phone while I waited, not trying to be rude. I can tell that bothered you, and I really value our time \u2014 do you want me to put my phone away so we can catch up?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Thanks \u2014 I appreciate you saying that. To be honest, I felt a bit hurt when I walked in and saw you on your phone; it made me worry our time together didn\u2019t matter. I believe you weren\u2019t trying to be rude, though, and putting your phone away would mean a lot \u2014 could we try agreeing to keep phones tucked away or give each other a quick heads-up if one of us needs to check something?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "You\u2019re right \u2014 I\u2019m really sorry, Ava. I was just killing time scrolling while I waited, not thinking about how it\u2019d look; I promise our time together matters to me. I\u2019m so happy you\u2019re here \u2014 I\u2019ll put my phone away now, and I like the idea of keeping phones tucked away or giving each other a quick heads-up if one of us needs to check something."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Isabelle \u2014 I appreciate you saying that. I did feel a bit hurt when I walked in, but I believe you; putting your phone away would mean a lot. Let\u2019s agree to tuck phones away or give each other a quick heads-up, and now\u2014coffee? How\u2019s your week been?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "Coffee sounds perfect! My week's been busy\u2014lots of shifts at the shop and classes\u2014but I'm really glad we're hanging out now. Let's tuck our phones away and order\u2014what do you want?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Martinez",
+      "content": "Agreed \u2014 let\u2019s tuck phones away. I\u2019ll have a chai latte, please. I\u2019m really glad we\u2019re finally hanging out; tell me about your week \u2014 how were your shifts at the shop?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Isabelle Martinez",
+      "content": "My shifts were pretty hectic \u2014 I covered a few extra ones when someone called out and got slammed in the morning rush, but it was oddly fun and I even learned a new latte art trick. I\u2019m really glad we\u2019re finally hanging out. Let\u2019s tuck our phones and order \u2014 I\u2019ll grab your chai and try the seasonal latte."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Martinez",
+      "content": "That sounds intense but kind of fun\u2014congrats on the new latte-art trick! Thanks for grabbing my chai; I really appreciate it. I\u2019m glad we agreed to tuck phones away \u2014 it makes our time feel more real. Let\u2019s order and catch up; tell me the funniest thing that happened during the rush."
+    },
+    {
+      "turn": 8,
+      "speaker": "Isabelle Martinez",
+      "content": "I\u2019ll grab our drinks now. The funniest thing\u2014I had a customer try to theatrically pour their own latte during the rush and ended up spraying foam all over the counter; my coworker Miguel wiped it up and joked he\u2019d just invented \u2018abstract latte art,\u2019 which made the whole line laugh. You would\u2019ve loved it."
+    },
+    {
+      "turn": 9,
+      "speaker": "Ava Martinez",
+      "content": "That\u2019s hilarious \u2014 I wish I\u2019d seen it! Congrats on the latte-art trick; show me later? Thanks for grabbing my chai, you\u2019re the best. Let\u2019s grab a table and I want to hear more about your week and that rush."
+    },
+    {
+      "turn": 10,
+      "speaker": "Isabelle Martinez",
+      "content": "Sounds perfect\u2014let\u2019s snag the window table, and I\u2019ll show you the latte-art trick after we sit. I\u2019m really glad we\u2019re finally hanging out\u2014what\u2019s new with you this week while we wait for the drinks?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Ava Martinez",
+      "content": "Not much\u2014been juggling a planning meeting for the campus rally, plus sneaking in some drawing and a little poem between classes. I\u2019ll show you the sketchbook later! How did your latte-art trick go\u2014can\u2019t wait to see it."
+    },
+    {
+      "turn": 12,
+      "speaker": "Isabelle Martinez",
+      "content": "It went pretty well \u2014 I pulled off a little heart-with-a-leaf design. I\u2019ll show you once we grab our drinks. I can\u2019t wait to see your sketchbook and hear more about the rally \u2014 you\u2019ve been so busy!"
+    },
+    {
+      "turn": 13,
+      "speaker": "Ava Martinez",
+      "content": "That sounds adorable \u2014 I can\u2019t wait to see it! I\u2019ll show you some sketches after we sit. Tell me more about the rally plans while we wait \u2014 what\u2019s next for it?"
+    },
+    {
+      "turn": 14,
+      "speaker": "Isabelle Martinez",
+      "content": "Oh awesome\u2014so for the rally we\u2019re finalizing speakers and a short teach\u2011in, mapping the route across campus, and lining up volunteers for safety and outreach. Next step is confirming the permit and getting flyers printed\u2014could you help design the poster? I\u2019d love to use your sketches for it, and we can brainstorm more after our drinks."
+    },
+    {
+      "turn": 15,
+      "speaker": "Ava Martinez",
+      "content": "Absolutely \u2014 I\u2019d love to help design the poster and use my sketches. I\u2019ll bring my sketchbook and we can brainstorm layout, colors, and messaging after our drinks (thinking bold, simple, and readable from across campus). When do you need the final file by so I can plan the design work?"
+    },
+    {
+      "turn": 16,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

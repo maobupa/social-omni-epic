@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPQ357TFY29XE1VFWF1M45X_p0",
+  "source_env_id": "01HJPQ357TFY29XE1VFWF1M45X",
+  "source": "seed_sotopia_full",
+  "interaction_type": "hand-craft",
+  "scenario": "Agent1 and Agent2, who are family members, are meeting for the first time after a conflict that occurred during a family gathering. Agent1 is still upset about Agent2's behavior at their grandmother's funeral, which was seen as disrespectful and caused a rift in the family. Agent2 has reached out to reconcile, understanding the importance of family bonds, and Agent1 has reluctantly agreed to meet.",
+  "learner_goal": "To express your feelings about the incident and set boundaries for future interactions with Agent2 (<extra_info>Consider the emotional impact of the incident on your relationship</extra_info>, <clarification_hint>Clarify misconceptions and seek an apology if needed</clarification_hint>, <strategy_hint>Use examples of positive past interactions to rebuild trust</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's tone was consistent with a retired police officer who values order and respect, and his abrupt departure after receiving the apology fits the character of someone who is still hurt but has said what he needed to say.\n[relationship] The relationship moved from a state of conflict and avoidance to a formal acknowledgment and apology, though it remains cold as Liam left immediately.\n[knowledge] He learned that Lena's behavior was caused by being overwhelmed by frustration and grief rather than malice.\n[secret] Did not reveal any secrets.\n[social_rules] Acted within his rights to set boundaries, though leaving the conversation abruptly is a bit brusque.\n[financial_and_material_benefits] No material gain.\n[goal] Liam expressed his feelings, set clear boundaries for future behavior, mentioned their positive past interactions in the neighborhood, and successfully elicited a full apology and commitment to change.\n\n== partner (agent_2) ==\n[believability] Lena's response was appropriately contrite and directly addressed the concerns raised by Liam.\n[relationship] Successfully offered an apology which was the necessary first step to repair the relationship, though the other party ended the meeting quickly.\n[knowledge] Gained clarity on the specific boundaries Liam expects her to follow.\n[secret] Secrets kept.\n[social_rules] Followed social norms for an apology.\n[financial_and_material_benefits] No material gain.\n[goal] Lena apologized, showed remorse, and acknowledged the hurt caused. She also offered further gestures of goodwill (apologizing to the rest of the family).",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Lena, I agreed to meet because what happened at Grandma\u2019s funeral really upset me \u2014 your behaviour felt disrespectful and it hurt the family. We\u2019ve had friendly moments passing each other around the neighbourhood, and I don\u2019t want to lose that, but I need you to acknowledge what happened and apologise before we can move forward. Going forward I need you to show basic respect at family events and, if you\u2019re upset about something, talk to someone privately instead of acting out. Can you tell me what you were thinking that day, and will you apologise for how it came across?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "You\u2019re right, Liam \u2014 I\u2019m sorry. I was overwhelmed that day and let my frustration and grief spill out instead of handling it privately; that was disrespectful and I understand how much it hurt the family. I\u2019ll apologize to everyone and promise to speak to someone privately in the future \u2014 is there anything specific you need from me now to help rebuild trust?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

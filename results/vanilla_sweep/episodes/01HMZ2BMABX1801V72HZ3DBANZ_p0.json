@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BMABX1801V72HZ3DBANZ_p0",
+  "source_env_id": "01HMZ2BMABX1801V72HZ3DBANZ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "custom_scenario",
+  "scenario": "Agent1 and Agent2 are neighbors who occasionally greet each other but have never had a conversation beyond pleasantries. One evening, Agent1 sits on their shared apartment complex balcony to enjoy a beer after a long day at work. Agent2, who has a strong aversion to alcohol due to personal reasons, joins Agent1 on the balcony, unaware of Agent1's drink. The situation leads to an unexpected dialogue about personal choices and boundaries.",
+  "learner_goal": "Express their need for a peaceful evening and negotiate a compromise that respects both agents' preferences (<extra_info>Extra information: Agent1 is looking for relaxation and isn't aware of Agent2's aversion to alcohol.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's dialogue is polite and consistent with his character as a respectful, introverted neighbor. He proactively offers solutions to avoid conflict while still maintaining his desire for relaxation.\n[relationship] The interaction strengthened their relationship through clear communication, mutual respect, and the successful navigation of a potential point of tension.\n[knowledge] Finnegan learned about Emily's strong personal aversion to alcohol, which is significant for their future neighborly interactions.\n[secret] Finnegan did not reveal his past involvement in a cult.\n[social_rules] Finnegan followed all social norms of politeness and boundaries.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Finnegan successfully negotiated a compromise where he could still enjoy his drink on the balcony (at the far end) while respecting Emily's comfort, ensuring a peaceful evening.\n\n== partner (agent_2) ==\n[believability] Emily's responses align perfectly with her character as a polite but principled librarian who values harmony.\n[relationship] Emily appreciated Finnegan's consideration, which deepened the trust between the neighbors.\n[knowledge] Emily learned that Finnegan is receptive to her boundaries and willing to adjust his behavior for her comfort.\n[secret] Emily did not reveal her secret career as a romance novelist.\n[social_rules] Emily expressed her needs clearly and politely without being confrontational.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Emily successfully explained her discomfort and reached a mutual understanding with Finnegan that resolved the situation without any conflict.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "Oh\u2014Emily, sorry, I didn't realise you'd come out. I'm just having a quiet beer to unwind after work; I don't mean to make you uncomfortable. Would you like me to put it away, move to the far end of the balcony, or take it inside\u2014what would make you most comfortable?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Emily Harrison",
+      "content": "Thanks for checking, Finnegan \u2014 I really appreciate it. I have a strong personal aversion to alcohol and feel uncomfortable around it, so if you wouldn't mind putting it away or moving to the far end of the balcony that would help. I hope that's not awkward; I enjoy our neighborly chats and don't want this to create tension."
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "Of course, Emily \u2014 thank you for telling me. I'll move to the far end of the balcony and keep the bottle out of sight; if that still bothers you I'll take it inside. I enjoy our chats too and don't want this to be awkward."
+    },
+    {
+      "turn": 3,
+      "speaker": "Emily Harrison",
+      "content": "Thank you, Finnegan \u2014 I really appreciate you being considerate. Moving to the far end and keeping it out of sight is more than enough; no need to take it inside. I value our chats too and I\u2019m glad we can be honest about these things."
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

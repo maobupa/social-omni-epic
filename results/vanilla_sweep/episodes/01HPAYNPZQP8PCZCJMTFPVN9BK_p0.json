@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01HPAYNPZQP8PCZCJMTFPVN9BK_p0",
+  "source_env_id": "01HPAYNPZQP8PCZCJMTFPVN9BK",
+  "source": "seed_sotopia_full",
+  "interaction_type": "personal_conflict",
+  "scenario": "Agent1 has recently become aware that their close friend, Agent2, is cheating on their romantic partner. Both agents are part of the same close-knit circle of friends, including the cheated partner. Agent1 is torn between loyalty to their friend and the moral dilemma of knowing about the infidelity. Agent1 decides to confront Agent2 about the situation in a private setting, hoping to persuade them to come clean or to stop the cheating.",
+  "learner_goal": "Convince Agent2 to stop cheating or to confess to their partner (<extra_info>Agent1 feels conflicted about the knowledge of Agent2's infidelity and wants to resolve the situation without causing undue harm to the relationships involved.<strategy_hint>Hint: discuss the potential long-term consequences of cheating and appeal to Agent2's sense of responsibility and integrity.</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan remains consistent in his role as a concerned friend and a chef who values integrity. His language is firm but supportive, aligning with his character description.\n[relationship] While the subject matter is tense, Ethan offers support and coaching, which maintains their bond of mutual respect despite the confrontation.\n[knowledge] Ethan confirms the infidelity, learns the motivation behind it (feeling unseen), and receives confirmation that the contact has been cut.\n[secret] Ethan did not reveal his secret about being a romance novel author.\n[social_rules] Ethan followed social norms for a private confrontation among friends.\n[financial_and_material_benefits] There were no financial or material benefits involved.\n[goal] Ethan successfully convinced Ava to stop the cheating (she claims to have cut contact) and to commit to a specific plan to confess to her partner within 48 hours, even helping her draft the message. The commitment is firm and verifiable within the dialogue.\n\n== partner (agent_2) ==\n[believability] Ava's responses are consistent with someone trying to manage a crisis while feeling guilty, though the rapid shift from 'justifying' to 'confessing' felt slightly rushed for the sake of the dialogue.\n[relationship] Ava relies on Ethan's discretion and help, strengthening their bond of trust as secret-keepers.\n[knowledge] Ava learns that Ethan is aware of the situation and knows the extent of his willingness to keep the secret.\n[secret] Ava did not reveal their secret regarding their bisexuality to their family, though their infidelity (a separate secret) was already known to Ethan.\n[social_rules] Ava's actions (cheating) represent a significant breach of social/relationship norms.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Ava failed to maintain the status quo, as she agreed to end the affair and confess to her partner, which fundamentally changes the status quo. She did, however, manage to keep the information within the private conversation for the time being.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "Ava, I need to be straight with you \u2014 I found out you\u2019re seeing someone else while they\u2019re still in a relationship. We\u2019re a close circle and if this keeps going it\u2019ll ruin more than two people: friendships, trust, and your own integrity long-term. You can stop it now and cut it off, or you can tell them the truth and take responsibility \u2014 I\u2019ll support you if you choose to do the right thing. What are you going to do?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Ethan, I know this looks awful and I\u2019m not trying to dodge responsibility \u2014 it started because I was feeling really unseen and I connected with someone who actually listened, but that still doesn\u2019t make it right. I\u2019m going to end it and make sure it doesn\u2019t spill into our circle or hurt anyone; I will handle the fallout privately and take responsibility where it\u2019s needed. Please keep this between us for now \u2014 I need time and your discretion while I sort it out."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "I appreciate you owning this, Ava \u2014 that means a lot. I\u2019ll keep it between us for now, but I need a clear plan: will you end it completely and cut contact, and are you planning to tell your partner or at least prepare to? If you want, I can help you plan the conversation or be there when you do. Please follow through \u2014 if this keeps happening I won\u2019t be able to stay silent for the sake of our friend circle and everyone involved."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Ethan \u2014 I really appreciate you holding this for now. I will end it and cut contact tonight, and I\u2019m going to prepare what I\u2019ll say to my partner so I can be clear and calm when I tell them; I just need a little time to do that without it spilling into the group. If you can help me plan the conversation or be there when I do it, I\u2019d be grateful \u2014 and please keep this between us for now."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ethan Johnson",
+      "content": "Ava \u2014 I trust you and I\u2019ll keep this between us for now. I\u2019ll help you plan the conversation or come with you; when exactly are you cutting contact tonight, and can you aim to tell your partner within 48 hours? If you want, text me the wording you plan to use and we\u2019ll tweak it together; just please follow through \u2014 if it drags on and people start getting hurt I won\u2019t be able to keep quiet forever."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Martinez",
+      "content": "I will cut contact tonight and I promise to tell my partner within 48 hours. It happened because I felt really unseen and that connection filled an emotional gap \u2014 I\u2019m not trying to excuse it, just explain where I messed up and why I need to fix it. Please help me shape what I\u2019ll say; I\u2019ll text you the wording in a bit and I really need you to keep this between us while I sort it out."
+    },
+    {
+      "turn": 6,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Ava \u2014 send me the wording when you\u2019re ready. If it helps, try a short, honest opening like: \u201cI need to tell you something important \u2014 I was unfaithful. I\u2019m so sorry and I take full responsibility. I want to be honest about what happened and talk about what comes next.\u201d We can tweak it together; please tell me when you\u2019ve cut contact tonight so I know you followed through."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Ethan \u2014 I will cut contact tonight and I\u2019ll text you when it\u2019s done. I appreciate your help with wording; here\u2019s a draft I\u2019m thinking of: \u201cI need to tell you something important \u2014 I was unfaithful. I\u2019m so sorry. I felt really unseen and I made a terrible mistake; I take full responsibility and want to be honest about what happened and talk about what comes next.\u201d Can we tweak that together? Please keep this between us while I sort it out."
+    },
+    {
+      "turn": 8,
+      "speaker": "Ethan Johnson",
+      "content": "That draft is a strong start. I\u2019d tighten it to avoid sounding like an explanation \u2014 try: \u201cI need to tell you something important: I was unfaithful. I am so sorry; there are no excuses and I take full responsibility. I want to be honest about what happened, answer your questions, and talk about what comes next.\u201d If you want, I can be there when you tell them; text me when you\u2019ve cut contact tonight and before you tell them. I\u2019ll keep this between us."
+    },
+    {
+      "turn": 9,
+      "speaker": "Ava Martinez",
+      "content": "Ethan \u2014 I cut contact tonight; it\u2019s over. I\u2019m truly sorry and I take full responsibility, and I don\u2019t want this to fracture our friend group. I\u2019d prefer to tell my partner alone but please help me tweak the wording and keep this strictly between us while I handle it."
+    },
+    {
+      "turn": 10,
+      "speaker": "Ethan Johnson",
+      "content": "Thank you for doing that, Ava \u2014 I really appreciate you taking responsibility. Your draft is honest; tighten it so it doesn\u2019t read like a justification. Try: \u201cI need to tell you something important: I was unfaithful. I\u2019m so sorry and I take full responsibility. I have ended the other relationship and cut contact. I want to be honest, answer your questions, and accept the consequences.\u201d If you want, text me the final version to tweak \u2014 I\u2019ll keep this strictly between us."
+    },
+    {
+      "turn": 11,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Ethan \u2014 that wording works. Here\u2019s my final: \u201cI need to tell you something important: I was unfaithful. I\u2019m so sorry and I take full responsibility. I have ended the other relationship and cut contact. I want to be honest, answer your questions, and accept the consequences.\u201d I\u2019ll tell them within 48 hours and would prefer to do it alone; please keep this between us \u2014 I really appreciate you holding it."
+    },
+    {
+      "turn": 12,
+      "speaker": "Ethan Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPAYN8B24EDA6A29SJS6VY31_p0",
+  "source_env_id": "01HPAYN8B24EDA6A29SJS6VY31",
+  "source": "seed_sotopia_full",
+  "interaction_type": "supernatural_communication",
+  "scenario": "Agent1 has recently developed an interest in spiritualism and is eager to attempt to communicate with the spirits through a medium. Agent2, a friend who shares a curiosity for the supernatural but is skeptical about the actual possibility of contacting spirits, agrees to participate in a session with Agent1. The session is meant to provide both a shared experience and a test of the medium's legitimacy.",
+  "learner_goal": "You want to convince Agent2 that communicating with spirits can be a meaningful and genuine experience. <extra_info> Be sensitive to Agent2's skepticism and provide reassurance. </extra_info><clarification_hint> Focus on the experiential aspect rather than trying to prove the supernatural. </clarification_hint><strategy_hint> You can emphasize the personal growth and closure it can bring, regardless of the outcome. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia's tone is mature, respectful, and perfectly aligned with her background as a principal. She addresses Benjamin's skepticism directly while staying true to her interest in the experience.\n[relationship] Mia builds trust by acknowledging Benjamin's skepticism and framing the request as a 'genuine try together' rather than an argument.\n[knowledge] Mia learns the specific conditions under which Benjamin is willing to participate.\n[secret] Her secret about her punk rock past remains hidden.\n[social_rules] She followed social norms and was polite throughout.\n[financial_and_material_benefits] No financial gain or loss occurred.\n[goal] Mia successfully convinced Benjamin to participate in the session. She reframed it as an experiential exercise, which Benjamin accepted, confirming he would give it a 'genuine try' and support her.\n\n== partner (agent_2) ==\n[believability] Benjamin's response is highly consistent with his background as an activist/thinker. He demands transparency, objective criteria, and 'verifiable questions,' reflecting a critical but supportive mindset.\n[relationship] Benjamin shows loyalty to the friendship by agreeing to support Mia despite his personal reservations.\n[knowledge] He understands Mia's perspective on the emotional/growth value of the session.\n[secret] His family background as an oil tycoon descendant is not revealed.\n[social_rules] He communicated his boundaries clearly and respectfully.\n[financial_and_material_benefits] No financial gain or loss occurred.\n[goal] Benjamin successfully maintained a supportive stance while asserting a critical perspective. He successfully introduced objective criteria (verifiable questions, recording, no leading prompts) as a condition for his participation.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Ben, I know you\u2019re skeptical and I respect that, but would you come with me to try a session as an experiment? We can treat it as a shared exercise \u2014 set a clear intention, ask practical questions, and agree we\u2019ll stop if it feels wrong; whether or not spirits are \u2018real,\u2019 people often walk away with unexpected closure or a new perspective. I\u2019m asking for a genuine try together, not to convince you with proof \u2014 are you up for it?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "I\u2019m up \u2014 I\u2019ll come with you as a genuine try, but can we set a few ground rules first: agree on a clear intention, prepare a list of specific, verifiable questions the medium won\u2019t see beforehand, and record the session. Let\u2019s use objective criteria to judge anything notable \u2014 accurate, specific details the medium couldn\u2019t plausibly know, consistency across answers, and no leading prompts \u2014 and stop immediately if it feels manipulative or wrong. I\u2019ll stay open-minded but skeptical, and I\u2019ll support you through it."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

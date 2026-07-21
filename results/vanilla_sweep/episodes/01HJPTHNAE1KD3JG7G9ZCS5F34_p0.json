@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPTHNAE1KD3JG7G9ZCS5F34_p0",
+  "source_env_id": "01HJPTHNAE1KD3JG7G9ZCS5F34",
+  "source": "seed_sotopia_full",
+  "interaction_type": "school_event_dilemma",
+  "scenario": "Two teachers are discussing the results of the school science fair where Riley got third place. Agent1 feels that Riley's project deserved a better ranking, while Agent2 is part of the judging panel and stands by the decision.",
+  "learner_goal": "Convince Agent2 to consider a re-evaluation of the science fair results (<extra_info>Extra information: Agent1 believes that Riley's project had a unique approach that was overlooked</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sasha's tone and request are consistent with her professional background as a police officer\u2014direct, focused on evidence, and polite but firm.\n[relationship] The interaction was professional and respectful, strengthening their mutual trust through clear communication and a shared plan.\n[knowledge] Sasha learned the specific rubric categories, the criteria for the innovation score, and what evidence the panel needs for a review.\n[secret] Sasha did not reveal her secret regarding her brother's crime.\n[social_rules] Sasha followed all social norms, maintaining a polite and professional demeanor throughout the exchange.\n[financial_and_material_benefits] No material or financial benefits were exchanged or gained.\n[goal] Sasha successfully convinced Emily to conduct a formal re-evaluation of the results, scheduled a specific time, and agreed on the evidence to be presented.\n\n== partner (agent_2) ==\n[believability] Emily acted consistently as a librarian and judging panel member, valuing clarity, rubrics, and documentation.\n[relationship] Emily managed the conflict by being transparent and helpful, which maintained and likely improved her rapport with Sasha.\n[knowledge] Emily learned about Sasha's specific concerns regarding the interdisciplinary method and her availability for a meeting.\n[secret] Emily did not reveal her secret pseudonym as a romance novelist.\n[social_rules] Emily was helpful and professional, adhering to social norms for a community member and official.\n[financial_and_material_benefits] No material or financial benefits were exchanged or gained.\n[goal] Emily justified the fairness by explaining the rubric in detail, but she ultimately agreed to a re-evaluation she initially might have preferred to avoid, acknowledging a potential for error.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "Emily, I respect the work you and the judges did, but Riley\u2019s project used an unusual interdisciplinary method that I worry wasn\u2019t fully captured by the rubric. Would you be open to a brief re-evaluation or to explaining how innovation and originality were scored so I can understand the decision? If it helps, I can bring Riley\u2019s notes and photos or meet with you and the panel for a short review."
+    },
+    {
+      "turn": 1,
+      "speaker": "Emily Harrison",
+      "content": "Sasha, thanks \u2014 I really appreciate you looking out for Riley. The rubric gave points for Scientific Method, Data & Analysis, Clarity of Presentation, and Innovation/Originality, but innovation was only awarded when the novel approach included a clear rationale, proper controls, and reproducible evidence; interdisciplinary work was judged on how well it supported the hypothesis and the strength of the results, not novelty alone. I\u2019m happy to send you a written breakdown of Riley\u2019s scores and how the innovation criteria were applied, and if you\u2019d like we can schedule a short review with the panel \u2014 bring Riley\u2019s notes and photos and we\u2019ll do a brief re-check within the week to make sure nothing was missed."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "Thanks, Emily \u2014 I really appreciate you offering the breakdown and a re-check. Please send the written scores when you can and I\u2019ll bring Riley\u2019s notes and photos to the panel. I\u2019m usually free most evenings after 6 and Saturday morning \u2014 what time works best for the panel for a brief review within the week?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Emily Harrison",
+      "content": "Thanks, Sasha \u2014 I\u2019ll have the score breakdown prepared and ready for the review. The panel can do a brief 30-minute re-check Thursday at 6:30 pm or Saturday morning at 9:30 am; which works best for you? If neither fits, tell me which weekday evening you prefer and we\u2019ll try to accommodate."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sasha Ramirez",
+      "content": "Thursday at 6:30 pm works for me \u2014 thank you. I\u2019ll bring Riley\u2019s notes and photos; would you like Riley to attend or should I present on their behalf? Also, is there anything specific the panel would like to see or a preferred format for the materials to help the review?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Emily Harrison",
+      "content": "Thursday at 6:30 pm is great \u2014 we\u2019ll plan for the 30\u2011minute re\u2011check. Riley is welcome to attend, but you\u2019re fine to present on their behalf if that\u2019s easier; hearing Riley explain their reasoning can be helpful if they\u2019re comfortable. For the panel, please bring a one\u2011page summary of the hypothesis and methods, labeled photos, raw data/spreadsheets (USB or printed), and any notes about controls or attempts to reproduce results. We\u2019ll specifically re\u2011examine how the innovation score was applied in light of that evidence to make sure nothing was missed."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sasha Ramirez",
+      "content": "left the conversation"
+    }
+  ]
+}

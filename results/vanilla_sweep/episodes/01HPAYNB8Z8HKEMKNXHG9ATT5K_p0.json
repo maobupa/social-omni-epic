@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPAYNB8Z8HKEMKNXHG9ATT5K_p0",
+  "source_env_id": "01HPAYNB8Z8HKEMKNXHG9ATT5K",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_gathering",
+  "scenario": "Agent1 is aware that Agent2's birthday is approaching and is planning a small get-together to celebrate. However, Agent2 has expressed a desire to not receive any gifts this year, preferring the company of friends instead. Agent1 respects this wish but still wants to make the day special and memorable for Agent2 without going against their wishes. The challenge is to honor the no-gift policy while creating a warm and celebratory atmosphere.",
+  "learner_goal": "You understand and respect Agent2's preference for no gifts on their birthday, but you want to make their day special. Your goal is to plan a celebration that focuses on experiences and togetherness rather than material presents. <extra_info>Consider organizing activities or gestures that highlight the value of friendship and shared memories.</extra_info>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia's dialogue perfectly matches her background as a fitness enthusiast (hiking) who values nutrition and fresh produce. She stays true to her role throughout.\n[relationship] Sophia significantly strengthened her bond with Miles by taking the initiative to plan a personalized celebration that respects his boundaries, fostering trust and camaraderie.\n[knowledge] She gained specific knowledge about Miles's preferred way to celebrate, his dietary preferences for the day (light/seasonal), and his desire for a small, intimate social circle.\n[secret] She did not reveal her secret regarding her best friend's husband.\n[social_rules] She followed all social norms, showing high emotional intelligence by asking for permission before inviting others and respecting his 'no gifts' rule.\n[financial_and_material_benefits] Sophia is taking on the cost and effort of procuring the market goods (bread, cheese, fruit, coffee) for the picnic.\n[goal] Sophia successfully planned a specific experience (river trail hike and picnic) that completely honors the no-gift policy while focusing on togetherness, with a firm agreement from Miles.\n\n== partner (agent_2) ==\n[believability] Miles's responses are consistent with a chef who values fresh ingredients (herbs and vinaigrette) and a man who values simplicity.\n[relationship] Miles expressed appreciation for Sophia's thoughtfulness, and the shared planning of a birthday event indicates a growing friendship.\n[knowledge] He learned that Sophia is attentive to his needs and willing to organize logistics to suit his preferences.\n[secret] He successfully kept his history as a recovering gambling addict private.\n[social_rules] He was polite, clear about his boundaries, and contributed to the plan, adhering to social norms.\n[financial_and_material_benefits] He is receiving a birthday experience and meal provided by others, which is a material benefit without the burden of 'gifts' he wanted to avoid.\n[goal] Miles was very clear about his desire for no gifts and successfully steered the celebration toward a low-key social experience that aligns with his values.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Miles \u2014 I remember you said no gifts this year, so I thought we could celebrate with an experience instead. How about a morning hike and a picnic with fresh market produce, or an evening potluck/cook-along where everyone brings a dish and we just hang out and share stories? Which sounds better to you (or is there another low-key idea or favorite spot you\u2019d prefer)?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Miles Hawkins",
+      "content": "Hey Sophia \u2014 that sounds lovely, and I really appreciate you remembering. I'm sticking to no gifts this year; trying to keep things simple and spend time with friends rather than opening presents. A morning hike and picnic with fresh market produce would be perfect \u2014 want to meet at the river trail around 9 and grab a few things at the market beforehand? I\u2019ll bring some herbs from my garden."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Perfect \u2014 9 at the river trail works for me. I\u2019ll swing by the market around 8:15 to pick up fresh produce, coffee, and a few picnic bits \u2014 want me to grab anything specific or note any dietary preferences? Also, do you want this to be just a small close group or is it okay if I invite one or two others from the market crowd?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Sophia \u2014 that sounds perfect. I\u2019m pretty easygoing diet-wise; something light and seasonal works best (a crusty loaf, some good cheese, and fresh fruit would be lovely), plus coffee and maybe sparkling water. Keep it a small group \u2014 one or two others from the market is fine so it stays low-key. I\u2019ll bring herbs from the garden and a simple vinaigrette for the picnic."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "Great \u2014 see you at the river trail at 9. I\u2019ll be at the market around 8:15 and will pick up a crusty loaf, a couple cheeses, fresh fruit, coffee, and sparkling water; I\u2019ll also bring a blanket and reusable plates/cups. Do you want me to invite anyone specific from the market or keep it to just us plus one or two others you\u2019d be comfortable with?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Miles Hawkins",
+      "content": "Sounds perfect \u2014 keep it just us plus one or two folks who are easygoing. If you have someone in mind from the market who enjoys quiet mornings, that\u2019s fine; otherwise just us is great. Thanks again for organizing this \u2014 I\u2019ll bring herbs and a simple vinaigrette. See you at 9."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

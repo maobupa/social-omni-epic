@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPTHP6FKCFZNXG63EP58GS5_p0",
+  "source_env_id": "01HJPTHP6FKCFZNXG63EP58GS5",
+  "source": "seed_sotopia_full",
+  "interaction_type": "generated",
+  "scenario": "Agent1 and Agent2 are colleagues at a hospital that has recently been in the news for hygiene-related issues. Agent1 is fastidious about cleanliness and is concerned about the hospital's reputation affecting their practice. Agent2 is more relaxed about the hygiene protocols and feels the media has blown things out of proportion.",
+  "learner_goal": "Convince Agent2 to adhere strictly to the hygiene protocols and help improve the hospital's reputation (<extra_info>Extra information: Agent1 believes that strict adherence to hygiene protocols will not only improve patient safety but also restore the hospital's standing in the community.</extra_info>)",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] The agent stayed in character as a fastidious and professional lawyer/colleague, addressing the issue directly and proposing a concrete plan.\n[relationship] The agent managed to find common ground and secure a commitment from a colleague with whom they previously had disagreements, strengthening their professional rapport.\n[knowledge] Learned that the other party was willing to comply with specific, high-level hygiene checks (spot checks and logs).\n[secret] No secrets were revealed.\n[social_rules] Followed social norms and professional etiquette.\n[financial_and_material_benefits] No direct financial gain, though protecting the hospital's reputation has long-term career benefits.\n[goal] The agent successfully convinced the other party to strictly enforce protocols (hand-hygiene checks and logs) and obtained agreement on communication strategies to restore the hospital's standing.\n\n== partner (agent_2) ==\n[believability] The agent's response was consistent with a professional who wants to balance safety with staff morale, though the scenario description of their roles (Principal vs Hospital staff) was slightly inconsistent with the prompt's scenario setup.\n[relationship] Agreed to the other's request, demonstrating cooperation and mutual respect.\n[knowledge] Understood the specific depth of Agent 1's concerns and their willingness to help with administrative tasks.\n[secret] No secrets were revealed.\n[social_rules] Maintained professional decorum.\n[financial_and_material_benefits] No direct financial gain.\n[goal] The agent successfully assured Agent 1 that the situation was being addressed while ensuring the approach remained 'concise and factual' to avoid 'needlessly alarming staff,' which aligned with their goal of a balanced approach.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Mia, I get that the press has been overblown and I respect your perspective, but the reality is small hygiene lapses are what people notice and what put patients at risk \u2014 and that\u2019s what\u2019s hurting our reputation. Will you commit to strictly enforcing the protocols on your shifts this week (hand\u2011hygiene checks and visible cleaning logs), and I\u2019ll help draft a short staff memo and a clear public statement to show we\u2019re taking it seriously?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Thanks, Lily \u2014 I hear you. I will commit to strictly enforcing protocols on my shifts this week: I'll run twice\u2011daily hand\u2011hygiene spot checks and ensure cleaning logs are visible and signed. I appreciate your offer to draft the staff memo and public statement; let's keep them concise and factual so we address concerns without needlessly alarming staff \u2014 with steady enforcement and clear communication we will stop the drift and rebuild our reputation."
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

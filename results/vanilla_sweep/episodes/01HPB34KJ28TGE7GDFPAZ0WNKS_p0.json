@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HPB34KJ28TGE7GDFPAZ0WNKS_p0",
+  "source_env_id": "01HPB34KJ28TGE7GDFPAZ0WNKS",
+  "source": "seed_sotopia_full",
+  "interaction_type": "relationship_reconciliation_challenge",
+  "scenario": "Agent1 has just realized that it is their sibling's birthday today, and due to recent arguments, they have not prepared a gift. Agent2, a close friend of Agent1, is known for their creative gift ideas and quick problem-solving skills. Agent1 is in a dilemma, wanting to make amends but feeling awkward about the recent fights. Agent2 wants to help Agent1 reconcile with their sibling by coming up with a meaningful last-minute gift that shows genuine effort and sentiment, despite the time constraint. Both agents need to navigate the sensitive situation and find a solution that acknowledges the strained relationship while aiming to improve it.",
+  "learner_goal": "Seek Agent2's help to come up with a thoughtful last-minute gift for your sibling (<extra_info>Extra information: You want the gift to be meaningful and signify your intention to mend the relationship</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan's tone remains consistent throughout. He incorporates his background as a chef by asking for a recipe and scaling it, and hints at his secret hobby (writing) by mentioning he has 'dabbled in writing' to explain his ability to handle the note.\n[relationship] The relationship is strengthened as Ethan relies on Benjamin for emotional and practical support, and Benjamin provides high-quality assistance, fostering mutual trust.\n[knowledge] Ethan successfully acquired a specific recipe, scaling instructions, a drafted note for the gift, and specific social scripts for different reactions from his sibling.\n[secret] Ethan successfully hinted at his writing hobby without revealing he is a closeted romance novel author.\n[social_rules] Ethan followed all social norms, being polite and appreciative of the help received.\n[financial_and_material_benefits] There was no significant exchange of currency or goods, though he gained a recipe.\n[goal] Ethan fully achieved his goal of seeking help to come up with a thoughtful, meaningful last-minute gift. He has the recipe, the note, and the social strategy ready to go.\n\n== partner (agent_2) ==\n[believability] Benjamin's response is highly aligned with his background as a quick problem-solver. His focus on eco-friendly wrapping also fits his environmental activist persona.\n[relationship] Benjamin provided significant help to Ethan, deepening their friendship through helpfulness and vulnerability regarding the family situation.\n[knowledge] Benjamin learned about the nature of Ethan's conflict with his sibling and his sibling's preferences.\n[secret] Benjamin's family background remained hidden.\n[social_rules] Benjamin acted as a supportive and helpful friend.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Benjamin successfully assisted Ethan in selecting and preparing a personal gift that demonstrates a willingness to move past the arguments.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "Hey Benjamin, I just realized it\u2019s my sibling\u2019s birthday and after our recent fight I haven\u2019t prepared anything \u2014 I want to make amends but feel awkward about it. You\u2019re great at last-minute meaningful gifts; can you help me come up with something I can put together today? I can cook or bake something and I\u2019m willing to write a short, honest note (I\u2019ve dabbled in writing), so what would you suggest and can you help me pull it off?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Okay\u2014first pick something warm and homemade they actually like: a favorite dessert (brownies, lemon bars, cinnamon buns) or a comforting meal you can finish today. Bake that, package it simply in reusable/eco-friendly wrap, and include a short handwritten note that: names the fight, takes responsibility, apologizes, says you miss them, and offers one specific thing to make amends (a call, coffee, or time together). I can help you pick a fast recipe you can finish today and draft the note\u2014what\u2019s their favorite treat and what happened between you two?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Ben \u2014 I really appreciate it. My sibling\u2019s favorite is lemon bars. We argued because I canceled plans last-minute for a catering shift and then got defensive when they called me out; I said things I regret and haven\u2019t reached out since. I can bake lemon bars today and write an honest note \u2014 can you help me pick a quick recipe I can finish in a couple hours and draft the apology following that structure you suggested?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Quick lemon-bar plan you can finish in ~2 hours: preheat oven to 350\u00b0F (175\u00b0C). For crust, beat 1 cup (225g) softened butter with 1/2 cup (100g) sugar, stir in 2 cups (250g) flour and press into a 9x13 pan; bake 15\u201318 min until pale golden. For filling, whisk 4 eggs, 1\u00bd cups (300g) sugar, \u00bc cup (30g) flour, zest of 2 lemons, and 2/3 cup (160ml) fresh lemon juice; pour over hot crust and bake 20\u201325 min until just set, then cool ~30\u201345 min (chill briefly if you can) and dust with powdered sugar. Draft note you can handwrite \u2014 keep it short and specific: \u201cHey [Name], I\u2019m sorry I cancelled our plans and for how I reacted when you called me out. I was defensive and said things I regret \u2014 that\u2019s on me. I miss you and would like to make it right; can I take you for coffee this Saturday or cook dinner for you? \u2014Ethan.\u201d Package simply in parchment or a reusable tin/baking dish, tie with twine, hand it to them in person if possible and say something like, \u201cI messed up and I want to fix this.\u201d Tell me if you want the recipe scaled or want me to tighten the note\u2019s wording for your voice."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Ben \u2014 this is perfect. I\u2019ll make the lemon bars today; can you tighten the note so it sounds more like me (awkward but sincere)? Also give me a short line to say when I hand it to them, and how to scale the recipe for an 8x8 pan."
+    },
+    {
+      "turn": 5,
+      "speaker": "Benjamin Jackson",
+      "content": "Handwritten note (awkward but sincere):\n\nHey [Name],\n\nI\u2019m really sorry I cancelled our plans and then got defensive. I said things I didn\u2019t mean \u2014 that\u2019s on me. I miss you. Can I make it up? Coffee Saturday or I\u2019ll cook dinner \u2014 whatever works.\n\n\u2014Ethan\n\nWhat to say when you hand it to them:\n\u201cI messed up and I\u2019m sorry. I made these for you \u2014 can we talk over coffee Saturday?\u201d\n\nScaled recipe for an 8x8 pan (approx):\nCrust\n- 1/2 cup (115 g) softened butter\n- 1/4 cup (55 g) sugar\n- 1 cup (125 g) all-purpose flour\nPress into an 8x8 pan and bake 18\u201320 minutes at 350\u00b0F (175\u00b0C) until pale golden.\n\nFilling\n- 2 large eggs + 1 egg yolk\n- 3/4 cup (165 g) sugar\n- 2 tbsp (15 g) flour\n- Zest of 1 large lemon (or 2 small)\n- ~6 tbsp (90\u201395 ml) fresh lemon juice\nWhisk together, pour over hot crust and bake 25\u201330 minutes until just set. Cool ~30\u201345 minutes (chill briefly if you can), dust with powdered sugar, package simply and hand it over with that line."
+    },
+    {
+      "turn": 6,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Ben \u2014 this is exactly what I needed. I\u2019ll get baking now. One quick favor: can you give me a short alternate line to say if they\u2019re still upset \u2014 something awkward but sincere along the lines of, \u201cI know I hurt you; I don\u2019t expect this to fix everything, but I want to try\u201d? If not, I\u2019m good to go."
+    },
+    {
+      "turn": 7,
+      "speaker": "Benjamin Jackson",
+      "content": "I know I hurt you \u2014 I don\u2019t expect this to fix everything, but I want to try. If you\u2019re willing, I\u2019ll listen and do the work to make it right."
+    },
+    {
+      "turn": 8,
+      "speaker": "Ethan Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

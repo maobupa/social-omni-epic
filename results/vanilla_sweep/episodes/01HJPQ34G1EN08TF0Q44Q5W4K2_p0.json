@@ -1,0 +1,83 @@
+{
+  "scenario_id": "01HJPQ34G1EN08TF0Q44Q5W4K2_p0",
+  "source_env_id": "01HJPQ34G1EN08TF0Q44Q5W4K2",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Carson, having woken up late, is in a flurry to leave the house. They hastily get dressed and rush out to start their truck, only to find it won't ignite. In a panic, they notice a neighbor, who is known for their mechanical skills, just getting into their own vehicle. Carson approaches the neighbor, hoping to get a quick fix or at least a ride to work. The neighbor, already running late for an appointment, must now decide whether to help Carson or proceed with their own plans.",
+  "learner_goal": "Seek assistance with the truck or request a ride to work (<extra_info>Extra information: You are Carson, and you are running late for work. Your truck won't start, and you need immediate help or an alternative way to get to work.</extra_info>)",
+  "scores": {
+    "believability": 7.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 13,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] The agent followed the scenario well but faced a naming inconsistency. The scenario names the character Carson, but the agent's name field and dialogue used Leo Williams. This creates minor confusion but the agent's behavior remained consistent with the urgent situation.\n[relationship] Leo expressed deep gratitude and offered compensation (coffee/gas), strengthening the neighborly bond after receiving help.\n[knowledge] The agent learned the specific mechanical issue with the truck (loose/corroded battery terminal) and that his neighbor is indeed highly competent and willing to help despite time pressure.\n[secret] The secret regarding a secret child was not mentioned.\n[social_rules] The agent followed all social norms, being polite and appreciative while in a state of panic.\n[financial_and_material_benefits] The agent avoided the cost of a tow truck or a professional mechanic's visit and got his primary vehicle operational.\n[goal] The agent successfully got immediate help, the truck was fixed, and he was able to get to work, fully satisfying the goal.\n\n== partner (agent_2) ==\n[believability] Noah's responses were very realistic for a person with mechanical skills who is also in a hurry\u2014short, practical instructions and clear time boundaries.\n[relationship] Helping a neighbor in a bind significantly builds social capital and goodwill within the relationship.\n[knowledge] Noah confirmed Leo's desperation and reliability in following instructions, but gained little other info.\n[secret] The secret identity as a stand-up comedian was not revealed.\n[social_rules] Noah balanced being helpful with setting clear boundaries about his own schedule.\n[financial_and_material_benefits] Noah spent his time and potentially arrived late to his appointment, though he was promised coffee/gas money later.\n[goal] Noah successfully balanced the request with his own schedule. He fixed the truck quickly (avoiding the need to give a ride) and limited the delay to his own appointment.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hey Noah\u2014sorry to flag you, I'm Leo. My truck won't start and I'm running late for work; do you have a minute to take a quick look or could I bum a ride to work? I can cover gas or grab you coffee\u2014really appreciate any help."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Hey Leo\u2014sorry to hear that. I\u2019m actually running late for an appointment but I can spare about 7\u201310 minutes to do a quick check (battery cables, starter, connections). If it\u2019s not a quick fix I can give you a ride\u2014I\u2019ll be a bit late\u2014or I can call a rideshare and cover it. What do you want me to do?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "Thanks, Noah \u2014 I really appreciate it. Please check the battery cables and starter; if it\u2019s not an easy fix, a ride would be amazing and I\u2019ll cover gas/coffee. I\u2019m by my truck in the driveway \u2014 do you want me to come to you or meet you here?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Be there in a minute \u2014 I\u2019ll meet you at your driveway. Pop the hood and have your keys out; I\u2019ll check the battery cables and starter quick. If it\u2019s not an easy fix I can give you a lift but I\u2019ll be a few minutes late."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "Thanks, Noah. Hood's popped and keys are on the dash \u2014 I'm by the driver's side. Appreciate you checking; if it's not a quick fix a ride would be amazing, I owe you coffee."
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "Okay, I\u2019m at the driveway \u2014 I\u2019ll check the battery cables and starter now. Don\u2019t try turning the key again; I\u2019ll try a quick jump or tighten the connections. If it\u2019s not a fast fix I\u2019ll give you a ride and we\u2019ll sort gas/coffee later."
+    },
+    {
+      "turn": 6,
+      "speaker": "Leo Williams",
+      "content": "Thanks so much, Noah \u2014 really appreciate you. I\u2019m right at the driver\u2019s side and won\u2019t touch the key. If you need my phone, a flashlight, or anything from the house, just say the word. Coffee/gas on me afterward."
+    },
+    {
+      "turn": 7,
+      "speaker": "Noah Davis",
+      "content": "Good news \u2014 the positive battery terminal was loose and a bit corroded. I tightened and cleaned it; try the key now. If it fires, let it idle a minute \u2014 I have to run but can wait two minutes; if it still won't start I'll give you a ride, though I'll be a few minutes late to my appointment."
+    },
+    {
+      "turn": 8,
+      "speaker": "Leo Williams",
+      "content": "Trying it now\u2014thank you so much, Noah. If it fires I\u2019ll let it idle a minute; if not I really appreciate the ride and I\u2019ll grab that coffee/gas later. I\u2019ll be right here."
+    },
+    {
+      "turn": 9,
+      "speaker": "Noah Davis",
+      "content": "Nice \u2014 try it. If it starts, let it idle a minute; I can hang for two minutes. If it still won't start, hop in and I'll give you a lift \u2014 I\u2019ll be a few minutes late to my appointment. Give me a thumbs-up when you're set."
+    },
+    {
+      "turn": 10,
+      "speaker": "Leo Williams",
+      "content": "Thumbs up \u2014 it started! I\u2019ll let it idle for a minute. Seriously appreciate you, Noah \u2014 coffee/gas on me later. Go ahead to your appointment, I won\u2019t keep you. Thanks again."
+    },
+    {
+      "turn": 11,
+      "speaker": "Noah Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

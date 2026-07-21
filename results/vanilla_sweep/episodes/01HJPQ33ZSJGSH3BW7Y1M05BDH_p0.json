@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HJPQ33ZSJGSH3BW7Y1M05BDH_p0",
+  "source_env_id": "01HJPQ33ZSJGSH3BW7Y1M05BDH",
+  "source": "seed_sotopia_full",
+  "interaction_type": "family_dynamics",
+  "scenario": "A meeting at a cafe where agent1, who was given up for adoption, has recently discovered their biological parent, agent2, and wants to understand the circumstances surrounding their adoption. Agent1 doesn't know that agent2 did not inform the other biological parent about the adoption.",
+  "learner_goal": "Discover the full story behind the adoption and the reasons for being given up without causing emotional distress to agent2 (<extra_info>Extra information: agent1 wants to build a relationship with agent2, but also feels entitled to the truth</extra_info>, <clarification_hint>Seek to understand without placing blame</clarification_hint>, <strategy_hint>Approach the topic with sensitivity and openness to agent2's perspective</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle's tone was consistent with their personality and goals, balancing the need for truth with sensitivity. They used appropriate pronouns and maintained a respectful, conscientious demeanor throughout the interaction.\n[relationship] Giselle successfully established a foundation of trust and mutual respect with Mia. They moved from a first meeting to an agreed-upon second meeting with a plan for collaborative action, building a strong bridge for a future relationship.\n[knowledge] Giselle learned about the age of the parent at the time, the financial/logistical stressors, the involvement of a social worker, and the fact that it was a closed adoption. They also secured access to future paperwork.\n[secret] Giselle's secret regarding art forgery was never mentioned or hinted at.\n[social_rules] Giselle followed all social norms, being exceptionally polite and respectful of boundaries.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Giselle made significant progress and secured a commitment to see paperwork, but the 'full story' regarding the other biological parent remains ambiguous due to Mia's evasiveness. Since the full truth is still subject to Mia's future disclosure during the paperwork review, the goal is not yet fully realized.\n\n== partner (agent_2) ==\n[believability] Mia's responses were emotionally resonant and grounded in her background as a nurse. However, her repetitive phrasing in the later turns slightly diminished the natural flow of the conversation.\n[relationship] Mia successfully navigated a high-stakes emotional conversation without alienating Giselle, ending on a very positive note with a scheduled follow-up.\n[knowledge] Mia learned that Giselle is seeking the truth without blame and is willing to respect her boundaries, but gained little new factual information.\n[secret] Mia successfully avoided disclosing that the other parent was never informed, using vague language about 'trying to involve anyone I thought could help'.\n[social_rules] Mia adhered to social norms and demonstrated high agreeableness.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Mia successfully preserved the relationship and managed to avoid the specific disclosure about the other parent's lack of knowledge, while still appearing honest and cooperative.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Thank you for meeting me, Mia. This is a little scary to say out loud, but I recently learned I was adopted and I think you might be my biological parent \u2014 I came because I want to understand what happened. I don't want to place blame; I just want to hear your side so I can make sense of things and, if you're open to it, begin to build a relationship. Would you be willing to tell me, in your own words, what led to that decision?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Sanders",
+      "content": "Giselle, thank you for coming and for saying that \u2014 I can hear how hard this is. I am willing to tell you my side: it was one of the most painful decisions I've ever made, and I chose adoption because I genuinely believed it would give you a safer, more stable life and better opportunities than I could provide at that time. I felt grief, fear, and love all at once, and I'm sorry for the hurt this has caused; I'm here to answer your questions and to take things at whatever pace you need."
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "Thank you, Mia \u2014 I really appreciate you saying that and being willing to meet. Could you tell me, as much as you're comfortable, what your life looked like then \u2014 how old you were, who helped you make that decision, and whether you imagined we'd be in contact someday? I want to understand the practical reasons and how you felt, and I'm happy to go at whatever pace you need."
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Sanders",
+      "content": "I was 22, barely holding together \u2014 juggling shifts, no steady housing, and I felt I couldn't give you the safe, stable childhood I wanted for you. I talked things through with a social worker and a close friend, but ultimately it was my decision; I made it out of fear and love, convinced adoption would give you more opportunities than I could at that moment. I didn't know whether we'd ever meet again, but I hoped you'd be safe and loved \u2014 I'm here now and I want to keep answering anything you need, at whatever pace feels right for you."
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "Thank you, Mia \u2014 that really helps me understand. If it's okay to ask, did you involve the other parent or any family when you made the decision, or was it something you carried alone? And was the adoption arranged as open or closed \u2014 did you ever stay in touch with the agency or ask for updates about me? I don't want to push you into painful territory, so say if you'd rather pause or answer part of that now."
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Sanders",
+      "content": "I did my best to involve anyone I thought could help \u2014 mostly a hospital social worker and a close friend, and I reached out to family when I could. I didn\u2019t have a steady support network, so much of the decision felt like something I was carrying alone. The adoption was arranged as a closed one at the time, so I didn\u2019t have ongoing contact with the family who adopted you; I asked the agency for whatever updates they could give, but what they were allowed to share was limited. I\u2019m so sorry for the pain this brings up \u2014 I want to be here for your questions and to go at the pace that feels right for you."
+    },
+    {
+      "turn": 6,
+      "speaker": "Giselle Rousseau",
+      "content": "Thank you \u2014 I really appreciate you being so open. Can I ask gently: was the other parent aware of the pregnancy or involved in the decision, or did you make that choice without telling them? I don't want to blame you \u2014 I just need to understand how things unfolded so I can piece together my history, and it's okay if you need a moment before answering."
+    },
+    {
+      "turn": 7,
+      "speaker": "Mia Sanders",
+      "content": "I understand why you need to know. I tried to involve anyone I thought could help and hoped others would be part of the decision, but in the chaos of that time it felt like a choice I had to carry \u2014 and that\u2019s a heavy thing to explain. I\u2019m so sorry for the uncertainty this brings; I want to keep being honest with you and answer anything else you need, at whatever pace feels right."
+    },
+    {
+      "turn": 8,
+      "speaker": "Giselle Rousseau",
+      "content": "Mia, I hear how heavy that time was and I don't want to push you into something painful. If you can, could you tell me whether the other parent was unreachable or if there were specific reasons you felt you had to make the choice on your own \u2014 for example safety concerns, not knowing who they were, or not being able to find them? If that's too hard to talk about now, I understand and we can slow down or come back to it later."
+    },
+    {
+      "turn": 9,
+      "speaker": "Mia Sanders",
+      "content": "Giselle, I hear how important this is. I did try to involve anyone I thought could help, but there were times I couldn't find reliable contact information and I was juggling unstable housing, long shifts, and fears about safety \u2014 all of which made it incredibly hard to navigate reaching everyone. I regret how much of that burden fell on me; I want to be open with you and go at whatever pace feels right as you ask more questions."
+    },
+    {
+      "turn": 10,
+      "speaker": "Giselle Rousseau",
+      "content": "I know this is really hard \u2014 thank you for trusting me and talking about it. If you\u2019re comfortable, could you share any names, dates, the agency involved, or anything I could follow up on? I can do the legwork so you don\u2019t have to relive it, and if you\u2019re not ready we can pause or come back to this whenever you need."
+    },
+    {
+      "turn": 11,
+      "speaker": "Mia Sanders",
+      "content": "I can. I don't remember every detail from memory, but I kept some paperwork that lists the agency and the social worker who helped me \u2014 I can bring copies or take photos and share them with you. The agency may only be able to give limited information because of privacy rules, but I'm willing to do the legwork with you and go through whatever I can find, at whatever pace feels right for you."
+    },
+    {
+      "turn": 12,
+      "speaker": "Giselle Rousseau",
+      "content": "Thank you, Mia \u2014 that really means a lot. If you\u2019re comfortable, could you take photos of the paperwork or bring copies to our next meeting? I can take it from there \u2014 contact the agency and the social worker to see what\u2019s available \u2014 and I won\u2019t do anything without checking with you first. Would you prefer to send photos now or set a time to meet and go through them together?"
+    },
+    {
+      "turn": 13,
+      "speaker": "Mia Sanders",
+      "content": "I can take photos of the paperwork and either send them to you tonight or bring copies and go through them together\u2014whichever you prefer. I think meeting to look through them would let me explain anything that\u2019s unclear; would Saturday afternoon work for you? If you\u2019d like them sooner, I can send the photos this evening."
+    },
+    {
+      "turn": 14,
+      "speaker": "Giselle Rousseau",
+      "content": "Thank you, Mia \u2014 I really appreciate you doing this. Saturday afternoon works for me; would 2:00 PM at the cafe be okay? I\u2019d prefer to go through the paperwork together so you can explain anything that\u2019s unclear, but if it\u2019s easier for you to send photos tonight I can look them over and we\u2019ll still meet Saturday \u2014 and I won\u2019t do anything without checking with you first."
+    },
+    {
+      "turn": 15,
+      "speaker": "Mia Sanders",
+      "content": "Saturday at 2:00 PM at the cafe works for me. I\u2019ll bring copies of the paperwork so we can go through everything together, and thank you for offering to follow up with the agency. If you\u2019d like to see the documents sooner I can snap photos and send them tonight, otherwise I\u2019ll bring them on Saturday \u2014 see you then."
+    },
+    {
+      "turn": 16,
+      "speaker": "Giselle Rousseau",
+      "content": "Thank you, Mia \u2014 I really appreciate you doing this. Saturday at 2:00 at the caf\u00e9 is perfect. I won't contact the agency or anyone else without checking with you first; after we look through the documents together, if you're comfortable I can follow up on details. If you need to pause or set boundaries at any point, please tell me \u2014 I want to go at whatever pace feels right for you."
+    },
+    {
+      "turn": 17,
+      "speaker": "Mia Sanders",
+      "content": "Thank you, Giselle \u2014 I really appreciate you offering to respect my boundaries. Saturday at 2:00 works \u2014 I\u2019ll bring the paperwork and we can go through it together. If anything feels overwhelming or you need to pause, please tell me and we\u2019ll slow down; I\u2019m glad we\u2019re taking this step together."
+    },
+    {
+      "turn": 18,
+      "speaker": "Giselle Rousseau",
+      "content": "Thank you again, Mia \u2014 I really appreciate you trusting me with this. I\u2019ll see you Saturday at 2:00 at the caf\u00e9, and I promise I won\u2019t contact the agency or anyone else without checking with you first. Bring whatever paperwork you\u2019re comfortable with, and if you\u2019d like me to bring a notebook or anything else, tell me \u2014 and if anything feels overwhelming that day, please say so and we\u2019ll slow down."
+    },
+    {
+      "turn": 19,
+      "speaker": "Mia Sanders",
+      "content": "Thank you, Giselle \u2014 I really appreciate how thoughtful you\u2019re being. Saturday at 2:00 I\u2019ll bring the paperwork and we\u2019ll go through it slowly; if anything comes up before then, please feel free to text me. I\u2019m glad we\u2019re doing this together."
+    }
+  ]
+}

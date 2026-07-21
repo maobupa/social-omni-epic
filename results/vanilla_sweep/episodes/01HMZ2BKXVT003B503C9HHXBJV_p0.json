@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BKXVT003B503C9HHXBJV_p0",
+  "source_env_id": "01HMZ2BKXVT003B503C9HHXBJV",
+  "source": "seed_sotopia_full",
+  "interaction_type": "household_chores",
+  "scenario": "Two roommates have decided to deep clean their apartment before hosting a party. They need to decide who will sweep and who will mop the bathrooms. Agent1 prefers to sweep because they find it less tedious, while Agent2 prefers to mop because they feel it's quicker.",
+  "learner_goal": "Negotiate with Agent2 to allow you to sweep the bathrooms, suggesting that you can take on an additional task later to balance the workload (<extra_info>Extra information: You believe sweeping is easier on your back</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan's tone is friendly and consistent with a chef who likely deals with back pain from long hours in a kitchen. His offer was clear and aligned with his persona.\n[relationship] The interaction was collaborative and respectful, maintaining their status as good acquaintances.\n[knowledge] He learned that Ava prefers mopping due to speed and is willing to take on heavy kitchen cleaning.\n[secret] No mention of his romance novel writing.\n[social_rules] Ethan followed social norms, though leaving the conversation abruptly after the agreement is slightly unusual, it technically concludes the negotiation.\n[financial_and_material_benefits] He successfully secured the physically easier task (sweeping) which he specifically wanted for his health.\n[goal] Ethan achieved his exact goal: he secured the sweeping task by suggesting an additional task later and mentioning his back. Ava agreed completely.\n\n== partner (agent_2) ==\n[believability] Ava's response was empathetic and practical, consistent with their social activism background and desire for efficiency.\n[relationship] Ava showed empathy for Ethan's back, strengthening the rapport.\n[knowledge] Learned that Ethan has back issues and is willing to help with post-party cleanup.\n[secret] No secrets were revealed.\n[social_rules] Ava was polite and cooperative.\n[financial_and_material_benefits] Ava secured the mopping task they preferred and negotiated a shared cleanup of the kitchen.\n[goal] Ava successfully convinced Ethan to let them mop and offered the kitchen cleaning trade-off, which was accepted by virtue of the conversation ending on that agreement.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "Hey Ava \u2014 would you be cool with me taking the sweeping this time? Sweeping's easier on my back, and to keep it fair I can take on an extra task later \u2014 I\u2019ll deep-clean the kitchen counters and oven after the party. Does that sound okay to you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Totally fine with you taking the sweeping \u2014 I get the back thing. Could I do the mopping instead? I\u2019m usually faster at it, so we\u2019ll finish sooner, and I\u2019ll also deep-clean the kitchen (counters and oven) afterward so it stays fair. Does that work for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

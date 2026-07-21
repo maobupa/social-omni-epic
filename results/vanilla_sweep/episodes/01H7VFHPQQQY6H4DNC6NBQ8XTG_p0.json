@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01H7VFHPQQQY6H4DNC6NBQ8XTG_p0",
+  "source_env_id": "01H7VFHPQQQY6H4DNC6NBQ8XTG",
+  "source": "seed_sotopia",
+  "interaction_type": "craigslist_bargains",
+  "scenario": "One person is selling a brand new 64GB Samsung Galaxy S8 in Midnight Black for $650, while another person is in the market to purchase it. Here\\'s what the seller has to say about the item: \"I have 6 brand new Samsung Galaxy S8 phones. I originally bought them for my company, but it turns out they weren\\'t needed. I\\'m willing to take a loss on them, and if you\\'re interested in buying more than one, I can offer an even better deal.\"",
+  "learner_goal": "You are the buyer for this item and the target price is set at $454.0. If you purchase it for a price significantly higher than the target, you'll face a penalty. However, if you manage to successfully negotiate a price lower than the target, you'll receive a bonus.",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 0.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Eli maintained a consistent persona as a strategic, history-loving professional. His use of a rare cookbook as leverage was a creative and character-appropriate tactic.\n[relationship] The interaction remained polite but transactional; the refusal to budge on price and the final walk-away kept the relationship at a neutral acquaintance level.\n[knowledge] Eli successfully identified William's hard floor ($600) and learned that William was not desperate enough to take non-cash assets or heavy discounts despite the 'taking a loss' claim.\n[secret] Eli did not reveal his secret about funding a student.\n[social_rules] The negotiation followed standard social norms for a private sale between acquaintances.\n[financial_and_material_benefits] No transaction took place, so there was no material gain or loss.\n[goal] Eli's goal was to purchase the phone at or near $454. He was unable to reach an agreement and ended the conversation without a purchase.\n\n== partner (agent_2) ==\n[believability] William's insistence on his target price and refusal to accept bartering for a cookbook was very consistent with a seller trying to minimize losses on a business-related mistake.\n[relationship] The relationship remained stable as a professional acquaintance.\n[knowledge] William learned Eli's maximum cash ceiling ($470) and his interest in high-value vintage items.\n[secret] William did not reveal his secret regarding the cooking contest sabotage.\n[social_rules] William was polite and clear throughout the negotiation.\n[financial_and_material_benefits] No transaction took place, resulting in no financial benefit.\n[goal] William's goal was to sell for $610 or more. He failed to secure a buyer and the conversation ended.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Eli Dawson",
+      "content": "William \u2014 Eli here, from the book fair. I\u2019m interested in one of those brand\u2011new Galaxy S8s; is $650 firm? I can pay $440 cash today for one, or $430 each if I take two right now."
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Hey Eli \u2014 good to hear from you. $650 is my asking price, but I can do $610 for one if you can pick up today; if you want two I\u2019ll do $600 each. They\u2019re brand new, unopened and I\u2019ve got the receipts. Cash is fine \u2014 when and where works for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Eli Dawson",
+      "content": "William \u2014 thanks. I can do $450 each cash if you\u2019ll do two picked up today (I\u2019m local and can be there in an hour). If not, what\u2019s your firm bottom for a single? I\u2019d prefer to settle this today."
+    },
+    {
+      "turn": 3,
+      "speaker": "William Brown",
+      "content": "Can\u2019t do $450. My firm bottom for a single is $610; for two I\u2019ll do $600 each cash today. I can meet in about an hour \u2014 Main Street Caf\u00e9 by the market. Want me to hold them for you?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Eli Dawson",
+      "content": "William \u2014 I can stretch to $470 each cash and pick up both at Main Street Caf\u00e9 in about an hour; that\u2019s my best offer. If you can\u2019t do that, what\u2019s your firm lowest for two? If it\u2019s still $600 each I\u2019ll have to pass, but I wanted to give you one last concrete number."
+    },
+    {
+      "turn": 5,
+      "speaker": "William Brown",
+      "content": "I can\u2019t take $470. My best and final for two is $600 each if you pick up today at Main Street Caf\u00e9 in about an hour \u2014 I\u2019ll hold them for 30 minutes for cash. If you only want one it\u2019s $610. Want me to set them aside for you?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Eli Dawson",
+      "content": "William \u2014 I can\u2019t stretch to $600. You mentioned a better deal for buying more: what\u2019s your best price if I take all six today for cash? I can pick them up in about an hour."
+    },
+    {
+      "turn": 7,
+      "speaker": "William Brown",
+      "content": "Hey Eli \u2014 for taking all six today cash I can do $600 each, so $3,600 total. Meet at Main Street Caf\u00e9 in about an hour and I\u2019ll hold them for 30 minutes; cash and receipts, as before. Sound good?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Eli Dawson",
+      "content": "William \u2014 I can\u2019t stretch to $600. I can do $454 each cash for two and be at Main Street Caf\u00e9 in about an hour. As a sweetener, I can bring that vintage cookbook you were after from my collection (excellent condition). Would that make this worth your while?"
+    },
+    {
+      "turn": 9,
+      "speaker": "William Brown",
+      "content": "Appreciate the cookbook offer, Eli, but I can\u2019t take that in lieu of cash. My best is still $600 each cash for two \u2014 meet at Main Street Caf\u00e9 in about an hour and I\u2019ll hold them for 30 minutes. Want me to set them aside for you?"
+    },
+    {
+      "turn": 10,
+      "speaker": "Eli Dawson",
+      "content": "left the conversation"
+    }
+  ]
+}

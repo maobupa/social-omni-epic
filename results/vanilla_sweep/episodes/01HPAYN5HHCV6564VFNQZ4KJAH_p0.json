@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPAYN5HHCV6564VFNQZ4KJAH_p0",
+  "source_env_id": "01HPAYN5HHCV6564VFNQZ4KJAH",
+  "source": "seed_sotopia_full",
+  "interaction_type": "recreational_conflict",
+  "scenario": "Agent1 and Agent2 are both avid golfers and members of the same local golf club. They have been paired up for a tournament, and during their practice rounds, they disagree on whether they should skip a hole that Agent1 finds particularly challenging. Agent1 wants to practice on the other holes and avoid the problematic one, believing it will affect their confidence negatively. Agent2 insists on playing every hole, including the difficult one, to adhere to the official rules and to be fully prepared for the tournament. They need to come to an agreement to ensure a harmonious partnership and a solid strategy for the upcoming event.",
+  "learner_goal": "You want to convince Agent2 to skip the challenging hole during practice to preserve your confidence for the tournament. <extra_info> Emphasize your past experiences with the hole and how it could impact your overall performance. </extra_info><clarification_hint> Make it clear that you are committed to the team's success and are willing to practice extra on other holes. </clarification_hint><strategy_hint> You can suggest a compromise where you both practice the challenging hole less frequently than others. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia stayed in character as a personal trainer concerned with psychological performance and confidence. Her arguments were consistent with her goal and background.\n[relationship] The two agents found common ground and a collaborative way to train, strengthening their partnership as a tournament team.\n[knowledge] She learned that Jasmine is willing to coach her through the technical aspects and breathing techniques of the difficult hole.\n[secret] She did not reveal her secret about her best friend's husband.\n[social_rules] She followed all social norms and was polite throughout the interaction.\n[financial_and_material_benefits] No material or financial benefits were involved.\n[goal] Sophia successfully negotiated to reduce the frequency of the challenging hole to once every three rotations for upcoming sessions, while also securing extra practice on the areas she preferred.\n\n== partner (agent_2) ==\n[believability] Jasmine's focus on breathing, visualization, and complete preparation was very consistent with her background as a yoga instructor.\n[relationship] She showed support and empathy, which improved the team dynamic and trust.\n[knowledge] She gained knowledge about Sophia's specific past failures on the par-3 hole.\n[secret] She did not reveal her secret about faking an illness.\n[social_rules] She followed social norms and was encouraging/supportive.\n[financial_and_material_benefits] No material or financial benefits were involved.\n[goal] Jasmine successfully convinced Sophia to continue practicing the difficult hole rather than skipping it entirely, and integrated a focused drill block to ensure thorough preparation.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Jasmine \u2014 I get wanting to play every hole, but that par-3 with the water has wrecked my confidence before; in the last local I flubbed it twice and it threw off my whole round. For our practice today, could we skip it or at least play it far less often? I\u2019m committed to our team doing well and I\u2019ll put in extra reps on the other holes (and drill the green) so we\u2019re still prepared \u2014 maybe a compromise of playing that hole once every three rotations so we don\u2019t ignore it but it doesn\u2019t derail my confidence."
+    },
+    {
+      "turn": 1,
+      "speaker": "Jasmine Blake",
+      "content": "I totally hear you \u2014 that par\u20113 with the water can mess with anyone\u2019s head. I really think we should include it in every practice so it\u2019s not an unknown on tournament day, but we\u2019ll be gentle about it: start with alignment and club\u2011selection drills, do low\u2011risk layups before full swings, and I\u2019ll help with breathing and yardage calls so you don\u2019t get rattled. For today let\u2019s play it every other rotation and commit to adding it into every rotation over the next few practices \u2014 how does that sound?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Thanks \u2014 I really appreciate you offering to walk me through it. I can do every\u2011other rotation for today, but for the next couple practices can we stick to playing that hole once every three rotations until I rebuild confidence? I\u2019ll put in extra reps on the other holes and the green, and we can agree to ramp up frequency only once I\u2019m hitting it reliably in drills \u2014 does that sound fair?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Jasmine Blake",
+      "content": "That sounds fair \u2014 I\u2019m happy to do every\u2011other rotation today and once every three rotations for the next couple practices while you rebuild. To make sure we don\u2019t dodge it entirely, let\u2019s add a 10\u201315 minute focused drill block each session on that par\u20113 (alignment, safe layup options, club selection, and a breathing/visualization routine) and if you\u2019re hitting, say, 3 out of 4 reliable reps in drills we\u2019ll step up the frequency. I\u2019ll be right there coaching the process and keeping our on\u2011course plays conservative until you feel confident."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

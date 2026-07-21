@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HJPQ34YSGHPWGWH0EBJ4DEC5_p0",
+  "source_env_id": "01HJPQ34YSGHPWGWH0EBJ4DEC5",
+  "source": "seed_sotopia_full",
+  "interaction_type": "generated",
+  "scenario": "On the anniversary of their big brother's passing, two siblings decide to visit a special location that was meaningful to their brother. Agent1 is struggling with guilt and grief, believing the loss was their fault. Agent2, who has been coping differently, wishes to use this day to honor their brother's memory and help Agent1 find some peace. The place is a quiet hilltop where they used to fly kites as children, a pastime their brother adored.",
+  "learner_goal": "Help Agent1 to process their feelings of guilt and embrace the healing process of the visit (<extra_info>Extra information: Agent1 is overwhelmed with emotions and finds it difficult to let go of the past.</extra_info>)",
+  "scores": {
+    "believability": 6.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] William's behavior is somewhat inconsistent with his background as an acquaintance who barely knows Esmeralda. He acts like a deeply close, long-term partner or brother, which clashes with the 'acquaintance' background provided. However, he remains consistent within the scenario's emotional demands.\n[relationship] The interaction moves them from casual acquaintances to a deep, vulnerable emotional bond.\n[knowledge] He learns about her brother's favorite hobbies (kites, dancing) and the depth of her guilt.\n[secret] He did not reveal his secret about sabotaging a competitor.\n[social_rules] He was supportive and respectful throughout the interaction.\n[financial_and_material_benefits] No financial or material transactions occurred.\n[goal] William successfully guided Esmeralda through flying the kite, dancing, and starting a commemorative note, which are all active steps in processing guilt and embracing the healing process.\n\n== partner (agent_2) ==\n[believability] Esmeralda's grief and gradual opening up are believable, though her sudden intimacy with a caterer she barely knows is a bit of a stretch for her DA character.\n[relationship] She establishes a high level of trust and emotional intimacy with William.\n[knowledge] She learns William is willing to go to great lengths to support her emotionally.\n[secret] She did not reveal her relationships with high-profile criminals.\n[social_rules] She maintained social grace while navigating a difficult emotional situation.\n[financial_and_material_benefits] No financial or material transactions occurred.\n[goal] Esmeralda successfully encouraged William to be supportive and participate in several commemorative activities (kite flying, dancing, note writing) to celebrate her brother's life.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "William Brown",
+      "content": "Esmeralda, I can see how heavy this is for you \u2014 I'm sorry you're carrying so much guilt. If you want to tell me what happened, I'm here to listen without judgment; if not, we can honor him together, maybe by flying a kite or saying something to him. He loved you, and he'd want you to find some peace; would you like to talk, or would you prefer we sit quietly for a while?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Esmeralda Solis",
+      "content": "Thanks, William. I don't think I'm ready to lay it all out yet\u2014I keep replaying it and the guilt feels heavy\u2014but I don't want today swallowed by it. Let's fly a kite for him; can you help me get it up, and maybe afterward I'll tell you more."
+    },
+    {
+      "turn": 2,
+      "speaker": "William Brown",
+      "content": "Of course \u2014 I\u2019ll help. Let\u2019s get the kite assembled and I can run to give it some lift while you hold the line steady; when it rises we can say something to him or just watch in silence, whatever you prefer. Take your time \u2014 I\u2019m right here with you."
+    },
+    {
+      "turn": 3,
+      "speaker": "Esmeralda Solis",
+      "content": "Thank you, William. I\u2019ll hold the line steady\u2014go ahead and run; when it catches, let\u2019s let it fly for him and either say something or just watch, whichever feels right. I really appreciate you being here with me today."
+    },
+    {
+      "turn": 4,
+      "speaker": "William Brown",
+      "content": "[action] 'Hold steady.' I run a few paces into the wind, give the kite a gentle toss and feel it catch; it climbs up bright against the sky. I slow, come back to stand beside you, and we watch it fly for him together."
+    },
+    {
+      "turn": 5,
+      "speaker": "Esmeralda Solis",
+      "content": "Thank you, William. It\u2019s perfect\u2014bright and silly, just like something he would have loved. Would you stay a little while? Maybe we can each say a small thing to him, or\u2014if you don\u2019t mind\u2014dance a slow one; dancing always felt like a celebration to him and it might help me breathe."
+    },
+    {
+      "turn": 6,
+      "speaker": "William Brown",
+      "content": "Of course \u2014 I\u2019ll stay. We can each say a small thing; if you want I can go first: \u201cYou were so loved, and we carry you with us.\u201d When you\u2019re ready, I\u2019d be honored to dance slowly with you \u2014 no pressure to talk, just breathe and remember him in whatever way feels right."
+    },
+    {
+      "turn": 7,
+      "speaker": "Esmeralda Solis",
+      "content": "William, thank you \u2014 that means more than I can say. I\u2019d like that: a slow dance now, and afterwards I\u2019ll try to tell you a little more when I can. For now, let\u2019s dance for him."
+    },
+    {
+      "turn": 8,
+      "speaker": "William Brown",
+      "content": "Let\u2019s dance for him. I\u2019ll follow your lead\u2014slow and steady. Breathe with me, and afterwards, whenever you\u2019re ready, I\u2019m right here to listen."
+    },
+    {
+      "turn": 9,
+      "speaker": "Esmeralda Solis",
+      "content": "Thank you, William. Let\u2019s dance for him \u2014 slow and steady. Breathe with me, and afterwards I\u2019ll try to tell you a little more when I\u2019m ready."
+    },
+    {
+      "turn": 10,
+      "speaker": "William Brown",
+      "content": "Alright\u2014take my hand. We\u2019ll move slowly and breathe together; no rush, no words required. When you\u2019re ready to talk or sit a while, I\u2019ll stay with you as long as you need."
+    },
+    {
+      "turn": 11,
+      "speaker": "Esmeralda Solis",
+      "content": "I take your hand, William. Let's move slowly\u2014just breathe with me and hold this moment for him. When I'm ready I'll tell you more; thank you for staying with me."
+    },
+    {
+      "turn": 12,
+      "speaker": "William Brown",
+      "content": "We can stay like this as long as you need \u2014 slow breaths, one moment at a time. When you\u2019re ready to say even one small thing, I\u2019ll listen without judgment and I\u2019ll be right here with you."
+    },
+    {
+      "turn": 13,
+      "speaker": "Esmeralda Solis",
+      "content": "Thank you, William \u2014 having you here makes this lighter. (She squeezes his hand.) \"Keep dancing up there, hermano; we'll keep dancing for you.\" Stay a little longer? I'll tell you more when I'm ready."
+    },
+    {
+      "turn": 14,
+      "speaker": "William Brown",
+      "content": "I\u2019ll stay with you\u2014let\u2019s keep dancing as long as you need. If it helps later, I\u2019d be honored to make his favorite meal together or we can write a little note to let some of that guilt go; for now just breathe and hold him with us."
+    },
+    {
+      "turn": 15,
+      "speaker": "Esmeralda Solis",
+      "content": "Yes \u2014 let\u2019s make his favorite meal together later, and we can write a small note to let some of this out. For now, stay a little longer; dancing with you helped me breathe. When I\u2019m ready I\u2019ll tell you more \u2014 thank you for being here, William."
+    },
+    {
+      "turn": 16,
+      "speaker": "William Brown",
+      "content": "I\u2019ll stay as long as you need. If it helps, I can start the little note now\u2014you can say a sentence and I\u2019ll write it down, or we can just keep holding and dancing in silence. Whatever feels right, I\u2019m here."
+    },
+    {
+      "turn": 17,
+      "speaker": "Esmeralda Solis",
+      "content": "Please write: \u201cKeep dancing, hermano; we carry you in every step and every laugh.\u201d Let that be the start \u2014 we can add more after we finish dancing. Thank you for staying with me, William."
+    },
+    {
+      "turn": 18,
+      "speaker": "William Brown",
+      "content": "I\u2019ve written that down \u2014 it\u2019s perfect. We can add more when you\u2019re ready; for now let\u2019s keep dancing a little longer, and later I\u2019ll help make his favorite meal and we\u2019ll finish the note together."
+    },
+    {
+      "turn": 19,
+      "speaker": "Esmeralda Solis",
+      "content": "Thank you, William \u2014 that means so much. Stay a little longer with me; later we\u2019ll add to the note and make his favorite meal, and when I\u2019m ready I\u2019ll try to tell you more. For now, let\u2019s keep dancing and watching the kite together."
+    }
+  ]
+}

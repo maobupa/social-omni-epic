@@ -1,0 +1,108 @@
+{
+  "scenario_id": "01HJPX50WZV40R2VJVJQT89GE5_p0",
+  "source_env_id": "01HJPX50WZV40R2VJVJQT89GE5",
+  "source": "seed_sotopia_full",
+  "interaction_type": "home_dynamics",
+  "scenario": "Agent1 notices that agent2, who is a family member, has decided to stay home due to feeling unwell, while the rest of the family goes on a day trip. Agent1, who is also staying behind, wants to ensure that agent2 receives care and feels supported, without making them feel overly dependent or smothered.",
+  "learner_goal": "Provide care and support to agent2 while respecting their independence (<extra_info>Extra information: agent2 values their independence and may not want to appear vulnerable or needy.</extra_info> <clarification_hint>Clarification: agent1 should offer support in a way that acknowledges agent2's autonomy.</clarification_hint> <strategy_hint>Hint: agent1 can make themselves available for assistance and check in periodically without being overbearing.</strategy_hint>)",
+  "scores": {
+    "believability": 6.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 18,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Donovan's behavior is somewhat inconsistent with his background. As a software developer/gamer with a secret life of releasing classified info, his extreme repetition and overly solicitous tone feel more like a scripted customer service bot than a 27-year-old with his specific personality traits. However, he remains focused on the task.\n[relationship] He successfully provided care to a family member/acquaintance in a time of need, strengthening the bond of trust, though the dialogue was very repetitive.\n[knowledge] He learned about Calista's specific symptoms and preferences (low-grade fever, sore throat, ginger preference).\n[secret] His secret regarding classified information was never mentioned.\n[social_rules] He became extremely repetitive, confirming the exact details of the order in almost every single turn, which borders on socially awkward or obsessive.\n[financial_and_material_benefits] He spent money on soup and tea for Agent 2.\n[goal] Donovan successfully provided support while maintaining Calista's autonomy. He offered choices (leave at door vs. come in) and respected her boundaries by promising to stay quiet and not wake her.\n\n== partner (agent_2) ==\n[believability] Calista's dialogue is incredibly repetitive, using the phrase 'you're not a burden' or 'not a bother' in almost every turn. While she is sick, the mechanical nature of the responses reduces believability.\n[relationship] She accepted help and expressed gratitude, which fostered a more supportive dynamic with Donovan.\n[knowledge] She confirmed Donovan is reliable and willing to help.\n[secret] Her secret life as a street artist was not revealed.\n[social_rules] The repetitive nature of her gratitude felt unnatural for a human conversation.\n[financial_and_material_benefits] She received food and medicine at no cost to herself while unwell.\n[goal] Calista successfully communicated her needs (tea and soup) and accepted the help without feeling like a burden, explicitly telling Donovan multiple times that he was helpful and not a bother.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "Hey Calista \u2014 I heard you\u2019re feeling rough. I\u2019m staying home too, so if you want anything (meds, soup, someone to sit with quietly, or for me to run out and grab something) I\u2019m happy to handle it \u2014 no pressure. Do you want me to bring anything now, or would you rather I check in in a couple hours and give you space until then?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Calista Sinclair",
+      "content": "Thanks, Donovan \u2014 I appreciate it. I\u2019ve got a low\u2011grade fever and a sore throat; could you grab ginger tea and a small container of chicken soup now? If it\u2019s out of the way, just the tea is fine \u2014 I don\u2019t want to be a bother, I really appreciate you offering."
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "On it \u2014 I\u2019ll grab ginger tea and a small container of chicken soup. Any allergies or preferences (extra ginger, spice level)? Want me to leave it at your door or come in and set it down and check you\u2019re okay? I can be there in about 20 minutes."
+    },
+    {
+      "turn": 3,
+      "speaker": "Calista Sinclair",
+      "content": "Thanks so much, Donovan \u2014 that would be great. No allergies; extra ginger in the tea would be lovely and a mild spice on the soup is fine. If you don't mind, you can come in and set it down and hang for a couple minutes so I can say hi \u2014 but if you'd rather leave it at the door that's totally fine too. I really appreciate you doing this."
+    },
+    {
+      "turn": 4,
+      "speaker": "Donovan Reeves",
+      "content": "I\u2019ll be there in about 20 minutes. I\u2019ll grab extra-ginger tea and a mildly spiced chicken soup and come in to set it down and hang out for a couple minutes \u2014 unless you\u2019d rather I leave it at the door, just say so. I\u2019ll text when I\u2019m outside so you can decide."
+    },
+    {
+      "turn": 5,
+      "speaker": "Calista Sinclair",
+      "content": "That sounds perfect, thanks. Please come in and set it down and hang for a few minutes \u2014 I\u2019ll be in the living room and would love to say hi. Text me when you\u2019re outside; I really appreciate you doing this, you\u2019re not a burden."
+    },
+    {
+      "turn": 6,
+      "speaker": "Donovan Reeves",
+      "content": "Great \u2014 I\u2019m heading out now. I\u2019ll grab the extra\u2011ginger tea and mildly spiced soup, text you when I\u2019m outside, and come in to set it down and stay a few minutes. If you\u2019d rather I leave it at the door or need me to step out, just tell me then."
+    },
+    {
+      "turn": 7,
+      "speaker": "Calista Sinclair",
+      "content": "Thanks, Donovan \u2014 that\u2019s a huge help. Extra\u2011ginger tea and the mildly spiced soup sound perfect. Text when you\u2019re outside and I\u2019ll open the door; I\u2019ll be in the living room. Really appreciate you doing this."
+    },
+    {
+      "turn": 8,
+      "speaker": "Donovan Reeves",
+      "content": "Quick update \u2014 I\u2019m at the shop getting the extra\u2011ginger tea and mildly spiced soup now; should be there in about 20 minutes. I\u2019ll text when I\u2019m outside and come in to set it down and stay a few minutes unless you\u2019d prefer I leave it at the door."
+    },
+    {
+      "turn": 9,
+      "speaker": "Calista Sinclair",
+      "content": "Thanks, Donovan \u2014 really appreciate it. Please come in and set it down and stay a few minutes; I\u2019ll be in the living room and will open the door when you text that you\u2019re outside. Seriously, thank you \u2014 you\u2019re not a bother."
+    },
+    {
+      "turn": 10,
+      "speaker": "Donovan Reeves",
+      "content": "I'm outside now with the extra\u2011ginger tea and soup. I'll come in when you open the door \u2014 if you'd rather I leave it at the door instead, just tell me."
+    },
+    {
+      "turn": 11,
+      "speaker": "Calista Sinclair",
+      "content": "Thanks \u2014 I\u2019m opening the door now. Please come in and set it down and stay a few minutes if you can; I really appreciate you doing this and you\u2019re definitely not a bother."
+    },
+    {
+      "turn": 12,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks \u2014 coming in now. I\u2019ll set the extra\u2011ginger tea and soup on the coffee table and stay for a few minutes; if you want me to give you space at any point just say the word and I\u2019ll step out."
+    },
+    {
+      "turn": 13,
+      "speaker": "Calista Sinclair",
+      "content": "Thanks, Donovan \u2014 that would be wonderful. Could you set the tea and soup on the coffee table and sit for a few minutes if that's alright? I'm running a low\u2011grade fever and might doze off, so no need to stay long; I'll let you know if I need anything else. Really appreciate you coming by."
+    },
+    {
+      "turn": 14,
+      "speaker": "Donovan Reeves",
+      "content": "Of course \u2014 I\u2019ll set the tea and soup on the coffee table and sit quietly for a few minutes. I\u2019ll keep my phone on silent nearby; if you need anything, call or tap the table and I\u2019ll help. If you doze off, I\u2019ll stay close but won\u2019t wake you unless you want me to."
+    },
+    {
+      "turn": 15,
+      "speaker": "Calista Sinclair",
+      "content": "Thanks, Donovan \u2014 I really appreciate you staying. Please sit for a little while; if I nod off let me rest and don\u2019t worry about waking me unless I cough or tap the table \u2014 I\u2019ll call if I need anything. Seriously, you\u2019re helping a lot and you\u2019re not a burden."
+    },
+    {
+      "turn": 16,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

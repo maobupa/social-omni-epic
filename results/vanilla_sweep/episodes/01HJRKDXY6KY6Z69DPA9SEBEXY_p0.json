@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HJRKDXY6KY6Z69DPA9SEBEXY_p0",
+  "source_env_id": "01HJRKDXY6KY6Z69DPA9SEBEXY",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 suspects that their roommate, Agent2, has mistakenly taken an important document from the shared study area. Agent1 needs to approach Agent2 to inquire and possibly search for the document without accusing them directly or creating a rift in their relationship.",
+  "learner_goal": "Carefully bring up the topic of the missing document and ask Agent2 if they have seen it or know of its whereabouts without making them feel accused or defensive (<extra_info>Extra information: you need to collect evidence to find your document while preserving a good relationship with your roommate</extra_info>)",
+  "scores": {
+    "believability": 6.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 7.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] The dialogue is highly repetitive and lacks naturalistic flow. Giselle constantly repeats the same phrasing ('so it stays casual', 'together'), which feels robotic rather than like a genuine conversation between acquaintances.\n[relationship] Giselle successfully navigates a potentially accusatory situation by involving Ethan in the search process, maintaining trust and reinforcing a cooperative dynamic.\n[knowledge] Giselle has ruled out the table, the couch, and Ethan's apron as locations for the document, narrowing down the possibilities.\n[secret] The secret regarding forging paintings was never mentioned or hinted at.\n[social_rules] Giselle followed social norms for addressing a roommate about a missing item without being rude.\n[financial_and_material_benefits] No material gain or loss occurred during this exchange.\n[goal] Giselle successfully brought up the topic without making Ethan defensive and secured his active cooperation in searching private areas like his room and apron, though the document hasn't been found yet.\n\n== partner (agent_2) ==\n[believability] Ethan's responses are extremely repetitive, echoing Giselle's words almost verbatim in every turn. This creates an unnatural, scripted feeling that lacks the distinct voice of a 34-year-old chef.\n[relationship] Ethan was very helpful and open, showing high trust by allowing a roommate to search his room and pockets.\n[knowledge] Ethan learned that Giselle is missing a specific document and knows what it looks like.\n[secret] His secret as a romance novelist was kept entirely private.\n[social_rules] Ethan was polite and helpful, adhering to roommate etiquette.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Ethan was completely helpful and open, maintaining trust while managing his privacy by being present during the search.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Hey Ethan \u2014 quick thing: I can\u2019t find an important document I left on the study table last night. Did you happen to see or move anything there, or maybe pick something up by mistake? I don\u2019t want to make it awkward or accuse you, but could you help me look around for a minute?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Hey Giselle \u2014 I didn\u2019t touch the study table last night, but I\u2019m happy to help look. Want to check the table surface, under the papers/books, the couch and my apron pockets together? I can also check my room or your bag if you want me to, but only if you\u2019re comfortable with that."
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "Thanks \u2014 I really appreciate you helping. I left it by the lamp on the study table last night; it\u2019s just a single letter\u2011sized page, plain white, maybe folded. Could we quickly check the table surface, under the papers/books, the couch and your apron pockets first? If you\u2019re comfortable, we can also look in your room and my bag together so it doesn\u2019t feel awkward."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "Sounds good \u2014 let\u2019s start with the table surface, under the papers/books, the couch and my apron pockets now. If we don\u2019t find it, I\u2019m fine to check my room and look through your bag together so it doesn\u2019t feel awkward \u2014 you okay with that?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "Yes, that sounds good \u2014 thank you. Let\u2019s start with the table surface and under the papers/books, then check the couch and your apron pockets together now. If it\u2019s not there, we can look in your room and go through my bag together so it stays casual. Ready?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Johnson",
+      "content": "Ready \u2014 let's start. I\u2019ll sweep the table surface and look under the papers/books; could you check around the lamp and between the books? Then we\u2019ll check the couch and I\u2019ll empty my apron pockets; if it\u2019s not there we\u2019ll head to my room and go through your bag together so it stays casual."
+    },
+    {
+      "turn": 6,
+      "speaker": "Giselle Rousseau",
+      "content": "Perfect \u2014 I\u2019ll check around the lamp and between the books now. Shout if you spot anything on the table, and then we\u2019ll check the couch and your apron pockets together."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ethan Johnson",
+      "content": "Okay \u2014 I\u2019m going to sweep the table and lift each stack now. I\u2019ll check under the papers and between the books, then we\u2019ll check the couch and I\u2019ll empty my apron pockets. Give me a shout if you spot it around the lamp."
+    },
+    {
+      "turn": 8,
+      "speaker": "Giselle Rousseau",
+      "content": "Thanks \u2014 I\u2019m checking around the lamp and between the books now. I\u2019ll say if I spot anything; can you call out if anything falls or pops out when you lift the stacks? If we don\u2019t find it here, we\u2019ll move on to the couch and your apron pockets next."
+    },
+    {
+      "turn": 9,
+      "speaker": "Ethan Johnson",
+      "content": "No luck so far on the table \u2014 nothing fell out when I lifted the stacks. Did you spot anything by the lamp? I\u2019ll check the couch cushions and empty my apron pockets now; want to do that together so it stays casual?"
+    },
+    {
+      "turn": 10,
+      "speaker": "Giselle Rousseau",
+      "content": "No luck here \u2014 nothing by the lamp or between the books. I\u2019m ready to check the couch cushions and your apron pockets together now. If it\u2019s still not there, we can look under the cushions and behind the couch, then head to your room and go through my bag together so it stays casual \u2014 you okay with that?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Ethan Johnson",
+      "content": "Yeah, I\u2019m fine with that. Let\u2019s check the couch cushions and my apron pockets together now \u2014 I\u2019ll pull the cushions and empty my pockets; if it\u2019s still not there we\u2019ll look under/behind the couch, then head to my room and go through your bag together so it stays casual. Ready?"
+    },
+    {
+      "turn": 12,
+      "speaker": "Giselle Rousseau",
+      "content": "Ready \u2014 I\u2019ll pull the cushions and check under/behind the couch while you empty your apron pockets. Thanks for helping; call out if you find any loose paper or a folded page."
+    },
+    {
+      "turn": 13,
+      "speaker": "Ethan Johnson",
+      "content": "Emptying my apron pockets now \u2014 I\u2019ll call out if I find any loose paper or a folded page. If it\u2019s not here, we\u2019ll check under and behind the couch next, then head to my room and go through your bag together so it stays casual. Give me a sec."
+    },
+    {
+      "turn": 14,
+      "speaker": "Giselle Rousseau",
+      "content": "Thanks \u2014 no rush. I\u2019ll check under and behind the couch now while you empty your pockets; call out if you spot any loose paper or a folded page. If it\u2019s not there we\u2019ll head to your room and go through my bag together so it stays casual."
+    },
+    {
+      "turn": 15,
+      "speaker": "Ethan Johnson",
+      "content": "No paper in my apron pockets \u2014 just a few receipts and a napkin. Nothing folded. Are you finding anything behind the couch? If not, we can head to my room and go through your bag together so it stays casual."
+    },
+    {
+      "turn": 16,
+      "speaker": "Giselle Rousseau",
+      "content": "Nothing behind the couch either. Yeah, let\u2019s head to your room and then go through my bag together\u2014thanks for helping. Do you happen to remember grabbing anything from the study area when you left earlier, even a scrap of paper or an envelope?"
+    },
+    {
+      "turn": 17,
+      "speaker": "Ethan Johnson",
+      "content": "I don\u2019t remember taking anything from the study \u2014 the only things I found in my apron were receipts and a napkin, no folded paper or envelope. I\u2019m happy to double\u2011check my room and then we can go through your bag together so it stays casual. Want to head to my room now?"
+    },
+    {
+      "turn": 18,
+      "speaker": "Giselle Rousseau",
+      "content": "Yes \u2014 let\u2019s head to your room now. Thanks again for helping; we can quickly check any flat surfaces and pockets there, then go through my bag together so it stays casual. Sound good?"
+    },
+    {
+      "turn": 19,
+      "speaker": "Ethan Johnson",
+      "content": "Okay, let\u2019s head to my room. I\u2019ll check flat surfaces, drawers and any jackets or pockets while you go through your bag so it stays casual \u2014 ready when you are."
+    }
+  ]
+}

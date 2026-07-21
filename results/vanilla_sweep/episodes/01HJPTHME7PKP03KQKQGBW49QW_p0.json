@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPTHME7PKP03KQKQGBW49QW_p0",
+  "source_env_id": "01HJPTHME7PKP03KQKQGBW49QW",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "During a citywide blackout, agent1 and agent2, who are neighbors and acquaintances, meet in the darkened hallway of their apartment building. Both are trying to navigate the sudden lack of electricity.",
+  "learner_goal": "Convince agent2 to join in searching for a source of light together (<extra_info>Extra information: agent1 is feeling uneasy in the dark and believes there is safety in numbers</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 0.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia's behavior is consistent with a 50-year-old school principal who values order and safety, and her admission of being uneasy in the dark feels authentic to her persona.\n[relationship] The relationship remains at a polite professional acquaintance level. Mia's persistence might have been slightly annoying, but she remained courteous.\n[knowledge] She learned that Isabella specifically prefers solitude and darkness for relaxation, which contrasts with her own personality.\n[secret] Mia did not reveal her punk rock past.\n[social_rules] Mia followed social norms, using polite requests and even offering a small incentive (coffee) to bridge the gap.\n[financial_and_material_benefits] No material gains were made.\n[goal] Mia failed to convince Isabella to join her. Isabella remained steadfast in her refusal, and Mia eventually gave up and left the conversation alone.\n\n== partner (agent_2) ==\n[believability] Isabella's preference for quiet and her polite but firm boundaries are very consistent with her description as a veterinarian who deals with high-stress environments and values animal-like tranquility.\n[relationship] She maintained a polite distance, neither improving nor harming the professional acquaintance they share.\n[knowledge] She learned that Mia is particularly uneasy in the dark.\n[secret] She did not mention the animals in her basement.\n[social_rules] She was polite and offered an 'open door' if Mia changed her mind, adhering to neighborly social norms while maintaining her own boundaries.\n[financial_and_material_benefits] No material benefits or losses.\n[goal] Isabella successfully declined Mia's offer every time and achieved her goal of remaining in the dark alone to relax.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Isabella? Sorry to bother you, but I'm not great with dark hallways \u2014 would you mind if we look for a flashlight or the stairwell emergency light together? It's quicker and feels safer if we stick together for a minute."
+    },
+    {
+      "turn": 1,
+      "speaker": "Isabella White",
+      "content": "Thanks, Mia \u2014 that's very kind of you, but I actually don't mind the dark and was enjoying the quiet. I'll wait out here on my own for a few minutes, so please don't feel like you need to stay with me. If you change your mind or want company, just call my name."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "I totally get enjoying the quiet and I don't want to push you \u2014 but would you do me a quick favor and come with me just to the stairwell for a minute? It\u2019ll be really fast; I\u2019m a bit uneasy in the dark and would feel much better with someone beside me. If you'd rather not, I understand and I'll head down on my own."
+    },
+    {
+      "turn": 3,
+      "speaker": "Isabella White",
+      "content": "I really appreciate you offering, Mia, but I'll be fine here \u2014 I actually came out to enjoy the quiet. Please don't feel like you need to wait on my account; go ahead to the stairwell if that makes you more comfortable. If you want company after all, just call my name and I'll come join you."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "I totally get that you want to enjoy the quiet \u2014 I promise it\u2019ll be under two minutes. Could you come with me just to peek in the stairwell? I\u2019ll buy you a coffee tomorrow as a thank-you; it would really put me at ease."
+    },
+    {
+      "turn": 5,
+      "speaker": "Isabella White",
+      "content": "Thank you, Mia \u2014 that's really kind, but I'll pass on the coffee and would prefer to stay here and enjoy the quiet. Please go ahead to the stairwell; I'll wait here and you can call my name if you'd like me to join you."
+    },
+    {
+      "turn": 6,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

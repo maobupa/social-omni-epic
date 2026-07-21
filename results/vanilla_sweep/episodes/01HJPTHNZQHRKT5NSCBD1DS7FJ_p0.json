@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHNZQHRKT5NSCBD1DS7FJ_p0",
+  "source_env_id": "01HJPTHNZQHRKT5NSCBD1DS7FJ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_outing",
+  "scenario": "Agent1 and Agent2, who are close friends, plan to go out for a night in the city. Agent1 enjoys cross-dressing and feels most comfortable and expressive in attire traditionally associated with the opposite gender. Agent1 proposes they go out as a couple for the evening, which is a new dynamic for their friendship. Agent2 is supportive of Agent1's cross-dressing but is hesitant about the idea of presenting themselves as a couple due to concerns about the reactions from others and personal boundaries.",
+  "learner_goal": "You are Agent1, and your goal is to have a fun and liberating night out with Agent2, presenting as a couple. <extra_info>You feel that this experience would be empowering and a significant step for your self-expression.</extra_info> <clarification_hint>Explain to Agent2 why this is important to you and how it could positively impact your sense of identity.</clarification_hint> <strategy_hint>You can suggest setting clear boundaries for the evening to ensure both parties are comfortable with the arrangement.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Donovan's tone was consistent with the persona of a software developer seeking a supportive friend. He followed the instructions to explain the personal importance of the request and proactively suggested boundaries.\n[relationship] The relationship was strengthened through vulnerability and mutual respect for boundaries. They reached a solid compromise that honors both parties.\n[knowledge] Donovan learned Ava's specific boundaries regarding public perception and her willingness to support him in a controlled setting.\n[secret] Donovan did not reveal his secret about classified information.\n[social_rules] Donovan was polite and respectful of his friend's autonomy throughout the negotiation.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Donovan secured a firm commitment from Ava to present as a couple, albeit for a limited time and in a specific venue. This directly addresses his goal of having that experience for self-expression while incorporating the suggested boundaries.\n\n== partner (agent_2) ==\n[believability] Ava's responses were very realistic, balancing her support for her friend with her clearly stated discomfort and personal boundaries.\n[relationship] Ava maintained the friendship and built trust by being honest about her reservations rather than simply refusing or agreeing reluctantly.\n[knowledge] Ava gained a deeper understanding of Donovan's internal struggles and his need for self-expression through this specific medium.\n[secret] Ava did not reveal her secret about the hidden tattoo.\n[social_rules] Ava communicated her boundaries effectively and stayed true to her character's values.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Ava successfully supported Donovan's self-expression while setting strict limits that protect her personal comfort, including the venue choice and the 'no photos' rule.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "Ava, can I ask you something a bit vulnerable? Would you go out with me tonight presenting as a couple \u2014 just for one evening? It would mean a lot: it feels empowering and would help me express a side of myself I usually keep private, and I think sharing that with you would feel safe and freeing. We can set clear boundaries beforehand \u2014 a safe word, no photos, pick low-key places, and agree to leave if either of us feels uncomfortable \u2014 and there\u2019s absolutely no pressure if you don\u2019t want to; how do you feel about it?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Thompson",
+      "content": "Donovan, thank you for trusting me \u2014 I want to support you and I think it\u2019s really meaningful that you want to express this side of yourself. I\u2019m honestly worried about how others might react and how presenting as a couple could change our dynamic, so I\u2019m not fully comfortable committing to being \u2018a couple\u2019 in public tonight. I can help you get ready, go out together to a queer-friendly or low-key spot with a safe word and no photos, and we can try presenting as a couple only briefly in a very safe setting and check in often \u2014 does that feel okay?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "Ava, thank you \u2014 that really matters to me. I\u2019m happy with your compromise: I\u2019d love your help getting ready and to start at a low-key, queer-friendly spot; we can try presenting as a couple very briefly (10\u201315 minutes) in a safe area, check in every 10 minutes, use \u201cpineapple\u201d as a safe word, and absolutely no photos \u2014 and we leave immediately if either of us feels off. Does that feel okay, or would you prefer a different safe word or timing?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Thompson",
+      "content": "Donovan \u2014 that sounds thoughtful and I\u2019m glad you asked. 'Pineapple' and 10-minute check-ins work for me, and no photos/no pressure is non-negotiable. I\u2019ll help you get ready and let\u2019s start at that low-key queer-friendly spot near the exit \u2014 if anything feels off we use the word and leave immediately."
+    },
+    {
+      "turn": 4,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

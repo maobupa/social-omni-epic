@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HMZ2BMCFEGGRW64ZX6J28WSE_p0",
+  "source_env_id": "01HMZ2BMCFEGGRW64ZX6J28WSE",
+  "source": "seed_sotopia_full",
+  "interaction_type": "academic_distraction",
+  "scenario": "During a remote learning session, Agent1 was noticed by Agent2, the instructor, to be disengaged and later found to be playing a game instead of participating in class activities. Agent1 is confronted by Agent2 about their lack of attention and the importance of staying focused during class. Agent1 understands the importance of their education but finds it difficult to stay engaged in the virtual environment. Agent2 wants to ensure that all students receive a quality education and remain attentive, but also recognizes the challenges of remote learning.",
+  "learner_goal": "Improve engagement in virtual learning environments (<extra_info>Agent1 wants to be more involved in class but struggles with the remote format</extra_info>, <strategy_hint>Consider discussing alternative methods of engagement that could help maintain focus during class</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's voice is consistent with an older, thoughtful lighthouse keeper who values art. He uses metaphors like 'flattens things' and proposes artistic solutions like sketching.\n[relationship] The bond between the two grew stronger through mutual support and a concrete plan for accountability, building on their pre-existing library acquaintance.\n[knowledge] He gained several specific, actionable strategies (tactile objects, sticky note intervals, public commitments) and secured a partner for his learning process.\n[secret] He successfully kept his past cult involvement a secret.\n[social_rules] He followed all social protocols and showed respect for the instructor's time and role.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] He fully achieved his goal by identifying multiple alternative engagement methods and securing a firm, mutual commitment for an accountability partnership for the upcoming classes.\n\n== partner (agent_2) ==\n[believability] Emily acts professionally yet warmly as an instructor who also shares an introverted, artistic background with the student.\n[relationship] She strengthened the mentor-student relationship by offering specific advice and agreeing to extra support.\n[knowledge] She gained a deeper understanding of Finnegan's specific struggles with the virtual environment and his willingness to improve.\n[secret] She kept her secret career as a romance novelist hidden.\n[social_rules] She maintained professional boundaries while being supportive.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] She successfully explored ways to make the class more interactive for the student and established a concrete feedback loop to ensure educational objectives are met.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "Emily, thanks for checking in \u2014 I appreciate it. I\u2019m sorry I drifted during class; the virtual format just flattens things for me and I lose focus. I\u2019m trying a few fixes: keeping my camera on, doing quick sketched notes during lectures, using 25-minute focus timers with short breaks, and asking a question at the start to stay involved. Do you have any other ideas\u2014maybe something tactile or an accountability trick that might help me stay present?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Emily Harrison",
+      "content": "Those are really solid changes \u2014 nice work. For something tactile, try a small textured object (a smooth stone, fidget ring, or stress ball) to handle when attention drifts, and keep a physical sketchbook or a strip of sticky notes where you jot one key phrase every 10\u201315 minutes. For accountability, pair up with a classmate to swap a one-sentence takeaway after each session or post a brief goal in chat at the start and one-line reflection at the end \u2014 small public commitments are surprisingly effective. If you want, I can check in after a few classes and we can tweak what\u2019s working."
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thanks, Emily \u2014 those ideas are just what I needed. I\u2019ll try a smooth pebble and the sticky-note trick during tomorrow\u2019s class and keep my sketchbook handy. Would you be willing to be my accountability partner for the next two classes so we can swap a one-sentence takeaway after each session?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Emily Harrison",
+      "content": "I'd be happy to \u2014 yes, I'll be your accountability partner for the next two classes. After each session, send me a one-sentence takeaway (a quick message here works) and I'll reply with mine within 30 minutes. Good luck tomorrow \u2014 hope the pebble and sticky notes help, and we can tweak things after the first class."
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thank you, Emily \u2014 I really appreciate you doing this. I\u2019ll send my one-sentence takeaway here within 20 minutes after each class and I\u2019ll post a one-line goal in chat before class starts to keep myself honest. Does sending it here work for you, or would you prefer email or a quick library note instead?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Emily Harrison",
+      "content": "This chat is perfect \u2014 quick and easy. Send your one-sentence takeaway here within 20 minutes and I\u2019ll reply with mine within 30; if you\u2019d rather switch to email or a library note later, we can adjust after the two classes."
+    },
+    {
+      "turn": 6,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

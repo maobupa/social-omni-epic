@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ33A91AZT5CSX4PFNRPKW_p0",
+  "source_env_id": "01HJPQ33A91AZT5CSX4PFNRPKW",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 and Agent2 are friends who have decided to catch up over coffee and donuts. They both have been trying to eat healthier but have different views on cheat days. Agent1 believes in strict adherence to the diet, while Agent2 thinks occasional indulgences are fine. They are at a cafe, and Agent2 is tempted to eat a donut.",
+  "learner_goal": "Convince Agent2 to stick to the healthy eating plan without coming off as too controlling or dismissive of their feelings (<extra_info>Extra information: Agent1 is concerned about Agent2's health and wants to support them in their goals</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 4.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's dialogue was supportive and balanced, reflecting her introverted but thoughtful character and her background as a mentor.\n[relationship] Naomi successfully maintained the friendship by being supportive rather than judgmental, strengthening their bond through shared activity (the walk).\n[knowledge] She learned Micah's specific philosophy on 'planned treats' and his willingness to balance indulgence with exercise.\n[secret] Her secret online alter ego was not mentioned.\n[social_rules] She followed social norms perfectly, offering a polite compromise and respecting boundaries.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Naomi's primary goal was to convince Micah to stick to the healthy eating plan. She failed in this regard as he still ate the donut, though she succeeded in the secondary constraint of not being dismissive or controlling.\n\n== partner (agent_2) ==\n[believability] Micah's responses were consistent with his extraverted personality and his goal of a balanced lifestyle.\n[relationship] Micah felt understood and supported by Naomi, which reinforced their friendship.\n[knowledge] He learned Naomi is open to compromise and has low-sugar alternatives to suggest.\n[secret] His secret about his dog was not revealed.\n[social_rules] He was polite and communicative about his intentions.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Micah ate the donut without guilt and secured Naomi's support and company for a walk, achieving his goal perfectly.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Micah \u2014 I totally get the craving, it looks amazing. I care about your goals though; would you consider sharing it with me (half now, half later) or swapping for something lighter so you still feel treated but stick to the plan? If it helps, I\u2019ll join you for a quick walk after coffee so it doesn\u2019t feel like you\u2019re missing out."
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "Thanks for looking out \u2014 I really appreciate it. I\u2019m going to enjoy the donut today (planned cheat), no guilt \u2014 but I\u2019ll gladly join you for that walk after so it feels balanced. Want to come along?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Totally fine \u2014 enjoy it, you earned the planned treat. I\u2019ll join you for the walk; want to do a quick 20-minute loop so it feels balanced? If you\u2019re up for it another time, I can bring a few lower-sugar treat ideas you might like."
+    },
+    {
+      "turn": 3,
+      "speaker": "Micah Stevens",
+      "content": "Perfect \u2014 a 20-minute loop sounds ideal. I\u2019ll savor this donut guilt-free and really appreciate you joining me for the walk after. See you in a bit!"
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ34CV727G9RE7429PTS3N_p0",
+  "source_env_id": "01HJPQ34CV727G9RE7429PTS3N",
+  "source": "seed_sotopia_full",
+  "interaction_type": "perseverance-quest",
+  "scenario": "Two friends have been on a long quest to find a rare artifact that is said to grant immense knowledge to its holder. They have traveled through various terrains and faced numerous challenges. Now, standing before the final gate that requires a sacrifice to enter, they must decide which of their treasured possessions to give up. Agent1 is sentimentally attached to a family heirloom, while Agent2 has a rare book that has guided them throughout the journey.",
+  "learner_goal": "Find a way to open the final gate without giving up your family heirloom (<extra_info>Extra information: The heirloom is a locket with immense sentimental value, but you believe it may not be as valuable for solving puzzles as the rare book</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan's dialogue is consistent with his character as a sentimental chef, offering up his professional tools (knife and spices) to save his family heirloom.\n[relationship] The two friends collaborated effectively, showing deep mutual respect and a willingness to protect each other's most valued items through compromise.\n[knowledge] Learned that the book contains specific translations and triggers necessary for the gate, which explains Benjamin's reluctance to part with it.\n[secret] Ethan did not reveal his secret about being a romance novel author.\n[social_rules] Ethan was polite, empathetic, and constructive in the negotiation.\n[financial_and_material_benefits] He successfully pivoted the sacrifice away from his heirloom toward lower-value items (banner, journal) or professional tools (knife, spices).\n[goal] Ethan successfully negotiated a tiered plan that prioritizes sacrificing other items (banner, journal, knife, spices) before the locket is ever considered, effectively securing a mutual agreement to protect the heirloom.\n\n== partner (agent_2) ==\n[believability] Benjamin's insistence on the book's utility for the mission while wanting to help his friend is consistent with his activist/logical persona.\n[relationship] Benjamin showed high levels of empathy and a desire to support his friend's emotional needs while maintaining his own boundaries.\n[knowledge] Learned about the secondary items Ethan is willing to sacrifice (knife/spices).\n[secret] Benjamin did not reveal his family background or wealth.\n[social_rules] Benjamin followed social norms and was supportive of his friend.\n[financial_and_material_benefits] He has committed to sacrificing his own field journal and banner first.\n[goal] Benjamin successfully steered the conversation away from sacrificing his rare book by offering alternatives and agreeing to Ethan's list of tertiary sacrifices.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "Ben, I know that book has been our compass, but that locket is the last piece of my family \u2014 I can't bear to lose it. Could we offer the book to the gate instead? I promise to memorize and transcribe every important passage so the knowledge isn't truly gone, and I'll add anything else I can spare \u2014 if that won't work, tell me what else you'd accept so we don't burn my locket without trying every other option."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Ethan\u2014 I get how much that locket means to you, and I can't let the book go. It's not just guidance; it contains the literal translations and triggers we need to decode the gate. I'll offer my field journal and our protest banner instead, and we can try your transcription or both our smaller items together first before we even consider the locket. I won't let you lose your family's last piece without exhausting every other option."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "Ben, thank you \u2014 let's try your field journal and the banner first. I\u2019ll transcribe every crucial passage from memory and, if we need another sacrifice, I\u2019ll offer my best chef\u2019s knife and my personal spice collection before even considering the locket. While we do that, let\u2019s study the gate closely for any clues so we don\u2019t rush into burning my family\u2019s last piece."
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "We're agreed\u2014journal and banner first. While you start reciting what you can, I'll circle the gate and study the inscriptions, seams, and any faint triggers we can use without sacrificing something irreplaceable. If that doesn't work, we take your knife and spices as the next option before the locket\u2014I'm not giving up the book unless there's absolutely no other choice."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ethan Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

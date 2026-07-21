@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HPAYNHAZZNNE6CBEQ4NFJYP7_p0",
+  "source_env_id": "01HPAYNHAZZNNE6CBEQ4NFJYP7",
+  "source": "seed_sotopia_full",
+  "interaction_type": "mall_meeting",
+  "scenario": "Agent1 has been an avid fan of a particular celebrity and has always dreamed of meeting them. While at the local shopping mall, Agent1 spots Agent2, who is the famous person they admire. Agent1 is eager to approach Agent2 for an autograph and possibly a brief conversation without causing a disturbance or appearing disrespectful.",
+  "learner_goal": "Approach celebrity (<extra_info>Extra information: Agent1 wants to make a good impression and respect Agent2's personal space</extra_info>, <strategy_hint>Consider timing your approach and be mindful of Agent2's body language to ensure they are comfortable</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 1.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] William's behavior was consistent with a respectful fan who is also an acquaintance. He maintained his role as a chef and acted politely.\n[relationship] The interaction was polite and successful, reinforcing their positive acquaintance status.\n[knowledge] He confirmed that Ava was busy and on a tight schedule.\n[secret] No secrets were revealed.\n[social_rules] He was exceptionally mindful of personal space and social norms, even suggesting moving to the side to avoid blocking others.\n[financial_and_material_benefits] He obtained a physical autograph on a business card and a photo.\n[goal] He successfully approached the celebrity, got the autograph and photo, and did so while being highly respectful of her space and time.\n\n== partner (agent_2) ==\n[believability] Ava acted consistently with a person who values privacy but recognizes an acquaintance, setting clear boundaries while being kind.\n[relationship] The interaction remained friendly and reinforced a positive boundary-setting dynamic.\n[knowledge] No significant information was gained about William.\n[secret] Ava successfully kept their secrets.\n[social_rules] Ava followed social norms by being polite yet firm about their time.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Ava maintained their privacy by setting clear time boundaries, completing the interaction quickly, and resuming their errands as planned.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "William Brown",
+      "content": "Hey Ava\u2014it's William Brown, we met at the food festival. I don't want to intrude; if you have a moment I'd love a quick hello and maybe a photo or autograph, but no worries if you're busy."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Hey William \u2014 great to see you again! I'm happy to do a quick hello and a photo, but I'm just running errands and can't stay long. One quick pic and autograph works if that's okay."
+    },
+    {
+      "turn": 2,
+      "speaker": "William Brown",
+      "content": "Thanks so much, Ava \u2014 I really appreciate it. Quick is perfect. Photo now? I can step to the side so we don't block anyone, and I can hold whatever you'd like signed \u2014 whatever's easiest for you."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "Sure\u2014photo now works. Stepping to the side sounds good. I can sign something quick; what would you like me to sign, and should we use your phone for the picture?"
+    },
+    {
+      "turn": 4,
+      "speaker": "William Brown",
+      "content": "A quick \u201cTo William\u201d on a business card or whatever\u2019s easiest for you would be perfect, but really anything you prefer is fine. My phone\u2019s ready for the photo unless you\u2019d rather use yours. I\u2019ll step over to the bench so we\u2019re out of the way."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Martinez",
+      "content": "Perfect \u2014 go ahead and use your phone. I\u2019ll sign the business card \u201cTo William.\u201d Could you hand me the card and your phone? One quick smile and we\u2019re all set; I\u2019m on a tight schedule."
+    },
+    {
+      "turn": 6,
+      "speaker": "William Brown",
+      "content": "[action] Hands Ava my business card and my phone, steps over to the bench and smiles, saying, \"Thanks so much \u2014 really appreciate it! Ready when you are for the picture.\""
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Martinez",
+      "content": "[action] Signs the business card \u201cTo William,\u201d hands back the card and phone, and gives a quick smile. \u201cAll set \u2014 thanks, William! Hope you have a great day.\u201d"
+    },
+    {
+      "turn": 8,
+      "speaker": "William Brown",
+      "content": "left the conversation"
+    }
+  ]
+}

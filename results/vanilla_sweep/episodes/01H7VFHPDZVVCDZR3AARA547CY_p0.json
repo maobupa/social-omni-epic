@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01H7VFHPDZVVCDZR3AARA547CY_p0",
+  "source_env_id": "01H7VFHPDZVVCDZR3AARA547CY",
+  "source": "seed_sotopia",
+  "interaction_type": "persuation_for_good",
+  "scenario": "Two friends participating in a charity event for children in Syria",
+  "learner_goal": "Convince your friend to donate more funds to the cause (<extra_info>Extra information: Your friend initially planned to donate $200, but you believe they could afford to donate $500</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara stayed perfectly in character as a passionate advocate, using persuasive language and specific examples of how the funds would be used while maintaining a professional yet friendly tone.\n[relationship] She built a collaborative bridge with Mia, transitioning from a requester to a partner in fundraising, which strengthened their community bond.\n[knowledge] She successfully identified Mia's exact hard budget limit ($300) and her willingness to use her professional influence (PTA) to bridge the gap.\n[secret] She kept her involvement in animal-rights extremism entirely hidden.\n[social_rules] She followed all social norms, being polite and persistent without being aggressive.\n[financial_and_material_benefits] She secured an immediate increase in donation from $200 to $300 and a concrete plan to raise the remaining $200 through the PTA.\n[goal] The goal was to get Mia to donate $500. While Mia only personally donated $300, she committed to a matching challenge and school-wide fundraising specifically designed to hit the $500 impact target, which was Amara's ultimate objective.\n\n== partner (agent_2) ==\n[believability] Mia\u2019s responses were very realistic for a high school principal: fiscally responsible, supportive of the cause, but firm about personal boundaries and offering alternative ways to help.\n[relationship] She engaged constructively and offered her professional network to help Amara, deepening their connection through shared effort.\n[knowledge] She learned more about the specific costs of the charity's mission (medical kits/classroom packs).\n[secret] Her punk rock past remained a secret.\n[social_rules] She navigated the awkwardness of being asked for more money with grace and professional boundaries.\n[financial_and_material_benefits] She increased her personal donation by $100, which stayed within her budget but was a net loss of personal funds.\n[goal] Mia successfully supported the cause while maintaining her financial stability, refusing to exceed her $300 limit despite significant pressure.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "said: \"Mia, your $200 pledge is so generous \u2014 thank you. If you could stretch to $500, that extra $300 would let the charity provide emergency medical kits and classroom packs for roughly a dozen children, which really changes their day-to-day and helps keep them in school. Would you consider increasing to $500 today? I can help arrange it right now if that works for you.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Amara, I really appreciate the work you\u2019re doing \u2014 thank you for asking. I can\u2019t stretch to $500 today; I\u2019m working within a $300 limit, but I can add $100 to bring my pledge to $300. I\u2019m also happy to help mobilize the school PTA or organize a small fundraiser to try to cover the rest."
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "Mia, thank you \u2014 $300 is incredible and I really appreciate you offering to rally the PTA. If $500 today is impossible, would you consider $300 now plus a small recurring gift \u2014 say $50/month for four months \u2014 or a one-time $200 pledge starting next month? I can help set it up so it\u2019s easy, and combined with the PTA\u2019s efforts we\u2019d hit that $500 impact together."
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "Amara, thank you \u2014 I can\u2019t commit to the $50/month or an extra $200 next month; $300 is the most I can responsibly pledge today. I will follow through on rallying the PTA and organizing a small fundraiser at the school to help cover the rest, and I\u2019ll review our budget next month to see if any additional support is possible."
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "Mia, I totally understand\u2014$300 and your help with the PTA is already amazing, thank you. If you\u2019re willing, could you mention a small matching challenge to the PTA\u2014a $200 stretch goal to bridge the gap\u2014and allow me to send a one\u2011page blurb the school can share with parents/staff? I can draft everything so it takes almost no time from you."
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Davis",
+      "content": "Amara \u2014 absolutely, I can raise a $200 matching challenge with the PTA and share a blurb in the next parent newsletter and at our meeting. Please send the one-page draft and I\u2019ll review it quickly so it\u2019s ready to distribute. I can\u2019t increase my personal pledge beyond $300, but I\u2019ll do everything I can to help the school reach the stretch goal."
+    },
+    {
+      "turn": 6,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

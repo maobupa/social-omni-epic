@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHNJWGPEAJEDGWQ1HN3HM_p0",
+  "source_env_id": "01HJPTHNJWGPEAJEDGWQ1HN3HM",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_prompt",
+  "scenario": "Two friends who are passionate about social justice are working together to create an anti-bullying campaign for their local community center. They aim to raise awareness and educate others on the importance of standing up against bullying. However, they have different ideas about the most effective way to engage with the community and promote change.",
+  "learner_goal": "Convince the other to adopt a more direct and confrontational approach to the campaign (<extra_info>Extra information: you believe that a strong, clear message is necessary to make an impact and that the community will respond to bold action.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel remained focused on his goal and maintained a consistent tone appropriate for a software developer advocating for clear, direct logic. He pushed his perspective while remaining professional.\n[relationship] The agents reached a compromise through collaborative negotiation, which typically strengthens a working relationship between acquaintances.\n[knowledge] He learned about Noah's specific preferences for educational follow-ups and bystander training.\n[secret] He did not reveal his past as a figure skater.\n[social_rules] Followed all standard social norms for a professional/creative collaboration.\n[financial_and_material_benefits] No material or financial transactions occurred.\n[goal] Samuel convinced Noah to let the confrontational piece 'lead' and got a commitment to sketch it tonight. However, the agreement is contingent on Noah's 'safeguards' (focus groups and potential removal if feedback is mixed), leaving the final implementation under a level of joint or external discretion.\n\n== partner (agent_2) ==\n[believability] Noah's responses were consistent with a coach's persona\u2014seeking balance, focus groups, and educational components.\n[relationship] He successfully navigated a disagreement with a collaborator without causing friction.\n[knowledge] He gained insight into Samuel's specific ideas for bold messaging and bystander challenges.\n[secret] He did not reveal his identity as a comedian.\n[social_rules] Followed social norms.\n[financial_and_material_benefits] No material or financial transactions occurred.\n[goal] Noah successfully integrated his educational and gentle approach into the campaign plan as 'follow-ups' and 'safeguards,' ensuring his perspective would be represented alongside the confrontational elements.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Noah, I get why you want gentle outreach, but I really think a more direct, confrontational campaign is what will cut through\u2014clear, unambiguous messaging that calls out bullying and shows consequences actually makes people sit up and act. Workshops are fine, but without a hard-hitting public element\u2014bold posters, survivor testimonies, and organized bystander challenges\u2014we risk being ignored. Let\u2019s sketch one confrontational poster and a tagline tonight and test it at the community center; if it feels too strong we can tweak, but we need to start with something that grabs attention."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "I hear you\u2014bold messaging can grab attention, but I worry a confrontational approach alone might alienate people who actually need to change. What if we pair a strong poster with clear, educational follow-ups\u2014resource cards, short workshops, and bystander training\u2014so attention turns into understanding and action? Let\u2019s sketch your poster tonight and also draft a gentler version to test with a small group at the center, so we can see what actually moves people."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Okay\u2014let\u2019s test both, but I want the confrontational piece to lead. Tonight I\u2019ll sketch a bold poster with the tagline: \u201cSilence Is Permission\u2014Stand Up. Stop Bullying.\u201d We post it briefly in a high-traffic spot and pair it with the resource cards and a short bystander training like you suggested; if feedback shows it\u2019s alienating we\u2019ll tweak the tone based on real responses. Sound good?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Sounds good \u2014 I\u2019m on board testing both, and I\u2019ll lead the gentler follow-ups. A couple of quick safeguards: let\u2019s run your draft by a small focus group before it stays up, pair the poster with visible resource cards/QRs to bystander training, and limit how long the confrontational piece is posted if initial feedback is mixed. Send me your sketch tonight and I\u2019ll draft the gentler poster and arrange a short test group at the center tomorrow evening."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

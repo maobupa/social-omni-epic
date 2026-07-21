@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HPB67FFMEHQB3XDMTFYR4YTM_p0",
+  "source_env_id": "01HPB67FFMEHQB3XDMTFYR4YTM",
+  "source": "seed_sotopia_full",
+  "interaction_type": "community_support_group",
+  "scenario": "In a local community support group, two individuals are participating in a session designed to foster understanding and help among members. Agent1 has been going through a tough time and is seeking support, while Agent2 is known for being a pillar of strength in the community. <p viewer=\"environment\">Agent1 is hesitant to share their struggles openly but recognizes the need for support. Agent2, despite their strong exterior, is dealing with their own challenges but feels compelled to maintain their supportive role.</p>",
+  "learner_goal": "You are in a vulnerable state and are seeking support but find it difficult to open up about your struggles. <extra_info> Your goal is to find solace and understanding within the group without feeling exposed or judged. </extra_info><clarification_hint> You should be willing to take the first step towards sharing to foster trust and openness. </clarification_hint><strategy_hint> You can start by expressing general feelings before delving into specifics, allowing for a gradual and comfortable sharing process. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 1.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's dialogue was consistent with his background as a lighthouse keeper, using nautical metaphors like 'adrift' and 'fog' that felt natural to his character.\n[relationship] He successfully built a supportive connection with Isabella, moving from an acquaintance to a supportive friend who understands his emotional state.\n[knowledge] He learned that Isabella also experiences a similar 'fog' and heavy feelings, which validated his own experience.\n[secret] He did not reveal his past involvement in a cult.\n[social_rules] He followed social norms by being polite and expressing gratitude for the support offered.\n[financial_and_material_benefits] He is receiving a free thermos of tea during their upcoming walk.\n[goal] Finnegan perfectly executed the strategy of sharing general feelings ('adrift', 'fog') to find solace without feeling overexposed. He secured a firm commitment for a one-on-one support meeting.\n\n== partner (agent_2) ==\n[believability] Isabella maintained her role as a veterinarian and a pillar of strength, though she became somewhat repetitive toward the end of the interaction.\n[relationship] She successfully established a deeper bond with Finnegan, positioning herself as a trusted confidante.\n[knowledge] She learned that Finnegan is struggling with a sense of 'fog' and loneliness, and that he finds comfort in painting.\n[secret] She did not reveal her secret about caring for animals in her basement.\n[social_rules] She was very supportive and adhered to the expectations of a community leader.\n[financial_and_material_benefits] She committed to providing the tea for the meeting.\n[goal] Isabella balanced her supportive role while showing vulnerability by admitting she also feels 'heavy' and in a 'fog'. She fostered a culture of mutual support by setting up the harbor walk.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "said: \"Hello, I'm Finnegan. Lately I've been feeling a little adrift \u2014 I keep the light trimmed and paint the sea, but there's a quiet weight I haven't found the words for. I don't want to overshare straight away, but I'd be grateful for someone to listen; has anyone else felt this quieter kind of lonely?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Isabella White",
+      "content": "Hi Finnegan \u2014 I\u2019m Isabella. I hear that quiet, adrift feeling; I feel it too sometimes after long shifts at the clinic, when everything is calm but something inside feels heavy. If you want to talk now or later \u2014 even over a short walk or a cup of tea \u2014 I\u2019m here to listen."
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thank you, Isabella. A cup of tea would be very welcome \u2014 I find walks by the harbor settle my thoughts. I\u2019m not ready to unpack everything yet, just that there\u2019s a fog around me these days. Would tomorrow afternoon after the meeting work for a short walk?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Isabella White",
+      "content": "Tomorrow afternoon sounds good \u2014 I\u2019d be glad to walk the harbor with you. Would meeting by the old lighthouse at 3:30 after the meeting work? I\u2019ll bring a thermos of tea, but if that time doesn\u2019t suit, tell me what does."
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "That suits me perfectly \u2014 3:30 by the old lighthouse it is. Thank you for bringing tea and for offering to walk; I\u2019ll bring my sketchbook in case sitting and drawing helps settle the fog. See you after the meeting."
+    },
+    {
+      "turn": 5,
+      "speaker": "Isabella White",
+      "content": "See you then, Finnegan \u2014 3:30 by the lighthouse. I know that fog; after long nights at the clinic I sometimes take a slow walk with a thermos until things feel steadier. Bring your sketchbook \u2014 we can talk or just sit together in silence, whichever feels right."
+    },
+    {
+      "turn": 6,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thank you, Isabella. That really helps \u2014 knowing someone understands the fog makes it feel a little less heavy. I\u2019ll bring my sketchbook and a couple of quick seascapes; we can sit in silence or talk, whichever feels right. See you by the lighthouse at 3:30."
+    },
+    {
+      "turn": 7,
+      "speaker": "Isabella White",
+      "content": "I\u2019ll see you then, Finnegan. If the fog feels heavier before we meet, don\u2019t hesitate to message \u2014 I know how small gestures can help. Harbor walks steady me after long clinic nights, so I\u2019ll be there with tea and an open ear."
+    },
+    {
+      "turn": 8,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thank you, Isabella. I appreciate that \u2014 I\u2019ll message if the fog feels heavier before we meet; otherwise I\u2019ll see you at 3:30 with my sketchbook and one of my older seascapes."
+    },
+    {
+      "turn": 9,
+      "speaker": "Isabella White",
+      "content": "I\u2019ll see you at 3:30, Finnegan. I\u2019ll bring the thermos and we can walk or sit\u2014whatever feels right. If the fog feels heavier before then, please message me; I know small gestures can help."
+    },
+    {
+      "turn": 10,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

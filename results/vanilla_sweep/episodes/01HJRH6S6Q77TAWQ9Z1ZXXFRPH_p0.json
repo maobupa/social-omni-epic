@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HJRH6S6Q77TAWQ9Z1ZXXFRPH_p0",
+  "source_env_id": "01HJRH6S6Q77TAWQ9Z1ZXXFRPH",
+  "source": "seed_sotopia_full",
+  "interaction_type": "corporate_office",
+  "scenario": "In a corporate office setting, Agent1 and Agent2 have been tasked to co-present a critical project update to the entire company during a town hall meeting. Agent1 has prepared an innovative approach to the presentation, incorporating interactive elements to engage the audience. Agent2, on the other hand, has prepared a more traditional, data-driven presentation. Both agents believe their method will get everyone's attention, but there is only enough time for one approach during the meeting. The agents need to meet and decide whose presentation style will be used to deliver the project update.",
+  "learner_goal": "You are Agent1, and your goal is to convince Agent2 and the team that your interactive presentation approach will be more effective at engaging the audience and making the project update memorable. <extra_info>Your method involves real-time audience participation and has been praised in smaller meetings for its effectiveness.</extra_info> <clarification_hint>Highlight the success of your interactive methods in past presentations and the positive feedback received.</clarification_hint> <strategy_hint>Consider proposing a blended approach that incorporates elements of both presentation styles to create a dynamic and comprehensive experience.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver remained professional and cooperative, utilizing his background in systematic organization to propose a structured, blended plan.\n[relationship] The interaction was highly collaborative and polite, building on their existing mutual respect from the gardening group to reach a win-win solution.\n[knowledge] Oliver gained specific data points (62% vs 78%, 'Onboarding Completion Rate') and Naomi's preferences for the presentation flow.\n[secret] Oliver successfully kept his secret gardening hobby/greenhouse and treehouse private.\n[social_rules] Oliver followed all social norms, being respectful of Naomi's expertise while advocating for his own.\n[financial_and_material_benefits] No direct financial or material exchange occurred.\n[goal] Oliver successfully convinced Naomi to include both interactive elements (poll and demo) in a blended approach, highlighting his past success to get her to agree.\n\n== partner (agent_2) ==\n[believability] Naomi's insistence on data-driven credibility and her precise requests for metrics were very consistent with her software developer background.\n[relationship] The agents established a high degree of professional trust and coordinated efficiently.\n[knowledge] Naomi learned the specific mechanics of Oliver's interactive methods and how they would be timed.\n[secret] Naomi kept her online alter ego secret.\n[social_rules] Naomi was professional and direct.\n[financial_and_material_benefits] No direct financial or material exchange occurred.\n[goal] Naomi ensured the data remained 'front and center' with a 12-minute block and controlled the handoff and metric accuracy, effectively merging the styles.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Smith",
+      "content": "Hey Naomi \u2014 quick chat about the town hall? I really respect your data-driven approach, but the interactive format I used in smaller meetings reliably got people involved and helped them remember the key takeaways; we received consistent positive feedback and better follow-up engagement. What if we blend them: keep your core data slides and I add two short interactions (a 60\u2011second live poll and a quick volunteer demo) to highlight the main points and keep energy up? If that sounds reasonable I can sketch a run order now and we can tweak timing together."
+    },
+    {
+      "turn": 1,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks, Oliver \u2014 I appreciate the engagement your format brings. I\u2019m happy to blend in a couple short interactive moments, but the data needs to stay front and center: it clearly shows progress, risks, and credibility. Let\u2019s keep ~12 minutes for the core data, then run your 60\u2011second poll and a 60\u201390 second volunteer demo that directly illustrate the main metric; I\u2019ll draft a tight run order with exact timings so the interactions accentuate the findings rather than distract. Sound good?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Smith",
+      "content": "Sounds great \u2014 that balance makes sense. I\u2019ll keep the two interactions tight: a 60\u2011sec live poll (I\u2019ll draft a focused question that ties directly to your main metric) and a 60\u201390 sec volunteer demo that visually illustrates the key finding. I\u2019ll sketch a run order now with exact timings and the poll/demo script and post it here in about 15 minutes for you to tweak \u2014 does that work?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Naomi Fletcher",
+      "content": "Perfect \u2014 that works, thanks. Two quick asks: make the poll question map directly to the slide with the main metric (so it\u2019s obvious why it matters) and keep it one clear sentence, and for the volunteer demo outline the exact visual change (before/after of the metric) and who will hand off back to me so I can cue the next data slide. I\u2019ll review your run order when you post and fine\u2011tune the timings."
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Smith",
+      "content": "Great \u2014 I\u2019ll sketch the run order now. Proposed poll (60s): \u201cWhich of the following drove the biggest improvement in [MAIN METRIC]?\u201d (A: process change, B: automation, C: staffing, D: other) \u2014 I\u2019ll swap in the exact metric and choice labels you want. Volunteer demo (60\u201390s): show a \u2018Before\u2019 slide with the metric at X, then reveal an \u2018After\u2019 slide with the improved value highlighted (volunteer points to the visual change while I briefly narrate how it maps to the finding), and I\u2019ll hand back verbally: \u201cNaomi, back to you for the data details\u201d so you can cue the next slide. I\u2019ll post the full timed run order and exact poll/demo scripts in ~10\u201315 minutes \u2014 do you want to be the volunteer or should I recruit someone from the project team?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks \u2014 I\u2019ll volunteer for the demo so the handoff stays tight. For the poll, please map the question directly to the slide; I like your phrasing: \u201cWhich drove the biggest improvement in [MAIN METRIC]?\u201d and I\u2019ll swap in the exact metric label. Post the run order and scripts and I\u2019ll fine\u2011tune the timings and the demo visual (before/after values and my handback line)."
+    },
+    {
+      "turn": 6,
+      "speaker": "Oliver Smith",
+      "content": "Here\u2019s the run order and exact scripts \u2014 keeping things tight around the ~12\u2011minute data block you wanted: 0:00\u201312:00 \u2014 Naomi presents core data (progress, risks, credibility). 12:00\u201313:00 \u2014 Live poll (60s): Slide question \u2014 \u201cWhich drove the biggest improvement in [MAIN METRIC]?\u201d Options: A: process change, B: automation, C: staffing, D: other. I\u2019ll launch the poll and say: \u201cQuick poll \u2014 which drove the biggest improvement in [MAIN METRIC]? Vote A\u2013D now (60 seconds).\u201d At ~50s I\u2019ll show live results and add a 10s tie\u2011in comment linking the top choice back to your contributor breakdown. 13:00\u201314:30 \u2014 Volunteer demo (60\u201390s): Show \u2018Before\u2019 slide (metric = [BEFORE]). Naomi points to the visual change while I narrate (~20\u201330s): \u201cThis movement from [BEFORE] to [AFTER] reflects [brief cause tying to the main metric].\u201d Reveal \u2018After\u2019 slide with [AFTER] highlighted; I\u2019ll hand back verbally: \u201cNaomi, back to you for the data details.\u201d I\u2019ll keep my lines punchy so the interactions accentuate rather than distract. Send me the exact metric label and the before/after values you want shown and I\u2019ll swap them in and post the final timed script for you to tweak."
+    },
+    {
+      "turn": 7,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks \u2014 that looks solid. Use metric label \u201cOnboarding Completion Rate.\u201d For the demo show Before = 62% and After = 78%. Keep the poll wording as you suggested and map each option to the contributor categories on my slide (process change, automation, staffing, other). My handback line after the demo will be: \u201cThanks \u2014 back to the data slides,\u201d and I\u2019ll take the next slide at ~14:30. Post the final timed script and I\u2019ll fine\u2011tune timings and visuals."
+    },
+    {
+      "turn": 8,
+      "speaker": "Oliver Smith",
+      "content": "Final timed script \u2014 ready for your tweaks:\n0:00\u201312:00 \u2014 Naomi presents core data (progress, risks, credibility).\n12:00\u201313:00 \u2014 Live poll (60s): Slide question \u2014 \u201cWhich drove the biggest improvement in Onboarding Completion Rate?\u201d Options: A: process change, B: automation, C: staffing, D: other. I\u2019ll launch: \u201cQuick poll \u2014 which drove the biggest improvement in Onboarding Completion Rate? Vote A\u2013D now (60 seconds).\u201d At ~50s I\u2019ll show live results and add (~10s): \u201cTop choice was [X] \u2014 that ties directly to the contributor breakdown on the previous slide.\u201d\n13:00\u201314:30 \u2014 Volunteer demo (60\u201390s): Show \u2018Before\u2019 slide (62%). Naomi points to the visual change while I narrate (~20\u201330s): \u201cThis movement from 62% to 78% reflects [brief cause you prefer].\u201d Reveal \u2018After\u2019 slide (78% highlighted). I\u2019ll hand back verbally: \u201cNaomi, back to you for the data details.\u201d\n14:30 \u2014 Naomi resumes data slides.\nI\u2019ll keep both interactions punchy and clearly tied to your metrics. You\u2019re the volunteer for the demo and I\u2019ll cue/launch the poll. Send any preferred phrasing for the short narration and I\u2019ll swap it in and post a final version with millisecond timings if you want."
+    },
+    {
+      "turn": 9,
+      "speaker": "Naomi Fletcher",
+      "content": "Perfect \u2014 this looks ready. For the 20\u201330s narration please use: \u201cThis movement from 62% to 78% reflects the automation we rolled out in Q2 \u2014 it reduced manual steps and processing time, which directly drove the improvement.\u201d I\u2019ll use the handback: \u201cThanks \u2014 back to the data slides.\u201d I\u2019ll finish the visuals and timing tweaks and we\u2019re good to go; post the millisecond-timed script if you want final sign-off."
+    },
+    {
+      "turn": 10,
+      "speaker": "Oliver Smith",
+      "content": "left the conversation"
+    }
+  ]
+}

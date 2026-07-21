@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPAYNSDAKRJ7RQ175QCHYAGD_p0",
+  "source_env_id": "01HPAYNSDAKRJ7RQ175QCHYAGD",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_iqa",
+  "scenario": "Agent1 overhears Agent2, a close friend, saying 'I hate my friend' in a conversation with others. Agent1 is hurt and confused, as they had always shared a good relationship. Agent2 notices the change in Agent1's behavior and realizes the misunderstanding, wanting to clarify their statement and mend the friendship.",
+  "learner_goal": "Confront Agent2 to discuss the overheard statement and express feelings of hurt and confusion (<extra_info>Extra information: You are seeking clarification on the context in which 'I hate my friend' was said, as you value the friendship and want to understand the reason behind such a statement.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver is polite, direct, and consistently expresses the hurt he felt while maintaining his stated values of neighborly friendship.\n[relationship] The relationship improved significantly as a major misunderstanding was cleared up and they agreed on regular check-ins to maintain their bond.\n[knowledge] Oliver learned the specific person (Marcus) Baxter was actually talking about and the context (a client dispute), resolving his confusion.\n[secret] Oliver did not reveal his hidden feelings for his neighbor.\n[social_rules] Oliver followed social norms perfectly by confronting his friend privately and respectfully.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Oliver successfully confronted Baxter, expressed his hurt, and received the specific clarification he was seeking regarding the context of the comment.\n\n== partner (agent_2) ==\n[believability] Baxter provides a plausible and detailed explanation for his outburst and shows immediate regret for the impact of his words.\n[relationship] Baxter mended the friendship and established a future communication protocol (weekly check-ins).\n[knowledge] Baxter learned that Oliver had overheard him and was deeply affected by it.\n[secret] Baxter did not reveal his possession of a priceless artifact.\n[social_rules] Baxter was apologetic and constructive in his communication.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Baxter provided a full explanation, resolved the conflict, and successfully proposed a plan for regular check-ins to strengthen the friendship.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "Baxter, can we talk for a minute? I overheard you say \"I hate my friend\" earlier and I have to be honest \u2014 that stung. I'm confused because I value our neighbourly friendship; could you tell me what you meant or if it was about someone else?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "Oliver, I'm really sorry \u2014 that comment wasn't about you. I was venting about someone else and I was careless with my words; I can see how it sounded and I shouldn't have left it hanging. I value our neighbourly friendship \u2014 if you're willing, let's clear it up now and agree to be more direct with each other, maybe set a quick regular check-in so things don't fester."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "Thank you, Baxter \u2014 I appreciate you saying that. It still stung to hear; could you tell me who you were talking about so I can put it behind me? I value our neighbourly friendship, and a short regular check-in sounds reasonable \u2014 I'm happy to do that if you are."
+    },
+    {
+      "turn": 3,
+      "speaker": "Baxter Sterling",
+      "content": "Oliver \u2014 it was about Marcus, a difficult client from the shop who tried to undercut me and spread a nasty rumor. I should have been clearer and I'm sorry it landed on you; that wasn't fair. I value our neighbourly friendship \u2014 let's start those quick weekly check\u2011ins, say a 10\u2011minute catch-up once a week; if that works for you we can pick a time."
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

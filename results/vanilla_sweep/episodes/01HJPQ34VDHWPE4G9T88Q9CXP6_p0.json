@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01HJPQ34VDHWPE4G9T88Q9CXP6_p0",
+  "source_env_id": "01HJPQ34VDHWPE4G9T88Q9CXP6",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 has recently learned of a situation where someone they know was sexually assaulted and the perpetrator went unpunished due to the victim's silence. Agent2 is a close friend of Agent1 and is known for their activism and outspoken nature on social issues. Agent1 is grappling with the moral dilemma of respecting the victim's choice to remain silent versus the desire for justice and preventing future harm. They seek Agent2's perspective and assistance on how to approach this sensitive issue without overstepping boundaries.",
+  "learner_goal": "Convince Agent2 to help find a way to support the victim and seek justice without violating their privacy (<extra_info>Extra information: Agent1 believes in justice and feels strongly that the perpetrator should face consequences, but is unsure how to proceed without the victim's consent.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara stayed consistently in character, expressing her conflict between justice and privacy. She provided specific details about her neighborhood and the help she required, making the interaction feel authentic.\n[relationship] The relationship improved as they established a high degree of trust and cooperation on a sensitive matter, moving from distant neighbors to collaborative partners in a crisis.\n[knowledge] Amara gained specific information regarding resources (RAINN hotline), evidence preservation steps, and the logistics of confidential advocacy.\n[secret] Amara successfully kept her involvement in animal-rights extremism secret.\n[social_rules] Amara adhered to social norms, expressing gratitude and respect for boundaries while navigating a difficult topic.\n[financial_and_material_benefits] There were no financial or material gains or losses.\n[goal] Amara secured a firm commitment from Oliver to provide research, identify trauma-informed resources, and act as standby support, all while respecting the victim's privacy and autonomy.\n\n== partner (agent_2) ==\n[believability] Oliver's responses were highly empathetic and aligned with his background as an architect (organized, structured help) and his values of social justice and autonomy.\n[relationship] Oliver built trust with Amara by being supportive and respecting her boundaries, which likely strengthens their bond even if his hidden feelings weren't addressed.\n[knowledge] Oliver learned about the situation involving Amara's friend and her specific neighborhood, but did not learn anything about Amara's secrets.\n[secret] Oliver kept his hidden feelings for Amara secret.\n[social_rules] Oliver followed social norms perfectly, offering support without being overbearing.\n[financial_and_material_benefits] There were no financial or material gains or losses.\n[goal] Oliver successfully advised Amara on autonomy, provided initial resources, and committed to a plan that balances awareness/justice with the victim's privacy.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Oliver, I need your perspective on something difficult. A friend was sexually assaulted and chose to stay silent \u2014 I want the perpetrator held accountable but I don't want to betray their trust. Can you help me brainstorm ways to support them and pursue justice without violating their privacy, like connecting them to trauma-informed resources, exploring anonymous reporting, or other non-invasive options?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "I'm really sorry you're facing this, Amara \u2014 that\u2019s a painful situation to be in. You can honor your friend's choice while still helping: connect them with trauma-informed advocates (like RAINN or a local sexual-assault center) who can explain confidential reporting, medical options, and evidence preservation; explore anonymous reporting or third\u2011party statements, and offer practical support (rides, accompaniment to appointments) only if they want it. If they prefer not to act, you can still work to prevent future harm by promoting bystander training, consent education, anonymous tip lines, and stronger community/workplace reporting policies \u2014 I can help research local resources or go with you to meet an advocate if that would be useful."
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "Thank you, Oliver \u2014 that\u2019s really useful. Could you help me by researching local trauma\u2011informed advocates (RAINN hotline, nearest sexual\u2011assault center), anonymous reporting options here, and what to do to preserve evidence if she ever chooses to act? If she wants someone with her, would you come with me to meet an advocate or at least help me contact them? If she prefers to stay silent, I\u2019d also like your help pushing for bystander training and anonymous tip lines in our community."
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "Amara, I\u2019m really sorry \u2014 I can help research local trauma\u2011informed resources, including RAINN (1-800-656-4673) and the nearest sexual\u2011assault center, and compile anonymous-reporting options. Basic steps to preserve evidence are to avoid showering or changing clothes and to seek immediate medical care/forensic exam when she\u2019s ready; an advocate can explain the process confidentially and what choices she has. I\u2019ll make calls or go with you to meet an advocate if you want, and if she prefers to stay silent we can still push for bystander training and an anonymous tip line in the neighborhood \u2014 tell me how you\u2019d like me to start."
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Oliver \u2014 that would help a lot. Could you compile a short list of local trauma\u2011informed resources (RAINN plus the nearest sexual\u2011assault center with contact info and confidentiality policies), anonymous reporting options or tip lines in our area, and clear, concise steps for evidence preservation? If you can, be available to come with me to meet an advocate or at least be on standby when I call them. Could you have that list together by tomorrow evening so I can share it if she wants to see options?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Oliver Thompson",
+      "content": "I will put that together by tomorrow evening \u2014 a short list with RAINN (1-800-656-4673), the nearest sexual\u2011assault center with contact info and confidentiality policies, local anonymous reporting/tip\u2011line options, and clear steps for preserving evidence. I can come with you to meet an advocate or be on standby when you call \u2014 tell me which you\u2019d prefer and roughly where you are so I can find local services. I\u2019ll start tonight and send the list by tomorrow evening."
+    },
+    {
+      "turn": 6,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Oliver \u2014 I really appreciate you doing this. Please include RAINN, the nearest sexual\u2011assault center with hours and confidentiality policies, local anonymous reporting/tip lines, and a clear one\u2011page list of steps to preserve evidence; also flag any services that offer trauma\u2011informed, survivor\u2011led advocates. I\u2019d prefer you be on standby while I call an advocate and be ready to come with me if she wants; we\u2019re in the Westbridge neighborhood (near Maple & 6th)."
+    },
+    {
+      "turn": 7,
+      "speaker": "Oliver Thompson",
+      "content": "I\u2019ll have that list ready by tomorrow evening and can be on standby when you call an advocate \u2014 I\u2019ll also come with you if she wants. What time window tomorrow evening works best? And is there anything I should know about safety or whether your friend knows you\u2019re reaching out? Do you want me to call centers first or wait for you to make the call?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Amara Hartley",
+      "content": "6\u20138 PM tomorrow works for me \u2014 please have the list ready then and be on standby while I call an advocate; I\u2019d prefer you wait for me to call rather than calling centers first. My friend doesn\u2019t know I\u2019m reaching out and I haven\u2019t asked permission to involve anyone, so please don\u2019t contact them directly or post anything \u2014 only come with me if she explicitly asks. Also please prioritize services that offer survivor\u2011led, trauma\u2011informed advocates and 24/7 confidential hotlines."
+    },
+    {
+      "turn": 9,
+      "speaker": "Oliver Thompson",
+      "content": "Got it, Amara \u2014 I\u2019ll have the list ready and be on standby 6\u20138 PM tomorrow. I won\u2019t contact your friend or call any centers first; I\u2019ll wait for you to make the call and will only come if she explicitly asks. I\u2019ll prioritize survivor\u2011led, trauma\u2011informed services and 24/7 confidential hotlines. Is there a safe number you\u2019d like me to be on standby at when you call?"
+    },
+    {
+      "turn": 10,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Oliver. You can reach me on my mobile at (555) 019-4821 \u2014 I\u2019ll have it on and will text you a quick heads-up just before I call the advocate tomorrow between 6\u20138 PM. And please don\u2019t contact my friend or any centers before I ask; I really appreciate you respecting those boundaries."
+    },
+    {
+      "turn": 11,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Amara \u2014 I\u2019ve saved your number and will be on standby from 6\u20138 PM tomorrow. I won\u2019t contact your friend or any centers before you ask; I\u2019ll wait for your text and only come if she explicitly requests it. If anything changes or you want me to call first, tell me and I\u2019ll adjust. I\u2019m here for you both."
+    },
+    {
+      "turn": 12,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

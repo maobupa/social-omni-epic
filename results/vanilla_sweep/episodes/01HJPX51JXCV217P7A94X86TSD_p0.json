@@ -1,0 +1,98 @@
+{
+  "scenario_id": "01HJPX51JXCV217P7A94X86TSD_p0",
+  "source_env_id": "01HJPX51JXCV217P7A94X86TSD",
+  "source": "seed_sotopia_full",
+  "interaction_type": "counseling_session",
+  "scenario": "Agent1 and Agent2 have both decided to see a counselor for the first time to work on their communication issues. They have been friends for a few years but recently had a major disagreement that led them to seek professional help. During the session, Agent1 feels that the counselor is favoring Agent2's perspective and becomes defensive, arguing that their point of view isn't being adequately considered. Agent2, on the other hand, feels that Agent1 is not fully engaging with the process and is resistant to the counselor's suggestions. They must navigate this tension while trying to benefit from the counseling session.",
+  "learner_goal": "You are Agent1, and your goal is to make sure your perspective is heard and considered in the counseling session. <extra_info>Express your feelings of being overlooked and the importance of equal consideration in the session.</extra_info> <clarification_hint>Make it clear that you value the counseling process and are committed to improving the relationship.</clarification_hint> <strategy_hint>Encourage open dialogue and express willingness to consider Agent2's viewpoint if your own is also acknowledged.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 16,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver's character was consistently portrayed as a focused architect seeking clear communication structures and boundaries. His defensiveness was expressed politely but firmly.\n[relationship] The relationship improved significantly through mutual agreement on communication protocols and active listening exercises.\n[knowledge] Oliver learned about Baxter's intentions behind offering advice (wanting to help) and Baxter's feelings of being criticized.\n[secret] Oliver did not reveal his hidden feelings for Baxter.\n[social_rules] Oliver followed social norms and the conventions of a counseling session throughout.\n[financial_and_material_benefits] There were no financial or material gains in this interaction.\n[goal] Oliver successfully expressed his feelings of being overlooked, negotiated a structured approach where he was heard first, and secured Baxter's commitment to specific communication changes (asking permission and checking in).\n\n== partner (agent_2) ==\n[believability] Baxter's responses were consistent with an antique restorer's likely patience and the persona of someone trying to be helpful but misguidedly 'fixing' things.\n[relationship] Baxter successfully de-escalated Oliver's defensiveness and established a cooperative framework for the session.\n[knowledge] Baxter gained specific knowledge about what triggers Oliver's defensiveness and what practical steps Oliver needs to feel respected.\n[secret] Baxter kept his possession of a priceless artifact secret.\n[social_rules] Baxter followed all social rules and was exceptionally supportive and validating.\n[financial_and_material_benefits] There were no financial or material gains in this interaction.\n[goal] Baxter successfully encouraged Oliver to trust the process, reinforced the counselor's neutrality, and implemented the structured turn-taking approach he proposed.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "said: \"I appreciate that we\u2019re here and I want this to work, but I have to say I\u2019m feeling overlooked \u2014 it seems like the counselor has leaned toward Baxter\u2019s perspective and that makes me defensive. I care about this friendship and I\u2019m committed to improving how we communicate, so I need my concerns heard and addressed with the same weight as Baxter\u2019s. I\u2019m willing to listen and consider Baxter\u2019s view if we all agree to give one another equal space to speak.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "Oliver, I hear you \u2014 I\u2019m sorry you feel overlooked. Your concerns matter to me and to the counselor; I trust they\u2019re aiming to stay neutral and help us find common ground. Would you be willing to try a simple structure: each of us gets three minutes uninterrupted to speak while the other mirrors what they heard, then the counselor gives feedback? I want us both to feel equally heard and I\u2019m ready to start when you are."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "Thank you, Baxter \u2014 that structure sounds fair and I appreciate you offering it. I\u2019d like the counselor to enforce the timing so we both get equal space; I can go first if that\u2019s okay. I\u2019m ready to speak for my three minutes and then mirror what I hear from you."
+    },
+    {
+      "turn": 3,
+      "speaker": "Baxter Sterling",
+      "content": "I agree \u2014 having the counselor enforce the timing sounds fair. I\u2019ll listen for your full three minutes without interrupting and then mirror back what I heard before I speak. Your concerns matter to me, so please go ahead when you\u2019re ready."
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Thompson",
+      "content": "said: \"Okay \u2014 I\u2019ll start. During our disagreement I felt dismissed and like my concerns about respect and clear boundaries weren\u2019t given the same weight, which made me defensive. I care about this friendship and want practical steps to avoid that pattern; I\u2019m committed to listening to Baxter for three minutes if the counselor enforces the timing and reflects back what I say. I\u2019m ready to begin now.\""
+    },
+    {
+      "turn": 5,
+      "speaker": "Baxter Sterling",
+      "content": "said: \"I'm ready and listening. I'll listen for your full three minutes without interrupting and then mirror back what I heard before I speak. Counselor, could you please start the timer?\""
+    },
+    {
+      "turn": 6,
+      "speaker": "Oliver Thompson",
+      "content": "said: \"Thank you \u2014 I\u2019ll begin. During our disagreement I felt dismissed and like my concerns about respect and clear boundaries were brushed aside, which shut me down and made me respond defensively. Going forward I\u2019d like two practical steps: pause and ask permission before offering fix-it advice, and use a short cue like \u2018Can I share?\u2019 to slow things down \u2014 I\u2019ll use the same pause before I respond and listen fully to Baxter\u2019s three minutes. I\u2019m ready when you are to mirror back what you heard.\""
+    },
+    {
+      "turn": 7,
+      "speaker": "Baxter Sterling",
+      "content": "said: \"I hear you \u2014 you felt dismissed and that your concerns about respect and clear boundaries were brushed aside, which shut you down and made you respond defensively. You asked for two practical steps: pause and ask permission before offering fix\u2011it advice, and use a short cue like \u2018Can I share?\u2019 to slow things down; I commit to doing both and I trust the counselor to enforce the timing. I\u2019m ready to speak for my three minutes when the counselor signals.\""
+    },
+    {
+      "turn": 8,
+      "speaker": "Oliver Thompson",
+      "content": "said: \"Thanks, Baxter \u2014 I appreciate you listening. Counselor, please start the timer. I\u2019m ready to listen fully to Baxter\u2019s three minutes and will mirror back what I hear when he\u2019s finished.\""
+    },
+    {
+      "turn": 9,
+      "speaker": "Baxter Sterling",
+      "content": "said: \"Oliver, I value this friendship and I hear how dismissed you felt \u2014 I\u2019m sorry my responses made you shut down. I recognize I habitually offer fixes because I want to help, but I commit now to pausing and asking \u201cCan I share?\u201d before giving advice, to respect boundaries, and to follow the counselor\u2019s timing so you have equal space. I trust the counselor to stay neutral and keep things fair; I\u2019m ready to be fully present and listen to your mirror now, and I appreciate you doing the same for me afterward.\""
+    },
+    {
+      "turn": 10,
+      "speaker": "Oliver Thompson",
+      "content": "said: \"I hear you, Baxter \u2014 thank you for apologizing and for committing to pause and ask \u2018Can I share?\u2019 before offering fixes. What I heard is that you value the friendship, regret that your responses made me shut down, will respect boundaries and the counselor\u2019s timing so we each get equal space, and are ready to be fully present. I appreciate that and I\u2019ll listen fully to your perspective now, as long as we keep those agreements in place.\""
+    },
+    {
+      "turn": 11,
+      "speaker": "Baxter Sterling",
+      "content": "said: \"Thanks, Oliver \u2014 I appreciate you making the space to listen. From my side, I felt my attempts to help were taken as criticism, which made me defensive and caused me to offer fixes too quickly instead of simply being present. I value this friendship and I trust the counselor to keep us balanced; I\u2019ll ask \u201cCan I share?\u201d before offering advice and follow the timed turns \u2014 I\u2019m ready to speak for my three minutes when the counselor signals.\""
+    },
+    {
+      "turn": 12,
+      "speaker": "Oliver Thompson",
+      "content": "said: \"Thanks, Baxter \u2014 I appreciate you saying that and I hear you felt criticized when you offered help. I\u2019d like us to add a quick check-in after conflicts \u2014 something like \u201cDo you want advice or just support?\u201d \u2014 so we both know how to respond; are you willing to try that along with asking \u201cCan I share?\u201d I\u2019m ready when the counselor signals.\""
+    },
+    {
+      "turn": 13,
+      "speaker": "Baxter Sterling",
+      "content": "Yes \u2014 I\u2019m willing to try that. I\u2019ll ask \u201cCan I share?\u201d and, when it seems right, follow with \u201cDo you want advice or just support?\u201d so we both know how to respond; your perspective matters to me and I trust the counselor to keep our timing fair. I\u2019m ready when the counselor signals."
+    },
+    {
+      "turn": 14,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01H7VFHPGABSWQXTACCC8C3X2F_p0",
+  "source_env_id": "01H7VFHPGABSWQXTACCC8C3X2F",
+  "source": "seed_sotopia",
+  "interaction_type": "mutual_friends",
+  "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Gracie.</p>",
+  "learner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Gracie: School: Ithaca College  Major: Mathematics Education  Company: Aramark  Location Preference: indoor \n Ada: School: Tulane University  Major: Computer Engineering  Company: Briggs & Stratton  Location Preference: indoor \n Sergio: School: LeTourneau University  Major: Economics  Company: Savers  Location Preference: indoor \n William: School: Eastern Michigan University  Major: Ceramic Engineering  Company: Xenco Medical  Location Preference: indoor \n Harry: School: Creighton University  Major: Computer Engineering  Company: Speedway Motorsports  Location Preference: indoor \n Tyler: School: Columbia College Chicago  Major: Middle Eastern Languages  Company: Aramark  Location Preference: indoor \n Richard: School: University of Dubuque  Major: German  Company: Illinois Tool Works  Location Preference: indoor \n Randy: School: Holy Cross College  Major: Library Science  Company: American Licorice Company  Location Preference: indoor \n Marquerite: School: Ithaca College  Major: Middle Eastern Languages  Company: Aramark  Location Preference: indoor \n Jack: School: Creighton University  Major: Chinese  Company: Speedway Motorsports  Location Preference: outdoor \n Cody: School: Metropolitan State University  Major: Mathematics Education  Company: LinkedIn  Location Preference: indoor \n Shirley: School: Augsburg College  Major: Senior High Education  Company: Demaco  Location Preference: indoor \n</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan's dialogue is consistent with his background as a software developer and he provides specific, plausible details about his acquaintances.\n[relationship] Ethan successfully navigated a conversation with an acquaintance and established a point of shared connection, which generally warms a relationship.\n[knowledge] Ethan confirmed that Noah knows Gracie based on the specific details provided (Ithaca, Aramark, Math Education, female, campus services).\n[secret] Ethan did not reveal his secret about donating to charities.\n[social_rules] Ethan followed all social norms and was polite throughout the interaction.\n[financial_and_material_benefits] There were no financial or material gains or losses.\n[goal] Ethan successfully identified a mutual friend (Gracie) without simply listing her name, by providing and verifying details until both parties were certain.\n\n== partner (agent_2) ==\n[believability] Noah's responses were consistent with his role as a coach and he acted naturally in trying to verify the identity of the mutual friend.\n[relationship] Noah established a stronger bond with Ethan through the discovery of a mutual friend.\n[knowledge] Noah successfully identified that Ethan knows Gracie, matching her to his own social circle.\n[secret] Noah did not reveal his secret identity as a stand-up comedian.\n[social_rules] Noah followed all social norms and was cooperative in the conversation.\n[financial_and_material_benefits] There were no financial or material gains or losses.\n[goal] Noah successfully identified the mutual friend (Gracie) through a process of elimination and detail-sharing without just listing names.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Smith",
+      "content": "said: \"Hey Noah, good to see you \u2014 quick question: do you happen to know anyone from Creighton or Ithaca College, or anyone who works at places like Aramark or Speedway Motorsports? I\u2019ve met a few people from those schools/companies and wondered if we might have someone in common.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "said: \"I might \u2014 I know a couple folks from Ithaca and a few people who work at Aramark. Do you remember any names, what they studied, or what they do there? Give me a detail or two and I\u2019ll see if it\u2019s someone I know.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Smith",
+      "content": "said: \"Yeah \u2014 one person I know went to Ithaca and majored in mathematics education and now works at Aramark in a campus services role. Another\u2019s also from Ithaca, studied Middle Eastern languages and likewise works for Aramark. I also know someone from Creighton who studied computer engineering and works at Speedway Motorsports. Do any of those ring a bell for you?\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "said: \"Hmm, that first one sounds familiar \u2014 did they mention working in campus services specifically or anything to do with student programs? And for the Middle Eastern languages person, do you happen to remember a first name or which campus/location of Aramark they\u2019re at?\""
+    },
+    {
+      "turn": 4,
+      "speaker": "Ethan Smith",
+      "content": "Yes \u2014 the first one definitely works in campus services at Ithaca, mostly in campus dining and they help run a few student programs and events. The Middle Eastern languages alum is also with Aramark, based at Ithaca\u2019s main campus doing catering/indoor events. Do those details match the people you\u2019re thinking of?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "That first description is sounding like someone I know \u2014 did they ever mention organizing late\u2011night study breaks or running events out of the main campus dining hall, and do they describe themselves as female? The Middle Eastern\u2011languages person doesn\u2019t ring a bell from my circle."
+    },
+    {
+      "turn": 6,
+      "speaker": "Ethan Smith",
+      "content": "Yes \u2014 she did mention organizing late\u2011night study breaks and running events out of the main dining hall, and she describes herself as female. That sounds like the same person. Do you know what first name or nickname she uses, or would you like me to introduce you two later?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Noah Davis",
+      "content": "Yes \u2014 that sounds like the same person. I\u2019d really appreciate an introduction later if you\u2019re up for it; otherwise tell me her first name and I\u2019ll confirm. Thanks \u2014 I\u2019d love to meet her."
+    },
+    {
+      "turn": 8,
+      "speaker": "Ethan Smith",
+      "content": "left the conversation"
+    }
+  ]
+}

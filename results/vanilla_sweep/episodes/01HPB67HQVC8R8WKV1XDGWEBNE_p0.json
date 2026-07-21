@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB67HQVC8R8WKV1XDGWEBNE_p0",
+  "source_env_id": "01HPB67HQVC8R8WKV1XDGWEBNE",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 and Agent2 were classmates in high school and have since graduated. Agent2 believes they have formed a friendship with Agent1 after asking for Agent1's phone number during high school. Agent2 frequently initiates conversations and seeks social interaction, unaware that Agent1 feels overwhelmed by their attention and is too polite to express disinterest. Agent1 is seeking a way to establish boundaries without causing undue harm to Agent2's feelings.",
+  "learner_goal": "Politely establish personal boundaries with Agent2 without damaging their self-esteem (<extra_info>Extra information: Agent1 does not wish to continue the current level of interaction but also does not want to be confrontational or hurtful</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver is polite and direct, consistent with his role as an architect seeking to maintain boundaries without confrontation.\n[relationship] The relationship maintained its cordial status while successfully transitioning to a more distant dynamic, as requested by Oliver.\n[knowledge] Oliver confirmed that Ethan is receptive to boundaries and willing to comply with the request for less frequent communication.\n[secret] Oliver did not reveal his feelings for his neighbor.\n[social_rules] Oliver followed social norms for polite boundary setting.\n[financial_and_material_benefits] No material or financial transactions occurred.\n[goal] Oliver successfully established clear boundaries ('keep our conversations more occasional') and received an explicit agreement from Ethan without causing any visible distress or damage to self-esteem.\n\n== partner (agent_2) ==\n[believability] Ethan's response was mature and understanding, reflecting the background description of a cordial acquaintance.\n[relationship] While the interaction was polite, the frequency of the relationship was intentionally decreased.\n[knowledge] Ethan learned that his frequency of communication was overwhelming Oliver and that Oliver prefers less contact.\n[secret] Ethan did not reveal his secret about charitable donations.\n[social_rules] Ethan followed social norms by respecting Oliver's stated boundaries.\n[financial_and_material_benefits] No material or financial transactions occurred.\n[goal] Ethan successfully communicated a need for space and less frequent communication in a way that was clear but not rejecting, as evidenced by his respectful and understanding response.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "Hey Ethan, I really enjoy our chats at community events and I appreciate you reaching out, but I\u2019ve been needing more quiet time lately and can\u2019t keep up with frequent messages. I hope it\u2019s okay if we keep our conversations more occasional \u2014 I\u2019ll still say hi when we meet. Thanks for understanding."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Thanks for telling me, Oliver \u2014 I really appreciate your honesty. I totally get needing more quiet time; I\u2019ll check in less often and look forward to saying hi when we run into each other. If you ever want to chat more, I\u2019m here. Take care."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

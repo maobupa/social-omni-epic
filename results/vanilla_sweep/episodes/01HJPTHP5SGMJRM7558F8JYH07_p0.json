@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHP5SGMJRM7558F8JYH07_p0",
+  "source_env_id": "01HJPTHP5SGMJRM7558F8JYH07",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_comparison",
+  "scenario": "Agent1 and Agent2 are friends who decide to attend an art gallery opening showcasing idealized portraits of beauty. After viewing the gallery, Agent1 begins to express feelings of insecurity about their own appearance. Agent2, who has always been confident and comfortable in their own skin, wants to help Agent1 feel better. The two engage in a conversation where Agent1 is looking for reassurance and advice, while Agent2 aims to provide support and perspective without inadvertently making Agent1 feel worse.",
+  "learner_goal": "Seek validation and reassurance from Agent2 about your self-image without appearing overly needy or insecure (<extra_info>Extra information: You value Agent2's opinion and want to feel better about yourself after viewing the gallery.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Benjamin's tone was very consistent with an environmental activist who is accustomed to public speaking but is having a moment of personal vulnerability. He communicated his feelings clearly and requested specific evidence to bolster his self-esteem.\n[relationship] The relationship was strengthened significantly through a vulnerable exchange where Benjamin sought reassurance and Ethan provided it with specific, high-quality examples of Benjamin's character.\n[knowledge] Benjamin gained valuable knowledge about how he is perceived by a friend he respects, including a specific anecdote that reinforces his positive self-image.\n[secret] Benjamin successfully kept his secret regarding his wealthy oil tycoon family heritage.\n[social_rules] Benjamin followed all social norms for a close friendship, balancing vulnerability with appreciation.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Benjamin successfully sought and received specific validation and reassurance from Ethan. Ethan's detailed response about the Q&A session provided exactly the 'concrete example' Benjamin asked for to help him feel better.\n\n== partner (agent_2) ==\n[believability] Ethan's response was thoughtful, mature, and consistent with a friend who values technology and practical advice. The specific example he gave from the conference was highly plausible given their background.\n[relationship] Ethan deepened the trust in the friendship by being supportive and providing high-quality emotional labor for his friend.\n[knowledge] Ethan learned about Benjamin's specific insecurities regarding his appearance and how the art gallery affected him.\n[secret] Ethan kept his secret about his charitable donations.\n[social_rules] Ethan was an excellent listener and provider of support, adhering perfectly to the role of a supportive friend.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Ethan fully achieved his goal of providing emotional support and constructive advice. He avoided being dismissive and gave concrete evidence to help Benjamin overcome his insecurity.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Benjamin Jackson",
+      "content": "Those portraits stirred something up in me \u2014 I suddenly felt a bit ordinary standing there. I don't want to sound needy, but I really value your perspective: am I being ridiculous for feeling self-conscious, or is there something I should remind myself of when I start comparing? Honestly, what do you see when you look at me?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "You're not being ridiculous \u2014 those portraits are designed to idealize and it's normal to feel the pull. When I look at you I see someone thoughtful, curious, and steady; your ideas and the way you make people feel matter far more than any picture. If it helps, try stepping away for a moment, name three things you like about yourself, and remember the people who appreciate you for who you are."
+    },
+    {
+      "turn": 2,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Ethan \u2014 that actually helps. I\u2019ll try the three-things exercise, but could you do me one favor: tell me a specific moment you remember where I came across as thoughtful or steady? A concrete example makes it easier to actually believe it. I appreciate you being honest."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "Do you remember during the conference Q&A when that grad student nervously pushed back on one of your points? You paused, listened closely, answered without getting defensive, and afterward spent ten minutes giving them practical advice \u2014 that calm, helpful response is exactly what I mean by thoughtful and steady."
+    },
+    {
+      "turn": 4,
+      "speaker": "Benjamin Jackson",
+      "content": "left the conversation"
+    }
+  ]
+}

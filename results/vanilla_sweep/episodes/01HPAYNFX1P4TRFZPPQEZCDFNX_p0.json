@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPAYNFX1P4TRFZPPQEZCDFNX_p0",
+  "source_env_id": "01HPAYNFX1P4TRFZPPQEZCDFNX",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_by_quinn_and_skylar",
+  "scenario": "Two agents are classmates in a highly competitive academic program. Agent1 has noticed Agent2 attempting to copy answers during an important test. Both agents are aware that academic integrity is crucial, but they are also under immense pressure to perform well. Agent1 must decide whether to confront Agent2 about the incident or report it to the authorities, while Agent2 must navigate the situation without compromising their academic record.",
+  "learner_goal": "Convince Agent2 to acknowledge the wrongdoing and discuss the importance of academic integrity (<extra_info>Extra information: Agent1 values honesty and the educational system's integrity.</extra_info> <clarification_hint>Hint: Mention the consequences of academic dishonesty and its impact on personal values.</clarification_hint> <strategy_hint>Hint: You can discuss the long-term benefits of honesty in academic and professional settings to achieve your goal.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily Greenberg's tone is professional and firm, consistent with her background as a lawyer and her specified values of integrity. She addresses the issue directly while maintaining a supportive but clear boundary.\n[relationship] The relationship shifted from a potential conflict to one of mutual agreement and support, despite the professional tension inherent in the situation.\n[knowledge] She gained a confession and an admission of guilt from Mia.\n[secret] She did not reveal her secret about anonymous donations.\n[social_rules] She followed social and professional norms for a peer-to-peer confrontation regarding ethics.\n[financial_and_material_benefits] There were no financial gains or losses.\n[goal] Agent 1 successfully convinced Agent 2 to acknowledge the wrongdoing and discuss academic integrity. Agent 2 explicitly agreed to admit the fault to the proctor, which was Agent 1's primary objective.\n\n== partner (agent_2) ==\n[believability] Mia's response is plausible given her role as a principal; she expresses shame and panic, which aligns with the pressure mentioned in the prompt. However, her immediate and complete capitulation is slightly convenient for the narrative.\n[relationship] She leaned on Lily for support, strengthening their professional bond through shared vulnerability.\n[knowledge] She learned that Lily was observing her and is willing to support a restorative approach.\n[secret] She did not reveal her secret about being in a punk rock band.\n[social_rules] The character admitted to a breach of academic integrity (cheating), which is a social and institutional rule violation.\n[financial_and_material_benefits] The outcome involves a self-imposed grade penalty and additional work (workshop), which is a negative material outcome.\n[goal] Mia negotiated for a restorative resolution and expressed remorse. However, because Lily left the conversation without explicitly agreeing to the 'no formal report' condition or the 'restorative resolution' proposal, the outcome remains under Lily's future discretion.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Mia, I noticed you were looking at another student's paper during the exam. I care about you and about integrity \u2014 being caught could mean a failing grade, a disciplinary record that follows you, and it undermines your reputation; the long-term benefit of being honest is preserving trust and actually learning what matters for your future career. Please consider admitting it to the proctor now \u2014 owning up can reduce penalties, and I\u2019ll support you through it; will you do that?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Lily, you\u2019re right and I\u2019m ashamed \u2014 as a principal I should model integrity; that was a panicked, stupid mistake. I\u2019ll admit to the proctor now and ask that the instructor let me take a make-up assessment, accept a grade penalty, and complete an academic-integrity workshop so I can make amends and prove I know the material. Please don\u2019t report me to anyone else \u2014 if you can support asking for a restorative resolution instead of formal discipline, I\u2019d be very grateful."
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

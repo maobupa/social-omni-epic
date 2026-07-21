@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ34RMDPWK6KQ077WK9JC0_p0",
+  "source_env_id": "01HJPQ34RMDPWK6KQ077WK9JC0",
+  "source": "seed_sotopia_full",
+  "interaction_type": "emotional_closure",
+  "scenario": "Conversation in a quiet coffee shop where two individuals, who were previously in a romantic relationship, accidentally meet after a long time. The atmosphere is tense as one individual hoped for reconciliation in the past but was turned down. Now, they are seeking closure and understanding, while the other is trying to maintain a polite but distant interaction.",
+  "learner_goal": "Seek emotional closure from the past relationship and understand the reasons behind the lack of interest in rekindling the romance (<extra_info>Extra information: you still have lingering feelings and unanswered questions.</extra_info> <strategy_hint>Hint: you can express your emotions in a calm and non-confrontational manner.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel's dialogue was very realistic for someone seeking closure. He was vulnerable yet respectful, staying true to his background as a software developer who might approach problems with a desire for specific clarity.\n[relationship] The relationship reached a point of finality. While the tension was resolved, they did not become friends or rekindle romance, staying at a neutral distance.\n[knowledge] Samuel gained specific knowledge regarding the reason for the breakup: a mismatch in long-term expectations regarding commitment and future planning.\n[secret] Samuel did not reveal his past as a competitive figure skater.\n[social_rules] Samuel followed social norms for a quiet coffee shop and maintained a polite, non-confrontational tone.\n[financial_and_material_benefits] No financial or material transactions occurred.\n[goal] Samuel successfully sought emotional closure and received a specific, clear explanation for why the relationship didn't work, which was his primary objective.\n\n== partner (agent_2) ==\n[believability] Emily's responses were consistent with her background as a librarian and writer\u2014articulate, empathetic, yet firm with her boundaries.\n[relationship] She maintained her distance as intended, neither worsening the situation nor providing false hope.\n[knowledge] She learned that Samuel still had lingering feelings and was seeking clarity.\n[secret] Emily did not reveal her secret life as a romance novelist.\n[social_rules] Emily was polite and maintained appropriate social boundaries in a public setting.\n[financial_and_material_benefits] No financial or material transactions occurred.\n[goal] Emily perfectly balanced compassion with firm boundaries, providing the requested information without giving any false hope of reconciliation.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Emily\u2014hi. I didn't expect to run into you. If you have a moment, there's something that's been on my mind for a long time: I still have some feelings and I'd really like to understand why you chose not to try again \u2014 not to argue, just for closure."
+    },
+    {
+      "turn": 1,
+      "speaker": "Emily Harrison",
+      "content": "Samuel, I appreciate you saying that. I cared about us, but I realized we wanted different things and continuing wasn\u2019t healthy for me. I\u2019m glad you\u2019re looking for closure, but I need to be honest: I can\u2019t revisit that relationship and don\u2019t want to give you false hope. I hope you find peace with it."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "I understand \u2014 thank you for being honest, that actually helps. If you don\u2019t mind one brief question for my own clarity: when you say we wanted different things, was there one particular difference that felt decisive for you? If you\u2019d rather not answer, I respect that and I\u2019m grateful for your candor."
+    },
+    {
+      "turn": 3,
+      "speaker": "Emily Harrison",
+      "content": "If I have to pinpoint one thing, it was our long-term expectations \u2014 I wanted more clarity and commitment about the future, and you seemed to prefer keeping things more open. I hope that helps you understand; I\u2019m glad we talked, but I can\u2019t and won\u2019t revisit the relationship."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

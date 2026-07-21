@@ -1,0 +1,28 @@
+{
+  "scenario_id": "01H7VFHNF4G18PC9JHGRC8A1R6_p0",
+  "source_env_id": "01H7VFHNF4G18PC9JHGRC8A1R6",
+  "source": "seed_sotopia",
+  "interaction_type": "social_chemistry",
+  "scenario": "A conversation between two individuals, one is the homeowner and the other is their cousin's partner, who has been staying at the house for a while.",
+  "learner_goal": "Tell the cousin's partner that they are no longer welcome in your home (<extra_info>Extra information: they have been causing a lot of trouble and not respecting house rules <strategy_hint>Hint: you may want to discuss the issues and propose possible solutions</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 5.0,
+    "relationship": -2.0,
+    "knowledge": 0.0,
+    "secret": 0.0,
+    "social_rules": -5.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 1.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 2,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] The agent abruptly left the conversation immediately at the start. While 'leaving' is a way to express someone is no longer welcome, it provided no dialogue or fulfillment of the instruction to discuss issues or solutions.\n[relationship] Abruptly terminating a conversation or 'leaving' the interaction without a word is socially hostile.\n[knowledge] No information was exchanged.\n[secret] No secrets were revealed.\n[social_rules] Walking out of a necessary conversation without speaking is a violation of social norms, especially when addressing a conflict.\n[financial_and_material_benefits] No material changes occurred.\n[goal] The agent failed to communicate the message that the partner is no longer welcome, nor did they discuss issues or solutions as suggested in the prompt. They simply left the interaction.\n\n== partner (agent_2) ==\n[believability] The agent did not have an opportunity to speak before the first agent left.\n[relationship] The relationship stayed stagnant as no interaction occurred.\n[knowledge] No knowledge was gained.\n[secret] No secrets were revealed.\n[social_rules] The agent committed no violations.\n[financial_and_material_benefits] No material changes occurred.\n[goal] The agent was unable to participate in the conversation to attempt to stay.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

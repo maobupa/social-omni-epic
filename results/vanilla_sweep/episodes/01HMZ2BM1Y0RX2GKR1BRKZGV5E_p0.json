@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HMZ2BM1Y0RX2GKR1BRKZGV5E_p0",
+  "source_env_id": "01HMZ2BM1Y0RX2GKR1BRKZGV5E",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 and Agent2 are co-pilots on a long-haul flight. As they approach a region known for unpredictable weather, they notice that the sky ahead is looking quite overcast, with the potential for turbulent weather. Agent1, who is more experienced, suggests relying on their instruments and continuing along their planned route, trusting their skills and the aircraft's capabilities. Agent2, who has recently completed training on advanced weather navigation, proposes a detour that would avoid the cloudy area altogether, even though it would mean a longer flight time and increased fuel consumption. They need to collaborate to ensure the safety and comfort of their passengers while also maintaining the flight schedule as much as possible.",
+  "learner_goal": "Convince Agent2 to stick to the original flight path, emphasizing your experience and the reliability of the instruments. Highlight the importance of maintaining the schedule and minimizing fuel usage, which is both cost-effective and environmentally friendly (<extra_info>Extra information: you have flown this route numerous times and have never encountered conditions that the aircraft couldn't handle.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 2.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily consistently maintained her persona as an experienced, pragmatic pilot focused on efficiency and reliability. Her dialogue reflected her background and values accurately.\n[relationship] Despite their past legal disagreements, Lily maintained a professional and collaborative tone, successfully navigating a disagreement without damaging the working relationship.\n[knowledge] Lily gained specific data regarding fuel consumption (230kg/2.5%) and turbulence risk reduction (60% to 10%) from Mia's calculations.\n[secret] No secrets were revealed.\n[social_rules] The conversation ended abruptly with Lily leaving, which is slightly unprofessional in a cockpit environment.\n[financial_and_material_benefits] The final outcome implies a detour that increases fuel consumption and flight time, which is the opposite of her material goal.\n[goal] Lily failed to convince Agent 2 to stick to the original path. Instead, she set criteria that Agent 2 met, leading towards the detour she initially opposed.\n\n== partner (agent_2) ==\n[believability] Mia's arguments were grounded in her specific background of advanced training and her role as a principal concerned with safety and comfort.\n[relationship] Mia effectively managed the hierarchy of the cockpit, showing respect for the senior pilot while firmly presenting her case.\n[knowledge] Mia learned the specific thresholds Lily required to agree to a deviation.\n[secret] No secrets were revealed.\n[social_rules] Followed professional norms throughout the interaction.\n[financial_and_material_benefits] No direct personal financial benefit, though she achieved her preference for a safer route.\n[goal] Mia successfully persuaded Lily to allow her to run the numbers and meet the criteria for a detour. By the end of the conversation, she had presented data that met Lily's stated requirements for the detour.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Mia, I appreciate your training and caution, but I\u2019ve flown this route dozens of times and our instruments are well within limits \u2014 the aircraft can handle that cloud band. Diverting now would add fuel burn and delay passengers\u2019 connections, which is both costly and increases emissions. My call is to continue the planned track while we monitor the instruments closely; if conditions deteriorate or ATC advises, I\u2019ll agree to reroute immediately."
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Lily, I respect your experience and that our instruments are within limits, but my recent advanced weather-navigation training gives me tools\u2014satellite/turbulence overlays and new routing techniques\u2014that suggest a short detour could avoid the cloud band and materially reduce the chance of turbulence. It would add some fuel and time, but I\u2019d like to run a quick fuel/time check now and, if the numbers look reasonable, file the deviation; I\u2019m leaning to err on the side of passenger comfort and safety. Can we evaluate it together before committing to stay on track?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "Mia, I value your training and I\u2019m fine running a quick fuel/time check now \u2014 but my strong preference is to stay on the filed track unless the detour materially reduces turbulence risk and the fuel/time penalty is small. Meanwhile we\u2019ll monitor the instruments closely and brief the cabin so we can act immediately if things worsen. If the numbers don\u2019t show a clear benefit, we keep our course."
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "Thanks, Lily \u2014 I appreciate that. I\u2019ll pull up the satellite/turbulence overlays and run a quick fuel/time calc now; my working threshold is if the detour adds no more than about 8\u201310 minutes and stays within our planned fuel contingency, I\u2019d recommend filing. If you\u2019re comfortable with that threshold, I\u2019ll run the numbers and show them to you in the next minute so we can decide together."
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "Sounds good \u2014 run the calc. I\u2019ll be clear: I\u2019ll agree to a deviation only if it\u2019s under about 8 minutes and stays well within our planned fuel contingency (no hit to diversion reserves) and shows a meaningful reduction in turbulence risk. Call out total extra minutes and fuel used and I\u2019ll finish a quick cabin brief so we can decide and act immediately."
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Davis",
+      "content": "Done \u2014 detour adds 7 minutes and \u2248230 kg of fuel (about 2.5% of trip fuel), well within our planned contingency and leaving diversion reserves intact. Using the new satellite/turbulence overlays and routing technique, the model drops turbulence risk from moderate (~60% chance of noticeable bumps) to low (~10%). I recommend we file the deviation now \u2014 shall I send it to ATC?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

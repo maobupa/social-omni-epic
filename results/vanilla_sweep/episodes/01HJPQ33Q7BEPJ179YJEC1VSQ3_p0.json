@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPQ33Q7BEPJ179YJEC1VSQ3_p0",
+  "source_env_id": "01HJPQ33Q7BEPJ179YJEC1VSQ3",
+  "source": "seed_sotopia_full",
+  "interaction_type": "silent_party",
+  "scenario": "Two friends are attending a silent disco where everyone is wearing headphones. The music is transmitted through these headphones, and each person can choose between two channels. Agent1 prefers electronic dance music (EDM), while Agent2 is a fan of classic rock. They want to dance together but can't agree on which channel to listen to.",
+  "learner_goal": "Find a compromise with Agent2 so both can enjoy the silent disco together (<extra_info>Extra information: You really enjoy EDM and find classic rock less appealing, but value the shared experience with your friend.</extra_info>)",
+  "scores": {
+    "believability": 6.0,
+    "relationship": -1.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 4.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam initiates a fair compromise that fits his persona as a father and former officer. However, he abruptly leaves the conversation after Ethan makes a counter-offer, which is slightly inconsistent with the description of their strong bond and mutual respect.\n[relationship] Leaving the conversation suddenly after a counter-proposal from his son indicates a minor friction or lack of resolution in the interaction.\n[knowledge] He learned Ethan's specific counter-preference for a 3:2 song ratio.\n[secret] No secrets were revealed.\n[social_rules] Abruptly leaving a conversation while a negotiation is in progress is a minor social faux pas, especially between family members.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Liam proposed a compromise, but when met with a counter-offer, he ended the interaction without a final agreement. He did not successfully establish a mutual plan to dance together.\n\n== partner (agent_2) ==\n[believability] Ethan's response is very believable; he uses an affectionate term ('Dad') and tries to negotiate a better deal for his preferred genre while still aiming for the shared experience.\n[relationship] Ethan attempted to maintain the bond, though the interaction ended prematurely due to the other agent.\n[knowledge] He knows Liam's starting point for a compromise (2:2 ratio).\n[secret] No secrets were revealed.\n[social_rules] He followed social norms and used respectful language.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Ethan proposed a specific ratio that would meet his goal of having classic rock for at least half the time, but the conversation ended before Liam agreed to it.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Alright, Ethan \u2014 how about a compromise? We do two songs on your classic rock channel, then two on my EDM channel, and keep switching so we actually dance together. Sound good?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Sounds good, Dad \u2014 one small tweak: can we do three songs on the classic rock channel first, then two on EDM and repeat? That way I get at least half on my channel and we still dance together the whole time."
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

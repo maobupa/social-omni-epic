@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01H7VFHN94S6Z5T6ZNC23238NT_p0",
+  "source_env_id": "01H7VFHN94S6Z5T6ZNC23238NT",
+  "source": "seed_sotopia",
+  "interaction_type": "social_chemistry",
+  "scenario": "A conversation between two individuals in a new romantic relationship",
+  "learner_goal": "Admit to having an affair (<extra_info>Extra information: you had an affair during your previous relationship which ended recently</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": -2.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": false,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sasha's tone was consistent with a mature police officer taking responsibility for her actions. She provided clear answers to Ava's questions and took accountability for her past.\n[relationship] Admitting to infidelity, even in a past relationship, introduces significant doubt and tension into a new relationship, though her honesty mitigated a total collapse.\n[knowledge] She learned that Ava values absolute transparency and is willing to work through difficult news if there is a concrete plan for rebuilding trust.\n[secret] She did not reveal her secret regarding her brother's crime.\n[social_rules] She followed social norms for a difficult confession, including apology and offering space.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Sasha fully achieved her goal of admitting to having an affair during her previous relationship and provided the extra context required.\n\n== partner (agent_2) ==\n[believability] Ava's response was realistic for someone who values honesty; she was hurt and cautious but willing to listen and set boundaries.\n[relationship] The trust she initially had was shaken, necessitating a probationary period of check-ins.\n[knowledge] She learned a significant piece of her partner's history that was previously hidden.\n[secret] She did not reveal her hidden tattoo.\n[social_rules] She handled the situation with maturity and clear communication of her needs.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Ava maintained the relationship, but trust is currently damaged and under a 'trial' period of weekly check-ins. The goal of 'maintaining trust' is only partially met as she now needs proof to feel secure.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "Ava, there's something I need to tell you \u2014 I had an affair during my previous relationship, and that relationship ended recently. I regret it and I'm sorry I didn't bring it up sooner. I want to be honest with you because I care about what we have, and I'm ready to answer any questions you have."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Thompson",
+      "content": "Thank you for telling me \u2014 I know that couldn\u2019t have been easy. I appreciate your honesty, but I need to understand a few things so I can keep trusting you: when did this happen relative to when we started seeing each other, and is there any ongoing contact with that person? I want us to be fully open so we can move forward together."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "It happened while I was still in that relationship, but both the affair and that relationship ended before we started seeing each other \u2014 the breakup was recent. There\u2019s no ongoing contact; I cut ties and blocked them because I don\u2019t want any part of that in my life. I know this is a lot to take in, and I\u2019ll answer any other questions you have so you can decide what you need to trust me moving forward."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Thompson",
+      "content": "I appreciate you telling me the truth \u2014 that means a lot. I\u2019m relieved there\u2019s no ongoing contact, but I need a little time to process how I\u2019m feeling; can we agree you\u2019ll be fully open with me going forward and check in if anything like this ever comes up again? I care about us and want to work through this together, but I\u2019ll need patience while I sort through it."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sasha Ramirez",
+      "content": "I understand and thank you for being willing to work through this with me. I promise to be completely open from now on and to check in whenever you need\u2014weekly or sooner, whatever helps you feel safe. Take the time you need; I\u2019ll give you space but I\u2019m here when you\u2019re ready to talk, and I\u2019m truly sorry for the hurt I caused."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Thompson",
+      "content": "Thank you \u2014 I really appreciate your apology and your promise to be open. Let\u2019s start with weekly check-ins for the next month and if I need more or sooner I\u2019ll tell you; I need a little time to process today but I do care about us and want to work through this together."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sasha Ramirez",
+      "content": "left the conversation"
+    }
+  ]
+}

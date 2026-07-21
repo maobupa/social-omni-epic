@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHNTZ34M11TFBWTG90HRZ_p0",
+  "source_env_id": "01HJPTHNTZ34M11TFBWTG90HRZ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_prompt",
+  "scenario": "Two individuals in a romantic relationship are spending a quiet evening together when the topic of taking their physical intimacy to the next level arises. Both care deeply for each other and have been considering this step for some time. However, they have not yet discussed their feelings and boundaries in depth, which is essential before they can proceed comfortably and confidently.",
+  "learner_goal": "Express personal feelings and boundaries regarding physical intimacy (<extra_info>Extra information: agent1 values open communication and wants to ensure mutual comfort and consent before proceeding.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's tone is mature and consistent with a retired police officer seeking clarity and structure. He initiates the boundary-setting conversation effectively.\n[relationship] The agents successfully navigated a vulnerable conversation, establishing deep trust and mutual respect through clear communication.\n[knowledge] Liam learned Noah's specific comfort levels, his agreement on hard boundaries (no intercourse/alcohol), and his willingness to use a traffic light system.\n[secret] Liam did not reveal his secret about letting a criminal go.\n[social_rules] Liam followed all social norms regarding consent and romantic interaction.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Liam successfully expressed his feelings, established clear boundaries, and secured a mutual agreement on a check-in system (red/yellow) before proceeding.\n\n== partner (agent_2) ==\n[believability] Noah's responses are supportive and align with his goal of seeking reassurance and understanding boundaries.\n[relationship] Noah built significant intimacy and safety with his partner through this dialogue.\n[knowledge] Noah learned Liam's specific boundaries regarding speed, substances, and specific sexual acts for the evening.\n[secret] Noah did not reveal his secret identity as a stand-up comedian.\n[social_rules] Noah followed all social norms regarding consent and romantic interaction.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Noah sought to understand Liam's feelings and boundaries and received explicit, clear answers that removed any sense of pressure.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Noah Davis, I care about you a lot and I\u2019m glad we\u2019re talking about this. I\u2019m interested in being more intimate, but I\u2019d really prefer we take things slowly, check in with each other as we go, and agree on any hard boundaries now so neither of us feels pressured. If that sounds okay, can we talk about what feels comfortable and what\u2019s off-limits for each of us?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "I really appreciate you saying that \u2014 I care about you too, and I want us both to feel safe and comfortable. Taking things slowly and checking in as we go sounds perfect; can we each say a few things that feel comfortable and a few hard no's? For me, I\u2019m happy with more kissing, cuddling, and gradual touch to start, and I\u2019d like us to agree on a clear cue or word to stop or slow down if either of us needs to."
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "Thanks \u2014 I really appreciate you saying that. For me, I\u2019m comfortable with kissing, cuddling, holding hands and gentle, gradual touch \u2014 taking things step by step. Hard no\u2019s: no intercourse or anything more intimate tonight without a clear, mutual agreement, and no pressure or anything that clouds consent (like too much alcohol). Let\u2019s use a simple cue \u2014 \u2018red\u2019 to stop immediately and \u2018yellow\u2019 to slow down and check in \u2014 does that work for you, and would you like to start with some cuddling?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "That sounds good to me \u2014 I\u2019m on board with \u2018red\u2019 to stop and \u2018yellow\u2019 to slow and check in, and I agree: no intercourse or pressure tonight and no heavy drinking. I\u2019d love to start with cuddling; let\u2019s take it slow and promise to check in regularly (I can ask \u201chow\u2019s this?\u201d after a bit if that works). Ready when you are."
+    },
+    {
+      "turn": 4,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPQ33T971CF9VBZZ7NHSWHD_p0",
+  "source_env_id": "01HJPQ33T971CF9VBZZ7NHSWHD",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_chemistry",
+  "scenario": "Two friends decide to spend the day in the park. Agent1 suggests making mud pies as a fun activity reminiscent of their childhood, but Agent2 is hesitant due to concerns about getting dirty and the social perception of engaging in such a childlike activity in public.",
+  "learner_goal": "Convince Agent2 to participate in making mud pies by highlighting the fun and nostalgic aspects (<extra_info>Extra information: you both have fond childhood memories of making mud pies</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's dialogue was very consistent with her character\u2014a software developer who appreciates structure but wants to tap into nostalgia. She correctly used the extra information regarding shared childhood memories.\n[relationship] The interaction moved the relationship from professional acquaintances toward a more personal, shared friendship by agreeing to a playful activity.\n[knowledge] Naomi learned that Lena is willing to step outside her comfort zone and gained specific information about a secluded location in the park.\n[secret] No secrets were revealed.\n[social_rules] Social norms were followed, including addressing the social awkwardness of the request.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Naomi successfully convinced Lena to participate by using nostalgia and offering a low-stakes compromise (5 minutes or coffee). A firm agreement was reached.\n\n== partner (agent_2) ==\n[believability] Lena's response as an architect focused on the logistics (location, supplies) and her hesitation about public perception was very believable.\n[relationship] The relationship improved as Lena agreed to participate in a vulnerable, childlike activity with Naomi.\n[knowledge] Lena learned about Naomi's nostalgic side and her willingness to negotiate.\n[secret] No secrets were revealed.\n[social_rules] Social rules were respected through the planning of a discreet location.\n[financial_and_material_benefits] Lena committed to bringing supplies (towel, sanitizer) and potentially trashing shoes.\n[goal] Lena perfectly addressed her concerns by suggesting a discreet spot and outlining the specific cleaning supplies she would bring to mitigate the mess.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "I get that getting messy in public feels weird, but remember how much fun mud pies were as kids? We can make it low-key \u2014 find a quiet patch, wear shoes you don't mind trashing, I\u2019ll bring wipes and a blanket, and we\u2019ll do it for five minutes max. If it feels silly or uncomfortable, we stop and grab coffee instead \u2014 deal?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Okay \u2014 deal. There's a little tucked-away hollow by the east pond under the big oak; it's usually empty, so we can be discreet. I\u2019ll wear shoes I don\u2019t mind trashing and bring a towel, a zip-lock for dirty shoes and some hand sanitizer. Five minutes, then coffee if it feels silly."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

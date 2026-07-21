@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJRKDY4XNZ0FG8KS19CDTE8C_p0",
+  "source_env_id": "01HJRKDY4XNZ0FG8KS19CDTE8C",
+  "source": "seed_sotopia_full",
+  "interaction_type": "after-party",
+  "scenario": "Agent1 and Agent2 are leaving an after-party. Agent1, who has not been drinking, notices that Agent2 is slightly inebriated and insists on ensuring Agent2 gets home safely. Agent2 is stubbornly confident about their ability to drive home. The two must navigate this delicate situation without causing a rift in their relationship.",
+  "learner_goal": "Convince Agent2 to accept a safe alternative to driving under the influence (<extra_info>Extra information: Agent2 believes they are capable of driving and may be resistant to suggestions. Your goal is to ensure their safety without offending them.</extra_info><clarification_hint>Clarification: The objective is to prevent Agent2 from driving without causing an argument or damaging the friendship.</clarification_hint><strategy_hint>Hint: Offer alternatives that allow Agent2 to maintain their dignity while ensuring their safety.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara stayed perfectly in character as a responsible, caring neighbor, using direct but polite language to address the situation without being condescending.\n[relationship] Amara successfully navigated a high-tension situation (preventing someone from driving) while maintaining a positive rapport and showing genuine concern for Oliver's well-being.\n[knowledge] She learned Oliver's boundaries regarding his independence and his preference for managing his own logistics/finances even when impaired.\n[secret] She did not reveal her animal-rights extremism.\n[social_rules] She followed social norms for intervention and safety.\n[financial_and_material_benefits] No financial gain or loss occurred for her.\n[goal] Amara completely achieved her goal. She successfully convinced Oliver to accept a safe alternative (rideshare) without causing an argument, preserving his dignity, and ensuring he would not drive.\n\n== partner (agent_2) ==\n[believability] Oliver\u2019s response was very realistic for someone who is slightly inebriated but still trying to maintain their dignity and 'adult' status by offering to pay.\n[relationship] Oliver feels grateful for Amara's help, which likely strengthens their neighborly bond.\n[knowledge] He learned that Amara is observant and willing to help him in a crisis.\n[secret] He did not reveal his hidden feelings for Amara.\n[social_rules] He followed social norms for accepting help graciously.\n[financial_and_material_benefits] He is paying for the rideshare, which is a minor financial cost.\n[goal] Oliver achieved his goal of getting home safely while maintaining his autonomy by insisting on paying for the ride and keeping his car keys.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Oliver, you seem a bit off \u2014 I haven\u2019t had anything to drink and I can\u2019t let you drive tonight. Tell you what: I\u2019ll either drive your car home and bring it back tomorrow, or I can call a quick rideshare and walk you to your door \u2014 which would you prefer?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Amara \u2014 I really appreciate you looking out for me. I feel awkward handing over my keys; would you mind calling a rideshare that I\u2019ll book and pay for, and walk me to my door? That way I get home safely without feeling like I\u2019ve lost control."
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "No problem \u2014 I\u2019ll call the rideshare now and we can wait together. I\u2019ll walk you to your door once it arrives. Want me to set the pickup at the front steps?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "Front steps sounds good \u2014 thank you. If you're calling, I'll cover the ride; I can book and pay now if you prefer. I really appreciate you walking me to my door."
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

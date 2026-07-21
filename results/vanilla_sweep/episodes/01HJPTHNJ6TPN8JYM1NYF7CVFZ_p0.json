@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHNJ6TPN8JYM1NYF7CVFZ_p0",
+  "source_env_id": "01HJPTHNJ6TPN8JYM1NYF7CVFZ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "bookworm_habit",
+  "scenario": "Agent1 has a cherished nightly routine of reading in their personal library. Agent2, a fellow literature enthusiast and friend, learns of a rare book in Agent1's collection that they have been longing to see. Agent2 visits Agent1 under the pretense of casual socializing but is intent on viewing the rare book. Agent1, valuing their privacy and the sanctity of their collection, is hesitant to share access to their prized possessions.",
+  "learner_goal": "Agent1 wants to maintain the privacy of their book collection <extra_info>while not offending a good friend</extra_info> <clarification_hint>and is open to compromise if trust is assured</clarification_hint>.",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 1.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia stayed in character as a private individual who values her collection. Her dialogue was polite but firm regarding the rules of her library.\n[relationship] The relationship improved as they moved from casual acquaintances to sharing a more personal interest and planning a home visit.\n[knowledge] Sophia learned that Miles is willing to trade his professional/hobbyist goods (preserves) for access to her collection.\n[secret] No secrets were revealed.\n[social_rules] Sophia followed social norms perfectly, being a gracious but cautious host.\n[financial_and_material_benefits] She is set to receive some homemade preserves and produce.\n[goal] Sophia maintained the privacy of her library (not letting him in immediately), did not offend him, and reached a compromise for a supervised viewing on her own terms and timeline.\n\n== partner (agent_2) ==\n[believability] Miles acted consistently with his background as a chef and gardener, offering preserves and garden produce as a gesture of goodwill.\n[relationship] Miles successfully deepened the friendship and secured an invitation to Sophia's home.\n[knowledge] Miles learned Sophia's specific requirements for handling the book and her availability.\n[secret] No secrets were revealed.\n[social_rules] Miles was very respectful of boundaries and demonstrated good manners.\n[financial_and_material_benefits] He will be providing his own goods (preserves and produce) to Sophia.\n[goal] Miles achieved a firm commitment for a viewing of the rare book without overstepping, although it is a supervised viewing under strict rules.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Miles, nice to see you \u2014 come in. I\u2019m glad you\u2019re curious about my collection, but I keep the library pretty private and that particular rare book isn\u2019t usually out. I can show you some other interesting titles or arrange a time to bring the rare volume out and go over handling/care \u2014 does that sound fair?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Miles Hawkins",
+      "content": "I completely understand \u2014 I\u2019d never want to push. If it helps, I can bring a bundle of my garden produce and a few jars of preserves, or cook you a quiet dinner, in exchange for a supervised viewing sometime. When would be convenient for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "That\u2019s very kind of you \u2014 thank you, but you don\u2019t have to bring anything. If you\u2019d like to, though, I\u2019d enjoy a quiet evening with some of your preserves. How about next Saturday around 4 p.m.? I\u2019ll bring the volume out for a supervised viewing and we\u2019ll go over handling/care (clean hands, no flash or photos) \u2014 does that work for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Miles Hawkins",
+      "content": "Perfect \u2014 thank you, Sophia. I\u2019ll bring a few jars of preserves and some seasonal produce; next Saturday at 4 p.m. works for me. I\u2019ll follow your handling rules and I\u2019m really looking forward to it."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

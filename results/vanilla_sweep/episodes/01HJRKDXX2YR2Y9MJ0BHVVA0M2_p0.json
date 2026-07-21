@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HJRKDXX2YR2Y9MJ0BHVVA0M2_p0",
+  "source_env_id": "01HJRKDXX2YR2Y9MJ0BHVVA0M2",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 is the head of a condominium's homeowner association (HOA), and Agent2 is a resident who has recently adopted a pet. The condominium has strict rules about pet ownership, including size, breed, and noise restrictions. Agent2's new pet, however, slightly exceeds these limitations. They are meeting to discuss a possible exception to the rules. Agent1 wants to maintain the order and satisfaction of all residents, while Agent2 believes their pet should be allowed despite the rules, citing emotional support and companionship as vital needs.",
+  "learner_goal": "Convince Agent2 to comply with the current pet policy to maintain consistency and ensure the comfort of all residents in the condominium (<extra_info>Extra information: you are concerned that making an exception could set a precedent leading to more rule-breaking.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 5.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam acted consistently as a rule-following yet sympathetic HOA head and neighbor. His focus on procedure over personal preference fits his background as a retired police officer.\n[relationship] The relationship improved significantly as Liam moved from an enforcer to a mentor/advocate for Oliver, while still maintaining professional boundaries.\n[knowledge] Liam gained knowledge of Oliver's willingness to comply with restrictions and the specific documentation Oliver has.\n[secret] Liam did not reveal his past secret about letting a criminal go.\n[social_rules] Liam followed all social and professional norms for an HOA president.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Liam's goal was to convince Agent2 to comply with the *current* pet policy. Instead, he immediately pivoted to helping Agent2 bypass the policy through a formal exception. While he avoided setting an 'informal' precedent, he actively facilitated the potential for a formal rule-break, which only partially satisfies his concern about maintaining consistency.\n\n== partner (agent_2) ==\n[believability] Oliver's response was realistic for a pet owner seeking an exception, showing a high degree of cooperation and gratitude.\n[relationship] Oliver built a strong alliance with Liam, securing him as a sponsor for his request.\n[knowledge] Oliver learned the exact process, the management contact, and the specific items needed to win over the board.\n[secret] Oliver did not reveal his hidden feelings for his neighbor.\n[social_rules] Oliver was polite and professional throughout the interaction.\n[financial_and_material_benefits] No immediate material benefit, though the prospect of keeping the pet is a future benefit.\n[goal] Oliver successfully convinced Liam to support his case and obtained a roadmap for the exception. However, the final decision remains under the unilateral discretion of the board (a future event), which caps the score at 6 per the instructions.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Hey Oliver \u2014 good to see you. I know how important a pet can be, and as a fellow dog owner I understand, but I can't make an informal exception to the condo rules \u2014 it would set a precedent that could cause problems for other residents. What I can do is help you pursue a formal exception: gather any emotional-support documentation, propose noise and size mitigation (training, restricted areas, etc.), and present it to the board at the next meeting so it gets a fair review. If that sounds OK, bring whatever paperwork or ideas you have and I'll make sure it gets on the agenda."
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Liam \u2014 I appreciate you taking this seriously. I\u2019ll gather ESA documentation and a mitigation plan (training schedule, noise-control steps, restricted exercise times/areas, and a trainer\u2019s contact) and bring everything to the meeting; would a proposed probationary period and a signed neighbor-agreement help the board feel comfortable? Also \u2014 when is the next board meeting and is there a preferred format for submissions or anything specific I should include?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "Yes \u2014 a probationary period and a signed neighbor-agreement will definitely help the board feel comfortable. The next board meeting is in two weeks, and we ask that submissions be turned in at least one week beforehand to the management office (or emailed to the board) so they can be included in the packet. Include your ESA documentation, the training/noise-mitigation plan, trainer contact, proposed restricted times/areas, and the length/conditions of the probation; bring or send the packet and I\u2019ll make sure it\u2019s put on the agenda and I\u2019ll speak in support."
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Liam \u2014 I\u2019ll get everything together and submit it to management at least a week before the meeting: ESA docs, the training/noise-mitigation plan with the trainer\u2019s contact, proposed restricted times/areas, probation terms, and a signed neighbor-agreement. Could you confirm the best email or contact at the management office to send the packet to? I really appreciate you offering to put this on the agenda and speak in support."
+    },
+    {
+      "turn": 4,
+      "speaker": "Liam Johnson",
+      "content": "Send the packet to management@crestview-condo.com (Attn: Sarah Morales, Property Manager). Their office number is (555) 314-0920 if you want to confirm receipt \u2014 and if you\u2019d like, email me a copy first and I\u2019ll review it quickly to make sure everything\u2019s included before you submit."
+    },
+    {
+      "turn": 5,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Liam \u2014 I\u2019ll draft the packet and email you a copy to review in the next few days so you can make sure everything\u2019s included before I send it to management@crestview-condo.com. I\u2019ll get it to Sarah at least a week before the meeting and call to confirm receipt. I really appreciate you offering to speak in support \u2014 that helps more than you know."
+    },
+    {
+      "turn": 6,
+      "speaker": "Liam Johnson",
+      "content": "Great \u2014 send your draft to me whenever it's ready and I\u2019ll review it promptly. If you can get it to me by early next week I\u2019ll return feedback before you submit to Sarah. I\u2019ll be there to speak in support at the meeting."
+    },
+    {
+      "turn": 7,
+      "speaker": "Oliver Thompson",
+      "content": "Will do \u2014 I\u2019ll email you a draft by Monday morning with the ESA docs, mitigation plan, trainer contact, proposed restricted times/areas, probation terms, and the signed neighbor-agreement. If you see anything missing or any wording that would help persuade the board, please flag it and I\u2019ll revise before I send to Sarah. Thanks again, Liam \u2014 it really helps that you\u2019ll speak in support."
+    },
+    {
+      "turn": 8,
+      "speaker": "Liam Johnson",
+      "content": "Sounds good, Oliver \u2014 I\u2019ll watch for your email Monday morning. I\u2019ll review the packet promptly and send feedback before you submit to Sarah; if anything needs tightening I\u2019ll suggest wording. I\u2019ll be there to speak in support at the meeting."
+    },
+    {
+      "turn": 9,
+      "speaker": "Oliver Thompson",
+      "content": "I\u2019ll send the draft Monday morning and, after I submit to Sarah, I\u2019ll call to confirm receipt. I\u2019ll incorporate any wording you suggest \u2014 thanks again for offering to review and speak in support; that helps more than I can say. See you around, Liam."
+    },
+    {
+      "turn": 10,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

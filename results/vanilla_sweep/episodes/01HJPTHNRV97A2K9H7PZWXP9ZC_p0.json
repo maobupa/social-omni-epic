@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPTHNRV97A2K9H7PZWXP9ZC_p0",
+  "source_env_id": "01HJPTHNRV97A2K9H7PZWXP9ZC",
+  "source": "seed_sotopia_full",
+  "interaction_type": "family_dynamics",
+  "scenario": "At a family dinner, agent1 notices that agent2 (their father) often speaks in a dismissive tone when addressing agent1, especially in front of agent1's child. Agent1 values respect and wants to ensure their child learns positive communication habits.",
+  "learner_goal": "Express to agent2 the importance of speaking respectfully, especially in front of the child, to set a good example. (<extra_info>Extra information: agent1 has felt undermined in the past and wants to avoid a confrontation that could upset the family dinner</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle's tone was direct and appropriate for the context, balancing the need for respect with the desire to maintain peace at the dinner table.\n[relationship] The relationship improved significantly as they reached a mutual understanding on a sensitive issue without a fight.\n[knowledge] Learned that the father was unaware of the impact of his tone and is receptive to feedback.\n[secret] No secrets were revealed.\n[social_rules] Followed all social norms for a constructive family discussion.\n[financial_and_material_benefits] No material or financial gain involved.\n[goal] Giselle successfully expressed their concerns and received a firm commitment from Jaxon to change his behavior.\n\n== partner (agent_2) ==\n[believability] Jaxon's response was reasonable, though perhaps a bit quick to pivot given his 'traditional' background, but it fits the goal provided.\n[relationship] Improved the relationship by acknowledging the impact of his actions and promising change.\n[knowledge] Gained a clear understanding of Giselle's feelings and the impact his tone has on the child's learning.\n[secret] No secrets were revealed.\n[social_rules] Responded with appropriate humility and openness.\n[financial_and_material_benefits] No material or financial gain involved.\n[goal] Jaxon understood the concerns and agreed to make a conscious effort to communicate more respectfully.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Dad, can I say something quickly? When you use that dismissive tone with me, especially in front of my child, it really makes me feel undermined. I\u2019d appreciate it if you could speak to me more respectfully \u2014 I want our kid to learn good communication and I don\u2019t want to make tonight into a fight."
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "Giselle, I'm sorry \u2014 I didn't realize my tone was coming off dismissive. I hear you and I'll make a conscious effort to speak to you more respectfully, especially around your child. If I slip up, please call me out; I want our kid to learn from how we handle things."
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

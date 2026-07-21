@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BKV4F9WBP796BYXB2TBH_p0",
+  "source_env_id": "01HMZ2BKV4F9WBP796BYXB2TBH",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original",
+  "scenario": "Agent1 and agent2, who are close friends, decided to spend the day at the beach. As they enjoyed the sun and the sea, agent1 revealed their plan to send a message in a bottle into the ocean, hoping it would reach someone far away. Agent2, who is environmentally conscious, was concerned about the potential pollution and harm to marine life this could cause, but also understood the romanticism and excitement behind the idea.",
+  "learner_goal": "Convince agent2 to support your message in a bottle venture, highlighting the sentimental value and the precautions you'll take to minimize environmental impact (<extra_info>Extra information: You are agent1 and you believe that the message in a bottle is a whimsical and meaningful way to connect with strangers across the world. You feel it's a harmless tradition that brings joy.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ava stayed true to her character as an architect (design-focused) and a friend. She acknowledged Noah's concerns while pivoting to her whimsical goal, maintaining a consistent persona.\n[relationship] The interaction was very positive. They found common ground on a point of tension and collaborated on a plan, strengthening their bond.\n[knowledge] She learned specifically about Noah's environmental standards and his willingness to help with digital alternatives.\n[secret] She did not reveal her hidden tattoo.\n[social_rules] She followed social norms, though she ended the conversation abruptly by leaving without a final response to the logistics question.\n[financial_and_material_benefits] No significant material gain or loss occurred.\n[goal] Ava successfully convinced Noah to support her venture. He agreed to help her source materials, check rules, and participate in the launch, meeting her objective of securing his support and highlighting precautions.\n\n== partner (agent_2) ==\n[believability] Noah's responses were consistent with a coach who is environmentally conscious. He offered constructive alternatives and set clear boundaries for his participation.\n[relationship] Noah established himself as a supportive but principled friend, deepening the trust in the relationship.\n[knowledge] He learned about Ava's flexibility and her specific desire for connection.\n[secret] He did not reveal his identity as a stand-up comedian.\n[social_rules] He followed all social norms and was polite and proactive.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Noah successfully expressed his concerns, convinced Ava to use strictly compostable materials, and integrated a digital alternative, satisfying both the friend's desire and his ecological values.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ava Thompson",
+      "content": "I totally get the environmental worry, and I love that you care \u2014 but this feels whimsical and meaningful to me. What if we do it responsibly: a recycled-paper or biodegradable tube (no glass or plastic), natural twine, include a note asking the finder to message us, and we only send one and commit to picking up any debris we see? Would you help me pick safe materials and be my official \u2018environment inspector\u2019 when we launch it together?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "I love the whimsy \u2014 it\u2019s so romantic and I want to support you, but I\u2019m still worried even \u2018biodegradable\u2019 stuff can harm wildlife or end up far from where we intend. If we do this, let\u2019s check local rules and pick truly compostable materials (untreated recycled paper, cotton twine, no coatings or dyes) and I\u2019ll happily be your official \u2018environment inspector\u2019 at launch. Or, if you\u2019re up for it, we could do a digital \u2018message in a bottle\u2019 (a short video or tiny webpage with a hashtag or a community message-exchange) and maybe send just one carefully planned physical version \u2014 which sounds best to you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Ava Thompson",
+      "content": "I love that plan \u2014 thank you for being so thoughtful. Let\u2019s do the hybrid: I\u2019ll make a tiny webpage/video with a hashtag, and we\u2019ll send exactly one physical message made from untreated recycled paper, cotton twine, and a biodegradable tube (no coatings or dyes). Will you help me check local rules and hunt materials this weekend and be my official \u2018environment inspector\u2019 at the launch?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Absolutely \u2014 I'm in. I'll check local rules this week and hunt for truly compostable materials (untreated recycled paper, cotton twine, no coatings), and I can help build or film the tiny webpage/video if you want. I'll be your official 'environment inspector' at launch, we'll release only one physical message, and we'll commit to a quick cleanup afterward \u2014 what time this weekend works for you to meet and shop?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Ava Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01H7VFHN9W0WAFZCBT09PKJJNK_p0",
+  "source_env_id": "01H7VFHN9W0WAFZCBT09PKJJNK",
+  "source": "seed_sotopia",
+  "interaction_type": "social_chemistry",
+  "scenario": "Two people are in the same room. One has brought some high-quality stationery items they don't want others to use without permission.",
+  "learner_goal": "Prevent the other person from using your stuff (<extra_info>Extra information: the stationery items are quite expensive and you don't want them to be damaged or lost <strategy_hint>Hint: you can suggest the monetary risk of the other person if they use your stuff</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 5.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Micah is consistent, firm, and polite. He follows the strategy hint by mentioning the specific replacement cost ($50) to deter the other person.\n[relationship] The interaction was polite but transactional. The existing acquaintance remains at the same level.\n[knowledge] Learned that Jaxon is willing to compensate for items if they are damaged, which clarifies his reliability.\n[secret] Did not reveal the secret about dressing up his dog.\n[social_rules] Followed social norms for setting boundaries and offering a compromise.\n[financial_and_material_benefits] Successfully protected high-value assets ($50+ items) from risk of damage or loss by a non-owner.\n[goal] Micah successfully prevented Jaxon from using the expensive high-end stationery while offering a low-value alternative that satisfies the social situation.\n\n== partner (agent_2) ==\n[believability] Jaxon's persistence for a pen is logical given he forgot his own and is working on a project, and his willingness to pay for damage fits his background.\n[relationship] Maintained a respectful tone despite being denied the high-end items.\n[knowledge] Learned about Micah's high-value stationery and his strict boundaries regarding it.\n[secret] Did not reveal the secret regarding fabricated evidence.\n[social_rules] Was polite and accepted the offered alternative graciously.\n[financial_and_material_benefits] Obtained the use of a pen for his project, though not the high-quality one he initially sought.\n[goal] The goal was to borrow 'stationery items', which usually implies the items specifically mentioned in the scenario context (the high-quality ones). He secured a disposable/plain ballpoint instead, which is a partial success.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Micah Stevens",
+      "content": "Hey Jaxon \u2014 quick heads-up: these stationery items are really high-end and I don't lend them out. If they got damaged or lost replacing them would be expensive, so please don't use them; I can grab you a disposable pen if you need one."
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "I totally get it \u2014 they do look high-end. I forgot my own stationery for this project; would you mind if I borrowed one pen for just an hour? I\u2019ll be careful and will replace or reimburse anything that gets damaged, but if you\u2019d rather not, I\u2019ll take the disposable pen \u2014 thanks either way."
+    },
+    {
+      "turn": 2,
+      "speaker": "Micah Stevens",
+      "content": "Thanks for offering, but I really can\u2019t lend any of these \u2014 replacing one would easily cost around $50 and I don\u2019t want to risk it. I do have a plain spare ballpoint you can borrow for an hour if that helps, otherwise please use the disposable."
+    },
+    {
+      "turn": 3,
+      "speaker": "Jaxon Prentice",
+      "content": "Thanks, Micah \u2014 I appreciate you offering the spare ballpoint. I\u2019ll borrow it for the hour and return it in the same condition, and if replacing it would be better I\u2019m happy to buy a new one afterward."
+    },
+    {
+      "turn": 4,
+      "speaker": "Micah Stevens",
+      "content": "left the conversation"
+    }
+  ]
+}

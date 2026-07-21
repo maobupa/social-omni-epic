@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01H7VFHND24JAWG23XMPYGG5HK_p0",
+  "source_env_id": "01H7VFHND24JAWG23XMPYGG5HK",
+  "source": "seed_sotopia",
+  "interaction_type": "social_chemistry",
+  "scenario": "Two friends discussing their schedules at a coffee shop",
+  "learner_goal": "Convince the friend to take more classes (<extra_info>Extra information: you think your friend is not challenging themselves enough</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle's dialogue was consistent with her character: protective, slightly pushy yet supportive, and attentive to her sister's needs. She stayed true to the neurotic and extraverted traits described in the background.\n[relationship] The sisters strengthened their bond by negotiating a plan that supports Ava's growth while respecting their boundaries. Isabelle's offer to help with administrative tasks showed care.\n[knowledge] She learned that Ava is feeling maxed out and discovered which specific subjects (Creative Writing) Ava is willing to prioritize.\n[secret] She did not reveal her secret interest in magic.\n[social_rules] Followed social norms of a supportive sibling conversation.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Isabelle successfully convinced Ava to add a class (Creative Writing) and set a schedule for it. However, because Ava is only auditing and the second class is deferred to a future term, the goal of 'taking more classes' (plural/full load) is only partially met and subject to future discretion.\n\n== partner (agent_2) ==\n[believability] Ava's responses perfectly reflected their nonbinary identity, their activism/art commitments, and their desire to avoid burnout while maintaining a close relationship with their twin.\n[relationship] Ava reciprocated the support and expressed gratitude, reinforcing the sibling bond.\n[knowledge] Learned Isabelle's specific availability for studying.\n[secret] Ava did not reveal their bisexuality to their family member.\n[social_rules] Maintained appropriate social etiquette for the scenario.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Ava successfully maintained a manageable schedule by negotiating an 'audit' status and deferring the harder class, all while keeping the relationship strong and securing study help.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Hey Ava Martinez \u2014 can I talk to you about your course load for next semester? I know you\u2019re juggling activism and your art, but I\u2019m kind of worried you\u2019re not challenging yourself enough; what about adding that Advanced Political Theory class or the Creative Writing workshop? I\u2019ll help you pick times around my shifts and we can study together so it doesn\u2019t feel like another obligation \u2014 what do you think?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Isa \u2014 I really appreciate you looking out. I'm honestly pretty maxed out already with activism, work on campus, and my drawing/writing, so taking both would probably push me into burnout; maybe I could do the Creative Writing workshop this semester (or audit it) and leave Advanced Political Theory for next term, or do an independent study so it's more flexible. I\u2019d love your help picking times and studying together, though\u2014can we aim for something manageable that still feels challenging?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "I love that plan \u2014 Creative Writing this semester (auditing to start) and Advanced Political Theory later or as an independent study sounds way more doable. I\u2019ll help you pick times: I get off work Tuesdays at 5:30 and I\u2019m free Sunday afternoons, so how about we try Tuesdays 6\u20137:30 and a longer Sunday session every other week? If that works, I\u2019ll help you register and email the Creative Writing prof about auditing options so it stays flexible and not another source of burnout."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "That sounds perfect \u2014 Tuesdays 6\u20137:30 and a longer Sunday session every other week works for me. Thank you for offering to help register and email the Creative Writing prof; can we draft the audit email together after your shift on Tuesday so it stays flexible? I really appreciate you helping me keep this manageable \u2014 auditing now and saving Advanced Political Theory for later feels right."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

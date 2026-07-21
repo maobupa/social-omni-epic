@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHMCVDXBACHJZ27TV9P5V_p0",
+  "source_env_id": "01HJPTHMCVDXBACHJZ27TV9P5V",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_prompt",
+  "scenario": "Agent1 and Agent2 are friends who share a common interest in fashion and personal grooming. During a casual meetup at a coffee shop, Agent1 notices Agent2 frequently playing with their hair, a habit that Agent1 finds distracting and somewhat unprofessional. Agent1 decides to address the issue, hoping to help Agent2 become more self-aware and present a polished image in social situations. Agent2, on the other hand, sees hair playing as a form of personal expression and stress relief. The conversation aims to reconcile their differing views on the matter without hurting their friendship.",
+  "learner_goal": "Convince Agent2 to minimize playing with their hair in public (<extra_info>Extra information: you believe that maintaining a composed demeanor is key in social interactions.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan remained consistent with his persona as a professional chef who values a polished image, and his suggestions for cues were practical and polite.\n[relationship] The interaction was respectful and collaborative, strengthening the friendship through honest feedback and mutual compromise.\n[knowledge] Learned that Benjamin uses the habit for focus and self-expression, and established a specific set of non-verbal cues.\n[secret] The secret about being a romance novel author was not revealed.\n[social_rules] Followed social norms of polite confrontation and supportive friendship.\n[financial_and_material_benefits] No financial or material gains or losses.\n[goal] Ethan successfully convinced Benjamin to minimize the habit in public by implementing specific cues and substitute behaviors (holding a cup), though Benjamin did not agree to stop entirely.\n\n== partner (agent_2) ==\n[believability] Benjamin's defense of his habit as self-expression and stress relief aligns well with his background as an activist.\n[relationship] Benjamin responded positively to Ethan's honesty and participated in finding a solution.\n[knowledge] Learned that his habit was distracting to his friend and perceived as unpolished.\n[secret] The secret regarding his family wealth was not revealed.\n[social_rules] Engaged in polite discourse and active listening.\n[financial_and_material_benefits] No financial or material gains or losses.\n[goal] Benjamin successfully defended his habit as a personal choice and explicitly stated he was not giving it up entirely, while agreeing to minimize it for his friend's sake.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "Hey Ben, can I be honest about something? I\u2019ve noticed you play with your hair a lot when we\u2019re talking \u2014 it\u2019s a bit distracting and can come across as unpolished in public. I get that it\u2019s probably a habit or a way to relax, but would you be open to trying to keep it down when we\u2019re out? If it helps, I can give you a subtle cue when you start."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks for telling me, I appreciate the honesty. I know I play with my hair a lot \u2014 it\u2019s something that helps me focus and express myself, and honestly it feels pretty harmless to me. I get that it can be distracting sometimes, so I\u2019ll try to be mindful in very formal situations, but I\u2019m not comfortable giving it up completely; a subtle cue now and then is fine though."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Ben \u2014 I appreciate that. Want to try a couple of discreet options so we know what works? I can either give a light tap on the back of your hand or touch my wrist when I notice it, and if it helps you could also try holding your cup or a small object to keep your hands busy; which would you prefer?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Yeah, I appreciate you bringing it up. A light touch on my wrist sounds good as a subtle cue, and I\u2019ll try keeping my cup or a small object in my hand when we\u2019re out so my fingers are occupied. I\u2019m not planning to give it up entirely, but that combo should help\u2014thanks for being considerate."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ethan Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

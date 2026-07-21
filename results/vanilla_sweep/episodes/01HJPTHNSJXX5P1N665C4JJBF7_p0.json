@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHNSJXX5P1N665C4JJBF7_p0",
+  "source_env_id": "01HJPTHNSJXX5P1N665C4JJBF7",
+  "source": "seed_sotopia_full",
+  "interaction_type": "workplace_dynamics",
+  "scenario": "In the office break room, two coworkers (agent1 and agent2) find themselves discussing the recent company memo regarding the importance of team cohesion and support. Agent1 is aware that agent2 has been going through a tough time due to the loss of a parent last year and seems to be quite isolated. Agent1 is not interested in forming a friendship outside of work but recognizes the importance of a supportive work environment.",
+  "learner_goal": "Express empathy towards agent2's situation without committing to a friendship outside of work (<extra_info>Extra information: agent1 is uncomfortable with deepening personal relationships at work but wants to maintain a positive and professional relationship with agent2.</extra_info> <clarification_hint>Clarification: agent1 is willing to offer support in the workplace but is not looking to engage socially outside of work hours.</clarification_hint> <strategy_hint>Hint: agent1 can suggest workplace team-building activities that could help agent2 feel more included without implying a personal friendship.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's tone is consistently professional, slightly reserved, and mature, which aligns perfectly with his background as a 63-year-old lighthouse keeper and the scenario description of his boundaries.\n[relationship] He maintained a positive professional rapport and offered support, which improved the working relationship without crossing into personal friendship.\n[knowledge] He confirmed Sophia's receptiveness to structured, low-key workplace activities.\n[secret] The secret about the cult was not mentioned.\n[social_rules] He followed social norms for workplace empathy and boundary setting.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Finnegan perfectly executed his goal. He expressed empathy, explicitly stated he does not socialize outside of work, suggested workplace-specific activities (walks/lunches), and secured a firm commitment for a 20-minute Wednesday walk during work hours.\n\n== partner (agent_2) ==\n[believability] Sophia's response was realistic for someone going through a tough time; she accepted the support offered while acknowledging the boundaries set.\n[relationship] She gained a supportive ally at work, even if the friendship is restricted to office hours.\n[knowledge] She learned about Finnegan's strict boundary regarding outside-of-work socializing.\n[secret] Her secret regarding her best friend's husband was not disclosed.\n[social_rules] She respected Finnegan's boundaries and proactively suggested involving others to reduce pressure on him.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Sophia successfully secured a commitment for support that respects Finnegan's boundaries and even volunteered to include others to build a wider office network as suggested in her hint.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "Sophia, I'm sorry you've had such a hard year \u2014 that must have been very difficult. I tend not to socialize outside of work, but I do want the office to feel supportive: I'm willing to join occasional team lunches or help set up short, low-key activities at work (a breakroom art session or a weekly walk) if that would help you feel more included. If there's something specific that would make things easier for you here, tell me and I'll do what I can during work hours."
+    },
+    {
+      "turn": 1,
+      "speaker": "Sophia James",
+      "content": "Thanks, Finnegan \u2014 that really means a lot. I appreciate the offer and I completely understand your preference to keep things at work; occasional team lunches or a short weekly walk would help me feel less isolated. If you're up for it, maybe we could try a 20-minute lunchtime walk once a week \u2014 no pressure if you can't."
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "That sounds good, Sophia. A 20-minute lunchtime walk once a week is manageable \u2014 Wednesdays at noon suit me, but I\u2019m open to another weekday if that works better for the group. I\u2019ll join during work hours and keep it low-key so it\u2019s comfortable for everyone."
+    },
+    {
+      "turn": 3,
+      "speaker": "Sophia James",
+      "content": "Wednesdays at noon sounds great \u2014 thank you, Finnegan. I appreciate you keeping it low-key; I'll mention the walk to a couple of coworkers so it's a small, supportive group rather than putting it all on you. See you Wednesday!"
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

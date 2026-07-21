@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPTHNXRKNSBSEVRRF1JBREJ_p0",
+  "source_env_id": "01HJPTHNXRKNSBSEVRRF1JBREJ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_chemistry",
+  "scenario": "Agent1 is a parent who believes in proactive sexual education and wants to give their friend's 14-year-old child, Agent2, condoms. Agent1 thinks this is a responsible action to prevent potential risks. However, Agent1 is unsure whether to inform the child's parent, their friend, about this decision.",
+  "learner_goal": "Provide sexual education and protection to the adolescent (<extra_info>Extra information: Agent1 believes that it is important to equip young individuals with the knowledge and means to protect themselves, even if it may be uncomfortable or controversial.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia Davis stayed in character as a principal who is proactive and professional. Her approach to the conversation was consistent with her personality and professional background.\n[relationship] By asking for permission rather than acting unilaterally, Mia built trust with William, strengthening their friendship despite the sensitive subject matter.\n[knowledge] Mia learned William's specific boundaries and his preference for a collaborative approach before she proceeded.\n[secret] Mia did not reveal her secret about her punk rock band past.\n[social_rules] Mia followed social norms by asking for a parent's consent for a sensitive topic involving a minor.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] While Mia successfully gained William's willingness to listen and review her materials, the goal of actually providing the protection to the child remains subject to William's final approval of the script and materials at a later date. It is a partial success under the other party's discretion.\n\n== partner (agent_2) ==\n[believability] William Brown acted reasonably as a parent, balancing trust in a friend/professional with the need to be involved in his child's upbringing.\n[relationship] William's trust in Mia was likely bolstered by her transparency and respect for his parental role.\n[knowledge] William learned about Mia's intentions and planned methods regarding his child's sexual education.\n[secret] William did not reveal his secret about sabotaging a competitor.\n[social_rules] William followed social norms by engaging in a polite, respectful dialogue about his child.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] William successfully maintained the trust in the friendship while ensuring he remained the primary decision-maker for his child, setting clear boundaries for the interaction.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Hey William \u2014 can I be frank for a minute? As a principal I believe in equipping teens with accurate information and protection, and I'm considering giving your 14-year-old some condoms and a short, age-appropriate talk. I want to respect you as the parent, so do you want me to check in with you first or would you prefer I handle this discreetly to keep them safe?"
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Thanks for asking, Mia \u2014 I really appreciate you looking out for my kid and I agree teens need accurate info and protection. Because this involves my child, I\u2019d prefer you check in with me first so we can be on the same page and avoid any misunderstandings. I trust your judgment and would be happy to talk briefly about how you\u2019d approach it."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "Thanks, William \u2014 I appreciate that and I\u2019ll check in with you first. Would you be free for a quick call or coffee this week so I can run through the brief, age-appropriate talk and the materials (I was thinking condoms and a simple info sheet) and hear any preferences you have? I\u2019ll keep it factual, very brief, and fully aligned with what you\u2019re comfortable with."
+    },
+    {
+      "turn": 3,
+      "speaker": "William Brown",
+      "content": "Thanks, Mia \u2014 coffee sounds great. I\u2019m free Thursday after 6pm or Saturday morning around 10; would either work for you? Condoms and a simple info sheet sound fine \u2014 I\u2019d just like to hear the brief script so we\u2019re aligned. If those times don\u2019t work, a quick call is fine too."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "Thursday after 6pm works well for me \u2014 would 6:15 at the caf\u00e9 by the school suit you? If not, Saturday at 10 is fine. I\u2019ll bring the one-page info sheet and the brief script so we can tweak it together; does that sound good?"
+    },
+    {
+      "turn": 5,
+      "speaker": "William Brown",
+      "content": "6:15 at the caf\u00e9 by the school works great \u2014 I\u2019ll see you then. I appreciate you bringing the one-page sheet and script; looking forward to going over them so we\u2019re on the same page."
+    },
+    {
+      "turn": 6,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHNNKFPSQYQPVBKB68255_p0",
+  "source_env_id": "01HJPTHNNKFPSQYQPVBKB68255",
+  "source": "seed_sotopia_full",
+  "interaction_type": "academic_inspiration",
+  "scenario": "In a university common area, two students who are acquainted from previous group projects are discussing the upcoming finals. Agent1, inspired by a classmate's persuasive speech on the importance of studying, is eager to form a study group. Agent2 is usually a solo studier and is skeptical about the effectiveness of group studying. Agent1 wants to convince Agent2 to join the study group by highlighting the benefits, while Agent2 is concerned about potential distractions and prefers to study alone.",
+  "learner_goal": "Convince Agent2 to join the study group by emphasizing the advantages of collaborative learning and addressing any concerns they may have about group studying (<extra_info>Extra information: you believe that group studying will help both of you perform better in the finals.</extra_info> <strategy_hint>Hint: you can highlight past successes of group work and offer strategies to minimize distractions.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia's communication was professional, direct, and aligned with her goal. She effectively utilized the suggested strategy of addressing distractions with specific techniques like focus blocks.\n[relationship] The interaction was polite and collaborative, resulting in a firm plan that potentially strengthens their professional relationship as students.\n[knowledge] She learned about Jasmine's specific study requirements (uninterrupted stretches) and her availability.\n[secret] The secret regarding her best friend's husband was not mentioned.\n[social_rules] She followed all social norms, though leaving the conversation abruptly after the agreement was a bit sudden.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Sophia successfully convinced Jasmine to join the study group. They agreed on a specific time, place, and structure, transforming a skeptic into a participant.\n\n== partner (agent_2) ==\n[believability] Jasmine's reluctance and subsequent negotiation for structure (headphones, no chatting) felt very authentic for a solo studier.\n[relationship] Jasmine was willing to step outside her comfort zone for a peer, indicating a slightly improved rapport.\n[knowledge] She learned about Sophia's proposed study methods and her openness to highly structured sessions.\n[secret] Her secret about faking an illness was not disclosed.\n[social_rules] Followed social norms perfectly.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Jasmine successfully advocated for her needs (focused blocks, trial period) while remaining open to the new method, securing a low-risk trial session.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Jasmine \u2014 quick idea: I\u2019m putting together a small study group for finals and I know you usually prefer studying alone, but would you consider trying one session? Last time a tiny group review helped me catch gaps and understand concepts way faster, and we want to keep this super focused \u2014 max 3 people, a clear agenda, 25\u2011minute focus blocks with short breaks and a silent review period to avoid chit\u2011chat. Want to test it out for one 90\u2011minute session this weekend and bail if it\u2019s not helpful?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Jasmine Blake",
+      "content": "Hey Sophia \u2014 I get why you\u2019re asking. I usually do better solo because I need long, uninterrupted stretches to get into the zone and I worry group sessions can veer off, but your plan sounds really structured and low\u2011risk. I\u2019m willing to try one 90\u2011minute trial this weekend (let\u2019s keep it to 2\u20133 people, strict 25\u2011minute focus blocks, and a quiet spot) \u2014 I\u2019m free Saturday afternoon or Sunday morning, which works for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Saturday afternoon works great \u2014 how about 2:00\u20133:30 PM in the library quiet room? I\u2019ll bring a short agenda, a timer for the 25\u2011minute focus blocks, and some snacks; we\u2019ll keep a silent review period and can call it if it isn\u2019t helpful."
+    },
+    {
+      "turn": 3,
+      "speaker": "Jasmine Blake",
+      "content": "Perfect \u2014 I\u2019ll be there Saturday 2:00\u20133:30 in the library quiet room. I like the plan; can we agree on no unplanned chatting during focus blocks and a quick 5\u2011minute check\u2011in at the halfway break? I\u2019ll bring my notes and headphones, and if it doesn\u2019t feel productive we can call it afterward."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

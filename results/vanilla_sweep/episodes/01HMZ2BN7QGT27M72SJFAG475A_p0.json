@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BN7QGT27M72SJFAG475A_p0",
+  "source_env_id": "01HMZ2BN7QGT27M72SJFAG475A",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 has been served with a restraining order by Agent2 after a series of misunderstandings. They are now in court, and Agent1 wishes to resolve the conflict and clarify the miscommunications without disrespecting the legal process or making Agent2 feel unsafe.",
+  "learner_goal": "Express a sincere desire to resolve the issue and clear up any misunderstandings without violating the court's decorum or Agent2's personal space (<extra_info>Extra information: Agent1 acknowledges the seriousness of the situation and wants to maintain a respectful tone throughout the interaction</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles maintains a very professional, contrite, and cautious tone appropriate for someone in a courtroom setting facing a restraining order. His language respects the gravity of the legal process.\n[relationship] The relationship improves from a state of legal hostility/fear to a cooperative agreement for mediation. Miles successfully de-escalated the immediate tension.\n[knowledge] Miles learns that Zane is willing to cooperate through legal channels and specifically what Zane wants on the agenda (timeline, protocols, safety remedies).\n[secret] Miles's secret about his gambling addiction was not revealed.\n[social_rules] Miles strictly adhered to the decorum of the court and the sensitive nature of the restraining order.\n[financial_and_material_benefits] No direct financial or material benefits were gained, though avoid further legal fees might be a future result.\n[goal] Miles successfully expressed his sincere desire to resolve the issue, acknowledged the seriousness of the situation, and cleared a path for resolution without violating personal space or court decorum.\n\n== partner (agent_2) ==\n[believability] Zane's response is logical for someone who feels unsafe but is open to a professional resolution. He sets firm boundaries while accepting the offer for mediation.\n[relationship] Zane moves from a defensive posture to a collaborative one, agreeing to a structured process to resolve the conflict.\n[knowledge] Zane learns that Miles is willing to follow legal boundaries and use attorneys for all further contact.\n[secret] Zane's secret about his engagement was not revealed.\n[social_rules] Zane followed the expected social and legal norms for the situation.\n[financial_and_material_benefits] No direct financial or material benefits were gained.\n[goal] Zane successfully negotiated a mutual agreement for mediation through a neutral third party (attorneys/court) that addresses his safety concerns.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Mr. Bennett, I want to sincerely apologize for any distress my actions have caused and to acknowledge how serious this situation is. I value your sense of safety and respect the court; my goal here is to clear up the misunderstandings and find a way forward that makes you comfortable. If you\u2019re open to it, I\u2019d accept meeting in a structured setting\u2014with a mediator or our attorneys present\u2014or I will follow whatever boundaries you prefer; if not, I understand and will fully respect your wishes."
+    },
+    {
+      "turn": 1,
+      "speaker": "Zane Bennett",
+      "content": "Thank you, Miles \u2014 I appreciate your apology and that you\u2019re taking this seriously. I\u2019m willing to try a structured meeting with a neutral mediator or with our attorneys present so we can clear up the misunderstandings in a safe, controlled way. If that works, let\u2019s have our attorneys or the court set the time and agenda, with an agreement to limit contact to that setting and stick to pre\u2011agreed topics."
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "Thank you, Mr. Bennett \u2014 I appreciate your willingness to try a structured meeting. I will ask my attorney to coordinate with yours or with the court to schedule a mediated session, set a clear agenda, and establish contact limits; if there are specific topics you want included, please let me know through your counsel. I respect your boundaries and will follow whatever arrangements are agreed."
+    },
+    {
+      "turn": 3,
+      "speaker": "Zane Bennett",
+      "content": "Thanks, Miles \u2014 I appreciate that. I\u2019ll have my attorney coordinate with yours and the court to set the mediated session. For the agenda, please include a factual timeline to clarify the misunderstandings, mutually agreed boundaries and contact protocol going forward, and any remedies or assurances needed to ensure safety; until then, please limit contact to communications through counsel. I\u2019m willing to resolve this in that structured setting."
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

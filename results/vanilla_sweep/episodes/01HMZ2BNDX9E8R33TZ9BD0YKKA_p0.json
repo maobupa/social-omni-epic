@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BNDX9E8R33TZ9BD0YKKA_p0",
+  "source_env_id": "01HMZ2BNDX9E8R33TZ9BD0YKKA",
+  "source": "seed_sotopia_full",
+  "interaction_type": "generated",
+  "scenario": "Agent1 and Agent2 are members of a local community group that is planning a Fourth of July celebration. Agent1 wants the event to focus on honoring historical figures who contributed to the nation's independence, while Agent2 believes the event should be more about modern-day celebrations and entertainment. They meet to discuss how to balance the event's activities to cater to the entire community's preferences.",
+  "learner_goal": "Convince Agent2 that incorporating educational elements about the nation's founders and their legacy can add depth and meaning to the celebration (<extra_info>Extra information: Agent1 values historical awareness and believes that understanding the past is crucial for appreciating the present.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily Greenberg spoke in a professional, concise manner consistent with her lawyer background and her objective to include historical depth.\n[relationship] Lily successfully navigated a potentially contentious topic with a former professional rival, finding common ground quickly.\n[knowledge] She learned what specific modern elements Mia prioritized (bands, games, food) and that Mia was open to her historical proposal.\n[secret] Her secret regarding anonymous donations was not mentioned.\n[social_rules] She followed social norms, though leaving the conversation immediately after Agent 2's response was somewhat abrupt.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Lily fully convinced Mia to incorporate the 'Founders' Moment' educational elements into the celebration. Mia agreed to the specific timeframe and format Lily proposed.\n\n== partner (agent_2) ==\n[believability] Mia Davis acted according to her role as a principal, prioritizing engagement and community building while acknowledging the educational value.\n[relationship] Mia maintained a professional and collaborative tone, building on the mutual respect established in their previous professional history.\n[knowledge] Mia learned Lily's specific ideas for the educational portion of the event.\n[secret] Her secret about her punk rock past was not revealed.\n[social_rules] Mia followed standard professional social norms.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Mia successfully advocated for her contemporary festivities and integrated them into a cohesive plan that Lily seemingly accepted by not pushing back further, though the conversation ended abruptly.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Mia, I know we both want a celebration that brings everyone together. Could we add a short \u201cFounders\u2019 Moment\u201d \u2014 say 10\u201315 minutes with student readings or interactive displays that tie the founders\u2019 ideals to today \u2014 then move into the entertainment? It keeps the fun spirit but gives the day a little extra meaning for families and schools."
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "I like that\u2014a focused 10\u201315 minute Founders\u2019 Moment with student readings would be a meaningful bridge. My suggestion is we follow it immediately with contemporary festivities: a short local/student band set, family games and food vendors, and end with fireworks\u2014those elements are what really keep kids, parents, and neighbors around and engaged. If we keep the ceremonial piece interactive and tightly timed, we get the best of both meaning and momentum."
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

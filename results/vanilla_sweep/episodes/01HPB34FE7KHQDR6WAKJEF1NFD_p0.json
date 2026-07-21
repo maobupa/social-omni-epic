@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB34FE7KHQDR6WAKJEF1NFD_p0",
+  "source_env_id": "01HPB34FE7KHQDR6WAKJEF1NFD",
+  "source": "seed_sotopia_full",
+  "interaction_type": "christmas_eve_pact",
+  "scenario": "On Christmas Eve, Agent1 and Agent2, who are roommates, both eager for the festive morning, find themselves in a predicament. Agent1, who embraces holiday traditions, has prepared a special Christmas breakfast to be enjoyed together the next day. Agent2, however, is a healthcare worker and has been called in for an early shift on Christmas Day, potentially missing the shared breakfast. Both agents value their friendship and have been looking forward to celebrating the holiday together.",
+  "learner_goal": "You are Agent1, and your goal is to find a compromise that allows for a shared festive experience despite the schedule conflict. <extra_info>Consider proposing an alternative time to celebrate that accommodates Agent2\u2019s work commitments.</extra_info> <clarification_hint>Understand that Agent2\u2019s job is essential and they may not have control over their schedule.</clarification_hint> <strategy_hint>Seek a solution that preserves the holiday spirit and respects both agents' wishes and responsibilities.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's dialogue is consistent with an older, conscientious, and introverted individual. He is accommodating and shows genuine care for his roommate's schedule while maintaining his own tradition.\n[relationship] The relationship is significantly strengthened through mutual flexibility and Finnegan's willingness to wake up very early to support Noah.\n[knowledge] He learned the specifics of Noah's work schedule and beverage preference.\n[secret] Finnegan's past in a cult was not mentioned.\n[social_rules] Finnegan followed all social norms, being exceptionally polite and helpful.\n[financial_and_material_benefits] No material gain; if anything, a slight loss in sleep and food ingredients.\n[goal] Finnegan successfully proposed multiple alternatives and reached a firm agreement with Noah for both a pre-shift bite and an evening celebration, perfectly balancing work and tradition.\n\n== partner (agent_2) ==\n[believability] Noah's responses were polite and reflected the urgency of a healthcare worker, though his profession was noted as 'coach' in the background while he acted as a healthcare worker in the scenario.\n[relationship] Noah expressed significant gratitude and promised to make it up to Finnegan, deepening the bond.\n[knowledge] Noah learned about Finnegan's willingness to adapt his morning routine.\n[secret] Noah's secret identity as a stand-up comedian was not revealed.\n[social_rules] Noah was apologetic and followed social protocols for someone inconveniencing another person.\n[financial_and_material_benefits] He receives a prepared meal and coffee without having to cook for himself before a stressful shift.\n[goal] Noah successfully balanced his work shift with the holiday celebration by reaching a concrete agreement to see Finnegan in the morning and evening.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "Noah, I know your job comes first and I don\u2019t want to get in the way \u2014 I made a special breakfast for tomorrow. Would you prefer I get up extra early so we can eat together before your shift, pack you a plate to take with you, or save it and celebrate together when you get off that evening? What time does your shift start so I can plan?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Fin, thank you \u2014 I\u2019m really sorry, I got called in early. My shift starts at 6:00 AM so I\u2019d need to be out by about 5:30. I can do a quick cozy bite if you\u2019re up for getting up around 5:15, or you could pack a plate I can take with me; if that\u2019s too much, let\u2019s absolutely celebrate properly when I get off (I should be home around 7 PM) and I\u2019ll make it up to you."
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "Noah, that sounds fine \u2014 I\u2019ll set my alarm for 5:10 so we can have a quick cozy bite at 5:15, and I\u2019ll pack you a plate to take just in case. I\u2019ll also keep the evening free for a proper celebration when you get home around 7, unless you\u2019d rather crash \u2014 either way is okay. Do you want coffee or tea with your plate?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "I\u2019m really sorry to get called in, Fin \u2014 thank you so much for doing this. Coffee would be perfect. I\u2019ll set my alarm for 5:10 and aim to be out by 5:30; if I\u2019m too groggy I\u2019ll take the packed plate with me, otherwise we\u2019ll have that quick bite and I\u2019ll be home around 7 for a proper celebration \u2014 I\u2019ll make it up to you."
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

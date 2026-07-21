@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPAYNKBS7X873V3753RHKYS4_p0",
+  "source_env_id": "01HPAYNKBS7X873V3753RHKYS4",
+  "source": "seed_sotopia_full",
+  "interaction_type": "community_event",
+  "scenario": "Agent1 and Agent2 are members of a local community group and have been collaborating on organizing a picnic event. During the picnic, the group runs out of ice, and Agent1 volunteers to fetch more. Upon returning, Agent1 finds Agent2 in a heated debate with another community member about the event's organization. <p viewer=\"environment\">Agent1, now seen as a resourceful member for solving the ice issue, wants to mediate the situation and restore harmony before it affects the picnic's atmosphere.</p>",
+  "learner_goal": "You want to use your newfound respect within the community to mediate the dispute between Agent2 and the other member. You should display diplomatic skills and suggest constructive solutions without taking sides. <extra_info> You are aware that the success of the event is important to everyone involved and that maintaining a positive relationship with all members is crucial. </extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle's dialogue was professional, diplomatic, and consistent with someone trying to facilitate a group. She stayed in character as a resourceful community member.\n[relationship] She successfully de-escalated a heated debate and established a leadership role, strengthening her standing with Donovan and presumably the other community member.\n[knowledge] She identified the core issue of the conflict: duplicated efforts and lack of clear task assignments.\n[secret] Her secret regarding magic was not revealed.\n[social_rules] She followed social norms for mediation and community leadership.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] She fully achieved her goal of mediating the dispute, using diplomatic skills to suggest a constructive time-boxed solution, and maintaining harmony without taking sides.\n\n== partner (agent_2) ==\n[believability] Donovan's behavior was consistent with his profile\u2014initially argumentative but willing to be efficient and logical once a structured solution was presented.\n[relationship] He accepted Isabelle's help and cooperated, which improved their acquaintance relationship.\n[knowledge] He understood how the logistical breakdown occurred.\n[secret] His secret regarding government leaks remained hidden.\n[social_rules] He followed social norms by agreeing to mediate and setting aside his grievance for the picnic.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] He successfully asserted his perspective (that task duplication was the issue) and agreed to a compromise to restore harmony.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "said: \"Hey Donovan \u2014 I just got back with the ice and I can see things are getting heated. I don't want this to derail the picnic; can we pause and take this aside for five minutes? If you're both willing, I can help us quickly state the main concern and work toward a simple compromise (reassign tasks or set a short follow-up) so we can get back to enjoying the event.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Donovan Reeves",
+      "content": "said: \"Thanks, Isabelle \u2014 and thanks for the ice. I'm willing to pause: my main concern is that task assignments got unclear and led to duplicated effort, so I'm okay with reassigning roles now or agreeing to a short follow-up after the picnic. Let's take five minutes and pick a simple compromise so we can get back to enjoying the event.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "said: \"Great \u2014 let\u2019s do a quick, time\u2011boxed fix: each person names one unclear or duplicated task (30 seconds each), then we assign an owner for each task now; if anything remains unresolved, we'll schedule a 15\u2011minute follow\u2011up after the picnic. I can facilitate and take notes to keep responsibilities clear \u2014 who wants to go first?\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Donovan Reeves",
+      "content": "said: \"I'll go first: the duplicated task was securing ice/refreshments \u2014 two people went for it. Isabelle, since you brought the ice, would you own consumables (ice/drinks/napkins)? I can take setup/cleanup responsibilities; if anyone objects we'll use the 15\u2011minute follow\u2011up after the picnic.\""
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

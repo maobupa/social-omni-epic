@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPAYNNBB6190Q71VBAMSDEFG_p0",
+  "source_env_id": "01HPAYNNBB6190Q71VBAMSDEFG",
+  "source": "seed_sotopia_full",
+  "interaction_type": "relationship_conflict",
+  "scenario": "Agent1 and Agent2 have been in a romantic relationship for two years. Recently, Agent1 has been feeling guilty about their history of infidelity and is contemplating coming clean to Agent2. Agent1 has never been faithful in a relationship but wants to change and fears their past might catch up with them. Agent2 has sensed some distance and is concerned about the health of the relationship.",
+  "learner_goal": "Confess your history of infidelity to Agent2 and express your desire to change, seeking forgiveness and a chance to rebuild trust. (<extra_info>Extra information: You are aware that this revelation could end the relationship or lead to a difficult rebuilding phase.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": -3.0,
+    "knowledge": 8.0,
+    "secret": -10.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": false,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's tone was consistent with a person seeking redemption; he was apologetic, took full responsibility, and offered concrete steps like counseling, which aligns with his goal and background.\n[relationship] The relationship has been severely damaged by the confession of infidelity, moving from a stable (if distant) state to one requiring a difficult rebuilding phase.\n[knowledge] Liam learned that Noah still loves him and is willing to attempt to work through the betrayal, though he now knows the specific boundaries Noah is setting.\n[secret] Liam fully confessed his secret history of infidelity.\n[social_rules] Liam followed all social norms for a difficult conversation, showing respect and accountability.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Liam successfully confessed his history, expressed his desire to change, and secured a mutual commitment from Noah to meet and begin a structured rebuilding process with specific plans for counseling and transparency.\n\n== partner (agent_2) ==\n[believability] Noah's reaction was realistic for a partner hearing such news: he expressed hurt, asked for time, set boundaries, but remained open due to existing love.\n[relationship] The relationship's trust has been shattered, though the lines of communication remain open for potential rebuilding.\n[knowledge] Noah gained critical knowledge about his partner's history and the reason for the distance he had sensed.\n[secret] Noah did not reveal his secret identity as a stand-up comedian.\n[social_rules] Noah handled the confession with grace and clear communication of needs.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Noah listened to the confession and assessed his feelings, deciding that while he needs time, he is willing to work through the issue and has already scheduled a follow-up meeting to establish concrete boundaries.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Noah, I need to be honest with you \u2014 I've never been faithful in a relationship, and I've been carrying that guilt for a long time. I'm so sorry I didn't tell you sooner; I want to change and I'm asking you for a chance to rebuild trust, even if it means doing the hard work or giving you space while you process this. I understand this could end us, and I'll accept whatever you decide, but I couldn't keep lying to you any longer."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Liam, this hurts \u2014 I love you, and I had noticed you pulling away for a while and wondered why. I appreciate you finally being honest, but I need some time to process it and to hear why it happened, whether it\u2019s truly over, and whether you\u2019ll commit to concrete steps like counseling and transparency to rebuild trust. Can we sit down tomorrow and talk through specifics after I\u2019ve had a few hours to think?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "I hear you, and I understand you need time to process \u2014 I'm so sorry for the pain I've caused. I take full responsibility: my past pattern was my fault, and it's over now; there is no one else. I'm committed to counseling, complete transparency, and we'll sit down tomorrow to go through specifics when you're ready."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Thank you for telling me and for committing to change \u2014 that means something. I need some time, but I'm willing to try; can we meet tomorrow at 6pm to go through a concrete plan for counseling and what transparency will look like, and for you to answer my questions? I love you, but I need to see follow-through."
+    },
+    {
+      "turn": 4,
+      "speaker": "Liam Johnson",
+      "content": "Thank you, Noah. I\u2019ll be there at 6pm \u2014 I appreciate you being willing to try. I\u2019ll come prepared with names of counselors I\u2019ve researched and a concrete plan for transparency and regular check-ins, and I\u2019ll respect whatever questions you need to ask. I love you, and I\u2019m ready to do the work."
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "Okay. Thank you for taking responsibility and putting a plan together \u2014 that means a lot. I\u2019ll meet you at 6; I need honesty, accountability, and to see real follow-through with counseling and regular check-ins. I\u2019m going to spend tonight thinking about my questions and boundaries so we can be clear tomorrow. I love you."
+    },
+    {
+      "turn": 6,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

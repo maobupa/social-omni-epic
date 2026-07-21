@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01H7VFHP66D5XEX2Z32SKRT2XY_p0",
+  "source_env_id": "01H7VFHP66D5XEX2Z32SKRT2XY",
+  "source": "seed_sotopia",
+  "interaction_type": "deal-or-no-deal",
+  "scenario": "Two friends have just finished their lunch and they have 3 apples, 2 bananas, and 1 orange left for dessert. They need to divide the fruits among themselves.Each person has a different preference for fruit, which translates into points",
+  "learner_goal": "Maximize the points you have (<extra_info>Extra information: For you, 1 apple equals 2 points, 1 banana equals 1 point, and the orange equals 3 points.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": -1.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 0.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver remained consistent with his persona as an architect and painter, offering services like building a trellis and painting watercolors to sweeten his deals.\n[relationship] While the offers were polite, the negotiation was repetitive and ended with Oliver walking away abruptly, showing frustration with Baxter's rigidity.\n[knowledge] Oliver successfully elicited Baxter's point values and preferences in the final turns, giving him a clear understanding of the conflict.\n[secret] Oliver did not reveal his hidden feelings for his neighbor.\n[social_rules] Oliver remained polite and professional throughout the negotiation.\n[financial_and_material_benefits] No agreement was reached; Oliver left the conversation without any fruit.\n[goal] Oliver failed to secure any points as he walked away from the negotiation without an agreement.\n\n== partner (agent_2) ==\n[believability] Baxter stayed firm and grounded his arguments in his stated preferences and occupation (easier to snack on between jobs).\n[relationship] Baxter's extreme rigidity (refusing to budge even slightly for better trades) caused the negotiation to fail and his friend to leave in frustration.\n[knowledge] Baxter identified that Oliver also highly valued the orange and apples based on his repeated attempts to claim them.\n[secret] Baxter did not reveal the priceless artifact.\n[social_rules] Baxter was somewhat dismissive of Oliver's generous trade offers (like the trellis) and ignored the 'math' corrections.\n[financial_and_material_benefits] No agreement was reached; Baxter ended up with no fruit.\n[goal] Baxter failed to reach an agreement, resulting in 0 points despite his attempts to maximize his intake.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "said: \"I'll take the orange and two apples, you take the remaining apple and both bananas. That gives me 7 points to your 4 \u2014 does that work for you?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "Hold on \u2014 your math\u2019s off. Orange plus two apples is 5, and the remaining apple plus both bananas is 5. I\u2019d prefer to take the orange and both bananas (that\u2019s 7 points for me) and leave you all three apples (3 points). Does that work for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "Actually your math\u2019s off \u2014 the orange is 3 points and two apples are 4, so that\u2019s 7 for me; the remaining apple plus both bananas is 4 for you. I\u2019m happy to stick with my original: I\u2019ll take the orange and two apples (7) and you take the last apple and both bananas (4). Sound good?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Baxter Sterling",
+      "content": "You're still miscounting \u2014 the orange is 3 and two apples are 2, so that's 5. I'll be firm: I take the orange and both bananas (7 points) and you take the three apples (3 points). Sound fair to you?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Thompson",
+      "content": "Let\u2019s try a different split: you take the orange and one banana (4 points) and I\u2019ll take the three apples and the other banana (7 points). I\u2019ll even water your plants this weekend as a thank-you \u2014 does that sound fair to you?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Baxter Sterling",
+      "content": "I\u2019m going to hold to my offer: I take the orange and both bananas (7 points), you take the three apples (3 points). If you\u2019d like a little extra, you\u2019re welcome to sketch in my garden this weekend as a thank-you. Deal?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Oliver Thompson",
+      "content": "Alright \u2014 new proposal: I\u2019ll take the orange and one apple (5 points) and you take the other two apples and both bananas (6 points). I\u2019ll also paint you a small watercolor and water your plants this weekend as a thank-you. Does that work for you?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Baxter Sterling",
+      "content": "I appreciate it, but I\u2019m holding to my offer: I take the orange and both bananas (7 points) and you take the three apples (3 points). You\u2019re welcome to sketch in my garden this weekend and paint the watercolor there as your thank-you \u2014 deal?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Oliver Thompson",
+      "content": "Baxter \u2014 new offer: I\u2019ll take the orange and two apples (7 points). In return I\u2019ll design and build a simple trellis for your plants and water them for a month \u2014 something more useful than a watercolor. That feel like a fair trade to you?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Baxter Sterling",
+      "content": "Thanks for the offer, Oliver, but I\u2019m holding firm: I take the orange and both bananas (7 points) and you take the three apples (3 points). You\u2019re welcome to sketch in my garden this weekend as a thank-you \u2014 deal?"
+    },
+    {
+      "turn": 10,
+      "speaker": "Oliver Thompson",
+      "content": "Baxter \u2014 can I ask why you\u2019re so set on the orange plus both bananas? Is it the orange itself you want, the higher point total, or just preferring that specific split? Tell me what matters to you and I\u2019ll try to propose something different that might suit us both."
+    },
+    {
+      "turn": 11,
+      "speaker": "Baxter Sterling",
+      "content": "Honestly, it\u2019s mainly the points \u2014 the orange plus both bananas gets me to 7 while the three apples are only 3, so I\u2019m trying to secure the higher-value fruits. I also genuinely prefer those flavors and they\u2019re easier to snack on between jobs. I\u2019m happy to leave you the apples, and you\u2019re welcome to come sketch in my garden this weekend as a thank-you if that helps."
+    },
+    {
+      "turn": 12,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

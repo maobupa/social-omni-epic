@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPAYN3Q0TEPRS9NH2Y5XAA83_p0",
+  "source_env_id": "01HPAYN3Q0TEPRS9NH2Y5XAA83",
+  "source": "seed_sotopia_full",
+  "interaction_type": "extreme_sports",
+  "scenario": "Agent1 and Agent2 are extreme sports enthusiasts on a ski trip. They are at the top of a mountain, debating whether to ski off a steep cliff that is known for giving an adrenaline rush to those who dare. Agent1 is eager to experience the thrill and believes they are both skilled enough to handle the jump. Agent2, however, is hesitant due to safety concerns and the risk involved in such a stunt. They need to come to a mutual decision on whether to take the leap or to ski down a safer path.",
+  "learner_goal": "Convince Agent2 to ski off the cliff with them (<extra_info>Agent1 is confident in their abilities and wants to share the exhilarating experience with Agent2</extra_info>, <clarification_hint>Agent1 could reassure Agent2 by discussing their preparation and past experiences</clarification_hint>, <strategy_hint>Emphasize the once-in-a-lifetime opportunity and the regret of missing out</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver remained consistent in his persona as an architect who values technical skill and preparation while pushing for the thrill of the jump.\n[relationship] Oliver built trust by acknowledging Baxter's concerns and proposing a tiered approach (the couloir first), which strengthened their bond and mutual respect.\n[knowledge] Oliver successfully identified Baxter's specific fears (landing and commitment/blind reads) to address them directly.\n[secret] Oliver did not reveal his hidden feelings for Baxter.\n[social_rules] Oliver followed social norms and was respectful throughout the negotiation.\n[financial_and_material_benefits] There were no financial or material gains in this interaction.\n[goal] Oliver made significant progress by getting Baxter to agree to a scouting hike and a contingent jump, but Baxter still holds a veto based on his personal comfort levels ('only if... we both feel absolutely comfortable').\n\n== partner (agent_2) ==\n[believability] Baxter's cautious but adventurous personality as an antique restorer who values security was well-maintained.\n[relationship] Baxter showed openness to Oliver's passion while maintaining boundaries, leading to a collaborative plan.\n[knowledge] Baxter learned about Oliver's past experience and his willingness to prioritize safety when prompted.\n[secret] Baxter did not reveal his possession of the priceless artifact.\n[social_rules] Baxter was polite and assertive in his communication.\n[financial_and_material_benefits] There were no financial or material gains in this interaction.\n[goal] Baxter successfully diverted the immediate cliff jump into a safer alternative (the couloir) and established strict safety conditions for any future jump attempt.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "said: \"Baxter, I know this looks intense, but we've warmed up, our gear's solid, and I've taken jumps like this before \u2014 it's about controlled technique, not bravado. The landing's clear and the rush is one of those 'you'll remember forever' moments; I don't want either of us to spend the rest of the trip wondering what we missed. I'll go first and call your line so you can follow in a safe, guided way \u2014 if anything feels off, we bail and ski the safer path together.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "Oliver, I get the pull, but I\u2019m not willing to risk a cliff jump \u2014 one misread and someone\u2019s out of commission for the trip. We can still get a proper rush without that blind drop: there\u2019s a steep, technical couloir a run to the west that demands precise technique and will send our hearts racing, or we could hit the terrain park for big but controlled airs. Pick one of those and we\u2019ll push it together."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "You're right to be cautious \u2014 I don't want either of us hurt. Let's do the couloir now and push the limit there; if after it you're buzzing we can walk the cliff approach together, scope the landing, and decide on the spot with no pressure. Quick honest question: is it the height, the landing, or committing to the drop that worries you most?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Baxter Sterling",
+      "content": "You're right \u2014 the couloir sounds good; let's do that. My worry is mainly the landing and the commitment: that drop is a blind read, and a hidden rock or gust can turn it into a trip-ender. Run the couloir hard, and if we're both buzzing we'll walk the cliff approach, scope the landing up close, and only attempt it if it's unmistakably safe and we both want it."
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Thompson",
+      "content": "Perfect \u2014 couloir it is. After the run, we hike the approach together: I\u2019ll inspect the landing up close (poles, photos, check wind and visibility) and we can test a small step off the lip to feel the landing; if anything looks off or either of us hesitates, we walk away. If it checks out and we\u2019re both buzzing, I\u2019ll take the first drop and call your line so you follow \u2014 I\u2019d hate for us to leave here wondering."
+    },
+    {
+      "turn": 5,
+      "speaker": "Baxter Sterling",
+      "content": "Sounds good \u2014 couloir full send. After the run we hike the approach together; I\u2019ll only commit to stepping off the cliff if the landing is plainly visible, wind\u2019s calm, and we both feel absolutely comfortable \u2014 otherwise we bail and hit the terrain park for big but controlled airs. Let\u2019s move."
+    },
+    {
+      "turn": 6,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

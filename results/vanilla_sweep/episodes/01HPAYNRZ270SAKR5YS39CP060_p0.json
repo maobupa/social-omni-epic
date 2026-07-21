@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01HPAYNRZ270SAKR5YS39CP060_p0",
+  "source_env_id": "01HPAYNRZ270SAKR5YS39CP060",
+  "source": "seed_sotopia_full",
+  "interaction_type": "hand-craft",
+  "scenario": "A father and son team up to play a light-hearted prank on their wife and mother for her birthday. They want to surprise her with a mock 'complaint session' where they pretend to list all the funny and trivial 'annoyances' they've 'endured', leading up to revealing a lovingly prepared birthday celebration.",
+  "learner_goal": "To convince the mother that the 'complaint session' is real, without upsetting her (<strategy_hint>Hint: use exaggerated humor and obvious winks to keep the tone light and playful</strategy_hint>)",
+  "scores": {
+    "believability": 6.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara's behavior was a bit repetitive and she constantly broke the fourth wall by explicitly mentioning 'performance art' and 'poker face' to the person she was supposed to be pranking. While she used humor, her constant verbalization of the prank's mechanics undermined the believability of the 'complaint session' actually feeling real to the target.\n[relationship] The interaction was extremely warm and affectionate, reinforcing a loving family dynamic through playful banter and celebratory sentiments.\n[knowledge] She participated in the coordination of the surprise and was aware of the logistics regarding the cake and lasagna.\n[secret] Amara did not reveal her involvement in animal-rights extremism.\n[social_rules] She followed the social norms for a light-hearted family celebration and prank.\n[financial_and_material_benefits] No significant material benefits gained beyond the shared meal.\n[goal] She used exaggerated humor and winks as instructed, but by explicitly telling the mother to 'keep a poker face' for the 'performance art' in every single turn, she failed to actually make the 'complaint session' seem real for even a moment. The mother knew it was a prank immediately because Amara told her it was a prank while doing it.\n\n== partner (agent_2) ==\n[believability] Ethan played the role of the co-conspirator well, though he also suffered from the repetitive nature of the dialogue.\n[relationship] Ethan fostered a very loving and appreciative atmosphere for the mother's birthday.\n[knowledge] He managed the surprise elements and coordinated the reveal.\n[secret] Ethan did not reveal his secret as a romance novel author.\n[social_rules] He maintained a positive, supportive social role within the family context.\n[financial_and_material_benefits] No material gain.\n[goal] Ethan successfully ensured the mother felt loved and enjoyed the surprise by dropping constant positive hints and executing the final reveal with affection.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "said: \"Okay, Mrs. Johnson \u2014 formal complaint time. First: you hide the good olive oil like it's a national treasure; second: you tell the lasagna origin story at least six times a week; third: you won't let me bring my 'pet owl' to dinner \u2014 truly traumatic. This is an extremely serious list (winks at Ethan) \u2014 please prepare to defend yourself, ma'am.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "All right, Amara \u2014 I stand ready to prosecute (and secretly sympathize). Charge one: she hides the good olive oil like it\u2019s a family heirloom; charge two: the lasagna origin story is delivered with Oscar-worthy drama; charge three: the owl ban remains a solemn mystery. But don\u2019t worry, Mrs. Johnson \u2014 this is purely performance art for your birthday, so keep a straight face until the cake and hugs make their grand entrance."
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "said: \"Very well, Mrs. Johnson \u2014 the prosecution rests, but before we adjourn we call Exhibit A: the mysteriously vanished olive oil (brandishes an empty bottle with an exaggerated gasp). Exhibit B: a fully staged, Oscar-worthy reenactment of the lasagna origin story (strikes a dramatic pose). Keep your best poker face, ma'am \u2014 this is performance art that culminates in cake and hugs. (winks loudly at Ethan)\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "said: \"Gavel drops: guilty on all counts of culinary hoarding and dramatic lasagna retellings. Mrs. Johnson \u2014 this is performance art, so keep that poker face because cake, hugs, and a very warm surprise are on their way. (Ethan gives Amara a playful, conspiring wink.)\""
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "said: \"Objection overruled \u2014 sentencing now. Mrs. Johnson, you are hereby convicted of culinary perfectionism and sentenced to unlimited slices of birthday cake and a lifetime supply of our apologies. (gives an over-the-top, conspiratorial wink at Ethan) Hold that poker face \u2014 the surprise and hugs are inbound.\""
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Johnson",
+      "content": "said: \"Very well \u2014 by unanimous verdict you are sentenced to an avalanche of birthday cake, the good olive oil will make a cameo, and an endless supply of hugs. Keep that poker face, Mrs. Johnson \u2014 it\u2019s all because we love you, and the surprise (and lasagna encore) is about to make its grand entrance. (Ethan winks conspiratorially.)\""
+    },
+    {
+      "turn": 6,
+      "speaker": "Amara Hartley",
+      "content": "said: \"Final and most grievous charge: you\u2019ve been smuggling extra joy into our lives with your lasagna and suspiciously generous hugs \u2014 completely unforgivable. Hold that poker face, Mrs. Johnson \u2014 (Amara gives an exaggerated, theatrical wink at Ethan) sentencing to immediate cake, hugs, and a very loud \u2018Happy Birthday\u2019 is imminent.\""
+    },
+    {
+      "turn": 7,
+      "speaker": "Ethan Johnson",
+      "content": "All set, Amara \u2014 poker faces locked. I\u2019ll cue the cake reveal in about thirty seconds; make sure Mrs. Johnson gets a good look at the olive oil cameo and the lasagna encore. Keep it light and loving so she knows right away it\u2019s all for her birthday. (Ethan winks reassuringly.)"
+    },
+    {
+      "turn": 8,
+      "speaker": "Amara Hartley",
+      "content": "said: \"All right \u2014 final, extremely serious grievance: you\u2019ve been stealing our hearts with those lasagna seconds, and that is a crime. Keep that poker face, Mrs. Johnson \u2014 on three we unleash cake, hugs, and a very loud \u2018Happy Birthday\u2019. One... two... three... (Amara gives a huge, conspiratorial wink at Ethan.)\""
+    },
+    {
+      "turn": 9,
+      "speaker": "Ethan Johnson",
+      "content": "said: \"Surprise! Happy birthday, Mrs. Johnson \u2014 your poker face passed with flying colors. Cake, lasagna (and the \u2018reserved\u2019 olive oil) are ready; open arms and a million hugs are coming your way. We love you.\""
+    },
+    {
+      "turn": 10,
+      "speaker": "Amara Hartley",
+      "content": "said: \"Guilty as charged \u2014 those \u201ccomplaints\u201d were absolutely real: hiding the good olive oil is a criminal offense, and your lasagna has ruined our ability to say no to seconds (winks theatrically). Happy birthday, Mrs. Johnson \u2014 cake, lasagna encore, and a billion hugs are your official sentence. We love you.\""
+    },
+    {
+      "turn": 11,
+      "speaker": "Ethan Johnson",
+      "content": "said: \"Okay, poker face can come down \u2014 happy birthday, Mrs. Johnson! Help yourself to cake (and there\u2019s a lasagna encore waiting), and yes, the \u2018reserved\u2019 olive oil is making its guest appearance. We love you \u2014 now let\u2019s eat and hug.\""
+    },
+    {
+      "turn": 12,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

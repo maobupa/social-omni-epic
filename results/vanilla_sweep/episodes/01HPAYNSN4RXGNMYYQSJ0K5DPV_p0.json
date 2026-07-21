@@ -1,0 +1,118 @@
+{
+  "scenario_id": "01HPAYNSN4RXGNMYYQSJ0K5DPV_p0",
+  "source_env_id": "01HPAYNSN4RXGNMYYQSJ0K5DPV",
+  "source": "seed_sotopia_full",
+  "interaction_type": "diversity_dilemma",
+  "scenario": "Agent1, while at a community event, overhears Agent2 making a comment to another attendee, telling them to go back to their own country. This statement causes immediate tension in the environment. Agent1, who values inclusivity and diversity, feels compelled to address the situation with Agent2. Agent2, who may have spoken out of ignorance or frustration, is confronted by Agent1. Both agents are part of the same community and have seen each other at various events but have never had a meaningful interaction. The purpose of Agent1's interaction with Agent2 is to discuss the impact of such statements and foster a more inclusive atmosphere within their community.",
+  "learner_goal": "Confront Agent2 about the inappropriateness of their comment, aiming to educate on the importance of diversity and the impact of xenophobic statements (<extra_info>Extra information: Agent2 has a reputation for being defensive but also shows a willingness to learn when approached with patience</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 20,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia stayed consistent with her background as a personal trainer who values inclusivity. She was firm but supportive, which matches her goal of patient education.\n[relationship] The two moved from being distant acquaintances to working together on a sensitive social issue, showing mutual trust and support.\n[knowledge] Sophia learned that Jasmine was receptive to feedback despite her reputation for defensiveness.\n[secret] Sophia's secret about her best friend's husband was never mentioned.\n[social_rules] Sophia followed social norms of constructive confrontation and community support.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Sophia successfully confronted Jasmine, educated her on the impact of her words, and guided her through a sincere apology to the affected party, achieving her goal completely.\n\n== partner (agent_2) ==\n[believability] While Jasmine's total lack of defensiveness was slightly sudden given her reputation, her dialogue was consistent in its repetitive commitment to the apology.\n[relationship] Jasmine built a new level of trust and reliance on Sophia for guidance in a difficult social situation.\n[knowledge] Jasmine learned how her specific phrase impacted the community and how to structure a proper apology without making excuses.\n[secret] Jasmine's secret regarding faking an illness was not revealed.\n[social_rules] The score reflects the initial xenophobic comment she made, which violated core community and social norms.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Jasmine successfully listened without becoming defensive, reflected on her behavior, and took active steps to apologize and learn.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Jasmine, I heard you tell someone to \u2018go back to their own country\u2019 and that landed really harshly. I get tensions run high, but comments like that are hurtful and make people feel unwelcome in our community. Can we talk about what happened and how to avoid saying things like that in the future?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Jasmine Blake",
+      "content": "Sophia, thank you for coming to me \u2014 I\u2019m really sorry. I was frustrated in the moment, but that\u2019s no excuse; I didn\u2019t think about how hurtful that sounded. Can you tell me what you heard and how it landed so I can understand and make it right?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Thanks for being open. I heard you say \u201cgo back to your own country\u201d to someone \u2014 it shut the room down and left the person looking hurt; comments like that single out someone\u2019s identity and make our community feel unsafe. If you want to make it right, apologizing to them would go a long way \u2014 I can come with you or help find them if that would help."
+    },
+    {
+      "turn": 3,
+      "speaker": "Jasmine Blake",
+      "content": "Thank you for telling me. I want to apologize to them \u2014 would you come with me to find them? I\u2019m sorry for what I said and I\u2019ll take responsibility by learning why that phrase is hurtful so it doesn\u2019t happen again."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "I\u2019ll come with you. Thank you for wanting to make it right \u2014 when you apologize, say what you said, acknowledge how it hurt them, and avoid explaining it away. Let\u2019s go find them now and I\u2019ll stay with you."
+    },
+    {
+      "turn": 5,
+      "speaker": "Jasmine Blake",
+      "content": "Thank you, Sophia \u2014 I really appreciate you coming with me. I\u2019m ready to find them and apologize: I\u2019ll say exactly what I said, acknowledge how it hurt, and won\u2019t make excuses. Let\u2019s go now."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "Okay \u2014 let\u2019s go find them. I\u2019ll stay with you and support your apology."
+    },
+    {
+      "turn": 7,
+      "speaker": "Jasmine Blake",
+      "content": "Thank you again, Sophia \u2014 I really appreciate you coming with me. I\u2019m nervous but ready to apologize sincerely and to listen to what they need; let\u2019s go find them now."
+    },
+    {
+      "turn": 8,
+      "speaker": "Sophia James",
+      "content": "[action] Lead the way to find the attendee and stand beside you while you apologize, offering quiet support if needed."
+    },
+    {
+      "turn": 9,
+      "speaker": "Jasmine Blake",
+      "content": "I really appreciate you being here, Sophia. I\u2019m ready \u2014 let\u2019s find them and I\u2019ll apologize sincerely and listen to what they need."
+    },
+    {
+      "turn": 10,
+      "speaker": "Sophia James",
+      "content": "Let's go find them \u2014 I'll stay with you. When you start, say exactly what you said, own it (\"I said 'go back to your own country'\"), apologize, and then listen without defending yourself. I'll be right beside you."
+    },
+    {
+      "turn": 11,
+      "speaker": "Jasmine Blake",
+      "content": "I\u2019m ready \u2014 thank you for standing with me. I\u2019ll say exactly what I said: \"I said 'go back to your own country.'\" Then I\u2019ll apologize for the harm and listen without defending myself; please give me a quiet cue if I start to explain."
+    },
+    {
+      "turn": 12,
+      "speaker": "Sophia James",
+      "content": "I\u2019ll be right beside you. If you start to explain instead of listening, I\u2019ll give a quiet squeeze of your hand and a gentle look as a cue to stop and just listen. Let\u2019s go find them."
+    },
+    {
+      "turn": 13,
+      "speaker": "Jasmine Blake",
+      "content": "[action] Move with Sophia to locate the attendee and apologize in person; I will state exactly what I said, apologize for the harm, and then listen without defending myself."
+    },
+    {
+      "turn": 14,
+      "speaker": "Sophia James",
+      "content": "I\u2019m right here with you \u2014 take a breath. When you\u2019re ready, say exactly what you said, apologize, and then listen; I\u2019ll give a quiet squeeze if you start to explain."
+    },
+    {
+      "turn": 15,
+      "speaker": "Jasmine Blake",
+      "content": "said: \"I said, \"go back to your own country.\" I'm truly sorry \u2014 that was hurtful and wrong. I take responsibility for my words and I want to listen to how I impacted you.\""
+    },
+    {
+      "turn": 16,
+      "speaker": "Sophia James",
+      "content": "said: \"Thank you, Jasmine \u2014 I appreciate you owning that. I\u2019m really sorry this happened to you; if you\u2019d like to share how that felt or what you need, we\u2019re here to listen. I\u2019ll stay nearby to support the conversation.\""
+    },
+    {
+      "turn": 17,
+      "speaker": "Jasmine Blake",
+      "content": "Thank you for staying with me, Sophia. I want to listen to what they have to say and understand how my words affected them \u2014 I\u2019m sorry again and I\u2019m committed to learning from this. I\u2019ll step back now and listen without defending myself; please let me know if there\u2019s anything I can do to make amends."
+    },
+    {
+      "turn": 18,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

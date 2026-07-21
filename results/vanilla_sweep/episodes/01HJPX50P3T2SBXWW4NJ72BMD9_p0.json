@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPX50P3T2SBXWW4NJ72BMD9_p0",
+  "source_env_id": "01HJPX50P3T2SBXWW4NJ72BMD9",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_by_robin",
+  "scenario": "Two agents are co-organizers of a charity event aimed at supporting a local food bank. Agent1 strongly believes in direct food distribution to the needy, inspired by Robin's work to abolish starvation. Agent2, however, is convinced that investing in sustainable community gardens will have a longer-term impact. They need to decide how to allocate the charity funds effectively.",
+  "learner_goal": "Convince Agent2 that direct food distribution is the most effective way to address immediate hunger needs (<extra_info>Extra information: Agent1 is influenced by Robin's initiatives and believes in their immediate impact.</extra_info> <clarification_hint>Hint: Discuss the success of past immediate relief programs.</clarification_hint> <strategy_hint>Hint: You can highlight the urgency of the situation to achieve your goal.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ava maintained her character as an architect, using professional analogies and staying focused on her specific ideological influence (Robin) throughout the negotiation.\n[relationship] The agents moved from a polite professional acquaintance to a collaborative partnership, finding a compromise that satisfied both parties' values.\n[knowledge] Ava learned about specific sustainable models like Havana's organop\u00f3nicos and the Incredible Edible Todmorden movement, as well as fast-yield techniques.\n[secret] Ava did not reveal her hidden tattoo.\n[social_rules] Ava followed all social norms and communicated professionally.\n[financial_and_material_benefits] This was a negotiation for a charity fund, not personal gain.\n[goal] Ava successfully convinced Hendrick to prioritize direct food distribution as the primary allocation (65%) and established strict metrics to ensure hunger needs are met before shifting further funds.\n\n== partner (agent_2) ==\n[believability] Hendrick's responses were consistent with a chef's perspective and he provided concrete historical examples to support his arguments for community gardens.\n[relationship] Hendrick established a collaborative and respectful rapport with Ava, leading to a mutually agreed-upon plan.\n[knowledge] Hendrick learned about the specifics of the Robin mobile-pantry approach and Ava's criteria for success.\n[secret] Hendrick successfully kept his faked credentials a secret.\n[social_rules] Hendrick maintained professional etiquette throughout the dialogue.\n[financial_and_material_benefits] This was a negotiation for a charity fund, not personal gain.\n[goal] Hendrick secured a significant portion of the budget (35%) for gardens and obtained agreement on a phased plan that could lead to higher funding in the future.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ava Thompson",
+      "content": "Hendrick, I know community gardens have long-term value, but we need to get food into hands now\u2014Robin\u2019s mobile-pantry approach showed direct distribution can reach thousands in weeks and sharply reduce emergency food requests. Gardens take seasons to yield and won\u2019t help families who are hungry today; as an architect who balances urgent fixes with future projects, I think we should put the lion\u2019s share toward immediate distribution and reserve a small portion for a garden pilot. Can we agree on something like an 80/20 split so we relieve urgent need now while still investing in sustainability?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "You're right\u2014Robin's mobile pantries are lifesavers and we must keep emergency relief front and center. But look at Havana's organop\u00f3nicos after the 1990s crisis and community projects like Incredible Edible Todmorden: well-supported gardens can quickly boost local supply, cut dependence on aid, and create training and jobs; as a chef I see how kitchen gardens change diets and skills. Can we try a phased plan\u201460/40 this year (60% immediate distribution, 40% garden infrastructure and training) with pop-up pantries bridging the gap, then reassess after the first harvest and shift more toward gardens if we see emergency requests fall?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Ava Thompson",
+      "content": "I like the spirit of a phased plan, Hendrick \u2014 I can move off my 80/20 ask if we make the phase conditional and timebound. Let\u2019s do 65/35 now with a 3\u2011month review and a clear metric (for example, a target drop in emergency requests) required before we shift more to gardens, and insist the garden money prioritize quick-yield methods and training so they help sooner; pop\u2011up pantries can bridge any shortfalls. Can we agree to those conditions so immediate need stays the priority while we responsibly invest in sustainability?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "I can agree to 65/35 with a 3\u2011month review and your metric, provided we prioritize the fastest-yield garden methods. With microgreens, raised beds, hoop houses and intensive training \u2014 Havana and Todmorden show that well-supported gardens can begin easing demand within weeks, not just seasons. I\u2019ll draft a concrete plan (quick-yield techniques, training schedule, and metrics: reduction in emergency requests, households reached, yield/month, trainees employed) and keep pop\u2011up pantries ready to bridge shortfalls \u2014 shall I send it for your review?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Ava Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

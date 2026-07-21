@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPAYNHJ36ANPRPP04VDD381S_p0",
+  "source_env_id": "01HPAYNHJ36ANPRPP04VDD381S",
+  "source": "seed_sotopia_full",
+  "interaction_type": "community_volunteer_program",
+  "scenario": "Agent1 has recently participated in a community volunteer program where they were assigned to write an encouraging letter to Agent2, who is going through a tough time. Agent2 received the letter and was deeply moved by the support. Wanting to express their gratitude, Agent2 approaches Agent1 to thank them. However, Agent1, who has written several letters to different people, mistakenly thinks Agent2 is thanking them for a different act of kindness. The interaction is delicate as Agent1 wants to maintain the emotional support to Agent2 without revealing that they do not remember the specific letter.",
+  "learner_goal": "Agent1 aims to gracefully accept Agent2's thanks <extra_info>and continue providing emotional support</extra_info> <clarification_hint>without admitting their confusion about the specific act of kindness being referenced</clarification_hint>.",
+  "scores": {
+    "believability": 6.0,
+    "relationship": 3.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] While Sophia stayed in character, the interaction became highly repetitive. She successfully avoided admitting her confusion, but the dialogue lacked depth beyond confirming the hike logistics multiple times.\n[relationship] The relationship was strengthened through the planning of a supportive activity (the hike), maintaining the bond between the two friends during a tough time for Benjamin.\n[knowledge] She confirmed that her 'note' (as she called it) was the specific thing Benjamin was thankful for, helping narrow down her confusion.\n[secret] The secret regarding her best friend's husband was never mentioned.\n[social_rules] She followed all social norms and was polite and supportive.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Sophia successfully accepted the thanks gracefully and transitioned into offering further support (the hike) without ever revealing she didn't know which specific letter he was talking about.\n\n== partner (agent_2) ==\n[believability] Benjamin's Turn #2 is a near-verbatim hallucination/repetition of Sophia's Turn #1, including him saying 'I\u2019m here for you' when he was the one being supported. This significantly broke the believability of his character's internal state.\n[relationship] The relationship feels secure and supportive, as he secured time to spend with his friend.\n[knowledge] He confirmed the logistics for the meeting but did not learn anything new about Sophia or her situation.\n[secret] His family secret remained hidden.\n[social_rules] He maintained a friendly and grateful tone.\n[financial_and_material_benefits] No material benefits were exchanged.\n[goal] Benjamin successfully conveyed his gratitude and established a deeper connection by setting up a one-on-one hike with Sophia.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Ben \u2014 thank you, that means a lot. I\u2019m really glad my words helped; you don\u2019t have to go through this alone. If you want to get outside for a hike or just grab coffee and talk, I\u2019m here whenever."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Sophia, that means a lot \u2014 I\u2019m really glad whatever I said helped. You don\u2019t have to go through this alone; I\u2019m here for you. A hike sounds perfect \u2014 I\u2019m free Saturday morning, or we can grab coffee any evening; whatever works best for you."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "That sounds perfect, Ben \u2014 let\u2019s do the hike Saturday morning. How about 8:30 at the Riverside Park trailhead? If that\u2019s too early, we can grab coffee Friday evening instead. I\u2019m really glad to be here for you."
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Perfect \u2014 8:30 at the Riverside Park trailhead works for me. I\u2019ll bring some strong coffee and a couple of granola bars. Really glad you reached out, Sophia \u2014 fresh air and a walk will do us both good. See you Saturday morning."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "Thanks, Ben \u2014 I really appreciate that. I\u2019m glad my note helped, and a hike will be perfect; 8:30 at Riverside Park works for me. I\u2019ll bring a thermos of coffee and we can take it easy \u2014 see you Saturday."
+    },
+    {
+      "turn": 5,
+      "speaker": "Benjamin Jackson",
+      "content": "Can\u2019t wait \u2014 the Riverside trail will be great for clearing our heads. I\u2019ll bring extra coffee and snacks; see you at 8:30 Saturday morning."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJRH6SSZRWQNEQFK1551GJ29_p0",
+  "source_env_id": "01HJRH6SSZRWQNEQFK1551GJ29",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 and Agent2 are roommates who have been living together for a few months. Agent1 has noticed that Agent2 has been calling in sick to work frequently and staying at home, seemingly lethargic and disinterested in activities they once enjoyed. Agent1 suspects that Agent2 might be struggling with depression rather than physical illness and wants to address the situation delicately.",
+  "learner_goal": "Express concern and offer support to Agent2 (<extra_info>Extra information: Agent1 believes that Agent2 might be suffering from depression and wants to help, but is unsure how to approach the subject without making Agent2 feel uncomfortable or defensive.</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle's tone was consistent with a caring roommate and an art student's sensitive nature, using appropriate nonbinary pronouns for themselves and maintaining a gentle approach.\n[relationship] The relationship improved significantly as Giselle successfully created a safe space for Micah, moving from mere acquaintances toward supportive roommates.\n[knowledge] Giselle confirmed that Micah is indeed going through something personal and gained knowledge about how Micah prefers to be supported (quietly, no pressure).\n[secret] Giselle did not reveal their secret regarding forged paintings.\n[social_rules] Giselle followed all social norms, being polite, respectful of boundaries, and empathetic.\n[financial_and_material_benefits] No financial or material gains or losses occurred.\n[goal] Giselle successfully expressed concern and offered support. Micah accepted the support in the form of a low-key coffee and movie session, which was the intended outcome of helping without making Micah feel defensive.\n\n== partner (agent_2) ==\n[believability] Micah's behavior is very consistent with someone suffering from depression who wants to maintain privacy but appreciates support that doesn't require emotional labor.\n[relationship] Micah developed a deeper trust in Giselle by accepting their support.\n[knowledge] Micah learned that Giselle is observant and a supportive, non-judgmental roommate.\n[secret] Micah's secret about dressing up his dog remains safe.\n[social_rules] Micah was polite and communicative despite his struggles.\n[financial_and_material_benefits] No financial or material gains or losses occurred.\n[goal] Micah successfully maintained his privacy and avoided discussing his personal issues while still accepting the comfort of Giselle's company on his own terms.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Hey Micah, can we talk? I\u2019ve noticed you\u2019ve been calling in sick a lot and don\u2019t seem like yourself lately, and I\u2019m worried about you. I\u2019m here if you want to talk or if you\u2019d like company \u2014 we could grab coffee or go for a short bike ride today, whatever feels easier. No pressure, I just care and want to help."
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "Hey Giselle, thank you \u2014 that means a lot. I\u2019m not ready to talk about it right now, but I really appreciate you checking in; coffee sounds nice if it can be low\u2011key. I might be up for a short bike ride later, but today I just need something calm."
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "Totally fine \u2014 thanks for telling me. I\u2019ll make two mugs of coffee and keep it low\u2011key; come by the kitchen when you\u2019re ready. If you prefer, we can just sit quietly or put on a movie \u2014 no pressure. I\u2019m here whenever you want to talk or go for that short bike ride later."
+    },
+    {
+      "turn": 3,
+      "speaker": "Micah Stevens",
+      "content": "Thanks, Giselle \u2014 that really means a lot. I\u2019ll come by in a little for coffee; sitting quietly or a movie sounds perfect. I\u2019m not ready to talk about it yet, but I appreciate you checking in and offering company."
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

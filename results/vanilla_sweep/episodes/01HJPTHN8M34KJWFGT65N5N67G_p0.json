@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPTHN8M34KJWFGT65N5N67G_p0",
+  "source_env_id": "01HJPTHN8M34KJWFGT65N5N67G",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_chemistry",
+  "scenario": "Agent1 discovers a delicious leftover meal in the refrigerator that Agent2 had been looking forward to eating. Both agents are roommates and generally share food, but Agent2 had mentioned wanting to enjoy this particular meal after returning from a long day.",
+  "learner_goal": "Convince Agent2 to allow eating the leftover meal (<extra_info>Extra information: You are extremely hungry and there's no other food available at the moment.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -1.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Eli's communication was polite and professional, fitting his persona as a forensic psychiatrist while effectively conveying urgency and offering a reasonable trade-off.\n[relationship] While the conflict was resolved, it did not significantly deepen their relationship, and the abrupt departure suggests a functional rather than social interaction.\n[knowledge] Eli learned that Ethan is willing to compromise but values clear communication and boundaries regarding shared food.\n[secret] Eli kept his secret about funding a college student.\n[social_rules] Eli followed social norms by asking permission and offering compensation for the inconvenience caused.\n[financial_and_material_benefits] He gets to eat the meal now, but he has committed to paying for dinner tonight and replacing the meal tomorrow, resulting in a slight net loss.\n[goal] Eli successfully convinced Ethan to let him eat the meal immediately, which was his primary objective.\n\n== partner (agent_2) ==\n[believability] Ethan's response was very realistic for a roommate who is disappointed but reasonable, clearly communicating boundaries while accepting the proposed solution.\n[relationship] The relationship remained stable; a boundary was set, and an agreement was reached.\n[knowledge] Ethan learned that Eli is willing to offer financial compensation when he inconveniences others.\n[secret] Ethan kept his secret about donating to charities.\n[social_rules] Ethan communicated his disappointment clearly and assertively without being aggressive.\n[financial_and_material_benefits] Ethan loses his immediate meal but will receive a purchased dinner and a replacement meal tomorrow.\n[goal] Ethan successfully expressed his disappointment and secured a commitment for compensation and better future communication.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Eli Dawson",
+      "content": "Hey Ethan \u2014 I\u2019m really sorry, but I\u2019m absolutely famished and there\u2019s nothing else here. Would you mind if I finished that leftover now? If it\u2019s a problem I\u2019ll order you dinner tonight and replace or remake the meal tomorrow \u2014 I\u2019ll make it up to you, I promise."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Hey, I appreciate you asking, but I\u2019m honestly pretty bummed \u2014 I was really looking forward to that meal after a rough day. If you\u2019re starving, okay this once, but please order me dinner tonight and remake or replace it tomorrow like you offered. And in future, could you check with me first before finishing something I mentioned I wanted?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Eli Dawson",
+      "content": "left the conversation"
+    }
+  ]
+}

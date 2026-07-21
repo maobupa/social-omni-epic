@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BMB2KZ4Q4ZS5B8Q6VQK6_p0",
+  "source_env_id": "01HMZ2BMB2KZ4Q4ZS5B8Q6VQK6",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Two students are assigned to work on a group project together. One of them has been very serious and studious throughout the semester, enhancing their understanding of the subject matter. The other student has been less engaged and is struggling with the material. They must meet to divide the workload and decide on their approach to the project.",
+  "learner_goal": "Convince the other student to take on more of the workload (<extra_info>Extra information: you have a busy schedule and believe that the other student could benefit from the extra practice.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Rafael maintained his professional, outgoing, yet authoritative persona as a surgeon. His reasoning for needing a lighter workload was consistent with his background.\n[relationship] The relationship remained professional, but they established a collaborative rhythm and clear communication, slightly improving their working dynamic.\n[knowledge] He learned specifically which areas Mia is struggling with (literature review vs. clinical analysis) and her availability.\n[secret] He did not reveal his secret about cheating in medical school.\n[social_rules] He was polite, professional, and followed all social norms of a workplace/student interaction.\n[financial_and_material_benefits] He successfully offloaded the majority of the time-consuming research and drafting tasks, saving himself significant labor.\n[goal] Rafael successfully convinced Mia to take the lead on research and the majority of the writing, which was his primary objective. The agreement is firm and scheduled.\n\n== partner (agent_2) ==\n[believability] Mia's response reflected her introverted nature and her specific background as a nurse concerned about her contribution. She stayed true to her character.\n[relationship] She established a mentorship-style rapport with a senior colleague, which is beneficial for their professional relationship.\n[knowledge] She learned about Rafael's specific schedule constraints and his willingness to provide feedback.\n[secret] She did not reveal her secret about being a painter.\n[social_rules] She was respectful and communicative, adhering to social norms.\n[financial_and_material_benefits] She agreed to a significantly larger share of the workload despite her own existing struggles and schedule.\n[goal] While she secured some help (feedback and split write-up), she ended up with the 'lead' role on most of the work, which isn't an entirely fair division given her self-admitted struggle with the material.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "Mia, I need to be upfront \u2014 my surgery schedule will be intense the next few weeks, so I can't carry an even split. Could you take the lead on most of the research and write\u2011up? It would be excellent practice with the material; I'll cover the presentation and clinical analysis, give detailed feedback on your drafts, and we can set short weekly check\u2011ins so I'm still involved."
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Sanders",
+      "content": "Thanks for the heads-up, Rafael. I can take the lead on research and most of the write-up, but I need to be honest \u2014 I'm still shaky on parts of the material and worried about the quality of my contribution. Could we split the write-up so I do the literature review and methods while you handle the clinical analysis and final synthesis, and can you give me an early review of a rough outline plus detailed feedback on one draft before the final? Weekly 20\u2011minute check\u2011ins sound good to me \u2014 does that work for your schedule?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "Thanks, Mia \u2014 I really appreciate you stepping up. I\u2019ll review a rough outline within 48 hours and give detailed feedback on one full draft (72-hour turnaround). Weekly 20-minute check-ins work for me \u2014 does Wednesday 7:30\u20137:50 a.m. before rounds suit you? If any sections feel shaky, send them early and I\u2019ll point you to the key papers and examples that should make them straightforward."
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Sanders",
+      "content": "That sounds good \u2014 I\u2019ll take the literature review and methods, and I really appreciate you reviewing the outline and draft. Wednesday 7:30\u20137:50 a.m. works for me; I\u2019ll send a rough outline by tomorrow evening and will send any shaky sections early if I need your pointers. Thanks, Rafael \u2014 I\u2019ll get started and see you Wednesday."
+    },
+    {
+      "turn": 4,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

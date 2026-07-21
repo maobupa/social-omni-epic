@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPX51FJX2YTTH00AKSNKHYT_p0",
+  "source_env_id": "01HJPX51FJX2YTTH00AKSNKHYT",
+  "source": "seed_sotopia_full",
+  "interaction_type": "Wife Saddled With Dog Duty Is Ready to Hand Over Leash",
+  "scenario": "Agent1 and Agent2 are a married couple who have recently adopted a dog. Agent1 has been the primary caretaker of the dog, managing most of the responsibilities such as feeding, walking, and training. However, Agent1 feels overwhelmed and believes it's time for Agent2 to take on a more active role in dog care. They decide to have a conversation about this at home after noticing the dog's attachment to Agent1 has grown significantly, while Agent2 has been less involved.",
+  "learner_goal": "Convince Agent2 to take on more responsibilities with the dog, emphasizing the need for shared duties and the importance of both agents forming a bond with the pet (<extra_info>Extra information: you are feeling overwhelmed and need support in managing the dog's care.</extra_info> <clarification_hint>Hint: stress the benefits of shared responsibilities for the well-being of the dog and the household.</clarification_hint> <strategy_hint>Hint: you can suggest specific tasks for Agent2 to start with to ease them into a routine.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan's dialogue is consistent with his character's professional background and the stated problem. He presents clear, practical solutions and maintains a supportive yet firm tone regarding the household burden.\n[relationship] The interaction resolves a point of tension (overwhelming responsibilities) and establishes a collaborative plan, which strengthens their bond as a couple.\n[knowledge] Ethan learns about Esmeralda's specific anxieties regarding the dog's care and her need for a structured handoff.\n[secret] His secret as a romance novelist was not revealed.\n[social_rules] He communicated politely and constructively within the context of a domestic partnership.\n[financial_and_material_benefits] He successfully offloaded labor, gaining significant time back for his career (menu planning/service).\n[goal] Ethan completely achieved his goal: he convinced Esmeralda to take on specific tasks (mornings, evening walks, vet visits), emphasized the bond, and structured the routine exactly as he hoped.\n\n== partner (agent_2) ==\n[believability] Esmeralda's professional background as a DA makes her preference for checklists and clear schedules very believable, as does her caution about 'doing it wrong'.\n[relationship] She showed vulnerability and a willingness to compromise, which improves the relationship dynamic.\n[knowledge] She gained a clear understanding of the specific requirements of the dog's routine and established a learning path.\n[secret] Her secrets regarding high-profile criminals were not disclosed.\n[social_rules] She adhered to social norms for a constructive discussion with a partner.\n[financial_and_material_benefits] She took on additional labor and responsibilities, which costs her time.\n[goal] Esmeralda achieved her goal perfectly: she agreed to help while securing the specific guidance, walkthroughs, and checklists she requested to mitigate her fear of failure.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "Esmeralda Solis, can we talk for a minute? I love how attached the pup is, but I\u2019ve been doing nearly all the feeding, walking and training and I\u2019m feeling pretty overwhelmed between service and menu planning. Could you start by taking mornings \u2014 feeding and a 20-minute walk \u2014 and one weekday evening walk, and maybe handle vet appointments on weekends? It\u2019ll help the dog bond with you and keep things fair; we can try it for two weeks and tweak it if needed."
+    },
+    {
+      "turn": 1,
+      "speaker": "Esmeralda Solis",
+      "content": "I hear you \u2014 I\u2019m willing to take mornings (feeding and the 20\u2011minute walk), one weekday evening walk, and handle weekend vet appointments, but I have to admit I\u2019m nervous since I don\u2019t have much experience and I\u2019m afraid of doing it wrong. Can we do a gradual handoff where you show me the feeding routine, harness/leash and cues for the first three mornings and one evening, and leave a short checklist for vet visits? Let\u2019s try that for two weeks and tweak things if it\u2019s not working."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "That sounds great \u2014 thank you for agreeing. I\u2019ll show you the feeding routine, how I put on the harness, and the basic cues for the first three mornings and one evening, and I\u2019ll write a short vet-visit checklist and leave all the supplies together. Don\u2019t worry about doing it perfectly \u2014 consistency matters more than perfection, and the pup will warm up to you fast. Let\u2019s start Monday and check back in two weeks to tweak things if needed."
+    },
+    {
+      "turn": 3,
+      "speaker": "Esmeralda Solis",
+      "content": "Thank you, Ethan \u2014 that plan and your reassurance help. Can we do the first walkthrough Monday at 7:00 AM? Please leave the supplies and the checklist by the kitchen counter and I\u2019ll take the morning shifts and weekend vet appointments as agreed; we\u2019ll check back in after two weeks."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ethan Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

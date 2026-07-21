@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPAYNBQ3G6GKXSG8GR6QWBF9_p0",
+  "source_env_id": "01HPAYNBQ3G6GKXSG8GR6QWBF9",
+  "source": "seed_sotopia_full",
+  "interaction_type": "office_collaboration",
+  "scenario": "During a critical phase of a big work project, Agent1 and Agent2, both team members, encounter a major disagreement on the project's direction. Agent1 believes in a more innovative approach that could potentially lead to a breakthrough but is risky, while Agent2 prefers a tried-and-tested method that is less likely to fail but may not stand out. They need to present a unified strategy to their supervisor by the end of the day.",
+  "learner_goal": "Convince the other party to adopt a new approach that balances innovation with reliability (<extra_info>Extra information: Agent1 is aware of the risks but believes that innovation is key to staying ahead in the industry.<clarification_hint>Clarify the potential long-term benefits of taking risks to Agent2.</clarification_hint><strategy_hint>Hint: Propose a plan that incorporates innovative elements while retaining core reliable methodologies to create a balanced approach.</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Rafael maintained a professional and persuasive tone consistent with his surgeon background, proposing a structured, low-risk approach to innovation.\n[relationship] The agents reached a compromise, strengthening their working relationship as acquaintances despite their low agreeableness.\n[knowledge] Rafael learned the specific risk-mitigation requirements Jaxon needs to feel secure.\n[secret] Rafael did not reveal his secret about cheating in medical school.\n[social_rules] The interaction was professional and followed social norms, though Rafael ended the conversation somewhat abruptly by leaving after the agreement.\n[financial_and_material_benefits] The outcome is a strategy for a project, which may lead to future benefits but has no immediate material impact.\n[goal] Rafael successfully convinced Jaxon to adopt a balanced approach incorporating innovation (the pilot) with reliability (the core fallback), meeting all criteria of his goal.\n\n== partner (agent_2) ==\n[believability] Jaxon's response was logical and aligned with his goal of ensuring career security and mitigating risk.\n[relationship] Jaxon reached a consensus with Rafael, moving the project forward in a way they both agreed on.\n[knowledge] Jaxon gained knowledge of Rafael's specific plan for the project strategy.\n[secret] Jaxon did not reveal his secret about fabricating evidence.\n[social_rules] Jaxon was collaborative and professional in his communication.\n[financial_and_material_benefits] No immediate material gain, though the plan aims to protect his job security.\n[goal] Jaxon successfully reached a consensus that included safety nets and contingency plans to protect his career and the project's success.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "Jaxon, I understand the appeal of the conservative route, but measured innovation is how teams stay relevant \u2014 we can acknowledge the risks without being paralyzed by them. My proposal: keep the reliable core, run the innovative approach as a parallel pilot with clear success metrics, a short timeline and predefined rollback triggers, and a stage-gate review at 6\u20138 weeks so exposure is limited. If the pilot shows meaningful upside we scale; if not, we\u2019ve learned cheaply \u2014 can we present that balanced plan to the supervisor together?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "Agreed \u2014 that parallel pilot with a reliable core fallback is the right compromise. To protect our track record and careers, let\u2019s tighten it: cap pilot exposure (budget and user slice), define three clear success KPIs, set a hard 6\u2011week rollback trigger, assign a rapid\u2011response support lead, and draft a customer communication/fallback script. I\u2019ll present that package to the supervisor with you so we\u2019re unified on the recommendation \u2014 you good with those specifics?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB34B3SG56NZZ7SNW15WKRH_p0",
+  "source_env_id": "01HPB34B3SG56NZZ7SNW15WKRH",
+  "source": "seed_sotopia_full",
+  "interaction_type": "eat_snacks",
+  "scenario": "Agent1 and Agent2, who are friends and roommates, are planning a movie night at their shared apartment. They both enjoy snacking while watching movies but have different dietary preferences. Agent1 prefers healthy, organic snacks, while Agent2 is a fan of indulgent, sugary treats. They need to decide on snacks that will satisfy both without compromising their own enjoyment of the movie night.",
+  "learner_goal": "Convince Agent2 to consider some healthier snack options that can be both nutritious and tasty, ensuring that the movie night is enjoyable for both agents (<extra_info>Extra information: you believe that snacks can be both healthy and delicious, and you want to introduce Agent2 to better eating habits<strategy_hint>Hint: you can suggest making homemade versions of classic snacks with healthier ingredients or finding a compromise where both types of snacks are available</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Eli's suggestions are highly consistent with his background as a forensic psychiatrist who values health and order. He proposes sophisticated, healthy alternatives like nutritional yeast and Greek yogurt, which fit his personality.\n[relationship] Eli successfully proposes a compromise that respects both parties' preferences, fostering a cooperative roommate dynamic.\n[knowledge] He learned Ethan's specific preference for chocolate-based treats and his willingness to try new things.\n[secret] Eli did not reveal his secret about funding a student.\n[social_rules] Eli followed all social norms and was polite throughout the interaction.\n[financial_and_material_benefits] No significant financial or material gain was made, though snacks were planned.\n[goal] Eli successfully convinced Ethan to include multiple healthy snacks and even got him to agree to a 'snack swap' to try them, directly fulfilling the goal of introducing healthier habits.\n\n== partner (agent_2) ==\n[believability] Ethan's response reflects his age and interests; he is open to new things while maintaining his desire for indulgence.\n[relationship] Ethan was very receptive and proposed a friendly 'swap', strengthening the bond with his roommate.\n[knowledge] Ethan learned about Eli's specific healthy recipes and his willingness to accommodate sugary treats.\n[secret] Ethan did not reveal his secret about his charitable donations.\n[social_rules] Ethan followed social norms perfectly.\n[financial_and_material_benefits] No significant financial or material gain occurred.\n[goal] Ethan successfully negotiated for his favorite indulgent treat (double-chocolate chip cookies) to be included in the movie night.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Eli Dawson",
+      "content": "Hey Ethan \u2014 what if we do a mix: I\u2019ll bring some tasty, healthier homemade options (air-popped popcorn with nutritional yeast, a Greek-yogurt chocolate dip for fruit, and baked sweet-potato fries) and you bring one indulgent treat you love. That way we both get what we want and the movie night stays fun. Sound good \u2014 want me to swap energy bites for the fries or stick with the fries?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Love that plan \u2014 a mix sounds perfect. I\u2019ll bring an indulgent treat: a batch of warm double\u2011chocolate chip cookies, and I\u2019m happy to stick with you keeping the sweet\u2011potato fries. I\u2019m up for a mini snack swap too \u2014 I\u2019ll try the Greek\u2011yogurt chocolate dip if you try a cookie. Sound good?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Eli Dawson",
+      "content": "left the conversation"
+    }
+  ]
+}

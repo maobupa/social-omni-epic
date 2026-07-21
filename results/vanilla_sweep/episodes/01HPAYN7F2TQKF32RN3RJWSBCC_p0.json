@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPAYN7F2TQKF32RN3RJWSBCC_p0",
+  "source_env_id": "01HPAYN7F2TQKF32RN3RJWSBCC",
+  "source": "seed_sotopia_full",
+  "interaction_type": "workout_commitment",
+  "scenario": "Agent1 and Agent2 are friends who have recently decided to become workout buddies to motivate each other to go to the gym more regularly. They have been successful in maintaining a routine for a few weeks, but Agent1 has noticed that Agent2's commitment is starting to wane, with them skipping sessions or leaving early. Agent1 wants to address this issue without causing friction in their friendship, aiming to reinforce their mutual workout commitment.",
+  "learner_goal": "Encourage Agent2 to recommit to the workout schedule and address any underlying issues that might be causing the lack of commitment (<extra_info>Extra information: Agent1 might suggest setting more concrete goals or discussing if the current workout plan is too demanding</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Donovan's tone is supportive yet firm, consistent with his goal and persona as a software developer who values structure.\n[relationship] Donovan successfully navigated a potentially awkward situation without causing friction, reinforcing the friendship through empathy and flexibility.\n[knowledge] Donovan learned that Ava's lack of commitment was due to work burnout and the high intensity of the previous workout plan.\n[secret] Donovan's secret regarding government information was not mentioned.\n[social_rules] Donovan followed all social norms, being polite and understanding.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Donovan successfully encouraged Ava to recommit by identifying the root cause of her absence and establishing a concrete, structured 4-week trial plan with specific sessions and check-ins.\n\n== partner (agent_2) ==\n[believability] Ava's responses accurately reflect her background as a busy architect and her specific goal of scaling back intensity due to work stress.\n[relationship] Ava appreciated Donovan's check-in and felt comfortable enough to be honest about her stress, strengthening their bond.\n[knowledge] Ava learned that Donovan was willing to be flexible with the schedule and intensity to keep her involved.\n[secret] Ava's hidden tattoo was not mentioned.\n[social_rules] Ava was polite and apologetic for her previous lack of commitment.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Ava expressed her reasons for burnout and successfully negotiated a more sustainable workout plan (shorter sessions, lower intensity) that fits her work schedule.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "Hey Ava, I\u2019ve noticed you\u2019ve missed a few sessions or had to leave early \u2014 everything okay? I really value our workout routine and want us both to get something out of it, so if the plan\u2019s too demanding or your schedule\u2019s changed we can tweak it (shorter sessions, different days, or set a concrete goal like 3x/week for a month). What would help you recommit?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Thompson",
+      "content": "Thanks for checking in \u2014 I\u2019m sorry I\u2019ve been flaky. Work has ramped up and I\u2019m feeling a bit burned out, so the current intensity and timing haven\u2019t been sustainable. I\u2019m up for recommitting if we scale back a bit \u2014 say 3 shorter sessions (30\u201345 min) a week or replace one HIIT day with a lighter recovery/cardio day \u2014 does that sound doable to you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "Totally understand \u2014 that sounds reasonable and doable. How about we try 3 shorter sessions a week (around 35 minutes) \u2014 say Tues/Thu evenings and Sat morning \u2014 and swap one of the HIIT days for a lighter recovery cardio session? Let\u2019s run it as a 4-week trial and do a quick check-in each Sunday to see how your energy/schedule\u2019s holding up and tweak if needed; does that work for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Thompson",
+      "content": "Thanks \u2014 that plan sounds great. I\u2019m in for Tues/Thu evenings and Saturday morning at ~35 minutes, and swapping one HIIT for a recovery cardio day; the 4-week trial with quick Sunday check-ins works for me. Heads-up: work might still flare up some nights, so I\u2019ll text you if I need to shift a session and we can make up any missed ones as needed."
+    },
+    {
+      "turn": 4,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHPGDT7DSWV0Y0S76SWMJ_p0",
+  "source_env_id": "01HJPTHPGDT7DSWV0Y0S76SWMJ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "family_dynamics",
+  "scenario": "Agent1 is being encouraged by their mother to start a romantic relationship with Agent2, a close friend who often visits the family. The mother believes Agent2 would be a perfect fit for the family and subtly tries to play matchmaker during family gatherings. Agent1 values the friendship with Agent2 and is concerned that their mother's matchmaking attempts might complicate or jeopardize their relationship.",
+  "learner_goal": "Convince Agent2 to consider a romantic relationship without damaging the existing friendship (<extra_info>Agent1 is torn between their mother's wishes and preserving the friendship, and seeks a delicate approach to broach the subject with Agent2</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 4.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's dialogue was polite, awkward in a realistic way, and consistent with an introverted professional dealing with family pressure.\n[relationship] The friendship was preserved and arguably strengthened through honest communication, even though the romantic overture was declined.\n[knowledge] Naomi learned definitively that Lena prefers a platonic relationship and gained confirmation that Lena is willing to help manage the mother's expectations.\n[secret] No secrets were revealed.\n[social_rules] The interaction was handled with high social intelligence and respect for boundaries.\n[financial_and_material_benefits] No financial or material transactions occurred.\n[goal] Naomi's primary goal was to convince Lena to consider a romantic relationship. Lena explicitly rejected this, stating she wanted to keep things platonic. Naomi succeeded in preserving the friendship, but failed in the romantic persuasion.\n\n== partner (agent_2) ==\n[believability] Lena's response was firm but kind, reflecting her background as a mature professional who values her current boundaries.\n[relationship] The relationship remained stable and the air was cleared regarding the mother's matchmaking.\n[knowledge] Lena learned about the source of the pressure (the mother) and Naomi's potential romantic interest.\n[secret] No secrets were revealed.\n[social_rules] Lena handled the rejection with grace and clarity.\n[financial_and_material_benefits] No financial or material transactions occurred.\n[goal] Lena successfully maintained the friendship, clarified her platonic stance, and even volunteered to handle the mother's matchmaking attempts to resolve the conflict.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Lena \u2014 can I be honest about something a bit awkward? My mum's been gently matchmaking and it's left me in a weird spot: I really value our friendship, but I've also found myself wondering if there could be something more between us. Would you be open to one low-pressure outing \u2014 coffee or an architecture walk \u2014 just to see how it feels, with a promise we stop if it gets uncomfortable? No pressure either way; keeping our friendship is the priority for me."
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks for being honest \u2014 I really appreciate you telling me. I care about our friendship a lot and I'm cautious about changing it; I'm flattered, but I don't think I want to move us into a romantic relationship. I'm absolutely up for a low-pressure coffee or an architecture walk as friends, and if it would help I can gently make it clear to your mum that I see us as friends so she doesn't keep pushing."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks \u2014 I really appreciate your honesty and I totally respect that. I\u2019d love a low-pressure coffee or architecture walk as friends; keeping our friendship is the priority. If you\u2019re comfortable, could you gently tell my mum you see us as friends so she eases off? No pressure \u2014 I can handle it if you\u2019d rather I do it myself, and if anything ever changes for either of us we\u2019ll be honest, but I won\u2019t push."
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "I'm happy to do that. I'll gently tell your mum that I really value our friendship and see us as friends \u2014 I won't make a big deal of it or put you on the spot. I'm looking forward to a low-pressure coffee or architecture walk; if either of us ever feels differently we'll be honest with each other."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

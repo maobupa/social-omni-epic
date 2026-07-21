@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPAYNK4KGF2J6X6PFRYBAQY8_p0",
+  "source_env_id": "01HPAYNK4KGF2J6X6PFRYBAQY8",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspiration_prompt",
+  "scenario": "Agent1 has harbored romantic feelings for Agent2 for quite some time. They are both part of the same circle of friends and frequently meet during group outings. Agent1 wants to reveal their feelings to Agent2 without disrupting the group dynamic or causing discomfort. The relationship between Agent1 and Agent2 is that of friends, and Agent1's interaction with Agent2 is motivated by a desire to possibly transform their friendship into a romantic relationship.",
+  "learner_goal": "Confess romantic feelings to Agent2, hoping to progress the relationship beyond friendship (<extra_info>Extra information: Agent2 might not reciprocate the feelings and it could affect their friendship</extra_info>, <strategy_hint>Choose an appropriate moment when Agent2 is comfortable and the setting is private</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia's approach was consistent with her character and the situation. She followed the strategy hint to find a private moment and expressed her feelings clearly while acknowledging the friendship's importance.\n[relationship] The relationship has entered a more intimate territory. While the outcome is pending, the mutual respect and honesty shown strengthened their bond.\n[knowledge] Sophia learned that Miles is open to the idea but needs time to process it, and that he highly values their friendship.\n[secret] Sophia did not reveal her secret regarding her best friend's husband.\n[social_rules] Sophia followed social norms by asking for a private moment and being polite and non-pressuring.\n[financial_and_material_benefits] No material benefits were involved.\n[goal] Sophia successfully confessed her feelings and did so in a private setting. However, the goal of 'progressing the relationship' remains under Miles's unilateral discretion and is not yet a mutual commitment.\n\n== partner (agent_2) ==\n[believability] Miles's response was mature and consistent with his age and professional background, showing caution and value for the existing relationship.\n[relationship] Miles maintained the friendship through a potentially awkward moment and expressed his care for Sophia.\n[knowledge] Miles gained significant knowledge regarding Sophia's romantic feelings toward him.\n[secret] Miles did not reveal his secret about his gambling addiction.\n[social_rules] Miles handled the delicate situation with grace and honesty.\n[financial_and_material_benefits] No material benefits were involved.\n[goal] Miles successfully navigated the confession in a way that preserved the friendship and minimized awkwardness by setting a clear timeframe for a follow-up.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Miles\u2014do you have a minute to step aside? I have something a bit personal I\u2019d rather tell you one-on-one."
+    },
+    {
+      "turn": 1,
+      "speaker": "Miles Hawkins",
+      "content": "Of course, Sophia \u2014 let\u2019s step somewhere quiet. I\u2019m here to listen, and whatever it is I want you to know our friendship matters to me."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Miles, thanks for stepping away. This is a bit awkward to say, but over the last while I\u2019ve realized I have feelings for you that go beyond friendship. I didn\u2019t want to keep it from you, and there\u2019s absolutely no pressure\u2014if you don\u2019t feel the same, I understand and I really want to keep our friendship the way it is."
+    },
+    {
+      "turn": 3,
+      "speaker": "Miles Hawkins",
+      "content": "Thank you for telling me, Sophia \u2014 I\u2019m really flattered and I care about you. I value our friendship a lot and I don\u2019t want to rush or make things awkward, so I need a little time to think so I can be honest with you. Whatever happens, our friendship matters to me and I want us to handle this gently; can we talk again in a day or two?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

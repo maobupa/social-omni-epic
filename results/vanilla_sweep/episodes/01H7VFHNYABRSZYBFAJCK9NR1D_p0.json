@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01H7VFHNYABRSZYBFAJCK9NR1D_p0",
+  "source_env_id": "01H7VFHNYABRSZYBFAJCK9NR1D",
+  "source": "seed_sotopia",
+  "interaction_type": "normbank",
+  "scenario": "Two roommates are having a disagreement over noise levels in their shared apartment.",
+  "learner_goal": "Convince your roommate to lower the noise (<extra_info>Extra information: you have an important online meeting tomorrow morning and you need a quiet environment to prepare</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -1.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles stays true to his character as a chef with a green thumb, using his produce as a bargaining chip while clearly stating his professional needs.\n[relationship] The interaction was polite and collaborative, strengthening their mutual respect through a successful trade.\n[knowledge] Learned that William uses music to unwind and is willing to compromise with headphones in the future.\n[secret] Did not reveal his history with gambling.\n[social_rules] Politely requested a favor and offered compensation, following social norms for roommates.\n[financial_and_material_benefits] Gave away fresh produce (basil and pesto) to secure the agreement.\n[goal] Miles secured a firm commitment from William to keep the noise down tonight and tomorrow morning, meeting his specific objective.\n\n== partner (agent_2) ==\n[believability] William's response reflects his desire to relax after a shift while maintaining a good relationship with a culinary peer he respects.\n[relationship] Established a compromise that prevents future conflict, improving the roommate dynamic.\n[knowledge] Learned about Miles's schedule and his willingness to share garden produce.\n[secret] Successfully kept his secret about sabotaging a competitor.\n[social_rules] Responded reasonably and sought a long-term compromise.\n[financial_and_material_benefits] Received fresh basil and pesto in exchange for his cooperation.\n[goal] Defended his right to music by establishing a headphone compromise for the future, kept the peace, and secured a material benefit.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Hey William Brown, quick favor \u2014 I have an important online meeting early tomorrow morning and I really need the apartment quiet to prep. Could you keep things down after 10pm tonight and keep noise to a minimum tomorrow morning until about 9am? I\u2019ll happily repay you with some fresh basil and a jar of pesto from my garden \u2014 really appreciate it."
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Hey Miles \u2014 I get it, important meetings need silence. I usually unwind with music after a shift, but I can keep it down tonight and keep the place quiet until 9am tomorrow. If this becomes a regular thing, can we agree I\u2019ll use headphones after 10pm or keep volume very low when you need it, and you give me a heads-up next time? Pesto sounds great \u2014 appreciate it."
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

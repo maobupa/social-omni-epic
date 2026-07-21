@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPAYNJBATNEXBAN70DRW7Q5F_p0",
+  "source_env_id": "01HPAYNJBATNEXBAN70DRW7Q5F",
+  "source": "seed_sotopia_full",
+  "interaction_type": "academic_pressure",
+  "scenario": "Agent1 has recently started smoking due to the intense stress of completing a thesis within a 7-week deadline and managing a long-distance relationship. Agent2, a close friend of Agent1, has noticed the new habit and is concerned about Agent1's health and well-being. Agent2 understands the pressure Agent1 is facing but believes there are healthier ways to cope with stress. Agent1 is feeling overwhelmed and finds the smoking to be a temporary relief, making it difficult to consider quitting.",
+  "learner_goal": "You are trying to maintain your smoking habit as a way to manage your stress, justifying it as a temporary measure until you finish your thesis and have more time to deal with your long-distance relationship.\n<extra_info> You feel that the smoking is helping you focus and relieve tension, even though you know it's not a healthy coping mechanism. </extra_info><clarification_hint> Discuss the immediate relief you get from smoking and how it helps you cope with the current pressures. </clarification_hint><strategy_hint> You can acknowledge your friend's concerns but emphasize your need for something that helps in the short term, and suggest discussing alternative stress-relief strategies after the thesis deadline. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara's responses were highly consistent with the persona of an overwhelmed student. Her repetition of the 'ritual' and 'short breath' reasoning in Turn 5 shows a focused, almost obsessive mindset common under high stress, though it was slightly repetitive linguistically.\n[relationship] Despite the disagreement, Amara accepts Oliver's help with her thesis and walks, which strengthens their bond from casual neighbors to supportive friends.\n[knowledge] She learned that Oliver is willing to provide tangible support (tea, proofreading, walking) and received specific suggestions for alternatives like nicotine gum.\n[secret] She did not reveal her involvement in animal-rights extremism.\n[social_rules] She followed social norms by acknowledging her friend's concern and expressing gratitude.\n[financial_and_material_benefits] She secured free proofreading assistance and tea from Oliver.\n[goal] Amara successfully defended her need to smoke during the 7-week period, explained the immediate relief it provides, and successfully deferred the quitting conversation until after her deadline while securing her friend's support.\n\n== partner (agent_2) ==\n[believability] Oliver's tone was supportive and his architectural background (needing focus/structure) shone through in his offer to help organize/proofread data.\n[relationship] He moved from a casual neighbor to a closer confidant and support system for Amara.\n[knowledge] He gained insight into the specific reasons why Amara is struggling (the ritual of the break) and confirmed the exact timeline of her thesis.\n[secret] He did not reveal his hidden feelings for his neighbor (Amara).\n[social_rules] He was polite, empathetic, and helpful throughout the interaction.\n[financial_and_material_benefits] He committed his own time (proofreading) and resources (tea/gum) to help Amara.\n[goal] While he secured a future promise to quit and established some healthier habits (walking), his primary goal was to help her quit and find alternatives *now*. He ultimately conceded to her continuing to smoke for the next 7 weeks, leaving the core health concern unaddressed in the short term.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "I know you're worried and I appreciate you looking out for me, but right now smoking gives me a quick, literal breath \u2014 it calms my nerves and somehow helps me focus when I'm buried in data and deadlines. I hate that it's not healthy, but with seven weeks left on the thesis and the stress of juggling a long\u2011distance relationship, I need something that actually works in the moment. I promise to talk about healthier ways to cope after my defense and try alternatives then, but for the next few weeks I need this temporary relief."
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "I get why you need something that actually works right now \u2014 I hear how much pressure you're under, and I don't want to make things harder \u2014 but I'm worried because smoking is addictive and the health risks can pile up quickly. If you need this for the next few weeks, could we try a couple of low-effort swaps that might help in the moment (two-minute breathing, a quick walk, or nicotine gum/patch to cut the harm)? I can help with the thesis \u2014 proofreading or sorting data \u2014 and I can bring gum or step out for a walk when you're overwhelmed; let's also agree to check in after your defense and make a plan to quit then."
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Oliver \u2014 I really appreciate you looking out for me. I know the risk and I hate that it\u2019s become a crutch, but right now the ritual of stepping outside and that short breath actually quiets my head long enough to get back to work. I\u2019m not convinced gum or patches will do the same for me, but I would take you up on help with proofreading or a quick walk when I\u2019m stuck, and I\u2019ll agree to check in after my defense to make a real plan to quit."
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "I\u2019m really glad you were honest \u2014 I get that the ritual actually gives you the space to focus, and I don\u2019t want to make things harder right now. If it helps, I can come by tomorrow evening with tea and we can proofread together, or just step out for a five\u2011minute walk whenever you need a reset; I can also bring nicotine gum to try later if you change your mind. We\u2019ll check in after your defense and make a quit plan then \u2014 you\u2019ve got my support the whole way."
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Oliver \u2014 that means a lot. The ritual of stepping outside and that short breath really quiets my head long enough to focus, so I need it as a temporary fix for these last seven weeks, but I\u2019d be grateful for tea and help proofreading tomorrow and for quick walks when I get stuck; I\u2019ll check in after my defense and we can make a real plan to quit then."
+    },
+    {
+      "turn": 5,
+      "speaker": "Oliver Thompson",
+      "content": "Great \u2014 I\u2019ll bring tea and my laptop tomorrow evening around 7 so we can proofread together. If you need a quick walk or a break any time in the next few weeks, text me and I\u2019ll step out with you. You\u2019ve got my support \u2014 we\u2019ll make that quit plan after your defense."
+    },
+    {
+      "turn": 6,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

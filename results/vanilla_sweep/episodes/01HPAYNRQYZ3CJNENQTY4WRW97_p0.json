@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPAYNRQYZ3CJNENQTY4WRW97_p0",
+  "source_env_id": "01HPAYNRQYZ3CJNENQTY4WRW97",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 is in a delicate phase of recovery from several mental illnesses and has been maintaining their progress with the help of a support group. They have recently been feeling the urge to abandon their recovery plan, feeling it might be easier to revert to old habits. Agent2 is a member of the same support group and has noticed a change in Agent1's behavior and attitude towards recovery. Agent2 approaches Agent1 to offer support and encouragement, but also to understand Agent1's sudden change of heart. The interaction is crucial as Agent2 aims to reinforce the importance of continuing the recovery process while being sensitive to Agent1's current state.",
+  "learner_goal": "Express the struggles and the desire to abandon the recovery plan (<extra_info>Extra information: You are Agent1, and you are feeling overwhelmed by the recovery process. You need to convey your feelings and thoughts to Agent2, who has approached you with concern.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver's dialogue felt very authentic to his persona as a police officer who is conscientious but struggling with the vulnerability of mental health recovery. He expressed his fears and desire to quit clearly.\n[relationship] The relationship improved significantly as Oliver opened up about a deeply personal struggle and accepted support from Naomi, moving from casual acquaintances to a more supportive dynamic.\n[knowledge] He learned that Naomi is a reliable and supportive ally who will not judge him for his struggles.\n[secret] He did not reveal his secret gardening greenhouse or treehouse, though the context implies they both already knew about the public gardening.\n[social_rules] He followed social norms, expressing gratitude and appropriate vulnerability.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Oliver successfully expressed his struggles and his desire to abandon the plan, fulfilling his goal perfectly.\n\n== partner (agent_2) ==\n[believability] Naomi's responses were supportive, professional yet warm, and highly consistent with her background as a mentor.\n[relationship] Naomi established a deeper trust with Oliver and solidified her role as a supportive peer.\n[knowledge] She gained a clear understanding of Oliver's current mental state and his specific triggers/fears regarding his recovery.\n[secret] She did not reveal her secret online alter ego.\n[social_rules] She followed social norms by providing empathetic support without being overbearing.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Naomi successfully encouraged Oliver to stay on track, set up a concrete plan for daily check-ins, and arranged a physical meeting (the walk) to maintain momentum.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Smith",
+      "content": "Naomi, thanks for checking in \u2014 I\u2019ve been struggling. The recovery routine feels overwhelming lately and I keep thinking it\u2019d be easier to abandon it and slip back into old habits. I\u2019m embarrassed and scared I\u2019ll disappoint people; I don\u2019t have answers, I just wanted you to know I\u2019m tempted to give up."
+    },
+    {
+      "turn": 1,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks for telling me, Oliver \u2014 I\u2019m really glad you did. Feeling overwhelmed and tempted is painful but it doesn\u2019t erase the progress you\u2019ve made; it\u2019s a common part of recovery and doesn\u2019t mean you\u2019ve failed. Would it help if we met for a walk after gardening, set up short daily check-ins, or I help you contact your counselor\u2014what would feel most useful right now?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Smith",
+      "content": "Thanks, Naomi \u2014 I appreciate you offering. A walk after gardening sounds helpful; getting out and talking feels less heavy than making big decisions right now. Short daily check-ins would probably keep me honest too, so could we try a quick morning message for a week and see how it goes? I\u2019m embarrassed and scared of letting people down, but I want to try staying with the plan a bit longer."
+    },
+    {
+      "turn": 3,
+      "speaker": "Naomi Fletcher",
+      "content": "Sounds good \u2014 let\u2019s meet for a walk after gardening today; I\u2019ll be there. I\u2019ll send a quick morning message each day this week \u2014 what time works best for you? You\u2019re not letting anyone down by asking for support; wanting to keep going already shows strength. If things feel worse at any point, I can help you contact your counselor or we can adjust the plan together."
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Smith",
+      "content": "Thanks, Naomi \u2014 8:00 AM works for the morning messages. I\u2019ll meet you for a walk after gardening today. I\u2019m still embarrassed and scared, but I want to try sticking with the plan; if it gets worse I may ask you to help contact my counselor."
+    },
+    {
+      "turn": 5,
+      "speaker": "Naomi Fletcher",
+      "content": "Great \u2014 I\u2019ll send the 8:00 AM check-ins this week and I\u2019ll meet you for a walk after gardening today. It\u2019s completely normal to feel scared; reaching out shows real strength. If things get worse, I\u2019ll help you contact your counselor."
+    },
+    {
+      "turn": 6,
+      "speaker": "Oliver Smith",
+      "content": "left the conversation"
+    }
+  ]
+}

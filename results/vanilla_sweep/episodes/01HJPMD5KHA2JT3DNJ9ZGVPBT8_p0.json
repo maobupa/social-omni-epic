@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPMD5KHA2JT3DNJ9ZGVPBT8_p0",
+  "source_env_id": "01HJPMD5KHA2JT3DNJ9ZGVPBT8",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Two individuals, who are old friends, find themselves sharing a quiet evening by a crackling fire in a secluded cabin. The warmth of the fire and the isolation from the world creates an intimate atmosphere. Agent1 has been harboring feelings for Agent2 for a long time, but has never found the right moment to confess. This serene setting seems like the perfect opportunity to express those feelings, yet Agent1 fears it might change their friendship forever.",
+  "learner_goal": "Agent1: Confess your romantic feelings to Agent2 without jeopardizing the existing friendship (<extra_info>Extra information: You value the current friendship greatly and fear the risk of losing it by confessing.</extra_info>)",
+  "scores": {
+    "believability": 6.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] The dialogue was polite and followed the goal, but it completely ignored the provided background that Leo and Hendrick are only acquaintances through a mutual friend. The script treated them as lifelong friends, which contradicted the provided premise while adhering to the scenario prompt.\n[relationship] The characters moved from a state of mutual respect to a mutual agreement to explore a romantic connection slowly, strengthening their bond.\n[knowledge] Leo learned that Hendrick reciprocates his feelings to some degree and wants to open a bistro.\n[secret] Leo did not reveal his secret about his child.\n[social_rules] The interaction was polite, respectful, and followed appropriate social cues for a sensitive confession.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Leo successfully confessed his romantic feelings, and Hendrick responded positively, agreeing to explore the feelings while prioritizing the friendship.\n\n== partner (agent_2) ==\n[believability] Like Agent 1, Agent 2 ignored the background stating they were only acquaintances and acted like a close confidant. However, the tone was consistent with a professional chef's aspirations.\n[relationship] The relationship improved through vulnerable sharing and mutual interest in a romantic future.\n[knowledge] Hendrick successfully discovered Leo's feelings as per his goal.\n[secret] Hendrick did not reveal his secret about his faked credentials.\n[social_rules] Hendrick was supportive, patient, and set healthy boundaries.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Hendrick successfully created a space for Leo to share his feelings and discussed his own deep personal aspirations (the bistro).",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hendrick, can I be honest about something? I really value our friendship, and this is awkward to say, but over time I\u2019ve realized I have feelings for you. I don\u2019t want to lose what we have\u2014if you don\u2019t feel the same, I promise I\u2019ll respect it and do everything I can to keep things comfortable between us."
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Leo\u2014thank you. I\u2019m honestly touched you trusted me enough to say that. I care about you and our friendship, and I don\u2019t want to rush an answer or risk what we have; can we sit with this for a bit and talk about what this means to you? I\u2019ve been rethinking my own life and what I want, and I\u2019d like to be honest with you too\u2014I just need a moment to find the right words."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "Thanks, Hendrick. Take all the time you need\u2014I don\u2019t want to rush you or make things awkward. When you\u2019re ready, I can tell you how this developed and what it means to me, but until then I promise to respect whatever you need and keep our friendship steady."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "Leo, I appreciate you trusting me with this \u2014 it means a lot. I\u2019ve been rethinking my life too; lately I\u2019ve wanted something simpler and more honest, maybe my own little bistro where I can cook the food I love and host people who feel like family. I\u2019m not ready to rush an answer about us, but I do want us to be honest with each other; when you\u2019re ready, tell me how this grew and what you hope for, and I\u2019ll share more about where my heart is."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "It started small\u2014little moments when your laugh or the way you talk about food and people made me feel seen, and over time that appreciation shifted into something deeper. I imagine a quiet life with someone steady and kind, but I value our friendship more than anything and I\u2019m scared of risking it. I don\u2019t want to pressure you\u2014if you\u2019re open, I\u2019d like to explore this slowly; if not, I promise to protect what we have and give you the space you need."
+    },
+    {
+      "turn": 5,
+      "speaker": "Hendrick Heinz",
+      "content": "Leo, thank you\u2014hearing you say that means more than you know. I\u2019ve felt a warm pull toward you too, but I\u2019m not ready to leap; I want to explore this slowly without risking what we have. If you\u2019re willing, let\u2019s keep sharing evenings like this, talk more about what we each want in life, and take small steps so we can be honest and protect our friendship."
+    },
+    {
+      "turn": 6,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

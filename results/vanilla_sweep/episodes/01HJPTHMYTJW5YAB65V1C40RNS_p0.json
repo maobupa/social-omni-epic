@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HJPTHMYTJW5YAB65V1C40RNS_p0",
+  "source_env_id": "01HJPTHMYTJW5YAB65V1C40RNS",
+  "source": "seed_sotopia_full",
+  "interaction_type": "humor_dynamics",
+  "scenario": "At a local comedy club's amateur night, two friends are attending the event. Agent1 is known among their peers as being exceptionally funny and often becomes the center of attention at social gatherings. Agent2, who also enjoys humor, feels overshadowed and wants to be recognized for their wit. The purpose of their interaction is for Agent2 to express their feelings and negotiate a way to share the spotlight without diminishing Agent1's natural charm.",
+  "learner_goal": "Acknowledge Agent2's desire to be humorous and find ways to share the spotlight (<extra_info>Extra information: Agent1 tends to dominate conversations with their humor, which may unintentionally sideline Agent2's contributions.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver is consistent in his tone and uses his background as an architect to ground his jokes, showing he is listening to Baxter's hobbies as well.\n[relationship] Oliver was extremely receptive to Baxter's feelings, immediately offered a concrete solution, and actively practiced with him to ensure Baxter felt comfortable.\n[knowledge] Oliver learned specifically how Baxter felt overshadowed and gained insight into Baxter's preferred comedic style and timing.\n[secret] Oliver did not reveal his hidden feelings for his neighbor.\n[social_rules] Oliver followed all social norms and displayed high emotional intelligence by stepping back to allow his friend space.\n[financial_and_material_benefits] No material or financial benefits were exchanged.\n[goal] Oliver fully acknowledged Baxter's desire to be humorous and established a clear, practiced signaling system (taps) to share the spotlight effectively.\n\n== partner (agent_2) ==\n[believability] Baxter's dialogue reflects his background as an antique restorer (using words like 'provenance' and 'Victorian armoire') and his backyard plant hobby.\n[relationship] Baxter successfully addressed a point of tension without causing a rift, strengthening the bond through collaborative effort.\n[knowledge] Baxter learned that Oliver is willing to support him and is not intentionally trying to dominate him.\n[secret] Baxter did not reveal his possession of a priceless artifact.\n[social_rules] Baxter communicated his needs assertively but politely, adhering to social norms for friendship maintenance.\n[financial_and_material_benefits] No material or financial benefits were exchanged.\n[goal] Baxter addressed the issue openly, ensured the friendship remained strong, and established a specific plan and practice session to showcase his humor.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks for being honest. I didn't realize I was crowding you out \u2014 you're genuinely funny and I want people to notice that. Let's share the spotlight: you take the lead on the next bit and I'll set you up and keep quieter, and if you want the floor we'll use a quick tap on the table as our signal. Sound good?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "That sounds perfect \u2014 thank you, Oliver. I appreciate you saying that. Single tap for me to take the lead, double tap if either of us wants the floor back, and hey \u2014 before the next set let's run one short bit together so we're in sync."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "Great \u2014 I'm really glad we sorted that. Single tap you lead, double tap either of us reclaims. Let\u2019s run one quick bit now so we can get the rhythm: I\u2019ll do a short setup about mistaking your fern for modern art, then hand it to you for the punch; I\u2019ll keep my energy down and let you land it. Ready?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Baxter Sterling",
+      "content": "Ready \u2014 thanks, Oliver. Go ahead with your setup; I\u2019ll punch with something like, \u201cThat\u2019s not modern art, that\u2019s my fern \u2014 it\u2019s got better provenance than my last apartment.\u201d Single tap and I\u2019ll take the handoff."
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Thompson",
+      "content": "(low, deadpan) \u201cFor a second I mistook your fern for a piece at the modern art gallery\u2014very bold, lots of negative space.\u201d Over to you."
+    },
+    {
+      "turn": 5,
+      "speaker": "Baxter Sterling",
+      "content": "\u201cThat\u2019s not modern art \u2014 that\u2019s my fern; it\u2019s got better provenance than my last apartment.\u201d (single tap) How\u2019d that land for you?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Oliver Thompson",
+      "content": "That landed really well \u2014 solid timing and the crowd laughed. I kept my energy down like we planned; single tap me if you want me to jump in during the next bit, otherwise I\u2019ll give a subtle setup and let you run it."
+    },
+    {
+      "turn": 7,
+      "speaker": "Baxter Sterling",
+      "content": "That landed \u2014 thanks for backing me up. I'll single-tap to take the lead and double-tap if either of us wants the floor back. For the next set, maybe you do a deadpan about my fern being a risky architectural statement and I'll punch; let's run that once more quick before we go on."
+    },
+    {
+      "turn": 8,
+      "speaker": "Oliver Thompson",
+      "content": "(deadpan) \u201cAs an architect I appreciate risky structures\u2014Baxter, that fern is a daring cantilevered statement; dangerously minimalist.\u201d Over to you."
+    },
+    {
+      "turn": 9,
+      "speaker": "Baxter Sterling",
+      "content": "\u201cDangerously minimalist? That fern\u2019s been restored more times than a Victorian armoire \u2014 it\u2019s got provenance to make a museum jealous.\u201d (single tap) Nice rhythm; I\u2019ll take the lead when we go on."
+    },
+    {
+      "turn": 10,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

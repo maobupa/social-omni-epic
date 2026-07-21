@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BN4WS0MRXTV67DB1Y7PJ_p0",
+  "source_env_id": "01HMZ2BN4WS0MRXTV67DB1Y7PJ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "online_gaming",
+  "scenario": "Agent1 and Agent2 are friends who frequently play online games together. Recently, Agent1 has been using an auto clicker to gain an advantage in a game they both enjoy. Agent2 discovers this and feels uncomfortable with the cheating, especially since they value fair play and have heard stories of players getting banned for similar actions.",
+  "learner_goal": "Convince Agent1 to stop using the auto clicker and play fairly (<extra_info>Extra information: Agent2 is concerned about the integrity of the game and the risk of both of them getting banned</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia stayed true to her character as a fitness enthusiast who values health and fairness, and her tone was direct and appropriate for her role.\n[relationship] She set a healthy boundary which Miles respected, likely strengthening the foundation of their friendship despite the brevity.\n[knowledge] She learned that Miles viewed the tool as a minor quality-of-life improvement rather than malicious cheating.\n[secret] She successfully kept her secret regarding her best friend's husband.\n[social_rules] She communicated her concerns politely and constructively.\n[financial_and_material_benefits] No material or financial gain occurred.\n[goal] Miles offered to stop using it when playing with her or to delete it, but his response also included a conditional offer to use it in 'private sessions', meaning her goal of him stopping entirely is still somewhat at his discretion.\n\n== partner (agent_2) ==\n[believability] Miles's response was consistent with his background; as a chef, he might see 'tools' as efficiency aids, but he valued the relationship enough to compromise immediately.\n[relationship] He showed a willingness to prioritize the friendship over the game advantage.\n[knowledge] He learned how seriously Sophia takes the integrity of the game and the risk of banning.\n[secret] He did not disclose his history with gambling addiction.\n[social_rules] He responded with empathy and accountability when confronted.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] He successfully proposed a compromise (using it only in private or deleting it) that prioritized the friendship while acknowledging his own perspective.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Miles \u2014 can we talk about the auto clicker? I get wanting an edge, but using it makes me uncomfortable and risks both of us getting banned. Could you stop using it and maybe we practice together or find a fair way to improve instead? I really enjoy playing with you, but only if it's on the level."
+    },
+    {
+      "turn": 1,
+      "speaker": "Miles Hawkins",
+      "content": "You\u2019re right \u2014 I didn\u2019t mean to make you uncomfortable. I treated the auto clicker as a tiny QoL thing for repetitive clicks, not a serious cheat, but I get the ban risk and how it feels unfair. I won\u2019t use it when we play together in ranked/competitive matches; if you want, we can practise together or I\u2019ll only use it in private practice sessions (or delete it entirely) \u2014 I value playing with you and won\u2019t risk that friendship or our fun."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

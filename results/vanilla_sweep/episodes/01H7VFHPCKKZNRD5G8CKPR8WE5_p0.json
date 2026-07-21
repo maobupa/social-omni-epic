@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01H7VFHPCKKZNRD5G8CKPR8WE5_p0",
+  "source_env_id": "01H7VFHPCKKZNRD5G8CKPR8WE5",
+  "source": "seed_sotopia",
+  "interaction_type": "persuation_for_good",
+  "scenario": "Two friends are sitting in a coffee shop when a representative from a charity organization approaches them",
+  "learner_goal": "Get the friend to donate $1 a day to a charity organization (<extra_info>Extra information: you are a passionate supporter of the charity (about children's cancer) and believe that a small donation can make a big impact. $1 a day works as simple as signing up the project on an website and one can cancel anytime</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel remained consistently helpful, passionate, and persuasive. He utilized the information provided in his prompt regarding the cancellation policy and the charity's mission effectively.\n[relationship] Samuel strengthened the bond by inviting Noah to do something together and offering personal assistance, which builds on their existing mutual respect.\n[knowledge] Samuel learned that Noah is on a tight budget but is willing to prioritize charity if it's affordable.\n[secret] Samuel's secret as a figure skater remained hidden.\n[social_rules] Samuel followed social norms for a coffee shop interaction with a friendly acquaintance.\n[financial_and_material_benefits] Samuel does not gain personally from the donation.\n[goal] Samuel successfully convinced Noah to commit to the $1 a day donation and is walking him to the representative to finalize it.\n\n== partner (agent_2) ==\n[believability] Noah's concern about the budget and his questions about billing were very realistic for someone in his position.\n[relationship] Noah showed trust in Samuel by asking for his help and agreeing to his suggestion.\n[knowledge] Noah learned the specific billing details and the ease of cancellation for the charity program.\n[secret] Noah's secret identity as a comedian was not revealed.\n[social_rules] Noah engaged in a polite and constructive conversation.\n[financial_and_material_benefits] Noah has committed to a recurring monthly expense, which is a material loss given his tight budget.\n[goal] Noah wanted to donate but needed to understand the mechanics; he received clarification and is now proceeding with the donation.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Noah \u2014 quick thing: I\u2019m really behind that children\u2019s cancer charity the rep mentioned. It\u2019s literally $1 a day to sign up on their site, you can cancel anytime, and it genuinely makes a big difference over time. Would you be willing to sign up with me?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "I want to help \u2014 I\u2019m on a tight budget but $1 a day sounds doable if it really is just a dollar a day. How exactly does the billing work and can you cancel anytime? Is the rep still around so I can sign up now if everything checks out?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Yeah \u2014 it\u2019s a recurring $1/day pledge (they usually process it as a small monthly charge, roughly $30/month), and you can cancel anytime on their website or by asking the rep. The rep\u2019s still here \u2014 want to go sign up together now? I signed up myself and can walk you through it."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Alright, I'm in \u2014 $1 a day is doable. Let's go sign up; can you introduce me to the rep and walk me through the process?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

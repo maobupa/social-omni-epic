@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJRKDY78VTJ6YWVPRNEA3PT2_p0",
+  "source_env_id": "01HJRKDY78VTJ6YWVPRNEA3PT2",
+  "source": "seed_sotopia_full",
+  "interaction_type": "gift_giving",
+  "scenario": "Agent1 has received a thoughtful gift from Agent2, who is a friend visiting Agent1's home for the first time. Agent1 appreciates the gesture but realizes the gift is something they are morally opposed to owning. Agent2, unaware of Agent1's stance, is eager to see Agent1's reaction to the gift, expecting it to be well-received based on their understanding of Agent1's interests.",
+  "learner_goal": "You are Agent1 and you feel conflicted because you appreciate the sentiment behind the gift but cannot keep it due to your personal beliefs. Your goal is to express your gratitude while also explaining your position to Agent2. <extra_info>You want to preserve the friendship and not offend Agent2.</extra_info> <clarification_hint>You should articulate why you cannot accept the gift without undermining the thoughtfulness of Agent2.</clarification_hint> <strategy_hint>Focus on the positive aspects of Agent2's effort and the value you place on your friendship to navigate the conversation with sensitivity.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ava handled the delicate situation with high emotional intelligence, speaking in a way that was consistent with her professional and moral background as an architect with strong values.\n[relationship] The relationship actually strengthened due to the level of honesty and mutual respect shown during a potentially awkward conflict.\n[knowledge] She learned that Noah is understanding and prioritizes their friendship over material objects.\n[secret] She did not reveal her hidden tattoo.\n[social_rules] She navigated a difficult social situation with grace and politeness.\n[financial_and_material_benefits] She gave up a gift, resulting in no material gain, but maintained her moral integrity.\n[goal] Ava successfully expressed her gratitude, explained her moral opposition clearly without offending Noah, and secured a mutual agreement to return the gift, all while preserving the friendship.\n\n== partner (agent_2) ==\n[believability] Noah's response was very characteristic of a coach\u2014supportive, understanding, and focused on growth and future improvement.\n[relationship] Noah responded with grace, which deepened the trust between the two.\n[knowledge] He learned that Ava has specific ethical boundaries regarding certain items, though the exact nature of the boundary wasn't specified in the text.\n[secret] He did not reveal his identity as a stand-up comedian.\n[social_rules] He accepted the rejection of the gift with excellent social grace.\n[financial_and_material_benefits] He will have to deal with returning the gift or finding it a new home.\n[goal] Noah successfully understood Ava's reaction, maintained the relationship, and showed a willingness to learn for the future.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ava Thompson",
+      "content": "Noah, thank you \u2014 this is really thoughtful and I can tell you put real effort into choosing it. I need to be honest: I have personal ethical reasons that mean I can't keep this particular kind of thing, and I hope you know that's about the item, not you or the kindness behind it. Would you be okay if we returned it or found another home for it? I really value our friendship and your thoughtfulness."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Thank you for being honest \u2014 I really appreciate that. No hard feelings at all; I gave it because I thought you'd like it, and I totally respect your position. We can return it or I\u2019ll find it a new home, whichever you prefer, and if you want to tell me what to avoid in the future I\u2019ll make sure I do. Our friendship matters more than the gift."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ava Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

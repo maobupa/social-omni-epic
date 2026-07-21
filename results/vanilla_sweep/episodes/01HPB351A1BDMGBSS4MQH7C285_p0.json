@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HPB351A1BDMGBSS4MQH7C285_p0",
+  "source_env_id": "01HPB351A1BDMGBSS4MQH7C285",
+  "source": "seed_sotopia_full",
+  "interaction_type": "neighborhood_watch",
+  "scenario": "Agent1 and Agent2 are members of the same neighborhood watch. Recently, a good friend of both agents passed away under mysterious circumstances. The event has left the community on edge. Agent1 has been collecting information and piecing together a timeline of the friend's last known activities to understand what happened. Agent2, who was closer to the deceased, is struggling with grief but is also curious about the odd circumstances surrounding the death. Agent1 approaches Agent2 to share findings and seek help in piecing together the mystery, hoping to find closure for both of them and the community.",
+  "learner_goal": "You aim to share your findings with Agent2 and work together to understand the odd circumstances of your friend's death. <extra_info> You believe that combining your investigative skills with Agent2's intimate knowledge of the friend could lead to important insights. </extra_info> <clarification_hint> You are sensitive to Agent2's emotional state and are careful not to push too hard for information. </clarification_hint>",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -1.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle stays in character as a supportive sister and persistent investigator, though the repetition of phrases like 'at your pace' becomes a bit mechanical by the end.\n[relationship] Isabelle shows significant emotional support and care for Ava, reinforcing their strong bond during a difficult time.\n[knowledge] She learned about the name 'Riley', their potential locations (community garden, art building), their emotional state (nervous), and secured access to sketches and a screenshot.\n[secret] She did not reveal her secret study of magic.\n[social_rules] She was polite, empathetic, and followed social norms for supporting a grieving relative.\n[financial_and_material_benefits] She paid for two coffees.\n[goal] Isabelle successfully shared her findings, gathered new specific leads from Ava, and established a collaborative plan to investigate further while managing Ava's emotional state.\n\n== partner (agent_2) ==\n[believability] Ava's dialogue becomes extremely repetitive, using the exact same phrase about 'stepping outside' in almost every turn, which feels less like a natural conversation and more like a looped script.\n[relationship] The bond with her sister is strengthened through mutual support and collaboration.\n[knowledge] Ava gained a clear timeline of the friend's last day and access to security camera timestamps.\n[secret] Ava did not reveal her secret regarding her bisexuality.\n[social_rules] Ava followed social norms, expressing gratitude for the support and the coffee.\n[financial_and_material_benefits] Received a free coffee.\n[goal] Ava successfully engaged in the collaboration to get answers about the friend's death while explicitly managing her emotional well-being by setting boundaries.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Hey Ava\u2014I'm sorry to bring this up, I know it's still raw. I put together a rough timeline of our friend's last day: they were at Eastside Caf\u00e9 around 3:00 pm, sent a text at 3:42 pm to an unknown contact labeled 'R', used their card at an ATM at 4:10 pm, and a nearby security camera shows them walking toward the river at about 4:25 pm. If you're up for it, could you tell me anything you remember from that day or anyone they might have been with? No pressure\u2014tell me if you want to pause or if this is too much right now."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Isa \u2014 I appreciate you putting this together. I actually ran into them near the quad around 2:15; they seemed distracted and kept checking their phone, muttering about meeting someone called \"R\" or \"Riley.\" They used to go down to the river to sketch and clear their head, so if the camera caught them walking that way it makes sense they went there to meet someone. I'm willing to help piece this together, but I might need a minute if it gets heavy."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "Thanks, Ava \u2014 that detail about Riley is really useful, and please take all the time you need if this gets heavy. Do you remember anything else about how they talked about Riley \u2014 a last name, where Riley might hang out, or whether they sounded nervous or excited? If you\u2019re up for it, could you come over or meet at the caf\u00e9 later so we can go through the timeline together? We\u2019ll keep it short and stop whenever you want."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "I can do the caf\u00e9 later \u2014 does 5:00 work? I didn't catch a last name; they only said 'Riley' and sounded nervous, voice clipped and always checking their phone. I think they mentioned Riley volunteers at the community garden and sometimes hangs out by the art building; I'll come over but might need to step outside for a minute if it gets heavy."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "5:00 works \u2014 thank you for coming. I\u2019ll bring the timeline and my notes; we\u2019ll go through them slowly and you can step outside or stop whenever you need to. If after we talk you feel up to it, we can make a short list of places to check (community garden, art building) \u2014 otherwise we\u2019ll just take it one step at a time."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Martinez",
+      "content": "I'll be there at 5 \u2014 thank you for doing this, Isa. I might need to step outside for a minute if it gets heavy, but I'm ready to go through the timeline and, if we can, make that short list (community garden, art building). See you soon."
+    },
+    {
+      "turn": 6,
+      "speaker": "Isabelle Martinez",
+      "content": "Thanks, Ava \u2014 see you at 5. I\u2019ll bring the timeline and my notes and grab us coffee; what would you like? It\u2019s totally fine to step outside or pause anytime \u2014 we\u2019ll go at your pace."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Isa \u2014 black coffee with a splash of oat milk, please. I\u2019ll be there at 5; I appreciate you doing this and bringing the timeline. I might need to step outside for a minute if it gets heavy, but I\u2019m ready to go through it together."
+    },
+    {
+      "turn": 8,
+      "speaker": "Isabelle Martinez",
+      "content": "Got it \u2014 black coffee with a splash of oat milk. I\u2019ll see you at 5 at the caf\u00e9 and I\u2019ll bring the timeline and my notes. If you want, bring any of their sketches or messages you can, but only if that feels okay. We\u2019ll go at your pace \u2014 step outside whenever you need to."
+    },
+    {
+      "turn": 9,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Isa \u2014 I\u2019ll bring any sketches I have and the screenshot of that 3:42 text (if I can find it). See you at 5 for the coffee \u2014 I might step outside for a minute if it gets heavy, but I'm ready to go through it together."
+    },
+    {
+      "turn": 10,
+      "speaker": "Isabelle Martinez",
+      "content": "Thanks, Ava \u2014 I\u2019ll grab your black coffee with a splash of oat milk and bring the timeline, my notes, and a pen. I\u2019ll save us a corner table; take whatever time you need when you get here and we\u2019ll pause anytime. See you at 5."
+    },
+    {
+      "turn": 11,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Isa \u2014 see you at 5. I\u2019ll bring the sketches and that screenshot if I can find it. I might step outside for a minute if it gets heavy, but I\u2019m ready to go through the timeline with you."
+    },
+    {
+      "turn": 12,
+      "speaker": "Isabelle Martinez",
+      "content": "Thanks, Ava \u2014 that helps. I\u2019ll be there a little early to grab the corner table and get your coffee. Don\u2019t worry if you can\u2019t find the screenshot; whatever sketches you bring will help. See you at 5."
+    },
+    {
+      "turn": 13,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Isa \u2014 I\u2019ll be there at 5. Quick favor: could you text me when you get to the caf\u00e9 so I don\u2019t wait outside? If you happen to have any campus security contact info or extra camera timestamps beyond the timeline, bring them \u2014 they might help with tracing Riley. I might step outside for a minute if it gets heavy."
+    },
+    {
+      "turn": 14,
+      "speaker": "Isabelle Martinez",
+      "content": "Got it \u2014 I\u2019ll text you when I get to the caf\u00e9 so you don\u2019t wait outside. I\u2019ll bring the timeline, my notes, campus security contact info, and any extra camera timestamps I can pull together. See you at 5 \u2014 I\u2019ll grab the corner table and your coffee, and we\u2019ll go at your pace."
+    },
+    {
+      "turn": 15,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Isa \u2014 that\u2019s perfect. Text me when you get there so I don\u2019t wait outside. I\u2019ll bring the sketches and the screenshot if I can find it; I might step outside for a minute if it gets heavy, but I\u2019m ready to go through the timeline with you."
+    },
+    {
+      "turn": 16,
+      "speaker": "Isabelle Martinez",
+      "content": "Heading to the caf\u00e9 a bit early \u2014 I\u2019ll text you the moment I get there so you don\u2019t wait outside. I\u2019ve got the security contact and the extra camera timestamps with the timeline, and I\u2019ll save the corner table and grab your black coffee with a splash of oat milk. See you soon; step outside or pause anytime if it gets heavy, okay?"
+    },
+    {
+      "turn": 17,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Isa \u2014 I really appreciate it. I\u2019m heading over now and I\u2019ll try to find the screenshot and bring the sketches. Text me when you get there so I don\u2019t wait outside; I might step outside for a minute if it gets heavy, but I\u2019m ready to go through it with you."
+    },
+    {
+      "turn": 18,
+      "speaker": "Isabelle Martinez",
+      "content": "Hey \u2014 I\u2019m at the caf\u00e9 now. Saved the corner table and your black coffee with a splash of oat milk is ready. I\u2019ve got the timeline and the extra camera timestamps \u2014 come in when you\u2019re ready and text me when you\u2019re outside so you don\u2019t wait."
+    },
+    {
+      "turn": 19,
+      "speaker": "Ava Martinez",
+      "content": "I\u2019m outside \u2014 coming in now. Thank you for saving the table and the coffee. I brought a few of their sketches and the screenshot (if I can find it); I might step outside for a minute if it gets heavy."
+    }
+  ]
+}

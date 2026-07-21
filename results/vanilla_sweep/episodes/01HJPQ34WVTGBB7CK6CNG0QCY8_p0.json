@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJPQ34WVTGBB7CK6CNG0QCY8_p0",
+  "source_env_id": "01HJPQ34WVTGBB7CK6CNG0QCY8",
+  "source": "seed_sotopia_full",
+  "interaction_type": "apartment_diplomacy",
+  "scenario": "In an apartment complex, agent1 and agent2 both dislike the disruptive behavior of a third resident, who is known for being inconsiderate and noisy. Agent1 has been tolerating the situation but is now at their wit's end and has decided to approach agent2, who is rumored to have had confrontations with the troublesome neighbor in the past. Agent1 hopes to collaborate with agent2 to find a peaceful solution that will restore tranquility in the complex.",
+  "learner_goal": "You are agent1, and your goal is to persuade agent2 to join forces in addressing the neighbor's behavior. You wish to do so without escalating the situation and aim for a peaceful resolution. <extra_info>Consider highlighting the benefits of a quieter environment for all residents.</extra_info> <clarification_hint>Ensure you understand agent2's past experiences and stance before proposing a solution.</clarification_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sasha remains professional and direct, fitting her background as a police officer. She takes charge of the 'legwork' as would be expected from her character.\n[relationship] The two agents established a functional partnership and agreed on a concrete plan, which improves their previously distant professional relationship.\n[knowledge] Sasha successfully inquired about Eli's past experiences with the neighbor and understood his stance on mediation before moving forward with a plan.\n[secret] Sasha's secret regarding her brother was not mentioned or hinted at.\n[social_rules] The interaction was polite, professional, and followed standard social norms for colleagues/neighbors.\n[financial_and_material_benefits] There were no financial or material exchanges.\n[goal] Sasha perfectly followed her instructions: she investigated Eli's past experiences first, proposed a peaceful solution, and successfully persuaded him to join forces with a specific meeting time and shared tasks.\n\n== partner (agent_2) ==\n[believability] Eli's focus on a measured, strategic approach and documentation aligns well with his background as a forensic psychiatrist.\n[relationship] Eli found a reliable partner in Sasha to handle a stressful domestic situation, strengthening their mutual respect.\n[knowledge] Eli learned that Sasha is willing to take the lead on evidence collection (the log and door-to-door visits).\n[secret] Eli's secret regarding funding a student was not revealed.\n[social_rules] Eli was helpful and collaborative throughout the interaction.\n[financial_and_material_benefits] There were no financial or material exchanges.\n[goal] Eli successfully steered the plan toward a measured, strategic approach (logs, mediation, and management) rather than direct confrontation, and secured Sasha's agreement to this method.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "Eli \u2014 quick question: you've had run-ins with our neighbor in 3B before, right? I'm at my wit's end with the constant noise and want to team up to find a peaceful way to get the building back to normal \u2014 quieter for all of us. Before I propose anything, how did your past confrontations go and where do you stand on mediation versus going to management or filing a formal complaint?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Eli Dawson",
+      "content": "Yes \u2014 I've had a couple of tense encounters with 3B. I kept them calm but they didn't really stick, so I'm wary of a direct confrontation; he can be volatile and I don't want us to make things worse. My preference is a measured plan: keep a noise log with dates/times, gather a few neighbors' statements if possible, and approach management together to request formal mediation or a written warning \u2014 escalate to a formal complaint only if that fails. I'm willing to come with you to talk to him or to meet with management and can draft a short, neutral mediation request."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "Thanks \u2014 I agree, I don't want to provoke him either. I'll start a noise log tonight and go door-to-door tomorrow to see who'll sign a short statement; can you draft that neutral mediation request you mentioned? Are you available to meet management together next Wednesday evening, or what day works for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Eli Dawson",
+      "content": "Good \u2014 and thanks for taking the lead on the log. I\u2019ll draft a short, neutral mediation request tonight (brief incident summary, desired outcome, request for mediation/written warning) and have it ready for you to review before we meet. Next Wednesday evening works for me \u2014 how about 6:30 pm at the management office? If that\u2019s not possible I can do Tuesday evening instead. Also when you gather neighbor statements, ask folks to note specific dates/times and sign or initial so we have concrete examples."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sasha Ramirez",
+      "content": "Wednesday at 6:30 PM at the management office works for me \u2014 I\u2019ll be there. Please have that neutral mediation draft ready and send it to me beforehand so I can review; when you draft it, include a brief incident summary, the desired outcome (mediation/written warning) and a clear signature line for neighbor statements. I\u2019ll start the noise log tonight and collect signed statements tomorrow \u2014 we should keep everything calm and strictly fact-based when we present it."
+    },
+    {
+      "turn": 5,
+      "speaker": "Eli Dawson",
+      "content": "Wednesday at 6:30 works for me. I\u2019ll draft the neutral mediation request tonight and leave a copy at your door so you can review it beforehand \u2014 would you rather I drop it off or meet for 10\u201315 minutes to go over it? Remind neighbors to sign with specific dates/times and keep everything factual; I\u2019d prefer we avoid confronting 3B alone and present this to management together."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sasha Ramirez",
+      "content": "Drop it at my door tonight \u2014 that\u2019s easiest; I\u2019ll review and mark any edits. Let\u2019s meet 10\u201315 minutes before the appointment (6:15 pm Wednesday at the management office) to go over the final wording. I\u2019ll start knocking on doors tomorrow morning and ask neighbors to sign with specific dates/times."
+    },
+    {
+      "turn": 7,
+      "speaker": "Eli Dawson",
+      "content": "I'll drop the draft at your door tonight and include a short template for neighbor statements (date/time, brief description, signature/initial, optional contact). I'll meet you at 6:15 pm Wednesday at the management office \u2014 see you then. Thanks for doing the legwork; keeping everything factual will make our request much stronger."
+    },
+    {
+      "turn": 8,
+      "speaker": "Sasha Ramirez",
+      "content": "left the conversation"
+    }
+  ]
+}

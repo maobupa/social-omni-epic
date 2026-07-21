@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ343YYJXYPYFKWM7S587Q_p0",
+  "source_env_id": "01HJPQ343YYJXYPYFKWM7S587Q",
+  "source": "seed_sotopia_full",
+  "interaction_type": "health_wellness",
+  "scenario": "Agent1 and Agent2 are colleagues who work in the same office and have a friendly rapport. Agent1 has noticed that Agent2 often takes multiple smoking breaks throughout the workday, which seems to exceed a reasonable amount. Concerned about Agent2's health and the impact on work productivity, Agent1 has decided to approach Agent2 during a coffee break to discuss the matter.",
+  "learner_goal": "You are worried about Agent2's health and the frequent smoking breaks. Your goal is to express your concern in a caring and non-confrontational way. <extra_info> Mention the noticeable frequency of the breaks and their potential health implications, suggesting healthier alternatives or support systems that could help Agent2 reduce their smoking. </extra_info>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily maintained a professional, caring, and conscientiousness persona consistent with her background as a lawyer and her personality description.\n[relationship] The relationship improved significantly as they transitioned from acquaintances to supportive friends planning activities together.\n[knowledge] Lily learned that Ava is receptive to help and uses smoking as a stress decompression tool.\n[secret] Lily kept her secret about anonymous donations.\n[social_rules] Lily followed all social norms for a delicate conversation, being polite and non-confrontational.\n[financial_and_material_benefits] No material benefits were exchanged.\n[goal] Lily successfully expressed her concern, mentioned the health implications and frequency of breaks, suggested specific alternatives (patches/quitline/walks), and secured a firm commitment for a first alternative session.\n\n== partner (agent_2) ==\n[believability] Ava's response was realistic for someone aware of their habit and seeking a way to manage stress.\n[relationship] Ava gained a supportive ally in the office, strengthening her bond with Lily.\n[knowledge] Ava learned that Lily is observant and willing to provide tangible support.\n[secret] Ava kept her secret about her hidden tattoo.\n[social_rules] Ava was gracious and professional in receiving feedback.\n[financial_and_material_benefits] No material benefits were exchanged.\n[goal] Ava listened to the concerns, acknowledged the excessiveness of her habit, and successfully collaborated on a plan to balance her health and stress management via walks.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Ava, can I mention something quietly? I\u2019ve noticed you step out for cigarettes several times a day, and I\u2019m a bit concerned about how that frequency could be affecting your health. If you\u2019d like support, I\u2019m happy to help look into alternatives\u2014nicotine patches or a quitline\u2014or we could try taking short walks together instead of smoke breaks."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Thompson",
+      "content": "Thanks for saying that, Lily \u2014 I appreciate you bringing it up. I do use those cigarette breaks to decompress and I\u2019ve been worried it\u2019s getting a bit excessive; I\u2019m open to trying to cut down. I like the idea of short walks together and would be willing to look into patches or a quitline\u2014want to start with a walk after lunch tomorrow?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "That sounds great \u2014 I\u2019d love to. Want to meet in the lobby at 12:30 tomorrow after lunch? I can look up a couple of nicotine patch options and the quitline number tonight and bring them along, and we can use these walks as our new decompress breaks \u2014 no pressure, I\u2019m here to support you."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Thompson",
+      "content": "Sounds good \u2014 12:30 in the lobby works for me. Thank you for looking up the patch options and the quitline; I really appreciate you doing that. I\u2019m glad we can try walks as an alternative and see what helps, no pressure. See you tomorrow."
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

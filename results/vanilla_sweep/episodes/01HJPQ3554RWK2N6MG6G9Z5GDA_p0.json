@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPQ3554RWK2N6MG6G9Z5GDA_p0",
+  "source_env_id": "01HJPQ3554RWK2N6MG6G9Z5GDA",
+  "source": "seed_sotopia_full",
+  "interaction_type": "husband-micromanagement",
+  "scenario": "Agent1 and Agent2, who are in a romantic relationship, are reviewing their household budget. Agent1 has been micromanaging the expenses, causing tension with Agent2. They need to decide on how to manage their finances moving forward, particularly regarding discretionary spending on hobbies and entertainment, which Agent1 tends to scrutinize closely.",
+  "learner_goal": "Negotiate a fair discretionary spending allowance that allows for individual freedom while maintaining the household budget (<extra_info>Extra information: you believe that a strict budget is necessary to save for future goals</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Rafael maintained a systematic and professional tone consistent with his background as a surgeon, while balancing the emotional needs of the relationship.\n[relationship] The tension was explicitly addressed and resolved through compromise, with Mia stating she felt more trusted.\n[knowledge] Learned Mia's specific thresholds for feeling micromanaged versus feeling autonomous.\n[secret] The secret about cheating on exams was not mentioned.\n[social_rules] Followed all social norms for a constructive conflict resolution.\n[financial_and_material_benefits] Successfully established a structured budget with firm caps and notification thresholds to protect long-term savings.\n[goal] Rafael negotiated a clear, structured discretionary spending plan that maintains the household budget while allowing for individual freedom, satisfying both parts of his goal.\n\n== partner (agent_2) ==\n[believability] Mia's responses were consistent with her goal for autonomy and her background as a principal accustomed to negotiation.\n[relationship] Mia expressed feeling less micromanaged and more trusted by the end of the interaction.\n[knowledge] Learned Rafael's specific comfort levels regarding dollar amounts for savings protection.\n[secret] The secret about the punk rock band was not revealed.\n[social_rules] Acted within expected social norms for a partner in a committed relationship.\n[financial_and_material_benefits] Gained a guaranteed monthly allowance with a high threshold for independent spending.\n[goal] Mia successfully advocated for a flexible approach and secured a $150 threshold where she does not need permission, significantly reducing micromanagement.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "Mia, I realize my close scrutiny of hobby and entertainment spending has been stressful \u2014 I\u2019m sorry about that. To balance individual freedom with our savings goals, what if we each get a fixed monthly discretionary allowance (for example, 5% of our take-home pay or a flat amount we agree on) plus a small joint \u201cfun\u201d fund for shared outings, and anything above those limits we talk about first? Let\u2019s try it for three months and then review the numbers \u2014 does that sound fair to you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "I appreciate you saying that \u2014 thank you. I like the allowance plus a joint fun fund and agree to try it for three months, but I still feel micromanaged when small overages need permission. Can we agree that anything above the allowance just gets a quick heads-up unless it\u2019s large enough to affect our savings (say a modest threshold we pick), and decide tonight whether we use 5% or a flat amount so we can start?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "Mia, thank you \u2014 I like the heads-up approach. How about we each get a flat $250/month discretionary allowance, plus a $200 joint fun fund, and agree that any single discretionary purchase over $100 needs a quick discussion while anything under $100 just gets a heads-up? We\u2019ll try it for three months and then review the numbers \u2014 does that work for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "Thank you \u2014 I appreciate you putting this together. I\u2019m willing to try $250 each and a $200 joint fund for three months, but to feel less micromanaged I\u2019d prefer the quick-discussion threshold at $150 instead of $100: anything under $150 gets a heads-up, anything over gets a short chat unless it\u2019s large enough to affect our savings goals. Sound good? If so, let\u2019s start this month."
+    },
+    {
+      "turn": 4,
+      "speaker": "Rafael Cortez",
+      "content": "That sounds reasonable \u2014 I can agree to the $150 heads-up threshold. One small addition: if a single discretionary purchase is over $300, let\u2019s agree to a short discussion beforehand since that could affect our savings plan. Let\u2019s start this month and pick a date three months from now to review how the allowance is working and the numbers."
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Davis",
+      "content": "I agree \u2014 thank you for being flexible. I already feel less micromanaged and more trusted with this setup. Let\u2019s start this month; does September 30th work for our three\u2011month review date?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

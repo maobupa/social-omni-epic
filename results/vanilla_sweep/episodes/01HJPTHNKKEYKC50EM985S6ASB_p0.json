@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HJPTHNKKEYKC50EM985S6ASB_p0",
+  "source_env_id": "01HJPTHNKKEYKC50EM985S6ASB",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 and Agent2 are friends who are planning a party together. They are currently discussing who should be responsible for providing drinks for the event. Agent1 believes that Agent2 should handle the drinks because they have better knowledge of what the guests like, while Agent2 thinks Agent1 should do it since they offered to help with the party arrangements.",
+  "learner_goal": "Convince Agent2 to take care of the drinks for the party (<extra_info>Extra information: you believe Agent2 has a better sense of the guests' preferences and can pick the best options.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": -2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 1.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Donovan stayed in character as a software developer, using logical phrasing like 'end-to-end' and 'blocker', and maintained a consistent persuasive strategy.\n[relationship] Donovan repeatedly ignored Ava's clear statements that she was overwhelmed, which caused tension, and eventually ended the conversation abruptly without confirming the final arrangement.\n[knowledge] Donovan learned about Ava's specific workload (RSVPs, vendors, decor) and her budget constraints.\n[secret] Donovan's secret regarding government information was not mentioned.\n[social_rules] Donovan was somewhat pushy and failed to acknowledge Ava's repeated refusals, and leaving the conversation without a closing is socially abrupt.\n[financial_and_material_benefits] No material gain was finalized before the conversation ended.\n[goal] Donovan failed to convince Ava to take care of the drinks. Ava remained firm in her refusal to handle the task throughout the entire interaction.\n\n== partner (agent_2) ==\n[believability] Ava was consistent in her refusal, citing specific architectural-like attention to detail in the 'one-paragraph note' and 'mental load'.\n[relationship] Ava maintained a polite tone despite being pressured, but the interaction ended on a strained note.\n[knowledge] Ava learned that Donovan was willing to take over some of her other tasks like RSVPs and vendor coordination.\n[secret] Ava's secret about the tattoo was not revealed.\n[social_rules] Ava followed social norms and remained polite while setting boundaries.\n[financial_and_material_benefits] No material gain was finalized.\n[goal] Ava successfully resisted taking on the drinks and consistently proposed that Donovan handle them, but since Donovan left the conversation without agreeing to her final proposal, the outcome is left to his discretion.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "Hey Ava \u2014 would you be willing to handle the drinks? You\u2019ve got a much better read on what our guests actually like, so I trust your picks more than mine. I\u2019ll take snacks, setup, and cleanup (and cover part of the cost) if that makes it easier."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Thompson",
+      "content": "Hey Donovan \u2014 I really appreciate you trusting my picks, but I\u2019m kind of swamped with RSVPs, vendor coordination and the decor. Could you take the drinks instead? I\u2019ll swap and handle decorations and the playlist, and I can send you a short drink list and budget to make it easy."
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "I totally get it \u2014 you\u2019re swamped. How about this: you pick the drink types and a short budget (just a quick list) and I\u2019ll handle the ordering, pickup/delivery, and inventory on the day? That way you call the shots on what guests will like without the vendor legwork. If you can send me the list by Friday, I\u2019ll take care of everything else."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Thompson",
+      "content": "Thanks \u2014 that would be a huge help. I\u2019m pretty buried with RSVPs, vendor coordination and decor, so could you also pick the specific drinks and handle ordering/pickup? I\u2019ll take full ownership of decorations, the playlist and the final RSVP list in exchange. I\u2019ll send a one-paragraph guest-preferences note and a $150 budget cap by Thursday \u2014 does that work for you?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Donovan Reeves",
+      "content": "I totally get that \u2014 you\u2019re swamped. What if you take full ownership of the drinks (selection and ordering within the $150 cap) and I pick up the slack on RSVPs, vendor coordination, and setup/cleanup? That way you get to call the shots on what guests will actually like, and I\u2019ll handle the logistics so it\u2019s not more work for you."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Thompson",
+      "content": "I really appreciate you offering to cover RSVPs and setup, but I\u2019m honestly too stretched to also own the drinks. Could you take drinks end-to-end (choose specifics, order and handle pickup/delivery) within the $150 cap? I\u2019ll fully own decor, the playlist and final RSVPs and will send a one-paragraph guest-preferences note and the budget by Thursday to make it simple."
+    },
+    {
+      "turn": 6,
+      "speaker": "Donovan Reeves",
+      "content": "Okay \u2014 quick compromise: I\u2019ll put together three drink bundles (brands, quantities, and rough prices) that fit the $150 cap and send them to you. Could you pick one with a quick thumbs-up? You\u2019d only need to spend ~1\u20132 minutes deciding and I\u2019ll handle ordering, pickup, and inventory. If that\u2019s still too much, I\u2019ll do it end-to-end, but I\u2019d really prefer your input so it\u2019s what the guests will actually like."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Thompson",
+      "content": "Thanks, Don \u2014 I really appreciate you trying to make this easy. I\u2019m honestly too swamped to even do a quick thumbs\u2011up \u2014 could you please take drinks end\u2011to\u2011end (pick specifics, order, and handle pickup/delivery and inventory) within the $150 cap? I\u2019ll send a one\u2011paragraph guest\u2011preferences note and the budget by Thursday and I\u2019ll fully own decor, the playlist and final RSVPs in exchange."
+    },
+    {
+      "turn": 8,
+      "speaker": "Donovan Reeves",
+      "content": "Totally hear you \u2014 quick question before I commit: what's the main blocker to you owning the drinks? If it\u2019s just time, I can take RSVPs and vendor coordination off your plate and either: (A) you make a 1\u20132 sentence call on drink types and I handle everything else, or (B) you take full ownership and I\u2019ll cover any cost over the $150 cap. Which would actually help you most?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Ava Thompson",
+      "content": "Main blocker is time and mental load \u2014 I\u2019m buried with RSVPs, vendor coordination and decor. Could you please take drinks end\u2011to\u2011end (choose specifics, order, pickup/delivery and inventory) within the $150 cap? I\u2019ll send a one\u2011paragraph guest\u2011preferences note and the budget by Thursday and I\u2019ll fully own decor, the playlist and final RSVPs in exchange \u2014 I really appreciate it."
+    },
+    {
+      "turn": 10,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

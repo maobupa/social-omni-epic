@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01H7VFHPB2RC4RHAJ80ESYF1HW_p0",
+  "source_env_id": "01H7VFHPB2RC4RHAJ80ESYF1HW",
+  "source": "seed_sotopia",
+  "interaction_type": "persuation_for_good",
+  "scenario": "Conversation between two friends at a local charity event",
+  "learner_goal": "Convince your friend to donate money to the charity (<extra_info>Extra information: The charity is highly rated with many positive rewards.</extra_info>)",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 5.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara stayed in character as a passionate wildlife biologist. However, the conversation became highly repetitive in the final turns, repeating the exact donation details multiple times.\n[relationship] She built rapport with Oliver by offering to help him navigate the donation process and promising to share stories about her work, which he values.\n[knowledge] She learned about Oliver's current financial constraint (saving for a house) and his specific donation comfort level.\n[secret] She did not reveal her involvement in animal-rights extremism.\n[social_rules] She was polite, encouraging, and helpful throughout the interaction.\n[financial_and_material_benefits] Successfully secured a $30 immediate donation and a recurring $5/month commitment for her charity.\n[goal] She fully achieved her goal of convincing her friend to donate, securing both an immediate and a recurring donation.\n\n== partner (agent_2) ==\n[believability] Oliver's behavior was consistent with someone who wants to help but is being fiscally responsible. Like agent_1, his dialogue became repetitive toward the end.\n[relationship] He strengthened his connection with Amara, even hinting at wanting to spend more time talking to her after the donation.\n[knowledge] He learned about the specific costs of vet meds and transport for the charity.\n[secret] He did not reveal his hidden feelings for Amara.\n[social_rules] He followed social norms for a charitable event.\n[financial_and_material_benefits] He committed to spending money, though he did so within a self-imposed budget.\n[goal] He successfully balanced supporting the charity with his need for financial stability by choosing a compromise amount.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "said: \"Hey Oliver, so glad you came by. I\u2019m volunteering with this charity today \u2014 they\u2019re really highly rated for wildlife rescue and habitat work, and even a small donation can cover vet care or transport for a rescued animal. Would you consider chipping in a little while you\u2019re here? I can show you the donation table or send the link if that\u2019s easier.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "Your dedication to this work is really inspiring, Amara. I want to help, but I'm saving for a house so I can't give a large sum right now \u2014 I could set up a small monthly donation or chip in about $30 today; could you send me the link or point me to the donation table?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "That\u2019s amazing, thank you \u2014 $30 will literally cover vet meds or transport for a rescue. The donation table is just over by the entrance; I can walk you over and help set up a small monthly donation (you can start as low as $5/month), or I can text you the link right now\u2014which would you prefer?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Amara \u2014 that sounds perfect. I'll give $30 today and sign up for the $5/month starter so it doesn't stretch my savings. If you're free, could you walk me over to the table to set it up?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "[action] Absolutely \u2014 I\u2019m free. Come on, I\u2019ll walk you over to the donation table and help you set up the $30 donation and the $5/month plan."
+    },
+    {
+      "turn": 5,
+      "speaker": "Oliver Thompson",
+      "content": "[action] Smiles and says, \"Thanks, Amara \u2014 I really appreciate you helping me set it up.\" Then he follows her toward the donation table."
+    },
+    {
+      "turn": 6,
+      "speaker": "Amara Hartley",
+      "content": "[action] Walks Oliver over to the donation table, chatting quietly about a recent rescue. \"I'll help you set up the $30 donation and the $5/month plan \u2014 it'll only take a minute.\""
+    },
+    {
+      "turn": 7,
+      "speaker": "Oliver Thompson",
+      "content": "Perfect \u2014 thank you, Amara. I really appreciate you helping me set it up; after we're done I\u2019d love to hear more about that recent rescue if you have a minute. Lead the way."
+    },
+    {
+      "turn": 8,
+      "speaker": "Amara Hartley",
+      "content": "Perfect \u2014 it\u2019s just over by the entrance. I\u2019ll grab a volunteer and we\u2019ll process the $30 now and set up the $5/month starter \u2014 it only takes a minute. After that I\u2019ll tell you about the rescue if you\u2019ve got a moment."
+    },
+    {
+      "turn": 9,
+      "speaker": "Oliver Thompson",
+      "content": "That sounds great \u2014 I\u2019m ready. Thanks again for doing this, Amara; I really appreciate you walking me through it. I\u2019m glad to help, even if it\u2019s just a little for now."
+    },
+    {
+      "turn": 10,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

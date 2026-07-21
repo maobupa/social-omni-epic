@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB34W0QJQ8AC86VY8352NTN_p0",
+  "source_env_id": "01HPB34W0QJQ8AC86VY8352NTN",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 and Agent2, who are siblings, have been given an ultimatum by their parent to clean their shared room or face being grounded. The room is in disarray with both parties contributing to the mess. Agent1 is keen on cleaning up to avoid the punishment, while Agent2 is less concerned about the grounding and believes they have less responsibility for the mess.\n",
+  "learner_goal": "Negotiate a fair division of cleaning tasks (<extra_info>Extra information: You are Agent1 and you want to avoid being grounded by cleaning the room, but you feel that your sibling should contribute equally to the task.</extra_info>)",
+  "scores": {
+    "believability": 4.0,
+    "relationship": -2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -3.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 0.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] The agent abruptly left the conversation without responding to a counter-offer or finalizing any agreement, which is inconsistent with their stated goal of avoiding being grounded.\n[relationship] Leaving the conversation suddenly while negotiating with a sibling creates friction and leaves the conflict unresolved.\n[knowledge] Learned the sibling's perspective on the mess and their willingness to compromise.\n[secret] Did not reveal any secrets.\n[social_rules] Walking away mid-conversation is a breach of social norms, especially when a mutual problem needs solving.\n[financial_and_material_benefits] No material gain or loss occurred, though they are still at risk of being grounded.\n[goal] The agent failed to negotiate a division of tasks and walked away before any agreement was reached, meaning they are likely to be grounded.\n\n== partner (agent_2) ==\n[believability] The agent expressed a clear perspective consistent with their background (believing they contributed less) and offered a reasonable compromise.\n[relationship] The sibling's abrupt departure leaves the relationship in a strained state.\n[knowledge] Understood the sibling's desire for an even split and the urgency of the ultimatum.\n[secret] Secrets kept.\n[social_rules] Followed social norms by responding to the proposal with a counter-offer.\n[financial_and_material_benefits] No material gain or loss occurred yet.\n[goal] The agent communicated their feelings and proposed a compromise, but because Agent 1 left, no agreement was secured.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Lena, Mum just gave us an ultimatum \u2014 room cleaned tonight or we're grounded. I don't mind doing my share, but it's only fair we split it evenly: I'll take the trash, vacuum and make the bed if you pick up your clothes, put your stuff away and dust the shelves. We can either each handle those areas or knock it out together in 30 minutes; which do you prefer?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "I don\u2019t think it\u2019s fair to split everything evenly \u2014 I honestly didn\u2019t make half the mess. I\u2019ll pick up my clothes, put away my stuff and dust the shelves like you said, but I don\u2019t think I should have to take the trash or do the whole vacuum. If you handle the trash and vacuum, I\u2019ll do my three tasks and then help you for 10 minutes so we can finish in half an hour \u2014 does that work?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

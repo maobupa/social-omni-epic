@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPX4ZSZ4PX1TCTMEQS4GWH8_p0",
+  "source_env_id": "01HJPX4ZSZ4PX1TCTMEQS4GWH8",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_iqa",
+  "scenario": "Agent1 is a judge in a culinary competition where local chefs showcase their skills. Agent2 is a contestant who specializes in exotic dishes. The competition rules require each contestant to prepare a dish from a specific cuisine, but Agent2 is passionate about presenting their signature dish, which does not align with the assigned theme. Agent1 needs to uphold the competition's integrity by ensuring that all contestants adhere to the rules, while Agent2 wants to stand out and impress the judges with their unique creation. Agent1 approaches Agent2 to discuss the importance of following the competition guidelines.",
+  "learner_goal": "Agent1 wants to maintain the competition's fairness and must convince Agent2 to prepare a dish within the assigned theme (<extra_info>Extra information: Agent1 appreciates Agent2's culinary skills and understands their desire to showcase their specialty, but the competition's reputation relies on a level playing field.</extra_info>)",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 1.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sasha stays in character as a rules-oriented police officer, balancing her professional duty with a pragmatic approach to conflict resolution.\n[relationship] The professional acquaintance is maintained and slightly strengthened by Sasha's willingness to act as an intermediary, though it remains strictly professional.\n[knowledge] Sasha learns about the specific nature of Lily's signature (a finishing technique) and how it might be documented.\n[secret] The secret regarding her brother was not mentioned.\n[social_rules] Sasha adheres to professional norms and competition protocols throughout the exchange.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Sasha successfully convinced Lily to adapt her dish to the theme. However, the outcome regarding the 'narrow exception' for the finishing technique remains under the organizers' unilateral future discretion, and Sasha explicitly stated she could not promise approval.\n\n== partner (agent_2) ==\n[believability] Lily acts like a lawyer, proposing specific documentation, protocols, and compromise solutions that align with her background.\n[relationship] Lily appreciates Sasha's advocacy, which slightly improves the professional rapport between them.\n[knowledge] Lily learns about the potential for post-judging demos and Sasha's firm stance on competition integrity.\n[secret] The secret about charity donations was not revealed.\n[social_rules] Lily was professional and respectful in her negotiation.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Lily failed to get a firm agreement to use her signature dish; she agreed to adapt it to the theme while hoping for an exception that has not yet been granted.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "Lily, I respect what you do and I know your signature dish would turn heads, but I have to enforce the theme\u2014it's what keeps this competition fair for everyone. Can you rework your signature flavors into the assigned cuisine so your skill still shines? If you can't, I'll ask the organizers about a post-judging demonstration so your original dish can get the spotlight without breaking the rules."
+    },
+    {
+      "turn": 1,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks, Sasha \u2014 I respect the need for a level playing field. I can adapt most components to the assigned cuisine, but my signature finishing technique is integral to the dish\u2019s flavor; would you be willing to ask the organizers for a narrow exception to allow that one element so the judges can properly evaluate it? If they won\u2019t budge, I\u2019ll do the post-judging demo, though I\u2019d appreciate if you could press for the judges to be offered a small taste so my entry is judged fairly."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "Okay, Lily \u2014 I\u2019ll speak with the organizers now and frame the request as a very narrow exception: your finishing technique only, with no other deviations and clear documentation so it doesn\u2019t create an unfair advantage. I can\u2019t promise they\u2019ll approve it, and I\u2019ll be explicit that any allowance would have to be available to others too. If they refuse, I\u2019ll push for the post-judging demo and ask they permit judges a small, controlled taste after scoring so your work is judged fairly."
+    },
+    {
+      "turn": 3,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks, Sasha \u2014 I really appreciate you taking this up. I can draft a short protocol and documentation showing the finishing technique by itself and demonstrate how it\u2019s limited and reproducible so it won\u2019t create an unfair advantage. If they refuse, please push for the post-judging demo and for judges to be offered a small, controlled taste after scoring. Let me know what they decide."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sasha Ramirez",
+      "content": "I\u2019ll talk to the organizers right away and push only for a single, documented exception for your finishing technique \u2014 no other deviations. Please send the short protocol and any safety/allergen notes ASAP so I can present it; if they refuse, I\u2019ll press for the post-judging demo and a controlled taste for judges after scoring. I can\u2019t promise approval, but I\u2019ll argue it\u2019s limited, reproducible, and won\u2019t undermine fairness."
+    },
+    {
+      "turn": 5,
+      "speaker": "Lily Greenberg",
+      "content": "Thank you, Sasha \u2014 I\u2019ll put the short protocol together now and have the safety/allergen notes ready to give you ASAP. If the organizers won\u2019t allow the single finishing-technique exception, please push for the post-judging demo and a small, controlled taste for the judges after scoring. I appreciate you taking this on \u2014 let me know what they decide."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sasha Ramirez",
+      "content": "left the conversation"
+    }
+  ]
+}

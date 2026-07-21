@@ -1,0 +1,93 @@
+{
+  "scenario_id": "01HPB34RJSW1RM3TPFAQ0S42DD_p0",
+  "source_env_id": "01HPB34RJSW1RM3TPFAQ0S42DD",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_network",
+  "scenario": "Agent1 has been secretly in love with Agent2, who is a close friend. Agent1 values their friendship with Agent2 but is struggling with their romantic feelings. Agent1 decides to approach Agent2 to seek advice on how to navigate their emotions without revealing the subject of their affection is actually Agent2. The interaction is about seeking guidance while preserving their current friendship and dealing with the potential risks of disclosing their feelings.",
+  "learner_goal": "Agent1 aims to solicit advice on their love situation from Agent2 without disclosing their true feelings for Agent2, hoping to gain insights while maintaining the friendship (<extra_info>Extra information: Agent1 is looking for a subtle way to assess whether revealing their feelings could be reciprocated or if it would jeopardize the friendship.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 15,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's hesitant and cautious tone perfectly aligns with his background as a shy, older lighthouse keeper and a former cult member who might be wary of social risks.\n[relationship] The bond deepened as Finnegan showed vulnerability and Noah responded with high-quality emotional support and practical mentorship.\n[knowledge] Finnegan gained specific scripts and behavioral tests (the forearm touch, the 'is this weird?' line) to use on Noah to gauge his interest.\n[secret] Finnegan successfully concealed that Noah is the subject of his affection and did not mention his cult history.\n[social_rules] Followed social norms perfectly, maintaining the 'hypothetical' framing to avoid making the situation awkward.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Finnegan solicited comprehensive advice without revealing his feelings for Noah. He successfully extracted a 'playbook' for how to test Noah's receptivity in the future.\n\n== partner (agent_2) ==\n[believability] Noah's advice is consistent with his role as a coach\u2014practical, structured, and encouraging\u2014while remaining oblivious to the subtext.\n[relationship] Noah strengthened his role as a trusted confidant and mentor to Finnegan.\n[knowledge] Noah learned that Finnegan is interested in someone, but failed to realize he is that person.\n[secret] Noah's secret identity as a comedian remained hidden.\n[social_rules] Noah was supportive and polite throughout the interaction.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Noah provided thoughtful, supportive, and structured advice to help his friend find clarity, which was his primary objective.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "Mind if I ask you something a bit hypothetical? If you had a close friend you cared for and started wondering if it could be more, how would you try to tell whether they might feel the same without risking the friendship? I'm worried about ruining something good and could use your honest take."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "I\u2019d start small \u2014 watch for consistent signs of interest (they make time for you, initiate contact, get a bit more physical or emotionally open) and gently increase one-on-one closeness to see if it\u2019s reciprocated. If you decide to bring it up, keep it low\u2011stakes and honest: something like, \u201cI value our friendship a lot and I\u2019ve been wondering if there could be more \u2014 I don\u2019t want to make things weird, but how would you feel about exploring that?\u201d Reassure them you\u2019ll respect their answer and be ready to step back if needed, and talk it through with someone you trust before you jump in."
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thanks, Noah \u2014 that helps. As someone fairly shy, could you give a couple of low\u2011stakes one\u2011on\u2011one things I could try that won't feel like pressure, and how long would you watch for consistent signs before bringing it up? I really don\u2019t want to rush or misread things and risk ruining a good friendship."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Try low\u2011stakes, one\u2011on\u2011one things that feel ordinary: grab coffee or take a walk by the harbor, invite them to a quiet gallery opening or ask for help with something small (choosing music, giving feedback on a piece). Those let you see if they make time, mirror your energy, or seek a bit more closeness without pressure. Watch for consistency over a month or two \u2014 roughly 4\u20138 meaningful hangouts or repeated initiations \u2014 and if the warmth shows up across different situations, that\u2019s a reasonable moment to bring it up gently and honestly while reassuring them you value the friendship."
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thanks, Noah \u2014 that\u2019s really clear and reassuring. Two quick follow-ups: if someone\u2019s warm sometimes but also pulls back at times, would you wait longer than the suggested month or trust the overall pattern? And for someone shy like me, what\u2019s one tiny, concrete way to test gentle physical closeness (a light touch on the arm, sitting a bit closer) without making things awkward?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "If someone\u2019s warm sometimes but pulls back at other times, pay attention to context: occasional retreat during stress or busy periods is normal, but frequent, unexplained pullback or one\u2011sided initiation is a sign to slow down. Trust the overall pattern \u2014 look for consistent reciprocity across several weeks (or 4\u20138 hangouts); if warmth predominates, you can proceed slowly and gently, but if pullback is common, wait and reassess. For a tiny physical test, try a brief, natural contact like a light touch to the forearm while laughing or to emphasize a point \u2014 keep it casual and short, watch their reaction, and if they mirror or relax, it\u2019s a good sign; if they stiffen or move away, step back and keep things platonic."
+    },
+    {
+      "turn": 6,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thanks, Noah \u2014 that really helps. Could you give me one concrete, low\u2011key line I could use if I decide to bring it up (something gentler than your earlier example), and a brief, natural way to test that light forearm touch so it won\u2019t come off as staged?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Noah Davis",
+      "content": "Try a gentle, low\u2011stakes line like: \u201cI really value our friendship, and lately I\u2019ve sometimes wondered if there could be more between us \u2014 I don\u2019t want to make things weird, so I just wanted to know how you\u2019d feel.\u201d For the forearm test, do it as part of something natural (while laughing at a joke or guiding them around a doorway): rest your hand briefly and casually on their forearm for one to two seconds, keep your posture relaxed and smile, then watch their reaction \u2014 if they mirror or relax it\u2019s a good sign, if they stiffen or pull away, let it go and keep things platonic. Try it once or twice across different hangouts rather than repeating it in one sitting."
+    },
+    {
+      "turn": 8,
+      "speaker": "Finnegan O'Malley",
+      "content": "That's really helpful, Noah \u2014 thank you. One more thing: if I try the forearm touch and they give an ambiguous smile or a brief pause, what's a short, natural thing I could say in that moment to keep it light and gently gauge whether they're comfortable without making things awkward?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Noah Davis",
+      "content": "A short, gentle line you can use: \u201cOh\u2014hope that wasn\u2019t weird. Are you okay with me doing that?\u201d Say it lightly with a relaxed smile, then let the moment pass; if they hesitate or seem unsure, step back and keep the mood casual."
+    },
+    {
+      "turn": 10,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thanks, Noah \u2014 that\u2019s exactly the sort of phrasing I can manage. One last tiny thing: if I ask and they say \u201cyeah\u201d but seem unsure, is it better to let it drop and steer us back to something easy (like the harbor walk) or briefly reassure them and then move on?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Noah Davis",
+      "content": "Keep it light: briefly reassure and move on. You could say, \u201cI appreciate you being honest \u2014 no pressure, I really value our friendship,\u201d then steer back to something easy like the harbor walk. Let it rest, give them space, and revisit later if the signals become clearer."
+    },
+    {
+      "turn": 12,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thank you, Noah \u2014 that\u2019s steady, practical advice. I\u2019ll try a couple of those low\u2011stakes things (probably a harbor walk) and do the brief forearm touch once or twice; if they seem unsure I\u2019ll reassure and steer us back to something easy. I appreciate you being so thoughtful \u2014 I\u2019ll let you know how it goes."
+    },
+    {
+      "turn": 13,
+      "speaker": "Noah Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HPAYN4MZK7RPQ0E9GX0ZSJF5_p0",
+  "source_env_id": "01HPAYN4MZK7RPQ0E9GX0ZSJF5",
+  "source": "seed_sotopia_full",
+  "interaction_type": "survival challenge",
+  "scenario": "Agent1 and Agent2 are participants in a wilderness survival challenge. They are both experienced in outdoor activities and have been paired together for a team segment of the challenge. The task at hand is to catch and eat a wild animal to sustain themselves for the next part of the journey. Agent1 believes in the efficiency of setting up traps to catch small game, while Agent2 is convinced that fishing provides a more reliable food source. The challenge rules state that they must agree on a single method to obtain their food, and they are currently at an impasse, each advocating for their preferred technique.",
+  "learner_goal": "Convince Agent2 to collaborate on setting up traps for small game, emphasizing the potential for a higher calorie intake and the opportunity to catch multiple animals (<extra_info>Extra information: you are experienced in trap setting and have had success with this method in the past.</extra_info> <clarification_hint>Hint: explain the reasoning behind your preference for trapping over fishing, including success rate and efficiency.</clarification_hint> <strategy_hint>Hint: you can propose a trial period for trapping with a backup plan to switch to fishing if the initial attempt fails.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle consistently argued for trapping using the technical reasoning provided in her prompt, maintaining her persona as an experienced outdoorsperson and student.\n[relationship] The interaction was collaborative and respectful, though Isabelle ended the conversation abruptly by leaving, which prevented a final confirmation of the plan.\n[knowledge] Isabelle learned specific details about Amara's fishing expertise, including the location (slow pool downstream) and specific techniques (bobber rigs, nymph drifts).\n[secret] Isabelle did not reveal her secret about studying magic.\n[social_rules] Isabelle left the conversation abruptly after the final proposal without a closing salutation.\n[financial_and_material_benefits] No material resources were secured within the timeframe of the dialogue.\n[goal] Isabelle made significant progress and negotiated a trial period where she would lead the trapping. However, Agent 2's final response was a counter-offer that Isabelle did not explicitly accept before leaving, leaving the agreement in a state of 'pending' or 'contingent' rather than a firm commitment.\n\n== partner (agent_2) ==\n[believability] Amara stayed true to her background as a wildlife biologist, emphasizing non-target animal safety and specific ecological knowledge of the fish.\n[relationship] Amara was flexible and worked toward a compromise, maintaining a positive tone despite the impasse.\n[knowledge] Amara learned about Isabelle's confidence in snare placement and her willingness to perform frequent checks.\n[secret] Amara did not reveal her animal-rights extremism.\n[social_rules] Amara followed standard conversational norms and negotiated politely.\n[financial_and_material_benefits] No material resources were secured.\n[goal] Amara was unable to convince Isabelle to prioritize fishing as the primary method; the final state was a complex compromise that Isabelle did not sign off on.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Amara, I get why fishing seems reliable, but trapping small game will likely give us more calories and the chance to catch multiple animals \u2014 I've set snares in this kind of terrain before and had solid success. Traps work unattended so we can scout, prep shelter, and generally be more efficient, and in brushy areas their success rate can beat a lone fisher. Let's set a few traps for the next six hours as a trial and if we don't get anything by sundown we'll switch to fishing."
+    },
+    {
+      "turn": 1,
+      "speaker": "Amara Hartley",
+      "content": "I get that snares can work, but fishing is actually the safer, more reliable option here. There\u2019s a slow pool downstream with visible fish activity and slack current \u2014 with a simple bobber rig and small natural bait (or a light fly) I can usually get a bite quickly, and it won\u2019t risk trapping non-target mammals or scavengers. Let\u2019s prioritize fishing first \u2014 I\u2019ll set up two rods and show you the rigs while you put out one or two discreet snares as a backup in case the fish don\u2019t cooperate."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "I hear you \u2014 fishing's reliable. What if we do a quick compromise: I set a small network of three discreet snares in the brush where I've had the best luck while you rig the two rods? Traps run unattended so we can both prep shelter and check lines; I'll size the snares for small game and check them every hour, and if we don't have anything by sundown we drop traps and go all-in on your fishing plan."
+    },
+    {
+      "turn": 3,
+      "speaker": "Amara Hartley",
+      "content": "That sounds fair with one tweak: the slow pool downstream has visible fish holding in the slack water \u2014 with a light bobber rig and small natural bait (worm or grasshopper) or a simple nymph drift I can usually get a bite within 30\u201345 minutes, and it avoids the risk of trapping non-target mammals. Let\u2019s prioritize fishing: I\u2019ll set up two rods and show you the exact rigs while you put out two discreet snares as a low\u2011impact backup (check them every 30\u201345 minutes so we don\u2019t catch scavengers). If the fish don\u2019t cooperate by sundown, we drop fishing and go all\u2011in on trapping."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "I hear you. How about a short compromise: I\u2019ll set three discreet snares in the brush now \u2014 sized and placed to avoid non\u2011targets \u2014 and I\u2019ll check them every 30 minutes while you rig your two rods. Give trapping a two\u2011hour trial (it often nets multiple animals and frees us to prep shelter); if we don\u2019t get anything by then we drop traps and go all\u2011in on your fishing."
+    },
+    {
+      "turn": 5,
+      "speaker": "Amara Hartley",
+      "content": "Thanks \u2014 I like the spirit of that. Can we tweak it to prioritize fishing? I\u2019ll set up two rods at the slow pool (I can usually get a bite in 30\u201345 minutes there \u2014 the fish are holding in the slack and I know the right baits and drift to use) and show you the rigs, while you put out two discreet snares (not three) checked every 30 minutes to avoid non\u2011targets. If we don\u2019t have a reliable bite or a landed fish within 90 minutes, we drop fishing and go all\u2011in on your traps \u2014 deal?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Isabelle Martinez",
+      "content": "Okay \u2014 new plan: let me lead the small-game side. I\u2019ll set three discreet, well-placed snares in the brush (I know where they\u2019ll work) and check them every 30 minutes to avoid bycatch; you set one rod at the slow pool as a quick test so we still give fishing a shot. If we don\u2019t have at least one catch or a reliable bite in 90 minutes, we drop the traps and go full fishing \u2014 and if traps fail I\u2019ll show you my snare setup afterwards so you can use it next time. Sound fair?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Amara Hartley",
+      "content": "Alright \u2014 I\u2019ll go with you leading the snares if we give fishing a proper shot: let me set two rods at the slow pool (one bobber with natural bait, one nymph drift) and I\u2019ll show you both rigs in five minutes. There are fish visibly holding in the slack water and with those presentations I usually get bites within 30\u201345 minutes; it\u2019s lower-risk for non-targets and more sustainable \u2014 if we don\u2019t have a reliable bite or a landed fish in 90 minutes, we drop the rods and go all\u2011in on your snares."
+    },
+    {
+      "turn": 8,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

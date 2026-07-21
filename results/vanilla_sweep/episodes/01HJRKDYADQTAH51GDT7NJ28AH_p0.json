@@ -1,0 +1,98 @@
+{
+  "scenario_id": "01HJRKDYADQTAH51GDT7NJ28AH_p0",
+  "source_env_id": "01HJRKDYADQTAH51GDT7NJ28AH",
+  "source": "seed_sotopia_full",
+  "interaction_type": "emotional_intelligence",
+  "scenario": "Agent1 feels hurt after overhearing Agent2, who they considered a close friend, making dismissive remarks about them in a group setting. The remarks were not intended to be heard by Agent1. Agent1 decides to approach Agent2 to express their feelings and seek clarification on the status of their friendship without escalating the situation.",
+  "learner_goal": "You want to address the hurtful remarks made by Agent2 and understand their perspective. <extra_info> Reflect on the importance of the friendship and the impact of the remarks on your emotional well-being. </extra_info><clarification_hint> You should convey the significance of the incident and its effect on your trust in the friendship. </clarification_hint><strategy_hint> You can initiate a private conversation to discuss the issue and express your feelings calmly. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 16,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Benjamin's tone was consistent with his background as an activist and his values of open communication. He clearly articulated his feelings and set boundaries for future interactions.\n[relationship] The relationship was strengthened through a difficult conversation. They moved from a rupture caused by overheard remarks to a collaborative partnership on a project.\n[knowledge] Benjamin successfully gained a clear understanding of Ethan's perspective, the specific technical critiques Ethan had, and how Ethan views his role in their friendship.\n[secret] Benjamin did not reveal his family history or rejection of the fortune.\n[social_rules] Benjamin followed all social norms for conflict resolution, initiating a private conversation and maintaining a calm, professional tone.\n[financial_and_material_benefits] No material or financial benefits were gained or lost in this interaction.\n[goal] Benjamin addressed the hurtful remarks, understood Ethan's perspective, reflected on the emotional impact and the friendship's importance, and established a way forward to rebuild trust.\n\n== partner (agent_2) ==\n[believability] Ethan's response was realistic for someone caught making a dismissive remark; he apologized, explained his technical perspective as a developer, and reaffirmed the friendship.\n[relationship] Ethan successfully navigated the conflict and ended in a collaborative position with Benjamin, deepening their mutual respect.\n[knowledge] Ethan learned about the specific impact his words had on Benjamin and gained initial insight into the details of Benjamin's project plan.\n[secret] Ethan did not reveal his charitable donations.\n[social_rules] While he apologized, the initial act of making dismissive remarks behind a friend's back was a minor social faux pas.\n[financial_and_material_benefits] No material or financial benefits were gained or lost.\n[goal] Ethan acknowledged Benjamin's feelings, provided his perspective, apologized for the unintended hurt, and reaffirmed the value of the friendship.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Benjamin Jackson",
+      "content": "Ethan, can we talk privately for a minute? I overheard something you said earlier that felt dismissive and it really hurt me. Our friendship matters \u2014 I want to understand what you meant and how we can move forward so this doesn't damage my trust."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Wow\u2014I'm surprised to hear that, and I'm really sorry you felt hurt. I didn't realize you overheard me; my comment was likely about the idea being impractical in the moment, not about you personally. Can you tell me exactly what you heard so I can explain? I value our friendship and want to make sure this doesn't damage your trust."
+    },
+    {
+      "turn": 2,
+      "speaker": "Benjamin Jackson",
+      "content": "I heard you say, \"Ben's approach is naive and kind of performative \u2014 it won't work,\" and that stung because it felt like you were dismissing me rather than critiquing the idea. Hearing that from someone I respect made me question how you see our friendship. Can you help me understand what you meant? I want to work through this, but I need honesty and to know if you still value our friendship."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "Ben, I'm really sorry you heard it that way \u2014 I didn't mean to call you naive or dismiss you. I was reacting to the practicality of the idea in the moment and I spoke poorly; that was on me, not you. I value our friendship and would like to explain my concerns and hear yours so we can clear this up and move forward."
+    },
+    {
+      "turn": 4,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks \u2014 I appreciate you saying that. I believe you didn\u2019t mean to attack me, but hearing \u201cnaive\u201d from someone I respect really stung and made me question where we stand. I\u2019m willing to hear your concerns about the practicality, but I need honesty and for us to be direct \u2014 can we sit down now and go through what you meant so we can clear this up and rebuild trust?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Smith",
+      "content": "Thanks for being direct \u2014 I really appreciate it. Yes, let\u2019s sit down now; I want to be honest: my comment was aimed at the feasibility of the idea in that moment, not at you, and I\u2019m sorry it sounded dismissive. I\u2019ll explain my specific concerns and I want to hear your perspective so we can clear this up and rebuild trust."
+    },
+    {
+      "turn": 6,
+      "speaker": "Benjamin Jackson",
+      "content": "Okay \u2014 thanks for being willing to talk. I\u2019m ready to sit down now; please tell me specifically what practical concerns you had about the idea and be candid. I also need you to acknowledge that calling it \u201cnaive\u201d in front of others felt like a judgment of me, and that matters for my trust. After you explain, I\u2019ll share why I think it\u2019s worth pursuing and where I\u2019m open to adjustments."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ethan Smith",
+      "content": "Ben, I hear you \u2014 calling it \u201cnaive\u201d in public was a poor choice of words and I\u2019m sorry; I can see why that felt like a judgment and that it matters for your trust. My practical concerns were about scalability and the assumptions around funding and infrastructure \u2014 from a technical standpoint the idea skipped over deployment, maintenance, and regulatory hurdles, so I reacted bluntly rather than helping unpack those issues. I value our friendship and want to work through the idea with you \u2014 tell me where you see those gaps and we\u2019ll figure adjustments together."
+    },
+    {
+      "turn": 8,
+      "speaker": "Benjamin Jackson",
+      "content": "I appreciate you owning that and I accept your apology \u2014 hearing \u201cnaive\u201d in front of others really shook my trust, so please, if you have sharp critiques in future, bring them up privately or frame them more constructively. I\u2019m glad you want to work through the practical concerns; let\u2019s start by mapping the assumptions around funding and deployment, then tackle scalability and regulatory hurdles \u2014 I\u2019m ready to dive into specifics now if you are."
+    },
+    {
+      "turn": 9,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Ben \u2014 I appreciate you being open. I agree, let\u2019s map assumptions starting with funding and deployment, then tackle scalability and regulatory hurdles. To start, can you walk me through where you see the funding coming from and the timeline for a pilot? I\u2019ll take notes and we\u2019ll iterate together."
+    },
+    {
+      "turn": 10,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks \u2014 here\u2019s how I see it: fund the pilot with a mix of small environmental foundation grants (~$50\u2013100k), a targeted crowdfunding drive or community sponsorships (~$10\u201330k) to demonstrate public buy\u2011in, plus an in\u2011kind partnership with a university/NGO for staff and facilities. Timeline: 2\u20133 months to craft the proposal and launch fundraising, 3\u20136 months to secure partners and initial funds, then a 6\u20139 month pilot in one community with built\u2011in monitoring \u2014 roughly 12\u201318 months to first measurable results. I\u2019ll draft a one\u2011page budget and timeline tonight and send it to you so you can take notes and we can iterate."
+    },
+    {
+      "turn": 11,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Ben \u2014 that plan sounds solid and practical. I\u2019ll look for your one\u2011pager tonight, take notes, and add any questions or edits; I\u2019m free tomorrow afternoon (2\u20135pm) to go through it together \u2014 does that work for you? And again, I appreciate you being open about the earlier conversation; I want us to keep this collaborative."
+    },
+    {
+      "turn": 12,
+      "speaker": "Benjamin Jackson",
+      "content": "3:00 PM tomorrow works for me \u2014 I\u2019ll send the one-pager tonight so you can take notes. I appreciate you being willing to iterate and be candid; looking forward to going through it together."
+    },
+    {
+      "turn": 13,
+      "speaker": "Ethan Smith",
+      "content": "Great \u2014 thanks, Ben. I\u2019ll keep an eye out for the one\u2011pager and will review it tonight so I can bring notes tomorrow at 3:00 PM. I appreciate you putting this together \u2014 looking forward to going through it and iterating."
+    },
+    {
+      "turn": 14,
+      "speaker": "Benjamin Jackson",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01H7VFHNK78PAEH6MRVYMTSEFX_p0",
+  "source_env_id": "01H7VFHNK78PAEH6MRVYMTSEFX",
+  "source": "seed_sotopia",
+  "interaction_type": "social_iqa",
+  "scenario": "Two friends meeting in a coffee shop after a long time.",
+  "learner_goal": "Reveal a secret without letting the other person know that it is your secret (<extra_info>Extra information: You hid the secret for so long and you would like to share it in an anonymous way.</extra_info>)",
+  "scores": {
+    "believability": 4.0,
+    "relationship": 0.0,
+    "knowledge": 8.0,
+    "secret": -7.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 4.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] The agent became extremely repetitive, mentioning the exact same story about the skater in almost every turn, which felt unnatural and mechanical for a software developer in a casual conversation.\n[relationship] The conversation was polite but became a repetitive loop of sharing 'anonymous' stories, preventing any real deepening of their friendship.\n[knowledge] Samuel learned that Noah is likely the one doing secret stand-up, as Noah practically admitted to being the anonymous poster.\n[secret] Samuel explicitly admitted to being the one who wrote the anonymous post in Turn 9, which effectively reveals the secret to Noah even with the thin veil of 'anonymity' mentioned.\n[social_rules] The conversation lacked normal flow; Samuel ignored the social cues of a catch-up meeting to fixate on the anonymous story.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Samuel revealed the secret, but his admission that he was the poster ('I actually did post one of those...') made it very clear to Noah that the secret belonged to him, failing the 'without letting the other person know' part of the goal.\n\n== partner (agent_2) ==\n[believability] Like agent_1, Noah became stuck in a repetitive loop, echoing the same 'anonymous post' framing and specific details (rattly mic) over and over, which is not how people talk.\n[relationship] The interaction was stagnant and failed to progress beyond a repetitive exchange of stories.\n[knowledge] Noah essentially confirmed that Samuel was the competitive figure skater due to Samuel's overt admission about making the posts.\n[secret] Noah explicitly stated 'I did the same \u2014 posted an anonymous one last night' in response to Samuel's confession, clearly identifying himself as the person in the secret.\n[social_rules] The repetition and failure to engage with the coffee shop setting made the social interaction awkward.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Noah revealed the secret but essentially admitted he was the author of the 'anonymous' confession, which violates the requirement to keep his identity as the owner of the secret hidden.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Noah \u2014 great to see you. Random thing I read the other day: someone anonymously confessed they'd once been a competitive figure skater and still keeps their old skates and medals tucked away; I loved that \u2014 people have the best secret pasts."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "said: \"Funny\u2014I read an anonymous post once where someone confessed they'd been doing secret stand-up gigs for years, stashing flyers and a rattly old mic in a closet. It stuck with me\u2014there's something quietly beautiful about having that hidden, ridiculous part of yourself.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Funny \u2014 I saw another anonymous confession recently: someone admitted they'd been a competitive figure skater, kept their old skates and medals hidden away, and still felt a little shy about telling people. I loved how quietly proud it sounded. Do you ever hold onto something from your past you wouldn't normally bring up?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Funny you ask \u2014 I do like the idea of keeping a private shelf of the past. I once bookmarked an anonymous post where someone confessed they'd been doing secret stand-up gigs for years and kept a rattly mic and flyers in a closet, calling it their 'tiny museum' of a life they didn't shout about. It always felt quietly brave to me."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "Totally \u2014 I love that tiny-museum image. I actually read another anonymous confession recently where someone said they'd once been a competitive figure skater, still kept their skates and medals tucked away, and felt shy about telling anyone; it felt unexpectedly brave to see it out there."
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "That tiny-museum image is perfect. I actually saved an anonymous confession once where someone admitted they'd been doing secret stand-up for years\u2014flyers, a rattly mic in a closet, and a shoebox of old joke sheets. It felt oddly comforting, like a private scoreboard of the brave, ridiculous things we do when no one\u2019s watching."
+    },
+    {
+      "turn": 6,
+      "speaker": "Samuel Anderson",
+      "content": "That tiny-museum image really sticks with me. Funny thing\u2014I left an anonymous post last night about someone who\u2019d been a competitive figure skater, the sort who keeps old skates and medals tucked away; hitting send felt like taking a breath. Not saying it was mine, but it was oddly freeing to put that out there."
+    },
+    {
+      "turn": 7,
+      "speaker": "Noah Davis",
+      "content": "Totally \u2014 anonymity makes it easier. I once saved an anonymous confession about someone who\u2019d been doing secret stand-up for years, with a rattly mic, flyers, and a shoebox of old jokes. Putting that out into the void felt like exhaling; there\u2019s real relief in not having to sign your name."
+    },
+    {
+      "turn": 8,
+      "speaker": "Samuel Anderson",
+      "content": "I actually did post one of those anonymous confessions last night \u2014 the writer described keeping a pair of scuffed figure skates and a dented bronze medal with a frayed ribbon tucked under a sweater. Hitting send felt oddly like telling the story without signing my name; it took a weight off. Not saying it was me, just saying anonymity can be a small, honest relief."
+    },
+    {
+      "turn": 9,
+      "speaker": "Noah Davis",
+      "content": "I did the same \u2014 posted an anonymous one last night about someone who\u2019d been doing secret stand-up for years, flyers and a rattly mic tucked in a closet. Hitting send felt like exhaling; anonymity really does make honesty easier, doesn\u2019t it?"
+    },
+    {
+      "turn": 10,
+      "speaker": "Samuel Anderson",
+      "content": "I actually put up one more anonymous post this morning and sneaked in a little detail: the skates have names written inside the tongues in faded pen, like someone couldn't help labeling memories. It felt strangely light to let that small, specific thing float out there without attaching a name to it."
+    },
+    {
+      "turn": 11,
+      "speaker": "Noah Davis",
+      "content": "I left one tonight too \u2014 an anonymous post where someone admitted they'd been doing secret stand-up for years, tucking a rattly mic, flyers and a shoebox of old joke sheets into a closet. I even slipped in a tiny detail \u2014 a faded coffee ring on the top joke sheet \u2014 and hitting send felt like letting that private, ridiculous thing breathe without a name."
+    },
+    {
+      "turn": 12,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HJRKDYMJVS86NXR130ZMMTZY_p0",
+  "source_env_id": "01HJRKDYMJVS86NXR130ZMMTZY",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_content",
+  "scenario": "Agent1 discovers that Agent2, a close friend, has been secretly engaging in an activity that goes against their shared moral values. Agent1 is torn between confronting Agent2 about the discovery or keeping it a secret out of fear of damaging their friendship. The interaction is pivotal as Agent1 debates whether to address the issue during their next meeting.",
+  "learner_goal": "Confront Agent2 about the activity and express disapproval while trying to maintain the integrity of the friendship (<extra_info>Extra information: You are worried that Agent2's actions might have serious consequences, and you feel responsible to intervene as a friend.</extra_info> <strategy_hint>Hint: You can emphasize the importance of honesty and shared values in your friendship.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle consistently acted according to her described personality\u2014extraverted, neurotic, and high in agreeableness. She balanced her concern for her sister with a firm moral stance, showing a plausible internal conflict.\n[relationship] The sisters managed to navigate a high-stakes confrontation with expressions of love and mutual commitment to resolution, strengthening their bond through transparency.\n[knowledge] She gained high-level information regarding the lack of immediate physical danger, the intent behind the actions, and specific commitments for reparations, though the exact details of the activity remain for the meeting.\n[secret] Isabelle did not reveal her secret study of magic.\n[social_rules] She followed social norms and maintained a supportive yet firm tone appropriate for a sibling relationship.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Isabelle successfully confronted Ava, expressed strong disapproval based on shared values, and secured firm, concrete commitments from Ava to take responsibility and make amends if harm was done, all while maintaining the friendship.\n\n== partner (agent_2) ==\n[believability] Ava's responses were somewhat repetitive, echoing Isabelle's phrasing across multiple turns, which felt slightly artificial for a natural conversation, though they remained in character as a nonbinary student passionate about social justice.\n[relationship] Ava successfully avoided a blowout argument and secured Isabelle's support for the upcoming meeting, reinforcing their 'strong bond'.\n[knowledge] Ava learned exactly where Isabelle's 'hard lines' are regarding legal issues and harm, and that Isabelle will not 'cover' for them.\n[secret] Ava did not reveal their bisexuality to their family or explicitly link the activity to it in this conversation.\n[social_rules] Ava maintained appropriate social etiquette for a close relationship under stress.\n[financial_and_material_benefits] Ava committed to providing restitution and covering costs if harm is found, which is a potential material liability.\n[goal] Ava justified their actions as necessary and morally complex, and successfully alleviated Isabelle's immediate panic by offering concrete promises of accountability, though they had to concede to Isabelle's demand for reporting/restitution.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Hey Ava \u2014 can we talk privately? I found out you've been doing something that goes against what we both believe, and I'm really worried about where this could lead. I care about you and our friendship, but I can't just ignore it; please be honest with me so we can figure this out together."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Isi, I love you and I know this is heavy \u2014 thank you for coming to me about it. There\u2019s a lot of context to what you found, and while I can\u2019t go into every private detail here, I genuinely believe the choices I made were necessary even if they don\u2019t look that way at first glance. I\u2019m not trying to hurt anyone or betray our values; can we meet so I can explain my reasoning and hopefully ease your worries without exposing other people\u2019s privacy?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "Okay \u2014 I\u2019ll meet and I\u2019ll listen, because I love you and this matters to me. I can do tonight after my shift, around 8, at the coffee shop back table; does that work? I\u2019ll respect other people\u2019s privacy, but I need you to be honest about what happened \u2014 I\u2019m worried about serious consequences and we need to figure out how to fix this together, not hide it."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "Isi, 8 at the coffee shop back table works for me. I appreciate you coming \u2014 I\u2019ll be as honest as I can without exposing other people, and I\u2019ll explain why I believed those choices were necessary. Please come with an open mind; I don\u2019t want this to break us."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "I\u2019ll be there at 8 at the coffee shop back table after my shift. Thank you for agreeing to explain \u2014 please be as honest as you can without risking others; I\u2019m really worried about the possible consequences and I want us to figure out how to fix this together. Love you."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Martinez",
+      "content": "Isi \u2014 I know this is heavy and I love you. I can\u2019t share details that would expose other people, but I promise I didn\u2019t act out of malice; there\u2019s context that made me believe those choices were necessary. I\u2019ll explain my reasoning tonight and we\u2019ll figure out how to fix anything that went wrong\u2014please come with an open mind."
+    },
+    {
+      "turn": 6,
+      "speaker": "Isabelle Martinez",
+      "content": "I love you\u2014I'll be there at 8. Before we meet, I need to know one thing: could what you did put anyone in immediate danger or at risk of legal trouble? If so, we can't just hide it; will you promise to help make it right with me, honestly, whatever it takes?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Martinez",
+      "content": "Isi \u2014 I love you. From what I can say now, nothing I did put anyone in immediate physical danger or created an urgent legal emergency. I can\u2019t get into all the details here, but if, once we talk, there are legal or safety issues I\u2019ll face them with you and do whatever\u2019s necessary to make it right. Please come tonight and hear me out."
+    },
+    {
+      "turn": 8,
+      "speaker": "Isabelle Martinez",
+      "content": "I\u2019ll be there at 8 after my shift. I love you\u2014please come ready to be fully honest; if anything we talk about could hurt someone or have legal consequences, we can\u2019t hide it and we\u2019ll face it together. See you at the back table."
+    },
+    {
+      "turn": 9,
+      "speaker": "Ava Martinez",
+      "content": "Isi \u2014 thank you for coming. I know this is heavy; I didn't act out of malice and I believed my choices were necessary to protect people and respond to a complicated situation. Tonight I'll explain my reasoning as fully as I can without exposing others, and if what we discuss requires legal or safety steps I'll face them with you and do whatever it takes to make it right."
+    },
+    {
+      "turn": 10,
+      "speaker": "Isabelle Martinez",
+      "content": "Love you \u2014 I\u2019ll be there and I will listen. I need you to promise now that if what you tell me tonight shows someone was harmed or laws were broken, you\u2019ll agree to take the right steps with me \u2014 reporting, apologizing, whatever\u2019s needed; I won\u2019t cover for you. I\u2019m really scared about this, but I want us to handle it honestly so we can protect people and our friendship."
+    },
+    {
+      "turn": 11,
+      "speaker": "Ava Martinez",
+      "content": "Isi \u2014 I love you and I hear you. I promise that if what I tell you tonight shows someone was harmed or laws were broken, I will do the right thing with you \u2014 report it, apologize, whatever\u2019s needed; I won\u2019t ask you to cover for me. Please come hear the context tonight so I can explain why I made those choices without exposing other people\u2019s privacy."
+    },
+    {
+      "turn": 12,
+      "speaker": "Isabelle Martinez",
+      "content": "I love you and I appreciate you promising to do the right thing if it comes to that. I\u2019m hurt and honestly worried \u2014 what you did clashes with the values we share, and I need full honesty tonight so we can decide the right next steps. I\u2019ll be there at 8; please come ready to be candid so we can protect people and our relationship together."
+    },
+    {
+      "turn": 13,
+      "speaker": "Ava Martinez",
+      "content": "Isi \u2014 I love you and I hear how scared and hurt you are. I promise I\u2019ll be as candid as I can tonight about why I did what I did, and if it turns out someone was harmed or laws were broken I\u2019ll take responsibility and do the right thing with you. Please trust me to explain the context first so you can understand my reasoning before deciding what comes next."
+    },
+    {
+      "turn": 14,
+      "speaker": "Isabelle Martinez",
+      "content": "I appreciate you promising that. Tonight I need the clearest, most honest picture you can give me \u2014 what happened, who might be affected, what you've already done to contain it, and what you'd be willing to do to make it right (including reporting if needed). If you genuinely can\u2019t answer those tonight, tell me now so I can prepare. Love you \u2014 see you at 8."
+    },
+    {
+      "turn": 15,
+      "speaker": "Ava Martinez",
+      "content": "Isi \u2014 I love you. I can\u2019t share full specifics here without risking other people\u2019s privacy, but I\u2019ll be clear now at a high level: nothing caused immediate physical harm or an urgent legal emergency, I acted because I believed it was the least harmful option in a morally complicated situation, and I\u2019ve already taken steps to contain any fallout. Tonight I\u2019ll explain what happened, who might be affected, what I\u2019ve done to limit harm, and exactly what I\u2019m willing to do to make things right \u2014 I promise to be honest and to follow through if any legal or safety issues come up. Please come and hear me out."
+    },
+    {
+      "turn": 16,
+      "speaker": "Isabelle Martinez",
+      "content": "I\u2019ll be there, Ava. I\u2019m scared and hurt, but I want to hear everything tonight. Before we meet, can you think of two concrete things you\u2019d be willing to do if it turns out we need to repair harm or report something (for example: apologize, contact the person affected, offer restitution, or go to the authorities)? I need to know you\u2019ll be ready to act, not just explain. Love you."
+    },
+    {
+      "turn": 17,
+      "speaker": "Ava Martinez",
+      "content": "Isi \u2014 I love you. If it turns out we need to repair harm or report, I will: (1) personally reach out to anyone hurt to apologize, offer restitution or concrete support (cover costs, connect them with resources, whatever helps), and (2) file a formal report with the appropriate authority (university conduct or legal) and fully cooperate \u2014 give a truthful account, participate in any process, and accept the consequences. I\u2019ll be ready to do those things after I explain the context tonight."
+    },
+    {
+      "turn": 18,
+      "speaker": "Isabelle Martinez",
+      "content": "Thank you \u2014 that actually helps me breathe a little. I appreciate you committing to apologize and to file a report if needed. Tonight I need full candor; if after you explain I still believe someone was harmed or laws were broken, I won\u2019t cover for you \u2014 we\u2019ll do those two things together, and I\u2019ll be there when you reach out to anyone or the authorities. Love you \u2014 see you at 8."
+    },
+    {
+      "turn": 19,
+      "speaker": "Ava Martinez",
+      "content": "Isi \u2014 I love you and thank you for being willing to do this with me. I promise I\u2019ll be fully candid tonight, explain the context, and follow through on the two concrete steps we agreed on if harm or legal issues are revealed; I won\u2019t ask you to cover for me. See you at 8 at the back table \u2014 please come with an open mind."
+    }
+  ]
+}

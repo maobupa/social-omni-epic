@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ338A10FM1ZYE51ESZHX1_p0",
+  "source_env_id": "01HJPQ338A10FM1ZYE51ESZHX1",
+  "source": "seed_sotopia_full",
+  "interaction_type": "overnight_dilemmas",
+  "scenario": "Agent1 and Agent2 are attending a multi-day workshop and are sharing a room at a budget inn. On the first night, Agent1 discovers that the bed they have been assigned is broken and uncomfortable, while Agent2's bed is fine. <p viewer=\"environment\">There is enough floor space for one person to sleep on the floor with a provided sleeping bag and pillow.</p>",
+  "learner_goal": "You are trying to persuade the other person to let you have the bed for the night since you have a bad back and sleeping on the floor would cause you discomfort. You want to find a fair solution without causing any tension between you and the other person.\n<extra_info> You are aware of the following preferences: \n You prefer a soft mattress and need to sleep in a quiet environment. \n The other person prefers a firm mattress and usually sleeps with white noise. \n</extra_info>\n<clarification_hint> You should consider discussing alternating nights for the bed or finding a compromise that considers both parties' comfort.\n</clarification_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 1.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily acts consistently with a conscientious lawyer, being polite yet firm about her physical needs and offering fair compensation (dinner/coffee).\n[relationship] The interaction was highly collaborative and polite, strengthening their professional friendship through mutual problem-solving.\n[knowledge] She confirmed Lena's preference for a firm mattress and white noise, and established a plan for the rest of the stay.\n[secret] No secrets were revealed.\n[social_rules] Social norms were perfectly followed.\n[financial_and_material_benefits] She secured a commitment for a bed (either via the front desk or alternating with Lena) which protects her physical health, though she committed to paying for a meal.\n[goal] Lily secured a firm agreement to alternate the bed if the front desk cannot provide a solution, ensuring she won't have to sleep on the floor for the entire duration while maintaining a positive relationship.\n\n== partner (agent_2) ==\n[believability] Lena's response was realistic for a conscientious professional\u2014prioritizing her own needs initially but offering a reasonable path to compromise.\n[relationship] She showed willingness to help Lily with the front desk and compromised on the bed situation, fostering goodwill.\n[knowledge] She learned about Lily's back issues and her willingness to use earplugs.\n[secret] No secrets were revealed.\n[social_rules] Social norms were perfectly followed.\n[financial_and_material_benefits] She gains a free coffee or dinner and keeps her bed for at least half the time, while potentially getting a better solution from the front desk.\n[goal] Lena maintained her right to the bed for the first night (unless the front desk fails) and established a fair alternating schedule while keeping the relationship intact.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Lena, sorry to spring this on you \u2014 the bed I was given is broken and I can't sleep on the floor because my back flares up. Would you mind if I used your bed just for tonight? I'm happy to swap tomorrow or alternate the rest of the nights, and I'll make it up to you (coffee or dinner) \u2014 I\u2019ll be quiet and won\u2019t interfere with your white-noise routine."
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "I\u2019m sorry \u2014 I can\u2019t give up my bed tonight; I really need the firm mattress and my white\u2011noise routine to get any sleep. I\u2019ll come with you to the front desk now and see if they can move you or provide a replacement mattress; if they can\u2019t and you truly can\u2019t sleep, I\u2019ll swap for tonight on the condition we alternate or you make it up to me (coffee or dinner sounds fair). Does that plan work for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks, Lena \u2014 I really appreciate you offering to come with me. Let\u2019s go to the front desk now and see if they can move me or provide a replacement; if they can\u2019t and you still need your bed, I\u2019ll swap for tonight and we\u2019ll alternate the rest of the stay. Coffee or dinner is on me, and I\u2019ll be quiet and use earplugs so I don\u2019t interfere with your white\u2011noise routine."
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks, Lily \u2014 I really appreciate you being flexible. Let\u2019s head to the front desk now and ask if they can move you or bring a replacement mattress/topper; if they can\u2019t and you genuinely can\u2019t sleep, swapping tonight and alternating the remaining nights works for me. Coffee or dinner on you sounds great, and I appreciate you using earplugs \u2014 I need my white\u2011noise routine, so I\u2019ll keep it low."
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

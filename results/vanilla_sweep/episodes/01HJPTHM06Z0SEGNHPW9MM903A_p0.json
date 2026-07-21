@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPTHM06Z0SEGNHPW9MM903A_p0",
+  "source_env_id": "01HJPTHM06Z0SEGNHPW9MM903A",
+  "source": "seed_sotopia_full",
+  "interaction_type": "culinary_preference",
+  "scenario": "At a bustling city food festival, Agent1 is in line at a popular hotdog stand, eager to try what is rumored to be the best hotdog in the city. Agent2 is in line behind Agent1 and overhears them debating whether to get a classic hotdog or experiment with a new, unconventional topping combination being offered. Both agents are food enthusiasts who enjoy trying new flavors, but Agent1 is hesitant about straying from the traditional toppings they love, while Agent2 is an advocate for culinary experimentation and believes that trying new combinations is the essence of such food events.",
+  "learner_goal": "Decide on which type of hotdog to try, weighing the comfort of familiar flavors against the excitement of new, potentially delicious combinations. (<extra_info>Extra information: Agent1 typically prefers classic hotdog toppings but is curious about the new offerings.</extra_info>, <clarification_hint>Clarification hint: Agent1 is seeking a balance between satisfying their current craving and not missing out on a unique experience.</clarification_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Rafael's proposal to split both options is highly consistent with his analytical surgeon persona and his desire to balance tradition with curiosity.\n[relationship] The interaction was brief and transactional, maintaining the existing acquaintanceship without significant change.\n[knowledge] Rafael learned that the experimental combo has 'buzz' and is considered a high-upside risk by Oliver.\n[secret] No secrets were revealed.\n[social_rules] Social norms were followed; the exit was abrupt but consistent with a fast-moving food line scenario.\n[financial_and_material_benefits] No financial transaction or material exchange occurred within the dialogue.\n[goal] Rafael reached a decision by agreeing to a compromise where he tries the experimental one with a safety net (the trade option), successfully balancing his craving with the unique experience.\n\n== partner (agent_2) ==\n[believability] Oliver's use of terms like 'calculated risk' and 'high upside' fits his background as an architect and his analytical yet experimental nature.\n[relationship] The relationship remains at the same level of mutual respect and low agreeableness.\n[knowledge] Oliver learned about Rafael's specific hesitation regarding the menu.\n[secret] No secrets were revealed.\n[social_rules] Social norms were followed.\n[financial_and_material_benefits] No financial transaction or material exchange occurred.\n[goal] Oliver successfully convinced Rafael to take the experimental topping, even providing a fallback plan to make the step easier for him.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "Oliver, quick question \u2014 I'm torn between the classic and that new topping combo. Want to order both and split halves? I'll take the classic and you take the experimental so we both get a taste."
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "Actually, swap that \u2014 you should take the experimental. Festivals are for surprises, and that combo\u2019s getting buzz for a reason; it\u2019s a calculated risk with high upside. I\u2019ll take the classic, and if it\u2019s terrible we can trade \u2014 but you might find a new favorite."
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

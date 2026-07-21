@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB34SQ8F38M7KSRY17VQD9H_p0",
+  "source_env_id": "01HPB34SQ8F38M7KSRY17VQD9H",
+  "source": "seed_sotopia_full",
+  "interaction_type": "relationship_dynamics",
+  "scenario": "Agent1, who has a history of complex relationships, is at a social gathering when Agent2, who is Agent1's ex-mistress and still harbors feelings for Agent1, approaches. Agent2 hopes to rekindle their former romance, unaware that Agent1 is currently in the process of ending another relationship and is not looking to start any new or old romances. The gathering is casual, and other guests are mingling, unaware of the history between Agent1 and Agent2.",
+  "learner_goal": "Agent1 wants to maintain a polite and civil interaction with Agent2 <extra_info>without leading them on or reigniting past emotions</extra_info> <clarification_hint>and is looking for a way to set clear boundaries</clarification_hint>.",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ava was direct and clear, maintaining a professional yet firm tone consistent with someone setting boundaries after a complex past. Her decision to leave the conversation after receiving a respectful acknowledgement fits her goal of not lingering.\n[relationship] The relationship remains professional and civil as intended; no significant change occurred other than reaffirming the existing boundary.\n[knowledge] Learned that Ethan is willing to respect the boundaries and move forward professionally.\n[secret] Did not reveal any secrets.\n[social_rules] Followed social norms for setting a private boundary at a gathering.\n[financial_and_material_benefits] No material impact.\n[goal] Ava successfully set clear boundaries, prevented the reignition of emotions, and maintained a polite, professional standing without leading the other person on.\n\n== partner (agent_2) ==\n[believability] Ethan's response was realistic for someone who values their professional reputation and has been given a firm rejection, though his goal was abandoned very quickly.\n[relationship] The relationship status remains unchanged from the start of the interaction.\n[knowledge] Gained clear knowledge of Ava's current relationship status and her firm lack of interest in rekindling their past.\n[secret] Secrets kept.\n[social_rules] Maintained social decorum after a rejection.\n[financial_and_material_benefits] No material impact.\n[goal] Ethan failed to express his feelings or explore a reunion, as he immediately deferred to Ava's boundary before he could pursue his stated goal.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ava Thompson",
+      "content": "Hey Ethan \u2014 nice to see you. I appreciate you being honest, but I\u2019m not looking to rekindle anything; I\u2019m in the process of ending a relationship and need to keep things clear. I hope you understand \u2014 I value our being on good terms and would like to keep things friendly and professional."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Ava \u2014 I appreciate you being honest. I respect your decision and I don\u2019t want to complicate things; I value us being on good terms and keeping things professional. If you ever need anything \u2014 work-related or otherwise \u2014 I\u2019m here. Take care."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ava Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

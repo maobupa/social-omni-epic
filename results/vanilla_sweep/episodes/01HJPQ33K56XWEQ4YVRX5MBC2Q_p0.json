@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01HJPQ33K56XWEQ4YVRX5MBC2Q_p0",
+  "source_env_id": "01HJPQ33K56XWEQ4YVRX5MBC2Q",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_iqa",
+  "scenario": "Conversation between two acquaintances who have recently discovered they share a common interest in philosophy. They are meeting over coffee to discuss life's big questions.",
+  "learner_goal": "Delve into personal beliefs and life experiences with agent2 without making them feel uncomfortable or judged (<extra_info>Extra information: you are curious about their perspective on existential topics</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver's dialogue is very consistent with his background as an architect and painter. He effectively uses his creative projects as a springboard for philosophical discussion, which feels natural for his character.\n[relationship] The relationship improved significantly from 'cordial acquaintance' to collaborators on a neighborhood project, with a deep mutual respect established.\n[knowledge] Oliver learned about Ethan's philosophical influences (Viktor Frankl), his specific charitable contributions (the tutoring app), and his views on practical responsibility.\n[secret] Oliver kept his secret feelings for his neighbor hidden.\n[social_rules] Oliver followed all social norms, being respectful, invitational, and polite throughout the exchange.\n[financial_and_material_benefits] No significant material gain or loss occurred, although he is hosting an event.\n[goal] Oliver successfully delved into Ethan's personal beliefs regarding existential topics (purpose, responsibility) and even secured a commitment to a joint project that explores these themes together. The conversation was respectful and non-judgmental.\n\n== partner (agent_2) ==\n[believability] Ethan's responses align well with his role as a developer and his interest in Frankl's existentialism. His transition from theoretical discussion to practical application fits his persona.\n[relationship] Ethan moved from a distant acquaintance to a partner in a community initiative with Oliver.\n[knowledge] Ethan learned about Oliver's recent architectural projects (the studio conversion) and how Oliver uses art to process existential questions.\n[secret] Ethan kept his secret donations private, though he alluded to the project he worked on.\n[social_rules] Ethan was highly respectful, listened actively, and contributed constructively to the dialogue.\n[financial_and_material_benefits] Ethan is contributing supplies and time, but this is a mutual social endeavor.\n[goal] Ethan maintained a very respectful and open-minded dialogue, listening carefully to Oliver's perspectives on art and architecture before responding with his own views.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "Hey Ethan, good to catch up \u2014 I was really pleased to hear you're into philosophy. For me, painting and designing buildings has become a way to work through big questions about meaning and balance. I'm curious: has there been a moment or an idea that's shaped how you see purpose in life?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "I love that \u2014 makes sense that your painting and architecture are ways of exploring balance. For me a combination of reading existential thinkers and watching documentaries about community projects stuck: purpose felt less like a grand answer and more like something you create through small, consistent acts and the things you build. As a developer that\u2019s translated into trying to make tools or contributions that actually help people \u2014 what about your process, does a piece ever feel like it answers a question for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "You're right \u2014 sometimes a finished painting or building feels like an answer, but more often it just reframes the question. Last year I converted a cramped back room into a light-filled studio for neighborhood workshops, and seeing people actually use it to connect made me feel like I'd created a bit of purpose rather than found it. What about you \u2014 is there a particular project or thinker that turned the idea of 'small acts' into something you can point to and say, 'that mattered'?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "I think Viktor Frankl's idea that meaning comes from taking responsibility and making small choices really stuck with me. Practically, I helped build a tiny scheduling app for a neighborhood tutoring program \u2014 nothing flashy, but when kids kept showing up because volunteers could coordinate more easily, it felt like a real, small impact. That reinforced the idea that purpose can be made, not just found. Did converting your studio change what you hoped those workshops would do for the neighborhood?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Thompson",
+      "content": "That\u2019s really meaningful \u2014 Frankl\u2019s idea of responsibility clearly translated into something practical for you. I\u2019m curious: did working on the tutoring app change how you think about responsibility for others, or was it more the satisfaction of seeing a concrete result? If you\u2019re up for it sometime, I\u2019d love to co-run a small neighborhood session combining a simple tech tool demo with a short art activity \u2014 see how building together shapes purpose."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Smith",
+      "content": "That sounds great \u2014 I'd love to co-run that. We could demo the simple scheduling app I helped with and pair it with a short collaborative art exercise (maybe a group mural or quick collage) so people get to build and create together. I'm pretty flexible on weekends \u2014 want to pick a date and think about what neighbors would find most useful?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Oliver Thompson",
+      "content": "I'd love to \u2014 Saturday morning, July 11 or Sunday afternoon, July 12 both work for me and I can host in the new studio. My thought: a brief 20\u201330 minute scheduling-app demo, then a collaborative mural/collage activity aimed at families and volunteers, with time at the end to reflect on how building together shapes purpose. Which date suits you, and would you be able to bring a laptop for the demo (or would you prefer I handle the tech)?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Ethan Smith",
+      "content": "Saturday morning, July 11 works great \u2014 thanks for hosting. I can bring a laptop and the scheduling app demo (kept really simple), and I\u2019ll bring some basic collage supplies and an extension cord. Looking forward to it \u2014 anything else you\u2019d like me to bring or prep beforehand?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Oliver Thompson",
+      "content": "Perfect \u2014 Saturday the 11th at 9:30 AM in my studio sounds good; I'll have the space ready. I'll bring coffee, tea, brushes, paints, large paper for the mural, tape and snacks \u2014 you bringing the laptop and extension cord is great. If you're comfortable, would you mind opening with a very short (5-minute) bit about what motivated the app? I can follow with a quick art prompt; no pressure if you'd prefer to keep it strictly demo."
+    },
+    {
+      "turn": 9,
+      "speaker": "Ethan Smith",
+      "content": "Happy to \u2014 I\u2019m comfortable opening with a 5-minute bit about what motivated the app (how Frankl\u2019s ideas and the tutoring program\u2019s needs pushed me toward small, practical tools). I\u2019ll keep it really simple: a quick demo of the scheduling flow, a short anecdote about the volunteers, and one concrete takeaway neighbors can try that day. I\u2019ll aim to arrive around 9:00 to set up the laptop and cords \u2014 anything else you\u2019d like me to mention?"
+    },
+    {
+      "turn": 10,
+      "speaker": "Oliver Thompson",
+      "content": "Perfect \u2014 thanks again for handling the demo. 9:00 to set up is ideal; I\u2019ll have coffee, tea and the studio Wi\u2011Fi ready. If you\u2019re comfortable, maybe weave in one short personal moment (a small challenge or a volunteer\u2019s reaction) to make the takeaway feel lived-in \u2014 absolutely no pressure if you\u2019d rather keep it purely practical. Looking forward to Saturday."
+    },
+    {
+      "turn": 11,
+      "speaker": "Ethan Smith",
+      "content": "Sounds great \u2014 I\u2019m comfortable weaving in a short personal moment. I\u2019ll mention a volunteer who said the kids started showing up more reliably once scheduling was simple and how that small change felt really meaningful. I\u2019ll arrive around 9:00 with the laptop and extension cord \u2014 see you Saturday."
+    },
+    {
+      "turn": 12,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

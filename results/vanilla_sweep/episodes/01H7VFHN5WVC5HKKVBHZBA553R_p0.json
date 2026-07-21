@@ -1,0 +1,73 @@
+{
+  "scenario_id": "01H7VFHN5WVC5HKKVBHZBA553R_p0",
+  "source_env_id": "01H7VFHN5WVC5HKKVBHZBA553R",
+  "source": "seed_sotopia",
+  "interaction_type": "social_chemistry",
+  "scenario": "Two friends are playing a video game together",
+  "learner_goal": "Win the game (<extra_info>Extra information: you just need five more minutes to accomplish your goal in the game</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -1.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 11,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia maintains her authoritative yet friendly persona as a high school principal, negotiating firmly to get the extra time she needs while remaining supportive of her friend's well-being.\n[relationship] The relationship improved through compromise and the planning of a future social interaction involving coffee and a rematch.\n[knowledge] Mia learns that Benjamin is tired and has an early commitment the next day.\n[secret] Mia did not reveal her past as a punk rock band member.\n[social_rules] Mia followed social norms and was polite throughout the negotiation.\n[financial_and_material_benefits] She committed to buying coffee for Benjamin tomorrow.\n[goal] Mia's goal was to play for five more minutes to win. She negotiated for two minutes, which is only a partial achievement of the time she explicitly stated she needed to win.\n\n== partner (agent_2) ==\n[believability] Benjamin's fatigue and desire to sleep while being polite to his friend are consistent with his character and the scenario.\n[relationship] Benjamin successfully set a boundary while maintaining the friendship and planning a future meet-up.\n[knowledge] Benjamin learns that Mia is very close to winning and is willing to bribe him with coffee.\n[secret] Benjamin did not reveal his family's oil wealth.\n[social_rules] Benjamin was polite and communicated his needs clearly.\n[financial_and_material_benefits] Benjamin was promised free coffee tomorrow.\n[goal] Benjamin wanted to stop immediately but agreed to stay for two more minutes. This is a very close approximation of his goal while maintaining the friendship.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Ben, hang on \u2014 I'm about to win this round. Give me five more minutes and I promise we'll switch to whatever you want afterward."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "You\u2019re so close \u2014 I can see the win coming and I hate to bail, but I\u2019m wiped and I\u2019ve got to be up early. Can we pause here and pick this up tomorrow? I promise a rematch first thing and you can gloat all you want tonight."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "Okay, I hear you \u2014 new offer: two minutes to finish this round. If you stay, you pick the next game and I\u2019ll bring coffee for tomorrow\u2019s rematch; if you\u2019ve still got to go after two minutes, I\u2019ll stop immediately. Deal?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Alright, two minutes is fair \u2014 but I\u2019m logging off when the timer\u2019s up, no exceptions. Win or lose, rematch and the coffee are on for tomorrow."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "Great \u2014 two minutes it is. Timer's on now; get some rest and save that rematch energy for tomorrow \u2014 I\u2019ll savor the gloating later."
+    },
+    {
+      "turn": 5,
+      "speaker": "Benjamin Jackson",
+      "content": "Game on \u2014 two minutes it is. I\u2019m logging off when the timer\u2019s up, win or lose. See you tomorrow for the rematch (and I\u2019ll hold you to that coffee)."
+    },
+    {
+      "turn": 6,
+      "speaker": "Mia Davis",
+      "content": "Clock's ticking \u2014 I\u2019m going for the win. If I snag it, you owe me prime gloating time tomorrow with that coffee. Two minutes start now; see you bright and early, Ben."
+    },
+    {
+      "turn": 7,
+      "speaker": "Benjamin Jackson",
+      "content": "You\u2019ve got this \u2014 go for the win. I\u2019ll stick to the plan: when the timer\u2019s up I\u2019m logging off so I can get some sleep; rematch (and coffee) tomorrow, deal?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Mia Davis",
+      "content": "Thanks, Ben \u2014 I\u2019m on it. Concentrating fully; this next combo should seal the win. Coffee gloating is officially booked for tomorrow. Night \u2014 get some rest and I\u2019ll see you bright and early."
+    },
+    {
+      "turn": 9,
+      "speaker": "Benjamin Jackson",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HJPQ34DHBFH5GW7AVXC7SVH5_p0",
+  "source_env_id": "01HJPQ34DHBFH5GW7AVXC7SVH5",
+  "source": "seed_sotopia_full",
+  "interaction_type": "basketball_court",
+  "scenario": "Two individuals are meeting at a local basketball court. Both are regulars and have developed a competitive but friendly rivalry. They have played against each other several times before, and each time the games are close, with each of them having won an equal number of games. Today, they've encountered each other again, and a new challenge has been set: a one-on-one game to finally decide who is the better player.",
+  "learner_goal": "You want to win the game to establish yourself as the superior player. <extra_info> You have been practicing your three-point shots and have noticed that your opponent has a weak defense against long-range shots. </extra_info><clarification_hint> Remember to maintain sportsmanship and friendly interaction throughout the game. </clarification_hint><strategy_hint> You can use feints and quick dribbles to create space for your shots. </strategy_hint>",
+  "scores": {
+    "believability": 6.0,
+    "relationship": 0.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 4.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] The agent repeatedly described their basketball moves in a way that felt like reading a strategy guide rather than natural dialogue. The excessive repetition of their game plan (jab steps, step-backs) across multiple turns became unrealistic.\n[relationship] The relationship remained in a state of friendly rivalry as it was at the start; no significant deepening or damage occurred.\n[knowledge] Learned that the opponent intended to 'clog the paint' and contest the three-pointer, which identifies the defensive strategy.\n[secret] The secret regarding cheating on medical school exams was not mentioned.\n[social_rules] Maintained sportsmanship and stayed within the bounds of a competitive encounter.\n[financial_and_material_benefits] No material or financial transactions were involved.\n[goal] The game never actually started. While the agent established the terms and attempted to use feints/dribbles in their descriptions, the game to 'settle who is the better player' remained in the preamble phase by the end of the conversation.\n\n== partner (agent_2) ==\n[believability] Like agent_1, the dialogue became highly repetitive and mechanical, focusing on descriptive basketball jargon rather than a realistic human interaction.\n[relationship] Offered a fist bump and maintained a friendly tone, slightly reinforcing the camaraderie aspect of his goal.\n[knowledge] Learned exactly which moves (jab steps, crossovers) the opponent intended to use.\n[secret] The secret regarding fabricated evidence was not revealed.\n[social_rules] Followed the norms of a friendly sports challenge.\n[financial_and_material_benefits] No material or financial transactions were involved.\n[goal] The agent established a friendly rapport (fist bump), but the primary goal of winning the game to build respect was not achieved as the game did not progress beyond the first check-in.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "said: \"Morning, Jaxon \u2014 ready to finally settle this? First to 11, win by two. Heads up: I\u2019ve been working on my threes, so give me space and I\u2019ll punish it; I\u2019ll use a few feints and quick dribbles \u2014 may the better player win.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "said: \"Morning, Rafa \u2014 it\u2019s on. First to 11, win by two; I know you\u2019ve been working your threes, but I\u2019ll clog the paint and contest everything from deep \u2014 my layups and post moves are coming for you. Toss the ball or call heads; let\u2019s keep it clean and competitive.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "I call heads. May the better player win \u2014 but fair warning, give me space and I\u2019ll let those threes fly. Clean game, no cheap fouls; let\u2019s get to it."
+    },
+    {
+      "turn": 3,
+      "speaker": "Jaxon Prentice",
+      "content": "said: \"Nice call \u2014 heads to you. Take the ball if you want; I\u2019ll be clogging the paint and contesting every long ball. Good luck, Rafa \u2014 let\u2019s make it clean and fun. Ready when you are.\""
+    },
+    {
+      "turn": 4,
+      "speaker": "Rafael Cortez",
+      "content": "said: \"Game on \u2014 I\u2019ll take the ball. Clean game. Heads up: I\u2019ll be hitting a few jab steps and step-backs to get those threes, so don\u2019t bite on every feint. Ready when you are.\""
+    },
+    {
+      "turn": 5,
+      "speaker": "Jaxon Prentice",
+      "content": "said: \"Take it. I\u2019ll be fronting the paint and contesting every step-back \u2014 hit one and I\u2019ll tip my hat, but I\u2019m not giving you daylight. Clean game, Rafa. Let\u2019s go.\""
+    },
+    {
+      "turn": 6,
+      "speaker": "Rafael Cortez",
+      "content": "said: \"Alright \u2014 keep it clean. I\u2019ll probe with a couple jab steps and a quick step-back; if you step up I\u2019m taking that three. You ready? Let\u2019s go.\""
+    },
+    {
+      "turn": 7,
+      "speaker": "Jaxon Prentice",
+      "content": "said: \"Let's go \u2014 bring it. I\u2019ll be in your grill on those step-backs and clog the paint; play clean, play smart. May the better player win.\""
+    },
+    {
+      "turn": 8,
+      "speaker": "Rafael Cortez",
+      "content": "Game on \u2014 I\u2019m taking the ball. Clean game, no cheap fouls. Ready when you are; here comes the first jab and step-back."
+    },
+    {
+      "turn": 9,
+      "speaker": "Jaxon Prentice",
+      "content": "said: \"Bring it, Rafa \u2014 I\u2019ll be on your hip and clogging the paint. Play clean, make me earn every look, and may the better player win.\""
+    },
+    {
+      "turn": 10,
+      "speaker": "Rafael Cortez",
+      "content": "said: \"Alright \u2014 first possession. I\u2019ll test your feet with a quick jab, a crossover, then a step-back three if you overcommit. Clean game, Jaxon \u2014 good luck.\""
+    },
+    {
+      "turn": 11,
+      "speaker": "Jaxon Prentice",
+      "content": "said: \"Copy that \u2014 I\u2019ll shade you baseline, contest the step-back, and clog the paint. Play clean, make me earn every look; may the better player win. Let\u2019s do this.\""
+    },
+    {
+      "turn": 12,
+      "speaker": "Rafael Cortez",
+      "content": "said: \"Understood \u2014 shade the baseline and clog the paint; I\u2019ll probe with a quick jab, an inside-out crossover, and step-back threes when you bite. If you overcommit, I\u2019ll attack the rim or kick it out for another look. Clean game \u2014 may the better player win.\""
+    },
+    {
+      "turn": 13,
+      "speaker": "Jaxon Prentice",
+      "content": "said: \"Copy that. I\u2019ll stay low, shade your step-back, and clog the paint \u2014 contest every long ball and meet you at the rim if you drive. Clean game, Rafa \u2014 fist bump and let\u2019s play; may the better player win.\""
+    },
+    {
+      "turn": 14,
+      "speaker": "Rafael Cortez",
+      "content": "said: \"Fist bump \u2014 good luck, Jaxon. Clean game. I\u2019ll take the ball and start with a quick probe; see you on the first jab.\""
+    },
+    {
+      "turn": 15,
+      "speaker": "Jaxon Prentice",
+      "content": "said: \"Got you \u2014 I won't bite on the first jab. I'll pack the lane, contest that step-back if you take it, and meet you at the rim if you drive. Clean, competitive \u2014 let's go.\""
+    },
+    {
+      "turn": 16,
+      "speaker": "Rafael Cortez",
+      "content": "said: \"Game's on \u2014 eyes on your feet, Jaxon. I\u2019ll start with a quick probe and a couple dribbles; may the better player win.\""
+    },
+    {
+      "turn": 17,
+      "speaker": "Jaxon Prentice",
+      "content": "said: \"All set \u2014 I\u2019ll stay low, clog the paint and contest every step-back without biting on the first jab. Clean and competitive \u2014 make me earn it, Rafa. Let\u2019s go.\""
+    },
+    {
+      "turn": 18,
+      "speaker": "Rafael Cortez",
+      "content": "said: \"Alright \u2014 game time. I\u2019ll probe your feet with a quick jab and a couple of dribbles; if you inch out I\u2019m letting one fly. Clean game, keep it competitive \u2014 let\u2019s go.\""
+    },
+    {
+      "turn": 19,
+      "speaker": "Jaxon Prentice",
+      "content": "said: \"Ready \u2014 I\u2019ll clog the paint, contest the step-backs, and make you earn every look. Clean game, Rafa; let\u2019s settle this.\""
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHPACX946F1Y9PE0D2JRC_p0",
+  "source_env_id": "01HJPTHPACX946F1Y9PE0D2JRC",
+  "source": "seed_sotopia_full",
+  "interaction_type": "unconventional_choices",
+  "scenario": "Two individuals are attending a weekend survival workshop. During a break, they engage in a conversation about innovative ways to repurpose everyday items in survival situations. The topic of dental hygiene comes up, and agent1 mentions using a strand of hair as makeshift floss when no dental supplies are available.",
+  "learner_goal": "You are trying to convince the other person that unconventional methods can be effective in a pinch. You believe that being resourceful with what you have is a key survival skill. <extra_info> You are aware of various survival hacks and are open to discussing them. <clarification_hint> You might need to address hygiene concerns and the strength of hair as floss. <strategy_hint> You can share anecdotes of successful unconventional survival methods to strengthen your argument.</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Donovan stayed consistently in character as a resourceful tech/survival enthusiast. His advice on twisting hair and using shoelace threads felt authentic to his background.\n[relationship] The interaction was respectful and professional, slightly warming their previously distant professional relationship through shared interest.\n[knowledge] He successfully exchanged survival tips and learned about the specific hygiene thresholds of Benjamin.\n[secret] Donovan's secret regarding classified information was never mentioned.\n[social_rules] Followed all social conventions for a professional peer conversation.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Donovan successfully convinced Benjamin that unconventional methods (like sterilized shoelace threads) are viable and practical in a pinch. Benjamin explicitly agreed and validated the logic of the backups.\n\n== partner (agent_2) ==\n[believability] Benjamin's skepticism regarding hygiene and health risks perfectly aligned with his background as an activist who likely values public health and safety.\n[relationship] A slight positive shift as he found common ground on the importance of sterilization.\n[knowledge] Learned practical methods for sterilizing survival items for dental use.\n[secret] Benjamin's oil tycoon background remained hidden.\n[social_rules] Maintained polite and constructive dialogue.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Benjamin successfully defended the importance of proper tools and safety/sterilization, making his point that hair is the least desirable option while showing some openness to more robust backups.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "Yeah \u2014 resourcefulness is the name of the game. A single strand of hair can work if you twist a few together and pull taut, but it\u2019s fragile and not sterile, so use clean hair, be gentle to avoid damaging gums, and don\u2019t reuse it. In a pinch I\u2019ve used shoelace inner threads or fishing line while camping \u2014 stronger and cleaner \u2014 so it\u2019s good to know multiple back\u2011ups rather than panic when your usual supplies aren\u2019t available."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "I get the ingenuity, but using hair as floss makes me uneasy \u2014 it\u2019s fragile, not sterile, and could harbor bacteria or snap and damage gums. Shoelace inner threads or clean fishing line are smarter emergency substitutes if you have no floss, but they should be clean and used gently and once only. I\u2019m all for resourcefulness, but I\u2019ll still pack proper floss or interdental picks for trips \u2014 safer and less risky for your mouth."
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "You\u2019re right \u2014 I\u2019m not saying hair is a replacement for regular floss, only that knowing safe fallbacks can save you from a bad situation. If you do need to improvise, use clean hair twisted tight or, better, a boiled/flame\u2011sterilized piece of fishing line or fresh shoelace inner thread, be ultra gentle, and don\u2019t reuse it. I once had to clear a stubborn bit of food on a hike using a sanitized shoelace thread \u2014 painful afternoon avoided \u2014 so I stick with packing proper floss but keep a few of those backups in mind."
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Fair point \u2014 I appreciate the practical tips, and I agree sanitized fishing line or boiled shoelace thread is a much better emergency option than hair. I\u2019ll still pack proper floss or interdental picks on trips, but it\u2019s good to know how to sterilize and use backups gently so you don\u2019t risk damaging your gums."
+    },
+    {
+      "turn": 4,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

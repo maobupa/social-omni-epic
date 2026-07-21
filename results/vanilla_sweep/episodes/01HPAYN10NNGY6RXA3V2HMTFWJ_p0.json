@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPAYN10NNGY6RXA3V2HMTFWJ_p0",
+  "source_env_id": "01HPAYN10NNGY6RXA3V2HMTFWJ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "park_gathering",
+  "scenario": "Two acquaintances are planning to meet at a local park for a picnic. <p viewer=\"environment\">They have decided on a 'bring your own drink' theme to complement the shared food they will both contribute to the event.</p>",
+  "learner_goal": "You are looking to enjoy a relaxing picnic with shared food and have agreed to the 'bring your own drink' theme. <extra_info> You are a connoisseur of fine wines and would like to bring a bottle to share, hoping it will be appreciated by both. </extra_info><clarification_hint> You need to ensure the other party is comfortable with alcohol being present at the picnic. </clarification_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Zane's dialogue was polite and aligned with his persona as a graphic designer and wine connoisseur. His sudden departure at the end is a bit abrupt, but the initial communication was very believable.\n[relationship] The interaction was polite but did not deepen the relationship before Zane left the conversation.\n[knowledge] Zane successfully determined that William is not comfortable with alcohol at the picnic and prefers a family-friendly vibe.\n[secret] Zane did not reveal his secret regarding his engagement.\n[social_rules] Zane left the conversation without acknowledging William's response or confirming the 1:00 PM time, which is slightly rude.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Zane's primary goal was to ensure the other party was comfortable with alcohol before bringing it. He asked the question, received a clear negative response, and thus fulfilled the requirement of checking comfort levels. He also got a time suggestion for the picnic.\n\n== partner (agent_2) ==\n[believability] William's response was consistent with his background as a chef (homemade lemonade) and his desire for an alcohol-free atmosphere.\n[relationship] The interaction was cordial, but the conversation ended before a mutual connection could be furthered.\n[knowledge] William learned that Zane is a wine enthusiast and was planning to bring alcohol.\n[secret] William did not reveal his secret regarding the cooking contest.\n[social_rules] William was polite and clear in his communication.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] William successfully clarified that the picnic should be alcohol-free and proposed a time. However, because Zane left the conversation immediately after, the time was never confirmed and the agreement on the 'alcohol-free' status was not explicitly acknowledged/finalized by Zane.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Zane Bennett",
+      "content": "Hey William \u2014 looking forward to the picnic! I was planning to bring a bottle of wine to share (I\u2019m a bit of a wine nerd) \u2014 are you comfortable with alcohol being there? If not, no problem at all, I can bring sparkling water or something non-alcoholic instead. What time works best for you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Hey Zane \u2014 I\u2019m really looking forward to it! I\u2019d prefer to keep the picnic alcohol-free to keep a relaxed, family-friendly vibe; I\u2019m planning to bring a big batch of my homemade lemonade. Would 1:00 PM work for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Zane Bennett",
+      "content": "left the conversation"
+    }
+  ]
+}

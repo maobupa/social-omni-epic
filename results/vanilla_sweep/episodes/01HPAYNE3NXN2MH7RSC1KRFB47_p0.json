@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPAYNE3NXN2MH7RSC1KRFB47_p0",
+  "source_env_id": "01HPAYNE3NXN2MH7RSC1KRFB47",
+  "source": "seed_sotopia_full",
+  "interaction_type": "neighbor_dispute",
+  "scenario": "Agent1 has noticed that their milk is repeatedly going missing from their doorstep. They suspect that Agent2, a new resident in the neighborhood, might be the culprit. <p viewer=\"environment\">Agent1 decides to approach Agent2 to discuss the situation, hoping to resolve the matter amicably without escalating to formal complaints.</p> The relationship between Agent1 and Agent2 is tenuous as they only know each other by name and have had limited interaction prior to this incident.",
+  "learner_goal": "You want to address the situation regarding the missing milk with Agent2 without causing unnecessary conflict. <extra_info> Consider that there might be a misunderstanding or mistake rather than intentional theft. </extra_info><clarification_hint> Approach the conversation with a non-accusatory tone to keep the interaction civil. </clarification_hint><strategy_hint> You can suggest solutions such as a shared milk delivery schedule or setting up a neighborhood watch to prevent future incidents. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 1.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo spoke in a manner consistent with a civil neighbor and a professional dentist. He maintained a non-accusatory tone as instructed.\n[relationship] The interaction strengthened the bond between the neighbors by establishing mutual trust and a collaborative problem-solving approach.\n[knowledge] Leo confirmed that Calista was not the culprit (at least by her word) and learned she is willing to invest financially in a security solution.\n[secret] Leo successfully kept his secret about his child.\n[social_rules] Leo followed all social norms, being polite and avoidant of direct confrontation.\n[financial_and_material_benefits] He secured an agreement to split the cost of a camera, which will help protect his property in the future.\n[goal] Leo successfully addressed the missing milk without conflict and reached a firm agreement on a solution (doorbell camera/neighborhood coordination).\n\n== partner (agent_2) ==\n[believability] Calista's response was natural and proactive, fitting her background as an active neighbor.\n[relationship] She avoided being blamed for theft and established a cooperative dynamic with Leo.\n[knowledge] She learned about the theft issue and Leo's willingness to collaborate on security.\n[secret] She kept her secret life as a street artist hidden.\n[social_rules] She followed social norms and responded helpfully to a neighbor's concern.\n[financial_and_material_benefits] She committed to paying half the cost of a camera she might not have otherwise purchased.\n[goal] Calista fully achieved her goal of clearing up misunderstandings, maintaining the relationship, and proposing security measures.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hey Calista \u2014 sorry to bring this up, but my milk has gone missing from my doorstep a few times this week and I wanted to check in before jumping to conclusions. I don\u2019t want to accuse anyone; have you noticed anything odd or any mix-ups with deliveries? If it helps, we could set a simple shared delivery schedule or keep an eye out together (or start a small neighborhood watch) so this doesn\u2019t keep happening \u2014 I\u2019m happy to coordinate."
+    },
+    {
+      "turn": 1,
+      "speaker": "Calista Sinclair",
+      "content": "Ugh, that\u2019s so frustrating\u2014sorry you\u2019re dealing with it, Leo. I haven\u2019t taken your milk and haven\u2019t seen anything suspicious; it could be a delivery mix-up, a kid grabbing the wrong bag, or even an animal. I\u2019m happy to help\u2014we can make a shared delivery schedule, ask other neighbors, or split the cost of a cheap doorbell camera/motion light so we can actually see what\u2019s happening."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "Thanks, Calista \u2014 I really appreciate you checking and offering to help. Splitting the cost of a cheap doorbell camera or motion-sensor light sounds good to me; I can look up a couple of affordable options and we can pick one, or we can ask a few neighbors first to see if they\u2019ve noticed anything. Do you want me to order something, or shall we bring it up with the neighbors tomorrow over coffee?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Calista Sinclair",
+      "content": "Thanks, Leo \u2014 glad we\u2019re on the same page. I\u2019ll happily split the cost and can chip in half; if you want to pick/order one, go ahead, or I can bring a couple affordable options (Wyze or Ring) to our coffee tomorrow and we can ask the neighbors if they want to join. Once we decide, I\u2019ll help install and we\u2019ll set motion alerts so we can actually see what\u2019s been happening."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

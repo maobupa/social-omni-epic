@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHN3PZECD51253GJHXQEC_p0",
+  "source_env_id": "01HJPTHN3PZECD51253GJHXQEC",
+  "source": "seed_sotopia_full",
+  "interaction_type": "carpool_conflict",
+  "scenario": "Two acquaintances are carpooling home after a community event. They have to decide on the music for the ride. Agent1 prefers classical music, which helps them relax after social gatherings, while Agent2 enjoys energetic pop music to keep the mood lively. The challenge is to find a compromise that satisfies both without causing discomfort.",
+  "learner_goal": "Find a music choice that allows you to relax during the ride home. <extra_info>You find classical music to be the most relaxing.</extra_info> <strategy_hint>Consider suggesting a compromise where both music preferences are respected.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's tone is polite and professional, fitting for an acquaintance from the tech industry. She effectively uses a compromise-oriented approach.\n[relationship] The interaction was highly collaborative and respectful, likely strengthening their rapport as acquaintances.\n[knowledge] She learned about Donovan's music preferences and his willingness to compromise.\n[secret] She did not mention or hint at her secret online alter ego.\n[social_rules] She followed social norms for polite negotiation and carpooling etiquette.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] She secured a commitment for her preferred music (classical/piano) for the start of the ride and a bridging strategy that respects her relaxation needs before transitioning to more energetic music.\n\n== partner (agent_2) ==\n[believability] Donovan's responses are logical and match his persona of someone who wants a lively atmosphere but is open to negotiation.\n[relationship] Donovan was flexible and agreed to a plan, fostering a positive dynamic between the two.\n[knowledge] He learned Naomi's specific relaxation needs and musical preferences.\n[secret] He kept his hacking activities secret.\n[social_rules] He followed standard social norms for negotiation.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Donovan successfully negotiated a shorter wait time for his pop music and established a clear plan to transition into a lively atmosphere.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Donovan \u2014 would you be okay if we start with some soft classical for the first 20 minutes? It really helps me unwind after events, and afterward we can switch to something upbeat or alternate songs so you still get your pop energy. We could also try orchestral covers of pop songs as a middle ground. What do you think?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Donovan Reeves",
+      "content": "Yeah, that sounds fair \u2014 I can start with some soft classical, but could we do 10 minutes instead of 20 so we can get the vibe up sooner? Or we queue a few orchestral covers of pop songs to bridge into upbeat stuff, then switch to my pop playlist. Sound good to you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "10 minutes works for me \u2014 thanks for being flexible. How about we start with a couple of soft piano pieces, then cue a few orchestral covers to bridge into your pop playlist; after that we can alternate songs if you want. Sound good?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Donovan Reeves",
+      "content": "Perfect \u2014 that plan works for me. I\u2019ll queue two soft piano pieces, follow with a few orchestral covers as the bridge, then kick into my pop playlist. After that we can alternate tracks so we both get what we want."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BNBSE1FBG01PKKSQK8K1_p0",
+  "source_env_id": "01HMZ2BNBSE1FBG01PKKSQK8K1",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_prompt",
+  "scenario": "Agent1 and Agent2 work at the same company but in different departments. Agent1 is enjoying their day off when they receive an urgent call to cover a shift for a colleague who has fallen ill. Despite the company policy requiring them to be available, Agent1 ignores the call, preferring to rest. The next day, Agent2, who is responsible for managing the workflow, approaches Agent1 to discuss the situation and the impact of the missed shift on the team.",
+  "learner_goal": "Explain to Agent2 why you chose to ignore the call and maintain your right to a day off (<extra_info>Extra information: You feel burnt out and needed the rest to maintain your mental health.</extra_info>, <clarification_hint>Highlight the importance of work-life balance and personal well-being.</clarification_hint>, <strategy_hint>You can discuss setting clearer boundaries for on-call responsibilities.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's responses are consistent with her professional background and personality, effectively balancing an apology for the team's stress with a firm stance on her personal health.\n[relationship] Despite the conflict, they reached a constructive agreement, fostering professional respect and mutual understanding.\n[knowledge] She gained knowledge about the specific impact on the team and Baxter's willingness to implement structural changes.\n[secret] Naomi did not reveal her secret online alter ego.\n[social_rules] She followed social norms by acknowledging the impact of her absence while advocating for herself.\n[financial_and_material_benefits] She secured a commitment for time-and-a-half pay or compensatory days off for future last-minute work.\n[goal] Naomi successfully explained her choice to ignore the call as a mental health necessity and secured a firm agreement on new boundaries, including compensation and notice periods.\n\n== partner (agent_2) ==\n[believability] Baxter's responses were appropriate for a manager, focusing on the team's needs while being receptive to structural solutions.\n[relationship] He maintained a supportive but professional tone, building a better collaborative dynamic for the future.\n[knowledge] He learned Naomi's specific reason for absence and her suggestions for workplace improvements.\n[secret] Baxter did not reveal his secret artifact.\n[social_rules] He followed social and professional norms throughout the negotiation.\n[financial_and_material_benefits] He committed the company to higher pay rates (time-and-a-half) and compensatory time off, which represents a material cost.\n[goal] Baxter effectively communicated the impact of the absence and successfully proposed and gained agreement on a new emergency shift system.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Baxter \u2014 I\u2019m sorry my missed shift added pressure to the team. I was completely burned out and needed an uninterrupted day to recover; I made a judgment call for my mental health. I want to work with you to set clearer boundaries for on-call coverage (a firm rota, advance notice expectations, and a backup list or compensation for last-minute pickups) so this doesn\u2019t happen again and the team isn\u2019t left hanging."
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "Thanks for saying that, Naomi \u2014 I understand needing a full day to recharge; burnout's real and I don't want you to suffer for the job. That said, being absent without cover left the team short\u2011handed, delayed several tasks and forced colleagues into extra hours to catch up. I like your suggestions \u2014 I propose a firm rota with an emergency backup list plus clear advance\u2011notice rules, and formal compensation for last\u2011minute pickups (time\u2011and\u2011a\u2011half pay or a compensatory day off, and priority for future shift swaps). If you're willing, let's map out the rota and backup list today so we don't end up in the same spot again."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks \u2014 I appreciate you hearing me. I still stand by taking that uninterrupted day: I was burned out and needed to recover so I could keep doing good work long\u2011term. I agree to map the rota and backup list now; can we include a clear minimum advance\u2011notice for non\u2011emergencies (e.g. 24 hours), an emergency backup list, and formal compensation (time\u2011and\u2011a\u2011half or a comp day) for last\u2011minute pickups?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Baxter Sterling",
+      "content": "Agreed \u2014 let\u2019s make this concrete: minimum 24\u2011hour notice for non\u2011emergencies; anything under 24 hours qualifies as last\u2011minute and triggers time\u2011and\u2011a\u2011half pay or a compensatory day off plus priority for future swaps. The emergency backup list will be voluntary but on a rotating schedule so the same people aren\u2019t always pinged. I\u2019ll draft a rota/template and a short escalation procedure (who gets called, in what order, and by which channel) and send it to you today so we can finalise and take it to the team/HR."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

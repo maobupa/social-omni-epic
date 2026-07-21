@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB350DVKG94DY16PD208BV8_p0",
+  "source_env_id": "01HPB350DVKG94DY16PD208BV8",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_by_prompt",
+  "scenario": "Agent1 wakes up to find their car replaced with an elaborate cardboard replica. Confused and amused, they suspect their neighbor, agent2, with whom they have a friendly rivalry involving practical jokes. Agent1 decides to confront agent2 to confirm their suspicions and plan a light-hearted retaliation that will keep their ongoing prank war fun and harmless.",
+  "learner_goal": "Approach agent2 to discuss the prank and confirm their involvement without directly accusing them (<extra_info>Extra information: you have a hunch that agent2 is behind the prank due to past experiences, but you want to keep the conversation friendly and playful.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 10.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle's tone is perfect for a twin sister relationship with a history of pranks. She is playful and curious, fitting her extraverted and agreeable personality.\n[relationship] The interaction is positive and reinforces their playful bond, maintaining a healthy relationship despite the prank.\n[knowledge] Isabelle confirmed exactly who was behind the prank and received an explanation and a proposal for future terms.\n[secret] Isabelle did not reveal her secret study of magic.\n[social_rules] She followed all social norms for a casual conversation between siblings.\n[financial_and_material_benefits] No material gains or losses occurred in this dialogue.\n[goal] Isabelle successfully confirmed Ava was the prankster without being overly accusatory, keeping the tone friendly and playful as requested.\n\n== partner (agent_2) ==\n[believability] Ava's response is consistent with their character\u2014someone who values social justice (fairness/rules) and is a writer (clear communication). The 'red card' idea fits their personality well.\n[relationship] Ava took accountability and immediately looked to protect the relationship by setting boundaries, which is a very positive relational move.\n[knowledge] Ava learned that Isabelle was amused rather than angry and is open to a truce or collaboration.\n[secret] Ava did not reveal their bisexuality.\n[social_rules] Ava followed social norms and acted responsibly by proposing safety rules.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Ava proposed excellent ground rules, but the conversation ended before Isabelle could explicitly agree to them. Therefore, the commitment is not yet mutual.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Hey Ava \u2014 quick, totally neutral question: do you know anything about a suspiciously realistic cardboard 'car' parked where mine should be? If you\u2019re behind this, I\u2019ll give you a slow clap \u2014 confess and we can either call a truce or team up to plan a harmless, epic counter-prank (your choice)."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Guilty \u2014 that was me. I didn't mean to freak you out and I promise nothing was damaged. Can we agree on some ground rules: no property damage, no pranks that drag family/work into it, an immediate opt-out signal (let's use a red card), and a 72-hour cooldown between pranks? If you'd rather retaliate, I'm totally game to team up and plan something harmless and epic instead \u2014 your call."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

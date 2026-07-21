@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HPB67DMZQ3P30R0K88BERP8E_p0",
+  "source_env_id": "01HPB67DMZQ3P30R0K88BERP8E",
+  "source": "seed_sotopia_full",
+  "interaction_type": "spiritual_community_network",
+  "scenario": "Agent1, a member of a town's council, is tasked with overseeing the development of a new community park. Agent2 is a respected spiritual leader in the community known for their wisdom and connection with traditional beliefs. The proposed park site is believed to be on sacred grounds, and there is a conflict between preserving the spiritual integrity of the land and the town's need for recreational space. Agent1 seeks guidance and approval from Agent2 to proceed with the park's development without offending the spiritual community.",
+  "learner_goal": "You are Agent1, the town council member. Your goal is to find a balance between the development of the new park and the preservation of the sacred grounds. <extra_info>You are aware of the community's spiritual concerns and want to honor them while fulfilling your duty.</extra_info> <clarification_hint>You may want to understand the specific areas of the land that are considered most sacred and why.</clarification_hint> <strategy_hint>Consider proposing a compromise that includes a designated spiritual area within the park that remains untouched.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily Greenberg's tone is consistently professional, conscientious, and respectful, which aligns perfectly with her background as a lawyer and her personality traits. She methodically addresses logistical needs and cultural sensitivities.\n[relationship] Lily significantly strengthened the relationship by demonstrating deep respect for Ava's community, accommodating every request for cultural protocol, and building a foundation of trust for future cooperation.\n[knowledge] Lily identified the specific sacred areas (oak grove and spring), learned the cultural protocols required for the site, identified the primary spiritual liaison (Naomi Redfeather), and understood the naming and history of the Kestrel River people.\n[secret] Lily did not reveal her secret regarding anonymous donations.\n[social_rules] Lily followed all social norms and displayed high social intelligence in her handling of the cultural consultation.\n[financial_and_material_benefits] No material gains or losses occurred during the conversation.\n[goal] Lily successfully found a balance between development and preservation. She secured a firm agreement for a mapping session, identified the specific sacred grounds to be untouched, and established the ground rules for the park's dual-purpose design.\n\n== partner (agent_2) ==\n[believability] Ava's responses are consistent with a spiritual leader and architect; she balances the practical needs of the elders (mobility, large-print maps) with the spiritual requirements of the land.\n[relationship] The relationship improved through mutual respect and Lily's extreme willingness to accommodate Ava's community's needs.\n[knowledge] Ava learned about the town council's specific planning timeline and Lily's genuine commitment to preserving the sacredness of the land.\n[secret] Ava did not reveal her secret tattoo.\n[social_rules] Ava maintained appropriate social and cultural decorum throughout the interaction.\n[financial_and_material_benefits] No material gains or losses occurred during the conversation.\n[goal] Ava successfully protected the sanctity of the land by ensuring the most sacred spots would be buffered and untouched. She established strict protocols for the development and successfully integrated spiritual elements into the planning process.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Ava, thank you for taking the time \u2014 I want to be very careful and respectful here. Could you help me understand which parts of the proposed site are considered most sacred and why they hold that importance? My thought is to propose a compromise to the council: formally set aside and protect those specific areas within the park (with agreed access and restrictions) while locating playgrounds and sports facilities elsewhere. If you\u2019re willing, I\u2019d like to work with you and community elders to map those zones before the council makes any final decisions."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Thompson",
+      "content": "Lily, thank you for approaching this with care. The most sacred parts are the old oak grove and the small spring-fed knoll by the stream \u2014 places our people have used for ceremonies, medicine gathering, and to honor our ancestors \u2014 and those areas must remain undisturbed and protected. I will gladly work with you and our community elders to map those zones, define respectful buffers and access rules, and identify alternative nearby sites for playgrounds and sports; when would you be available to meet so we can begin the mapping?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "Thank you, Ava \u2014 I really appreciate your willingness to help. I can meet Tuesday 3\u20135 PM or Thursday 9\u201311 AM; would either work for you and the elders? If so, I\u2019ll invite the town planner and bring preliminary site maps so we can mark the oak grove and spring, discuss buffers and access rules, and identify alternative locations for playgrounds."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Thompson",
+      "content": "Tuesday 3\u20135 PM works for me \u2014 that time is usually best for the elders as well, but I\u2019ll confirm with them today. I\u2019ll ask a couple of elders to join and bring our traditional boundary notes; please invite the town planner and bring the preliminary site maps so we can mark the oak grove, the spring, and propose respectful buffers and alternatives. I\u2019ll let you know immediately if anything changes."
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "Thank you, Ava \u2014 I\u2019ll hold Tuesday 3\u20135 PM on my calendar and will invite the town planner and bring the preliminary site maps. Would the community center conference room work for the elders, or do you prefer another location? Please let me know if they need any particular accommodations or privacy for the mapping session."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Thompson",
+      "content": "The community center conference room will work well \u2014 thank you. The elders prefer a quiet, private room with comfortable seating and a low table; bottled water and herbal tea would be appreciated. If possible, please ensure the session isn't recorded and that we have a few minutes at the start for a brief blessing and introductions."
+    },
+    {
+      "turn": 6,
+      "speaker": "Lily Greenberg",
+      "content": "Thank you \u2014 I\u2019ll reserve the community center conference room and ensure it\u2019s private, with a low table, comfortable seating, bottled water and herbal tea. I\u2019ll also ensure there are no recordings and that we have a few minutes at the start for the blessing and introductions. I\u2019ll invite the town planner and bring the preliminary site maps; is there anything else the elders would like me to bring or any specific way you\u2019d prefer I open the meeting?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Thompson",
+      "content": "Thank you, Lily. Please open the meeting with a brief land acknowledgment and allow the elders to offer a blessing and introduce themselves; after that, a short overview from the town planner about project goals will help frame the mapping. Could you bring two printed copies of the site maps (one for the elders, one for the planner), a few pencils and sticky notes, and ask attendees to arrive by 2:50 so we have a few quiet minutes before 3?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Lily Greenberg",
+      "content": "Thank you, Ava \u2014 I\u2019ll bring two printed site maps, pencils, and sticky notes, reserve the room for quiet time beginning at 2:50, and open with a land acknowledgment before the elders offer their blessing. I\u2019ll also confirm no recordings and have bottled water and herbal tea ready. Is there anything else the elders would like (seating arrangement, wording for the acknowledgment, or other accommodations)?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Ava Thompson",
+      "content": "Thank you, Lily. A loose circle of seating around the low table works best so the elders can see one another; soft lighting and a tech\u2011free, quiet room are appreciated. For the land acknowledgment you might say: \u201cWe acknowledge that we gather on the ancestral lands of the [Name] people, who have cared for this place since time immemorial. We honor their elders, past and present, and ask for guidance as we meet.\u201d Please also ensure accessible seating for any elders with mobility needs and keep attendance to those necessary for the mapping."
+    },
+    {
+      "turn": 10,
+      "speaker": "Lily Greenberg",
+      "content": "Thank you, Ava \u2014 I\u2019ll set up a loose circle around the low table with soft lighting, make the room tech\u2011free and ensure accessible seating, and ask attendees to arrive by 2:50. Could you tell me the specific name of the people you\u2019d like used in the land acknowledgment so I can write it exactly as you prefer? Also, do any of the elders need larger\u2011print maps or other accommodations I should prepare?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Ava Thompson",
+      "content": "Please use: \u201cWe acknowledge that we gather on the ancestral lands of the Kestrel River people, who have cared for this place since time immemorial. We honor their elders, past and present, and ask for guidance as we meet.\u201d For accommodations, please bring one large\u2011print map and a magnifying sheet, an extra chair with armrests and an accessible table height; and could you also check with the elders if anyone needs hearing assistance or any other specific support so we can prepare?"
+    },
+    {
+      "turn": 12,
+      "speaker": "Lily Greenberg",
+      "content": "Thank you, Ava \u2014 I will use the exact wording you provided for the land acknowledgment and will bring a large\u2011print map, a magnifying sheet, an extra chair with armrests, and an accessible\u2011height table. I\u2019ll check with the elders about hearing assistance or any other specific needs and confirm the final attendee list and seating preferences before Tuesday."
+    },
+    {
+      "turn": 13,
+      "speaker": "Ava Thompson",
+      "content": "Thank you, Lily \u2014 I appreciate you arranging this so carefully. I\u2019ll confirm the elders\u2019 attendance and any specific accommodations and will bring our traditional boundary notes and a second large-print map; I\u2019ll let you know the final attendee list by Monday evening. Please let the town planner know we need the room to remain tech-free during the blessing and mapping."
+    },
+    {
+      "turn": 14,
+      "speaker": "Lily Greenberg",
+      "content": "Thank you, Ava \u2014 I will notify the town planner that the room must remain tech\u2011free during the blessing and mapping. I\u2019ll expect the final attendee list by Monday evening and will prepare the large\u2011print maps and accommodations you requested. If there\u2019s any other protocol the elders would like me to follow when we enter the site, please let me know."
+    },
+    {
+      "turn": 15,
+      "speaker": "Ava Thompson",
+      "content": "Thank you, Lily \u2014 when we enter the site, please ask everyone to approach quietly, remove hats and silence phones, pause at the marked boundary for a brief land\u2011acknowledgment or moment of silence, and allow an elder to lead a short blessing. No photography, no pets, no alcohol or food in the sacred zones, and please do not touch or disturb the oak grove, the spring, or any artifacts\u2014any soil disturbance or heavy equipment must have explicit permission from the elders. Keep attendance to essential people and have the town planner coordinate measurements with an elder present so we can establish and respect the protective buffers."
+    },
+    {
+      "turn": 16,
+      "speaker": "Lily Greenberg",
+      "content": "Thank you, Ava \u2014 I agree and will ensure those protocols are strictly followed: quiet approach, hats off and phones silent, pause at the boundary for a blessing, no photography/pets/alcohol/food in sacred zones, and no touching or soil disturbance without explicit elder permission. I\u2019ll instruct the town planner to limit attendance to essential personnel and to coordinate all measurements only with an elder present. I can also arrange simple temporary boundary markers (rope and signs) unless the elders prefer another method \u2014 is there a specific elder you\u2019d like me to contact as the site liaison?"
+    },
+    {
+      "turn": 17,
+      "speaker": "Ava Thompson",
+      "content": "Please contact Elder Naomi Redfeather to serve as the site liaison \u2014 she\u2019s our primary contact for land matters. If possible, route initial requests through me so I can coordinate timing; Naomi prefers a brief phone call or an in\u2011person check\u2011in rather than email for site access details. I\u2019ll confirm her attendance and share her preferred number by Monday evening."
+    },
+    {
+      "turn": 18,
+      "speaker": "Lily Greenberg",
+      "content": "Thank you, Ava. I\u2019ll wait for Naomi\u2019s number and will route initial requests through you; once you share it I\u2019ll place a brief phone call to Naomi to confirm site access details and timing. I\u2019ll also instruct the town planner to coordinate measurements only with an elder present and prepare temporary rope-and-sign markers unless the elders prefer another method. I look forward to meeting Tuesday \u2014 please send the final attendee list and any last accommodations by Monday evening."
+    },
+    {
+      "turn": 19,
+      "speaker": "Ava Thompson",
+      "content": "Thank you, Lily. I will confirm Elder Naomi Redfeather\u2019s attendance, share her preferred number, and send the final attendee list plus any accommodation notes by Monday evening. I\u2019ll also check hearing\u2011assistance and mobility needs and include those details. I look forward to meeting Tuesday."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BMBR35HYMYJET0SDM0GB_p0",
+  "source_env_id": "01HMZ2BMBR35HYMYJET0SDM0GB",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_creation",
+  "scenario": "Two members of the royal council are tasked with organizing a grand coronation event for the new monarch, who has recently ascended to the throne and received a crown. Agent1, who values tradition, insists on a lavish and time-honored ceremony. Agent2, aware of the kingdom's current economic difficulties, advocates for a more modest celebration that reflects fiscal responsibility.",
+  "learner_goal": "Convince your fellow council member to agree on a coronation that respects your perspective on the matter (<extra_info>Extra information: you understand the importance of the coronation reflecting the current state of the kingdom and the image the new monarch wants to project</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle\u2019s suggestion perfectly blends their background as an art student and photographer with their role as a council member, maintaining their nonbinary identity and artistic sensibilities.\n[relationship] The two reached a quick and harmonious agreement, building on their established intellectual respect for one another.\n[knowledge] Learned that Agent 2 is willing to support specific technical art solutions like projection-mapping and is serious about drafting official plans.\n[secret] Giselle successfully kept their secret regarding forged paintings.\n[social_rules] The interaction was professional and cordial, appropriate for council members.\n[financial_and_material_benefits] No personal financial gain was involved in this interaction.\n[goal] Giselle successfully convinced Imelda to adopt a vision that respects their perspective (artful, symbolic installations) while acknowledging the kingdom's needs. Imelda fully committed to drafting the plan based on Giselle's suggestions.\n\n== partner (agent_2) ==\n[believability] Imelda\u2019s focus on fiscal responsibility and drafting concise plans reflects her background as an astrophysicist who values precision and efficiency.\n[relationship] The relationship was strengthened through a shared vision and mutual agreement on a difficult task.\n[knowledge] Gained insight into Giselle's specific ideas for utilizing technology and local artists to balance tradition and cost.\n[secret] Imelda successfully kept her secret regarding the data leak.\n[social_rules] The interaction was professional and followed appropriate etiquette.\n[financial_and_material_benefits] No personal financial gain was involved.\n[goal] Imelda achieved a compromise that honored the significance of the event (essential rites) while addressing economic concerns through specific cost-cutting measures (modest reception, digital spectacles).",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Imelda, hear me out: we can honour the old rites and the crown\u2019s moment without the extravagant spending \u2014 keep the ceremony\u2019s core, but scale down opulence so it feels sincere. Make it artful rather than lavish: commission local artists for symbolic installations, use projection and photography to create a breathtaking, public spectacle, and livestream so everyone can participate. That shows the new monarch as compassionate and modern while freeing funds for relief and community commissions \u2014 can you support a coronation like that?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Imelda Thorne",
+      "content": "I can support that \u2014 keep the essential rites (oath, anointing, crown presentation) but trim the procession and gilded excess. Commission local artists and use projection-mapping on the palace fa\u00e7ade, livestream to public squares, and replace an extravagant state banquet with a modest diplomatic reception so savings can go to relief and community commissions. I\u2019ll draft a concise plan with estimated savings, a shortened program, and a shortlist of local artists/technical vendors to present to the council."
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

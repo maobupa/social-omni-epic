@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJRKDXQX51P4XMQ27V6N88M2_p0",
+  "source_env_id": "01HJRKDXQX51P4XMQ27V6N88M2",
+  "source": "seed_sotopia_full",
+  "interaction_type": "beach_resort",
+  "scenario": "Agent1 and Agent2 are friends on a vacation at a beach resort. They decide to take a dip in the ocean, but Agent1 realizes they forgot to pack their swimsuit. Agent2, who packed multiple swimsuits, offers one to Agent1. However, Agent1 is hesitant to accept because they are not comfortable wearing someone else's clothing, even if it's just for swimming. Both agents need to find a solution that allows them to enjoy their time at the beach.",
+  "learner_goal": "Convince Agent2 to accept the swimsuit offer (<extra_info>Extra information: Agent1 wants both of them to enjoy the beach together and thinks sharing is not a big deal among friends</extra_info>, <clarification_hint>Emphasize the importance of the shared experience and the temporary nature of the situation</clarification_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia remains consistent in her desire for companionship and her high-energy, persuasive personality as a high school principal. She adapts her tactics reasonably to William's objections.\n[relationship] The interaction was friendly and respectful, ending in a compromise that preserved their bond and ensured a shared activity.\n[knowledge] She learned specific details about William's personal boundaries regarding hygiene and intimate clothing.\n[secret] Mia did not reveal her punk rock past.\n[social_rules] Mia followed social norms of persuasion and friendship without being overly aggressive.\n[financial_and_material_benefits] She offered to pay for a brand-new swimsuit for William to ensure they could swim immediately.\n[goal] Mia successfully convinced William to accept a swimsuit offer (a brand-new one she buys for him now) so they can enjoy the water together immediately, satisfying her primary objective of a shared experience.\n\n== partner (agent_2) ==\n[believability] William's reluctance is well-justified and consistent. However, he repeats himself almost verbatim in Turn #4, which slightly breaks the flow.\n[relationship] William maintains a polite and grateful tone, reinforcing the friendship while standing his ground on personal boundaries.\n[knowledge] He learned Mia is willing to go to great lengths (and expense) to ensure they spend time together.\n[secret] He did not reveal his past cooking contest sabotage.\n[social_rules] He communicated his boundaries clearly and respectfully.\n[financial_and_material_benefits] He gets a brand-new swimsuit of his choice paid for by Mia.\n[goal] He successfully declined the 'used' or 'pre-owned' swimsuit offer and maintained his boundary, while agreeing to a solution that allows both to have a good time.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Come on, Will \u2014 I really want us both to jump in the water together. I packed extras so it\u2019s clean, I can rinse it after, and it\u2019s only for a quick swim; if you\u2019d feel better you can wear your shorts over it or I\u2019ll buy you a new one this afternoon. Sharing for an hour won\u2019t change anything between us, but being in the ocean together would mean a lot to me."
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Thanks, Mia \u2014 I really appreciate you offering, and I know it would mean a lot to both of us. I\u2019m just not comfortable wearing someone else\u2019s swimwear, even rinsed; how about we pick up a new one this afternoon and I\u2019ll jump in with you then? If you want to go now, go ahead \u2014 I\u2019ll meet you back in the water after I grab one."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "I totally get it, Will\u2014thanks for being honest. Can you tell me what specifically makes you uncomfortable about wearing someone else\u2019s swimwear? If I know that, maybe we can find a quick workaround so we can both get in the water together now."
+    },
+    {
+      "turn": 3,
+      "speaker": "William Brown",
+      "content": "Thanks, Mia \u2014 I really appreciate you offering and I know you mean well. It\u2019s just that swimwear is basically intimate clothing to me, and I get uncomfortable wearing someone else\u2019s even if it\u2019s rinsed; I worry about hygiene and possible skin irritation, and I try to stick to that boundary. How about I pick up a new suit this afternoon and we jump in together then? If you want to go now, go ahead and have fun \u2014 I\u2019ll meet you back in the water after I grab one."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "Wait\u2014actually I have a brand-new, unworn swimsuit in my bag, still in its packaging. It\u2019s never been worn and you can keep it if you want, no rinsing needed. Can we please go in together now? It would mean a lot to me."
+    },
+    {
+      "turn": 5,
+      "speaker": "William Brown",
+      "content": "I really appreciate you offering that and that it\u2019s brand-new \u2014 thank you. I still don\u2019t feel comfortable wearing someone else\u2019s swimwear, even new; it\u2019s a personal boundary for me. Please go enjoy the water now and I\u2019ll buy a new suit this afternoon and jump in with you then."
+    },
+    {
+      "turn": 6,
+      "speaker": "Mia Davis",
+      "content": "I totally respect that boundary, Will \u2014 thanks for being honest. Would you be up for popping into the resort shop with me right now so I can buy you a brand-new suit you choose and we can jump in together this minute? If that\u2019s too much, we can wade waist-deep together now and I\u2019ll meet you back later for a full swim after you grab one \u2014 whatever works for you."
+    },
+    {
+      "turn": 7,
+      "speaker": "William Brown",
+      "content": "Thanks so much, Mia \u2014 I really appreciate you offering. I\u2019m happy to pop into the shop with you now and pick out a brand-new suit so we can get in together \u2014 let\u2019s go."
+    },
+    {
+      "turn": 8,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

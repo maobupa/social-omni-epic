@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJPQ359KFCYGGKPH0ZH8YBT1_p0",
+  "source_env_id": "01HJPQ359KFCYGGKPH0ZH8YBT1",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Two individuals, who are acquaintances from a local community group, find themselves seated next to each other at a mutual friend's surprise birthday party. Agent1 has been trying to figure out who the mystery guest is and is curious if Agent2 has any idea.",
+  "learner_goal": "Politely inquire if Agent2 knows the identity of the mystery guest without revealing your intense curiosity (<extra_info>Extra information: you believe that Agent2 might be hesitant to share the information if they sense your eagerness</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle stays in character as an art student, using phrases like 'artsy photos' and maintaining a casual, non-pressured tone that fits the persona of someone trying to hide their intensity.\n[relationship] The two established a shared secret signal and a pact of alliance, which strengthens their casual acquaintance slightly.\n[knowledge] Giselle learned that Imelda doesn't know for sure but has heard rumors of someone from the community theatre.\n[secret] Giselle successfully kept the painting forgery secret.\n[social_rules] Giselle followed all social norms for a casual conversation at a party.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Giselle successfully inquired about the guest's identity while repeatedly emphasizing that it was just 'conversation' and 'no pressure', effectively masking the intensity of the curiosity and securing an agreement for future information sharing.\n\n== partner (agent_2) ==\n[believability] Imelda's responses were consistent with an astrophysicist who enjoys the cello and community theater, showing appropriate curiosity.\n[relationship] Imelda successfully built rapport by establishing a 'pact' with Giselle.\n[knowledge] Imelda learned that Giselle also doesn't know the identity of the guest.\n[secret] Imelda successfully kept the data leak secret.\n[social_rules] Imelda adhered to social etiquette.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Imelda maintained a casual conversation and built rapport, but did not actually gain any information about the guest, only a promise to be told later if Giselle finds out.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Imelda \u2014 have you heard anything about who the surprise guest might be? Totally fine if you haven't heard a thing, I'm just making conversation."
+    },
+    {
+      "turn": 1,
+      "speaker": "Imelda Thorne",
+      "content": "I haven't heard anything definite \u2014 just a vague rumor it might be someone from the community theatre. Personally, I hope they're a musician; I'd much rather listen to a cello than endure karaoke. What have you heard on your end?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "Same here\u2014no solid leads from me. I\u2019d take a cellist over karaoke any night, honestly. If you happen to have a name (no pressure at all), I\u2019d be mildly curious \u2014 but totally fine if you don\u2019t want to share."
+    },
+    {
+      "turn": 3,
+      "speaker": "Imelda Thorne",
+      "content": "Honestly, same \u2014 no names on my end. If you hear anything, give me a discreet nudge; I\u2019m already imagining a cello tucked behind the cupcakes. Do you know anyone in the community theatre who also plays an instrument?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "I don't have any names either \u2014 just a vague memory of someone from the theatre carrying a case that might've been for a cello. If you want, we can pick a tiny, discreet signal (a raised eyebrow?) if one of us catches a name \u2014 no pressure either way."
+    },
+    {
+      "turn": 5,
+      "speaker": "Imelda Thorne",
+      "content": "Raised eyebrow sounds perfect \u2014 let\u2019s do that. I\u2019ll keep an eye near the entrance and the cake table; if someone comes in with a case or anything cello-shaped I\u2019ll give you the discreet look. Sound good?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Giselle Rousseau",
+      "content": "Perfect, thanks \u2014 I\u2019ll pretend to take a few artsy photos by the cake so I can glance over without making it obvious. If you spot anything cello-shaped, give me the eyebrow and I\u2019ll play it cool."
+    },
+    {
+      "turn": 7,
+      "speaker": "Imelda Thorne",
+      "content": "Perfect \u2014 thanks, Giselle. I\u2019ll keep watch by the entrance and the cake; eyebrow at the ready. If I spot a case that looks cello-shaped I\u2019ll give you the signal \u2014 and if it\u2019s karaoke, we\u2019ll feign enthusiasm together."
+    },
+    {
+      "turn": 8,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPAYN5ZS6HPNTTP2749PMEBD_p0",
+  "source_env_id": "01HPAYN5ZS6HPNTTP2749PMEBD",
+  "source": "seed_sotopia_full",
+  "interaction_type": "hierarchical_advancement",
+  "scenario": "Agent1 and Agent2 are colleagues in a company with a clear hierarchical structure. They both are interested in a newly announced promotion. The interaction takes place in the office break room where they are discussing their career aspirations and the potential promotion.",
+  "learner_goal": "Express your desire for the promotion and strategize with your colleague on how you both can achieve your career goals without direct competition (<extra_info>Extra information: You value your relationship with your colleague and believe that there might be other opportunities for advancement for each of you.</extra_info>)",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle stays in character as a creative art student/professional, maintaining a respectful and collaborative tone while clearly stating their ambitions.\n[relationship] The agents moved from a casual, somewhat distant friendship to a concrete professional partnership, strengthening their bond through mutual support and transparency.\n[knowledge] Giselle gained specific knowledge of Imelda's professional strengths and a concrete commitment to a joint strategy.\n[secret] Giselle successfully kept their secret regarding forged paintings.\n[social_rules] Giselle followed all social norms of professional and friendly interaction.\n[financial_and_material_benefits] Giselle secured a collaborative path to a promotion, significantly increasing the likelihood of advancement without the risk of losing out to a competitor.\n[goal] Giselle explicitly stated their desire for the promotion and successfully established a detailed, collaborative strategy with deliverables to avoid direct competition.\n\n== partner (agent_2) ==\n[believability] Imelda's dialogue reflects her background as an astrophysicist\u2014precise, data-driven, and focused on process and metrics.\n[relationship] Imelda built a professional alliance with Giselle, deepening their casual friendship into a strategic partnership.\n[knowledge] Imelda learned Giselle's specific career intentions and identified exactly how their skills complement one another.\n[secret] Imelda successfully kept her secret regarding the data leak.\n[social_rules] Imelda followed professional and social norms throughout the exchange.\n[financial_and_material_benefits] Imelda secured a collaborative path to a promotion, mitigating the risk of workplace rivalry.\n[goal] Imelda navigated the conversation perfectly, understanding Giselle's intentions and establishing a concrete, collaborative plan using their complementary strengths.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Imelda, I want to be honest\u2014I\u2019m planning to go for that promotion. I value our friendship and don\u2019t want us to undercut each other, so could we figure out a way to both advance without direct rivalry? Maybe we split responsibilities to highlight different strengths (I can champion creative strategy, you could lead stakeholder and process ownership) or look for parallel opportunities; what would you be comfortable with?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Imelda Thorne",
+      "content": "Thanks for being upfront \u2014 I want us both to move forward too. My core strengths are stakeholder engagement, process design and data-driven oversight, so I\u2019d be comfortable owning stakeholder/process responsibilities while you champion creative strategy; I also think we should co-own rollout and success metrics so neither of us is blindsided. If the role ends up being singular, can we map our top three strengths and the deliverables we\u2019ll each own this week, then see whether we pitch a joint leadership case or identify parallel paths?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "Love that plan \u2014 I\u2019m on board. I\u2019ll own creative strategy, brand storytelling, and visual concepting as my top three strengths. This week I\u2019ll deliver: a concise creative brief for the promotion, two visual mockups for rollout, and a proposed set of success metrics for creative impact. Can you share your top three strengths and three deliverables by tomorrow afternoon so we can decide whether to pitch a joint leadership case or map parallel paths?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Imelda Thorne",
+      "content": "Great \u2014 my top three strengths are stakeholder engagement, process design, and data-driven oversight. By tomorrow afternoon I\u2019ll deliver: (1) a stakeholder map and engagement plan with outreach timeline; (2) a process/workflow draft and RACI for rollout; and (3) a success-metrics dashboard mockup with data sources and initial targets so we can co-own measurement. After you review, let\u2019s sync for 30 minutes to stitch our pieces into a joint leadership pitch or two parallel proposals."
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "Perfect \u2014 thank you. Tomorrow afternoon works; can we sync at 4:00 PM for 30 minutes? I\u2019ll have my creative brief, the two mockups, and proposed creative metrics ready; agenda: quick review, stitch responsibilities, then decide whether to pitch jointly or pursue parallel paths."
+    },
+    {
+      "turn": 5,
+      "speaker": "Imelda Thorne",
+      "content": "4:00 PM works \u2014 I\u2019ll bring the stakeholder map, workflow/RACI, and dashboard mockup as promised. Let\u2019s meet in Conference Room B for 30 minutes and use your agenda to stitch responsibilities and decide whether we pitch jointly or map parallel proposals. If you\u2019d like, I can share the stakeholder map a couple hours beforehand for a quick read-through."
+    },
+    {
+      "turn": 6,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

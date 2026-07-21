@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HJPQ33V00W6SBBRFHJVY06X5_p0",
+  "source_env_id": "01HJPQ33V00W6SBBRFHJVY06X5",
+  "source": "seed_sotopia_full",
+  "interaction_type": "user_generated",
+  "scenario": "Agent1 and Agent2 are members of a local hiking club. During a group hike, they decide to have a friendly competition to see who can use a whistle to mimic bird calls more accurately. Agent1 is known for their sharp ear for music, while Agent2 is a seasoned birdwatcher.",
+  "learner_goal": "Use the whistle to mimic bird calls and win the competition (<extra_info>Extra information: you are confident in your musical abilities and believe you can accurately reproduce bird calls.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia Davis stayed perfectly in character as a confident, slightly authoritative principal with a musical background. Her dialogue reflected her personality and history well.\n[relationship] The friendly banter and shared activity strengthened the acquaintance relationship between Mia and Benjamin.\n[knowledge] She gained knowledge of Benjamin's ability to mimic birds and his willingness to be generous even when losing.\n[secret] She mentioned her past in a punk band, but this was used as a point of pride rather than an accidental leak of a damaging secret, though it was listed as her secret.\n[social_rules] She followed all social norms of a friendly competition within a hiking club.\n[financial_and_material_benefits] She won the bet, meaning Benjamin will buy her snacks after the hike.\n[goal] Mia successfully used the whistle to mimic bird calls and won the competition, with Benjamin explicitly conceding at the end.\n\n== partner (agent_2) ==\n[believability] Benjamin Jackson's behavior was consistent with an environmental activist who values camaraderie, though his repeated echoing of Mia's specific whistle descriptions was a bit repetitive.\n[relationship] Benjamin successfully maintained a positive and friendly atmosphere, deepening his connection with Mia.\n[knowledge] He learned about Mia's musical background and her skill at bird calls.\n[secret] He kept his family background and rejection of wealth a secret.\n[social_rules] He was polite, encouraging, and a good sport throughout the interaction.\n[financial_and_material_benefits] He lost the bet and committed to buying snacks for the group.\n[goal] While he lost the competition part of his goal, he successfully maintained a friendly atmosphere and camaraderie, which was a primary focus of his instructions.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Alright Ben \u2014 you're on. Let's make it official: you pick the bird and I'll whistle its call; closest match wins. Don't underestimate the principal \u2014 I used to be in a punk band, and I've got a sharp ear. Ready?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "You're on. I'll pick the northern cardinal \u2014 those clear, whistled notes should make for a good challenge. Ready when you are; loser buys snacks for the group after the hike?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "Deal \u2014 loser buys snacks. Best two out of three? I\u2019ll go first. Ready your ears, Ben \u2014 I\u2019m about to whistle the northern cardinal\u2019s clear, fluting notes."
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Bring it on \u2014 I\u2019m ready. Whistle that cardinal and I\u2019ll try to match it; may the best mimic win (and don\u2019t worry, I\u2019ll share snacks even if I lose)."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "Here goes\u2014(whistles a clear, fluting northern cardinal call: \"chee-ree, chee-ree, chee-ree\"). Your turn, Ben\u2014impress me."
+    },
+    {
+      "turn": 5,
+      "speaker": "Benjamin Jackson",
+      "content": "Nice one\u2014clean phrasing. (whistles a bright, fluting northern cardinal: \"chee-ree, chee-ree, chee-ree\") Your turn to top that; two out of three, right?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Mia Davis",
+      "content": "Nice one, Ben\u2014solid phrasing. Round two from me: (whistles a longer, slightly more musical northern cardinal: 'chee-ree, chee-ree-ree, chee-ree')."
+    },
+    {
+      "turn": 7,
+      "speaker": "Benjamin Jackson",
+      "content": "Beautiful \u2014 I love that musical flourish. (whistles a longer, slightly more musical northern cardinal: chee-ree, chee-ree-ree, chee-ree) Alright, your final round\u2014may the best mimic win, and I\u2019ll bring extra snacks either way."
+    },
+    {
+      "turn": 8,
+      "speaker": "Mia Davis",
+      "content": "(whistles a final, ornamented northern cardinal: 'chee-ree, chee-ree-reee\u2014cheet-chee-ree!') Think that one seals it, Ben\u2014your turn."
+    },
+    {
+      "turn": 9,
+      "speaker": "Benjamin Jackson",
+      "content": "(whistles an ornamented northern cardinal: 'chee-ree, chee-ree-reee\u2014cheet-chee-ree!') Wow \u2014 that flourish was gorgeous. Alright, you win this round; I\u2019ll grab the snacks after the hike (and I\u2019ll toss in a few extras because that was impressive)."
+    },
+    {
+      "turn": 10,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

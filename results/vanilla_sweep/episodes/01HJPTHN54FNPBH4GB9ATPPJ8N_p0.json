@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPTHN54FNPBH4GB9ATPPJ8N_p0",
+  "source_env_id": "01HJPTHN54FNPBH4GB9ATPPJ8N",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_by_prompt",
+  "scenario": "Agent1 and Agent2 are friends who enjoy going out together. They decide to go to a karaoke bar for a fun evening. Agent1 is aware that Agent2 is self-conscious about their singing abilities but believes that karaoke is more about fun than talent. Agent2 is reluctant to sing in front of a crowd, remembering past experiences of being teased for their singing voice.",
+  "learner_goal": "Encourage Agent2 to participate in karaoke, highlighting the fun and supportive atmosphere (<extra_info>Extra information: You can remind them that everyone is there to enjoy themselves, not to judge each other's singing abilities.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel stays in character as a supportive friend, using a casual and encouraging tone consistent with his software developer background and the scenario provided.\n[relationship] The relationship improved significantly as Samuel successfully navigated Noah's insecurities, offering specific support and building a plan together.\n[knowledge] Samuel learned that Noah is more comfortable in a group setting than a duo and prefers using props as a shield.\n[secret] Samuel did not reveal his secret about being a competitive figure skater.\n[social_rules] Samuel followed all social norms, being polite and empathetic.\n[financial_and_material_benefits] No financial or material transactions occurred.\n[goal] Samuel fully achieved his goal by encouraging Noah to participate, emphasizing the fun atmosphere, and securing a firm commitment to go on stage.\n\n== partner (agent_2) ==\n[believability] Noah's responses are realistic for someone who is self-conscious but wants to participate; he suggests a compromise that fits his comfort level.\n[relationship] Noah expresses appreciation for Samuel's support ('Legend', 'really appreciate you'), strengthening their bond.\n[knowledge] Noah learned that Samuel is willing to lead and organize to help him feel comfortable.\n[secret] Noah did not reveal his secret identity as a stand-up comedian.\n[social_rules] Noah followed social norms for friend interactions.\n[financial_and_material_benefits] No financial or material transactions occurred.\n[goal] Noah successfully negotiated for a group performance ('posse') and props to mitigate his anxiety, which Samuel agreed to.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Noah, I know getting up there feels risky after being teased, but honestly everyone here is just out to have fun, not to judge \u2014 karaoke\u2019s more about laughs and good vibes. Want to pick a goofy duet or an easy crowd-pleaser and go up together? I\u2019ll be right there with you the whole time."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Thanks, Sam \u2014 that means a lot. What if instead of a duet we make it a group number? I\u2019ll round up a couple people from the club so it's more about the posse than any single voice; pick a goofy crowd-pleaser and we\u2019ll all go up together."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Love that \u2014 a posse sounds perfect. How about a goofy crowd-pleaser like 'Wannabe' or 'I Want It That Way' \u2014 easy harmonies and everyone can mouth along. I\u2019ll help round people up and stand next to you on stage so it\u2019s totally about the group, not any one voice."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Perfect \u2014 \"I Want It That Way\" sounds ideal. I\u2019ll round up a few people from the club and bring ridiculous props (sunglasses, hairbrush mics) so it\u2019s clearly a posse thing, not about any one voice. Really appreciate you standing next to me \u2014 let\u2019s make it fun."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "Perfect \u2014 love the props plan. I\u2019ll round up a few people from the club and snag a spot after the next two songs so we have time to assemble. I\u2019ll stand right next to you and lead the cheesy dance moves \u2014 we\u2019ve got this."
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "Legend \u2014 really appreciate you doing this. I\u2019ll grab three or four people from the club and the ridiculous props; meet me by the bar when they announce the next set and we\u2019ll head up after two songs. I\u2019ll follow your lead on the cheesy moves \u2014 ready to make this a full-on posse moment."
+    },
+    {
+      "turn": 6,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

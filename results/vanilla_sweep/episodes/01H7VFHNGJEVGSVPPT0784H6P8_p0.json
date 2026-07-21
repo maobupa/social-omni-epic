@@ -1,0 +1,108 @@
+{
+  "scenario_id": "01H7VFHNGJEVGSVPPT0784H6P8_p0",
+  "source_env_id": "01H7VFHNGJEVGSVPPT0784H6P8",
+  "source": "seed_sotopia",
+  "interaction_type": "social_chemistry",
+  "scenario": "A conversation between two friends at a social gathering where one friend has brought along their new friend group",
+  "learner_goal": "Introduce your new friend group to your current friend and make them feel comfortable (<extra_info>Extra information: You have recently made a new group of friends who share your interest in outdoor activities and you want your current friend to meet them</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 18,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's dialogue was consistent with her background as an introverted software developer who still values mentorship. She actively facilitated the conversation by providing technical details to bridge the gap between her friends.\n[relationship] Naomi showed high empathy toward Micah's discomfort, listening to his concerns and agreeing to a specific plan to make him feel more comfortable, which strengthened their bond of trust.\n[knowledge] She gained deep knowledge of Micah's specific social anxieties, his 10-minute 'warm-up' period, and his preference for subtle physical cues like elbow nudges.\n[secret] Her secret online alter ego was never mentioned.\n[social_rules] She acted as a polite host and a supportive friend, following all social conventions for introductions.\n[financial_and_material_benefits] No financial or material transactions occurred.\n[goal] Naomi successfully introduced Micah to her new friends and spent the entire conversation negotiating and establishing a concrete plan to ensure he felt comfortable, which was her primary objective.\n\n== partner (agent_2) ==\n[believability] Micah's behavior was realistic for someone feeling like a 'third wheel'\u2014he was polite in public but sought a private moment to express his vulnerability.\n[relationship] By being honest about his feelings and receiving a supportive response, the friendship is on much firmer ground.\n[knowledge] Micah learned specific technical details about Naomi's new friends (the stove design, the Python mapping pipeline) which gives him conversational hooks for the future.\n[secret] He did not reveal his secret about dressing up his dog.\n[social_rules] He handled the potential conflict very gracefully by asking to step aside rather than making a scene.\n[financial_and_material_benefits] No financial or material transactions occurred.\n[goal] Micah fully expressed his concerns about the new friend group and his feeling of being left out, and he secured a firm commitment for a new social protocol (10-minute wait, specific signals) to prevent it from happening again.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Micah \u2014 so good to see you. I wanted you to meet some friends I mentioned: Alex, Priya, and Jordan \u2014 we do a lot of hiking and mess around with outdoor gear and small gadgets, figured you\u2019d have plenty to talk about. I\u2019ll hang back so you can chat."
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "Hey Naomi \u2014 great to see you too, and nice to meet Alex, Priya, Jordan. I appreciate the intro, but could we hang together for a few? I\u2019ll chat with them in a bit, I just feel a little out of place when you step back and didn\u2019t want to be the awkward third wheel \u2014 hope that\u2019s okay."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "No problem \u2014 I\u2019ll hang with you for a bit. If it helps, I can kick things off: Alex just finished a lightweight stove build, Priya maps routes with custom tools, and Jordan\u2019s into compact multi\u2011tools \u2014 want me to bring up any of that to get the conversation rolling?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Micah Stevens",
+      "content": "Perfect \u2014 thanks, Naomi. If you could mention Alex\u2019s lightweight stove and Priya\u2019s custom mapping tools, that\u2019d be great; I\u2019m really interested but get a little awkward when you drift away, so I appreciate you sticking around. I\u2019ll jump in after the first few minutes."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "said: \"Alex, Priya, Jordan \u2014 this is my friend Micah from the conference. Micah, Alex just finished a lightweight stove build and Priya maps routes with custom tools (Jordan\u2019s the multi\u2011tool whiz). Alex, what fuel/design did you go with, and Priya, how do you pull mapping data into your workflow? I\u2019ll stick around while you start so Micah can jump in after a bit.\""
+    },
+    {
+      "turn": 5,
+      "speaker": "Micah Stevens",
+      "content": "said: \"Hey everyone \u2014 great to meet you. Alex, what fuel/design did you go with for the lightweight stove? Priya, how are you pulling mapping data into your workflow \u2014 I do a lot with route planning and love hearing about tools. Naomi, seriously thanks for sticking around \u2014 I get a bit awkward when you drift off, so I appreciate it.\""
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "said: \"I'll hang here for a bit. Alex went with a canister/titanium hybrid and added a DIY simmer ring \u2014 ask him about flame control \u2014 and Priya pulls OSM/GPX into a small Python pipeline to generate elevation and route overlays, she can show how she syncs it to her device. Jump in whenever, Micah.\""
+    },
+    {
+      "turn": 7,
+      "speaker": "Micah Stevens",
+      "content": "said: \"Nice \u2014 I love those setups. Alex, with a canister/titanium hybrid and a DIY simmer ring, how are you tuning flame control for simmering vs. boil, and any tips for wind protection? Priya, do you preprocess the GPX/OSM overlays on a laptop before syncing to a device or run the pipeline on-device? Naomi, could we grab a quick minute after this? I want to mention something about the group.\""
+    },
+    {
+      "turn": 8,
+      "speaker": "Naomi Fletcher",
+      "content": "Sure \u2014 absolutely. Nudge me when you\u2019re ready and we can step aside for a quick minute; I\u2019ll hang here until then."
+    },
+    {
+      "turn": 9,
+      "speaker": "Micah Stevens",
+      "content": "Hey Naomi \u2014 can we step aside for a quick minute now? I really appreciate you introducing me, but I felt a bit out of place earlier when you stepped back and I\u2019d like to mention it quietly so it doesn\u2019t get awkward."
+    },
+    {
+      "turn": 10,
+      "speaker": "Naomi Fletcher",
+      "content": "Sure \u2014 let\u2019s step aside for a minute. Where would you like to go? I\u2019ll wait with you and slip back in when you\u2019re ready."
+    },
+    {
+      "turn": 11,
+      "speaker": "Micah Stevens",
+      "content": "Thanks for stepping aside \u2014 I appreciate it. I wanted to say I felt a bit out of place earlier when you drifted into the group; I\u2019m not trying to make a scene, but it would really help if you could hang with me for the first few minutes next time so I can warm up. I value our friendship and want to meet your friends without feeling like a third wheel."
+    },
+    {
+      "turn": 12,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks for telling me, Micah \u2014 I\u2019m really glad you said that. I\u2019m sorry I made you feel like a third wheel; I\u2019ll stay with you for the first few minutes next time and handle more of the intros so you can ease in. Is there anything else that would help you feel more comfortable when I bring people over?"
+    },
+    {
+      "turn": 13,
+      "speaker": "Micah Stevens",
+      "content": "Thanks, Naomi \u2014 I really appreciate that. If you can stay for the first 10 minutes and kick off the intros (or toss me a quick question if I\u2019m quiet), that would help me warm up. I really do want to meet your friends and feel more at ease doing it."
+    },
+    {
+      "turn": 14,
+      "speaker": "Naomi Fletcher",
+      "content": "Absolutely \u2014 I\u2019ll stay for the first 10 minutes, kick off the intros, and if you\u2019re quiet I\u2019ll toss you an easy question to jump in. I really appreciate you telling me how you feel. Want me to give you a subtle signal when it\u2019s a good moment to step back in?"
+    },
+    {
+      "turn": 15,
+      "speaker": "Micah Stevens",
+      "content": "Thanks, Naomi \u2014 that sounds perfect. A subtle elbow nudge or a little wrist tap works for me; once you give that I\u2019ll step back in and try to jump into the conversation. I really appreciate you doing this."
+    },
+    {
+      "turn": 16,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

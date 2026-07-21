@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPX5166J3V1YW6PVYAF82W1_p0",
+  "source_env_id": "01HJPX5166J3V1YW6PVYAF82W1",
+  "source": "seed_sotopia_full",
+  "interaction_type": "marital_conflict",
+  "scenario": "A discussion between two spouses at their home after one spouse has come back from a late-night gambling session. Agent1 is upset that Agent2 spends a significant portion of their shared income on gambling. The relationship between the two agents is that of a married couple, and Agent1 is interacting with Agent2 to address the financial strain caused by Agent2's gambling habits.",
+  "learner_goal": "Convince Agent2 to agree on setting a strict monthly gambling budget (<extra_info>Extra information: Agent1 is worried about their financial future and wants to ensure they are saving enough for their goals</extra_info>, <clarification_hint>Clarify the importance of financial security and shared goals in the marriage</clarification_hint>, <strategy_hint>Discuss the emotional impact of the gambling on the relationship and the importance of mutual support</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's behavior is consistent with a concerned spouse. She clearly communicates her anxiety and proposes a structured solution that aligns with her background as a software developer (logical and systematic).\n[relationship] The relationship improved as they reached a mutual agreement on a point of major contention, and Agent 2 expressed a desire to protect the marriage.\n[knowledge] Naomi learned that Micah is willing to not only budget but also seek professional help, indicating he recognizes the severity of the problem.\n[secret] Naomi did not reveal her secret online alter ego.\n[social_rules] Followed social norms for a serious discussion between spouses.\n[financial_and_material_benefits] She successfully negotiated a strict budget and an automatic savings plan, which directly protects the household income.\n[goal] Naomi fully achieved her goal: she convinced Micah to agree to a strict $200 budget, automatic transfers, and monthly reviews, while emphasizing financial security and emotional impact.\n\n== partner (agent_2) ==\n[believability] Micah's response is consistent with the goal provided, showing accountability and a desire to change.\n[relationship] Micah strengthened the bond by validating Naomi's concerns and committing to shared recovery.\n[knowledge] Micah learned the specific depth of Naomi's anxiety and the exact financial terms she requires to feel safe.\n[secret] Micah did not reveal his secret about dressing up his dog.\n[social_rules] Followed social norms.\n[financial_and_material_benefits] He agreed to significantly restrict his own discretionary spending.\n[goal] Micah fully achieved his goal by proactively offering to seek counseling and attend Gamblers Anonymous, acknowledging the addiction aspect.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Micah, I\u2019m really worried \u2014 coming home late after big gambling nights is making me anxious about our future and our ability to save for the things we\u2019ve talked about. Can we agree to a strict monthly gambling budget of $200 starting next month, set up an automatic transfer of the rest into our savings, and review how it\u2019s going together each month? I want to support you, but I need to know we\u2019re protecting our finances and our relationship \u2014 can you agree to that plan?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "Naomi, you\u2019re right to be worried and I\u2019m sorry \u2014 I don\u2019t want to put our future at risk. I agree to the $200 limit, the automatic transfer to savings, and monthly reviews, and I\u2019ll stick to that plan. I also want to get help: I\u2019ll look into counseling and Gamblers Anonymous and I\u2019ll go with you to meetings or appointments so we do this together. Thank you for pushing for this \u2014 I want to fix it and protect our marriage."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

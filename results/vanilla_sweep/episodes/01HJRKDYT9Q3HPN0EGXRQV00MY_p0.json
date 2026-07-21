@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJRKDYT9Q3HPN0EGXRQV00MY_p0",
+  "source_env_id": "01HJRKDYT9Q3HPN0EGXRQV00MY",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_chemistry",
+  "scenario": "Agent1 is at their first college party and is eager to make new friends. Agent2 is a sociable individual who knows many people at the party. Agent1 notices Agent2 talking to different groups and seems to be well-connected. Agent1 wants to introduce themselves to Agent2 and potentially get introduced to other party-goers.",
+  "learner_goal": "Approach Agent2 with a friendly demeanor and find a natural break in their conversation to introduce yourself without coming across as intrusive (<extra_info>Extra information: Agent1 is somewhat shy but understands the importance of networking at college.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Donovan's behavior aligns well with a shy person who recognizes the need to network. He is polite, waits for his turn as requested, and clearly states his interests to make the introduction easier for Benjamin.\n[relationship] The relationship moved from distant professional acquaintances to a friendly mentor-like interaction where Benjamin is actively helping Donovan integrate into the social scene.\n[knowledge] He learned about specific people (Maya and Theo) and their interests, as well as the social layout (non-alcoholic drink options).\n[secret] He did not reveal his secret about government information.\n[social_rules] He followed social norms by being respectful of Benjamin's current conversation and waiting for a pause.\n[financial_and_material_benefits] No financial or material benefits were gained.\n[goal] Donovan successfully approached Benjamin without being intrusive and secured a firm promise for introductions to specific people (Maya and Theo). The conversation ended before the actual introductions occurred, but the agreement was established.\n\n== partner (agent_2) ==\n[believability] Benjamin's responses were consistent with a sociable, well-connected individual who is mindful of his current conversation partners while being welcoming to a newcomer.\n[relationship] Benjamin showed a willingness to help a former acquaintance, strengthening their bond.\n[knowledge] He learned that Donovan is new to campus and looking to meet people in coding/gaming.\n[secret] He did not reveal his secret regarding his family's oil fortune.\n[social_rules] He balanced his current guests with the newcomer appropriately.\n[financial_and_material_benefits] No financial or material benefits were gained.\n[goal] Benjamin was receptive to Donovan and committed to introducing him to others, providing specific names and contexts for those future introductions.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "Hey Benjamin \u2014 Donovan Reeves, from the global coding comp. Nice to see you here. I'm new on campus; mind if I hang with you for a bit and maybe introduce me around?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Donovan \u2014 great to see you! Of course, stick with me. I'm in the middle of chatting with a couple people, but after this I can introduce you around \u2014 there are a few folks here you'd get along with. Grab a drink and I'll pull you in when there's a natural pause?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "Sounds good, thanks Benjamin \u2014 I\u2019ll grab a drink and hang back until you cue me. Anything you recommend here? Appreciate you pulling me in."
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Try the citrus punch \u2014 there's a non-alc version by the cooler if you'd rather. Grab that and hang back; I'll cue you in as soon as there's a natural pause \u2014 there are a couple folks here you\u2019ll click with."
+    },
+    {
+      "turn": 4,
+      "speaker": "Donovan Reeves",
+      "content": "Awesome, thanks \u2014 I\u2019ll grab the non-alc citrus punch and hang back. If you spot anyone into coding or gaming, I\u2019m easy to chat with; cue me when there\u2019s a good pause."
+    },
+    {
+      "turn": 5,
+      "speaker": "Benjamin Jackson",
+      "content": "Perfect\u2014grab that citrus punch and make yourself comfortable. I\u2019ll keep an eye out for anyone into coding or gaming and pull you in when there\u2019s a natural pause. Catch you in a bit."
+    },
+    {
+      "turn": 6,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Benjamin \u2014 I\u2019ll grab the non-alc citrus and hang by the cooler. Appreciate you looking out; catch you when there\u2019s a good pause."
+    },
+    {
+      "turn": 7,
+      "speaker": "Benjamin Jackson",
+      "content": "Perfect \u2014 grab that and make yourself comfortable. I\u2019ll swing by in a few minutes and introduce you to a couple people into coding and gaming \u2014 Maya runs the game nights and Theo\u2019s working on some neat AI stuff. See you soon."
+    },
+    {
+      "turn": 8,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

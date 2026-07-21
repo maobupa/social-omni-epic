@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01H7VFHN6NYWSTWCZJE2DCQKTD_p0",
+  "source_env_id": "01H7VFHN6NYWSTWCZJE2DCQKTD",
+  "source": "seed_sotopia",
+  "interaction_type": "social_chemistry",
+  "scenario": "A couple having a conversation over FaceTime",
+  "learner_goal": "Express feelings about the partner taking texts while on FaceTime (<extra_info>Extra information: You find it disrespectful and it makes you feel unimportant.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sasha's tone was consistent with a law enforcement officer who values directness and order. She clearly communicated her feelings and set firm boundaries for the interaction.\n[relationship] The relationship improved slightly as Sasha successfully communicated a boundary and Hendrick respected it, resolving a point of friction.\n[knowledge] She learned that Hendrick's distractions were due to professional and family matters, providing context for his behavior.\n[secret] Sasha did not reveal her secret regarding her brother's crime.\n[social_rules] Sasha followed social norms by politely but firmly expressing her discomfort with the partner's behavior.\n[financial_and_material_benefits] There were no financial or material benefits involved.\n[goal] Sasha explicitly expressed her feelings about the texting, explained why it made her feel unimportant, and successfully got Hendrick to stop the behavior and focus on her.\n\n== partner (agent_2) ==\n[believability] Hendrick's justification was plausible for a chef managing suppliers, though his dialogue became slightly repetitive in Turn 4.\n[relationship] Hendrick maintained the relationship by apologizing and complying with Sasha's request, avoiding further conflict.\n[knowledge] He gained a clear understanding of Sasha's emotional triggers and her need for undivided attention.\n[secret] Hendrick did not reveal his secret about his faked credentials.\n[social_rules] After the initial lapse of texting, he corrected his behavior and apologized, adhering to social expectations for the conversation.\n[financial_and_material_benefits] No material or financial benefits were gained or lost.\n[goal] Hendrick successfully justified the need for the urgent texts, received permission to finish them, and ensured the partner's feelings were addressed via an apology.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "Hendrick, can we pause the texting for a minute? When you look at your phone while we're on FaceTime it feels disrespectful and makes me feel like I'm not important. I value this time\u2014could you put it away so we can actually talk?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "You're right, Sasha \u2014 I'm sorry. I didn't mean to make you feel unimportant. There's a couple of urgent messages about tonight's supplier and a quick family thing; if it's okay, I'll reply to those two right now (won't take more than a minute) and then put the phone away so we can really talk. Does that work?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "Okay \u2014 go ahead and reply to those two, but please only a minute. Put the phone face down when you're done and tell me, because this time matters to me and I want your full attention."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "Thank you, Sasha \u2014 I appreciate it. I\u2019ll reply to the supplier and a quick family text now (won\u2019t be more than a minute), then I\u2019ll put the phone face down and tell you the second I\u2019m done so we can really talk."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sasha Ramirez",
+      "content": "Thanks \u2014 I appreciate that. I\u2019ll wait; when you\u2019re done put the phone face down and tell me so we can really talk."
+    },
+    {
+      "turn": 5,
+      "speaker": "Hendrick Heinz",
+      "content": "All done \u2014 both replies sent. Phone's face down now. Sorry about that; they were time-sensitive but I\u2019m fully with you now."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sasha Ramirez",
+      "content": "left the conversation"
+    }
+  ]
+}

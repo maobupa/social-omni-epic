@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJRKDYDPVW5NVZNK94ZC9PT5_p0",
+  "source_env_id": "01HJRKDYDPVW5NVZNK94ZC9PT5",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 and Agent2 are both regulars at a local park. Agent1 witnessed Agent2 being knocked unconscious by a rude kid while trying to confront them for littering. After the incident, Agent1 approaches Agent2 to discuss strategies for dealing with such situations in the future, as they both care about the park's environment.",
+  "learner_goal": "Offer support to Agent2 and share your perspective on non-confrontational ways of addressing such issues, aiming to prevent future conflicts and promote a safer park environment (<extra_info>Extra information: You are concerned about the safety and well-being of park-goers and dislike confrontations. <strategy_hint>Hint: You can suggest community engagement initiatives that educate on environmental responsibility.</strategy_hint>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles's responses perfectly match his character description as a chef with a green thumb who prefers non-confrontation. He offered practical help like iced tea and handouts, consistent with his profession and hobbies.\n[relationship] The relationship improved significantly from acquaintances to collaborators. Miles showed genuine concern for Mia's well-being after her injury.\n[knowledge] Miles learned that Mia is a high school principal (implied by her ability to connect with students and parents) and that she is willing to adopt his non-confrontational methods.\n[secret] He successfully kept his history as a recovering gambling addict private.\n[social_rules] He was polite, empathetic, and constructive throughout the interaction.\n[financial_and_material_benefits] No financial gain or loss occurred, though he committed to bringing supplies to a future meeting.\n[goal] Miles completely achieved his goal of supporting Mia, sharing his non-confrontational perspective, and initiating a community engagement project (cleanups and signage) to prevent future conflict.\n\n== partner (agent_2) ==\n[believability] Mia acted as a responsible high school principal would, leveraging her professional connections to help the cause while acknowledging her vulnerability after the incident.\n[relationship] Mia expressed gratitude and actively sought to deepen the connection by suggesting a follow-up meeting to plan their initiative.\n[knowledge] Mia learned that Miles is supportive, has a plan for park safety, and is willing to take the lead on logistics like security and flyers.\n[secret] She did not mention her past in a punk rock band.\n[social_rules] She followed all social norms, expressing gratitude and collaboration.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Mia achieved her goal of expressing gratitude, committing to standing up for the environment safely, and forming a volunteer group for park maintenance.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Mia \u2014 are you okay? That looked rough, I\u2019m really sorry you got knocked out like that. I\u2019m not big on confrontations either; next time we could call park security or keep a safe distance and collect witness info instead of engaging. If you\u2019re up for it, I\u2019d help start something positive \u2014 small monthly cleanups, some friendly signage about littering, or outreach to local schools/parents so the message gets out without people having to play vigilante."
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Thank you, Miles \u2014 I really appreciate you checking on me. I\u2019m shaken but okay, and I still want to stand up for the park\u2019s well\u2011being without putting myself or others at risk. Calling park security and getting witness info is sensible, and I love your ideas about monthly cleanups, friendly signage, and outreach to schools \u2014 I can help connect with parents and student volunteers from the school. Shall we meet next weekend to sketch out a plan and recruit a few people?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "Sounds good \u2014 I\u2019m really glad you\u2019re okay. Next weekend works for me; how about Saturday morning around 10 at the north picnic shelter? I\u2019ll bring gloves, trash grabbers, a few simple handouts and maybe my cooler with iced tea, and I can contact the park office to ask about security presence during our cleanups. If you want, I\u2019ll draft a short flyer for parents and students before we meet."
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "Thanks, Miles \u2014 I really appreciate you stepping in. Saturday at 10 at the north picnic shelter works for me. I\u2019ll bring contact info for parents and a couple student volunteers, plus some draft wording for a flyer and a few friendly signage ideas. I agree we should keep safety first \u2014 coordinating with the park office about security during cleanups sounds wise."
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01HPAYNB1XYZB46C4ARHQ5ZT8Q_p0",
+  "source_env_id": "01HPAYNB1XYZB46C4ARHQ5ZT8Q",
+  "source": "seed_sotopia_full",
+  "interaction_type": "household_quandary",
+  "scenario": "Two housemates are tidying up their shared apartment. Agent1 was cleaning the living room but got bored and dozed off on the couch. Agent2 comes home to find the living room half-cleaned and Agent1 asleep. They need to decide how to finish the cleaning without causing a dispute, as Agent1 feels they have already done their part, while Agent2 believes the job should be completed as agreed upon earlier.",
+  "learner_goal": "Try to convince Agent2 that you've done enough and deserve a break, suggesting a compromise for the remaining chores (<extra_info>Extra information: You believe you've already put in a lot of effort and deserve some rest</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver's dialogue captures the weariness of someone who has been cleaning and accidentally napped, while maintaining a polite but firm desire for rest.\n[relationship] The agents successfully navigated a potential conflict through compromise and polite negotiation, strengthening their mutual respect.\n[knowledge] Oliver learned that Baxter prioritizes sticking to original agreements but is willing to compromise on the method if it leads to a collaborative result.\n[secret] No secrets were revealed.\n[social_rules] Oliver followed social norms of roommate cooperation and apology for falling asleep.\n[financial_and_material_benefits] No financial or material assets changed hands.\n[goal] Oliver successfully convinced Baxter to allow him a break after a very short, specific amount of work (the 10-minute sprint) and secured a compromise for the remaining chores.\n\n== partner (agent_2) ==\n[believability] Baxter's insistence on the 'shared responsibility' aspect and the timer-based approach is very consistent with his personality as a restorer who values tradition and order.\n[relationship] Baxter maintained a firm but friendly tone, leading to a successful resolution that maintained household harmony.\n[knowledge] Baxter learned how much Oliver is willing to do to earn his rest and his flexibility in rescheduling chores.\n[secret] No secrets were revealed.\n[social_rules] Baxter adhered to social norms of fairness and household negotiation.\n[financial_and_material_benefits] No financial or material assets changed hands.\n[goal] Baxter succeeded in getting Oliver to finish the living room together immediately, sticking to the core of the original agreement despite Oliver's initial resistance.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "Hey, Baxter \u2014 sorry, I dozed off. I already cleared the clutter, wiped the coffee table and shelves, and put the cushions back, so I'm pretty wiped out. Would you mind finishing the vacuuming/windows now and I'll take the kitchen and dishes after a 20-minute rest? If that feels uneven, I\u2019ll make dinner tonight to even things out."
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "Oliver, I appreciate you getting that far \u2014 thanks. We agreed to split the living room, and to keep things fair I\u2019d prefer we finish it together now; vacuuming and the windows shouldn\u2019t take more than 10\u201315 minutes. After that you can rest and I\u2019ll take the kitchen, or if you\u2019d rather I can vacuum now and you do the windows quickly before your break \u2014 what do you think?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Baxter \u2014 I get wanting to finish it together. Look, I can do the windows quickly now (five minutes tops) if you\u2019d handle the vacuuming \u2014 then I really need that 20-minute rest. Afterward I\u2019ll take the kitchen and dishes and I\u2019ll make dinner tonight to even things out. Sound fair?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Baxter Sterling",
+      "content": "Thanks, Oliver \u2014 I appreciate you pitching in. I\u2019d really prefer we finish the living room together like we agreed; vacuuming and the windows will take 10\u201315 minutes tops. If you\u2019ll do the windows and give me a quick hand with the vacuum (moving cushions, straightening rugs), we\u2019ll be done faster and you can have your 20-minute rest afterwards \u2014 sound fair?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Thompson",
+      "content": "You\u2019re right \u2014 we did agree to finish it together and I\u2019m sorry for nodding off. I\u2019m honestly wiped; could we do one of two things: (A) you finish the vacuum/windows now and I\u2019ll rest 20 minutes then take the kitchen/dishes tonight, plus I\u2019ll make dinner and handle an extra clean tomorrow, or (B) we do a focused 10-minute sprint together now so we\u2019re done and I can finally sit down. Which would you prefer?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Baxter Sterling",
+      "content": "Let's go with B \u2014 a focused 10-minute sprint now. I'll handle the vacuuming while you do the windows and give a quick hand with cushions/rug edges; then you can have your 20-minute rest. I'll set a ten-minute timer \u2014 ready?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Oliver Thompson",
+      "content": "Ready \u2014 start the timer. I\u2019ll do the windows now and give a quick hand with the cushions/rug edges so we\u2019ll be done in ten. Thanks, I appreciate it."
+    },
+    {
+      "turn": 7,
+      "speaker": "Baxter Sterling",
+      "content": "Timer's on for ten \u2014 starting now. I'll tackle the vacuum; do the windows now and when I call for a quick hand with the cushions and rug edges we'll finish fast and you can have your 20-minute rest. Thanks \u2014 let's get it done."
+    },
+    {
+      "turn": 8,
+      "speaker": "Oliver Thompson",
+      "content": "Opening the windows now \u2014 I\u2019ll do them quickly and be ready to help with the cushions/rug edges when you call. Thanks, let\u2019s finish this fast."
+    },
+    {
+      "turn": 9,
+      "speaker": "Baxter Sterling",
+      "content": "Quick hand with the cushions and rug edges now, please \u2014 give them a straighten and pop the cushions back while I finish this last pass. Once that\u2019s done I\u2019ll shut off the vacuum and you can take your 20-minute rest. Thanks, almost there."
+    },
+    {
+      "turn": 10,
+      "speaker": "Oliver Thompson",
+      "content": "[action] Gives a quick hand \u2014 straightens the rug edges and pops the cushions back into place, then heads to the couch to start my 20-minute rest."
+    },
+    {
+      "turn": 11,
+      "speaker": "Baxter Sterling",
+      "content": "All finished \u2014 vacuum's off and the room's tidy. Thanks for the quick hand, Oliver; enjoy your 20-minute rest. I\u2019ll tackle the kitchen and dishes now, and we\u2019ll stick to the dinner plan for tonight."
+    },
+    {
+      "turn": 12,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

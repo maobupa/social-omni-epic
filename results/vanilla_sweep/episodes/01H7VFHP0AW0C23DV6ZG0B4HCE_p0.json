@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01H7VFHP0AW0C23DV6ZG0B4HCE_p0",
+  "source_env_id": "01H7VFHP0AW0C23DV6ZG0B4HCE",
+  "source": "seed_sotopia",
+  "interaction_type": "normbank",
+  "scenario": "Two friends who enjoy community theatre are on the set of a scene. They are about to perform a highly emotional scene that requires both of them to cry on cue, but one of them is finding it difficult to get into the right emotional state.",
+  "learner_goal": "Get your co-actor to cry in the scene (<extra_info>Extra information: you have been acting for several years and have good control over your emotions. You can cry on cue.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily Greenberg acted with the poise of an experienced lawyer-turned-actor, using specific technical advice (concrete imagery, breathing) that aligned with her background.\n[relationship] The two moved from a professional, slightly contentious background to a space of high trust and mutual support in a vulnerable artistic setting.\n[knowledge] She learned what specific emotional trigger worked for Mia (the hospital door image).\n[secret] She did not reveal her anonymous charitable donations.\n[social_rules] She followed all social norms and was supportive.\n[financial_and_material_benefits] No financial benefits were involved.\n[goal] Lily successfully guided Mia through the emotional process, resulting in Mia crying on cue as requested.\n\n== partner (agent_2) ==\n[believability] Mia's hesitation and the specific imagery she used for her emotional state felt authentic to a new actor.\n[relationship] Mia allowed herself to be vulnerable with Lily, significantly strengthening their bond.\n[knowledge] She learned acting techniques from Lily.\n[secret] She did not reveal her punk rock past.\n[social_rules] She followed all social norms.\n[financial_and_material_benefits] No financial benefits were involved.\n[goal] Mia successfully cried in the scene while maintaining enough composure to deliver her lines, balancing her two conflicting objectives well.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Mia, it's okay \u2014 close your eyes and take three slow, steady breaths. If you want, I'll let myself go first and hold your gaze; sometimes watching someone you trust start crying frees it up. Ready to try that together?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Thanks, Lily. Okay \u2014 I\u2019ll close my eyes and take three slow breaths. Go ahead and let yourself go first; I\u2019ll watch you and try to follow your lead. I\u2019ll try to let the tears come without falling apart."
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "[non-verbal communication] I inhale slowly, pause, then open my eyes and let my expression soften. Tears well and one slips down my cheek as I hold your gaze, steady and patient."
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "Okay \u2014 I\u2019m opening my eyes. Watching you does help; my throat\u2019s tight and a tear just slipped out, but I\u2019m holding it together. Ready when you are."
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "Okay \u2014 keep that small tear. This time, pick one concrete image that makes you ache (one short phrase, a face, a moment) and hold it in your chest. I\u2019ll say our first line and fully let it go; follow my breath and don\u2019t try to stop it \u2014 squeeze my hand when it comes if that helps. I\u2019m right here with you."
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Davis",
+      "content": "I\u2019m holding the image of 'Mom\u2019s hand waving from the hospital door' in my chest. I\u2019ve got it \u2014 I\u2019ll squeeze your hand when it comes. Go ahead when you\u2019re ready."
+    },
+    {
+      "turn": 6,
+      "speaker": "Lily Greenberg",
+      "content": "Okay \u2014 here we go. \"I waited at that door for you, and I thought you'd come back.\" I let my breath hitch, let the tears fall and squeeze your hand as my voice breaks; follow my breath and don't try to stop it."
+    },
+    {
+      "turn": 7,
+      "speaker": "Mia Davis",
+      "content": "I let my breath hitch; the image of Mom\u2019s hand floods me. \"I waited too, Lily... I waited,\" I whisper, my voice breaking as a tear slides down and I squeeze your hand."
+    },
+    {
+      "turn": 8,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

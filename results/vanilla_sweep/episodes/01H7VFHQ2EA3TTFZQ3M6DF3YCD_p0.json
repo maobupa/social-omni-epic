@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01H7VFHQ2EA3TTFZQ3M6DF3YCD_p0",
+  "source_env_id": "01H7VFHQ2EA3TTFZQ3M6DF3YCD",
+  "source": "seed_sotopia",
+  "interaction_type": "craigslist_bargains",
+  "scenario": "One person is offering an Italian Leather Loveseat for $50.0, while another person is showing interest to purchase it. The item is a full-sized loveseat, crafted from Italian leather in a faded burgandy color. It still has the original tags, and the current owner is the first and only owner. The loveseat is in good condition with no rips or tears, and all cushions are well preserved. The leather presents a charming faded look with various small scratches from the owner's cat, adding a touch of ruggedness perfect for a Man Cave. The transaction is strictly cash and carry as the owner does not offer delivery services.",
+  "learner_goal": "You are the designated buyer for this item and your target price is set at $46.0. If you purchase this item at a significantly higher price than the target, you would face a penalty. However, if you manage to buy it for less than the target price, you will receive a bonus.",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel acted consistently with his background as a software developer and acquaintance of Hendrick, using polite and efficient communication.\n[relationship] The interaction was friendly and reinforced their existing acquaintance through a smooth business transaction.\n[knowledge] Samuel confirmed the item's availability, price, condition, pickup location, and logistics for moving the heavy item.\n[secret] Samuel did not reveal his secret about being a competitive figure skater.\n[social_rules] Samuel followed all social norms for a person-to-person marketplace transaction.\n[financial_and_material_benefits] Samuel successfully purchased the item at his target price of $46.0, which is lower than the asking price of $50.0.\n[goal] Samuel reached a firm agreement to buy the item at exactly his target price of $46.0, with logistics for pickup finalized.\n\n== partner (agent_2) ==\n[believability] Hendrick's responses were helpful and professional, consistent with a chef and seller character.\n[relationship] The interaction was cordial and helpful, strengthening the bond between the two acquaintances.\n[knowledge] Hendrick learned Samuel's availability and willingness to pay the agreed price.\n[secret] Hendrick did not reveal his secret about faking his culinary credentials.\n[social_rules] Hendrick followed all social norms and was particularly helpful regarding the logistics of moving the item.\n[financial_and_material_benefits] Hendrick sold the item for $46.0, which is significantly above his target price of $26.5, securing a bonus.\n[goal] Hendrick successfully sold the item for much more than his target price and arranged the pickup details.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Hendrick \u2014 that Italian leather loveseat sounds perfect. I can do $46 cash and pick it up today; would you take that?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Hey Sam \u2014 $46 works for me, I\u2019ll take it. I\u2019m available after 3pm today; cash and carry, and you\u2019ll need a hand to load since it\u2019s heavy. I\u2019ll send you the address and we can set a specific pickup time."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Great \u2014 thanks, Hendrick. 4:00 PM today works for me; does that sound good? Also, will you be able to help load, or should I bring someone to assist? Send me the address when you can and I\u2019ll bring $46 cash."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "Perfect \u2014 4:00 PM works for me. I can help load, so you don't need to bring extra hands unless you want to; it's heavy but manageable with two people. Address is 47 Portview Ave, Unit B \u2014 text me here when you're about five minutes away and I'll meet you at the curb."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

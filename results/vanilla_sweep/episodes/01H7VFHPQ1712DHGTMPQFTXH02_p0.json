@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01H7VFHPQ1712DHGTMPQFTXH02_p0",
+  "source_env_id": "01H7VFHPQ1712DHGTMPQFTXH02",
+  "source": "seed_sotopia",
+  "interaction_type": "mutual_friends",
+  "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Alvin.</p>",
+  "learner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Mable: School: Sewanee, University of the South  Company: BellSouth  \n Lolita: School: Winona State University  Company: ONEOK  \n Catherine: School: Utah Valley State College  Company: Lincoln Industries  \n Vita: School: Winona State University  Company: Erickson Air-Crane  \n Brandon: School: Winona State University  Company: The Greenbrier Companies  \n Don: School: Clark University  Company: MetLife  \n Alvin: School: Auburn University - Montgomery  Company: Vectren  \n Tara: School: Kansas Wesleyan University  Company: Gentiva Health Services  \n Arlene: School: Kansas Wesleyan University  Company: BellSouth  \n</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily Greenberg's behavior was very consistent with her background as an introverted but conscientious lawyer. She successfully navigated the conversation to identify a mutual friend without breaking the constraint of listing names directly.\n[relationship] She successfully established a common connection with Isabella, which strengthens their acquaintance.\n[knowledge] She confirmed that Isabella knows Alvin (based on the description) and learned about Isabella's educational and professional background.\n[secret] Lily did not reveal her secret about anonymous donations.\n[social_rules] She followed all social norms for a polite interaction at a party.\n[financial_and_material_benefits] There were no financial or material benefits involved.\n[goal] Lily successfully identified a mutual friend (Alvin) by providing specific descriptors and having them confirmed, all while following the constraint of not simply listing names.\n\n== partner (agent_2) ==\n[believability] Isabella's final response was a bit robotic, essentially repeating Lily's description back to her word-for-word rather than providing her own confirmation (e.g., naming him or adding a new detail).\n[relationship] The interaction was positive and they found common ground, though the abrupt end limited further growth.\n[knowledge] She learned that Lily knows someone matching Alvin's description and learned about Lily's professional circles.\n[secret] She did not reveal her secret about the animals in her basement.\n[social_rules] She followed social norms, though the mirroring of the text was slightly awkward.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Isabella successfully identified that they share a mutual friend, but she never actually provided the name or a unique identifier herself, mostly relying on Lily's description.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"Hi Isabella, it\u2019s nice to see you again \u2014 I remember we first met at that charity event. I was wondering if we might have any mutual friends; what circles are you usually in \u2014 where did you go to school and where do you work?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Isabella White",
+      "content": "I went to Auburn University\u2013Montgomery and now run a small veterinary clinic in town \u2014 I tend to stick to local animal-rescue and community-health circles. How about you, where did you go to school and what do you do for work?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"Small world \u2014 I actually know someone who also went to Auburn\u2013Montgomery. Do you happen to run into many fellow alumni in the animal-rescue or community-health circles, or anyone who works in the energy/utilities sector?\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Isabella White",
+      "content": "Oh, that\u2019s quite possible \u2014 I do bump into a few Auburn\u2013Montgomery alums around town and a couple who work in the utilities/energy world. Could you tell me a little about the person you know \u2014 do they work in utilities or community services, what town or company are they with, or roughly how old are they? A couple of those details should tell me if we share someone."
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "He\u2019s a man in his mid\u201140s who also went to Auburn\u2013Montgomery and now works locally for a regional utility \u2014 Vectren. He lives just outside town and shows up at community events more than at the animal\u2011rescue meetings. Does that sound like someone you\u2019ve run into?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Isabella White",
+      "content": "That actually sounds like someone I know \u2014 a man in his mid\u201140s who went to Auburn\u2013Montgomery and now works for Vectren, lives just outside town, and tends to show up at community events more than at animal\u2011rescue meetings. Is that the person you\u2019re thinking of?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

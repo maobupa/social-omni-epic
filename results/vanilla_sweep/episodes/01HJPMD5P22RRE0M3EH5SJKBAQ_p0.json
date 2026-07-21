@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPMD5P22RRE0M3EH5SJKBAQ_p0",
+  "source_env_id": "01HJPMD5P22RRE0M3EH5SJKBAQ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "floral_misunderstanding",
+  "scenario": "Agent1 accidentally damaged Agent2's beloved garden during a neighborhood event. To make amends, Agent1 decides to send a bouquet of flowers to Agent2. However, Agent2 is initially unaware of who caused the damage and is conflicted about accepting the apology without knowing the full context. The interaction involves Agent1 attempting to convey their sincere apologies and Agent2 deciding whether to accept them.",
+  "learner_goal": "You are Agent1, who is trying to apologize for the damage caused to the garden. Your goal is to express your remorse and ensure that Agent2 feels compensated and understood. <extra_info>You are aware that Agent2 values sincerity and a genuine understanding of the harm done.</extra_info> <clarification_hint>You may need to reveal the full context of the incident to Agent2 to show your honesty.</clarification_hint> <strategy_hint>Consider offering additional support or help to restore the garden.</strategy_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sasha was consistent and believable as a responsible professional taking ownership of a mistake. Her tone was apologetic and her details about the damage were specific and grounded.\n[relationship] Sasha successfully transitioned a potential conflict with a stranger into a cooperative repair plan, establishing a foundation of trust.\n[knowledge] She learned exactly which plants Amara cares about, where the damage was specifically located from Amara's perspective, and how Amara prefers to handle the restoration.\n[secret] Sasha did not reveal her secret regarding her brother's crime, as it was not relevant to this interaction.\n[social_rules] Sasha followed all social norms for an apology and professional conduct.\n[financial_and_material_benefits] Sasha will incur costs for plants and spend labor time, which is a negative material outcome for her personally.\n[goal] Sasha fully met her goal by revealing the context, expressing remorse, and securing a firm commitment from Amara to allow her to compensate for and help restore the garden.\n\n== partner (agent_2) ==\n[believability] Amara's behavior was very consistent with her background as a biologist and nature enthusiast; she focused on the specific plant species and the technicalities of their recovery.\n[relationship] She successfully identified the person who damaged her garden and moved toward a constructive resolution with a stranger.\n[knowledge] Amara gained full knowledge of who caused the damage, when it happened, how it happened, and what the party's intentions were.\n[secret] Amara's secret regarding animal-rights extremism was not revealed.\n[social_rules] Amara maintained appropriate boundaries and social etiquette.\n[financial_and_material_benefits] Amara secured a commitment for professional-grade restoration (replanting and funds) at no cost to herself.\n[goal] Amara achieved all parts of her goal: she identified the culprit, assessed the sincerity through a detailed conversation, and ensured the responsible party understood the damage and would rectify it.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "Amara \u2014 I\u2019m Sasha Ramirez. I\u2019m so sorry: while helping at the neighborhood event I accidentally knocked over part of your garden when I tripped with a crate and uprooted plants. I left a bouquet as a small apology and I want to make this right \u2014 I can come by this weekend to help replant or pay for restoration, whichever you prefer. Please tell me what would help you most."
+    },
+    {
+      "turn": 1,
+      "speaker": "Amara Hartley",
+      "content": "Thank you for telling me, Sasha \u2014 and for the bouquet. My garden means a lot to me; can you describe exactly what was damaged (which plants/area) and when it happened during the event? I\u2019m open to you coming by this weekend to help replant or covering replacement costs, but I\u2019d like to meet first so we can assess the damage together and agree on what \u2018making this right\u2019 will look like."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "I\u2019m so sorry again, Amara. I knocked over the corner pollinator bed by the south fence\u2014around 11:30 a.m. while I tripped carrying a crate near the refreshment table\u2014and several milkweed stems, a lavender clump, and some native grasses were uprooted. I agree we should look together first: I\u2019m available Saturday morning or Sunday mid\u2011afternoon to come by and assess, and I\u2019ll either pay for replacements or do the replanting myself\u2014whichever you\u2019d prefer. Which time works for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Amara Hartley",
+      "content": "Thank you, Sasha. Saturday morning works best \u2014 can you make it at 9:30? Let\u2019s meet at my front gate and walk the south fence pollinator corner together so we can agree on repairs; please bring whatever you offered (tools or funds) so we can decide on the spot. I appreciate you taking responsibility \u2014 I want to make sure the milkweed, lavender and native grasses are handled properly."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sasha Ramirez",
+      "content": "Thank you, Amara \u2014 I\u2019ll be at your front gate at 9:30 on Saturday. I\u2019ll bring gloves, a shovel and some spare milkweed and lavender starts, plus funds so we can decide together which option you prefer. I really appreciate you meeting me and I\u2019m sorry again for the damage."
+    },
+    {
+      "turn": 5,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Sasha \u2014 see you at my front gate at 9:30 on Saturday. I appreciate you bringing gloves, a shovel and the starter plants; we\u2019ll walk the south\u2011fence pollinator corner together and decide on the repairs. Please be ready to handle the milkweed and lavender gently so they have the best chance of recovery. I appreciate you taking responsibility and coming prepared."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sasha Ramirez",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHN6HJAB68ENA63DJ5EDZ_p0",
+  "source_env_id": "01HJPTHN6HJAB68ENA63DJ5EDZ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "work_life_balance",
+  "scenario": "Agent1 and Agent2 are colleagues who have been working on a high-stakes project for the past year. Both are exhausted and in need of a break. Agent1 has been planning a vacation for several months and has finally decided on the dates. However, these dates overlap with a critical phase of the project where Agent2's involvement is crucial. Agent1 approaches Agent2 to discuss the possibility of taking the planned vacation without jeopardizing the project's success.",
+  "learner_goal": "Negotiate with your colleague to take your well-deserved vacation without leaving the project at risk (<extra_info>Extra information: You feel burned out and believe the time off is essential for your mental health, but you are also committed to the project's success.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 7.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Micah communicates professionally and transparently about his burnout and commitment to the project, which is consistent with the persona and scenario.\n[relationship] The interaction was collaborative and respectful, reinforcing their mutual understanding and professional respect.\n[knowledge] Micah learned Noah's specific requirements for approving the leave, such as the need for decision authority mapping and specific risk mitigations.\n[secret] Micah did not reveal the secret about dressing up his dog.\n[social_rules] Micah followed all professional social norms, being proactive and appreciative.\n[financial_and_material_benefits] No direct financial or material exchange occurred.\n[goal] Micah secured a conditional agreement for the vacation. While the final confirmation is pending Noah's review of the handover plan, a clear path and timeline were established that satisfy Micah's need for a break.\n\n== partner (agent_2) ==\n[believability] Noah's cautious decision-making style is reflected in his detailed list of requirements and focus on risk mitigation.\n[relationship] Noah showed empathy for Micah's burnout while maintaining professional boundaries, strengthening their working relationship.\n[knowledge] Noah gained knowledge of Micah's planned dates, the status of his work, and his willingness to remain on-call for emergencies.\n[secret] Noah did not reveal his secret identity as a stand-up comedian.\n[social_rules] Noah acted as a responsible and supportive colleague.\n[financial_and_material_benefits] No direct financial or material exchange occurred.\n[goal] Noah successfully set rigorous conditions to ensure the project remains on track, including a handover plan, training, and emergency protocols, while still accommodating the colleague's request.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Micah Stevens",
+      "content": "Hey Noah \u2014 I need your input. I booked a vacation for July 12\u201318 because I\u2019m pretty burned out and really need the break, but I know that overlaps the project\u2019s critical phase and I don\u2019t want to leave you stranded. I can prepare a detailed handover, train someone to cover my tasks, finish my key deliverables earlier, and be available for urgent calls \u2014 can we map out a plan that lets me take those dates? What concerns do you have?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "I get it \u2014 you need the break and I appreciate the heads-up. My main concerns are continuity for mission\u2011critical tasks (approval gates, deploys, client escalations) and whether whoever covers can make decisions with enough context. Can you send a prioritized list of your top deliverables and a proposed handover plan by the end of this week so we can map coverage (who covers what, a training overlap day before July 12, and an \u2018urgent\u2011only\u2019 contact protocol)? If you can finish the highest\u2011risk items and fully train the backup, I\u2019m supportive; if not, we\u2019ll need to adjust dates."
+    },
+    {
+      "turn": 2,
+      "speaker": "Micah Stevens",
+      "content": "Thanks \u2014 I appreciate your flexibility. I\u2019ll send a prioritized list of my deliverables plus a detailed handover (including a proposed backup and coverage matrix) by this Friday, and I\u2019ll finish the top high\u2011risk items before I leave. I can do a full training/overlap session on July 11 and be on an urgent\u2011only contact protocol during my time off \u2014 does that timeline work for you or would you prefer a different prep day?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "That timeline works \u2014 July 11 overlap training is fine and I appreciate you arranging the handover and finishing the high\u2011risk items. In the handover please list your prioritized deliverables, the proposed backup (and what decision authority they'll have), step\u2011by\u2011step instructions for approval gates/deploys, known risks/mitigations, and your preferred urgent\u2011contact method and expected response window. I\u2019ll review on Friday, coordinate with the backup, and confirm coverage so you can take the break without risking the project."
+    },
+    {
+      "turn": 4,
+      "speaker": "Micah Stevens",
+      "content": "left the conversation"
+    }
+  ]
+}

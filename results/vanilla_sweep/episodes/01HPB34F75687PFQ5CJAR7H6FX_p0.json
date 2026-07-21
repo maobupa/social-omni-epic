@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPB34F75687PFQ5CJAR7H6FX_p0",
+  "source_env_id": "01HPB34F75687PFQ5CJAR7H6FX",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_content",
+  "scenario": "Agent1 and Agent2 are both circus performers who specialize in acrobatics. They have been partners for several years and are known for their breathtaking aerial routines. Recently, they have been tasked with creating a new routine that includes a particularly risky acrobatic feat which neither has attempted before. Agent1 is eager to incorporate the feat into their act, believing it will set them apart from other performers. Agent2, however, is concerned about the potential for injury and the lack of preparation time. They have agreed to meet and discuss how to proceed with the new routine.",
+  "learner_goal": "Persuade Agent2 to include the new acrobatic feat in the routine, emphasizing the potential for career advancement and audience impact, while acknowledging the risks and proposing a comprehensive safety and training plan (<extra_info>Extra information: You are Agent1, you are passionate about pushing the limits of your performance but you also value the partnership and safety of both parties.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara stayed consistently in character as a passionate but safety-conscious performer. Her responses were detailed, professional, and directly addressed the partner's concerns while pivoting to her goal.\n[relationship] The relationship improved significantly as they moved from a point of conflict/disagreement to a detailed, collaborative partnership with clear communication and mutual trust.\n[knowledge] Amara gained specific knowledge about Mia's requirements for safety, including the need for independent rigger credentials and specific scheduling preferences.\n[secret] Amara did not reveal any information regarding her involvement in animal-rights extremism.\n[social_rules] Amara followed all social norms and was respectful throughout the negotiation.\n[financial_and_material_benefits] Successfully secured a path toward a higher-profile routine which she believes will lead to bigger bookings and better career advancement.\n[goal] Amara successfully persuaded Mia to include the risky feat. She managed to negotiate a firm 8-week timeline and a concrete training plan, meeting her goal of pushing performance limits while ensuring partnership safety.\n\n== partner (agent_2) ==\n[believability] Mia\u2019s dialogue was very realistic for a cautious principal and safety-first partner. Her insistence on objective criteria and credentials felt authentic to her professional background.\n[relationship] Mia expressed appreciation for Amara's thoroughness and willingness to slow down, strengthening their professional bond.\n[knowledge] Mia gained specific information about the proposed rigger and coach, and secured a detailed timeline for the project.\n[secret] Mia's past in a punk rock band remained a secret.\n[social_rules] Mia acted professionally and politely throughout the interaction.\n[financial_and_material_benefits] There were no direct financial gains, although the safety measures may prevent future medical costs/loss of income.\n[goal] Mia's goal was to ensure safety and adequate preparation. She successfully moved the timeline from one week to eight weeks and established strict non-negotiable safety benchmarks and credential requirements before proceeding.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Mia, I get why you\u2019re worried \u2014 it\u2019s risky \u2014 but I really think this feat could set our act apart and open doors for bigger bookings. What if we phase it in with a strict safety plan: a six-week progressive training schedule, daily conditioning, dedicated spotters and a certified rigging coach, rehearsals with harnesses and crash mats, plus on-site medical coverage and a filmed review before any public performance? I\u2019ll lead the prep and we only go onstage when both of us and the coach are 100% comfortable \u2014 can we run a controlled trial next week and then reassess together?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Amara, I appreciate how thorough and committed your plan is and I do want us to innovate \u2014 but a controlled trial next week feels rushed. Can we extend the prep to about eight weeks with staged benchmarks, an independent rigging inspection, mandatory emergency\u2011response drills, and written sign\u2011off from our coach before any live trial? If that timeline doesn't work for bookings, let's start next week with off\u2011rig strength/entry drills and develop a different showstopping element (lighting, synchronized drops or a dramatic slow\u2011motion sequence) we can perform while we build safely toward the full feat."
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "You make good points \u2014 I\u2019m happy to go with eight weeks and the staged benchmarks, independent rigging inspection, emergency\u2011response drills and written coach sign\u2011off. Here\u2019s a compromise: we start next week with off\u2011rig strength and entry drills and put a temporary showstopper (lighting/synchronized drops or slow\u2011motion sequence) into the booking circuit, while the eight\u2011week plan runs behind the scenes \u2014 timeline idea: rigging inspection in week 2, a midterm assessment in week 4, a filmed harnessed trial in week 6, and final sign\u2011off in week 8. I\u2019ll coordinate the coach/rigger, lead the prep, and only push the full feat onstage when we both feel 100% safe \u2014 that keeps us competitive now and on track for the breakthrough we want; does that work for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "That timeline and compromise works for me \u2014 thank you for being willing to slow it down. Two non\u2011negotiables before we begin: I need the independent rigger's name and credentials and the coach's written acceptance criteria for each benchmark (so our week-4 and week-6 assessments are objective), plus weekly 30-minute progress check-ins and an emergency-response drill scheduled with on-site medical coverage by week 3. Start the off-rig strength/entry drills and the temporary showstopper next week; I\u2019ll be there for the drills, paperwork, and sign-offs."
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Mia \u2014 that works. Independent rigger: Riley Morgan (IGR\u2011certified rigging inspector, 10+ years in aerial theatre, $5M liability coverage); coach: Dana Ortiz (Certified Circus Arts Coach, former lead aerialist, 8+ years coaching). I\u2019ll have Dana produce written acceptance criteria for each benchmark and will get you Riley\u2019s full credentials and insurance proof before the week\u20112 inspection; I\u2019ll also schedule weekly 30\u2011minute progress check\u2011ins starting next week and book the emergency\u2011response drill with on\u2011site medical coverage for week 3. I\u2019ll begin the off\u2011rig strength/entry drills and prepare the temporary showstopper next week \u2014 what day/time works best for you for the first drill and our initial check\u2011in?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Davis",
+      "content": "Tuesday or Thursday after school around 5:00 PM works best for me, or I can do Saturday at 9:00 AM if that\u2019s easier. Let\u2019s pencil in Tuesday at 5:00 PM for the first off\u2011rig drill with our 30\u2011minute check\u2011in immediately after \u2014 does that suit you? Please send Riley\u2019s full credentials and Dana\u2019s written acceptance criteria before then so I can review ahead of the meeting."
+    },
+    {
+      "turn": 6,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

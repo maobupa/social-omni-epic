@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHPC7AJ3R3ZW664J94DNN_p0",
+  "source_env_id": "01HJPTHPC7AJ3R3ZW664J94DNN",
+  "source": "seed_sotopia_full",
+  "interaction_type": "gratitude_expression",
+  "scenario": "Agent1 wakes up to find that Agent2, their roommate, has prepared a surprise breakfast in bed to show appreciation for Agent1's support during a tough week. Agent1 wants to express gratitude and reinforce their positive relationship, while Agent2 hopes to make Agent1 feel valued and brighten their day.",
+  "learner_goal": "Express sincere thanks and appreciation for the gesture (<extra_info>Extra information: Agent1 is not usually expressive with emotions and wants to ensure Agent2 understands the depth of their gratitude.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia consistently maintained her character as someone who isn't usually expressive, even explicitly mentioning it twice to emphasize her gratitude. Her language was warm yet grounded in her personality as a fitness enthusiast.\n[relationship] The interaction significantly strengthened their bond, moving from casual roommates/acquaintances to a deeper level of mutual appreciation and planning quality time together outside the home.\n[knowledge] She learned that Miles is willing to spend his Saturday morning with her and that he plans to use his gardening skills to provide food for their hike.\n[secret] Her secret regarding her best friend's husband was not mentioned or hinted at.\n[social_rules] She followed all social norms regarding gratitude and reciprocity.\n[financial_and_material_benefits] She received a surprise breakfast and a commitment for more food (scones/fruit) and coffee on Saturday.\n[goal] Sophia explicitly expressed her thanks, acknowledged the depth of her gratitude by mentioning she isn't usually gushy, and successfully set up a reciprocal event to show further appreciation.\n\n== partner (agent_2) ==\n[believability] Miles stayed true to his chef background and gardening hobby, offering specific items like lemon-thyme scones and fruit from his garden.\n[relationship] The relationship improved significantly through his act of kindness and the subsequent plans they made together.\n[knowledge] He learned Sophia had a very tough week and that she isn't normally an expressive person.\n[secret] His past as a recovering gambling addict was not revealed.\n[social_rules] He was polite, supportive, and accommodating throughout the interaction.\n[financial_and_material_benefits] He provided breakfast and committed to providing more food and coffee for the hike, incurring a small cost.\n[goal] Miles successfully brightened Sophia's day and reciprocated her suggestion for a hike by offering to bring the food and drink, fulfilling his goal to be kind and supportive.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Wow, Miles\u2014this is amazing. I\u2019m not usually gushy, but I need you to know how much this means after the week I\u2019ve had; your support and this breakfast really made my day. Thank you \u2014 coffee and a sunrise hike this weekend so I can return the favor?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Miles Hawkins",
+      "content": "I'd love that \u2014 coffee and a sunrise hike sounds perfect, Sophia. Does Saturday at 6 a.m. work for you? I'll bring a thermos of coffee and some lemon-thyme scones and fresh fruit from my garden \u2014 my turn to try to brighten your morning."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "6 a.m. Saturday is perfect \u2014 thank you, Miles. I\u2019m not usually this gushy, but what you did genuinely lifted a huge weight off me; I appreciate you more than I can say. Can\u2019t wait for the hike (and your scones) \u2014 see you then."
+    },
+    {
+      "turn": 3,
+      "speaker": "Miles Hawkins",
+      "content": "You're very welcome, Sophia - I'm glad it helped. See you at the trailhead Saturday at 6; I'll bring the thermos, lemon-thyme scones, and a little extra fruit. If anything comes up before then, text me - I'm happy to help."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

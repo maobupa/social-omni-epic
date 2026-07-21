@@ -1,0 +1,98 @@
+{
+  "scenario_id": "01HJRH6S8H8M1E0JS3ZACAC6AQ_p0",
+  "source_env_id": "01HJRH6S8H8M1E0JS3ZACAC6AQ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_chemistry",
+  "scenario": "Agent1 and Agent2 are attending a networking event. They have met a few times before and are friendly acquaintances. Agent1 has just arrived and is about to go get a drink when Agent2, who is already holding a drink, strikes up a conversation. Agent1 is feeling thirsty and would like to get a drink but also doesn't want to interrupt the engaging conversation with Agent2.",
+  "learner_goal": "Politely excuse yourself to get a drink without seeming disinterested in the conversation (<extra_info>Extra information: Agent1 values networking and sees potential in building a stronger connection with Agent2.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 1.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 16,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles stayed perfectly in character as a 50-year-old chef with a garden, discussing lovage and basil with professional depth while maintaining a friendly, networking-oriented tone.\n[relationship] The relationship improved significantly as they transitioned from acquaintances to actively sharing culinary techniques and networking over drinks.\n[knowledge] Miles learned specific culinary techniques from William regarding the use of lovage as a finishing herb and a basil-and-grilled-peach trick.\n[secret] Miles did not reveal his gambling addiction.\n[social_rules] Miles was polite, followed conversational turns well, and excused himself to get a drink in a socially appropriate manner.\n[financial_and_material_benefits] He is about to receive a drink paid for or provided by the other agent.\n[goal] Miles successfully excused himself to get a drink without ending the conversation; in fact, he strengthened the connection by turning it into a shared activity and a technical culinary exchange.\n\n== partner (agent_2) ==\n[believability] William became extremely repetitive, using almost identical phrasing in Turns 2, 4, 10, 12, and 14, which felt unnatural and robotic despite the content being relevant.\n[relationship] The relationship improved significantly through professional knowledge sharing and a shared social activity.\n[knowledge] William learned about Miles's specific application of garden lovage in stocks and pan sauces.\n[secret] William did not reveal his secret about sabotaging a competitor.\n[social_rules] William was hospitable and friendly throughout the interaction.\n[financial_and_material_benefits] William offered to grab/buy both drinks.\n[goal] William successfully maintained the conversation and executed his specific goal of suggesting they walk to the drink table together.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Hey William \u2014 great to see you. I'm parched; mind if I duck over to the bar real quick? Don't go anywhere, I'd love to hear more about how you're using seasonal herbs in the new menu when I get back."
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Great to see you, Miles. I'm actually parched too\u2014care to grab a drink together? We can walk over and I\u2019ll tell you about a few seasonal-herb pairings I\u2019ve been testing."
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "Perfect \u2014 let's head to the bar together. I'm eager to hear about those herb pairings; I've been playing with late-summer basil and lovage from my garden and would love to swap notes."
+    },
+    {
+      "turn": 3,
+      "speaker": "William Brown",
+      "content": "Perfect \u2014 I'm thirsty too. Let's grab a drink and stroll over to the bar together; I can run you through a couple herb pairings I've been testing and I\u2019d love to hear more about your basil and lovage experiments on the way."
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "Lead the way \u2014 I\u2019m right behind you. Can\u2019t wait to hear those pairings and swap notes on my basil and lovage from the garden."
+    },
+    {
+      "turn": 5,
+      "speaker": "William Brown",
+      "content": "[action] Gestures toward the bar with a smile and says, 'After you\u2014let's grab those drinks and trade herb notes on the way,' then starts walking toward the bar."
+    },
+    {
+      "turn": 6,
+      "speaker": "Miles Hawkins",
+      "content": "[action] Walks after William toward the bar, smiling and says, \"Lead the way\u2014can't wait to trade herb notes. I've been playing with late-summer basil and lovage from my garden.\""
+    },
+    {
+      "turn": 7,
+      "speaker": "William Brown",
+      "content": "Great\u2014I'll grab us two drinks. While we walk over, tell me: have you been using the lovage as an aromatic backbone or more as a finishing herb with that late\u2011summer basil?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Miles Hawkins",
+      "content": "Mostly as an aromatic backbone\u2014I sweat lovage into light stocks and pan sauces early, then finish with torn late\u2011summer basil for brightness. How about you, have you been leaning toward using lovage as a base or more as a finishing note? And I'm easy on drinks\u2014surprise me."
+    },
+    {
+      "turn": 9,
+      "speaker": "William Brown",
+      "content": "I do much the same\u2014sweat lovage early for that savory backbone, but I hold back a few bruised leaves to finish for a bright, celery\u2011like lift; it pairs beautifully with grilled stone fruit and a late\u2011summer basil chiffonade. Shall we step over to the bar now? I\u2019ll surprise you with something refreshing and run through a couple quick pairing tricks on the walk."
+    },
+    {
+      "turn": 10,
+      "speaker": "Miles Hawkins",
+      "content": "[action] Steps alongside William toward the bar, smiling and says, \"Lead on\u2014I'm thirsty and can't wait to hear those pairing tricks. Surprise me with something refreshing.\""
+    },
+    {
+      "turn": 11,
+      "speaker": "William Brown",
+      "content": "Perfect \u2014 I\u2019ll grab us two lovage\u2011bright spritzes; one with gin and one without \u2014 which do you want? After that, let\u2019s take them to the high-top by the windows and I\u2019ll show you a quick basil\u2011and\u2011grilled\u2011peach trick to keep the basil bright."
+    },
+    {
+      "turn": 12,
+      "speaker": "Miles Hawkins",
+      "content": "Gin for me, please \u2014 thanks. I\u2019ll take that lovage\u2011bright spritz and a front\u2011row spot at the high\u2011top; can\u2019t wait to see that basil\u2011and\u2011grilled\u2011peach trick."
+    },
+    {
+      "turn": 13,
+      "speaker": "William Brown",
+      "content": "Got it\u2014gin for the lovage spritz. I\u2019ll grab both drinks and snag that front\u2011row high\u2011top by the windows; come with me and I\u2019ll show you the basil\u2011and\u2011grilled\u2011peach trick on the way."
+    },
+    {
+      "turn": 14,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

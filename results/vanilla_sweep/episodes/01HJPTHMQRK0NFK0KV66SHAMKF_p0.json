@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPTHMQRK0NFK0KV66SHAMKF_p0",
+  "source_env_id": "01HJPTHMQRK0NFK0KV66SHAMKF",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 and Agent2 are friends who are planning to travel abroad together. They are at the airport and need to check their passports and print their boarding passes. Agent1 is meticulous and wants to ensure everything is in order well ahead of time, while Agent2 is more relaxed and prefers to wait until the last minute to avoid carrying extra documents around.",
+  "learner_goal": "Convince Agent2 to check passports and print boarding passes early (<extra_info>Extra information: You believe that getting these tasks done ahead of time will prevent any last-minute issues and reduce stress.<strategy_hint>Hint: You could highlight the risks of last-minute problems and offer to handle the documents so Agent2 doesn't have to carry them.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 4.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver played the role of a meticulous friend very well, using polite but persistent persuasion techniques that aligned with his personality and goal.\n[relationship] He was helpful and accommodating, managing to navigate the disagreement without causing friction, and his crush was not revealed, maintaining the status quo with a slight positive lean.\n[knowledge] He learned that Esmeralda is very firm about her privacy regarding her booking details and travel documents, which is relevant given her secret background.\n[secret] Oliver successfully kept his feelings for Esmeralda hidden.\n[social_rules] He followed social norms for a neighborly friendship throughout the interaction.\n[financial_and_material_benefits] No material or financial benefits were gained or lost.\n[goal] He failed to convince her to check her passport or print her boarding pass early. He only secured an agreement to be present at the kiosk later if she decides she needs help.\n\n== partner (agent_2) ==\n[believability] Esmeralda's insistence on privacy and her preference for digital efficiency align well with her background as a district attorney with criminal ties.\n[relationship] She was appreciative of Oliver's offer to help, which slightly strengthened their neighborly bond.\n[knowledge] She learned that Oliver is anxious about travel logistics and willing to handle her documentation.\n[secret] She did not reveal her relationships with criminals.\n[social_rules] She was polite and assertive in setting her boundaries.\n[financial_and_material_benefits] No material or financial benefits were gained or lost.\n[goal] She successfully persuaded Oliver to wait and did not print her pass or check her passport early, maintaining her preference to travel light and handle documents only when necessary.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "Hey Esmeralda, would you mind if I quickly check our passports and print our boarding passes now? I know you like to wait and travel light, so I can handle the documents for you \u2014 better to dodge last-minute printer hiccups or long kiosk lines at the gate. It\u2019ll only take a few minutes and we\u2019ll both relax after."
+    },
+    {
+      "turn": 1,
+      "speaker": "Esmeralda Solis",
+      "content": "Thanks, Oliver, but let's wait \u2014 I prefer to travel light. Almost every airline accepts digital boarding passes and I've flown for work dozens of times without trouble; if something unexpected happens there's always a kiosk or the airline desk at the gate. If it helps you relax, go ahead and check your passport now, but I'd rather not deal with printing mine until it's necessary."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "Okay, I get wanting to travel light. Quick compromise \u2014 would you be comfortable if I printed your boarding pass and kept it in my bag so you don\u2019t have to carry it? I won\u2019t need your passport for that, just the confirmation or booking number if you\u2019re okay sharing it, and this way we avoid any gate printing hassle if something goes wrong."
+    },
+    {
+      "turn": 3,
+      "speaker": "Esmeralda Solis",
+      "content": "Thanks, Oliver \u2014 I appreciate you offering, but I'd rather not hand over my booking details or my passport. I fly with digital passes all the time and there's always a kiosk or the airline desk if anything goes wrong. If it helps you relax, go ahead and print yours now \u2014 I'll check or print mine only if the gate asks."
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Thompson",
+      "content": "Totally fine, I don't want to push you. How about I set a reminder and hang back by the kiosk at the gate with you\u2014if anything goes wrong I can jump in and handle the printing quickly so you can keep traveling light?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Esmeralda Solis",
+      "content": "Thanks, Oliver \u2014 that actually puts me at ease. Go ahead and set the reminder and meet me at the kiosk by the gate; I\u2019ll keep my boarding pass digital and won\u2019t print it unless the airline asks. If anything goes wrong, I\u2019ll ask you to jump in \u2014 your backup plan is perfect and lets me travel light."
+    },
+    {
+      "turn": 6,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

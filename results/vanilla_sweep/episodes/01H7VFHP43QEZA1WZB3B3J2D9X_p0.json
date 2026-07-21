@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01H7VFHP43QEZA1WZB3B3J2D9X_p0",
+  "source_env_id": "01H7VFHP43QEZA1WZB3B3J2D9X",
+  "source": "seed_sotopia",
+  "interaction_type": "deal-or-no-deal",
+  "scenario": "Two roommates deciding on how to split up items after a garage sale. The items are 3 books, 2 hats, and 1 ball. Each item has a different sentimental value for each person, which translates into points.",
+  "learner_goal": "Maximize the points you have (<extra_info>Extra information: you value the books at 3 points each, the hats at 2 points each, and the ball at 1 point</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 0.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver's behavior was consistent with his background as an architect who enjoys painting, using his art as a negotiation lever while pursuing his goal.\n[relationship] He attempted to build rapport through his secret feelings and offers of art, though the abrupt exit at the end limited growth.\n[knowledge] He correctly identified that Esmeralda prioritized the hats over the books.\n[secret] He did not reveal his hidden feelings for Esmeralda.\n[social_rules] Leaving the conversation without a closing statement or final agreement is a minor breach of social etiquette.\n[financial_and_material_benefits] No items were actually secured as the conversation ended before a final agreement was reached and confirmed by both parties.\n[goal] Oliver failed to secure any items. He walked away from the negotiation without reaching a final agreement.\n\n== partner (agent_2) ==\n[believability] Esmeralda's firm but polite negotiation style is consistent with her profession as a District Attorney.\n[relationship] She remained professional but did not form a closer bond, and the interaction ended abruptly.\n[knowledge] She correctly identified that Oliver highly valued the books.\n[secret] She did not reveal her relationships with criminals.\n[social_rules] She maintained professional and polite communication throughout.\n[financial_and_material_benefits] No items were secured because the negotiation was cut short by Oliver's departure.\n[goal] She did not finalize a deal; the other party left before a mutual agreement was solidified.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "Esmeralda, would you be alright if I take the three books (I really value them) plus one hat, and you take the other hat and the ball? I can paint a small piece for you as a thank-you \u2014 seems fair and lets me keep most of what I care about."
+    },
+    {
+      "turn": 1,
+      "speaker": "Esmeralda Solis",
+      "content": "Thanks for the offer, Oliver \u2014 I appreciate it. I\u2019d prefer to take both hats and one of the books; you can keep the other two books and the ball. Does that work for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "I really value the books, Esmeralda \u2014 would you be okay with me keeping all three books and one hat while you take the other hat and the ball? If that\u2019s a deal-breaker for you, I\u2019m willing to compromise: I could keep two books, one hat, and the ball instead. Which would you prefer?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Esmeralda Solis",
+      "content": "Thanks, Oliver \u2014 I appreciate it, but I really want both hats. Let\u2019s go with my proposal: you take the two books and the ball, and I\u2019ll take both hats and one book; if you\u2019d like, I\u2019ll gladly accept your painted piece as a thank-you."
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Thompson",
+      "content": "Esmeralda, could we try this: I keep all three books and you take both hats and the ball \u2014 I\u2019d paint you a larger piece as a thank-you. It\u2019d mean a bit more for me while still leaving you with the items you want; would that work?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Esmeralda Solis",
+      "content": "I appreciate the offer, Oliver, but I\u2019d prefer to stick with my earlier split \u2014 I\u2019ll take both hats and one book, and you can have the other two books and the ball. I\u2019d be happy to accept the larger painting as a thank-you."
+    },
+    {
+      "turn": 6,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

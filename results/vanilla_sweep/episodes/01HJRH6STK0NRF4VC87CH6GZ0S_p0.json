@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJRH6STK0NRF4VC87CH6GZ0S_p0",
+  "source_env_id": "01HJRH6STK0NRF4VC87CH6GZ0S",
+  "source": "seed_sotopia_full",
+  "interaction_type": "domestic_dilemma",
+  "scenario": "Agent1 discovers that Agent2 has unintentionally used their expensive makeup while trying to prepare for an important video call. Agent1 values their makeup collection and is upset about the misuse. Agent2, unaware of the value and importance of the makeup, was simply trying to look presentable. The interaction takes place in their shared living space, and they need to address the situation without escalating it.",
+  "learner_goal": "Communicate the value of the makeup to Agent2 and establish guidelines for personal property use, while being understanding of Agent2's need to look presentable. (<extra_info>Extra information: Agent2 is generally respectful but may not be aware of the cost or significance of the makeup.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver is polite but firm about his boundaries, which fits his character as a meticulous architect. He effectively balances his hidden feelings for Esmeralda with his protective nature over his collection.\n[relationship] The relationship improved as they navigated a conflict maturely and reached a mutual agreement, strengthening their neighborly bond.\n[knowledge] He confirmed that Esmeralda is willing to respect his property and pay for damages, clarifying her integrity.\n[secret] Oliver successfully kept his feelings for Esmeralda hidden.\n[social_rules] Oliver followed social norms by addressing the conflict directly and politely without escalating.\n[financial_and_material_benefits] He secured a commitment for reimbursement for his expensive items and protected the rest of his collection.\n[goal] Oliver fully communicated the value of his makeup, established clear guidelines for future use (asking first), and created a compromise for a shared kit while remaining understanding.\n\n== partner (agent_2) ==\n[believability] Esmeralda's professional and apologetic tone is consistent with her role as a District Attorney, showing she values accountability.\n[relationship] She turned a potential conflict into a moment of cooperation, improving the standing with her neighbor.\n[knowledge] She learned about the value of Oliver's collection and his boundaries regarding personal property.\n[secret] She kept her secret romantic life with criminals entirely separate from this domestic interaction.\n[social_rules] She followed social norms by apologizing and offering restitution for her mistake.\n[financial_and_material_benefits] She will incur a financial cost to replace or pay for the expensive makeup used.\n[goal] Esmeralda apologized, offered full restitution, and successfully proposed a compromise involving a shared kit and future permission.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "Esmeralda, I noticed you used some of my makeup before your call \u2014 I know you were just trying to look presentable, but those items are quite expensive and part of my collection, so I'd really appreciate it if you asked me before using them. If you need something for future calls, please ask and I can point out what\u2019s okay to use or keep a small, inexpensive kit you can borrow so it doesn\u2019t cause any trouble."
+    },
+    {
+      "turn": 1,
+      "speaker": "Esmeralda Solis",
+      "content": "Oliver, I'm really sorry \u2014 I didn't realize those items were yours or that they were so expensive. I should have asked first; I'll replace or pay for what I used, and if you're open to it we can set aside a small kit for me to use so this doesn't happen again. I promise to ask before using anything else."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Esmeralda \u2014 I really appreciate you saying that. Those pieces are part of a pricey set (and a few have sentimental value), so replacement might not fully cover it; if you\u2019re comfortable covering anything that\u2019s noticeably used I can point out which items those are. I like your idea about a small kit \u2014 I\u2019ll put together an inexpensive one you can borrow and label what\u2019s okay to use, and please just ask me first next time."
+    },
+    {
+      "turn": 3,
+      "speaker": "Esmeralda Solis",
+      "content": "Thank you, Oliver \u2014 I really appreciate you being willing to work this out. I\u2019m sorry again; I should have been more careful. Please point out which pieces you consider noticeably used and I\u2019ll cover them, and the kit idea sounds perfect \u2014 I\u2019ll always ask before using anything going forward."
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

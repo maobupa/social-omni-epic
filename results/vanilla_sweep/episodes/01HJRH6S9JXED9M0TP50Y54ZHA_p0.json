@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJRH6S9JXED9M0TP50Y54ZHA_p0",
+  "source_env_id": "01HJRH6S9JXED9M0TP50Y54ZHA",
+  "source": "seed_sotopia_full",
+  "interaction_type": "local_flea_market_interaction",
+  "scenario": "Agent1 has set up a booth at a local flea market to sell a variety of antique furniture. Among the items is a vintage oak desk priced at $300. Agent2, an enthusiast of antique furniture, is drawn to the desk but believes the price is too steep. Both agents are aware that bargaining is a common practice at flea markets and are prepared to negotiate to reach a mutually acceptable price.",
+  "learner_goal": "You are Agent1, the seller of the antique furniture. Your goal is to sell the vintage oak desk at a price that is profitable for you but also fair in the flea market setting. <extra_info>Be open to negotiation but aim to maintain a minimum acceptable price for the desk.</extra_info> <clarification_hint>Provide historical context or unique features of the desk that justify your asking price.</clarification_hint> <strategy_hint>You can highlight the rarity and condition of the desk to strengthen your bargaining position.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 4.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily acted consistently with her background as a lawyer, providing clear details about the desk and negotiating firmly but professionally. Her decision to leave without a final reply is slightly abrupt but fits the persona of someone who knows her bottom line.\n[relationship] The interaction was professional and cordial, maintaining the existing status quo of their relationship.\n[knowledge] She gained knowledge of Lena's budget and valuation of the piece.\n[secret] She did not reveal her secret about anonymous donations.\n[social_rules] Leaving the conversation without a closing or a final 'no' to the last offer is slightly rude, though common in high-stakes bargaining.\n[financial_and_material_benefits] No sale was finalized before she left the conversation.\n[goal] She provided historical context and unique features to justify the price as requested, but she did not successfully sell the desk, which was her primary goal.\n\n== partner (agent_2) ==\n[believability] Lena played the role of the appreciative but price-conscious architect well, asking specific technical questions about the construction.\n[relationship] She remained friendly throughout the negotiation.\n[knowledge] She learned about the desk's provenance, construction details, and the seller's minimum price point.\n[secret] She did not reveal her secret regarding her best friend's boyfriend.\n[social_rules] She followed social norms for flea market bargaining.\n[financial_and_material_benefits] She did not successfully purchase the desk.\n[goal] She effectively used information about the desk's condition to negotiate and stayed within her goal of seeking a lower price, but a deal was not struck.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Hi Lena \u2014 great to see you again. This is a solid oak partner's desk from the early 1900s: hand-dovetailed drawers, original brass pulls, and the finish is all original and well-preserved, which is why I'm asking $300. I\u2019m open to negotiation \u2014 I could do $260 today, but if that\u2019s still high for you, what number were you thinking?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Hi Lily \u2014 lovely to see you. I really like the desk \u2014 the dovetails and original brass are beautiful; do you know any provenance or history, and have there been any repairs or loose joints I should know about? I can pay $225 cash and take it today \u2014 would that work for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks, Lena \u2014 glad you like it. I acquired it from a local estate sale; there\u2019s no written provenance but its construction and hardware are consistent with an early\u20111900s partner\u2019s desk. No major repairs or loose joints \u2014 drawers are solid and the original finish is well preserved, just light surface wear and one small historic patch under a drawer for stability. I can do $240 cash today and I\u2019ll help you load it \u2014 does that work for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks \u2014 I appreciate the provenance info and that you\u2019ll help load it. Given the light wear and that small historic patch, would you accept $235 cash and I\u2019ll take it today?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

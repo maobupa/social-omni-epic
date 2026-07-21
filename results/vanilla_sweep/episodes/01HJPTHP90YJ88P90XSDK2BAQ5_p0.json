@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHP90YJ88P90XSDK2BAQ5_p0",
+  "source_env_id": "01HJPTHP90YJ88P90XSDK2BAQ5",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_by_prompt",
+  "scenario": "Agent1 and Agent2 are a couple planning their wedding. They are discussing the guest list. Agent1 does not want to include additional guests from Agent2's parents, arguing that since the parents are not contributing financially, they should not have a say in the guest list. Agent2 feels obligated to consider their parents' wishes, despite the lack of financial contribution.",
+  "learner_goal": "Convince Agent2 that the wedding should reflect the desires of the couple and that accommodating additional guests can strain the budget and the intimate atmosphere (<extra_info>Extra information: Agent1 believes the wedding should be a personal affair and not be influenced by those not contributing to it financially.</extra_info>)",
+  "scores": {
+    "believability": 7.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo stays in character as a practical, budget-conscious partner, though the background information describes him and Isabelle as near-strangers while the prompt sets them as a couple, which is a significant scenario inconsistency.\n[relationship] The couple navigated a potentially contentious disagreement about family and finances with mutual respect and reached an agreement.\n[knowledge] Leo identified the specific family members Isabelle's parents are pushing for (Grandma Rosa, Ana, Carlos) and established a plan for the budget.\n[secret] Leo did not reveal his secret child.\n[social_rules] Leo was polite, firm, and collaborative throughout the interaction.\n[financial_and_material_benefits] Leo successfully limited the guest list to a strict headcount, protecting his financial interests and the wedding budget.\n[goal] Leo convinced Isabelle to keep the main wedding intimate and limited to immediate family plus only two specific parental guests, moving others to a separate event.\n\n== partner (agent_2) ==\n[believability] Isabelle acted consistently as a partner trying to balance familial pressure with her partner's concerns.\n[relationship] The interaction strengthened their communication and ability to compromise on sensitive topics.\n[knowledge] Isabelle confirmed Leo's firm stance on the budget and his willingness to compromise via a separate event.\n[secret] Isabelle did not reveal her secret study of magic.\n[social_rules] Isabelle was respectful and constructive in her responses.\n[financial_and_material_benefits] She reached a compromise that prevents excessive spending while still including some family.\n[goal] Isabelle achieved a compromise that honors her parents' input (getting their must-haves for the main day or brunch) without straining the budget.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "I hear you \u2014 I don\u2019t want to dismiss how important your parents are to you, but the day should reflect what you and I want as a couple. Adding extra guests who aren\u2019t contributing will push up costs and change the intimate vibe we\u2019re trying to create; could we offer them a couple of seats or a separate celebration (rehearsal dinner or brunch) instead, and keep the main guest list to people closest to us? What would feel fair to you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Isabelle Martinez",
+      "content": "Thanks \u2014 I like that idea. I want to respect my parents without blowing our budget: could we give them one extra guest each for the main day and then host a small family brunch or rehearsal dinner where they can invite a few more people? If that sounds okay, we can work out the exact numbers so it feels fair to both of us."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "That sounds fair \u2014 I appreciate you trying to balance this. One extra guest each for the main day plus a small family brunch is a good compromise; let\u2019s agree on a firm headcount cap and I\u2019ll check costs with the venue so we stay within budget. Who are the parents\u2019 must-invite guests so we can be sure to fit them in?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Isabelle Martinez",
+      "content": "I can ask them for a short list. Right now they\u2019ve said the must-invite people are my grandma Rosa, my mom\u2019s sister Ana, and my dad\u2019s brother Carlos. If it\u2019s okay with you, let each parent pick one to join the main day (those two plus our immediate family), and we\u2019ll invite the others to the family brunch so we stay within the headcount."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

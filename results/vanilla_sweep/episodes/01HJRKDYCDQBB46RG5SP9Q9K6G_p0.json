@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJRKDYCDQBB46RG5SP9Q9K6G_p0",
+  "source_env_id": "01HJRKDYCDQBB46RG5SP9Q9K6G",
+  "source": "seed_sotopia_full",
+  "interaction_type": "trivia_fact",
+  "scenario": "Agent1 and Agent2 are friends who recently read an article stating that boogers are 0.25 calories each. They are having a light-hearted debate about the nutritional implications of this fact.",
+  "learner_goal": "Persuade Agent2 that, despite the low calorie content, boogers should not be considered a dietary option (<extra_info>Extra information: Agent1 finds the idea unhygienic and wants to discourage the notion as a joke.<strategy_hint>Hint: you can use humor and appeal to common social norms to make your point.</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan's tone as a chef was consistent and his rejection of the idea was firm yet humorous, aligning perfectly with his character profile.\n[relationship] The interaction was friendly and maintained their light-hearted dynamic, though it was cut short by Ethan leaving.\n[knowledge] He acknowledged the calorie factoid but didn't gain significant new knowledge beyond what was in the prompt.\n[secret] Did not reveal his secret life as a romance novel author.\n[social_rules] Followed social norms of hygiene and humor appropriately.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Ethan successfully persuaded Agent 2 that boogers are not a dietary option; Benjamin explicitly agreed they are 'not a menu item' and shifted the topic to trivia.\n\n== partner (agent_2) ==\n[believability] Benjamin's response was characteristic of an activist who enjoys quirky trivia and engaging conversation.\n[relationship] He attempted to build the relationship further by suggesting a trade of facts for secrets.\n[knowledge] Discussed the calorie fact provided in the prompt.\n[secret] Kept his family background secret.\n[social_rules] Maintained a polite and engaging tone during a gross discussion.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Benjamin successfully framed the fact as fun trivia and used it to engage Ethan, though Ethan ended the conversation shortly after.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "Ben, as a chef I respect calories, but unless you fancy chewing through a jar of nostril gravel for a single calorie, it\u2019s a terrible idea \u2014 hygiene, taste, and basic decency disqualify it. Boogers might clock in at 0.25 calories, but they\u2019re full of germs and zero culinary merit; leave them for tissues, not the menu."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Fair \u2014 as a chef you\u2019re right, hygiene and taste are non-negotiable. That said, the idea that a single booger is about 0.25 calories is such a delightfully absurd factoid it\u2019s perfect party trivia: fun to mention, gets a laugh, and sparks a weirdly entertaining conversation (not a menu item). I\u2019ll trade you three more quirky facts for one of your canap\u00e9 secrets next time \u2014 deal?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

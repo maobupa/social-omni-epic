@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPX50G51KYBXSR1A86XPVX8_p0",
+  "source_env_id": "01HJPX50G51KYBXSR1A86XPVX8",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Two friends are discussing what to gift their mutual best friend for the holidays. Agent1 wants to give something sentimental that reflects their long-standing friendship, while Agent2 is considering a more practical gift that their friend could use daily.",
+  "learner_goal": "Argue for a sentimental gift (<extra_info>Extra information: you believe that a gift should be meaningful and remind the recipient of cherished memories.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 0.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's dialogue accurately reflects his introverted, artistic nature and his perspective as a 63-year-old lighthouse keeper. He uses appropriate vocabulary and maintains his stance on sentimentality.\n[relationship] The two friends reached a warm agreement that respected both of their viewpoints, strengthening their bond.\n[knowledge] Finnegan did not learn any new information about Noah's secret life or specific new facts beyond the gift preference.\n[secret] Finnegan did not reveal his past involvement in a cult.\n[social_rules] Finnegan followed all social norms and was polite throughout the interaction.\n[financial_and_material_benefits] The outcome involves giving a gift, which is a net material loss for both, though no personal gain was expected.\n[goal] Finnegan successfully convinced Noah to make the sentimental painting the centerpiece of the gift, achieving his primary objective.\n\n== partner (agent_2) ==\n[believability] Noah's suggestions were practical and helpful, consistent with his coach background, though his secret identity as a comedian did not surface.\n[relationship] Noah was collaborative and agreeable, helping to reach a consensus that pleased both parties.\n[knowledge] Noah did not learn anything new about Finnegan's past or personal secrets.\n[secret] Noah kept his secret identity as a stand-up comedian hidden.\n[social_rules] Noah was respectful and constructive in his communication.\n[financial_and_material_benefits] No financial or material benefits were gained.\n[goal] Noah successfully advocated for the inclusion of a practical item (the water bottle) alongside the painting, achieving a compromise that included his goal.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "said: \"Noah, I know practical things have their place, but I really think something sentimental will mean more. I can paint a small seascape of the fair where we met and write a note on the back \u2014 it\u2019s a keepsake that will remind them of us every time they look at it, not just another useful thing that gets used up.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "said: \"Love that idea, Fin \u2014 your seascapes are beautiful. Still, I think something they'll use every day would mean more: what about putting one of your mini seascapes on a high-quality insulated water bottle or travel mug? That way it's both sentimental and practical \u2014 a constant reminder we cared and actually gets used.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "Noah, that\u2019s thoughtful \u2014 but an original mini seascape with a handwritten note and a modest frame is something they\u2019ll keep forever; brushstrokes and all, it\u2019s uniquely ours. A bottle\u2019s practical, but it can get dented or replaced; a keepsake sits on their shelf and brings back the memory every time. How about we make the painting the main gift and tuck a simple insulated mug in as a little extra?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "said: \"I love that\u2014your original should definitely be the centerpiece. I'm happy with the painting as the main gift; let's tuck a really good insulated travel mug in too (I'll grab a sturdy one so it won't get dented, maybe have a small print of the seascape on it). That way they get the keepsake and something they'll actually use every day.\""
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

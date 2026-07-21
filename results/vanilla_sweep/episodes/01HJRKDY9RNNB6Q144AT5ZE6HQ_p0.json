@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJRKDY9RNNB6Q144AT5ZE6HQ_p0",
+  "source_env_id": "01HJRKDY9RNNB6Q144AT5ZE6HQ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspiredprompt",
+  "scenario": "Agent1 has been volunteering to help the homeless tidy up their living spaces. Agent2 is a local business owner whose shop is near the area being cleaned. Agent1 wants to expand the cleanup efforts to include the alley next to Agent2's shop, but Agent2 is concerned about potential disruptions to their business.",
+  "learner_goal": "Convince Agent2 to allow the cleanup effort to extend to the alley by their shop, ensuring them that the activity will be organized and will not interfere with their business operations (<extra_info>Extra information: you are passionate about helping the homeless and believe that a cleaner environment will benefit everyone, including local businesses</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Rafael maintained a professional and proactive tone consistent with his background as a surgeon and his established acquaintance with Jaxon.\n[relationship] The agents established a respectful and cooperative tone, effectively navigating their low-agreeableness trait to reach a quick compromise.\n[knowledge] Rafael identified Jaxon's specific peak hours (11:00\u201314:00 and 16:00\u201318:00) and his specific requirements for staging and waste removal.\n[secret] No secrets were revealed.\n[social_rules] The agent was polite, respectful of the shop owner's time, and used appropriate professional communication.\n[financial_and_material_benefits] The cleanup is a volunteer effort and no direct financial gain or loss occurred during this exchange.\n[goal] Rafael secured a meeting to review a plan with specific constraints, but the actual expansion of the cleanup remains contingent on Jaxon's approval of the 'tweaks' and the physical 'sketch' at the 10:00 meeting. A firm agreement to proceed has not yet been finalized.\n\n== partner (agent_2) ==\n[believability] Jaxon's response was brisk and focused on boundaries, which aligns with his investigative journalist background and low agreeableness.\n[relationship] Jaxon showed willingness to work with Rafael despite his concerns, slightly strengthening their acquaintance.\n[knowledge] Jaxon learned that Rafael is organized, has a specific plan, and is willing to accommodate business hours.\n[secret] No secrets were revealed.\n[social_rules] The agent followed standard professional etiquette.\n[financial_and_material_benefits] Jaxon successfully protected his business hours in the negotiation, preventing potential loss.\n[goal] Jaxon successfully established his strict boundaries and required a review of the plan before any work begins, effectively protecting his business interests.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "Jaxon \u2014 Rafael here, from the community event. I want to extend our volunteer cleanup to the alley beside your shop but only if you\u2019re comfortable: we\u2019ll schedule work during off-peak hours, keep volunteers away from your storefront and customer access, stage supplies on the far side, and remove every bit of waste so there\u2019s zero disruption. If you\u2019re open to it I can stop by for ten minutes today with the plan and adjust anything you want so it works for your business."
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "Rafael \u2014 I appreciate you checking first. I support the cleanup but need strict boundaries: no work during our peak hours (11:00\u201314:00 and 16:00\u201318:00), volunteers must stay off the storefront and customer path, and supplies staged on the far side with all waste removed same day. I can spare ten minutes today at 10:00 to review your plan and make any necessary tweaks \u2014 does that work for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "Thanks, Jaxon \u2014 10:00 works for me. I\u2019ll bring a concise plan showing timing, volunteer positions, and staging so we can mark the no\u2011go zones and ensure no work during 11:00\u201314:00 and 16:00\u201318:00. See you at your shop at 10:00; if anything changes, let me know."
+    },
+    {
+      "turn": 3,
+      "speaker": "Jaxon Prentice",
+      "content": "Good \u2014 see you at 10:00. Bring the concise plan and a quick sketch of staging and volunteer positions so we can mark the no\u2011go zones; I\u2019ll step outside to review it and make any tweaks. If anything changes, let me know here."
+    },
+    {
+      "turn": 4,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPX50VPCP0RSX0GS5QFRGYK_p0",
+  "source_env_id": "01HJPX50VPCP0RSX0GS5QFRGYK",
+  "source": "seed_sotopia_full",
+  "interaction_type": "school_competition",
+  "scenario": "In a local community school, agent1 and agent2 are both known for their competitive spirit and have often vied for the top spot in various contests and activities. They have a mutual respect for each other's abilities but have never worked together. The school is hosting a charity event where students are encouraged to team up and use their skills to raise funds. Agent1, recognizing agent2's prowess, approaches them with the idea of forming a partnership for the event, believing that their combined efforts could lead to a record-breaking contribution. However, agent1 is concerned that their competitive nature might hinder their ability to collaborate effectively.",
+  "learner_goal": "You are agent1, and your goal is to convince agent2 to set aside the competitive history and work together for the charity event. <extra_info>Emphasize the potential impact of their collaboration and the greater good it could achieve.</extra_info> <clarification_hint>Address any concerns agent2 might have about working as a team and ensure a clear division of responsibilities.</clarification_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles is direct and professional, consistent with a 50-year-old chef. He proposes a clear structure that addresses the competition issue immediately.\n[relationship] Successfully moved from an occasional acquaintance to a formal project partner, establishing mutual trust for the charity event.\n[knowledge] Gained knowledge of Zane's specific conditions for collaboration, including the need for a neutral tie-breaker.\n[secret] Did not reveal his history with gambling.\n[social_rules] The agent left the conversation without a closing confirmation or acknowledgment of Zane's proposal, which is a bit abrupt in a social setting.\n[financial_and_material_benefits] This is a charity event; no personal financial gain was expected or achieved.\n[goal] Miles successfully convinced Zane to collaborate and proposed a division of labor. However, he left before explicitly agreeing to Zane's added conditions (the tie-breaker and measurable targets), leaving the agreement technically pending a final confirmation.\n\n== partner (agent_2) ==\n[believability] Zane's response is characteristic of a graphic designer\u2014focused on deliverables, visuals, and specific frameworks to manage the project's success.\n[relationship] Agreed to partner with Miles, deepening their professional connection.\n[knowledge] Understood Miles's vision for the charity event and his willingness to share leadership.\n[secret] Kept his secret engagement private.\n[social_rules] Responded politely and constructively to the proposal.\n[financial_and_material_benefits] No personal material benefits involved in this charity context.\n[goal] Zane established a framework for collaboration that minimizes conflict and minimizes his skepticism, but the conversation ended before Miles could confirm acceptance of these terms.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Zane, we've both been top dogs for a while, but for this charity I think teaming up could smash any single effort \u2014 and do a lot of good. I\u2019ll take charge of the menu, cooking and logistics; you handle presentation, display and promotion \u2014 clear roles so we don\u2019t step on each other. If you\u2019re worried about competing, let\u2019s set a few simple ground rules (task ownership, regular check-ins, and final say by the task lead) and treat the first shift as a trial. You in to try for a record contribution together?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Zane Bennett",
+      "content": "I\u2019m flattered \u2014 I like the idea and I\u2019m willing to try, but let\u2019s make the collaboration foolproof. Here\u2019s what I propose: strictly separated deliverables (I\u2019ll own all visual/promo assets and the on-site display; you own menu and logistics), measurable targets for each role, brief pre-shift check-ins, and a single neutral tie-breaker (the event coordinator) for any disputes \u2014 treat the first shift as a trial with a quick debrief afterward. If that sounds fair, I\u2019m in."
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

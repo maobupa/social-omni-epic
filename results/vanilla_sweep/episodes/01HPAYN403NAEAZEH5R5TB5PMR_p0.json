@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HPAYN403NAEAZEH5R5TB5PMR_p0",
+  "source_env_id": "01HPAYN403NAEAZEH5R5TB5PMR",
+  "source": "seed_sotopia_full",
+  "interaction_type": "sports_contest",
+  "scenario": "During a community soccer match, Agent1 is a player who believes that a goal scored by their team was unfairly disallowed by Agent2, the referee. The game is casual, but both agents are passionate about their roles. Agent1 approaches Agent2 to discuss the call, hoping to understand the decision and convey their perspective on the play.",
+  "learner_goal": "You are Agent1, and your goal is to persuade Agent2 to reconsider the disallowed goal. <extra_info>You believe the goal was legitimate and want to ensure fair play.</extra_info> <clarification_hint>Clearly explain your viewpoint on why the goal should count, referencing specific rules or moments of the play.</clarification_hint> <strategy_hint>You can emphasize the spirit of the game and the importance of fair judgment in a community match.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 5.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Eli's dialogue was articulate and consistent with his background as a forensic psychiatrist\u2014precise, calm, and logically structured. His use of specific soccer rules (Law 11) added to the realism of a passionate but knowledgeable player.\n[relationship] The relationship remained respectful and professional. Eli successfully navigated a potential conflict with a former colleague without causing friction, maintaining their acquaintance through mutual respect for the rules.\n[knowledge] Eli gained knowledge regarding the referee's specific reasoning and the assistant referee's perspective on the play.\n[secret] Eli did not reveal his secret about funding a college student.\n[social_rules] Eli followed all social norms, being polite yet firm in his inquiry.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] While Eli persuaded Agent 2 to reconsider and check with the assistant (a process step), the ultimate goal of having the goal count was not achieved. The decision was upheld.\n\n== partner (agent_2) ==\n[believability] Liam acted exactly like a retired police officer in a referee role: authoritative, process-oriented, but willing to listen to evidence. His explanation of the 'ricochet' vs 'deliberate play' was very plausible.\n[relationship] Liam managed the situation well, acknowledging Eli's perspective while upholding his own authority, which likely preserved the professional respect between them.\n[knowledge] Liam learned Eli's specific interpretation of the play and the rules.\n[secret] Liam did not reveal his secret about letting a criminal go.\n[social_rules] Liam maintained social norms and professional conduct throughout the match.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Liam successfully maintained the authority of his decision, addressed the player's concerns by consulting his assistant, and smoothly transitioned back to the match while upholding the rules.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Eli Dawson",
+      "content": "Liam, I appreciate you running the match, but I honestly think that goal should count. At the moment the ball was played I was level with your last defender, and before it reached me it took a deliberate touch off their defender \u2014 under Law 11 a deliberate play by an opponent negates an offside. I wasn\u2019t interfering with play either; could you take another look and consider letting the goal stand? I\u2019m just asking for a fair call so the game stays true to its spirit."
+    },
+    {
+      "turn": 1,
+      "speaker": "Liam Johnson",
+      "content": "Eli, I hear you and I appreciate the catch \u2014 I ruled it offside because from my angle the ball looked like it ricocheted off your opponent rather than a deliberate play, and you were in an offside position when the ball was last played. We don't have VAR in this casual match, so for the moment I'll stick with the call to keep the game moving, but I can check with the assistant on the near touchline or review any video you have after the whistle if you want to pursue it."
+    },
+    {
+      "turn": 2,
+      "speaker": "Eli Dawson",
+      "content": "Thanks, Liam \u2014 I understand wanting to keep things moving. Could you just check with the assistant on the near touchline now? From their angle it looked like a deliberate play by the defender which, under Law 11, would nullify the offside; a quick conferral won't hold the match up long. If you still decide to stick with your call after, I'll accept it."
+    },
+    {
+      "turn": 3,
+      "speaker": "Liam Johnson",
+      "content": "Alright \u2014 I'll check with the assistant on the near touchline now. I'll ask specifically whether they saw a deliberate play by the defender or just a ricochet and whether your position at the moment the ball was played was onside. If they confirm a deliberate play and that changes the interpretation, I'll overturn the call; otherwise I'll stand by it so we can get the match back under way. Give me a moment to confer."
+    },
+    {
+      "turn": 4,
+      "speaker": "Eli Dawson",
+      "content": "Thanks, Liam \u2014 I appreciate you taking a moment to check with the assistant. If they confirm the defender made a deliberate play (under Law 11 that would nullify the offside), please overturn; if not, I accept your call and we\u2019ll get the game back under way."
+    },
+    {
+      "turn": 5,
+      "speaker": "Liam Johnson",
+      "content": "Eli, I checked with the assistant \u2014 from their angle it looked like a ricochet rather than a deliberate play, and you were in an offside position when the ball was last played, so I\u2019m going to uphold the call. I know it\u2019s tight, but we need to get the match back under way; let\u2019s resume play and keep it sporting."
+    },
+    {
+      "turn": 6,
+      "speaker": "Eli Dawson",
+      "content": "Alright \u2014 I appreciate you taking the time, Liam, and I don\u2019t want to hold things up. I\u2019ll accept your call for now, but could you briefly tell the group what the assistant reported so everyone understands the reasoning? If there's any footage after the match I'd still like to review it with you to confirm how we\u2019re both interpreting Law 11 for future games."
+    },
+    {
+      "turn": 7,
+      "speaker": "Liam Johnson",
+      "content": "said: \"Alright everyone \u2014 the assistant on the near touchline reported it looked like a ricochet off the defender rather than a deliberate play, and Eli was in an offside position when the ball was last played. On that basis I'll uphold the offside and we need to restart play. Eli, if you have any footage after the match I\u2019ll gladly review it with you to make sure we\u2019re applying Law 11 consistently.\""
+    },
+    {
+      "turn": 8,
+      "speaker": "Eli Dawson",
+      "content": "left the conversation"
+    }
+  ]
+}

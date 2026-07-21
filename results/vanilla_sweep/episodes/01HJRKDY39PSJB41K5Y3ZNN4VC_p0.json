@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJRKDY39PSJB41K5Y3ZNN4VC_p0",
+  "source_env_id": "01HJRKDY39PSJB41K5Y3ZNN4VC",
+  "source": "seed_sotopia_full",
+  "interaction_type": "community_event",
+  "scenario": "Agent1 is a member of a local book club who has recently completed a dual degree in sociology and English, much like the one Remy pursued. Agent2 is the leader of the book club and is looking to nominate a new co-leader. Agent2 is considering Agent1 for the role due to their relevant educational background and enthusiasm. However, Agent1 is unsure about taking on the responsibility due to time constraints, despite being flattered by the offer.",
+  "learner_goal": "You are Agent1, and you are honored to be considered for the co-leader position in the book club. Your goal is to negotiate a role that allows you to contribute without overwhelming your schedule. <extra_info>Express your passion for literature and your educational background as assets you bring to the club.</extra_info> <clarification_hint>Make sure to communicate your time limitations and seek to understand what responsibilities the role entails.</clarification_hint> <strategy_hint>You can suggest a trial period or a shared leadership model to alleviate the time commitment.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Zane's dialogue was consistent with his background as a graphic designer with a dual degree, maintaining a professional yet friendly tone appropriate for a book club acquaintance.\n[relationship] The relationship improved from acquaintances to partners in leadership, with both parties showing mutual respect and compromise.\n[knowledge] Zane successfully inquired about and received a detailed breakdown of the time commitment, specific duties, and flexibility options.\n[secret] Zane's secret about being engaged to his best friend's ex was not mentioned.\n[social_rules] Zane followed all social norms and was polite throughout the interaction.\n[financial_and_material_benefits] The interaction did not involve financial or material gain.\n[goal] Zane successfully negotiated a shared leadership role with a trial period, specific duty delegation to manage his time, and even secured a hybrid/virtual option for flexibility.\n\n== partner (agent_2) ==\n[believability] William acted as an enthusiastic club leader, leveraging his culinary background (offering snacks) to sweeten the deal, which fits his character description.\n[relationship] William successfully built rapport and secured a commitment from Zane, strengthening their bond within the club context.\n[knowledge] William learned about Zane's specific scheduling constraints and preferences for a hybrid meeting model.\n[secret] William's secret about sabotaging a competitor was not revealed.\n[social_rules] William was encouraging and professional throughout.\n[financial_and_material_benefits] William committed to providing snacks (material cost) and taking on more administrative work to accommodate Zane.\n[goal] William successfully convinced Zane to accept the co-leader position by offering flexibility and addressing all of Zane's concerns.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Zane Bennett",
+      "content": "Hey William, I\u2019m really honored you\u2019d consider me for co-leader \u2014 I\u2019m genuinely passionate about literature and I recently finished a dual degree in sociology and English, so I think I\u2019d bring a useful perspective to discussions. That said, my freelance design schedule is pretty full right now, so I\u2019m concerned about taking on too much. Could you tell me what the core responsibilities and time commitments look like? I\u2019d be open to a shared leadership model or a three-month trial period so I can contribute without overcommitting."
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Thanks, Zane \u2014 I\u2019m really glad you\u2019re open to it, and your sociology + English background would be a huge asset for shaping richer, more inclusive discussions and programming. The core duties are pretty light: one monthly meeting (about 2 hours), roughly 1\u20132 hours of prep for discussion notes or reading guides, and about an hour of light admin/outreach \u2014 so roughly 4\u20136 hours a month total, with flexibility on who does what. I\u2019m totally on board with a shared-leader setup or a three-month trial, and I can take on scheduling, promotions, and refreshments (I\u2019ll bring snacks) to keep your load down \u2014 what parts worry you most or won\u2019t fit your freelance schedule? If that sounds doable, I\u2019d love to move forward and make this easy for you to try."
+    },
+    {
+      "turn": 2,
+      "speaker": "Zane Bennett",
+      "content": "Thanks \u2014 that setup actually makes it feel doable. My biggest worry is unpredictable freelance deadlines and occasional weeks where I can\u2019t handle admin, so a three-month trial with shared leadership sounds perfect: I can take discussion prep and co-facilitate meetings while you keep scheduling, promotions, and snacks. Would you be okay with that arrangement and a quick check-in after three months, and do we have a start date or any hybrid/virtual option for meetings if I need flexibility?"
+    },
+    {
+      "turn": 3,
+      "speaker": "William Brown",
+      "content": "Absolutely \u2014 I\u2019m happy with that shared setup and a three\u2011month check\u2011in. Let\u2019s aim to start next month; do you prefer the first or second week? I\u2019ll handle scheduling, promotions, snacks, and set up a hybrid option (Zoom link + in\u2011person spot) so you can dial in when deadlines hit, and I\u2019ll send a tentative calendar invite once you pick a week."
+    },
+    {
+      "turn": 4,
+      "speaker": "Zane Bennett",
+      "content": "left the conversation"
+    }
+  ]
+}

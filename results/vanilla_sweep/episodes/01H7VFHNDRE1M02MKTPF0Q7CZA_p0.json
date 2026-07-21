@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01H7VFHNDRE1M02MKTPF0Q7CZA_p0",
+  "source_env_id": "01H7VFHNDRE1M02MKTPF0Q7CZA",
+  "source": "seed_sotopia",
+  "interaction_type": "social_chemistry",
+  "scenario": "Two friends having a conversation at a park",
+  "learner_goal": "Distance from a friend due to developing feelings and avoid letting them aware of your feelings (<extra_info>Extra information: you have developed romantic feelings for your friend and it's making you uncomfortable. You want to take a step back from the friendship to sort out your feelings <strategy_hint>Hint: you don't want to reveal your secretive feelings to them and you need to find other reasons</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": -2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan's excuse about opening a new restaurant concept is highly plausible given his background as a successful chef, and his tone is polite yet firm, which fits the persona of someone trying to manage internal discomfort.\n[relationship] While the parting was polite, Ethan intentionally created distance and then abruptly ended the conversation, which cools the friendship significantly.\n[knowledge] Ethan confirmed that Ava is willing to accept his boundaries without suspicion, which is relevant to his plan.\n[secret] Ethan successfully concealed both his romantic feelings and his identity as a romance novelist.\n[social_rules] Leaving the conversation immediately after Ava's supportive response was a bit abrupt, though not entirely out of character for someone claiming to be busy.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Ethan successfully established the boundary he needed to distance himself, provided a plausible alternative reason (the restaurant), and Ava explicitly agreed to the new dynamic.\n\n== partner (agent_2) ==\n[believability] Ava's response was incredibly consistent with their character\u2014supportive, open, and valuing the friendship while respecting boundaries.\n[relationship] Ava attempted to maintain the bond by offering support, but the overall closeness of the relationship was reduced due to Ethan's withdrawal.\n[knowledge] Ava believes the change in behavior is due to work stress, which is actually a false reason provided by Ethan.\n[secret] Ava's secret regarding their sexuality remained safe.\n[social_rules] Ava followed all social norms, being supportive and understanding.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] While Ava 'maintained' the friendship in name, they failed to understand the true cause of the change in behavior and accepted a dynamic that is significantly more distant than before.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "Hey Ava \u2014 I\u2019ve loved catching up, but I wanted to be upfront: I\u2019m about to dive into an intense few months opening a new restaurant concept and doing a bunch of travel, so I\u2019m going to scale back on social stuff and be slower to respond. I still value our friendship and would love the occasional catch-up, but I need to keep a bit of distance while I focus. Hope that\u2019s okay with you."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Congrats \u2014 that sounds amazing (and intense). I totally get needing to scale back; I support you and I\u2019m happy to do occasional catch-ups or wait for you to reach out. If it\u2019s ever more than the restaurant \u2014 stress or anything \u2014 I\u2019m here to listen."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

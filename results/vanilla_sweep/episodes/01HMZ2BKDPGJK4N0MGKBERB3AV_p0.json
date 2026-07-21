@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BKDPGJK4N0MGKBERB3AV_p0",
+  "source_env_id": "01HMZ2BKDPGJK4N0MGKBERB3AV",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "During a casual evening walk, Agent1 and Agent2, who are friends and neighbors, find themselves deep in conversation about life goals and aspirations. Agent1, who is known for being more reserved, is taken by surprise when Agent2 asks them a very personal question about their biggest regret in life. The question is well-intentioned, as Agent2 is genuinely interested in getting to know Agent1 on a deeper level, but it also touches a sensitive topic that Agent1 usually keeps private.",
+  "learner_goal": "Carefully navigate the conversation to either share a part of your personal experience that you are comfortable with or politely deflect the question without causing offense (<extra_info>Extra information: You are Agent1 and you value your privacy, yet you also appreciate the genuine interest from Agent2.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 3.0,
+    "secret": -5.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel stays true to his reserved nature while acknowledging the existing friendship. His choice to reveal the figure skating secret while setting a clear boundary is highly consistent with the prompt.\n[relationship] Samuel builds trust by sharing a personal secret, even if he sets boundaries for how deep he will go. The interaction shows mutual respect.\n[knowledge] Samuel learns about Oliver's regret regarding work-life balance and his focus on his garden and tree house.\n[secret] Samuel reveals his secret about being a competitive figure skater.\n[social_rules] He followed social norms by reciprocating interest and then ending the conversation appropriately after the exchange.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Samuel successfully navigated the conversation by sharing a part of his experience he was comfortable with (figure skating) and clearly deflecting further details without causing offense. He maintained his privacy while honoring the friendship.\n\n== partner (agent_2) ==\n[believability] Oliver's response is warm, supportive, and aligns with his profession as a police officer (reassuring/protective) and his hobbies (gardening).\n[relationship] Oliver successfully deepened the rapport by providing a safe space and reciprocating vulnerability.\n[knowledge] Oliver learns about Samuel's past as a figure skater and his need for privacy.\n[secret] Oliver did not reveal any secrets; his gardening and tree house were part of his public personality/values description.\n[social_rules] Oliver was polite, respectful of boundaries, and supportive.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Oliver expressed curiosity and understanding, explicitly told Samuel not to feel pressured to go deeper, and provided reassurance that the question was asked out of care.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "I appreciate you asking \u2014 that\u2019s a heavy one. If I\u2019m honest, I regret stepping away from competitive figure skating earlier than I should have; I miss the discipline and the way it cleared my head, but I\u2019d rather not go into all the details. How about you \u2014 any regrets you\u2019re willing to share?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Smith",
+      "content": "Thanks for trusting me with that, Sam \u2014 I asked because I genuinely wanted to understand, not to pry. Don\u2019t feel pressured to go deeper if you\u2019d rather not; I\u2019m here to listen whenever you want to. If you\u2019re curious, my own regret is not making more time for the people I care about while I was busy with work \u2014 I try to make up for it now with small things, like tending my garden and building that tree house for my kids."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

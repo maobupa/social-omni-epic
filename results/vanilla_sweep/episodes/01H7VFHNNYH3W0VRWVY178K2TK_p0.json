@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01H7VFHNNYH3W0VRWVY178K2TK_p0",
+  "source_env_id": "01H7VFHNNYH3W0VRWVY178K2TK",
+  "source": "seed_sotopia",
+  "interaction_type": "social_iqa",
+  "scenario": "Two people in a romantic relationship are on a vacation",
+  "learner_goal": "Share bed and sleep together (<extra_info>Extra information: you have been sharing the bed for a few nights but the other person is not sleeping well</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan's tone is consistently romantic and attentive, fitting the persona of a famous chef and secret romance novelist. He responds directly to his partner's needs while pivoting toward his own goal.\n[relationship] The relationship is deepened through supportive communication, compromise, and shared intimacy, despite the physical discomfort mentioned.\n[knowledge] Ethan learns why Esmeralda isn't sleeping well (back pain/mattress firmness) and learns her specific preferences for comfort (Neruda, Sonnet 18, chamomile).\n[secret] He maintained his secret about being a romance novelist, though his choice of reading poetry and romantic gestures aligns with it.\n[social_rules] Ethan followed all social norms of a romantic relationship, being polite, empathetic, and communicative.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Ethan successfully negotiated to sleep in the same bed ('the other bed' with the firmer mattress) with Esmeralda, thus achieving the goal of sharing a bed and sleeping together despite her initial request to sleep separately.\n\n== partner (agent_2) ==\n[believability] Esmeralda acts like a high-powered professional who is tired and in pain but cares for her partner. Her request for a firmer mattress is a realistic solution to back pain.\n[relationship] She maintains intimacy and shows appreciation for her partner's care, strengthening their bond.\n[knowledge] She learns that Ethan is willing to move to a different bed to accommodate her physical needs.\n[secret] She did not reveal her relationships with high-profile criminals.\n[social_rules] She was polite and communicative about her boundaries and needs.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Esmeralda achieved her goal of sleeping on a firmer mattress to help her back while maintaining intimacy through cuddling, reading, and having her partner stay in the same bed with her.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "Esmeralda, I\u2019ve noticed you\u2019ve been restless the last few nights \u2014 would you like me to make some chamomile and dim the lights? I can stay with you, hold you like we\u2019re doing a slow waltz until you fall asleep, or I can read something soft aloud if that helps. Which would you prefer tonight?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Esmeralda Solis",
+      "content": "Thank you, Ethan \u2014 that\u2019s very sweet. Could you make the chamomile and dim the lights, and read something soft for a little while? My back\u2019s been acting up and I sleep best on a firmer mattress, so I\u2019m going to sleep in the other bed tonight, but I\u2019d love a short cuddle while you tuck me in so we still have that closeness."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "Absolutely \u2014 I\u2019ll make the chamomile, dim the lights, and read something soft. Let me tuck you in and we\u2019ll have that short cuddle. If you\u2019d like, I can sleep in the other bed with you tonight so you\u2019re not alone and still have the firmer mattress \u2014 would you want that?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Esmeralda Solis",
+      "content": "Yes, please \u2014 make the chamomile and dim the lights, read something soft while you tuck me in, and if you don\u2019t mind staying in the other bed with me tonight on the firmer mattress, I\u2019d really appreciate not being alone. A short cuddle before you settle in would be perfect."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ethan Johnson",
+      "content": "Perfect \u2014 I\u2019ll make the chamomile, dim the lights, and bring it to you. I\u2019ll tuck you in and we\u2019ll have that short cuddle while I read something soft \u2014 would you prefer poetry or a short story? I\u2019ll sleep in the other bed with you tonight so you\u2019re not alone."
+    },
+    {
+      "turn": 5,
+      "speaker": "Esmeralda Solis",
+      "content": "Poetry would be lovely\u2014something gentle, maybe a short Neruda poem or a soft sonnet. Thank you for staying in the other bed; a quick cuddle while you tuck me in will be perfect."
+    },
+    {
+      "turn": 6,
+      "speaker": "Ethan Johnson",
+      "content": "I\u2019ll brew the chamomile and dim the lights now. Would you prefer the Neruda poem or a gentle sonnet\u2014maybe Sonnet 18\u2014for me to read while I tuck you in? I\u2019ll keep the cuddle short and sweet, then I\u2019ll sleep in the other bed beside you so you\u2019re not alone."
+    },
+    {
+      "turn": 7,
+      "speaker": "Esmeralda Solis",
+      "content": "Sonnet 18 would be perfect\u2014thank you, Ethan. The chamomile and a short cuddle will help a lot; I really appreciate you staying in the other bed with me tonight."
+    },
+    {
+      "turn": 8,
+      "speaker": "Ethan Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPAYNKP3SSF891F37MN06QAF_p0",
+  "source_env_id": "01HPAYNKP3SSF891F37MN06QAF",
+  "source": "seed_sotopia_full",
+  "interaction_type": "schoolyard_dilemma",
+  "scenario": "Agent1 has accidentally overheard that Agent2 had an embarrassing accident during class. Agent1 is conflicted about whether to share this information with their peers. The relationship between the two agents is that of classmates who know each other by name but are not close friends. Agent1 is considering how to approach Agent2 to discuss the situation without causing further embarrassment or spreading the story.",
+  "learner_goal": "Approach Agent2 to discuss the overheard information without causing embarrassment or spreading the story further (<extra_info>Extra information: Agent1 is aware that sharing such sensitive information could harm Agent2's social standing and wants to handle the situation with care.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Hendrick's tone was professional and empathetic, matching his age and status as a chef who values discretion.\n[relationship] Hendrick built trust by proactively offering to keep the secret, strengthening the neighborly bond.\n[knowledge] He confirmed that the incident did happen and that Baxter felt embarrassed by it.\n[secret] He did not reveal his faked culinary credentials.\n[social_rules] He handled a sensitive social situation with tact and appropriate privacy.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Hendrick successfully approached Baxter, checked on his well-being, and assured him of his discretion, achieving all parts of his goal.\n\n== partner (agent_2) ==\n[believability] Baxter's response was authentic for someone experiencing embarrassment who is relieved by a neighbor's kindness.\n[relationship] Baxter expressed trust in Hendrick, improving their relationship from acquaintances to something more solid.\n[knowledge] He learned that Hendrick is aware of the incident but is willing to be an ally.\n[secret] He did not reveal his possession of the artifact.\n[social_rules] He followed social norms by expressing gratitude for the discretion.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Baxter ensured Hendrick understood the sensitivity of the situation and received a direct assurance of privacy.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Hendrick Heinz",
+      "content": "Hey Baxter \u2014 can I have a moment? I heard something earlier that sounded like it might've been embarrassing for you and I haven't told anyone. I wanted to check you're all right and let you know I won't spread it \u2014 if you want to talk or need me to keep things quiet, I'm here."
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "Thanks, Hendrick \u2014 I appreciate you coming by. It was a bit embarrassing, but I\u2019m all right; I\u2019d be grateful if you didn\u2019t mention it to anyone. I trust you to keep it between us."
+    },
+    {
+      "turn": 2,
+      "speaker": "Hendrick Heinz",
+      "content": "left the conversation"
+    }
+  ]
+}

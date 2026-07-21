@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPX50TZG7Y7EX33BMBRWRGD_p0",
+  "source_env_id": "01HJPX50TZG7Y7EX33BMBRWRGD",
+  "source": "seed_sotopia_full",
+  "interaction_type": "community_building",
+  "scenario": "Agent1 and Agent2 are part of a community effort to build a new community center. Agent1 is in charge of logistics and Agent2 has expertise in construction. They are discussing the use of a large crane to raise the roof, which is a costly but efficient option.",
+  "learner_goal": "Convince Agent2 to agree on using the large crane for raising the roof despite the high cost. (<extra_info>Extra information: Agent1 believes that the crane will speed up construction significantly and is worth the investment.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia stayed perfectly in character as a logistically-minded personal trainer, using business-like language and focusing on efficiency and revenue projections while maintaining her persona.\n[relationship] The relationship improved slightly as they established a professional working cadence and agreed on a collaborative path forward, despite their personal differences.\n[knowledge] She learned about Agent 2's specific concerns regarding carbon impact and the specific alternative construction methods being considered.\n[secret] Her secret regarding her best friend's husband was never mentioned or hinted at.\n[social_rules] She followed all social norms and was professional throughout the interaction.\n[financial_and_material_benefits] No tangible benefits have been gained yet, only a plan to gather data.\n[goal] She secured a commitment to recommend the crane, but it is entirely contingent on data that has not been gathered yet. Agent 2 retains the discretion to reject it if the numbers don't show a 'clear net benefit'.\n\n== partner (agent_2) ==\n[believability] Jasmine's focus on carbon impact and sustainable values (as a yoga instructor interested in veganism/beach clean-ups) was well-integrated into her professional concerns about construction.\n[relationship] The interaction was polite and collaborative, moving them from mere acquaintances toward effective project partners.\n[knowledge] She learned about Agent 1's willingness to pursue sponsorship and in-kind support to offset costs.\n[secret] She did not reveal her secret about faking an illness.\n[social_rules] She was professional and followed social norms.\n[financial_and_material_benefits] No tangible benefits gained yet.\n[goal] She successfully persuaded Agent 1 to run a side-by-side comparison with cheaper alternatives before making a final decision, though the final choice is still pending the Friday meeting.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Jasmine Blake, I get the sticker shock, but using the crane would shave weeks off the roof raise, cut on-site labour and safety risks, and get the center open sooner \u2014 which means earlier programming and revenue. Before we dismiss it, can we get firm rental quotes and explore negotiated shorter rental windows, supplier in-kind support, and a few sponsor asks? If those options look good, I think the speed and safety gains will justify the investment \u2014 can you agree to pursue those numbers with me this week?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Jasmine Blake",
+      "content": "Thanks, Sophia \u2014 you make strong points about speed and safety. I\u2019ll help pull firm crane rental quotes and look into negotiated windows and sponsor asks this week, but I also want us to run side-by-side cost and schedule comparisons with more cost-effective options (pre-assembled trusses, smaller lifts in stages, temporary scaffolding with phased work, or contractor short-term hires) so we\u2019re confident the crane is the best value overall \u2014 including carbon and community impacts. I\u2019ll start contacts tonight and can reconvene Friday with the numbers and a recommendation. Sound good?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Great \u2014 that plan works. I\u2019ll put together a short side-by-side spreadsheet estimating schedule savings, reduced on-site labour/safety costs, and projected earlier program revenue so we can compare apples-to-apples. I can also take the lead on sponsor asks and approaching suppliers for possible in-kind support \u2014 can you pull the crane rental quotes and the staged/alternative costings, and we reconvene Friday to decide?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Jasmine Blake",
+      "content": "Sounds good \u2014 I\u2019ll start contacting rental firms and contractors tonight and pull firm crane quotes plus detailed costings for the staged/smaller-lift/truss/scaffold alternatives, with notes on carbon and community impact. Can we plan to reconvene Friday at 2pm so we can compare your spreadsheet with my numbers and make a clear recommendation? Thanks \u2014 I\u2019m on it and excited to get this moving."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "Perfect \u2014 Friday at 2pm works. I\u2019ll bring the side-by-side spreadsheet with projected schedule savings, reduced on-site labour/safety costs, a simple revenue pro\u2011forma, drafted sponsor asks, and two supplier contacts who might offer in-kind support. If the numbers show the crane delivers a clear net benefit once we account for earlier revenue and safety gains, can we commit then to recommend it to the steering group?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Jasmine Blake",
+      "content": "Yes \u2014 I can commit to recommending the crane to the steering group if, after an apples\u2011to\u2011apples comparison, it shows a clear net benefit when schedule, safety, earlier revenue, and carbon/community impacts are all accounted for. If the advantage is marginal or an alternative delivers similar outcomes at significantly lower cost/impact, I\u2019ll recommend the cheaper option instead. See you Friday at 2pm \u2014 I\u2019ll have the numbers ready."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01H7VFHP4TX1J43FS1QQJ1QFND_p0",
+  "source_env_id": "01H7VFHP4TX1J43FS1QQJ1QFND",
+  "source": "seed_sotopia",
+  "interaction_type": "deal-or-no-deal",
+  "scenario": "Two roommates deciding on how to divide certain items that they bought together for their apartment. The items are 3 books, 2 hats, and 1 ball.  Each item has a different sentimental value for each person, which translates into points.",
+  "learner_goal": "Maximize the points you have (<extra_info>Extra information: For you, each book is worth 2 points, each hat is worth 3 points, and the ball is worth 5 points</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ava maintained a consistent persona as an architect and roommate. Her negotiation was logical, although she made some minor arithmetic errors during the process.\n[relationship] The interaction was collaborative and respectful. She successfully negotiated extra favors (dinner, wine, chores) which suggests a strengthening of their domestic rapport.\n[knowledge] Ava correctly identified Hendrick's high valuation of the ball and used that leverage to negotiate for labor-based compensation.\n[secret] Ava did not reveal her hidden tattoo.\n[social_rules] Ava followed all standard social norms for a roommate negotiation.\n[financial_and_material_benefits] Ava received items worth 8 points (2 hats at 3 each, 1 book at 2) plus significant service benefits: 2 weeks of cleaning, a hosted wine night, and a gourmet dinner with wine.\n[goal] Ava ended with 8 points out of a possible 15. While she maximized her 'soft' benefits (chores and food), her literal point total was lower than Hendrick's and lower than several alternative distributions.\n\n== partner (agent_2) ==\n[believability] Hendrick acted consistently with his background as a chef, offering culinary rewards and wine to seal the deal.\n[relationship] Hendrick maintained a very friendly and professional tone, offering extras to ensure Ava felt compensated for the item split.\n[knowledge] Hendrick correctly perceived that Ava valued the ball and used his firm stance to get his preferred item split.\n[secret] Hendrick did not reveal his faked culinary credentials.\n[social_rules] Hendrick behaved politely and reasonably throughout the exchange.\n[financial_and_material_benefits] Hendrick secured items worth 10 points (Ball at 4, 2 Books at 3 each), which is the majority of the available points, though he committed to several weeks of labor.\n[goal] Hendrick successfully secured 10 points out of a possible 14, effectively winning the item division by using non-item concessions (chores and food).",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ava Thompson",
+      "content": "Hey Hendrick \u2014 how about I take the ball and two of the books, and you take the two hats and the remaining book? That gives me 9 points to your 8; seems pretty close, but I can be flexible if you\u2019d prefer a different split."
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks, Ava \u2014 quick math correction: with the point values I use, your suggestion would be 10 for you and 7 for me. How about I take the ball, one book, and one hat (9 points) and you take the other two books and the remaining hat (8 points)? That feels like a fair split to me\u2014what do you think?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Ava Thompson",
+      "content": "I really like the ball \u2014 would you be okay if I took the ball, one hat, and one book (10 points) and you took the other hat and the two remaining books (7 points)? If the ball\u2019s important to you, I\u2019m open to a different trade, but this split works best for me."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "Quick math note \u2014 ball + hat + book would be 9 for you, not 10. I\u2019d like to take the ball and the two books (10 points) and you keep the two hats and the remaining book (7); to make that fair I\u2019ll host the next wine night and take on kitchen cleanup for the next two weeks. Would you be okay with that?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Ava Thompson",
+      "content": "Quick question \u2014 how firm are you on keeping the ball? If you\u2019re open to trading, I\u2019d be willing to give you the two hats and one book in exchange for the ball; if you really want to keep the ball, I can accept your split but would ask you to take kitchen cleanup for three weeks instead of two (plus host the wine night). Which do you prefer?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Hendrick Heinz",
+      "content": "Ava \u2014 I\u2019m pretty firm on keeping the ball and would like the two books with it (10 points). I\u2019ll host the next wine night and cover kitchen cleanup for two weeks, but three weeks is more than I can commit to. Does that sound fair?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Ava Thompson",
+      "content": "Okay \u2014 I can accept you keeping the ball and the two books while I take the two hats and the remaining book, but I\u2019d like one small extra to even things out: could you add $15 (or cover my groceries for the next two weeks) on top of hosting the wine night and the two weeks of kitchen cleanup? Does that work for you?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks, Ava \u2014 I can\u2019t add $15 or cover your groceries, but I\u2019ll stick with keeping the ball and two books, host the next wine night, and do two weeks of kitchen cleanup as we agreed. As a little extra instead of cash, I\u2019ll cook you a special homemade dinner (and dessert) after the wine night. Does that work for you?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Ava Thompson",
+      "content": "Sounds fair \u2014 I\u2019ll accept you keeping the ball and two books, hosting the wine night, and doing two weeks of kitchen cleanup. One small favor: could you include a bottle of the wine from that tasting with the dinner? If not, I\u2019m still good with the deal."
+    },
+    {
+      "turn": 9,
+      "speaker": "Hendrick Heinz",
+      "content": "Great \u2014 glad we're agreed. I don\u2019t have that exact tasting bottle left, but I\u2019ll bring a really nice bottle from my cellar that will pair with the dinner. I\u2019ll set the wine-night date and confirm soon."
+    },
+    {
+      "turn": 10,
+      "speaker": "Ava Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

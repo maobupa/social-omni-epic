@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPAYNQMXZFJ0832CKHC908GZ_p0",
+  "source_env_id": "01HPAYNQMXZFJ0832CKHC908GZ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "user_generated",
+  "scenario": "Agent1, who is very traditional, believes they have a say in who their adult child, Agent2, dates and eventually marries. Agent1 feels that their experience and wisdom should guide Agent2's choices to ensure a good match. Conversely, Agent2 values their independence and wants to assert their own choice in romantic matters without feeling pressured to conform to their parent's expectations. Both agents need to navigate this delicate situation to maintain their relationship while respecting each other's views.",
+  "learner_goal": "Convince Agent2 to consider their advice on romantic partners (<extra_info>Extra information: you believe that family wisdom is important and that you have Agent2's best interests at heart.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Gwen played the role of a concerned, maternal figure very well, offering advice that was both practical and respectful of boundaries, which aligns with her social worker background.\n[relationship] The relationship remained respectful and grew more trusting as Benjamin agreed to listen and even acknowledged the value of her perspective.\n[knowledge] She learned that Benjamin is willing to listen to advice as long as his ultimate autonomy is respected.\n[secret] She did not reveal her secret about giving up a child for adoption.\n[social_rules] She followed all social norms and was exceptionally polite.\n[financial_and_material_benefits] There were no financial or material gains in this interaction.\n[goal] Gwen successfully convinced Benjamin to hear her advice and he stated he would keep it in mind. However, the final decision remains entirely under Benjamin's future discretion, which caps the score at 6.\n\n== partner (agent_2) ==\n[believability] Benjamin remained firm about his independence while being civil, which is consistent with his character as an activist who values autonomy.\n[relationship] He maintained a positive relationship with Gwen by setting boundaries without being confrontational.\n[knowledge] He gained knowledge of Gwen's specific criteria for evaluating relationships.\n[secret] He did not reveal his secret regarding his family wealth.\n[social_rules] He was polite and assertive, adhering to social norms.\n[financial_and_material_benefits] There were no financial or material gains.\n[goal] Benjamin successfully asserted his autonomy multiple times, making it clear that his happiness is the final guide while still maintaining the relationship.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Gwen Pierce",
+      "content": "Benjamin, I respect your independence and I don\u2019t want to tell you what to do, but because we share values and I care about your well-being, would you hear me out for a few minutes? I\u2019ve seen how good intentions can still lead people into difficult relationships, and I could share a few practical things I look for in a partner\u2014boundaries, respect, and aligned values\u2014that tend to matter long-term. If you\u2019d rather not, I understand and won\u2019t push, but I\u2019d really like the chance to offer my perspective."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Gwen \u2014 I appreciate you offering this and I trust your judgment. I'm willing to listen to the practical things you look for, but I need you to know up front that I make my own romantic choices and my happiness is the final guide. If that's okay with you, I'd like to hear what you have in mind."
+    },
+    {
+      "turn": 2,
+      "speaker": "Gwen Pierce",
+      "content": "Thank you, Benjamin \u2014 I appreciate you hearing me out and I completely respect that your happiness and choices come first. Briefly, three practical things I look for are: consistent respect for your boundaries and time; how they handle conflict (do they take responsibility and work to repair, or shut down/blame?); and whether your core values and long-term goals\u2014about family, money, and how you spend your life\u2014are aligned. If any of those feel off in a relationship, it\u2019s worth pausing and asking more questions, and I\u2019m here to talk through any specifics if you ever want to."
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Gwen \u2014 I really appreciate you looking out for me and those are thoughtful, practical things to watch for. I\u2019ll keep boundaries, conflict handling, and aligned long-term goals in mind when I\u2019m dating. I also want to be clear I need to make my own choices and let my happiness guide those decisions, but I value your perspective and will reach out if I want to talk specifics."
+    },
+    {
+      "turn": 4,
+      "speaker": "Gwen Pierce",
+      "content": "left the conversation"
+    }
+  ]
+}

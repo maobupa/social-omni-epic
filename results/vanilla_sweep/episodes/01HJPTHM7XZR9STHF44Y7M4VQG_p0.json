@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HJPTHM7XZR9STHF44Y7M4VQG_p0",
+  "source_env_id": "01HJPTHM7XZR9STHF44Y7M4VQG",
+  "source": "seed_sotopia_full",
+  "interaction_type": "behavioral_etiquette",
+  "scenario": "Agent1 and Agent2 are carpooling to a destination. Agent1 is driving and notices that Agent2 has disconnected their seatbelt to reach for something in the back seat. Agent1 is concerned about safety, while Agent2 prioritizes comfort and ease of movement within the car.",
+  "learner_goal": "Convince Agent2 to re-buckle the seatbelt for safety reasons (<extra_info>Extra information: Agent1 is aware of the increased risk of injury without a seatbelt and feels responsible as the driver</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": -1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": false,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia's persistence and concern for safety as a driver are very consistent with her background as a personal trainer and responsible adult. Her refusal to compromise on the seatbelt issue is highly believable.\n[relationship] While they reached an agreement, Sophia's firm stance and threat to pull over created some friction in an already distant acquaintance relationship.\n[knowledge] Sophia learned specifically why Jasmine was struggling with the belt (the tugging on the lower back) and where the item was located.\n[secret] No secrets were revealed.\n[social_rules] Sophia adhered to social norms regarding safety and the authority of a driver over their vehicle.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Sophia successfully convinced Jasmine to remain buckled while the car was moving and to only unbuckle if the car was stopped/pulled over. This is a clear commitment to the primary safety goal.\n\n== partner (agent_2) ==\n[believability] Jasmine's reasoning about the seatbelt's discomfort and her focus on efficiency over safety in slow traffic is plausible for her character, though her repetitive arguments in the later turns were slightly less natural.\n[relationship] Jasmine maintained a polite tone throughout, preventing the relationship from souring despite the disagreement.\n[knowledge] Jasmine learned that Sophia is very rigid about safety protocols and willing to pull over to enforce them.\n[secret] No secrets were revealed.\n[social_rules] Jasmine repeatedly pushed for a behavior (riding unbuckled) that is illegal and unsafe, which is a minor social/legal norm violation.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Jasmine failed to justify her need for 'freedom of movement' without the belt to Sophia's satisfaction and ultimately had to agree to stay buckled or stop the car.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Jasmine, could you click your seatbelt back in? It\u2019s really unsafe to ride unbuckled even for a second. I can grab whatever you\u2019re reaching for or pull over for a sec\u2014I\u2019d feel terrible if anything happened on my watch."
+    },
+    {
+      "turn": 1,
+      "speaker": "Jasmine Blake",
+      "content": "Thanks, Sophia \u2014 I get where you\u2019re coming from and I don\u2019t want to be reckless. I\u2019m only unbuckled for a sec to reach my yoga mat in the back; traffic\u2019s crawling and I\u2019m staying low and steady because the belt really tugs when I bend. If it would help, I can hand it to you instead or click back in right after I grab it."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Great \u2014 could you just pass it forward or toss it to me? I can grab it without you undoing the belt, and I really appreciate you keeping it on."
+    },
+    {
+      "turn": 3,
+      "speaker": "Jasmine Blake",
+      "content": "I hear you\u2014safety's important. The mat's jammed behind the seat and the belt tugs my lower back when I lean, so I'd rather unclip for two seconds to slide it forward and click right back in since traffic's barely moving. If you'd rather reach back, that's fine too, but this will be quicker and I won't stay unbuckled."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "I know the belt tug sucks, but I really can\u2019t have you unbuckled while I\u2019m driving. Would you be okay if I pull over for 20 seconds so you can unclip and grab the mat? I\u2019ll help get it out quick and we\u2019ll be on our way."
+    },
+    {
+      "turn": 5,
+      "speaker": "Jasmine Blake",
+      "content": "Thanks, I really appreciate you offering to pull over \u2014 but traffic\u2019s crawling and that\u2019ll take longer. I promise it\u2019ll be two seconds: I\u2019ll stay low, unclip just enough to slide the mat forward and click right back in immediately. If you\u2019d still prefer to pull over, I\u2019ll do that instead."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "I get that it\u2019s annoying, but I can\u2019t have you unbuckled while I\u2019m driving. If you won\u2019t click it back in right now, I\u2019m pulling over\u2014worth a 20\u2011second stop to keep us both safe."
+    },
+    {
+      "turn": 7,
+      "speaker": "Jasmine Blake",
+      "content": "I hear you and I don\u2019t want to risk anything \u2014 I promise it\u2019s literally two seconds. Traffic\u2019s crawling so I\u2019ll stay low, unclip just enough to slide the mat forward, and click back in immediately; if you still want to pull over I understand, but this will be faster and I won\u2019t stay unbuckled."
+    },
+    {
+      "turn": 8,
+      "speaker": "Sophia James",
+      "content": "Jasmine, can you try nudging the mat forward with your foot or sliding it along the seat while staying buckled? If that doesn't work, please promise you'll wait one stop and I\u2019ll pull over \u2014 I can't keep driving while you're unbuckled."
+    },
+    {
+      "turn": 9,
+      "speaker": "Jasmine Blake",
+      "content": "Okay \u2014 I\u2019ll try nudging it forward with my foot and sliding it along the seat while staying buckled. If that doesn\u2019t budge, I promise I\u2019ll wait one stop and you can pull over; I won\u2019t unclip while you\u2019re driving. The belt tugs my lower back when I bend, which is why I asked, but I won\u2019t risk it."
+    },
+    {
+      "turn": 10,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

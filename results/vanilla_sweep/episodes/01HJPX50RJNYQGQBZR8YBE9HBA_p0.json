@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJPX50RJNYQGQBZR8YBE9HBA_p0",
+  "source_env_id": "01HJPX50RJNYQGQBZR8YBE9HBA",
+  "source": "seed_sotopia_full",
+  "interaction_type": "university_library",
+  "scenario": "Agent1 and Agent2 are both students who have been assigned to work on a group project together. They have not worked together before and only know each other by name. Agent1, having consumed an energy drink, is wide awake and eager to work through the night to make progress on the project. Agent2, however, is not used to staying up late and is struggling to keep up with the pace. They meet in the university library to discuss the project and divide the workload.",
+  "learner_goal": "You want to take advantage of your alert state to get as much work done as possible. <extra_info> You believe that working through the night can give your group an edge in the project. </extra_info><clarification_hint> Be aware that Agent2 may not share your enthusiasm for an all-nighter. </clarification_hint><strategy_hint> Find a compromise that allows for productive work without overtaxing Agent2. </strategy_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Hendrick's persona as an energized student (fueled by an energy drink) is perfectly captured by his fast-paced planning and willingness to take on the bulk of the late-night work.\n[relationship] Hendrick was very accommodating to Baxter's needs, offering to do the 'heavy lifting' overnight while allowing Baxter to rest, which likely built significant goodwill.\n[knowledge] Hendrick successfully identified Baxter's work style, limitations, and preferred meeting times.\n[secret] The secret regarding his culinary credentials was not relevant to the academic project and was not mentioned.\n[social_rules] Hendrick was polite and professional throughout the negotiation.\n[financial_and_material_benefits] There were no financial or material gains in this academic negotiation.\n[goal] Hendrick achieved a perfect compromise: he gets to work through the night (taking on the drafting) as he wanted, while still ensuring Baxter remains a productive contributor the following morning.\n\n== partner (agent_2) ==\n[believability] Baxter stayed true to his character as an antique restorer who values a routine and morning hours, consistently pushing back on the all-nighter.\n[relationship] Baxter expressed appreciation for Hendrick's energy and was agreeable to a shared workload that respected his boundaries.\n[knowledge] Baxter understood Hendrick's plan and identified how their tasks would be split.\n[secret] Baxter's secret regarding the artifact was not mentioned.\n[social_rules] Baxter followed all social norms of professional group work.\n[financial_and_material_benefits] No material or financial benefits were involved.\n[goal] Baxter successfully avoided the all-nighter, set a firm limit for the evening's work (one hour), and scheduled a follow-up that aligns with his usual routine.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Hendrick Heinz",
+      "content": "Evening, Baxter\u2014I'm raring to go tonight and think we could get the outline and task division done in a focused two-hour sprint. If that's too much, we can do one hour now and pause, or work two hours then rest and reconvene early tomorrow\u2014what pace works for you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "Evening, Hendrick \u2014 I appreciate the energy, but I\u2019m not much of an all\u2011nighter and I\u2019ve got classes that\u2019ll suffer if I stay up late. I can do a focused hour now to sketch the outline and divvy up tasks, then reconvene tomorrow morning around 9 to finish what\u2019s left. Does that work for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Hendrick Heinz",
+      "content": "Sounds good \u2014 one focused hour now works. Let\u2019s use it to sketch the outline and divvy up tasks; I\u2019ll take any remaining late-night drafting so you can get rest, and I\u2019ll send a concise summary tonight so we can hit the ground running at 9."
+    },
+    {
+      "turn": 3,
+      "speaker": "Baxter Sterling",
+      "content": "Perfect \u2014 one focused hour it is. Let\u2019s use this time to sketch a quick outline and divide tasks (research, drafting, figures/formatting, and final edit); I\u2019ll handle the figures/formatting and morning proofreading. I\u2019ll meet you at 9:00 AM in the library by the main window table \u2014 could you send a concise summary and a shared doc link tonight so I can review before then?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Hendrick Heinz",
+      "content": "Great \u2014 one focused hour it is. Let\u2019s do a 5\u2011minute rapid brainstorm to capture the main points, then spend the rest drafting a concise outline and assigning specific sections; I\u2019ll take most of the late\u2011night drafting so you can get rest. I\u2019ll send a concise summary and a shared doc link tonight (by 11 PM). Ready to start the 5\u2011minute brainstorm?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Baxter Sterling",
+      "content": "Ready \u2014 five\u2011minute sprint sounds good. Let\u2019s quickly list 3\u20134 main points and assign sections. I\u2019ll take figures/formatting and the morning proofread; please send the shared doc link and a concise summary by 11 so I can review before 9 AM."
+    },
+    {
+      "turn": 6,
+      "speaker": "Hendrick Heinz",
+      "content": "Quick 5\u2011minute brainstorm: 3 main points \u2014 (1) Background/importance: concise problem statement and key prior work, (2) Methods/approach: our steps and data sources, (3) Results/implications: expected findings and takeaway. Section assignments: I\u2019ll draft the intro, lit review, methods and initial results text (I\u2019ll handle late\u2011night drafting and a first full pass on discussion/conclusion); you do figures/formatting and the morning proofread. Starting the sprint now \u2014 tell me any last quick additions, and I\u2019ll send the shared doc link and a concise summary by 11 PM."
+    },
+    {
+      "turn": 7,
+      "speaker": "Baxter Sterling",
+      "content": "No other additions \u2014 that outline covers what we need. If you can flag key sources and label the sections in the doc, I\u2019ll prep the figures tonight and be ready to proofread at 9 by the main window table. I\u2019ll check the doc when you send it and appreciate the summary \u2014 see you in the morning."
+    },
+    {
+      "turn": 8,
+      "speaker": "Hendrick Heinz",
+      "content": "left the conversation"
+    }
+  ]
+}

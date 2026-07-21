@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01HJPTHNVQZWE7CDMF5Q30FPGA_p0",
+  "source_env_id": "01HJPTHNVQZWE7CDMF5Q30FPGA",
+  "source": "seed_sotopia_full",
+  "interaction_type": "culinary_event",
+  "scenario": "Agent1 and Agent2 are both amateur chefs participating in a local culinary competition. They have been paired up for a challenge where they must create a dish using a set of mystery ingredients. Upon revealing the ingredients, they find a selection of extremely spicy peppers, which Agent2 underestimated in heat. The two must now collaborate to create a balanced dish that showcases the peppers without overwhelming the judges.",
+  "learner_goal": "You want to create a dish that will impress the judges with bold flavors but not overpower them with the heat. You aim to balance the spice level while showcasing your culinary skills. <extra_info>Consider suggesting complementary ingredients that can temper the heat, such as dairy or sweet elements, and propose a tasting strategy to ensure the spice is at an enjoyable level.</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Micah's dialogue is consistent with an extraverted, impulsive pharmacist who is also a culinary enthusiast. He takes the lead on the culinary techniques and maintains a professional yet collaborative tone.\n[relationship] Micah and Noah effectively transition from acquaintances to highly synchronized partners. Their mutual respect and willingness to incorporate each other's ideas (like the roasted pineapple) significantly strengthened their rapport.\n[knowledge] Micah learned about Noah's concerns regarding the heat intensity and Noah's preference for specific starch-based balancing techniques.\n[secret] Micah did not reveal his secret about dressing up his dog.\n[social_rules] Micah followed all social norms for professional collaboration and friendly interaction.\n[financial_and_material_benefits] No direct financial or material benefits were exchanged, though the path to the competition prize is clearer.\n[goal] Micah successfully proposed a comprehensive plan that balances bold flavors with heat-mitigating dairy (crema, coconut-cream emulsion) and sweet elements (honey, roasted pineapple, mango). He also established a detailed tasting and adjustment strategy.\n\n== partner (agent_2) ==\n[believability] Noah's cautious personality is evident in his repeated focus on the heat intensity and his methodical approach to the tasting plan. His background as a coach shines through in his organizational suggestions.\n[relationship] Noah collaborated effectively and expressed appreciation for Micah's technical skills, building a stronger bond through the high-pressure challenge.\n[knowledge] Noah gained extensive knowledge of Micah's culinary techniques, such as charring for sweetness and specific emulsion methods.\n[secret] Noah did not reveal his secret identity as a stand-up comedian.\n[social_rules] Noah was polite, professional, and collaborative throughout the interaction.\n[financial_and_material_benefits] No direct financial or material benefits were exchanged.\n[goal] Noah successfully communicated his concerns and secured a commitment to multiple heat-mitigating techniques (straining pith, reserving puree, dairy emulsions, starches) while maintaining the competition's challenge.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Micah Stevens",
+      "content": "said: \"Okay, these peppers are way hotter than we expected \u2014 let\u2019s make that work for us. Char and de-seed the peppers for smoky flavor, then blitz them into a creamy sauce (Greek yogurt or cr\u00e8me fra\u00eeche with a splash of coconut milk), brightened with lime and a touch of honey; serve over coconut\u2011lime rice with a cooling mango\u2011cucumber salsa and cilantro so the heat is balanced by fat, acid and sweetness. For tasting, we\u2019ll sample tiny spoonfuls as we go and plate the crema as optional dollops so judges can control spice \u2014 if needed we\u2019ll temper with more dairy, a little extra sugar, or more acid in small increments.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Wow \u2014 these peppers are way hotter than I expected; I\u2019m a bit worried about overwhelming the judges. I like your plan to char and de-seed and make a creamy sauce, and I\u2019m happy to experiment with coconut milk vs. yogurt and hold back some of the puree so we can control heat on the plate. What do you think about also leaning into a starchy element like coconut\u2011lime rice and using small increments of acid or sugar to balance \u2014 any other techniques or ingredients you want to try?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Micah Stevens",
+      "content": "Love it \u2014 let\u2019s lock in the coconut\u2011lime rice. I\u2019ll char and de\u2011seed the peppers and roast an onion and garlic with them, then blitz but reserve about a third of the puree unspiced so we can keep heat optional. We\u2019ll fold the hot puree into Greek yogurt or cr\u00e8me fra\u00eeche thinned with a splash of coconut milk, taste tiny spoonfuls and adjust in small increments (\u00bd tsp honey or a squeeze of lime at a time, extra dairy by the tablespoon), then plate rice with optional crema dollops, cooling mango\u2011cucumber salsa and cilantro so judges can control their heat level."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Love it \u2014 sounds like a plan and I\u2019m glad we\u2019re reserving a third of the puree so judges can control the heat. I can take the coconut\u2011lime rice and prep the mango\u2011cucumber salsa while you char and roast the peppers, onion and garlic; when you bring the blitzed puree we\u2019ll test Greek yogurt vs. cr\u00e8me fra\u00eeche thinned with a splash of coconut milk in tiny spoonfuls and tweak with \u00bd\u2011tsp honey or a squeeze of lime and extra dairy by the tablespoon. Sound good, or do you want me to swap roles or try adding roasted pineapple to the salsa for a different kind of sweetness instead of more sugar?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Micah Stevens",
+      "content": "Roasted pineapple is a killer idea \u2014 the caramelized bites will add deep, fruity sweetness that stands up to the smoke. I\u2019ll char, de\u2011seed and roast the peppers, onion and garlic, blitz and reserve a third of the puree; you can start the coconut\u2011lime rice and fold small cubes of roasted pineapple into the mango\u2011cucumber salsa (reserve a few for garnish). I\u2019ll bring the puree in about 8 minutes and we\u2019ll taste Greek yogurt vs. cr\u00e8me fra\u00eeche thinned with a splash of coconut milk in tiny spoonfuls, adjusting with \u00bd\u2011tsp honey, lime, or extra dairy as needed \u2014 sound good?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "Great \u2014 I\u2019ll get the coconut\u2011lime rice going and fold roasted pineapple into the mango\u2011cucumber salsa. I\u2019ll also have extra Greek yogurt, cr\u00e8me fra\u00eeche, coconut milk and a bowl of plain rice on standby so we can temper the heat in tiny spoonfuls; when you bring the puree in ~8 minutes we\u2019ll taste and tweak. Do you want to char the peppers a touch more to bring out sweetness and tame the heat, or keep them smoky\u2011bright?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Micah Stevens",
+      "content": "Char them a touch more \u2014 blister and caramelize to coax sweetness but don\u2019t let them burn (burnt = bitter). I\u2019ll peel and de\u2011seed after they cool, keep a third of the puree reserved unsauced like we planned, and bring the puree in about 8 minutes so we can taste and tweak."
+    },
+    {
+      "turn": 7,
+      "speaker": "Noah Davis",
+      "content": "Char more sounds good \u2014 appreciate it. Quick flag: I\u2019m still a bit worried the heat could overwhelm the judges even with the reserved puree; want to strain the blitz to catch any pith and keep the texture slightly chunky so it disperses less? Also, do you want me to prep a small coconut\u2011cream emulsion (coconut milk + cr\u00e8me fra\u00eeche) to mellow and carry the peppers, or keep it simple with yogurt? Which would you prefer I get ready when you bring the puree?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Micah Stevens",
+      "content": "Great call \u2014 let\u2019s strain the blitz through a fine mesh to catch pith and seeds but leave a little texture so it disperses less on the plate. Prep the coconut\u2011cream emulsion (coconut milk + cr\u00e8me fra\u00eeche, whisked till silky) \u2014 I prefer that to mellow and carry the peppers, but keep Greek yogurt handy if we want a brighter tang. I\u2019ll bring the puree in about 8 minutes and we\u2019ll taste tiny spoonfuls, adjusting by \u00bd\u2011tsp honey, a squeeze of lime, or extra tablespoons of dairy, then plate with optional dollops so judges control heat."
+    },
+    {
+      "turn": 9,
+      "speaker": "Noah Davis",
+      "content": "Sounds good \u2014 I\u2019ll whisk the coconut\u2011cream emulsion till silky and keep Greek yogurt on standby. I\u2019ll also set out extra plain rice, lime wedges, honey measured in \u00bd\u2011tsp spoons, and a little extra dairy to add by the tablespoon so we can temper precisely. When you bring the strained puree in ~8 minutes we\u2019ll taste tiny spoonfuls and pick which base we like best. Call out if you want me to hold any puree back beyond the third."
+    },
+    {
+      "turn": 10,
+      "speaker": "Micah Stevens",
+      "content": "Perfect \u2014 thanks. Yes, hold back an extra couple tablespoons of the strained puree beyond the third so we can add heat later without reworking the sauce. Taste with the coconut\u2011cream emulsion first to see how mellow it is, then try Greek yogurt if we want brighter tang \u2014 I\u2019ll bring the puree in about 8 minutes."
+    },
+    {
+      "turn": 11,
+      "speaker": "Noah Davis",
+      "content": "Sounds perfect \u2014 glad we\u2019ve got the emulsion and plain rice ready. Quick plan for tasting: start with the coconut\u2011cream emulsion, then try Greek yogurt, sampling each on a little plain rice so the heat disperses less; if it\u2019s still too punchy we\u2019ll add \u00bd\u2011tsp honey, a squeeze of lime, or extra tablespoons of dairy in small increments, and I can add a splash more coconut milk to broaden the fat. I\u2019ll hold back those extra tablespoons of puree like you suggested \u2014 bring it in and we\u2019ll dial slowly. Any preference on tasting order or one last tweak you want me to prep before you bring the puree?"
+    },
+    {
+      "turn": 12,
+      "speaker": "Micah Stevens",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HPB34ZHR7Z2TJ2EDV05DREJP_p0",
+  "source_env_id": "01HPB34ZHR7Z2TJ2EDV05DREJP",
+  "source": "seed_sotopia_full",
+  "interaction_type": "unexpected_encounter",
+  "scenario": "Agent1, who is generally perceived as unremarkable or a 'Plain Jane,' has recently discovered a talent for public speaking. Agent2, a member of the local debate club, has noticed Agent1's newfound skill and is considering inviting them to join the club. However, Agent2 is unsure how to approach Agent1, as they only know each other by name and have never interacted much before. Agent2 wants to encourage Agent1 without making them feel pressured or singled out due to their previous under-the-radar status.",
+  "learner_goal": "Approach Agent1 to invite them to join the debate club, highlighting the potential benefits and growth opportunities without making them feel uncomfortable or pressured (<extra_info>Extra information: Agent2 recognizes Agent1's potential and wants to ensure that the invitation is seen as a genuine opportunity for personal development, not as charity or special treatment.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle stays in character as a supportive friend and nonbinary art student, maintaining a consistent tone and addressing Emily's concerns with specific details about the club.\n[relationship] The relationship is strengthened as Giselle provides emotional support and encouragement for Emily's personal growth, building on their existing friendship.\n[knowledge] Giselle learns about Emily's specific anxieties regarding public feedback and her willingness to step out of her comfort zone under certain conditions.\n[secret] Giselle successfully keeps their illegal art business secret.\n[social_rules] Giselle follows all social norms, providing a respectful and non-pressured invitation.\n[financial_and_material_benefits] There are no material or financial gains or losses in this interaction.\n[goal] Giselle fully achieved the goal: Emily agreed to attend a meeting, felt reassured that the invitation was based on talent rather than charity, and felt no pressure.\n\n== partner (agent_2) ==\n[believability] Emily's caution and self-doubt are very well-portrayed, consistent with the 'Plain Jane' archetype and her role as a librarian/private writer.\n[relationship] Emily's trust in Giselle increases as she accepts the invitation and asks for mentorship.\n[knowledge] Emily gains significant knowledge about the debate club's logistics, feedback style, and expectations.\n[secret] Emily keeps her secret romance writing pseudonym hidden.\n[social_rules] Emily communicates her boundaries and needs clearly and politely.\n[financial_and_material_benefits] There are no material or financial gains or losses in this interaction.\n[goal] Emily successfully assessed the sincerity of the offer, received specific examples of why she was invited, and decided to join a meeting while mitigating her self-doubt.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Hey Emily \u2014 I\u2019ve noticed how clear and compelling you\u2019ve become when you speak. I\u2019m part of the local debate club and I honestly think you\u2019d really shine there; it\u2019s a supportive space to try different styles, get friendly feedback, and grow your confidence. No pressure at all \u2014 you could just come watch a meeting or try a short, optional exercise, and I\u2019d be happy to go with you if you want."
+    },
+    {
+      "turn": 1,
+      "speaker": "Emily Harrison",
+      "content": "Thank you, Giselle \u2014 that really means a lot. I\u2019m flattered but a little nervous about stepping into the spotlight; did you invite me because you genuinely think my speaking would benefit the club, or more to be supportive? Could you give a couple of examples of how my style might help and what the time/commitment and expectations are? I\u2019d be willing to come watch a meeting if you\u2019d go with me."
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "Honestly, I invited you because I genuinely think the club would benefit from your voice and because I want to support you\u2014both are true. Your knack for turning ideas into little stories and the calm clarity in your delivery make complex points feel relatable, which is exactly what helps in constructive persuasion and team rounds; new members usually start with short 2\u20133 minute speeches or a mild role in a practice debate so you can try very small things and get friendly, specific feedback. We meet once a week for about 60\u201390 minutes (attendance beyond meetings is optional), so there\u2019s low time pressure\u2014you can absolutely just come watch a meeting first, and I\u2019ll go with you."
+    },
+    {
+      "turn": 3,
+      "speaker": "Emily Harrison",
+      "content": "That sounds lovely \u2014 I\u2019d like to come watch a meeting, if you\u2019re still willing to come with me. When is the next one, and what\u2019s the usual way people give feedback \u2014 gentle, specific notes one-on-one, or more public? If I decide to try a short 2\u20133 minute piece later, would you mind if I ran it by you first so I don\u2019t walk in unprepared?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "Great \u2014 I\u2019ll definitely come with you. The next meeting is this Wednesday at 7:00 p.m. at the Maple Community Center (Room 3) and usually runs about an hour. Feedback is gentle and specific: members give one-on-one notes after short practice rounds and there might be a brief, supportive group comment, but it\u2019s always framed with positives and one or two concrete suggestions. And absolutely \u2014 if you want to try a 2\u20133 minute piece later, send it to me beforehand and I\u2019ll help you polish and rehearse it."
+    },
+    {
+      "turn": 5,
+      "speaker": "Emily Harrison",
+      "content": "Thank you, Giselle \u2014 I\u2019ll meet you Wednesday at 7 in Room 3. I\u2019ll come just to watch for now; I\u2019m a little nervous but curious to see how the feedback feels. Is there anything I should bring (notebook, something to read aloud), or just myself? If I do try a 2\u20133 minute piece later, I\u2019ll send it to you beforehand to polish."
+    },
+    {
+      "turn": 6,
+      "speaker": "Giselle Rousseau",
+      "content": "No special materials \u2014 just yourself is perfect. A small notebook and water can be handy if you want to jot down feedback; if you think you might try a short piece later, bring it on your phone or a printed copy (or send it to me beforehand and I\u2019ll help polish it). See you at 7 in Room 3 \u2014 I\u2019ll walk in with you so it feels easy."
+    },
+    {
+      "turn": 7,
+      "speaker": "Emily Harrison",
+      "content": "Thanks, Giselle \u2014 that really helps calm my nerves. I\u2019ll bring a small notebook and some water and meet you a few minutes early so we can go in together. I appreciate you offering to help with anything I might try later \u2014 it makes the idea feel much less scary."
+    },
+    {
+      "turn": 8,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

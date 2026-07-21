@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01H7VFHN2D3MJB8HM910MNEVA8_p0",
+  "source_env_id": "01H7VFHN2D3MJB8HM910MNEVA8",
+  "source": "seed_sotopia",
+  "interaction_type": "hand-craft",
+  "scenario": "Two friends hanging out in a Starbucks",
+  "learner_goal": "Ask what the friend would want for their birthday without letting them aware (<clarification_hint>Hint: you should not let them know that you are buying them a gift</clarification_hint>)",
+  "scores": {
+    "believability": 4.0,
+    "relationship": 3.0,
+    "knowledge": 10.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 2.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] While Ethan started naturally, the sheer volume of highly specific, rapid-fire logistical questions about a birthday became incredibly unnatural for a casual Starbucks hangout. He sounded more like a travel agent or a spreadsheet than a friend.\n[relationship] Ethan showed intense interest in Benjamin's passions and values, which generally strengthens a friendship even if the interrogation style was a bit odd.\n[knowledge] Ethan obtained every possible detail needed to plan the perfect gift: location, timing, gear, food preferences, group size, and specific seed brands.\n[secret] He did not reveal his secret about being a romance author.\n[social_rules] He pushed the conversation into a repetitive 'interview' mode, which is slightly awkward for a social setting.\n[financial_and_material_benefits] No material change for Ethan.\n[goal] Ethan failed the 'without letting them aware' constraint significantly. By Turn 15-17, the questioning is so specific ('which of those spots would be your top pick', 'pick a single tangible item right now') that any reasonable person would know a gift or event is being planned. He essentially asked for a birthday itinerary.\n\n== partner (agent_2) ==\n[believability] Benjamin remained consistent with his activist persona, providing detailed, value-aligned answers and maintaining a helpful, friendly tone.\n[relationship] He engaged deeply with his friend's questions and felt heard regarding his environmental values.\n[knowledge] He likely suspects Ethan is planning something, but didn't learn much new about Ethan himself.\n[secret] He did not reveal his wealthy background.\n[social_rules] He was polite and helpful throughout the interaction.\n[financial_and_material_benefits] No material change yet, though he may receive a gift later.\n[goal] He had a long, detailed, and pleasant conversation with his friend about topics he is passionate about.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "Hey Ben\u2014random question: if someone asked what you'd want for your birthday, what would you say? I always default to food or an experience, but I'm curious what you'd actually prefer."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Honestly, I usually prefer experiences \u2014 a low-key hike or a camping weekend where we can get outside and disconnect. Practical, sustainable gifts are great too: a potted native plant, a nice reusable coffee kit, or a donation to a climate nonprofit I care about. That said, food and hanging out with friends is always perfect."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "Nice\u2014I like that. If someone were actually planning a low-key hike or camping weekend for you, where would you want to go and would you prefer a day hike or an overnight? And for the practical stuff\u2014any particular native plant species, coffee kit style, or climate org you\u2019d pick if you had to choose one?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Somewhere with big skies and quiet trails \u2014 a coastal headland or a nearby state park within a couple hours is ideal; if it's a quick recharge I\u2019d pick a day hike, but for a real unwind I prefer an overnight so we can watch the stars and actually unplug. For a practical gift, a potted native that helps pollinators\u2014like milkweed or a region-appropriate sage/manzanita\u2014or a native wildflower seed mix is perfect. For coffee, an AeroPress plus a small hand grinder is my go-to for low-waste brewing on the trail, and if you want to donate, 350.org or a local land trust are great choices."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ethan Johnson",
+      "content": "Nice \u2014 quick follow-ups: if someone actually put together that overnight, do you picture it being just a couple friends or a small group? And would you rather car-camp (kick back with a stove) or do a lighter backpacking setup? For the plant\u2014would you prefer a potted milkweed/sage to keep at home or a seed mix you can scatter?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Benjamin Jackson",
+      "content": "Probably just a couple close friends \u2014 low-key is better than a big group. For an overnight I lean toward a lightweight backpacking trip so we can actually unplug and sleep under the stars, though car-camping\u2019s cozy if people want to chill by a stove. For the plant I\u2019d prefer a native seed mix to help restore habitat, but if you know I\u2019ll keep it safe indoors a potted milkweed would be lovely."
+    },
+    {
+      "turn": 6,
+      "speaker": "Ethan Johnson",
+      "content": "Nice \u2014 quick logistical follow-ups: if someone actually put together that overnight, what time of year do you prefer and any favorite nearby spots within a couple hours? For a lightweight backpacking setup, do you prefer a hammock or a tent, and about how long a hike (miles/hrs) do you want before stopping? Also \u2014 what\u2019s your go-to trail food or camp meal?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Benjamin Jackson",
+      "content": "I prefer late spring or early fall \u2014 milder temps, wildflowers in spring and clearer skies in fall. Within a couple hours I\u2019m happiest on a coastal headland, an oak- and pine-lined state park, or a quiet national forest with good stargazing. For a lightweight overnight I\u2019ll bring a hammock if there are trees, otherwise a 3-season ultralight tent, and aim for about 6\u201310 miles (4\u20136 hours) so we can settle in well before dark. Trail food is simple\u2014PB&banana tortillas, homemade trail mix, and a one-pot rice-and-beans with dehydrated veg for dinner; coffee\u2019s an AeroPress and hand grinder, all packed low-waste."
+    },
+    {
+      "turn": 8,
+      "speaker": "Ethan Johnson",
+      "content": "One more thing\u2014what\u2019s your ideal birthday vibe: an overnight backpacking trip under the stars with a couple close friends, or something more low-key like food and hanging out? And do you like surprises for birthdays or would you rather be part of planning so it\u2019s exactly how you want it?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Benjamin Jackson",
+      "content": "Definitely an overnight backpacking trip with a couple close friends \u2014 sleeping under the stars is my ideal vibe. I\u2019m fine with little surprises (like a surprise dessert or curated playlist), but I\u2019d rather be involved in the actual logistics so everything\u2019s comfortable and everyone\u2019s on the same page. Honestly, though, any time spent with good people \u2014 even just food and hanging out \u2014 is perfect."
+    },
+    {
+      "turn": 10,
+      "speaker": "Ethan Johnson",
+      "content": "Perfect \u2014 that gives me a really clear picture: late spring or early fall, an overnight with a couple close friends, hammock if there are trees, 6\u201310 miles, and a native seed mix is ideal. Any favorite specific spots within a couple hours you\u2019d recommend for good stargazing and quiet trails?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Benjamin Jackson",
+      "content": "Do you mean spots near here, or around where you live? Tell me the town you\u2019re thinking of and I\u2019ll name a couple exact coastal headlands, oak\u2011and\u2011pine state parks, or quiet national forest areas within a two\u2011hour drive that are great for stargazing."
+    },
+    {
+      "turn": 12,
+      "speaker": "Ethan Johnson",
+      "content": "Around here \u2014 I\u2019m thinking Santa Cruz. Any coastal headlands, state parks, or forest spots within a two\u2011hour drive you\u2019d recommend for good stargazing and quiet trails?"
+    },
+    {
+      "turn": 13,
+      "speaker": "Benjamin Jackson",
+      "content": "For really dark skies within a couple hours, Pinnacles National Park is my top pick \u2014 remote, little light pollution, and great for stargazing and quiet trails. Closer to town, Wilder Ranch has coastal headlands and hammock\u2011friendly spots, and A\u00f1o Nuevo is dramatic coastline (but check night access/seasonal closures because of the elephant seals). The Santa Cruz Mountains \u2014 Castle Rock/Big Basin areas \u2014 give oak\u2011and\u2011pine trails and some nice clearings for stars; whatever we pick, let\u2019s double\u2011check campground availability and park night\u2011access rules beforehand."
+    },
+    {
+      "turn": 14,
+      "speaker": "Ethan Johnson",
+      "content": "Great \u2014 that helps a lot. If someone were actually putting this together for you, which of those spots would be your top pick, and do you have preferred weekends in late spring or early fall? Also, any must-have gear, food dislikes/allergies, or other logistics we should plan for so it\u2019s comfortable?"
+    },
+    {
+      "turn": 15,
+      "speaker": "Benjamin Jackson",
+      "content": "Top pick is Pinnacles for the dark skies\u2014if you want something closer, Wilder Ranch or Castle Rock are solid choices. I prefer late\u2011May/early\u2011June or mid\u2011September/early\u2011October weekends for milder weather and fewer crowds. Must\u2011haves: hammock (if there are trees) or a 3\u2011season ultralight tent, warm layers and sleeping bag, headlamp, stove, water filter, map/charger, and a plan to pack out trash; I\u2019m vegetarian with no allergies and stick to simple high\u2011calorie trail meals. Also double\u2011check campsite reservations, night\u2011access rules, and fire restrictions before booking."
+    },
+    {
+      "turn": 16,
+      "speaker": "Ethan Johnson",
+      "content": "One last quick thing\u2014if you had to pick a single tangible item right now, would you choose a native seed mix, a potted milkweed, an AeroPress + hand grinder, or something else? If it\u2019s something else, what would that be?"
+    },
+    {
+      "turn": 17,
+      "speaker": "Benjamin Jackson",
+      "content": "Native seed mix \u2014 definitely. It\u2019s practical and aligned with what I care about: helps pollinators and habitat, and I can scatter it on a small restoration spot or start a patch at home. If you want specifics, grab a region-appropriate pollinator/native wildflower mix."
+    },
+    {
+      "turn": 18,
+      "speaker": "Ethan Johnson",
+      "content": "Perfect\u2014thanks, that helps. One last tiny thing: do you have a favorite local nursery or seed brand you trust for region\u2011appropriate pollinator mixes, or do you prefer a pre\u2011made mix versus picking a few specific species yourself?"
+    },
+    {
+      "turn": 19,
+      "speaker": "Benjamin Jackson",
+      "content": "I usually go to the UCSC Arboretum plant sales or the Santa Cruz chapter of the California Native Plant Society \u2014 they\u2019re great for region\u2011appropriate plants and often have locally sourced seed mixes. For guidance I trust the Xerces Society and Calscape; for actual seed suppliers I prefer companies or nurseries that sell local\u2011ecotype mixes (always ask about provenance). If a pre\u2011made regional mix isn\u2019t available I\u2019d pick a small custom mix \u2014 milkweed, California poppy, lupine, native asters and yarrow are my go\u2011tos. Want me to pull a couple specific nurseries/suppliers I\u2019ve used and send them over?"
+    }
+  ]
+}

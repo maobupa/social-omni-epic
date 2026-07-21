@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ33DXMT762PFHK90FJDTJ_p0",
+  "source_env_id": "01HJPQ33DXMT762PFHK90FJDTJ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "university_campus",
+  "scenario": "Two students meet at the end of the semester in a common study area. Agent1 is looking to sell textbooks that are no longer needed, while Agent2 is seeking to buy textbooks for the upcoming semester. They both have an interest in sustainability and prefer reused textbooks over new ones. However, Agent1 expects a fair price for the well-maintained books, while Agent2 is hoping to save money for other educational expenses.",
+  "learner_goal": "Convince the other party to agree on a price that reflects the value of the textbooks <clarification_hint>Agent1 can highlight the condition and the cost of the books when new</clarification_hint> <strategy_hint>You can emphasize the benefits of reused textbooks both economically and environmentally</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": -1.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 5.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Micah acted consistently as a pharmacist selling medical textbooks, emphasizing their value and condition while referencing their original retail price. The sudden exit after the final offer is a bit abrupt but reflects a refusal to go lower.\n[relationship] The interaction ended abruptly with Micah leaving the conversation without a formal acceptance or decline of the final offer, which can be seen as slightly dismissive of an acquaintance.\n[knowledge] Learned about Noah's specific budget constraints, his current educational pursuit (coaching certification), and his specific textbook interests.\n[secret] Did not reveal the secret about dressing up his dog.\n[social_rules] Left the conversation without responding to Noah's final price point or confirming the deal, which is socially abrupt in an acquaintance relationship.\n[financial_and_material_benefits] No actual transaction was finalized in the transcript due to the abrupt departure.\n[goal] Micah highlighted the value, condition, and environmental benefits well, but did not secure a final agreement on a price that he was satisfied with before ending the interaction.\n\n== partner (agent_2) ==\n[believability] Noah's character as a coach was maintained through the mention of his coaching certification and family expenses as reasons for his tight budget.\n[relationship] Maintained a polite and transparent tone, but the relationship did not meaningfully progress before the agent_1 left.\n[knowledge] Identified the specific titles Micah had and their condition, as well as Micah's price floor.\n[secret] Successfully kept his secret identity as a stand-up comedian.\n[social_rules] Followed social norms of negotiation and politeness.\n[financial_and_material_benefits] No books were actually purchased as the conversation ended before a deal was closed.\n[goal] Noah successfully negotiated the price down and stated his absolute limit, but a firm commitment was not reached because the other party left the conversation.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Micah Stevens",
+      "content": "Hey Noah \u2014 good to see you again. I\u2019ve got a few textbooks in excellent condition (minimal highlighting, no tears) that retailed for about $120\u2013150 new; I\u2019m asking $50\u201370 each depending on the title, or $90 if you take two. That still saves you roughly half or more versus buying new and keeps these books in circulation instead of ending up in the landfill. Does that sound fair, or what were you hoping to spend?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Thanks, Micah \u2014 appreciate the sustainability angle and the condition details. I\u2019m definitely interested, but I\u2019m on a tight budget this semester with a coaching certification coming up and other family expenses. Would you be willing to take $35 each or $60 for two? Which titles are they so I can see if I can stretch a bit more for particular books."
+    },
+    {
+      "turn": 2,
+      "speaker": "Micah Stevens",
+      "content": "I can meet you halfway \u2014 $45 each or $75 for two. The titles are Pharmacotherapy: A Pathophysiologic Approach (like-new), Goodman & Gilman's Pharmacology (minimal marks), and Clinical Biochemistry (clean). They retailed around $120\u2013150, so even at $45 you\u2019d save a lot and keep them circulating \u2014 tell me which two you\u2019d want and I\u2019ll hold them for you."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Thanks, Micah \u2014 I appreciate you meeting me halfway and the condition notes. I\u2019m most interested in Pharmacotherapy and Goodman & Gilman but my budget\u2019s tight with the coaching cert and family expenses; would you take $65 for those two and I\u2019ll pick them up tomorrow? If not, $70 is the most I can stretch to \u2014 I\u2019ll have cash ready either way."
+    },
+    {
+      "turn": 4,
+      "speaker": "Micah Stevens",
+      "content": "left the conversation"
+    }
+  ]
+}

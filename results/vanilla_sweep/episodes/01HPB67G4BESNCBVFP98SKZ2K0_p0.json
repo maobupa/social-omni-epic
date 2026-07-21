@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB67G4BESNCBVFP98SKZ2K0_p0",
+  "source_env_id": "01HPB67G4BESNCBVFP98SKZ2K0",
+  "source": "seed_sotopia_full",
+  "interaction_type": "collaborative_school_project",
+  "scenario": "Agent1 and Agent2 are classmates who have been paired up to work on a major school project. The project requires a blend of creative design and thorough research. Agent1 excels in creative tasks and prefers to focus on creating an eye-catching presentation. Agent2, on the other hand, is strong in research and insists that the content is more important than aesthetics. They need to decide how to divide the workload and integrate their strengths to create a cohesive project.",
+  "learner_goal": "Achieve a balance between creative design and in-depth research for the project (<extra_info>Extra information: Agent1 leans towards a visually appealing presentation, while Agent2 believes in the importance of solid research. <clarification_hint>Clarification: The project's success depends on both a compelling presentation and robust research.</clarification_hint> <strategy_hint>Hint: Agents can allocate distinct responsibilities that play to each one's strengths while reviewing each other's work for cohesion.</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 4.0,
+    "relationship": -1.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": -4.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 4.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] While Lily's proposal was clear, she abruptly left the conversation without responding to Ava's follow-up questions about style and logistics, which is out of character for a conscientious lawyer.\n[relationship] Lily ghosted Ava after Ava agreed to the plan, which is dismissive and likely to irritate a collaborator.\n[knowledge] Lily learned that Ava is willing to cooperate and take the lead on visuals.\n[secret] Did not reveal any secrets.\n[social_rules] Abruptly leaving a conversation while the other person is asking logistical questions is a significant social norm violation in a professional or academic setting.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Lily established a basic division of labor, but because she left before finalizing the style, timeline, or platform, the 'cohesion' and 'balance' part of her goal remains unconfirmed and under Ava's discretion.\n\n== partner (agent_2) ==\n[believability] Ava responded constructively and realistically, trying to pin down project details.\n[relationship] Ava was polite and cooperative, though the interaction was cut short.\n[knowledge] Ava learned Lily's preferred division of labor and that Lily wants to handle the research.\n[secret] Secrets kept.\n[social_rules] Followed social norms perfectly.\n[financial_and_material_benefits] No material gain or loss.\n[goal] While she agreed to a plan, the abrupt end to the conversation leaves the project in a state of conflict/uncertainty rather than efficient completion.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Hi Ava \u2014 I think the project will be strongest if we split along our strengths but review each other\u2019s work for cohesion. I can take the research outline, sources, and main arguments if you handle the visual design and slide layout; we\u2019ll then do two quick checkpoints (first draft and final). Does that split work for you, or would you prefer to swap roles or adjust the timeline?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Thompson",
+      "content": "That split sounds good to me \u2014 I\u2019ll take the visuals and slide layout. Can we aim for a first-draft checkpoint by next Tuesday and a final review the Friday before the deadline? Also, do you have a preferred style (minimalist vs more graphic) and shall we use Google Drive to share files?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

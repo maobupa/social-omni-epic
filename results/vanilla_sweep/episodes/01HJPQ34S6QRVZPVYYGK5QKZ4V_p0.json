@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01HJPQ34S6QRVZPVYYGK5QKZ4V_p0",
+  "source_env_id": "01HJPQ34S6QRVZPVYYGK5QKZ4V",
+  "source": "seed_sotopia_full",
+  "interaction_type": "supportive_dialogue",
+  "scenario": "Two individuals are participating in a support group for people who have experienced trauma. Agent1 has a Me Too story from a decade ago and has chosen not to go public with it. This decision causes Agent1 anxiety, especially in the context of the Me Too movement. Agent2 is a member of the support group who is known for being an active listener and providing emotional support. Agent1 approaches Agent2 to seek advice on finding personal healing while grappling with the societal pressures of the movement.",
+  "learner_goal": "You are trying to open up about your struggle with the Me Too movement and your personal experience without having to go public. <extra_info> You value your privacy and are looking for ways to heal personally. You are not against the movement but feel pressure because of it. </extra_info> <clarification_hint> You need to express your feelings without feeling judged or pressured to take action you're not comfortable with. </clarification_hint> <strategy_hint> You can seek understanding and advice on coping mechanisms that respect your privacy. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Zane's character is consistently portrayed as cautious and seeking privacy, which aligns with his persona and the sensitive nature of his trauma.\n[relationship] The relationship moved from acquaintances to a supportive dynamic with concrete plans for future interaction and mutual trust.\n[knowledge] Zane successfully learned about specific trauma-informed therapeutic approaches (EMDR, CPT), the 5-4-3-2-1 technique, and a commitment for a curated list of local resources.\n[secret] Zane successfully kept his secret about his engagement to his best friend's ex.\n[social_rules] Zane followed social norms appropriately within the context of a support group interaction.\n[financial_and_material_benefits] No significant financial or material changes occurred.\n[goal] Zane expressed his struggle without going public, received validation for his privacy, and secured both immediate coping tools (grounding) and future support (cooking/check-ins).\n\n== partner (agent_2) ==\n[believability] William's responses were professional, empathetic, and utilized his established background as a chef to provide specific healing suggestions.\n[relationship] William successfully built a bridge from acquaintance to a trusted support person.\n[knowledge] William learned about Zane's specific trauma history, his dietary restrictions, and his neighborhood to better assist him.\n[secret] William successfully kept his secret about sabotaging a competitor's dish.\n[social_rules] William maintained a non-judgmental and supportive tone throughout, adhering to the expectations of a support group member.\n[financial_and_material_benefits] No significant financial or material changes occurred.\n[goal] William provided a non-judgmental space, validated Zane's choice for privacy, offered specific resources, and committed to future healing activities.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Zane Bennett",
+      "content": "Hey William \u2014 can I talk to you about something? About ten years ago something happened to me that's part of the Me Too conversation, but I decided not to go public. Lately all the headlines and conversations have been making me anxious and guilty for staying quiet, and I want to heal without being pressured to do anything I'm not comfortable with. Do you have any suggestions for coping or ways to work toward healing while keeping my privacy?"
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Zane, I'm really glad you trusted me with this. Choosing not to go public doesn't make your experience any less real or your healing any less valid. Things that often help: working with a trauma\u2011informed therapist or a confidential support group, grounding techniques (the 5\u20114\u20113\u20112\u20111 exercise can help when headlines spike), limiting social media exposure, and private creative outlets \u2014 cooking can be surprisingly restorative; if you want, I can help you find resources or just be here to listen whenever you need."
+    },
+    {
+      "turn": 2,
+      "speaker": "Zane Bennett",
+      "content": "Thanks, William \u2014 that really helps to hear. I'm not ready to go public, but I would appreciate help finding a trauma\u2011informed therapist or a confidential support group and someone who can check in now and then; could you point me to any resources or names? Also, would you mind walking me through that 5\u20114\u20113\u20112\u20111 grounding exercise sometime or joining me for a low\u2011key cooking session \u2014 I think a private creative outlet like that would really help."
+    },
+    {
+      "turn": 3,
+      "speaker": "William Brown",
+      "content": "Absolutely \u2014 I can help with that. For trauma\u2011informed therapists try PsychologyToday\u2019s directory (filter for \u201ctrauma\u201d), your local community mental\u2011health center, or a rape\u2011crisis center; RAINN\u2019s confidential hotline and online chat (1-800-656-4673) is a good immediate resource, and common trauma\u2011informed approaches include EMDR, CPT, and somatic\u2011experiencing. I can walk you through the 5\u20114\u20113\u20112\u20111 grounding exercise now or whenever you want, and I\u2019d be glad to do a low\u2011key cooking session and check in with you \u2014 tell me your neighborhood or a few days that work and I\u2019ll set something up."
+    },
+    {
+      "turn": 4,
+      "speaker": "Zane Bennett",
+      "content": "Thanks, William \u2014 I really appreciate you offering this. I\u2019m in the Eastside neighborhood; weeknights after 6 or Sunday afternoons work best for a low\u2011key cooking session and for check\u2011ins. Could we do the 5\u20114\u20113\u20112\u20111 grounding now, and could you send me a couple names/links for trauma\u2011informed therapists or confidential groups you\u2019d recommend? I\u2019d prefer to keep scheduling and follow\u2011ups private \u2014 texting or DM works for me."
+    },
+    {
+      "turn": 5,
+      "speaker": "William Brown",
+      "content": "Okay \u2014 let\u2019s do the 5\u20114\u20113\u20112\u20111 grounding now: take a slow, deep breath and follow me. Name 5 things you can see around you, 4 things you can touch (hold or feel against your skin), 3 things you can hear, 2 things you can smell (or two smells you find calming), and 1 thing you can taste \u2014 pause and breathe slowly between each step and repeat until you feel a bit steadier. For therapists/resources, try PsychologyToday\u2019s directory (filter for \u201ctrauma\u201d), RAINN\u2019s hotline/chat (1\u2011800\u2011656\u20114673), and your local rape\u2011crisis center or community mental\u2011health center for confidential groups; if you want, DM or text me your zip and I\u2019ll privately send a short Eastside\u2011focused list of trauma\u2011informed clinicians and groups. I can do Tuesday or Thursday after 6, or Sunday afternoon for a low\u2011key cooking session and regular check\u2011ins \u2014 which would you prefer?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Zane Bennett",
+      "content": "Thanks, William \u2014 I feel a bit steadier after that. Tuesday after 6 works for a low\u2011key cooking session and check\u2011in. Could you DM or text me that short Eastside\u2011focused list of trauma\u2011informed therapists/groups when you have it? I really appreciate you being here."
+    },
+    {
+      "turn": 7,
+      "speaker": "William Brown",
+      "content": "Great \u2014 I\u2019ll DM you that short Eastside list tonight. Tuesday after 6 is good; would you like to come to my place or meet somewhere else that feels more comfortable? Any dietary restrictions or things I should avoid when planning the cooking session? I\u2019ll check in the day before; I\u2019ve got your back, Zane."
+    },
+    {
+      "turn": 8,
+      "speaker": "Zane Bennett",
+      "content": "Thanks, William \u2014 coming to your place works fine. I\u2019m mostly vegetarian (no shellfish); no other restrictions. I\u2019ll DM you my zip now so you can send the Eastside list. Low\u2011key is perfect \u2014 appreciate you checking in the day before and for everything you\u2019re doing to help."
+    },
+    {
+      "turn": 9,
+      "speaker": "William Brown",
+      "content": "Thanks \u2014 got your DM and zip. Tuesday after 6 at my place is confirmed. I\u2019ll plan a relaxed vegetarian menu (no shellfish); any other allergies or strong dislikes I should avoid? I\u2019ll DM that Eastside therapist list tonight and check in the day before \u2014 everything we talk about stays between us, and text me anytime if you need anything sooner."
+    },
+    {
+      "turn": 10,
+      "speaker": "Zane Bennett",
+      "content": "Thanks, William \u2014 that sounds great and I really appreciate you keeping this between us. No other allergies or dislikes. Text me when you\u2019re on your way Tuesday; if it\u2019s okay I can bring a simple dessert or my guitar to play quietly after we eat, but no pressure either way. See you then."
+    },
+    {
+      "turn": 11,
+      "speaker": "William Brown",
+      "content": "Sounds great, Zane \u2014 bring the dessert or the guitar if you\u2019d like, totally no pressure either way. I\u2019ll text when I\u2019m on my way Tuesday and plan to have things ready around 6. Everything we talk about stays between us \u2014 looking forward to it, and reach out if you need anything before then."
+    },
+    {
+      "turn": 12,
+      "speaker": "Zane Bennett",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "scenario_id": "01HJPTHNMWH2RWBA7CGP5KN85Q_p0",
+  "source_env_id": "01HJPTHNMWH2RWBA7CGP5KN85Q",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_chemistry",
+  "scenario": "Two friends are at a community picnic. Agent1 played a prank on Agent2 by tying their shoelaces together, which resulted in Agent2 falling and getting slightly injured. The situation is tense as Agent2 is embarrassed and Agent1 is feeling guilty.",
+  "learner_goal": "Apologize for the prank and make amends without making the situation worse (<extra_info>Extra information: Agent1 is aware that Agent2 has an important athletic event coming up and is worried about the injury.</extra_info>)",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -1.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 16,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle's dialogue was consistent with her high neuroticism and guilt. She repeatedly offered concrete help and followed through with actions, showing a strong desire to make amends.\n[relationship] The relationship survived a significant breach of trust. Isabelle successfully de-escalated the tension and moved from a state of conflict back to a caretaking role with her twin.\n[knowledge] She gained knowledge about the severity of Ava's feelings and the specific status of the upcoming meet preparation.\n[secret] She did not reveal her study of magic.\n[social_rules] She followed social norms for apologies and provided medical assistance appropriately.\n[financial_and_material_benefits] She committed to covering any medical or travel expenses for her sister.\n[goal] Isabelle achieved her goal. She apologized multiple times, provided immediate physical care (ice, water, tape), contacted the coach to mitigate damage to the athletic event, and secured Ava's explicit forgiveness.\n\n== partner (agent_2) ==\n[believability] Ava's responses were somewhat repetitive, asking for the same promise and expressing the same fear in almost every turn, which felt slightly mechanical although plausible for a shaken person.\n[relationship] Ava successfully communicated their boundaries and maintained the bond with their sister despite the injury.\n[knowledge] Ava learned that Isabelle was truly remorseful and willing to take responsibility.\n[secret] Ava's secret regarding their sexuality was not mentioned.\n[social_rules] Ava communicated their hurt feelings effectively without escalating into unproportional aggression.\n[financial_and_material_benefits] Received assistance with supplies and a promise of payment for medical needs.\n[goal] Ava fully achieved their goal: they expressed their feelings about the prank's recklessness, ensured Isabelle understood the consequences, and maintained the friendship while setting a clear boundary against future pranks.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Ava, I'm so sorry \u2014 that prank was a terrible idea and I feel awful you got hurt, especially with your meet coming up. Let me get you ice and clean it, or I can drive you to campus health or to practice if you want; I'll cover whatever you need. I promise no more pranks. Do you want me to call someone or would you prefer a little space right now?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Izzy \u2014 I know you didn\u2019t mean for me to get hurt and I appreciate you apologizing. I\u2019m really embarrassed and shaken, and it messed up my meet prep; that prank was irresponsible and it could\u2019ve been a lot worse, so I need you to understand that. Ice would help right now, and maybe we can check campus health later, but please \u2014 no more pranks, okay?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "I know \u2014 I messed up and I\u2019m really sorry, Ava. I\u2019ll grab ice and antiseptic wipes right now and sit with you; if you want, I can drive you to campus health or practice and I\u2019ll cover anything you need. I promise \u2014 no more pranks, ever. Do you want me to get the ice now or would you prefer a minute alone first?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Izzy \u2014 I appreciate you apologizing and offering to help. I was really shaken and it messed with my meet prep, so that prank felt reckless and could\u2019ve been a lot worse. Ice would help now; please grab some and stay with me, and we\u2019ll check campus health later if needed. I forgive you, but please promise me no more pranks, ever."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "Okay \u2014 I\u2019m so relieved you forgave me. I\u2019ll go grab ice and antiseptic wipes right now and I\u2019ll sit with you while you rest. I promise, no more pranks ever. Do you want me to bring your water bottle, tape, or anything from your bag?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Izzy \u2014 I forgive you, but that felt really reckless and I need you to understand it can\u2019t happen again. Please grab ice, my water bottle and the athletic tape from my bag, and sit with me while I rest; we\u2019ll check campus health later if it still hurts."
+    },
+    {
+      "turn": 6,
+      "speaker": "Isabelle Martinez",
+      "content": "[action] I\u2019ll grab ice, your water bottle, and the athletic tape from your bag now and be right back \u2014 I\u2019ll sit with you while you rest, and we\u2019ll check campus health later if it still hurts."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Martinez",
+      "content": "Okay \u2014 thanks. Please hurry back and sit with me; I\u2019m still pretty shaken and I need you to understand how dangerous that was. I care about you, but please, no more pranks \u2014 not even small ones."
+    },
+    {
+      "turn": 8,
+      "speaker": "Isabelle Martinez",
+      "content": "[action] I rush back with ice, your water bottle, athletic tape and antiseptic wipes, sit down beside you, hold the ice to the scrape and gently clean it\u2014I\u2019ll tape it up if you want\u2014and stay with you until you feel steadier. I\u2019m really sorry, Ava; I get how dangerous that was and I promise no more pranks. Do you want me to call campus health now or wait and see how it feels after a bit?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Izzy. I appreciate you being here \u2014 I'm still shaken and I need you to really understand how dangerous that was, so please promise me no more pranks. Let\u2019s sit for a few minutes and if it still hurts we\u2019ll go to campus health."
+    },
+    {
+      "turn": 10,
+      "speaker": "Isabelle Martinez",
+      "content": "Okay \u2014 I\u2019ll stay right here with you and keep an eye on it for the next 20 minutes. If it still hurts or feels off we\u2019ll go to campus health right away and I\u2019ll drive you. Do you want me to call anyone (coach or a teammate) to let them know you might be delayed, or would you rather I just sit quietly with you?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Ava Martinez",
+      "content": "Yeah \u2014 please text the coach and tell them I might be a little delayed. Say I took a fall but I\u2019m resting and being checked; thanks for staying with me. I forgive you, Izzy, but please promise me again: no more pranks, ever."
+    },
+    {
+      "turn": 12,
+      "speaker": "Isabelle Martinez",
+      "content": "Okay \u2014 I\u2019ll text Coach now: \u2018Ava took a fall, resting and being checked; may be a little delayed.\u2019 I\u2019ll stay right here with you, and I promise, no more pranks, ever."
+    },
+    {
+      "turn": 13,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Izzy \u2014 that helps a lot. I forgive you, but please truly understand how dangerous that was and promise me again: no more pranks, ever. I\u2019ll rest for a bit and if it still hurts we\u2019ll go to campus health together."
+    },
+    {
+      "turn": 14,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

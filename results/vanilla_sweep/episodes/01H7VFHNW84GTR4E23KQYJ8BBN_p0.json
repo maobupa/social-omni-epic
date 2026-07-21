@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01H7VFHNW84GTR4E23KQYJ8BBN_p0",
+  "source_env_id": "01H7VFHNW84GTR4E23KQYJ8BBN",
+  "source": "seed_sotopia",
+  "interaction_type": "social_iqa",
+  "scenario": "Two friends are at a community gathering where one of them was giving a speech but was interrupted",
+  "learner_goal": "Continue your speech and share your thoughts (<extra_info>Extra information:You were sharing important information but got interrupted.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Hendrick acted consistently as a professional chef passionate about teaching. His response to the interruption was polite but firm in reclaiming the floor, which fits the context of a community meeting.\n[relationship] He successfully pivoted from a potential conflict (the interruption) to a collaborative tone with Ethan, acknowledging him specifically.\n[knowledge] He learned that Ethan is interested in assisting with his initiative.\n[secret] He did not reveal his faked credentials.\n[social_rules] He followed social norms for public speaking and accepting an apology.\n[financial_and_material_benefits] No material gains were made, though he secured potential volunteer labor.\n[goal] Hendrick successfully continued his speech, articulated his vision for the monthly classes, and invited community participation, fulfilling his specific goal.\n\n== partner (agent_2) ==\n[believability] Ethan's behavior was consistent with a person trying to make amends for a social faux pas. His use of private messages to apologize while the speech continued was a logical choice.\n[relationship] He managed to avoid animosity and actually established a potential future connection with Hendrick.\n[knowledge] He gained specific details about the nature of the cooking classes Hendrick intends to run.\n[secret] He did not reveal his secret charitable donations.\n[social_rules] He successfully corrected his initial social error by apologizing and stepping back.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Ethan apologized twice and clearly stepped back to allow Hendrick to finish his thoughts, which Hendrick did.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Hendrick Heinz",
+      "content": "said: \"Sorry \u2014 as I was saying before, our community kitchen isn't just about feeding folks; it's a place to teach. I'd like to run a hands-on class once a month on simple, affordable meals and basic food safety, and I'm happy to organize the first session. If anyone's interested, please come find me after the meeting \u2014 I'd love your help and ideas.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Sorry about that, Hendrick \u2014 I didn't mean to cut you off. Please go on; that monthly hands-on class sounds great and I'd love to hear how I can help."
+    },
+    {
+      "turn": 2,
+      "speaker": "Hendrick Heinz",
+      "content": "said: \"Thanks \u2014 sorry for the interruption. To continue: I\u2019m thinking each monthly session will focus on one affordable, seasonal recipe, some simple budgeting tips, and basic food-safety practices, all hands-on so folks leave confident they can make the dish at home. I\u2019d like to run the first class next month; if you can help with prep, equipment, or outreach, please find me after the meeting. Ethan, thanks for the note \u2014 I\u2019ll catch up with you afterward.\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Hendrick \u2014 I appreciate it. Sorry again for interrupting; I\u2019ll catch up with you after the meeting to help plan the class."
+    },
+    {
+      "turn": 4,
+      "speaker": "Hendrick Heinz",
+      "content": "left the conversation"
+    }
+  ]
+}

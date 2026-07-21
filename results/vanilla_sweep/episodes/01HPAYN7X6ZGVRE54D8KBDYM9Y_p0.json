@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPAYN7X6ZGVRE54D8KBDYM9Y_p0",
+  "source_env_id": "01HPAYN7X6ZGVRE54D8KBDYM9Y",
+  "source": "seed_sotopia_full",
+  "interaction_type": "fitness_motivation",
+  "scenario": "Agent1 and Agent2 are friends who regularly go to the gym together. They both enjoy staying fit, but Agent1 has recently been struggling with motivation and is considering skipping the gym sessions. Agent2, on the other hand, is very committed to their workout routine and believes that consistency is key to achieving fitness goals. Agent1 knows that skipping workouts may lead to a lapse in their fitness regime, but is finding it hard to stay motivated. Agent2 wants to help Agent1 regain their enthusiasm for physical training.",
+  "learner_goal": "Seek motivation to continue regular gym sessions (<extra_info>Extra information: Agent1 understands the importance of maintaining a regular workout schedule but needs a boost in motivation</extra_info>, <clarification_hint>Discuss the personal benefits experienced from consistent workouts</clarification_hint>, <strategy_hint>Consider setting a shared fitness goal or challenge to increase accountability</strategy_hint>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo stayed perfectly in character, referencing his personal motivation (his daughter) and acting in a way consistent with a busy professional seeking support.\n[relationship] The agents successfully transitioned from being acquaintances to active workout partners with a concrete plan, strengthening their bond.\n[knowledge] Leo learned that Hendrick is willing to take the lead on programming workouts and has specific availability.\n[secret] Leo did not reveal his secret child.\n[social_rules] Leo followed all social norms and was polite throughout.\n[financial_and_material_benefits] No material or financial gain occurred.\n[goal] Leo successfully discussed the personal benefits of working out (energy for his daughter) and established a firm, shared fitness schedule with accountability measures.\n\n== partner (agent_2) ==\n[believability] Hendrick's responses were professional yet supportive, fitting for a chef who values discipline and structure.\n[relationship] Hendrick moved from being a casual acquaintance to a committed fitness partner.\n[knowledge] Hendrick learned about Leo's motivation (his daughter) and his preference for specific workout styles.\n[secret] Hendrick did not reveal that he faked his culinary credentials.\n[social_rules] Hendrick followed all social norms and was highly encouraging.\n[financial_and_material_benefits] No material or financial gain occurred.\n[goal] Hendrick successfully encouraged Leo to maintain his routine, highlighted progress, and offered a variety of engaging workouts to keep things exciting.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hey Hendrick Heinz \u2014 I\u2019ll be honest, I\u2019ve been struggling to get to the gym lately and don\u2019t want my routine to slide. Consistent workouts have given me more energy and patience with my daughter, so I really want to keep that. Could we try a small accountability plan \u2014 meet three times a week or set a simple weekly challenge \u2014 whatever helps you stay motivated too?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Leo \u2014 I get it, consistency is everything and I\u2019m glad it\u2019s been helping with your energy and patience. We\u2019ve both made good progress so far, and skipping now would make it tougher to get back on track, so I\u2019m in for an accountability plan: three sessions a week (pick the days) or a simple weekly goal like 150 minutes or three workouts, with a quick text check-in. To keep it fun I\u2019ll mix things up \u2014 HIIT day, circuit/strength day, and a mobility or partner workout \u2014 pick what sounds good and I\u2019ll meet you there."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "Perfect \u2014 that sounds great. How about Mon/Wed/Fri mornings? I\u2019m up for HIIT, circuit, and a mobility/partner day. Let\u2019s do a quick text check-in after each session and start Monday \u2014 having you there will really help me stay accountable and keep my energy up for my daughter."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "Perfect \u2014 Mon/Wed/Fri mornings it is. Does 6:30 AM by the gym entrance work for you? I\u2019ll bring a short warm\u2011up and the Friday partner mobility circuit, and we\u2019ll text after each workout; if one of us can\u2019t make it we\u2019ll swap for a 20\u2011minute at\u2011home plan so the routine doesn\u2019t slide. See you Monday \u2014 we\u2019ve both come too far to lose this momentum."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

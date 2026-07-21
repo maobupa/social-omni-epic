@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HN44KRT2HPGD6FMDYX5XGGRV_p0",
+  "source_env_id": "01HN44KRT2HPGD6FMDYX5XGGRV",
+  "source": "seed_sotopia_full",
+  "interaction_type": "dining_experience",
+  "scenario": "Agent1 and Agent2 are in a romantic relationship and often go out to dine together. Agent1 enjoys exploring new restaurants and trying different cuisines, finding it to be a delightful part of their dates. However, Agent2 feels embarrassed due to their lack of knowledge about dining etiquette and unfamiliarity with exotic dishes, which makes them hesitant to visit new restaurants. They prefer sticking to familiar eateries where they feel more comfortable. The couple faces the challenge of reconciling their differing levels of comfort when it comes to dining out.",
+  "learner_goal": "Convince Agent2 to try new restaurants (<extra_info>Extra information: Agent1 believes that trying new foods can be an exciting adventure and an opportunity for bonding</extra_info>, <clarification_hint>Highlight the joy of discovery and assure them that learning etiquette can be a fun experience together</clarification_hint>)",
+  "scores": {
+    "believability": 7.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo's dialogue was supportive and hit the key points of his prompt, but leaving the conversation immediately after she agreed to a compromise felt abrupt and out of character for a romantic partner.\n[relationship] They reached an agreement that addresses both of their needs, deepening the trust in their relationship regarding social anxiety and new experiences.\n[knowledge] Leo learned exactly why Isabelle was hesitant (nervousness about faux pas) and what conditions would make her feel comfortable.\n[secret] Leo did not reveal his secret child.\n[social_rules] Leo left the conversation immediately after Isabelle spoke without acknowledging her response or finalizing plans, which is socially awkward.\n[financial_and_material_benefits] No material benefits were exchanged.\n[goal] Leo successfully convinced Isabelle to try a new restaurant this weekend and established a pathway for future 'adventure' dates by addressing her etiquette concerns.\n\n== partner (agent_2) ==\n[believability] Isabelle's response perfectly mirrored the conflict described in the scenario, balancing her desire to please her partner with her specific social anxieties.\n[relationship] She felt supported by Leo's offer to guide her through etiquette and reached a compromise that values her comfort.\n[knowledge] She learned that Leo is willing to be patient and helpful rather than judgmental regarding her lack of dining knowledge.\n[secret] She did not reveal her secret study of magic.\n[social_rules] She followed social norms and communicated her needs clearly.\n[financial_and_material_benefits] No material benefits were exchanged.\n[goal] Isabelle expressed her reservations, secured a promise of help with etiquette, and successfully negotiated a compromise where they alternate between new and familiar spots.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hey Isabelle, I know trying new restaurants and unfamiliar dishes can feel a bit intimidating, but I think it could be a fun little adventure for the two of us \u2014 a relaxed mini-date where we discover something together. I\u2019ll pick a casual spot with helpful staff and we can order a few small things to share so there\u2019s no pressure; I\u2019ll gladly walk you through any etiquette and we can laugh if we get it wrong. Want to try one new place with me this weekend?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Isabelle Martinez",
+      "content": "Thanks, Leo \u2014 I like the idea of an adventure, but I get pretty nervous about unfamiliar dishes and making a faux pas in front of you or other people. I\u2019d be willing to try one new place sometimes if we pick somewhere casual with some familiar options, and maybe alternate those dates with spots I already know. I really appreciate you offering to walk me through things \u2014 that makes me feel a lot more comfortable."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

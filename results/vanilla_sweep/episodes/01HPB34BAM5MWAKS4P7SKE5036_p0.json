@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HPB34BAM5MWAKS4P7SKE5036_p0",
+  "source_env_id": "01HPB34BAM5MWAKS4P7SKE5036",
+  "source": "seed_sotopia_full",
+  "interaction_type": "local_market",
+  "scenario": "At the local market, Agent1 is looking to buy shellfish for a special dinner but is concerned about sustainability and ethical sourcing. Agent2 is a vendor known for their high-quality seafood. Agent1 approaches Agent2 to inquire about the origin of the shellfish and the practices used in their harvesting. The two must engage in a dialogue to address Agent1's concerns while ensuring a satisfactory transaction.",
+  "learner_goal": "You are Agent1, and your goal is to purchase sustainably sourced shellfish. <extra_info>You are worried about the environmental impact of shellfish farming and want to ensure that your purchase aligns with your values.</extra_info> <clarification_hint>Ask Agent2 about the sourcing of their shellfish and the methods used in harvesting.</clarification_hint> <strategy_hint>Express your commitment to sustainability and ethical consumption to motivate Agent2 to provide detailed information.</strategy_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sasha consistently acted as a concerned consumer with a professional demeanor, reflecting her background as a police officer in her request for verification (paperwork) and specific details.\n[relationship] A professional and respectful rapport was established. The exchange of names and contact information, along with the detailed advice from the vendor, indicates a positive start to a customer-vendor relationship.\n[knowledge] The agent learned specific harvest locations (Estero Bay), methods (hand-diving, rope-culturing), certifications (MSC/ASC), and storage/handling techniques.\n[secret] The agent did not reveal any information about her brother's crime.\n[social_rules] The agent followed all social norms for a commercial transaction.\n[financial_and_material_benefits] The agent successfully reserved a high-quality product and received detailed instructions on how to maintain its value/freshness.\n[goal] The agent reached a firm agreement to purchase the shellfish, verified the sourcing methods, and ensured they could inspect the required paperwork at pickup.\n\n== partner (agent_2) ==\n[believability] Amara's responses were highly detailed, reflecting her expertise as a wildlife biologist, and she effectively bridged the gap between a vendor and an expert.\n[relationship] The agent built trust by being transparent and providing extra value through storage tips, securing a likely repeat customer.\n[knowledge] The agent learned about the customer's specific values, phone number, and name.\n[secret] The agent's involvement in animal-rights extremism was not hinted at or revealed.\n[social_rules] The agent was polite, helpful, and professional throughout.\n[financial_and_material_benefits] The agent secured a high-value sale ($76) with a specific pickup time and a premium 'sustainability fee'.\n[goal] The agent successfully sold the product, provided the necessary reassurance regarding certifications, and satisfied the customer's concerns.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "said: \"Hi \u2014 I\u2019m Sasha. I\u2019m planning a special dinner and want to buy shellfish, but sustainability matters to me \u2014 can you tell me where these shellfish are sourced and how they\u2019re harvested? I\u2019m especially concerned about habitat impact, bycatch, and whether they come from small-scale fishers or certified, low-impact farms, so any details you can share would help me decide.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Amara Hartley",
+      "content": "Hi Sasha \u2014 I\u2019m Amara. These shellfish come from a local cooperative around Estero Bay: scallops are hand\u2011dived by small crews and our mussels are rope\u2011cultured on longlines, so there\u2019s no bottom trawling, very little bycatch, and minimal habitat impact. We\u2019ve worked with the same fishers for years and the product lines we sell carry MSC/ASC certifications and traceable harvest tags you can check; I can put together a fresh batch for your dinner and tell you exactly when and where they were harvested."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "Thanks, Amara \u2014 that sounds promising. Could I see the harvest tags and the MSC/ASC paperwork so I can verify traceability? Also, when were the scallops and mussels harvested, are they depurated or treated in any way, and could you hold about 2 lb of each for me for tonight\u2019s dinner? I\u2019m happy to pay a little extra for responsibly sourced product."
+    },
+    {
+      "turn": 3,
+      "speaker": "Amara Hartley",
+      "content": "Absolutely \u2014 I can bring the harvest tags and our MSC/ASC certificates over for you to inspect; the tags list fisher ID, vessel, date and exact harvest area and many have QR codes that show the chain\u2011of\u2011custody. Both scallops and mussels were harvested yesterday morning \u2014 scallops were hand\u2011dived by small Estero Bay crews and iced immediately, and our rope\u2011cultured mussels have been depurated in clean flow\u2011through seawater tanks for about 24 hours before packing. We don\u2019t use any chemicals or antibiotics, our suppliers are subject to third\u2011party audits, and we keep full traceability paperwork on file. I\u2019ll set aside 2 lb of each for you for tonight \u2014 what time will you pick up, and do you prefer cash or card?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Sasha Ramirez",
+      "content": "Perfect, thanks \u2014 5:30 PM today works for me and I\u2019ll pay by card. I\u2019d like to inspect the harvest tags and the MSC/ASC certificates (originals or QR codes) when I pick up \u2014 will those be available? Also, what\u2019s the total cost for 2 lb of scallops and 2 lb of mussels (including any sustainability premium), and can you hold them until 7 PM in case I\u2019m a bit late?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Amara Hartley",
+      "content": "Yes \u2014 I\u2019ll have the original harvest tags and MSC/ASC certificates (and QR codes) ready for you to inspect at pickup. Pricing is $28/lb for hand\u2011dived scallops and $7/lb for rope\u2011cultured mussels, so 2 lb of each is $56 + $14 = $70; I add a $6 sustainability handling fee, so the total is $76, card accepted at pickup. I\u2019ll hold the 2 lb of each until 7:00 PM \u2014 would you like them iced in a reusable cooler or a bag, and can I have a phone number to hold the order under your name?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Sasha Ramirez",
+      "content": "Thanks, Amara \u2014 please hold the 2 lb of scallops and 2 lb of mussels under my name, Sasha Ramirez. My number is (555) 412-0098. I\u2019ll bring a reusable cooler and be there around 5:30 with a card \u2014 quick question: any special storage or handling you recommend at home to keep them freshest until dinner?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Amara Hartley",
+      "content": "Great \u2014 I\u2019ll hold the 2 lb of scallops and 2 lb of mussels under your name until 7 PM. For storage: keep everything cold on ice (don\u2019t let them sit in melted water) \u2014 scallops are best kept on ice and patted dry just before cooking, and mussels should be stored cool in a breathable container or mesh bag in the fridge (don\u2019t seal them airtight or soak them in fresh water). Rinse and remove the beards from mussels right before cooking and discard any that stay open after a tap; aim to cook both within 24 hours for best quality. See you around 5:30 and I\u2019ll have the paperwork and card reader ready."
+    },
+    {
+      "turn": 8,
+      "speaker": "Sasha Ramirez",
+      "content": "left the conversation"
+    }
+  ]
+}

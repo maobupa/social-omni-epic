@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BM3B10R1A8ZQKKWWF56J_p0",
+  "source_env_id": "01HMZ2BM3B10R1A8ZQKKWWF56J",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 and Agent2 share an apartment. Agent1 is trying to work from home and requires a quiet environment. Agent2 is in the midst of an online workout session and tends to raise their voice in excitement, which disrupts Agent1's concentration. The agents must find a balance between Agent2's energetic workout and Agent1's need for a peaceful work atmosphere.",
+  "learner_goal": "Convince Agent2 to keep the noise level down during your working hours (<extra_info>Extra information: You are on a tight deadline and cannot afford distractions. <strategy_hint>Hint: Suggest a schedule or areas of the apartment where Agent2 can be loud without disturbing you.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles stayed in character as a polite yet firm chef, referencing his garden and his professional deadline consistently.\n[relationship] The interaction was polite and collaborative, and Miles offered a nice gesture (tea) which strengthens their acquaintance-level bond.\n[knowledge] He learned that Mia is willing to adapt her routine and that headphones/balcony are viable options for her.\n[secret] He did not reveal his history with gambling.\n[social_rules] He was respectful and followed typical roommate etiquette for addressing noise complaints.\n[financial_and_material_benefits] No significant material gain or loss occurred, though he protected his work time.\n[goal] Miles successfully convinced Mia to change her behavior immediately and set a plan for future quiet hours, meeting his specific goal and the suggested strategy hints.\n\n== partner (agent_2) ==\n[believability] Mia reacted realistically for a respectful roommate and principal, acknowledging the disruption and offering concrete solutions.\n[relationship] She responded positively to Miles' request and accepted his offer of tea, maintaining a friendly atmosphere.\n[knowledge] She learned about Miles' deadline and his sensitivity to the noise during specific hours.\n[secret] She did not reveal her punk rock past.\n[social_rules] She was apologetic and cooperative when confronted with her disruption.\n[financial_and_material_benefits] She is promised a cup of fresh herb tea.\n[goal] Mia successfully found a way to maintain her workout (using the balcony and headphones) without compromising Miles' work environment.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Hey Mia \u2014 quick thing: I\u2019m on a tight deadline and the loud parts of your workout are breaking my concentration. Could you either take the high-energy/cheering bits out on the balcony or by the front door, or shift them to after 5:30pm (or keep your mic muted/volume lower for the next couple hours)? I\u2019ll happily bring you some fresh herb tea from my garden once I\u2019m done \u2014 really appreciate the help."
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Thanks for the heads-up, Miles \u2014 I didn\u2019t realize it was carrying into your work. I\u2019ll mute my mic and take the loud/high-energy bits out on the balcony for the next couple hours, and going forward I can either move those parts after 5:30pm or use headphones. Herb tea sounds lovely \u2014 thank you."
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPB34QPR5Y42K93FXPGBCJF7_p0",
+  "source_env_id": "01HPB34QPR5Y42K93FXPGBCJF7",
+  "source": "seed_sotopia_full",
+  "interaction_type": "misplaced_items",
+  "scenario": "Agent1 and Agent2 are roommates. Agent1 is in a hurry to leave for an important event and cannot find their keys. Agent2 recalls seeing keys on the coffee table chair earlier but isn't certain if those were Agent1's keys. Agent1 is interacting with Agent2 to locate their keys quickly.",
+  "learner_goal": "You need to find your keys to attend an important event. You believe Agent2 might have seen them. <extra_info> You remember placing them on a surface, but not specifically which one. </extra_info><clarification_hint> Ask Agent2 about any keys they might have seen around the house without accusing them of misplacing them. </clarification_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 2.0,
+    "knowledge": 10.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 5.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily Greenberg's tone is consistently professional, urgent, and aligns perfectly with her background as a high-stakes lawyer in a rush. She maintains the respectful yet authoritative boundary established in the prompt's background description.\n[relationship] Lily was polite and appreciative of Mia's help, acknowledging the assistance. This reinforces their mutual respect despite past professional friction.\n[knowledge] Lily successfully located her keys and confirmed exactly where they were and what they looked like through her interaction with Mia.\n[secret] Lily did not reveal her secret about anonymous donations.\n[social_rules] Lily adhered to social norms, being direct and polite while avoiding accusations, as instructed.\n[financial_and_material_benefits] Lily recovered her keys, which are essential material items for her to attend her event.\n[goal] Lily successfully found her keys by asking Mia without making accusations and was able to leave for her event.\n\n== partner (agent_2) ==\n[believability] Mia Davis acted as a helpful roommate and professional, providing specific details about the location and appearance of the keys that felt authentic to a principal's observational nature.\n[relationship] Mia was helpful and proactive in searching for the keys, which likely improved the living dynamic between the two former legal adversaries.\n[knowledge] Mia confirmed that the keys she saw belonged to Lily and learned Lily was heading to an important event.\n[secret] Mia did not reveal her secret about her punk rock past.\n[social_rules] Mia was helpful and cooperative throughout the exchange.\n[financial_and_material_benefits] Mia gained no material or financial benefit from this exchange.\n[goal] Mia perfectly recalled the details of the keys (the fob and silver key) and their location (under mail on the chair), and successfully helped Lily.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Mia, I\u2019m running late for an important event \u2014 could you quickly tell me if you saw any keys around earlier? I remember setting a set down on a surface, maybe the coffee-table chair; did you notice any keys there or anywhere else just now?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Yeah \u2014 I did notice a set on the coffee-table chair earlier, maybe 10\u201315 minutes ago. It was a small ring with a black car fob and a plain silver key; I couldn't tell if it was yours or a spare. Want me to check now and bring them to you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "Yes \u2014 that sounds like my set. Could you check the coffee-table chair and bring them to me quickly? I\u2019m heading out in a few minutes, thank you."
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "On it \u2014 I\u2019ll check the coffee-table chair now. I remember them on the right side of the chair by the cushion and a little stack of mail: small ring with a black car fob and a plain silver key. If they\u2019re not there I\u2019ll run the entryway and kitchen quick and bring them to you ASAP."
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks, Mia \u2014 I really appreciate you checking. If you find that small ring with the black car fob and plain silver key, could you bring them straight to the foyer or hand them to me? I\u2019m grabbing my coat now, so call or text if you can\u2019t find them."
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Davis",
+      "content": "Got them \u2014 they were tucked under the mail on the right side of the coffee-table chair. Bringing them to the foyer now; I\u2019ll be there in about a minute."
+    },
+    {
+      "turn": 6,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

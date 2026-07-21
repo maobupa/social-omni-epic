@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BN2S2GN52DWBJ3D9195Q_p0",
+  "source_env_id": "01HMZ2BN2S2GN52DWBJ3D9195Q",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_content",
+  "scenario": "Agent1 and Agent2 are both avid practitioners of martial arts who regularly train together. During a recent sparring session, Agent1 went full force and accidentally injured Agent2 by breaking their shoulder. This incident has caused tension between them. Agent1 feels guilty but also believes that not holding back is a part of the sport, while Agent2 feels that safety and control are paramount. They are meeting to discuss their perspectives and find common ground on how to approach future sparring sessions.",
+  "learner_goal": "Convince the other party that maintaining full intensity during sparring is essential for realistic practice and improvement, while also expressing remorse for the accident and ensuring safety measures are in place (<extra_info>Extra information: You are Agent1, you value the realism in training but you don't want to alienate your sparring partner or cause further injuries.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo's dialogue was consistent with his background as a dentist (likely detail-oriented) and his specific goal of balancing realism with remorse. His tone was professional and empathetic.\n[relationship] Leo successfully repaired a tense situation following a major injury, offering financial assistance and establishing a structured path forward, which rebuilt trust.\n[knowledge] He gained a clear understanding of Hendrick's specific boundaries and safety requirements for future sessions.\n[secret] He successfully kept his secret child hidden.\n[social_rules] He followed all social norms for an apology and negotiation.\n[financial_and_material_benefits] He committed to potentially covering Hendrick's physiotherapy costs and medical appointments.\n[goal] Leo achieved his goal perfectly: he convinced Hendrick to maintain full intensity (with conditions), expressed deep remorse, and established a comprehensive safety plan.\n\n== partner (agent_2) ==\n[believability] Hendrick's response was realistic for someone who had been injured; he was cautious, set firm boundaries, and prioritized safety while remaining open to reconciliation.\n[relationship] The relationship shifted from tension and injury-related distrust back to a collaborative partnership with a clear agreement.\n[knowledge] He learned that Leo was willing to pay for his medical expenses and respects his need for safety.\n[secret] He successfully kept his secret regarding his culinary credentials.\n[social_rules] He acted appropriately for a victim of an accidental injury looking for safety assurances.\n[financial_and_material_benefits] He secured a commitment from Leo to help pay for his physical therapy and medical bills.\n[goal] Hendrick fully achieved his goal of advocating for controlled sparring, prioritizing safety/technique through a multi-step protocol, and ensuring trust/respect were codified in their agreement.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "said: \"Hendrick, I\u2019m really sorry about your shoulder \u2014 I feel awful that I hurt you. I do believe that hitting with realistic intensity is how we get better and stay ready, but that shouldn\u2019t mean recklessness. Can we agree on clearer safety rules \u2014 full-intensity only with agreed protective gear, progressive ramp-up, a firm stop signal, and medical check-ins \u2014 so we can keep the realism without risking another injury? I\u2019ll follow whatever we set and help with any follow-up care you need.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks, Leo \u2014 I appreciate the apology and the offer to help with follow-up care. My shoulder\u2019s on the mend, but that incident shook my trust and I want to make sure it never happens again. I agree with your rules: full intensity only with both partners\u2019 explicit consent, agreed protective gear, a progressive ramp-up, a firm stop signal that\u2019s respected without question, and routine medical check-ins \u2014 plus a quick verbal check before every session so we\u2019re truly on the same page."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "I\u2019m glad we\u2019re on the same page. I agree to all that \u2014 explicit consent, agreed protective gear, a progressive ramp-up, a firm stop signal that\u2019s respected without question, a quick verbal check before each session, and routine medical check-ins. I\u2019ll wear extra padding and we\u2019ll only go full when both of us explicitly say yes; if you need help with physio or appointments, tell me and I\u2019ll help cover it."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks, Leo \u2014 I accept your apology and the safety plan. I\u2019d add that we have a coach or experienced third party present for the first few higher\u2011intensity sessions and do quick check\u2011ins after each round so trust can be rebuilt. I appreciate the offer to help with physio; I\u2019ll let you know if I need support."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

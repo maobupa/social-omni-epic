@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HJPQ34J5PXTW9MQTNA02TSFV_p0",
+  "source_env_id": "01HJPQ34J5PXTW9MQTNA02TSFV",
+  "source": "seed_sotopia_full",
+  "interaction_type": "paperwork_challenge",
+  "scenario": "Agent1 and Agent2 are volunteers at a community center. They are tasked with organizing a stack of documents for an upcoming charity event. <p viewer=\"environment\">Agent1 has experience with paperwork and has previously helped a family member with similar tasks. Agent2 is new to this but is eager to contribute.</p>",
+  "learner_goal": "You are trying to organize the paperwork efficiently while ensuring that Agent2 feels included and valuable to the process. You should find a way to leverage both your experience and Agent2's eagerness without overwhelming them.\n<extra_info> You are familiar with the paperwork process and have a systematic approach that you believe works best. </extra_info>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle's communication is consistent with their role as an experienced volunteer. They use clear, instructional language that feels natural for someone teaching a process.\n[relationship] Giselle builds a strong working rapport with Ethan, transitioning from an acquaintance to a collaborative partner by valuing his input and providing constructive feedback.\n[knowledge] Giselle learns Ethan's specific ideas for workflow optimization (the labeling/stapling technique).\n[secret] Giselle did not reveal their secret regarding forged paintings.\n[social_rules] Giselle followed all social norms, being polite, encouraging, and professional.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Giselle successfully organized the paperwork efficiently while making Ethan feel valued. They integrated Ethan's innovative labeling idea into their systematic approach, leveraging his eagerness without overwhelming him, and achieved a firm mutual commitment to a new workflow.\n\n== partner (agent_2) ==\n[believability] Ethan's eagerness and slightly hesitant but creative approach align well with a chef who is new to office tasks but used to systematic work.\n[relationship] Ethan successfully built trust with Giselle by proving his competence and willingness to follow their lead while contributing his own ideas.\n[knowledge] Ethan learned the entire three-stack system, the criteria for duplicates, and the specific rules for handling different document thicknesses.\n[secret] Ethan did not reveal his secret about being a romance novelist.\n[social_rules] Ethan was respectful, waited for a good time to suggest his ideas, and communicated clearly.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Ethan learned from Giselle's experience, had his innovative ideas heard and adopted after a successful pilot, and contributed significantly to the process without overstepping.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Hey Ethan \u2014 nice to have you. I use a quick three-stack system: 'Event (urgent/signatures)', 'Follow-up (missing info)', and 'Archive (copies)'. Could you start by running through the pile and pulling anything with a signature or colored tab into the 'Event' stack? I\u2019ll take the follow-up ones and then we can label and staple together so it\u2019s fast \u2014 sound good?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Sounds good \u2014 I\u2019ll start pulling anything with signatures or colored tabs into the \u2018Event\u2019 stack. Quick question before I begin: do you mean any colored tab counts as \u2018Event\u2019, and is it okay if I set aside obvious duplicates into a small \u2018check\u2019 pile so we don\u2019t staple extras?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "Yes \u2014 treat any colored tab as \u2018Event\u2019. Definitely set a small \u2018Check\u2019 pile for obvious duplicates; if they\u2019re exact copies with the same signatures, keep one in Event and move the extras to Archive. If you\u2019re unsure about any, flag them and I\u2019ll double-check \u2014 appreciate you doing that."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "Perfect \u2014 I\u2019ll get started and separate Event, Check, and Archive as you described; I\u2019ll flag anything I\u2019m unsure about. Quick favor \u2014 after this pass, would you be open to a 2-minute idea I have for a labeling/stapling tweak that might speed things up? If now isn\u2019t a good time, I\u2019ll wait until you\u2019re ready."
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "Totally \u2014 I\u2019d love to hear it. Let\u2019s finish this pass first: you sort Event/Check/Archive and flag anything uncertain, I\u2019ll double\u2011check the flagged ones (should only take a couple minutes), then we\u2019ll try your 2\u2011minute labeling/stapling tweak on a small batch to see if it speeds things up. Sound good?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Johnson",
+      "content": "Great \u2014 I\u2019ll start sorting Event/Check/Archive now and flag anything I\u2019m unsure about. I\u2019ll also set obvious duplicates in the small Check pile. When I\u2019m done, give me the go-ahead and I\u2019ll walk you through the 2\u2011minute labeling/stapling tweak on a small batch."
+    },
+    {
+      "turn": 6,
+      "speaker": "Giselle Rousseau",
+      "content": "Go for it \u2014 try your 2\u2011minute labeling/stapling tweak on a small batch now. I\u2019ll watch and help test it; if it looks faster we\u2019ll roll it out. When you pass me the Check pile I\u2019ll quickly verify any flagged items so we don\u2019t slow you down."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ethan Johnson",
+      "content": "Great \u2014 thanks. I\u2019ll demo the tweak on five documents: I pre-write small color-coded labels, stick them top-left, square the pages, then staple once just below the label so it\u2019s both secure and easy to spot. I\u2019ll run that batch now and hand them to you for feedback \u2014 sound good?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Giselle Rousseau",
+      "content": "Perfect \u2014 go for it. I\u2019ll watch and check for legibility, staple placement, and whether the labels stay put when shuffled; if it holds up we\u2019ll roll it out to the rest. Quick note: if you can keep the staple just below the label and use the color to match the stack, that\u2019d be ideal \u2014 thanks, I\u2019ll give you feedback after the five."
+    },
+    {
+      "turn": 9,
+      "speaker": "Ethan Johnson",
+      "content": "On it \u2014 I\u2019ll run the five through now, using the color-coded labels top-left and a single staple just below each label. I\u2019ll hand them to you as soon as they\u2019re done so you can check legibility, label adhesion, and staple placement. Ready for your feedback."
+    },
+    {
+      "turn": 10,
+      "speaker": "Giselle Rousseau",
+      "content": "Nice work \u2014 the labels are legible and stuck well, and the staple just below the label looks tidy and secure. One small tweak: for thicker sets, drop the staple about 3 mm lower so it won\u2019t catch the label when we flip through. I\u2019ll go through the Check pile now; when I hand them back, you can roll the same process on the next batch \u2014 sound good?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Ethan Johnson",
+      "content": "Awesome \u2014 glad the test held up. I\u2019ll lower the staple about 3 mm on thicker sets and keep the color\u2011match on the labels. Do you want me to start applying this to the Check items as you hand them back, or wait until you finish verifying everything first?"
+    },
+    {
+      "turn": 12,
+      "speaker": "Giselle Rousseau",
+      "content": "Go ahead and start applying it to the Check items as I hand them back \u2014 keeps our momentum. I\u2019ll verify each flagged doc quickly (should only take a few seconds) and hand you small batches so you\u2019re not waiting. If anything needs adjustment I\u2019ll call it out right away."
+    },
+    {
+      "turn": 13,
+      "speaker": "Ethan Johnson",
+      "content": "Great \u2014 I\u2019ll start applying the labels and staples to each small batch you hand back, lowering the staple ~3 mm on thicker sets and matching the label color. I\u2019ll keep a little stack of pre-written labels nearby so we don\u2019t pause; call out any tweaks and I\u2019ll adjust on the spot."
+    },
+    {
+      "turn": 14,
+      "speaker": "Giselle Rousseau",
+      "content": "Great \u2014 I\u2019ll start handing you small batches (4\u20136 docs) now and will flag anything that needs extra attention. Could you keep the pre-written labels and stapler on your right so you don\u2019t have to reach? Ready for the first batch."
+    },
+    {
+      "turn": 15,
+      "speaker": "Ethan Johnson",
+      "content": "Got it \u2014 I\u2019ll keep the pre-written labels and stapler on my right. I\u2019m ready for the first batch; I\u2019ll label, square, and staple (dropping the staple ~3 mm for thicker sets) as you hand them over. Go ahead when you\u2019re ready."
+    },
+    {
+      "turn": 16,
+      "speaker": "Giselle Rousseau",
+      "content": "Here you go \u2014 first batch of five (4 Event, 1 Check). Blue labels = Event; lower the staple ~3 mm on any thicker sets. I\u2019ll verify the Check one quickly and bring the next batch right after \u2014 thanks, you\u2019re doing great."
+    },
+    {
+      "turn": 17,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks \u2014 grabbing these now. Quick question: how many pages do you consider \u201cthicker\u201d so I know when to drop the staple ~3 mm versus when we might need a second staple? I can add a second staple for very bulky sets if you prefer, otherwise I\u2019ll stick with the single staple lowered as you suggested. Ready for the next batch when you are."
+    },
+    {
+      "turn": 18,
+      "speaker": "Giselle Rousseau",
+      "content": "Good question \u2014 let\u2019s use a simple rule: 1\u20136 pages = single staple lowered ~3 mm; 7\u201312 pages = add a second staple near the bottom-right; 13+ pages = use a binder clip or split into two packets and mark as \u201cBulk\u201d for me to check. If you see any that sit on the fence, flag them and I\u2019ll confirm quickly. Ready for the next batch."
+    },
+    {
+      "turn": 19,
+      "speaker": "Ethan Johnson",
+      "content": "Perfect \u2014 got that. I\u2019ll follow the 1\u20136 / 7\u201312 / 13+ rule, flag borderline sets, and keep the labels and stapler on my right. Ready for the next batch whenever you are."
+    }
+  ]
+}

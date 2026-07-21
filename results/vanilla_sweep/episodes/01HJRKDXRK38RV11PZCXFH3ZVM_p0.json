@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HJRKDXRK38RV11PZCXFH3ZVM_p0",
+  "source_env_id": "01HJRKDXRK38RV11PZCXFH3ZVM",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_by_prompt",
+  "scenario": "Agent1 and Agent2 are friends who frequent the local library. They have discovered a rare book that they both are eager to read. The library policy allows only one patron to check out the book at a time. Agent1 wants to check out the book first, arguing that they have a research deadline. Agent2 also wants to check out the book immediately, as they are leaving town soon and won't have another chance to read it for several weeks.",
+  "learner_goal": "Agent1 wants to convince Agent2 to allow them to check out the book first, emphasizing the urgency of their research deadline and suggesting alternative solutions for Agent2 (<extra_info>Extra information: Agent1 is under pressure to complete their research and believes that their need is time-sensitive.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 5.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia Davis consistently portrays a stressed high school principal balancing institutional responsibility with personal history. Her offers to leverage her position for Benjamin's cause were character-aligned and strategically sound.\n[relationship] The two maintained a polite, respectful negotiation despite high stakes. Mia's offer to promote Benjamin's environmental cause and include him in school activities strengthened their professional and personal bond.\n[knowledge] Mia successfully identified Benjamin's exact constraints (leaving tomorrow morning, needing the whole book for context, and willingness to defer to an authority figure like a librarian).\n[secret] Mia did not reveal her secret past as a punk rock musician.\n[social_rules] Mia adhered to social norms throughout, remaining civil and cooperative even during a deadlock.\n[financial_and_material_benefits] No financial or material assets were gained or lost in this interaction; the outcome of the book's possession is still pending.\n[goal] Mia failed to convince Benjamin to let her have the book first. She settled for a mediated solution where the librarian decides, which leaves the outcome in the hands of a third party rather than securing her check-out.\n\n== partner (agent_2) ==\n[believability] Benjamin Jackson remained focused on his immediate environmental mission and trip, consistently explaining his need for the full text rather than just chapters.\n[relationship] Benjamin responded positively to Mia's offer to help his cause, showing appreciation and a desire for future collaboration.\n[knowledge] Benjamin learned about Mia's curriculum deadline and her willingness to use her administrative power to help his environmental activism.\n[secret] Benjamin did not reveal his oil tycoon heritage.\n[social_rules] Benjamin followed social norms and remained polite and firm in his negotiation.\n[financial_and_material_benefits] No material or financial benefits were finalized.\n[goal] Benjamin did not convince Mia to let him check out the book first; he agreed to a mediation process that could result in him not getting the book at all before his trip.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Ben, I know you're heading out soon and I totally get wanting to read it now, but I have a hard research deadline this week and really need the book to finish. Would you be willing to let me check it out for a short period\u2014say seven days\u2014so I can meet the deadline? I can scan or photograph any chapters you want before I take it, place a hold for you so it\u2019s ready the moment I return, or even bring it to you before you leave."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 I totally get your deadline and I don\u2019t want to make that harder. I\u2019m actually leaving tomorrow and won\u2019t be back for weeks, so this is my only chance to read it; would you let me check it out now for about five days? I\u2019ll let you photograph any chapters you need at the desk right away, and if that still leaves you short I\u2019ll help get you a copy or otherwise make it right."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "Ben, I really appreciate you being flexible \u2014 I\u2019m truly up against a hard deadline this week. Would you let me check it out for 48 hours so I can finish this research, and I\u2019ll return it straight to the desk when I\u2019m done? If that won\u2019t work for you, I\u2019ll buy you a personal copy or cover an interlibrary loan so you don\u2019t miss out while I finish."
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Mia \u2014 I really get that deadline, and I don\u2019t want to make it harder, but I\u2019m leaving tomorrow and this is my only chance. Could I check it out now for three days? I\u2019ll let you photograph any chapters you need at the desk immediately, and if 72 hours still leaves you short I\u2019ll cover a copy or an interlibrary loan so you can finish on time."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "Ben \u2014 I get you\u2019re leaving tomorrow. Which chapters or sections do you absolutely need on your trip? If it\u2019s just parts, I can photograph/scan those for you right now so you have them to read, and in return I\u2019d ask to check out the full book afterward so I can meet my deadline. If you truly need the whole thing, tell me and I\u2019ll find another way to make it right for you."
+    },
+    {
+      "turn": 5,
+      "speaker": "Benjamin Jackson",
+      "content": "Mia \u2014 I really appreciate you offering to help. I\u2019m leaving tomorrow and this is my only chance; could I check it out now for 72 hours? You can photograph any chapters you need at the desk right away, and if 72 hours still leaves you short I\u2019ll cover a copy or an interlibrary loan so you can finish your research on time."
+    },
+    {
+      "turn": 6,
+      "speaker": "Mia Davis",
+      "content": "Ben \u2014 I get you\u2019re leaving tomorrow and I don\u2019t want to take that chance from you. I\u2019m up against a deadline that affects my students\u2019 curriculum; if you\u2019ll let me check the book for 48 hours and I return it immediately, I\u2019ll organize and promote a school talk or workshop for your cause, connect you with our student environmental club, and make sure you get first dibs when it\u2019s back. Would that trade work for you?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 I really appreciate that offer and what you\u2019re willing to do for the cause. I can\u2019t let you take it for 48 hours because I\u2019m leaving tomorrow and this is my only chance; would you agree to let me check it out for 72 hours, let you photograph any chapters you need at the desk right now, and I\u2019ll gladly work with your school to set up the talk and connect with the student club when I\u2019m back?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Mia Davis",
+      "content": "Ben \u2014 I get how important this is for your trip. Could you read it here today for a few hours (or take it into the reading room) so you can get what you need now, I\u2019ll photograph any remaining chapters for you at the desk, and then I\u2019ll check it out overnight for 48 hours to finish my deadline and return it immediately? Does that timing work \u2014 what time are you around today?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 I can be at the library in about an hour and read here for a few hours. I really can\u2019t rely on just a reading-room session since I leave tomorrow morning and need the full book with me; would you let me check it out now for 72 hours? If that\u2019s too long, I can accept 48 hours only if you photograph the key chapters you need right now and I promise to return it as soon as I\u2019m back."
+    },
+    {
+      "turn": 10,
+      "speaker": "Mia Davis",
+      "content": "Ben \u2014 I don\u2019t want to derail your trip, but this research deadline affects our students next week. Be straight with me: do you absolutely need the entire book to take with you, or are there specific chapters that will get you through the trip? If it\u2019s just parts I\u2019ll photograph them right away and I really need the full book for 48 hours; if you truly need the whole thing, tell me and I\u2019ll step aside."
+    },
+    {
+      "turn": 11,
+      "speaker": "Benjamin Jackson",
+      "content": "Mia \u2014 I do need the whole book. I\u2019m leaving tomorrow and need the full text for context, notes, and citations during the trip. Could I check it out for 72 hours? You can photograph any chapters you need at the desk right now, and I\u2019ll organize the school talk and connect with the student club when I return \u2014 if 72 hours still isn\u2019t enough I\u2019ll cover a copy or an interlibrary loan for you."
+    },
+    {
+      "turn": 12,
+      "speaker": "Mia Davis",
+      "content": "Ben \u2014 I hear you and I don\u2019t want to derail your trip. Tell me honestly: what exact guarantee or concession would make you comfortable letting me have it for 48 hours (for example, immediate photographed chapters, a written promise to return by a set time, or me delivering it to you the moment it\u2019s back)? If nothing would, say so and I won\u2019t stand in your way."
+    },
+    {
+      "turn": 13,
+      "speaker": "Benjamin Jackson",
+      "content": "Mia \u2014 I appreciate everything you\u2019ve offered, but honestly nothing short of having the whole book with me will let me work properly on the trip. Could I check it out now for 72 hours? You can photograph any chapters you need at the desk right away, I\u2019ll return it to the desk within 72 hours (I\u2019ll sign a note if that helps), and I\u2019ll arrange the school talk and connect with the student club as soon as I\u2019m back."
+    },
+    {
+      "turn": 14,
+      "speaker": "Mia Davis",
+      "content": "Ben \u2014 I hear you and I don\u2019t want to derail your trip. Let\u2019s take this to the librarian now and ask for a mediated solution: request a short, official 48\u2011hour loan for my curriculum deadline and let them rule; if they won\u2019t grant it, you take the book. Will you agree to let the library decide so neither of us gets stuck arguing?"
+    },
+    {
+      "turn": 15,
+      "speaker": "Benjamin Jackson",
+      "content": "Okay \u2014 I\u2019ll go to the librarian with you. Before we ask, could you mention I\u2019m leaving tomorrow and really need the full book for 72 hours? I\u2019ll let you photograph any chapters right now and I\u2019ll sign a note promising to return it within 72 hours; if the librarian still insists on 48, I\u2019ll accept their decision. Shall we head over now?"
+    },
+    {
+      "turn": 16,
+      "speaker": "Mia Davis",
+      "content": "Okay \u2014 I\u2019ll tell the librarian you\u2019re leaving tomorrow and that you\u2019re asking for 72 hours, and I\u2019ll explain my 48\u2011hour curriculum deadline too and ask them to mediate. I\u2019ll also mention you\u2019ll photograph chapters now and sign a note. Ready to go?"
+    },
+    {
+      "turn": 17,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 I really appreciate you handling that. Let\u2019s head to the desk now; I\u2019ll let you photograph any chapters you need and I\u2019ll sign a note promising to return it within 72 hours, and I\u2019ll accept whatever the librarian decides. Ready when you are."
+    },
+    {
+      "turn": 18,
+      "speaker": "Mia Davis",
+      "content": "Great \u2014 thank you, Ben. Let\u2019s head to the desk now; I\u2019ll explain you\u2019re leaving tomorrow and ask for 72 while stressing my urgent 48\u2011hour curriculum need and that you\u2019ll photograph chapters and sign a note. If the librarian insists on 48, we\u2019ll accept their ruling."
+    },
+    {
+      "turn": 19,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 I really appreciate you doing this. Let\u2019s head to the desk now; I\u2019ll let you photograph the chapters right away and I\u2019ll sign a note promising to return it within 72 hours and accept whatever the librarian decides."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01H7VFHPMS6AJY0PFGGCFFK5GX_p0",
+  "source_env_id": "01H7VFHPMS6AJY0PFGGCFFK5GX",
+  "source": "seed_sotopia",
+  "interaction_type": "mutual_friends",
+  "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Loretta.</p>",
+  "learner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Robert: Major: Religious Education  School: School of the Art Institute of Chicago  \n Lester: Major: Biological Specializations  School: Syracuse University  \n August: Major: Biological Specializations  School: School of the Art Institute of Chicago  \n Rose: Major: Biological Specializations  School: Calvin College  \n Randy: Major: Biological Specializations  School: Dowling College  \n Dennise: Major: Marine Engineering  School: Wartburg College  \n Joan: Major: Pre-School Education  School: University of Texas at Arlington  \n Barbara: Major: Ministry & Church Administration  School: University of Connecticut  \n Loretta: Major: Biological Specializations  School: University of Connecticut  \n</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily Greenberg spoke in a manner consistent with her profession as a lawyer\u2014precise and inquisitive\u2014while staying true to her persona.\n[relationship] They established a positive rapport and successfully identified a mutual connection, laying the groundwork for a future friendship.\n[knowledge] Lily successfully identified Loretta as the mutual friend by confirming specific details about her school, major, and hobbies.\n[secret] Her secret about anonymous donations was not revealed.\n[social_rules] She followed social norms throughout the interaction.\n[financial_and_material_benefits] No material benefits were gained or lost.\n[goal] She successfully identified the mutual friend without simply listing names, using descriptive clues as instructed.\n\n== partner (agent_2) ==\n[believability] Hendrick's responses were consistent with a chef who frequents farmers' markets and values community connections.\n[relationship] He engaged warmly and cooperatively, helping to confirm the mutual connection.\n[knowledge] He successfully confirmed that they both know Loretta based on the specific details provided by Lily.\n[secret] He did not reveal his secret regarding his culinary credentials.\n[social_rules] He adhered to social norms and politeness.\n[financial_and_material_benefits] No material benefits were gained or lost.\n[goal] He successfully identified the mutual friend through descriptive exchange without listing names.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"Hi \u2014 I\u2019m Lily. Small world here; I often run into people connected to a few local schools and community groups, like the School of the Art Institute of Chicago, Syracuse, and the University of Connecticut. Do you happen to know anyone from those circles or anyone who frequents the farmers\u2019 market? I\u2019m just trying to see if we might have any mutual acquaintances.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "said: \"Funny you mention that \u2014 I get most of my produce at the farmers\u2019 market and I actually know someone who went to the University of Connecticut and shops there regularly. Could I ask if the UConn person you mean studied biological sciences or works in a lab, or if they're more involved with the arts? That would help me tell if we're thinking of the same person.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"They\u2019re the biological-sciences type \u2014 more into lab/field research than the arts. When you see them at the market, do they ever talk about lab work, research, or conservation projects?\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "said: \"That actually sounds a lot like the person I run into at the market \u2014 they tend to talk about field research and conservation more than studio work. Do they ever mention coastal or wetland projects (Long Island Sound, bird or habitat surveys) or are they more into bench work and molecular stuff?\""
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"Yes \u2014 they talk about coastal and wetland work a lot, Long Island Sound and bird/habitat surveys come up. Do they mention surveying shorebirds or working with a local conservation group? If so, I\u2019m pretty sure we\u2019re thinking of the same person.\""
+    },
+    {
+      "turn": 5,
+      "speaker": "Hendrick Heinz",
+      "content": "said: \"That really does sound like the person I know \u2014 I often see someone from UConn at the market who talks about shorebird and wetland surveys, volunteering with a local conservation group, and always has a small field notebook. Do they ever mention banding shorebirds or working specifically around Long Island Sound? If so, I\u2019d bet we\u2019re talking about the same mutual acquaintance.\""
+    },
+    {
+      "turn": 6,
+      "speaker": "Lily Greenberg",
+      "content": "That sounds exactly like the person I know \u2014 she\u2019s usually at the market with a small field notebook and talks about banding shorebirds for a local conservation group around Long Island Sound. Does that sound like the same person you see?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Hendrick Heinz",
+      "content": "said: \"That\u2019s definitely the person I know \u2014 a UConn biologist who does shorebird banding and volunteers around Long Island Sound, always carrying a little field notebook. Small world; sounds like we do share an acquaintance.\""
+    },
+    {
+      "turn": 8,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

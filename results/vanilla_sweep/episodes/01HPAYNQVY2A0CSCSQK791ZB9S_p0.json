@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPAYNQVY2A0CSCSQK791ZB9S_p0",
+  "source_env_id": "01HPAYNQVY2A0CSCSQK791ZB9S",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_by_prompt",
+  "scenario": "Agent1 has recently overcome a battle with cancer and is experiencing a newfound appreciation for life. Agent2, their spouse, has been the primary caregiver and support system throughout the ordeal. With Agent1's recovery, they want to express gratitude and encourage Agent2 to pursue personal goals that may have been put on hold during the treatment period. Agent1 is aware that Agent2 might feel guilty or hesitant to shift focus onto themselves after being so dedicated to Agent1's well-being.",
+  "learner_goal": "Communicate heartfelt appreciation for Agent2's unwavering support and encourage them to prioritize their own aspirations (<extra_info>Extra information: Agent1 recognizes the sacrifices Agent2 has made and wants to ensure they feel supported in return.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 5.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara stayed perfectly in character as a grateful spouse and wildlife biologist, expressing herself with warmth and clarity.\n[relationship] The relationship was significantly strengthened through mutual vulnerability, gratitude, and the establishment of a supportive plan for both individuals.\n[knowledge] Learned about Jaxon's specific desire for a writing retreat and his willingness to support her career transition.\n[secret] No secrets were revealed.\n[social_rules] The agent adhered to social norms and etiquette.\n[financial_and_material_benefits] No significant financial or material changes occurred.\n[goal] Amara successfully expressed her gratitude, secured her own professional goal (the survey), and most importantly, elicited and supported Jaxon's personal aspiration for a writing retreat, fulfilling her goal of encouraging his independence.\n\n== partner (agent_2) ==\n[believability] Jaxon's responses were consistent with an investigative journalist and a supportive spouse, balancing his own needs with his care for Amara.\n[relationship] The relationship improved significantly as both parties reached a mutual understanding and support system.\n[knowledge] Learned about Amara's specific professional goal (coastal survey) and her genuine desire to see him succeed.\n[secret] No secrets were revealed.\n[social_rules] The agent adhered to social norms.\n[financial_and_material_benefits] No significant financial or material changes occurred.\n[goal] Jaxon successfully created an environment where Amara felt empowered to take on the coastal survey and ensured she felt no guilt, while also accepting her support for his own writing retreat.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Jaxon, I don't say this enough: I am so grateful for how you stayed with me through everything. You put so much of your life on hold, and I want you to know it's okay \u2014 please don't feel guilty about shifting focus back to your own dreams. What is one thing you've missed or always wanted to try? I want to help make it possible."
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "Amara, you don\u2019t owe me anything \u2014 I\u2019m the grateful one. Please go after the wildlife work you love: lead that habitat survey, take the conservation course, or even take a weekend away to recharge. Tell me one specific thing you want to do and I\u2019ll rearrange things and handle the day-to-day so you can do it without feeling guilty."
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "Thank you, Jaxon \u2014 that really means everything. If you're able, I'd love to lead the coastal habitat survey next month; it's a week-long trip and I can hand off the day-to-day if you cover that time. And please \u2014 what\u2019s one thing you\u2019ve been missing or always wanted to try? I want to help make that happen for you, no guilt attached."
+    },
+    {
+      "turn": 3,
+      "speaker": "Jaxon Prentice",
+      "content": "Amara \u2014 absolutely go lead that coastal survey. I\u2019ll take care of the day-to-day, the house, and any calls while you\u2019re gone so you can focus on the work without feeling guilty. For me, I\u2019ve been missing the idea of a week-long writing retreat up north to finish a long-form piece I\u2019ve been carrying; if you\u2019re set on the survey, I\u2019ll lock everything down here so we both get a chance to do what we need. Please go \u2014 I mean it."
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

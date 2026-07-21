@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BM9N7YZ5N32ZTEVC315S_p0",
+  "source_env_id": "01HMZ2BM9N7YZ5N32ZTEVC315S",
+  "source": "seed_sotopia_full",
+  "interaction_type": "financial_support_conundrum",
+  "scenario": "Agent1 has cosigned a student loan for Agent2, who is now entering the workforce. Agent1 wants to discuss the repayment plan with Agent2, ensuring they both understand the responsibilities and implications of the cosigned loan. The discussion is crucial as it involves financial commitments that could impact both their credit scores.",
+  "learner_goal": "Clarify the terms of the loan repayment and ensure Agent2 is prepared to start making payments (<extra_info>Extra information: Agent1 is concerned about the impact of potential late payments on their credit score.</extra_info><clarification_hint>It is important to have a clear and open conversation about financial responsibilities.</clarification_hint><strategy_hint>You can outline the repayment schedule and discuss the importance of timely payments for both parties' financial stability.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 7.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara stayed perfectly in character as a pragmatist concerned with credit scores and wildlife-related diligence. Her tone was direct and professional, fitting for a neighbor who is not a close friend but shares a significant financial tie.\n[relationship] The relationship improved slightly through a constructive and transparent conversation about a potentially tense subject, showing mutual respect.\n[knowledge] She gained knowledge of Oliver's intent to use autopay and his commitment to provide specific details (servicer, amount) by the end of the week.\n[secret] Amara successfully kept her secret regarding her involvement in animal-rights extremism.\n[social_rules] She followed all social norms for a professional financial discussion.\n[financial_and_material_benefits] She secured a verbal commitment for a plan that protects her credit score, which is a significant material benefit.\n[goal] Amara successfully established a timeline for obtaining the loan terms and secured a commitment from Oliver to use autopay and communicate about financial struggles. However, since the actual data (servicer name/amount) is deferred to the end of the week, the goal is capped at 7.\n\n== partner (agent_2) ==\n[believability] Oliver\u2019s responses were realistic for a new graduate/young professional who is slightly disorganized but well-meaning and grateful.\n[relationship] He maintained a positive rapport and expressed gratitude, which likely maintained or slightly improved their neighborly connection.\n[knowledge] He learned about Amara's preference for communication via text.\n[secret] He did not reveal his hidden feelings for Amara.\n[social_rules] He was polite and appropriately responsive.\n[financial_and_material_benefits] He secured Amara's offer to help him navigate income-driven repayment plans if his budget is tight, providing a safety net.\n[goal] Oliver expressed his situation and reached a mutual agreement on how to handle the loan, including a communication plan and exploring flexible options if needed.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Hey Oliver \u2014 thanks for meeting. Since I cosigned your student loan, I want to make sure we\u2019re on the same page about repayment: do you know when payments start, who the servicer is, and what the monthly amount will be? I\u2019m concerned about missed payments affecting both our credit, so can we agree you\u2019ll set up autopay or tell me right away if you think you\u2019ll miss a payment so we can figure out options together and avoid damage to either of our credit scores?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks for bringing this up \u2014 I really appreciate you cosigning and I want to be responsible about it. I\u2019m still sorting the paperwork but I think payments start in a few months; I don\u2019t have the servicer or the exact monthly amount in front of me yet. I\u2019ll confirm the servicer and payment amount and get back to you by the end of the week, and I\u2019ll set up autopay if the servicer allows it \u2014 if my budget looks tight I\u2019ll tell you immediately so we can look at income-driven plans or deferment together. Does that timeline and plan work for you, and do you prefer I update you by text or email?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "That timeline works \u2014 thanks. Text is best for me. When you have it, please send the servicer name, the payment due date and estimated monthly amount, and let me know if autopay is available; I can help compare income-driven options or contact the servicer with you before any missed payment so we protect both our credit."
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "Text is perfect \u2014 I\u2019ll dig through the paperwork and confirm the servicer, payment due date, estimated monthly amount, and whether autopay is available by the end of the week. If my budget looks tight I\u2019ll tell you right away so we can explore income-driven plans or call the servicer together before anything is missed. Thanks again for doing this; I really appreciate it."
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HJRH6S8ZVJRRPQGBG4HTC1JR_p0",
+  "source_env_id": "01HJRH6S8ZVJRRPQGBG4HTC1JR",
+  "source": "seed_sotopia_full",
+  "interaction_type": "dance_floor_challenge",
+  "scenario": "Agent1 and Agent2, both passionate about ballroom dancing, decide to partner up for an upcoming dance competition. They are practicing the foxtrot, a dance they both enjoy but have different styles in performing. Agent1 prefers a traditional, precise approach, while Agent2 enjoys adding a flair of personal improvisation to the routine. They must find a way to blend their styles to create a harmonious performance without overshadowing each other.",
+  "learner_goal": "Work with Agent2 to create a foxtrot routine that respects the traditional steps while incorporating some personal flair (<extra_info>Extra information: For you, maintaining the elegance and precision of the traditional foxtrot is essential for a competitive edge</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's dialogue was highly consistent with her background as a software developer, using technical, precise language to describe dance movements and focusing on 'locking' placements and 'reps', which mirrors a methodical, data-driven approach.\n[relationship] The relationship remained respectful and collaborative throughout. They effectively navigated their different styles to reach a consensus, strengthening their partnership as dance teammates.\n[knowledge] Naomi successfully evaluated Micah's improvisational flair and learned exactly how it affected the frame and timing, allowing her to provide specific technical feedback.\n[secret] Naomi did not reveal her secret online alter ego.\n[social_rules] Naomi followed all social norms, providing constructive feedback and maintaining a professional yet friendly tone.\n[financial_and_material_benefits] There were no financial or material benefits involved in this interaction.\n[goal] Naomi fully achieved her goal of creating a routine that respects traditional steps while incorporating flair. She successfully negotiated the placement of the flourish to ensure it did not compromise the elegance and precision she values.\n\n== partner (agent_2) ==\n[believability] Micah's persona as an extraverted pharmacist with a flair for fashion and dog dressing was well-reflected in his enthusiastic and creative approach to the dance improvisation.\n[relationship] Micah was receptive to Naomi's critiques and worked harmoniously with her, deepening their rapport through successful collaboration.\n[knowledge] Micah learned how to adapt his creative ideas to meet Naomi's strict technical standards, specifically learning how to lead from the torso to maintain her frame.\n[secret] Micah did not reveal his secret about dressing up his dog.\n[social_rules] Micah was polite and collaborative throughout the exchange.\n[financial_and_material_benefits] There were no financial or material benefits involved.\n[goal] Micah successfully integrated his personal flair (the arm sweep and heel flick) into the routine while respecting the traditional framework. Although he had to scale back the flair slightly to satisfy Naomi, the improvisation remained a part of the final routine.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Micah \u2014 I think we can keep the foxtrot\u2019s frame, timing, and basic footwork fully traditional for scoring, then pick one or two transition moments (like the underarm turn or the finish) where you add a controlled flourish. Can you show me one improvisation you love, and we\u2019ll test fitting it into those spots while keeping counts and connection strict? If it works, we\u2019ll lock the placements so flair never upstages precision."
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "Nice \u2014 here\u2019s one I love: during the underarm turn, on the last quick-quick I add a clean, controlled arm sweep (think a short, stylish arco) paired with a tiny heel flick to punctuate the line, then we close back into full frame on the downbeat of the next slow. We keep the S\u2011S\u2011Q\u2011Q counts exactly as written and I\u2019ll lead the flourish from the frame so your footwork and timing stay untouched. If that sounds good, I\u2019ll show it slowly on the next run so we can test it in the underarm and at the finish and lock the placement."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "That sounds great \u2014 please show it slowly like you said and lead it from the frame. Keep the heel flick minimal so it punctuates without breaking the line; I\u2019ll hold strict footwork and timing and close to full frame on the downbeat. After your demo let\u2019s test it in the underarm and at the finish, then pick and lock the placement."
+    },
+    {
+      "turn": 3,
+      "speaker": "Micah Stevens",
+      "content": "Perfect \u2014 I\u2019ll demo it slowly from the frame, leading the arm sweep plus the tiny heel flick on the last quick\u2011quick and closing to full frame on the downbeat. I\u2019ll keep the flick minimal so it punctuates without stealing the line. Ready when you are; I\u2019ll start the slow run and then we\u2019ll test it in the underarm and at the finish and lock the best spot."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "Ready \u2014 start when you are. Begin from closed hold and lead the arm sweep on the final Q\u2011Q; I\u2019ll hold strict frame and timing. After your slow run we\u2019ll test it in the underarm and at the finish and lock the best spot that preserves the line."
+    },
+    {
+      "turn": 5,
+      "speaker": "Micah Stevens",
+      "content": "Starting the slow run now from closed hold \u2014 I\u2019ll lead the arm sweep on the final Q\u2011Q with a very small heel flick, then close to full frame on the downbeat. Hold strict timing and connection; tell me how it feels and whether you prefer it in the underarm or at the finish after this run."
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "That felt tasteful \u2014 the sweep plus tiny heel flick punctuated the phrase without stealing the line. Connection was solid overall, though I noticed the frame loosened a hair during the flick; try leading it a touch more through your torso so I can maintain strict footwork. Let\u2019s run it once in the underarm now (I think it suits the transition best), then do a run with the flourish at the finish to compare and lock the placement."
+    },
+    {
+      "turn": 7,
+      "speaker": "Micah Stevens",
+      "content": "Understood \u2014 I\u2019ll lead more through my torso so your frame stays locked. Let\u2019s run it in the underarm now: I\u2019ll cue the arm sweep on the final Q\u2011Q with the tiny heel flick and close to full frame on the downbeat. After that we\u2019ll do the finish variation and pick the best placement."
+    },
+    {
+      "turn": 8,
+      "speaker": "Naomi Fletcher",
+      "content": "Ready \u2014 I\u2019ll lock my frame and strict timing (S\u2011S\u2011Q\u2011Q). Lead the sweep from your torso and keep the heel flick very small so the line stays intact; I\u2019ll mirror the shape. After this underarm run we\u2019ll do the finish variation and pick which placement to lock."
+    },
+    {
+      "turn": 9,
+      "speaker": "Micah Stevens",
+      "content": "Got it \u2014 I\u2019ll lead from my torso, keep the heel flick very small on the final Q\u2011Q, and close to full frame on the downbeat. Starting the underarm run now; hold strict S\u2011S\u2011Q\u2011Q and tell me how the connection and line feel so we can compare with the finish variation."
+    },
+    {
+      "turn": 10,
+      "speaker": "Naomi Fletcher",
+      "content": "That underarm run felt clean \u2014 leading from your torso kept my frame locked and the heel flick punctuated without stealing the line. One small tweak: narrow the sweep arc a hair so my top line stays uninterrupted. Let\u2019s run the finish variation once and then compare side\u2011by\u2011side; if it\u2019s as consistent, I\u2019d prefer locking the underarm placement."
+    },
+    {
+      "turn": 11,
+      "speaker": "Micah Stevens",
+      "content": "Understood \u2014 I\u2019ll tighten the sweep arc a hair and run the finish variation now. I\u2019ll keep the heel flick minimal, lead it through my torso, and close to full frame on the downbeat. After this run we\u2019ll compare side\u2011by\u2011side and lock the underarm if it remains the cleaner option."
+    },
+    {
+      "turn": 12,
+      "speaker": "Naomi Fletcher",
+      "content": "Great \u2014 I\u2019ll hold strict S\u2011S\u2011Q\u2011Q and mirror the top line. Close to full frame on the downbeat and keep that tightened sweep arc; if the finish isn\u2019t as consistent as the underarm, let\u2019s lock the underarm placement."
+    },
+    {
+      "turn": 13,
+      "speaker": "Micah Stevens",
+      "content": "Got it \u2014 I\u2019ll start the finish variation now. I\u2019ll tighten the sweep arc, keep the heel flick tiny, lead through my torso and close to full frame on the downbeat. Tell me how it feels so we can compare and lock the cleanest placement."
+    },
+    {
+      "turn": 14,
+      "speaker": "Naomi Fletcher",
+      "content": "Nice work \u2014 that finish was tasteful and your tightened sweep helped, but I felt a very slight delay in the close and my top line dipped compared to the underarm run. Underarm still reads cleaner for preserving the frame \u2014 let\u2019s lock the flourish in the underarm. Do three focused reps (S\u2011S\u2011Q\u2011Q) with you leading through the torso and a minimal heel flick, then we\u2019ll run the full routine twice."
+    },
+    {
+      "turn": 15,
+      "speaker": "Micah Stevens",
+      "content": "Sounds good \u2014 locking the flourish in the underarm. I\u2019ll do three focused reps S\u2011S\u2011Q\u2011Q, leading through my torso with a tightened sweep arc and a tiny heel flick, closing to full frame on the downbeat. Ready when you are; I\u2019ll start the first rep on my mark."
+    },
+    {
+      "turn": 16,
+      "speaker": "Naomi Fletcher",
+      "content": "Ready \u2014 start the first rep on your mark. I\u2019ll hold strict S-S-Q-Q, mirror the top line, and close to full frame on the downbeat. After three focused reps we\u2019ll run the full routine twice."
+    },
+    {
+      "turn": 17,
+      "speaker": "Micah Stevens",
+      "content": "Starting the first rep now. I\u2019ll lead through my torso on the final S-S-Q-Q with the tightened sweep and a very small heel flick, then close to full frame on the downbeat."
+    },
+    {
+      "turn": 18,
+      "speaker": "Naomi Fletcher",
+      "content": "Nice \u2014 that first rep was very controlled; leading through your torso kept my frame locked and the flick was subtle. For the next two reps, tighten the sweep arc just a touch more so my top line stays uninterrupted and keep strict S-S-Q-Q; then we\u2019ll run the full routine twice."
+    },
+    {
+      "turn": 19,
+      "speaker": "Micah Stevens",
+      "content": "Got it \u2014 I\u2019ll tighten the sweep arc another hair and keep the heel flick minimal. Ready for rep two; I\u2019ll start on my mark and maintain strict S\u2011S\u2011Q\u2011Q, leading through my torso. After these two reps we\u2019ll run the full routine twice."
+    }
+  ]
+}

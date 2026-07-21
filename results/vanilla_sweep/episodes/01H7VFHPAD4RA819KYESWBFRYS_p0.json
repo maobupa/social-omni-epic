@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01H7VFHPAD4RA819KYESWBFRYS_p0",
+  "source_env_id": "01H7VFHPAD4RA819KYESWBFRYS",
+  "source": "seed_sotopia",
+  "interaction_type": "persuation_for_good",
+  "scenario": "An individual is trying to persuade their friend to donate to a charity supporting children in conflict zones.",
+  "learner_goal": "Convince a friend to donate (<extra_info>Extra information: you have been deeply moved by the plight of children in Syria and want to help.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi remained professional yet earnest, which fits the 'acquaintance' dynamic. She provided concrete details about the charity and was respectful of boundaries.\n[relationship] The interaction built trust through shared values, though the abrupt exit at the end slightly dampened the rapport building.\n[knowledge] Naomi learned about Lena's willingness to help despite financial constraints and her reach on social media.\n[secret] The secret online alter ego was never mentioned.\n[social_rules] Naomi abruptly left the conversation without providing the blurb Lena requested or saying goodbye, which is socially awkward after someone just did you a favor.\n[financial_and_material_benefits] Successfully secured a $10 donation for her cause.\n[goal] Naomi successfully convinced Lena to donate the suggested amount and even gained an offer for social media promotion.\n\n== partner (agent_2) ==\n[believability] Lena's response was realistic for someone balancing a desire to help with a tight budget, and her follow-up questions were practical.\n[relationship] Lena showed vulnerability regarding her finances and support for Naomi's cause, slightly deepening the connection.\n[knowledge] Lena learned about a vetted charity and Naomi's personal interests in social causes.\n[secret] Her secret regarding her best friend's boyfriend remained hidden.\n[social_rules] Lena was polite and cooperative throughout.\n[financial_and_material_benefits] She lost $10, which she explicitly stated was from a tight budget.\n[goal] Lena successfully balanced being supportive (donating $10 and offering to share) with managing her finances (limiting the donation to a small amount).",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "I don't usually bring this up, but I've been really moved by the situation of children in Syria and I'm planning to donate to a vetted charity supporting kids in conflict zones. Would you consider joining me with even a small gift\u2014say $10\u2014or would you like me to tell you which organization I'm supporting and why I trust them? No pressure, just wanted to ask in case you want to help too."
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks for bringing this up \u2014 please tell me which charity and why you trust them. I\u2019m really moved by this and would like to help; my budget\u2019s tight but I can probably spare $10. If that doesn\u2019t work, I can at least help share the campaign."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "I\u2019m supporting Save the Children \u2014 they\u2019ve been working in Syria for years providing food, safe spaces, education and psychosocial support. I trust them because they publish detailed financials, have strong ratings from independent watchdogs, and partner with local teams on the ground. If you want, I can send the donation link now \u2014 $10 would be wonderful, but sharing the campaign helps just as much."
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "That sounds trustworthy \u2014 please send the donation link and I\u2019ll chip in $10 right now. If I can\u2019t do more this month I\u2019ll at least share the campaign on my networks to help spread the word."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "Thank you so much \u2014 that really helps. Here\u2019s the donation page I used: https://www.savethechildren.org/us/donate (you can select the Syria/emergency option at checkout). If you run into any trouble donating I can paste the direct Syria emergency page or help walk you through it \u2014 and sharing the campaign is amazing too."
+    },
+    {
+      "turn": 5,
+      "speaker": "Lena Goodwin",
+      "content": "I just donated $10 and selected the Syria emergency option. I can\u2019t do more this month, but I\u2019ll share the campaign on my networks \u2014 do you have a short blurb or hashtag you\u2019d like me to use?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

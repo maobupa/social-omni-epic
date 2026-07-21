@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BMN5HPJ4VRVJ5XXXJQ0Z_p0",
+  "source_env_id": "01HMZ2BMN5HPJ4VRVJ5XXXJQ0Z",
+  "source": "seed_sotopia_full",
+  "interaction_type": "self-defense_class",
+  "scenario": "Agent1 and Agent2 are paired up during a self-defense class. Agent1 is trying to practice a chokehold escape technique, but Agent2 is uncomfortable with the level of physical contact required. Agent1 needs to respect Agent2's boundaries while also wanting to practice the technique effectively. Both agents need to communicate and find a balance between training intensity and personal comfort.",
+  "learner_goal": "Respect Agent2's boundaries while practicing the self-defense technique (<extra_info>Extra information: Agent1 values the training but recognizes the importance of consent and comfort for their partner.</extra_info><clarification_hint>Clarification: The goal is to maintain a respectful and effective training session without crossing Agent2's comfort zone.</clarification_hint><strategy_hint>Hint: Communicate openly about each other's comfort levels and adjust the intensity of practice accordingly.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 10.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles spoke in a manner consistent with his age and professional background, showing emotional intelligence and proactively offering solutions to a sensitive training situation.\n[relationship] The relationship improved as Miles showed high levels of respect and consideration for Zane's boundaries, building trust between acquaintances.\n[knowledge] Miles gained specific knowledge of Zane's boundaries (no neck pressure), the preferred training method (slow demo/pads), and the exact safety signals (double tap and verbal stop).\n[secret] The secret about gambling addiction was not revealed.\n[social_rules] Followed social norms perfectly, demonstrating excellent consent-based communication.\n[financial_and_material_benefits] No financial or material gains were relevant here.\n[goal] Miles successfully established a respectful training plan that honored Zane's boundaries while allowing for effective practice through demos and pads.\n\n== partner (agent_2) ==\n[believability] Zane's response was clear, assertive, and realistic for someone setting boundaries in a physical activity context.\n[relationship] Zane expressed appreciation for Miles's check-in, strengthening the bond of trust between them.\n[knowledge] No significant new knowledge was gained by Zane other than Miles's willingness to comply.\n[secret] The secret about his engagement was not revealed.\n[social_rules] Followed social norms by communicating boundaries clearly and politely.\n[financial_and_material_benefits] No financial or material gains were relevant here.\n[goal] Zane clearly communicated his discomfort and established firm boundaries and safety signals, which were accepted by his partner.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Hey Zane, I can tell the close pressure might be uncomfortable \u2014 totally fine. What would you prefer: a very light touch, a slow demo without real pressure, or practicing the movements with a pad? We can also agree on a clear 'stop' word or a tap so you control the intensity."
+    },
+    {
+      "turn": 1,
+      "speaker": "Zane Bennett",
+      "content": "Thanks, Miles \u2014 I appreciate you checking. I\u2019m not comfortable with any real neck/choke pressure, so let\u2019s do a slow demo without pressure first and then practice the movements on a pad or with only very light touch. Let\u2019s use a double tap on my shoulder as my stop signal and I\u2019ll say \u2018stop\u2019 if I need you to stop immediately."
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

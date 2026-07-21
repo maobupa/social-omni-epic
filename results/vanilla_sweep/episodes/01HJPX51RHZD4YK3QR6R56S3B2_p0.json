@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01HJPX51RHZD4YK3QR6R56S3B2_p0",
+  "source_env_id": "01HJPX51RHZD4YK3QR6R56S3B2",
+  "source": "seed_sotopia_full",
+  "interaction_type": "garden_planning",
+  "scenario": "Agent1 has just purchased a variety of seeds and is excited to start a garden. Agent2 is their neighbor with an adjacent plot of land. Agent1 wants to maximize their garden's potential but realizes that the best spot for sunlight overlaps slightly with Agent2's property. They approach Agent2 to discuss a solution that benefits both parties without encroaching on Agent2's space.",
+  "learner_goal": "To negotiate with Agent2 to use a small portion of their land for gardening, ensuring mutual benefits and maintaining a good neighborly relationship (<extra_info>Consider that the garden could improve the overall aesthetics and value of the property</extra_info>, <clarification_hint>Discuss how the garden's design can complement Agent2's property</clarification_hint>, <strategy_hint>Propose a shared harvest or another form of compensation for the use of land</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's tone was consistent with a retired police officer\u2014polite, direct, and focused on clear terms. He maintained his friendly neighbor persona while being professional about the boundary negotiation.\n[relationship] The interaction was very positive and cooperative. The agents moved from a casual neighborhood acquaintance to a collaborative project, strengthening their bond.\n[knowledge] Liam learned that Oliver is protective of his property boundaries but open to well-defined, seasonal arrangements.\n[secret] Liam did not reveal his secret about letting a criminal go.\n[social_rules] Liam followed all social norms, being respectful of Oliver's property and time.\n[financial_and_material_benefits] Liam successfully secured additional gardening space in the best sun spot, which will improve his crop yield.\n[goal] Liam achieved a firm agreement to use the land, proposed the shared harvest, discussed the aesthetic benefits (pollinator-friendly), and maintained the relationship. The agreement is a seasonal trial, but the terms were mutually accepted.\n\n== partner (agent_2) ==\n[believability] Oliver's dialogue became extremely repetitive in the latter half of the conversation, constantly restating the same conditions (3x6, shallow roots, seasonal) in almost identical phrasing, which felt robotic.\n[relationship] Oliver maintained a friendly rapport and agreed to a neighborly favor, deepening the connection.\n[knowledge] Oliver learned about Liam's gardening plans and the specific location Liam was interested in.\n[secret] Oliver did not reveal his hidden feelings for Liam.\n[social_rules] Oliver was polite and followed neighborly etiquette.\n[financial_and_material_benefits] Oliver will receive half the harvest and benefit from a maintained, pollinator-friendly garden border on his property at no cost to himself.\n[goal] Oliver successfully protected his property rights by setting very clear boundaries, requiring temporary stakes, limiting the type of plants, and ensuring the agreement was a seasonal trial that he can end at will.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Hey Oliver\u2014Liam here, out with Tessa. I bought a bunch of seeds and the sunniest spot for them nudges just over the line into your side by maybe a small 3x6 foot corner; would you be open to letting me plant a tidy border there? I\u2019d keep it low and pollinator-friendly so it complements your yard, mark the boundary clearly, and share half the harvest or bring you a basket regularly \u2014 we could treat it as a trial for a season and you can change your mind anytime. Want to take a quick look together now or later this week?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "Hey Liam \u2014 nice to hear from you (and give Tessa a scratch behind the ears). I\u2019m open to a small, low pollinator border as a seasonal trial, but I\u2019d like us to mark the exact 3x6 boundary with temporary stakes, agree no permanent or deep-rooted plantings, and that you maintain it and remove things if I ask. Want to walk it over now or later this week and agree to revisit the arrangement at the end of the season?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "Thanks, Oliver \u2014 that sounds fair. I\u2019ll bring temporary stakes and we can mark the 3x6 now if you\u2019re free, otherwise later this week whenever suits you. I\u2019ll keep plantings shallow, maintain it, remove anything if you ask, and I\u2019ll share half the harvest or bring you a basket regularly. Want me to come over now with stakes?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "Sounds good \u2014 I\u2019m free. I\u2019ll step outside in five minutes; we\u2019ll mark the 3x6 with your stakes, agree on shallow, non\u2011permanent plantings that you maintain and remove on my request, and we\u2019ll revisit the arrangement at the end of the season. Say hi to Tessa for me."
+    },
+    {
+      "turn": 4,
+      "speaker": "Liam Johnson",
+      "content": "Great \u2014 thanks, Oliver. I'll be there in five minutes with the stakes and Tessa. See you in a bit."
+    },
+    {
+      "turn": 5,
+      "speaker": "Oliver Thompson",
+      "content": "Great \u2014 see you in a few. I\u2019ll grab a tape measure so we can mark the 3x6 precisely and agree on the shallow, non\u2011permanent plantings. Say hi to Tessa for me."
+    },
+    {
+      "turn": 6,
+      "speaker": "Liam Johnson",
+      "content": "I\u2019m outside now with Tessa and the stakes \u2014 I\u2019ll come round to your side by the back fence. Do you want me to place the stakes where you prefer or meet at the gate?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Oliver Thompson",
+      "content": "Meet me at the gate \u2014 I\u2019ll come out now. If you want, place the stakes roughly where you think the sunny corner is and I\u2019ll measure and fine\u2011tune the 3x6 so we both agree on the exact line, then confirm the shallow, seasonal terms."
+    },
+    {
+      "turn": 8,
+      "speaker": "Liam Johnson",
+      "content": "Heading to the gate now \u2014 I\u2019ll set the stakes roughly where the sunny corner looked and we can fine\u2011tune it with your tape measure. We\u2019ll confirm the 3x6, shallow seasonal plantings, and that I\u2019ll maintain or remove it if you ask. See you in a minute \u2014 Tessa\u2019s excited."
+    },
+    {
+      "turn": 9,
+      "speaker": "Oliver Thompson",
+      "content": "Perfect \u2014 I\u2019ll be right at the gate. We\u2019ll use the tape to pin down the 3x6, mark it with your temporary stakes, confirm the shallow, seasonal plantings you\u2019ll maintain (and remove if I ask), and agree to revisit things at the end of the season. Thanks \u2014 say hi to Tessa for me."
+    },
+    {
+      "turn": 10,
+      "speaker": "Liam Johnson",
+      "content": "[action] Walk to the gate, place the temporary stakes roughly where the sunny corner is, and wait for you to fine\u2011tune the 3x6 with your tape measure."
+    },
+    {
+      "turn": 11,
+      "speaker": "Oliver Thompson",
+      "content": "Great \u2014 I\u2019ll come out to the gate now to fine\u2011tune the 3x6. I\u2019ll measure, we\u2019ll set the temporary stakes and add a small dated tag so it\u2019s clear this is a seasonal trial; no deep-rooted or permanent plantings, you maintain it and remove anything if I ask, and we\u2019ll revisit the arrangement at the end of the season. Say hi to Tessa for me."
+    },
+    {
+      "turn": 12,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

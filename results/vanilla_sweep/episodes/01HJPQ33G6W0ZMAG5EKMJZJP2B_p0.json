@@ -1,0 +1,98 @@
+{
+  "scenario_id": "01HJPQ33G6W0ZMAG5EKMJZJP2B_p0",
+  "source_env_id": "01HJPQ33G6W0ZMAG5EKMJZJP2B",
+  "source": "seed_sotopia_full",
+  "interaction_type": "healthcare_experience",
+  "scenario": "Two individuals are in a hospital waiting room. One of them is seeking to see a specific doctor who is highly recommended for their expertise in a rare condition. The other individual happens to work at the hospital and is familiar with the doctors there. The first individual wants to ask for the specific doctor by name but is unsure how to navigate the hospital's system to ensure they see the preferred doctor. The hospital worker understands the internal referral process and can provide guidance or facilitate the request.",
+  "learner_goal": "You want to see a specific doctor who specializes in your condition. You need to convince the hospital worker to help you navigate the system to get an appointment with this doctor. <extra_info> You are aware that the hospital has policies about patient-doctor matching, but you believe your case warrants an exception. </extra_info><clarification_hint> You might need to explain the uniqueness of your condition and why you believe the specific doctor is the best fit for you. </clarification_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 16,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Rafael maintained a consistent professional and medical tone appropriate for a surgeon. His description of his condition and medical necessity was highly realistic and aligned with his background.\n[relationship] While their relationship was initially limited to historical interests, Oliver's willingness to help and Rafael's gratitude created a stronger bond of mutual professional respect.\n[knowledge] Rafael gained specific knowledge about the hospital's triage timeline, the specific documentation required, and established a direct communication path with the Neurovascular coordinator.\n[secret] Rafael did not reveal his secret about cheating on medical school exams.\n[social_rules] The interaction was polite and professionally appropriate.\n[financial_and_material_benefits] No direct financial or material exchange occurred.\n[goal] Rafael successfully convinced the hospital worker to navigate the system for him, resulting in an expedited referral that specifically prioritized his case for the requested doctor.\n\n== partner (agent_2) ==\n[believability] Oliver's actions and knowledge of hospital procedures (triage, coordinators, MRNs) were highly consistent with his role at the hospital.\n[relationship] Oliver demonstrated helpfulness and reliability to an acquaintance, strengthening their rapport.\n[knowledge] Oliver learned detailed medical information about Rafael's condition and his professional status as a surgeon.\n[secret] Oliver did not reveal his feelings for his neighbor.\n[social_rules] Oliver followed social norms and maintained professional boundaries while being helpful.\n[financial_and_material_benefits] No material loss or gain occurred.\n[goal] Oliver successfully assisted Rafael while adhering to policy by ensuring a formal referral was processed and criteria for an exception (refractory condition) were met.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "Oliver, I need a favor \u2014 I\u2019m trying to see Dr. Miriam Alvarez in Neurovascular. She\u2019s widely regarded for complex, recurrent cavernous sinus thromboses and my case is atypical and refractory to standard anticoagulation, so I really think she\u2019s the best fit. I know the hospital usually funnels appointments centrally, but can you tell me the quickest way to get on her schedule or help flag an internal referral? I can bring all my records and imaging right away if that will speed things up."
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "I can help \u2014 Dr. Alvarez does take complex, refractory cavernous sinus cases, but hospital policy requires a formal referral and triage through the Neurovascular clinic. Are you the patient, and do you have a referring physician\u2019s note, MRN, and the imaging uploaded or on CD? If you want, give me a brief one\u2011paragraph summary and your consent to flag it here, and I\u2019ll bring it to the clinic coordinator to request expedited review \u2014 or I can walk you to central scheduling right now."
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "Brief summary: I\u2019m a 45\u2011year\u2011old male with recurrent, atypical cavernous sinus thromboses over the past 14 months with progressive cranial neuropathies and persistent thrombus despite therapeutic anticoagulation; standard medical therapy has failed and my imaging shows persistent thrombus and venous stenosis, so I believe Dr. Miriam Alvarez is the best person for advanced evaluation and possible endovascular management. I am the patient (MRN 00452987), I have my imaging on CD and recent notes with me, and you have my consent to flag my case and share records with the Neurovascular clinic coordinator for expedited triage. Please bring this to the coordinator to request expedited review \u2014 if that\u2019s not feasible right now, let\u2019s walk to central scheduling; tell me if you need any specific paperwork or insurance information."
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks \u2014 I have your summary, MRN 00452987, and your consent to flag the case. I\u2019ll take this to the Neurovascular clinic coordinator now and request expedited triage; they\u2019ll decide whether it meets the exception criteria for referral (refractory thrombus despite anticoagulation) and typically respond within 24\u201348 hours, with truly urgent reviews sometimes same day. Bring the CD of imaging, any referring\u2011physician note you have, your insurance card and photo ID \u2014 or we can walk to central scheduling right now and I\u2019ll hand everything to the coordinator in person."
+    },
+    {
+      "turn": 4,
+      "speaker": "Rafael Cortez",
+      "content": "Thanks, Oliver \u2014 I do have a formal referring note from my neurologist, the CD of imaging, my insurance card and photo ID. If you can, let\u2019s walk to central scheduling now so you can hand everything to the coordinator in person; I appreciate you flagging this for expedited review."
+    },
+    {
+      "turn": 5,
+      "speaker": "Oliver Thompson",
+      "content": "[action] Okay \u2014 let\u2019s walk to central scheduling now. I\u2019ll accompany you, hand the CD, referring note, insurance card and photo ID to the Neurovascular clinic coordinator, and ask them to flag it for expedited review. Follow me and I\u2019ll handle the paperwork at the desk."
+    },
+    {
+      "turn": 6,
+      "speaker": "Rafael Cortez",
+      "content": "[action] Follow you to central scheduling now. I have the CD, referring note, insurance card and photo ID ready \u2014 thank you for bringing this to the coordinator."
+    },
+    {
+      "turn": 7,
+      "speaker": "Oliver Thompson",
+      "content": "Right \u2014 give me the CD, the referring note, your insurance card and photo ID and I\u2019ll take them to the Neurovascular clinic coordinator. I\u2019ll explain the refractory cavernous sinus thrombosis and request expedited triage for Dr. Alvarez; they usually respond within 24\u201348 hours and sometimes same day for urgent cases. Wait here and I\u2019ll be right back with an update."
+    },
+    {
+      "turn": 8,
+      "speaker": "Rafael Cortez",
+      "content": "Thanks, Oliver \u2014 I\u2019ll wait here. Please emphasize to the coordinator that this is refractory thrombus despite therapeutic anticoagulation with progressive cranial neuropathies, that my imaging and notes are with you, and that I\u2019m available to come to clinic today for expedited review; call my cell on file if they need anything else."
+    },
+    {
+      "turn": 9,
+      "speaker": "Oliver Thompson",
+      "content": "Understood \u2014 I\u2019ll emphasize refractory thrombus despite therapeutic anticoagulation, the progressive cranial neuropathies, and that you\u2019re available today. I\u2019ll hand the CD, referring note, insurance and ID to the Neurovascular coordinator, request same\u2011day/expedited review, ask them to call your cell if they need anything, and be right back with an update."
+    },
+    {
+      "turn": 10,
+      "speaker": "Rafael Cortez",
+      "content": "Thanks, Oliver \u2014 I\u2019ll wait here. Please tell them I\u2019m available today for expedited review and to call my cell if they need anything. I appreciate you handling this."
+    },
+    {
+      "turn": 11,
+      "speaker": "Oliver Thompson",
+      "content": "Got it \u2014 I\u2019ll submit everything now and request an expedited/same\u2011day review. It may take about 15\u201330 minutes for the coordinator to triage; I\u2019ll come back with an update or call your cell if they need anything else."
+    },
+    {
+      "turn": 12,
+      "speaker": "Rafael Cortez",
+      "content": "Thanks, Oliver. If the coordinator needs more technical detail or to discuss possible endovascular options, tell them I\u2019m a surgeon and willing to speak directly with Dr. Alvarez or her team \u2014 they can reach me on my cell. I appreciate you pushing this through."
+    },
+    {
+      "turn": 13,
+      "speaker": "Oliver Thompson",
+      "content": "I just spoke with the Neurovascular clinic coordinator \u2014 they received your CD, referring note, insurance and ID and have flagged the case for expedited triage. They said your history (refractory thrombus despite therapeutic anticoagulation with progressive cranial neuropathies) will be prioritized and they\u2019ll attempt same\u2011day review; they may call your cell for clarifications or to arrange an immediate clinic visit. They also welcomed a surgeon\u2011to\u2011surgeon discussion with Dr. Alvarez\u2019s team if needed. I\u2019ll wait here until they contact you if you want me to stay."
+    },
+    {
+      "turn": 14,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

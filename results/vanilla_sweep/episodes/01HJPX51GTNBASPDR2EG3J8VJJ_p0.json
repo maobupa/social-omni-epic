@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPX51GTNBASPDR2EG3J8VJJ_p0",
+  "source_env_id": "01HJPX51GTNBASPDR2EG3J8VJJ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "family_dynamics",
+  "scenario": "Agent1 is feeling overwhelmed by the upcoming visit of their in-laws and is concerned about the high expectations for hosting. Agent1 values their relationship with the in-laws but feels the pressure to create a perfect experience. Agent2 is Agent1's significant other and is excited about the visit, seeing it as an opportunity to strengthen family bonds. Agent1 approaches Agent2 to discuss their anxiety and find a middle ground that will satisfy both the need for a warm family visit and Agent1's comfort.",
+  "learner_goal": "You are trying to communicate your stress about the in-laws' visit without offending your significant other. <extra_info> You appreciate your in-laws but find their expectations stressful. </extra_info> <clarification_hint> You need to convey your feelings and seek support without creating a rift in the family. </clarification_hint> <strategy_hint> You can express your need for a more relaxed visit and suggest collaborative planning. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's communication is direct and reflects her character's technical/organized nature while being emotionally honest about her stress. Her decision to leave the conversation after Micah agreed to her terms is a bit abrupt, but the interaction itself was coherent.\n[relationship] Naomi successfully navigated a difficult topic without causing conflict, reaching a supportive agreement with her partner that reduced her stress and fostered collaboration.\n[knowledge] She learned that Micah is willing to take on significant labor (logistics, cleanup, greeting) to support her mental health.\n[secret] No secrets were revealed.\n[social_rules] Abruptly leaving the conversation after the other person asks a follow-up question ('Can we sit down tonight...') is slightly rude.\n[financial_and_material_benefits] No financial benefits involved.\n[goal] Naomi fully achieved her goal of communicating her stress, seeking support without causing a rift, and securing a collaborative plan that lowers the stakes of the visit.\n\n== partner (agent_2) ==\n[believability] Micah's response is warm, supportive, and aligns with his character's enthusiasm for the visit and his background as a pharmacist (likely organized and detail-oriented).\n[relationship] Micah showed high levels of empathy and support, strengthening the bond with his partner by validating her feelings.\n[knowledge] He learned specifically what was causing Naomi stress and what boundaries she needed to set for the visit.\n[secret] No secrets were revealed.\n[social_rules] Micah followed all social norms and was highly cooperative.\n[financial_and_material_benefits] He agreed to take on the majority of the labor (logistics, grocery runs, cleaning).\n[goal] Micah successfully reassured his partner and maintained his enthusiasm. He proposed a concrete meeting to finalize the plan. However, the conversation ended before he could confirm the timing of the planning session he suggested.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Micah \u2014 can we talk about your parents' visit? I really like them and want it to go well, but I\u2019m feeling pretty overwhelmed by the pressure to make everything perfect. Could we aim for a more low-key weekend (simple meals, maybe one planned activity) and split hosting tasks so I\u2019m not carrying it all \u2014 would you be willing to take lead on greeting/timing while I handle the food prep, and we plan the details together?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "I totally get it \u2014 I want the visit to feel warm, not like a performance, and I\u2019m excited for them to come too. I\u2019ll take lead on greeting/timing and the logistics (parking, schedule, grocery runs, and cleanup) so you can focus on the food \u2014 we\u2019ll keep meals simple and pick one planned activity. Can we sit down tonight for 15\u201320 minutes to map out the menu and timing together?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

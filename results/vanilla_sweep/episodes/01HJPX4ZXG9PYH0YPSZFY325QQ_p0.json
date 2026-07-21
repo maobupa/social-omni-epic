@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPX4ZXG9PYH0YPSZFY325QQ_p0",
+  "source_env_id": "01HJPX4ZXG9PYH0YPSZFY325QQ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "task_collaboration",
+  "scenario": "Agent1 and Agent2 are neighbors who have decided to help a mutual friend move into a new apartment. Agent1 is known for their strength and often takes the lead in physical tasks, while Agent2 is also strong but feels their efforts go unrecognized. The purpose of their interaction is for Agent2 to communicate their desire to contribute more significantly to the task of lifting heavy boxes, ensuring they feel valued in the group effort.",
+  "learner_goal": "Express Agent2's willingness and capability to take on more responsibility in lifting heavy items (<extra_info>Extra information: Agent1 may not be aware of Agent2's feelings and could assume their current method of dividing tasks is optimal.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia expresses her needs clearly and politely, staying true to her professional background as a principal while being direct about her physical capabilities.\n[relationship] The relationship improved as she communicated her feelings and reached an agreement without conflict.\n[knowledge] She learned that William is receptive to sharing tasks and was not intentionally excluding her efforts.\n[secret] The secret about her punk rock past was not mentioned.\n[social_rules] She followed social norms for constructive communication.\n[financial_and_material_benefits] No material or financial benefits were involved in this interaction.\n[goal] Mia successfully expressed her willingness and capability to lift heavy items and secured a commitment from William to change the division of labor.\n\n== partner (agent_2) ==\n[believability] William responds in a helpful, collaborative manner that aligns with his goal of balancing the workload.\n[relationship] William strengthened the bond by being inclusive and validating Mia's strength.\n[knowledge] William learned that Mia felt underutilized and wanted more responsibility.\n[secret] The secret about sabotaging a competitor was not revealed.\n[social_rules] William maintained positive social decorum and group harmony.\n[financial_and_material_benefits] No material or financial benefits were involved.\n[goal] William proposed a system of alternating tasks that ensures both parties are equally involved and appreciated, which was accepted.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Hey William, I really appreciate you usually taking the lead on the heavy lifting, but I want to handle more of the big boxes too \u2014 I\u2019m plenty strong and want to pull my weight. Can I take the next heavy one so you can switch to lighter items for a bit?"
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Hey Mia, I appreciate you saying that \u2014 of course take the next heavy one. I\u2019ll grab the lighter stuff for a bit; how about we alternate heavy boxes from here on so we both share the load and feel involved? Sound good to you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

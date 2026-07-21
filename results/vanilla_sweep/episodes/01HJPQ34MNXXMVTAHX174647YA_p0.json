@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPQ34MNXXMVTAHX174647YA_p0",
+  "source_env_id": "01HJPQ34MNXXMVTAHX174647YA",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_dilemma",
+  "scenario": "Agent1 has been asked by their good friend to house-sit during a vacation. While staying at the friend's place, Agent1 accidentally discovers overdue bills and a notice of employment termination, realizing that their friend has lost their job. Agent2, the friend's parent, visits unexpectedly, and Agent1 must navigate the conversation without revealing the friend's job situation.",
+  "learner_goal": "Prevent Agent2 from finding out about their child's job loss (<extra_info>Extra information: Agent1 wants to respect their friend's privacy and believes it's not their place to disclose such sensitive information. <strategy_hint>Hint: Agent1 should deflect conversations about the friend's work life and redirect to other topics.</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver stayed in character as a helpful, respectful house-sitter and neighbor. He used his architectural background to show interest in the plants and maintained a polite, professional tone.\n[relationship] The relationship improved significantly as Oliver showed deep respect for Baxter's expertise in gardening and antiques, and they bonded over shared domestic tasks.\n[knowledge] Oliver successfully learned the specific soil mixture and watering schedule for Baxter's rare plants.\n[secret] Oliver successfully kept the secret of his friend's job loss and his own secret feelings for his neighbor were not mentioned.\n[social_rules] Oliver followed social norms of hospitality and respect for privacy perfectly.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Oliver completely achieved his goal of preventing Baxter from learning about the job loss by immediately setting a boundary, deflecting, and pivoting the conversation to gardening.\n\n== partner (agent_2) ==\n[believability] Baxter's responses were consistent with an antique restorer and plant enthusiast who cares about his child's well-being.\n[relationship] Baxter developed a warmer rapport with Oliver, trusting him with the care of his plants and expressing appreciation for his discretion.\n[knowledge] Baxter confirmed that the house is being looked after, but gained no new insight into his child's actual situation.\n[secret] The secret artifact was never mentioned or compromised.\n[social_rules] Baxter was polite and appreciative, adhering to social norms.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Baxter's goal was to be assured of his child's well-being. He received verbal reassurance and saw that the home was being cared for, which he accepted as sufficient, even though he didn't get specifics.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "Hello Mr. Sterling \u2014 good to see you. I\u2019m house-sitting for your child and everything\u2019s fine; they asked me not to get into private matters, so I don\u2019t have any updates about work. Can I make you a cup of tea? Also, your newest plant looks fantastic \u2014 how have you kept it so healthy?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "Hello, Oliver \u2014 tea would be lovely, thank you. The plant's been happy with a bit of morning sun and a regular feed; I fuss over them much like I do my restorations. I really appreciate you looking after my child and respecting their privacy \u2014 please tell them I hope they're enjoying themselves and that everything here is being taken care of."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "I'll put the kettle on straight away. I'll absolutely pass along your message \u2014 they're enjoying a bit of downtime and everything here is tidy and being taken care of. If you'd like, I can water the plants while I'm here."
+    },
+    {
+      "turn": 3,
+      "speaker": "Baxter Sterling",
+      "content": "Lovely \u2014 thank you, Oliver. If you could give the sunroom pots a light drink (about a quarter cup each) and let the top inch of soil dry between waterings \u2014 the newest one only needs watering about once a week. If anyone calls or drops by asking, please reassure them my child is fine, enjoying some downtime, and everything here is being looked after; I really appreciate your help and discretion."
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Thompson",
+      "content": "Tea will be ready in a moment, Mr. Sterling \u2014 I\u2019ll water the sunroom pots as you instructed, about a quarter cup each and letting the top inch dry. If anyone asks, I\u2019ll tell them they\u2019re taking a bit of downtime and everything here is being looked after. By the way, what soil mix do you use for that new plant? I\u2019d love to try something similar for a pot I\u2019m preparing for my studio."
+    },
+    {
+      "turn": 5,
+      "speaker": "Baxter Sterling",
+      "content": "Thank you, Oliver \u2014 that would be wonderful. For the new plant I use roughly 2 parts loam-based potting mix, 1 part coarse river sand, 1 part perlite, a handful of well-rotted leaf compost and some orchid bark for extra structure; it drains well but holds a little moisture. If anyone calls or drops by, please tell them my child is fine, enjoying a bit of downtime, and everything here is being looked after \u2014 I really appreciate your help and discretion."
+    },
+    {
+      "turn": 6,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

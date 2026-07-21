@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPX51G9X7C89AZKVP8V4JDW_p0",
+  "source_env_id": "01HJPX51G9X7C89AZKVP8V4JDW",
+  "source": "seed_sotopia_full",
+  "interaction_type": "online_follower_dilemma",
+  "scenario": "Agent1, an avid follower of a public figure who is battling cancer, regularly checks online for health updates. Agent2, a close friend of the public figure, believes that the constant online scrutiny is adding stress to their friend's life and wishes to ask agent1 to respect their friend's privacy. Agent1 seeks to express concern and support but also feels entitled to know about the public figure's health status. Agent2 wants to protect their friend's privacy while acknowledging the public's concern.",
+  "learner_goal": "Express concern for the public figure's health and explain the reasons for seeking regular updates, while considering the need for privacy (<extra_info>Extra information: agent1 believes that public figures have an implicit responsibility to share their health updates with their followers.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Hendrick's dialogue clearly reflects his conflict between feeling entitled to information and his desire to be supportive. He maintains his persona well.\n[relationship] The relationship remained civil and reached a mutual understanding, reinforcing their neighborly bond.\n[knowledge] He learned how his actions were being perceived by the inner circle and received suggestions on more appropriate ways to help.\n[secret] He did not reveal his fraudulent culinary credentials.\n[social_rules] He followed social norms throughout the interaction.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Hendrick successfully expressed his concern, explained his reasoning (right to know), and acknowledged the need for privacy by committing to stick to official updates.\n\n== partner (agent_2) ==\n[believability] Baxter's response was empathetic and diplomatic, consistent with someone trying to protect a friend while managing a neighbor's concern.\n[relationship] He successfully managed a potentially tense situation without alienating Hendrick.\n[knowledge] He confirmed Hendrick's motivation for seeking updates.\n[secret] He did not reveal his possession of the priceless artifact.\n[social_rules] He maintained professional and neighborly etiquette.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Baxter convinced Hendrick to stop chasing rumors and stick to official channels/supportive gestures, effectively balancing privacy and public concern.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Hendrick Heinz",
+      "content": "Baxter, I get where you\u2019re coming from \u2014 I check for updates because I genuinely worry about them and, honestly, when someone is that public it feels like we have a sort of right to know. I don\u2019t want to add stress, though, so I\u2019m willing to stop digging into every rumor and stick to official updates or what close friends share. I just want them to be alright; if you think there\u2019s a better way for me to support them without prying, tell me and I\u2019ll do it."
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "Hendrick, I appreciate that \u2014 your concern is coming from a good place. Sticking to official updates is already a big help; if you want to support them without prying, consider sending a short, sincere note through their close circle, dropping off a meal or flowers, donating if there\u2019s a fund, or simply giving them space and waiting for updates from people nearest to them. If you ever need to talk about it, I\u2019m here \u2014 and we can keep an eye on official posts together instead of chasing rumors."
+    },
+    {
+      "turn": 2,
+      "speaker": "Hendrick Heinz",
+      "content": "left the conversation"
+    }
+  ]
+}

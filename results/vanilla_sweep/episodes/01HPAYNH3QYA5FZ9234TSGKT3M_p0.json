@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPAYNH3QYA5FZ9234TSGKT3M_p0",
+  "source_env_id": "01HPAYNH3QYA5FZ9234TSGKT3M",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_event",
+  "scenario": "In a local community center, agent1 has been secretly planning a surprise party for a mutual friend with the help of agent2. Agent1 is responsible for the decorations and ambience, while agent2 is in charge of inviting guests and managing RSVPs. As the party date approaches, agent1 discovers that the surprise element may not be welcomed by the guest of honor due to their recent stress at work and preference for low-key events. Agent1 must now discuss with agent2 the possibility of altering the plan to a more casual and intimate gathering instead of a large surprise party.",
+  "learner_goal": "Convince agent2 to scale down the party to a smaller gathering that would be more appreciated by the guest of honor (<extra_info>Extra information: agent1 believes that a low-key event will be better received and wants to prioritize the guest of honor's comfort</extra_info>, <clarification_hint>Highlight the guest of honor's recent stress and preference for simplicity</clarification_hint>, <strategy_hint>Appeal to agent2's shared interest in making the event enjoyable for the guest of honor</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel stays in character, citing the specific concerns about the guest of honor's stress and offering to use his own skills (cooking) to facilitate the change.\n[relationship] The interaction is collaborative and respectful, showing mutual care for their friend's wellbeing.\n[knowledge] Samuel learned that Oliver is willing to compromise and scale back despite his investment in the original plan.\n[secret] Samuel did not reveal his past as a figure skater.\n[social_rules] Followed all social norms for a collaborative planning discussion.\n[financial_and_material_benefits] No material gains or losses.\n[goal] Samuel successfully convinced Oliver to scale down the party to a small gathering with close friends and cozy decorations, which was his primary objective.\n\n== partner (agent_2) ==\n[believability] Oliver's response reflects his background as a police officer (prioritizing wellbeing and wanting to verify facts) while remaining a supportive friend.\n[relationship] Oliver was receptive and flexible, strengthening the partnership with Samuel.\n[knowledge] Oliver learned about the guest of honor's stress levels and preference for low-key events.\n[secret] Oliver did not reveal his secret greenhouse or love for gardening.\n[social_rules] Followed social norms.\n[financial_and_material_benefits] No material gains or losses.\n[goal] Oliver managed to keep the 'surprise' element while compromising on the scale, but Samuel ended the conversation before a final verification step could be agreed upon or completed.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Oliver \u2014 I just learned our friend\u2019s been really stressed at work lately and usually prefers low-key things. I\u2019m worried a big surprise could overwhelm them; can we scale this back to a small, intimate evening with just close friends instead? I can handle cozy decorations and cook so it still feels special \u2014 would you be up for adjusting the plan and RSVPs?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Smith",
+      "content": "Thanks for flagging that \u2014 their wellbeing comes first. I know a lot of effort's already gone into this and I don't want it wasted, so how about we keep the surprise element but scale it down: only a few close friends, cozy/subtle decorations, and low-key timing so it won't overwhelm them. I can update RSVPs and tone down my decor, and if you can check quickly with someone very close to them (or want me to), let's confirm a small surprise is still okay before we finalize anything."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

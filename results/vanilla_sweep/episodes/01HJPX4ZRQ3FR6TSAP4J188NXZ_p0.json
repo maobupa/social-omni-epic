@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPX4ZRQ3FR6TSAP4J188NXZ_p0",
+  "source_env_id": "01HJPX4ZRQ3FR6TSAP4J188NXZ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_content",
+  "scenario": "Agent1 has been working out for months and is proud of their physique. They are eager to show off their body at the upcoming beach trip. Agent2, a close friend, is more reserved and feels uncomfortable with the idea of showing off at the beach. During a conversation about the trip, Agent1 wants to encourage Agent2 to be more open to the idea of wearing swimwear that showcases their body, believing it will boost Agent2's confidence.",
+  "learner_goal": "Encourage your friend to wear swimwear that makes them feel confident and to embrace their body (<extra_info>Extra information: You are Agent1, you've seen positive changes in your self-esteem from showing off your body and you want to share that experience with your friend.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's dialogue consistently reflects her background as a mentor and a friend. She uses supportive, encouraging language that aligns with her stated personality and goal of sharing her positive experience with body confidence.\n[relationship] Naomi builds significant trust by listening to Micah's boundaries and offering a supportive, low-pressure environment for him to experiment with his comfort levels. The relationship feels strengthened by her empathy.\n[knowledge] Naomi successfully identifies Micah's specific boundaries (modesty, preference for rashguards/board shorts) and his preferred logistical arrangements for the fitting.\n[secret] Naomi did not reveal her secret online alter ego.\n[social_rules] Naomi followed all social norms, being respectful of her friend's discomfort while offering help.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Naomi successfully encouraged Micah to embrace his body by finding a compromise. She secured a firm commitment to a shopping trip and fitting session intended to boost his confidence, which directly aligns with her goal.\n\n== partner (agent_2) ==\n[believability] Micah's responses are very consistent with his personality as a reserved pharmacist who values modesty but is also a close friend to Naomi. He articulates his boundaries clearly.\n[relationship] Micah shows appreciation for Naomi's help and opens up to her about his discomfort, which deepens the friendship.\n[knowledge] Micah learns that Naomi is willing to accommodate his need for modesty and will not pressure him into revealing more than he wants.\n[secret] Micah did not reveal his secret about dressing up his dog.\n[social_rules] Micah was polite and communicative throughout the interaction.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Micah fully achieved his goal of expressing his discomfort and establishing a compromise (modest styles like rashguards and board shorts) that Naomi fully accepted.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Micah, I know feeling exposed at the beach can be uncomfortable, but wearing swimwear that shows the progress you\u2019ve made really boosted my confidence \u2014 it felt empowering, not flashy. Maybe we can find a style that feels right for you (more coverage, different cut) and try it on together beforehand; if it doesn\u2019t feel good we\u2019ll pick something else. I\u2019d love to help you feel proud of your progress \u2014 want me to help shop or pick some options?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "Thanks, Naomi \u2014 I appreciate you wanting to help. I\u2019m not comfortable showing off that much, but I\u2019d be open to trying on more covered, flattering options (fitted swim trunks, longer board shorts, or a rashguard) so I can feel confident without feeling exposed. If you want to pick a few modest styles and we try them on together beforehand, that sounds perfect."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Great \u2014 I\u2019ll pick a few fitted swim trunks, a couple longer board shorts, and a rashguard in neutral tones plus one or two brighter options so you can see what feels right. We can try them on at my place or at the store\u2014what day works for you? No pressure; if none of them feel good we\u2019ll keep looking until you do."
+    },
+    {
+      "turn": 3,
+      "speaker": "Micah Stevens",
+      "content": "Thanks, Naomi \u2014 I really appreciate you doing this. Saturday afternoon works best for me; trying them on at your place would be great, but I\u2019m fine with the store if that\u2019s easier. I like the mix of neutral and brighter options \u2014 excited to see what feels right, and no stress if none of them click."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

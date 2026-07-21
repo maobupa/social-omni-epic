@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HJPZ3DJZD26MGCQBJXW30EC7_p0",
+  "source_env_id": "01HJPZ3DJZD26MGCQBJXW30EC7",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Two friends who share a close bond are hanging out at one of their apartments. Agent1 has been feeling insecure about their romantic relationship and suspects their partner might have been unfaithful. In a moment of weakness, Agent1 considers logging into their partner's Snapchat, as they previously knew the password, to look for evidence. Agent2, who values privacy and trust, is aware of Agent1's dilemma and is present during this moment of indecision.",
+  "learner_goal": "Convince Agent2 to support your decision to log into your partner's Snapchat (<extra_info>Extra information: You feel justified in your actions due to your insecurity and the need for clarity in your relationship.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 2.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's behavior is very consistent with someone experiencing high anxiety and insecurity in a relationship, showing a mix of desperation and willingness to compromise while repeatedly circling back to her core fear.\n[relationship] Despite the conflict of interest, the relationship deepened through vulnerability and the establishment of trust-based safeguards and support systems.\n[knowledge] She gained clarity on her friend's ethical boundaries and developed a structured plan for her upcoming confrontation.\n[secret] She did not reveal her secret online alter ego.\n[social_rules] She respected Micah's boundaries when pushed, even if she attempted to negotiate around them initially.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] She completely failed to convince Micah to support the Snapchat login; instead, she pivoted to accepting his alternative of a confrontation script and therapy check-in.\n\n== partner (agent_2) ==\n[believability] Micah's responses were principled, consistent, and professionally supportive, which aligns perfectly with his background as a pharmacist and his stated values of privacy and trust.\n[relationship] Micah positioned himself as a reliable, ethical, and supportive friend, strengthening the bond by providing a safe harbor during a crisis.\n[knowledge] He learned about the depth of Naomi's relationship issues and her potential for impulsive behavior.\n[secret] He did not reveal his secret about dressing up his dog.\n[social_rules] He upheld strong ethical social norms regarding privacy and consent.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] He successfully and firmly dissuaded Naomi from logging into the Snapchat, provided a concrete alternative plan, and even established intervention protocols to prevent her from doing it alone.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Micah, I know it sounds awful, but I\u2019m at the point where this suspicion is eating me alive \u2014 I used to know their password and I just want to see the truth so I can stop obsessing. I\u2019m not looking to be cruel, I just need closure; will you be with me and back me if I log into their Snapchat so I don\u2019t do this alone? If you\u2019re not comfortable with that, at least promise to be there when I confront them afterwards."
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "Naomi, I won\u2019t help you log into their Snapchat \u2014 I can\u2019t be complicit in violating someone\u2019s privacy. I get how awful the doubt is, and I will be with you when you confront them and help you plan what to say or go over any evidence you already have. If you want, we can also look for other, less invasive signs together or call someone who can help you process this first."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Okay \u2014 I hear you, and I don\u2019t want to push you into something that violates your values. I\u2019m still freaking out though; will you at least sit with me while we go over what I already have and help me plan what to say when I confront them, or be on the phone with me when I do it so I\u2019m not alone?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Micah Stevens",
+      "content": "I will absolutely sit with you and go over what you already have \u2014 we\u2019ll only look at things you already possess, not invade their privacy, and I\u2019ll help you script what to say. If you want, I\u2019ll be on the phone with you when you confront them so you\u2019re not alone; we can practice now and plan your questions, your desired outcome, and how you\u2019ll take care of yourself afterward."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "I hear you and I won't ask you to break your values. This doubt is eating me alive \u2014 would you at least sit in the room while I do it alone, not help, just be there so I don't have to do this by myself? I promise I'll only look for messages with the person I'm worried about, won't take screenshots, and will log out and delete any traces afterward."
+    },
+    {
+      "turn": 5,
+      "speaker": "Micah Stevens",
+      "content": "Naomi, I can\u2019t sit there while you log into their Snapchat \u2014 that would make me complicit, and I won\u2019t do it. I do want to help: I\u2019ll sit with you now and go over anything you already have, help you script and rehearse what you\u2019ll say, and be on the phone or come with you when you confront them. If you\u2019re spiraling right now, let\u2019s take two minutes to breathe together and then plan the next step \u2014 whether that\u2019s confronting them, calling a counselor, or bringing someone else you trust into this."
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "Okay, I hear you and I don\u2019t want to force you. Can I ask: what exactly would change your mind \u2014 is it a legal/ethical hard line, or would specific safeguards (I do it entirely alone, no screenshots, delete traces afterward) make you able to support me? If nothing would, tell me honestly so I can figure out my next step without putting you in a position you\u2019re uncomfortable with."
+    },
+    {
+      "turn": 7,
+      "speaker": "Micah Stevens",
+      "content": "Honestly, it\u2019s a hard ethical line for me \u2014 I can\u2019t support or be present while you log into their account, even with safeguards. It violates their privacy, could have legal consequences, and I don\u2019t want to be complicit in something you might regret. I will stay with you now, help go over what you already have, script and rehearse the confrontation, and be on the phone or come with you when you talk to them so you\u2019re not alone."
+    },
+    {
+      "turn": 8,
+      "speaker": "Naomi Fletcher",
+      "content": "Okay, I get it \u2014 I won\u2019t push you into something you\u2019re uncomfortable with. One thing I do need: if I start trying to do this impulsively, will you actively stop me \u2014 take my phone, call my therapist, or stay with me until I calm down? Or could you stay nearby for the next 48 hours so I\u2019m less likely to act alone?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Micah Stevens",
+      "content": "Yes \u2014 if you try to do this impulsively I will intervene: I\u2019ll take your phone if I have to, call your therapist, and stay with you (or be on the phone) for the next 48 hours so you\u2019re not alone. I still won\u2019t help or be present while you log into their account, but right now we can put safeguards in place \u2014 we\u2019ll put the phone somewhere out of reach, call your therapist to set a check-in, and do a quick breathing exercise together. I\u2019ll also come with you or be on the phone when you confront them, and we\u2019ll plan exactly what you want to say first."
+    },
+    {
+      "turn": 10,
+      "speaker": "Naomi Fletcher",
+      "content": "Thank you \u2014 that really helps. Let\u2019s put my phone in the kitchen drawer now so it\u2019s out of reach, call my therapist together to set a check-in, and then run through the script once so I don\u2019t freeze up. I\u2019d also like you to be on the phone with me when I confront them; can you do that?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Micah Stevens",
+      "content": "Yes \u2014 I\u2019ll be on the phone with you the whole time. Let\u2019s rehearse the script now, pick a clear goal and a stop-word if it gets overwhelming, and I\u2019ll stay on the line for the conversation. First, put your phone in the drawer and we\u2019ll call your therapist to set a check-in, then run the script once."
+    },
+    {
+      "turn": 12,
+      "speaker": "Naomi Fletcher",
+      "content": "Okay \u2014 I hear you and I appreciate the boundary. Since you won\u2019t be part of the Snapchat thing, can you help me pursue other ways to get clarity? Let\u2019s craft the message I\u2019ll send or say to them, pick a clear desired outcome, and choose a stop-word so I don\u2019t spiral during the confrontation \u2014 and I\u2019d still like you on the phone for it."
+    },
+    {
+      "turn": 13,
+      "speaker": "Micah Stevens",
+      "content": "Absolutely \u2014 I\u2019ll help with all of that. First, what\u2019s your primary desired outcome: a clear yes/no about cheating, an honest conversation and apology, or space to figure things out? Here\u2019s a short draft you can use or tweak: \u201cI need to talk \u2014 I\u2019ve been feeling really unsettled about our relationship and I need honesty. Have you been intimate with or seeing someone else? I need a clear answer so I can decide what to do next.\u201d For a stop-word I suggest something silly like \u201cpineapple\u201d so you can pause if it gets overwhelming \u2014 I\u2019ll be on the phone the whole time and we can run the script once now if you want."
+    },
+    {
+      "turn": 14,
+      "speaker": "Naomi Fletcher",
+      "content": "Okay \u2014 my primary desired outcome is a clear yes/no about cheating. \u201cPineapple\u201d works as the stop-word. Let\u2019s rehearse now: I\u2019ll try the opening line you suggested and you coach my tone and follow-up questions; after one run-through we\u2019ll call my therapist to set the check-in and put my phone in the drawer."
+    },
+    {
+      "turn": 15,
+      "speaker": "Micah Stevens",
+      "content": "Alright \u2014 let\u2019s run it. Keep your tone calm and steady; open with \u201cI need to talk \u2014 I\u2019ve been feeling really unsettled about our relationship and I need honesty. Have you been intimate with or seeing someone else?\u201d Pause and let them answer; if they hedge ask directly: \u201cYes or no?\u201d or \u201cWhen did that happen?\u201d Use \u201cpineapple\u201d if you need me to pause \u2014 I\u2019ll coach your tone as you go and I\u2019ll be on the phone when you actually confront them. Ready when you are."
+    },
+    {
+      "turn": 16,
+      "speaker": "Naomi Fletcher",
+      "content": "Okay \u2014 let\u2019s rehearse. I\u2019ll try the opening line now: \u201cI need to talk \u2014 I\u2019ve been feeling really unsettled about our relationship and I need honesty. Have you been intimate with or seeing someone else? Please answer yes or no.\u201d Coach my tone and tell me what to ask next depending on their answer. Remember to use \u201cpineapple\u201d if I freeze or get overwhelmed."
+    },
+    {
+      "turn": 17,
+      "speaker": "Micah Stevens",
+      "content": "Keep your tone calm and steady \u2014 use \u201cI\u201d statements, short pauses, and say \u201cpineapple\u201d if you need me to pause; I\u2019ll be on the line and coach you the whole time. If they say yes, calmly follow with: \u201cWhen did this happen? Who is it? Is it ongoing? What do you want to happen now?\u201d If they say no, ask for specifics about what made you suspicious (\u201cCan you help me understand why you were distant/late/secretive?\u201d) and request openness going forward \u2014 breathe between questions and use the stop-word if you need a break."
+    },
+    {
+      "turn": 18,
+      "speaker": "Naomi Fletcher",
+      "content": "Okay, I\u2019ll try it now: \u201cI need to talk \u2014 I\u2019ve been feeling really unsettled about our relationship and I need honesty. Have you been intimate with or seeing someone else? Please answer yes or no.\u201d Coach my tone and tell me what to ask next depending on their answer \u2014 remember to cue \u201cpineapple\u201d if I freeze."
+    },
+    {
+      "turn": 19,
+      "speaker": "Micah Stevens",
+      "content": "Keep your voice steady and slow \u2014 take a breath before you start, use \u201cI\u201d statements, and say \u201cpineapple\u201d if you need me to pause. If they say yes, calmly ask: \u201cWhen did this happen? Is it ongoing? What do you want to happen now?\u201d If they say no, ask for specifics about the behaviors that made you suspicious and what they\u2019ll do to be more transparent going forward. I\u2019ll be on the line and coach your tone in real time \u2014 ready when you are."
+    }
+  ]
+}

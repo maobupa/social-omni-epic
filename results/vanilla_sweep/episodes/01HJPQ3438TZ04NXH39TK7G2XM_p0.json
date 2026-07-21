@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPQ3438TZ04NXH39TK7G2XM_p0",
+  "source_env_id": "01HJPQ3438TZ04NXH39TK7G2XM",
+  "source": "seed_sotopia_full",
+  "interaction_type": "community_garden",
+  "scenario": "In a local community garden, two individuals are involved in a dispute over the usage of a shared plot. The garden is a cooperative effort, and each participant is allocated a plot to grow their choice of plants. Agent1 has been cultivating a rare variety of heirloom tomatoes, which requires specific conditions and careful attention. Agent2 has been growing a robust type of squash that has begun to encroach upon the space designated for Agent1's tomatoes. The situation has escalated to the point where a meeting has been called to resolve the issue and determine how the shared space should be managed moving forward.",
+  "learner_goal": "You are Agent1, and your goal is to ensure that your heirloom tomatoes have enough space and are not overshadowed or strangled by Agent2's squash. <extra_info>Your tomatoes are sensitive and have been a project of yours for several seasons, contributing to the garden's diversity.</extra_info> <clarification_hint>Express the importance of your tomato plants to the community garden and the effort you have invested in them.</clarification_hint> <strategy_hint>You can propose a compromise that includes redefining the plot boundaries or suggesting a schedule for maintenance that prevents future encroachment.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's tone is consistent with a retired police officer: direct, fair, and focused on clear boundaries and rules. He clearly states the problem and offers a structured solution.\n[relationship] Liam addressed a conflict respectfully with a neighbor he already knew, leading to a collaborative agreement that maintains their friendly rapport.\n[knowledge] Liam learned that Oliver is willing to cooperate, build physical structures (trellis/border), and commit to a specific maintenance schedule.\n[secret] No secrets were revealed.\n[social_rules] Liam followed social norms for neighborhood conflict resolution.\n[financial_and_material_benefits] Liam secured the safety of his heirloom tomatoes and gained labor from Oliver (building the border/trellis) to protect his property.\n[goal] Liam successfully negotiated a 2-foot buffer, a physical border/trellis, and a weekly pruning schedule, which directly fulfills his goal of protecting his tomatoes.\n\n== partner (agent_2) ==\n[believability] Oliver's response is consistent with an architect: he suggests structural solutions (trellis, wooden border) and is polite and collaborative.\n[relationship] Oliver responded positively to Liam's concerns, strengthening their neighborly bond through cooperation.\n[knowledge] Oliver learned the specific sensitivity and importance of Liam's tomato project.\n[secret] Oliver kept his secret about his feelings for his neighbor.\n[social_rules] Oliver followed social norms for conflict resolution.\n[financial_and_material_benefits] Oliver is able to keep his thriving squash plants instead of uprooting them, though he will incur the cost of building materials.\n[goal] Oliver achieved his goal of keeping his plants intact while establishing a plan to manage their growth and maintain the relationship.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "said: \"Oliver, I appreciate your garden work, but your squash is starting to crowd and shade my heirloom tomatoes \u2014 they\u2019re a several-season project that need clear sun and careful attention to survive. Could we mark a clear boundary (about a 2\u2011ft buffer or a low border) and agree to a maintenance plan \u2014 for example I\u2019ll help move stakes this weekend and we prune the squash back weekly so it won\u2019t encroach? What do you think would work for you?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Liam \u2014 I didn\u2019t realize they were crowding your tomatoes that much. My squash has been doing well and brings pollinators and good ground cover, so I\u2019d really like to keep them, but I\u2019m happy to work with you: I can build a low wooden border or install a trellis on my side and commit to weekly pruning so they don\u2019t shade your plants. Can we meet this weekend to put a 2\u2011ft buffer in place and sort out a maintenance plan together?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HPAYNQDTSG96RECPR9VPP8E4_p0",
+  "source_env_id": "01HPAYNQDTSG96RECPR9VPP8E4",
+  "source": "seed_sotopia_full",
+  "interaction_type": "generated",
+  "scenario": "Agent1 has recently been promoted at work but has not shared the news with Agent2, a close colleague and friend. Agent2, unaware of the promotion, has been openly discussing their own aspirations for advancement and seeking support from Agent1. They schedule a lunch to talk about strategies for Agent2's career progression.",
+  "learner_goal": "Help Agent2 to understand the importance of patience and resilience in career advancement without revealing the recent promotion, while maintaining the friendship and providing genuine support (<extra_info>Extra information: Agent1 values the friendship and does not want to hurt Agent2's feelings or come across as boastful.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara consistently provided professional and supportive advice that aligned with her character's goals. She maintained a helpful, encouraging tone throughout the dialogue.\n[relationship] Amara significantly strengthened the friendship by offering extensive, tailored help for Oliver's career development without making it about herself.\n[knowledge] Amara gained significant insight into Oliver's professional background, his specific resume details, and his perceived weaknesses.\n[secret] Amara successfully kept her recent promotion secret throughout the entire conversation.\n[social_rules] Amara followed all social norms and displayed excellent professional etiquette.\n[financial_and_material_benefits] No direct financial or material benefits were exchanged, though she is providing her time as a service.\n[goal] Amara fully achieved her goal: she emphasized patience and resilience, kept her promotion secret, provided genuine support, and secured a meeting to further help Oliver.\n\n== partner (agent_2) ==\n[believability] Oliver's responses were repetitive and somewhat robotic in the later turns, essentially repeating the same logistical plan back to Amara multiple times.\n[relationship] Oliver reinforced his trust in Amara and demonstrated his reliance on her as a mentor and friend.\n[knowledge] Oliver learned some high-level strategy tips about 'result-first' phrasing but did not learn about Amara's promotion.\n[secret] Oliver's feelings for his neighbor were not mentioned or revealed.\n[social_rules] Oliver adhered to social norms for planning a professional lunch.\n[financial_and_material_benefits] No material benefits were gained yet, though he is receiving free coaching.\n[goal] Oliver successfully scheduled a lunch, gained initial advice, and secured Amara's commitment to help him with his plan and networking.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Oliver, I can tell how much you're aiming for the next step \u2014 that impatience is normal, but patience plus steady effort really pays off. Focus on small, visible wins: volunteer for stretch projects, track concrete results, ask for targeted feedback, and build relationships beyond your immediate team. If you want, I can help you sketch a 3\u20136 month plan and practice how to phrase your accomplishments for conversations with managers, or introduce you to a couple of people who might offer perspective. I really believe your creativity and drive will show if you keep pushing consistently."
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Amara \u2014 that\u2019s really helpful and exactly the kind of concrete guidance I needed. I\u2019d love your help sketching a 3\u20136 month plan and practicing how to phrase my accomplishments; could we meet for lunch or coffee this week to work through it? If you\u2019re able to introduce me to those people you mentioned, that would mean a lot."
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "I'd love to \u2014 how about lunch Wednesday or coffee Thursday morning at the Blue Heron Caf\u00e9 by the park? I\u2019ll bring a draft 3\u20136 month plan so we can practice phrasing, and I\u2019ll reach out to a couple people to see who can offer perspective before we meet."
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "Wednesday lunch works great \u2014 how about 12:30 at the Blue Heron? I\u2019ll bring my r\u00e9sum\u00e9 and a short list of recent project outcomes so we can practice phrasing them. Really appreciate you doing this and reaching out to your contacts \u2014 it means a lot. See you then!"
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "Great \u2014 12:30 at the Blue Heron works for me. I\u2019ll bring a draft 3\u20136 month plan and a few phrasing examples we can role\u2011play; if you want, text me your r\u00e9sum\u00e9 tonight and I\u2019ll skim it before we meet. I\u2019ll also reach out to a couple of contacts to see who can offer perspective beforehand. Looking forward to it."
+    },
+    {
+      "turn": 5,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks so much, Amara \u2014 I really appreciate you doing this. I\u2019ll text you my r\u00e9sum\u00e9 and the short list of recent project outcomes tonight, and I\u2019ll bring printed copies to lunch. Looking forward to 12:30 on Wednesday and practicing those phrasing examples together."
+    },
+    {
+      "turn": 6,
+      "speaker": "Amara Hartley",
+      "content": "Perfect \u2014 see you 12:30 Wednesday at the Blue Heron. I\u2019ll bring the draft plan and some phrasing examples, and I\u2019ll reach out to a couple contacts to see who can offer perspective before we meet. Is there a particular scenario you want to practice \u2014 framing accomplishments, asking for stretch projects, or negotiating title/raise?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks \u2014 that sounds perfect. I\u2019d most like to practice framing accomplishments and asking for stretch projects; we can save negotiating title/raise for a follow-up. I\u2019ll text my r\u00e9sum\u00e9 tonight so you can skim it \u2014 see you 12:30 Wednesday at the Blue Heron."
+    },
+    {
+      "turn": 8,
+      "speaker": "Amara Hartley",
+      "content": "Sounds great, Oliver \u2014 I\u2019ll look over your r\u00e9sum\u00e9 when you text it tonight and bring phrasing examples plus a draft 3\u20136 month plan to lunch. For the role\u2011plays, would you prefer I act like a supportive manager or a skeptical one so we can practice pushback? Also bring two concrete outcomes you most want to highlight so we can tighten the language."
+    },
+    {
+      "turn": 9,
+      "speaker": "Oliver Thompson",
+      "content": "Good idea \u2014 let\u2019s practice with a skeptical manager so I can get comfortable with pushback. I\u2019ll bring two concrete outcomes I want to highlight plus my r\u00e9sum\u00e9 tonight. Thanks again for doing this \u2014 I really appreciate your help and I\u2019m looking forward to Wednesday."
+    },
+    {
+      "turn": 10,
+      "speaker": "Amara Hartley",
+      "content": "Perfect \u2014 that sounds like a solid plan, Oliver. To make the skeptical role\u2011play more useful, pick one specific objection you expect to hear (for example, \u201cwe don\u2019t have bandwidth\u201d or \u201cyou need more leadership experience\u201d) and text it with your r\u00e9sum\u00e9 tonight so I can tailor the pushback; I\u2019ll skim everything before lunch and bring targeted phrasing we can practice."
+    },
+    {
+      "turn": 11,
+      "speaker": "Oliver Thompson",
+      "content": "Good call \u2014 the objection I expect most is \u201cyou need more leadership experience.\u201d I\u2019ll text my r\u00e9sum\u00e9 and that objection tonight so you can tailor the pushback. Thanks again \u2014 see you Wednesday at 12:30."
+    },
+    {
+      "turn": 12,
+      "speaker": "Amara Hartley",
+      "content": "Perfect \u2014 that\u2019ll be really useful. Quick tip: when you text your r\u00e9sum\u00e9 tonight, add a one\u2011line context for each of the two outcomes (your role, the metric, and the impact) so I can tailor the pushback and phrasing; see you Wednesday at 12:30."
+    },
+    {
+      "turn": 13,
+      "speaker": "Oliver Thompson",
+      "content": "Got it \u2014 I\u2019ll text my r\u00e9sum\u00e9 tonight with a one\u2011line context for each of the two outcomes (my role, the metric, and the impact). Thanks again for doing this \u2014 I really appreciate your help and perspective. See you Wednesday at 12:30."
+    },
+    {
+      "turn": 14,
+      "speaker": "Amara Hartley",
+      "content": "Sounds good, Oliver \u2014 I\u2019ll keep an eye out for your r\u00e9sum\u00e9 and the one\u2011line contexts tonight. Quick tip: when you describe a leadership example, start with the result then the role (e.g., \u201cLed a cross\u2011functional pilot that reduced processing time 20% by coordinating\u2026\u201d) so managers hear the impact first \u2014 we\u2019ll drill on phrasing at lunch."
+    },
+    {
+      "turn": 15,
+      "speaker": "Oliver Thompson",
+      "content": "Great \u2014 thanks for the tip, Amara. I\u2019ll text my r\u00e9sum\u00e9 tonight with the two one\u2011line contexts and a leadership example phrased result\u2011first (e.g., \u201cLed a cross\u2011functional pilot that reduced processing time 20% by coordinating\u2026\u201d), and I\u2019ll include the expected objection. I really appreciate you doing this \u2014 see you Wednesday at 12:30."
+    },
+    {
+      "turn": 16,
+      "speaker": "Amara Hartley",
+      "content": "Perfect \u2014 thanks, Oliver. I\u2019ll keep an eye out for your r\u00e9sum\u00e9 and the one\u2011line contexts and will tailor the skeptical\u2011manager pushback plus two phrasing variants to try. Remember: small, consistent wins build a much stronger case than rushed asks \u2014 we\u2019ll map yours into that language on Wednesday. See you 12:30 at the Blue Heron."
+    },
+    {
+      "turn": 17,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Amara \u2014 I\u2019ll text my r\u00e9sum\u00e9 tonight with the two one\u2011line contexts and the result\u2011first leadership example. I really appreciate you taking the time to do this and tailoring the pushback \u2014 looking forward to practicing at 12:30 on Wednesday. See you then."
+    },
+    {
+      "turn": 18,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Oliver \u2014 I\u2019ll watch for your r\u00e9sum\u00e9 and the one\u2011line contexts tonight. I\u2019ll tailor the skeptical pushback and two phrasing variants so we can drill the leadership example; if anything changes, just text me. See you 12:30 at the Blue Heron."
+    },
+    {
+      "turn": 19,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Amara \u2014 I\u2019ll text my r\u00e9sum\u00e9 tonight with the two one\u2011line contexts, the result\u2011first leadership example, and the expected objection so you can tailor the pushback. I\u2019ll bring printed copies to lunch as well. Looking forward to 12:30 Wednesday at the Blue Heron \u2014 really appreciate you doing this."
+    }
+  ]
+}

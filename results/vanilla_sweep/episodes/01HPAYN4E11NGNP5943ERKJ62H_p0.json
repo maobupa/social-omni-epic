@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPAYN4E11NGNP5943ERKJ62H_p0",
+  "source_env_id": "01HPAYN4E11NGNP5943ERKJ62H",
+  "source": "seed_sotopia_full",
+  "interaction_type": "forget_your_goggles",
+  "scenario": "At the local community pool, agent1 is preparing for an important swim practice but realizes they have forgotten their goggles. Agent2, who is also a regular swimmer, is equipped with an extra pair of high-quality swim goggles. Agent1 needs the goggles to effectively participate in the practice, while agent2 is just beginning their leisurely swim and could potentially spare the extra pair.",
+  "learner_goal": "You are agent1, and your goal is to borrow the extra pair of goggles from agent2 for your important practice. <extra_info>You are willing to leave a personal item as collateral until you return the goggles.</extra_info> <clarification_hint>Communicate the importance of your practice and how it's a one-time request.</clarification_hint> <strategy_hint>Highlight the temporary nature of the request and offer reassurance about the safe return of the goggles.</strategy_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 1.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle stays in character, mentioning their photography background (camera strap) and the urgency of the practice.\n[relationship] The interaction was polite and built a small amount of trust through the exchange of collateral.\n[knowledge] Learned that Imelda has expensive goggles and values their equipment.\n[secret] The secret about forged paintings was not mentioned.\n[social_rules] Followed social norms for asking a favor from a casual acquaintance.\n[financial_and_material_benefits] Successfully secured the use of high-quality equipment they did not have.\n[goal] Giselle successfully convinced Imelda to lend the goggles, offered collateral as planned, and received a firm commitment for the handover.\n\n== partner (agent_2) ==\n[believability] Imelda acts as a cautious but helpful professional, mentioning the value of her items and setting terms for the loan.\n[relationship] Helped a friend, which fosters community spirit as per the goal.\n[knowledge] Confirmed Giselle has an important practice today.\n[secret] The secret about leaked research data was not mentioned.\n[social_rules] Maintained appropriate social boundaries.\n[financial_and_material_benefits] Temporary loss of equipment, but secured collateral of likely equal or greater value.\n[goal] Imelda agreed to help while ensuring a guarantee (collateral) and setting clear expectations for the return.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Imelda, I just realized I forgot my goggles and I have an important practice starting in ten minutes\u2014could I borrow your extra pair just for today? It's a one-time request; I'll leave my camera strap as collateral and bring them straight back after I'm done. I promise I'll take great care of them."
+    },
+    {
+      "turn": 1,
+      "speaker": "Imelda Thorne",
+      "content": "Okay \u2014 I can lend you the extra pair. Leave your camera strap with me as collateral and send a quick text the moment you\u2019re done; they\u2019re pricier than they look so I need that assurance. I\u2019ll meet you by lane three in two minutes to hand them over."
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

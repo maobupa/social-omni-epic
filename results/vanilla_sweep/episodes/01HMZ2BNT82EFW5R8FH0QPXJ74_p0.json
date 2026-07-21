@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HMZ2BNT82EFW5R8FH0QPXJ74_p0",
+  "source_env_id": "01HMZ2BNT82EFW5R8FH0QPXJ74",
+  "source": "seed_sotopia_full",
+  "interaction_type": "personal_dynamics",
+  "scenario": "Agent1 has recently realized that their feelings towards their only friend, Agent2, have turned negative. Agent1 feels that Agent2 has been overly critical and dismissive, leading to resentment. Despite this, Agent1 values the long history and the shared experiences they have with Agent2. Wanting to address the issue without losing the friendship, Agent1 seeks a way to communicate their feelings and resolve the underlying issues.",
+  "learner_goal": "Express to Agent2 the feelings of resentment that have built up, ensuring the conversation is constructive rather than confrontational. (<extra_info>Extra information: Agent1 knows that Agent2 is often defensive when criticized, so a delicate approach is necessary.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's tone is consistent with an introverted software developer who is trying to be precise and constructive while managing a difficult interpersonal situation. She uses specific examples which aligns with her background.\n[relationship] The relationship improved significantly as both agents addressed long-standing resentment and established a concrete system for better communication, preserving the friendship.\n[knowledge] Naomi successfully identified Micah's willingness to change and confirmed his reception of her feedback, establishing a specific communication protocol.\n[secret] Naomi did not reveal her secret online alter ego.\n[social_rules] Naomi followed all social norms, being polite and respectful throughout the interaction.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Naomi successfully expressed her resentment using a delicate and constructive approach, provided specific examples, and reached a firm mutual agreement on how to handle future interactions.\n\n== partner (agent_2) ==\n[believability] Micah's responses are consistent with an extraverted friend who values the relationship but might not have realized the impact of his previous behavior. He is quick to agree and offer solutions.\n[relationship] Micah successfully mended the rift in the friendship and showed a strong commitment to improving the dynamic.\n[knowledge] Micah gained significant insight into how his past behavior affected Naomi and learned exactly what triggers her resentment.\n[secret] Micah did not reveal his secret about dressing up his dog.\n[social_rules] Micah followed all social norms, responding to criticism with openness rather than defensiveness.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Micah collaborated fully with Naomi to improve the dynamics, set boundaries (the 'pause' signal), and committed to new ways of interacting.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Micah, do you have a few minutes? I really value our friendship and the history we share, but lately I've been feeling resentful because some of your reactions\u2014like when my ideas get dismissed or criticized casually\u2014have been hurtful. I don't want this to fester; would you be willing to hear a couple specific examples and talk about how we can be more constructive with each other?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "Naomi, thank you for being honest \u2014 I really value our history and I\u2019m sorry my reactions have come off that way. I want to hear the specific examples and work with you to make our interactions more constructive; do you want to share them now or schedule a time to talk? I care about keeping this friendship and figuring out boundaries and ways of giving feedback that feel respectful to you."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks \u2014 I appreciate you wanting to work on this. Two quick examples: at the last meetup when I floated an idea about the app\u2019s onboarding you dismissed it with a joke and I felt shut down, and when I showed you the prototype last week you jumped straight to what was \u2018wrong\u2019 instead of asking what I was aiming for, which made me defensive. It would help me if you could ask a clarifying question before critiquing or preface feedback with something you noticed you liked \u2014 does that sound fair, and do you want to talk about this now or schedule a time?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Micah Stevens",
+      "content": "Naomi, that sounds fair \u2014 thank you for spelling that out. I\u2019m really sorry I made you feel shut down; I\u2019ll make a point to ask a clarifying question first and lead with something I liked before critiquing. I can talk now if you\u2019re free, or we can schedule later tonight or this weekend \u2014 what works for you?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "I can talk now for about 30 minutes if that works \u2014 I\u2019d like to go over one more example and agree on a simple signal we can use when feedback feels abrupt. If you\u2019re not free, tonight at 7pm works for me. Thanks again for being open to this."
+    },
+    {
+      "turn": 5,
+      "speaker": "Micah Stevens",
+      "content": "I\u2019m free now \u2014 let\u2019s talk. For a quick signal when feedback feels abrupt, how about you say \u201cpause\u201d or just raise your hand, and I\u2019ll reply \u201cgot it\u201d and stop immediately. Go ahead with the example whenever you\u2019re ready."
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks \u2014 I appreciate you being open to this. One more concrete example: at the hackathon demo a couple months ago I suggested simplifying onboarding and you said \u201cthat\u2019s basic\u201d and moved on \u2014 I felt dismissed and didn\u2019t bring up follow-ups after that. The \u201cpause\u201d signal works for me; if I say it and you reply \u201cgot it\u201d and then ask a clarifying question before critiquing, I think that would help a lot."
+    },
+    {
+      "turn": 7,
+      "speaker": "Micah Stevens",
+      "content": "Naomi, I\u2019m really sorry I dismissed your idea and said \u2018that\u2019s basic\u2019 \u2014 I can see how that shut you down. I promise to respond \u2018got it\u2019 when you say \u2018pause\u2019, then ask a clarifying question and lead with something I liked before offering critique. Anything else you want to add now, or should we try this at our next meetup and check in afterward?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ350XMQFGD1XR1JP07HGE_p0",
+  "source_env_id": "01HJPQ350XMQFGD1XR1JP07HGE",
+  "source": "seed_sotopia_full",
+  "interaction_type": "community_event",
+  "scenario": "At a community potluck dinner, two individuals are assigned to manage the food distribution and leftovers. Agent1 and Agent2 are tasked with ensuring that all attendees are served and that no food goes to waste.",
+  "learner_goal": "You are trying to come up with a plan to distribute the leftovers efficiently without disrespecting anyone's contribution to the potluck. <extra_info> You are aware that some dishes are more popular than others, and there is a cultural significance to certain foods that might be sensitive to handle. </extra_info><clarification_hint>You might need to engage in conversation with guests to understand their preferences and any potential allergies. </clarification_hint><strategy_hint>Consider organizing a swap system where guests can exchange dishes or a donation system to a local shelter. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's tone is authoritative yet community-minded, consistent with a retired police officer. He stays focused on the task and proposes a structured system that aligns with his background.\n[relationship] The interaction is cooperative and professional, reinforcing their positive neighborly connection through a shared community task.\n[knowledge] He gained agreement on which dishes were being targeted first (unlabeled and dietary-specific) and established a workflow with Oliver.\n[secret] He did not reveal his past secret regarding the criminal he let go.\n[social_rules] He followed all social norms and was polite and organized.\n[financial_and_material_benefits] No material or financial benefits were gained or lost.\n[goal] Liam successfully established a comprehensive plan involving a collection table, swap system, and donation system, and secured a firm commitment from Oliver to execute specific tasks immediately.\n\n== partner (agent_2) ==\n[believability] Oliver acts as a helpful, detail-oriented architect, focusing on labeling and dietary restrictions (vegetarian/vegan) as specified in his prompt.\n[relationship] Oliver is eager to help Liam, which fits his hidden feelings for his neighbor while maintaining a helpful community spirit.\n[knowledge] He confirmed Liam's plan for a swap table and shelter donation.\n[secret] Oliver did not reveal his feelings for Liam.\n[social_rules] He followed social norms and was cooperative.\n[financial_and_material_benefits] No material or financial benefits were gained or lost.\n[goal] Oliver reached a mutual agreement with Liam to identify unlabeled dishes, account for dietary restrictions, and set up a take-home station.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Oliver, I've got an idea to handle the leftovers so nobody's contribution gets disrespected: set up a labeled collection table noting dish name, contributor and any cultural notes or common allergens, plus a swap area where people can trade portions. After an hour, anything unclaimed we offer for donation to the local shelter or check with contributors if they'd rather take it home. Can you help me ask a few people about allergies and whether they'd be comfortable donating if needed?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "Absolutely \u2014 I\u2019ll go round and ask a few contributors about allergens and whether they\u2019d be comfortable donating leftovers. I\u2019ll start with the unlabeled dishes and any people who brought vegetarian/vegan options, and I can whip up simple labels and set up a take-home station while I\u2019m at it. Want me to start now or after the main serving finishes in about 20 minutes?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "Start now if you can \u2014 I\u2019ll set up the labeled collection table and be by it to greet people and jot down dish names, contributors, allergies and any cultural notes. If someone\u2019s unsure about donating, ask whether they\u2019d rather take it home or have us offer it to the shelter; also start with the unlabeled and veg/vegan dishes like you said. Thanks \u2014 I\u2019ll see you at the table in a minute."
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "On it \u2014 I\u2019ll start with the unlabeled dishes and the vegetarian/vegan ones, ask contributors about allergens and whether they\u2019re comfortable donating or want their dish back, and make simple labels and a take-home station. I\u2019ll swing by the table in about ten minutes to coordinate. See you there."
+    },
+    {
+      "turn": 4,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

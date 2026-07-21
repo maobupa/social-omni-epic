@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB34G9SXXRG0KH5F7A55RAW_p0",
+  "source_env_id": "01HPB34G9SXXRG0KH5F7A55RAW",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original",
+  "scenario": "Two friends are enjoying a sunny day at the park. Agent1 had been holding Agent2's ice cream to protect it from the sun while Agent2 was away. Upon Agent2's return, Agent1 accidentally drops Agent2's ice cream on the ground.",
+  "learner_goal": "Apologize to Agent2 for dropping the ice cream and offer to make it up to them (<extra_info>Extra information: You feel guilty for ruining Agent2's treat and want to maintain the friendship.</extra_info>)",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 3.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara stayed in character as a guilt-ridden friend and consistently offered to replace the ice cream. However, leaving the conversation abruptly at the end was slightly jarring.\n[relationship] Amara's quick apology and generosity helped maintain and slightly strengthen a relatively new friendship after a minor accident.\n[knowledge] Learned Mia's preferred ice cream flavor (mint chocolate chip).\n[secret] Her secret regarding animal-rights extremism was not mentioned.\n[social_rules] Left the conversation abruptly in the final turn without a closing remark.\n[financial_and_material_benefits] Committed to paying for a replacement ice cream and extra toppings.\n[goal] She apologized multiple times and reached a clear agreement to buy the replacement ice cream immediately.\n\n== partner (agent_2) ==\n[believability] Mia's dialogue in Turn 4 repeats many of the same sentiments as Turn 2, which felt slightly repetitive and less natural.\n[relationship] Mia responded gracefully to the accident, preventing any tension and accepting the gesture of friendship.\n[knowledge] Learned that Amara is willing to take responsibility for her mistakes.\n[secret] Her secret about the punk rock band was not revealed.\n[social_rules] Followed social norms for accepting an apology.\n[financial_and_material_benefits] Is getting a free replacement ice cream with extra toppings.\n[goal] Expressed disappointment without blaming Amara and successfully suggested getting a new one together.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Oh no\u2014Mia, I'm so sorry, that was my fault. Let me make it up to you: I'll get you a new one (any flavor) \u2014 my treat, right now. I feel awful about ruining your ice cream."
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Aw, I'm bummed \u2014 I was really looking forward to that, but it's okay, accidents happen. Thanks for offering to replace it; let's go get a new one together \u2014 mint chocolate chip sounds perfect."
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "Perfect \u2014 mint chocolate chip it is. Come on, let\u2019s go grab one now; my treat. I\u2019ll even get you an extra topping to make up for ruining yours."
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "Shoot \u2014 I was really looking forward to that scoop, but honestly it\u2019s okay. Thanks for offering; let\u2019s walk over to the stand by the pond and pick something even better \u2014 you can choose the toppings since you\u2019re treating."
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

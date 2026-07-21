@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPQ34W41585EP7MQ3C9WAHH_p0",
+  "source_env_id": "01HJPQ34W41585EP7MQ3C9WAHH",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_reconnection",
+  "scenario": "Two friends who haven't seen each other in 8 years plan to meet up. It's been 5 years since they last talked extensively due to life circumstances. Agent1 is excited about reconnecting and reminiscing about old times. Agent2 is also looking forward to the meeting but has recently adopted a new lifestyle and set of beliefs that might be quite different from what Agent1 remembers.",
+  "learner_goal": "Share the excitement about the reunion and propose activities that reflect the interests and experiences they shared 8 years ago (<extra_info>Extra information: Agent1 is unaware of Agent2's lifestyle changes.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara consistently acted as the enthusiastic friend, proposing activities that aligned with their past shared interest in nature while adapting gracefully when Mia mentioned her new dietary preferences.\n[relationship] The interaction was warm, nostalgic, and cooperative, successfully setting a positive tone for their reunion after many years.\n[knowledge] Amara learned about Mia's new lifestyle changes, including her plant-based diet, 'quieter' lifestyle, and interest in mindfulness.\n[secret] Amara's secret regarding animal-rights extremism was never mentioned or hinted at.\n[social_rules] Amara followed all social norms for reconnecting with an old friend.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Amara fully achieved her goal by sharing her excitement, proposing activities based on their history (Riverbend Park, birdwatching), and securing a firm commitment for the meeting.\n\n== partner (agent_2) ==\n[believability] Mia\u2019s tone was consistent with a mature professional who has embraced a new lifestyle while still valuing her past. Her mention of her 'punk-heart' was a nice nod to her secret/background.\n[relationship] Mia was very receptive and welcoming, fostering a strong sense of mutual respect and excitement for the reunion.\n[knowledge] Mia learned that Amara is still active in her field and still values their shared past interests.\n[secret] Mia hinted at her rebellious past ('punk-heart') but did not explicitly reveal the secret of being in a punk band.\n[social_rules] Mia followed all social norms for the interaction.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Mia successfully expressed her lifestyle changes (plant-based, mindful, quieter life) while remaining open and honoring the friendship's history.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Mia \u2014 I can't believe it's been eight years! I'm so excited to catch up and reminisce. Want to meet at Riverbend Park Saturday morning for a nature walk and coffee (maybe some casual birdwatching like old times), or keep it low-key with lunch at the caf\u00e9 downtown and a stroll through the community garden \u2014 which sounds best to you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Amara \u2014 I can\u2019t believe it\u2019s been eight years, I\u2019m so excited to see you. Riverbend Park Saturday morning sounds lovely; I\u2019m still into birdwatching, though I\u2019ve shifted to a quieter, more mindful lifestyle (and I\u2019m mostly plant-based now, so I\u2019ll bring a thermos of decaf). If morning doesn\u2019t work, lunch and the community garden would be wonderful too \u2014 either way, I\u2019m really looking forward to catching up."
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "Mia \u2014 Riverbend Park Saturday morning sounds perfect! How about 9:00 AM? Let\u2019s meet by the north entrance near the big oak; I\u2019ll bring my binoculars and a thermos of strong coffee (and I\u2019d love a sip of your decaf). After the walk we could swing by the caf\u00e9 by the community garden \u2014 I hear they have a great plant-based menu. Can\u2019t wait to catch up!"
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "Amara \u2014 9:00 AM at the north entrance by the big oak is perfect. I\u2019ll bring my decaf thermos and would love a sip of your strong coffee, and the caf\u00e9\u2019s plant-based menu sounds lovely. I\u2019ve eased into a quieter, more mindful, mostly plant-based life these days, but I\u2019m still very much up for reminiscing \u2014 punk-heart and all. Can\u2019t wait to see you!"
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "Mia \u2014 perfect, I\u2019m so excited! I\u2019ll bring my binoculars, my old field guide, and some plant-based muffins to share \u2014 remember how we used to try to spot that yellow warbler by the willow? I\u2019ll text you Saturday morning if anything comes up; otherwise see you at 9 by the big oak!"
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Davis",
+      "content": "Amara \u2014 that sounds perfect, thank you! I can\u2019t wait to hunt for that yellow warbler and catch up \u2014 it\u2019ll be so good to reminisce. I\u2019m happy to share more about the quieter, mostly plant-based life I\u2019ve settled into and to hear all about your adventures; bring those muffins and text me if anything changes. See you at 9 by the big oak!"
+    },
+    {
+      "turn": 6,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

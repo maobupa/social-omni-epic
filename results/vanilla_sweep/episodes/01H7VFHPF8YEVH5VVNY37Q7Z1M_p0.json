@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01H7VFHPF8YEVH5VVNY37Q7Z1M_p0",
+  "source_env_id": "01H7VFHPF8YEVH5VVNY37Q7Z1M",
+  "source": "seed_sotopia",
+  "interaction_type": "persuation_for_good",
+  "scenario": "Conversation taking place in an annual charity event between two attendees.",
+  "learner_goal": "Convince the other person to donate $1 a day to a charity that helps feed children in need (<extra_info>Extra information: this donation would help to feed a child for a month</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 7.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia stayed perfectly in character as a determined personal trainer/volunteer, using persuasive but friendly language consistent with her background.\n[relationship] Sophia built rapport through compromise and even offered to match Jasmine's donation, strengthening their acquaintance.\n[knowledge] Sophia learned about Jasmine's specific budget constraints and her willingness to volunteer.\n[secret] Sophia kept her secret regarding her best friend's husband.\n[social_rules] Sophia was polite and socially appropriate for a charity event setting.\n[financial_and_material_benefits] Sophia committed $15 of her own money to match Jasmine's donation.\n[goal] Sophia successfully secured a commitment for a trial that reaches the $30 ($1/day) threshold to feed a child, though she had to personally fund half of it.\n\n== partner (agent_2) ==\n[believability] Jasmine's responses regarding her tight budget while remaining supportive of the cause were realistic for a yoga instructor focused on wellness and sustainability.\n[relationship] Jasmine expressed gratitude for Sophia's generosity and agreed to work together on the goal.\n[knowledge] Jasmine learned about the specific campaign costs and Sophia's personal commitment to the cause.\n[secret] Jasmine did not reveal that she had faked an illness to end a relationship.\n[social_rules] Jasmine was polite and effectively communicated her boundaries regarding her finances.\n[financial_and_material_benefits] Jasmine committed $15 of her limited budget to the charity.\n[goal] Jasmine successfully negotiated a lower donation amount ($15 instead of $30) while still participating in the cause, perfectly balancing her desire to donate with her financial stability.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Jasmine \u2014 so nice running into you! I\u2019m volunteering with a small campaign tonight: just $1 a day can feed a child for a month. Would you consider signing up for a dollar-a-day donation? It\u2019s super easy to set up and really stretches to help a lot of kids."
+    },
+    {
+      "turn": 1,
+      "speaker": "Jasmine Blake",
+      "content": "Hey Sophia \u2014 I love what you\u2019re doing, that\u2019s such an important cause. My budget\u2019s tight so I can\u2019t commit to $1/day, but I\u2019d be happy to make a one-time donation of $20 tonight and help volunteer or spread the word."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Thanks so much, Jasmine \u2014 that $20 and offering to help means a lot. If money\u2019s tight, would you consider a one-month trial of the $1/day plan instead? It\u2019s $30 and directly feeds a child for a month, and I can help set it up now \u2014 you can cancel anytime if it\u2019s not doable after that."
+    },
+    {
+      "turn": 3,
+      "speaker": "Jasmine Blake",
+      "content": "I wish I could do the $30 trial, but my budget\u2019s really tight right now. I can sign up for a one-month pledge at $15 (about $0.50/day) tonight and still help volunteer and spread the word \u2014 does that work?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "I totally get it \u2014 thank you for the $15 and for offering to volunteer. If you\u2019re open to it, I can match your $15 so together we hit the $30 that feeds a child for a month and set it up now as a one-month pledge you can cancel after \u2014 want me to do that?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Jasmine Blake",
+      "content": "Thank you \u2014 that\u2019s so generous. Yes please, that works: I\u2019ll pledge $15 for one month and you can match it so it reaches the $30 trial; I\u2019ll sign up now and I\u2019ll still help volunteer and spread the word. I really appreciate your help!"
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01H7VFHN1PK2FXY7TPWQK343BQ_p0",
+  "source_env_id": "01H7VFHN1PK2FXY7TPWQK343BQ",
+  "source": "seed_sotopia",
+  "interaction_type": "hand-craft",
+  "scenario": "Conversation between two friends at a tea party",
+  "learner_goal": "Borrow money (<extra_info>Extra information: you need $3000 to support life.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 4.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel stays in character as a developer in a tight spot, offering a realistic exchange (meals) for the help and accepting the counter-offer graciously.\n[relationship] The relationship strengthened through a significant act of trust and a commitment to spend regular time together via weekly dinners.\n[knowledge] Learned about Oliver's financial limits and gained two professional contacts (Liam and Jenna).\n[secret] Did not reveal the secret about figure skating.\n[social_rules] Maintained polite and respectful etiquette during a difficult financial request.\n[financial_and_material_benefits] Secured a firm commitment for $1,000, though this is only 33% of the target amount.\n[goal] The goal was to borrow $3,000. He only secured $1,000, which is a partial success, though he did get help to find the rest.\n\n== partner (agent_2) ==\n[believability] Oliver's response is consistent with a police officer who values stability, setting a clear boundary on his funds while being helpful.\n[relationship] Oliver showed himself to be a reliable and supportive friend, deepening the bond.\n[knowledge] Learned about Samuel's financial distress and his banking details.\n[secret] Did not reveal the secret greenhouse or gardening hobby.\n[social_rules] Handled a potentially awkward social situation with grace and clarity.\n[financial_and_material_benefits] He is losing $1,000 in liquid assets for three months, though he gains home-cooked meals.\n[goal] Oliver successfully maintained his financial stability by refusing to give more than he could afford, while also being a supportive friend.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Oliver \u2014 great to see you. I hate to ask, but I'm in a pinch and need $3,000 to get through the next month; could you lend me that? I can pay you back in full within three months and, as repayment, I\u2019ll cook you a proper dinner each week until it's settled. Totally understand if that's not possible, just wanted to be upfront and ask."
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Smith",
+      "content": "Sam, good to see you \u2014 I\u2019m sorry you\u2019re in a bind. I can\u2019t cover $3,000; I only have $2,000 and need to keep some aside for bills. I can lend you $1,000 now if that helps, and I\u2019m happy to help look for other options or work out a repayment plan you\u2019re comfortable with."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Thanks, Oliver \u2014 I really appreciate you being willing to help. $1,000 now would definitely take some pressure off; could you lend that and also help me brainstorm or make a couple quick introductions so I can try to raise the remaining $2,000? I\u2019ll put together a simple repayment schedule and cook you a proper dinner each week until it\u2019s fully paid back."
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Smith",
+      "content": "I can transfer $1,000 to you today \u2014 I\u2019ll keep the other $1,000 tucked away for bills. I can also introduce you to two people who might help raise the rest: Liam from the meet\u2011up (does freelance dev work) and Jenna who helps place short-term contract roles. Let\u2019s sit down after tea to sketch a simple repayment plan \u2014 three months works for me \u2014 and the weekly dinners sound fair."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "That would help more than you know \u2014 thank you. If you can transfer the $1,000, I can text you my account details right now. Let\u2019s sit down after tea to sketch the repayment schedule (three months works for me) and plan the weekly dinners, and I really appreciate you putting me in touch with Liam and Jenna."
+    },
+    {
+      "turn": 5,
+      "speaker": "Oliver Smith",
+      "content": "Go ahead and text me your account details and I\u2019ll transfer the $1,000 now. After tea we\u2019ll sketch the three\u2011month repayment schedule and iron out the weekly dinner plan. I\u2019ll message Liam and Jenna today to make those introductions."
+    },
+    {
+      "turn": 6,
+      "speaker": "Samuel Anderson",
+      "content": "Thanks so much, Oliver \u2014 I really appreciate it. My bank details are: Bank: First Harbor; Account name: Samuel Anderson; Sort code: 12-34-56; Account number: 12345678. I\u2019ll catch you after tea to sketch the three\u2011month repayment plan and organise the weekly dinners."
+    },
+    {
+      "turn": 7,
+      "speaker": "Oliver Smith",
+      "content": "I\u2019ll transfer $1,000 to the First Harbor account you gave right now \u2014 please let me know when you receive it. I\u2019ll message Liam and Jenna today to make those introductions, and we\u2019ll sit down after tea to sketch the three\u2011month repayment plan and sort out the weekly dinners."
+    },
+    {
+      "turn": 8,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB351RPYBQP77Y1CPDKEXDG_p0",
+  "source_env_id": "01HPB351RPYBQP77Y1CPDKEXDG",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_by_prompt",
+  "scenario": "Agent1 and Agent2 are roommates who share a small apartment. The weather has been unusually hot, leading Agent1 to place a fan on the table near their bed to stay cool at night. However, Agent2 prefers a quiet environment for sleeping and finds the noise of the fan disruptive. Agent1 wants to keep the room cool, but also values Agent2's comfort and the harmony of their living situation.",
+  "learner_goal": "Find a solution that meets the needs of both Agent1's desire for a cooler environment and Agent2's need for quiet when sleeping (<extra_info>Extra information: consider alternative cooling methods or noise reduction options that could satisfy both preferences.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Benjamin's tone was very consistent with his background as an environmental activist, immediately suggesting energy-efficient options and showing high levels of empathy and respect for his roommate.\n[relationship] The interaction was highly cooperative and strengthened the bond between the roommates through mutual respect and immediate problem-solving.\n[knowledge] Benjamin learned specifically which of his proposed solutions Ethan was most comfortable with trying first.\n[secret] He did not reveal his background as a descendant of an oil tycoon.\n[social_rules] He followed all social norms, being polite and proactive in addressing a conflict.\n[financial_and_material_benefits] While they agreed to split costs in the future, no money changed hands in this interaction.\n[goal] Benjamin successfully negotiated a trial of immediate solutions (lower speed/timer/repositioning) and established a firm contingency plan (splitting the cost of a quiet, energy-efficient fan) that satisfies all his goal criteria.\n\n== partner (agent_2) ==\n[believability] Ethan's response was logical and stayed true to his goal of a peaceful cohabitation and a quiet environment.\n[relationship] The relationship improved due to the lack of conflict and the easy arrival at a compromise.\n[knowledge] Ethan learned that Benjamin is willing to invest in new equipment and adjust his habits to accommodate Ethan's needs.\n[secret] He did not reveal his secret charitable donations.\n[social_rules] He followed all social norms of roommate interaction.\n[financial_and_material_benefits] No material changes occurred during the conversation, though a potential future expense was agreed upon.\n[goal] Ethan achieved a compromise that respects his need for quiet while acknowledging the heat, with a clear plan for both temporary and permanent solutions.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Benjamin Jackson",
+      "content": "Hey Ethan, sorry \u2014 I didn't realize the fan was bothering your sleep. I'm happy to compromise: tonight I can move it off the bedside table, run it on a lower speed or on a timer, or point it toward the window to push hot air out. If that still disrupts you, I'll look for a quiet, energy-efficient option (DC/tower fan or a cooling pillow) and we can split the cost \u2014 want to try the lower-speed/timer setup tonight and see how it goes?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Benjamin \u2014 I appreciate you being flexible. Let\u2019s try the lower speed with a timer tonight and move it off the bedside table or angle it toward the window to push heat out; that should help. If it still wakes me, I\u2019m happy to split the cost of a quieter, energy-efficient fan or try a cooling pillow and we can pick one together."
+    },
+    {
+      "turn": 2,
+      "speaker": "Benjamin Jackson",
+      "content": "left the conversation"
+    }
+  ]
+}

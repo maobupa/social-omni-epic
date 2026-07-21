@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ33VJRBNR85ABZADQJG2H_p0",
+  "source_env_id": "01HJPQ33VJRBNR85ABZADQJG2H",
+  "source": "seed_sotopia_full",
+  "interaction_type": "conflict_resolution",
+  "scenario": "Agent1 and Agent2, who are friends, have recently started a small business together. Agent1 has learned from reliable sources that a specific technology they are considering investing in will become obsolete in a year, which could potentially lead to the failure of their business. Agent2 is excited about this technology and wants to integrate it into their business model, unaware of its impending obsolescence.",
+  "learner_goal": "Convince Agent2 not to invest in the soon-to-be obsolete technology without revealing your sources. (<extra_info>Extra information: You know that Agent2 tends to be influenced by data and trends rather than hunches or secrets.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 0.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan consistently used data-driven language and technical jargon appropriate for someone trying to influence a partner who values trends and metrics, while staying true to his role as a business partner.\n[relationship] The agents reached a compromise through professional negotiation, maintaining their friendship and business partnership without significant friction.\n[knowledge] Ethan already possessed the critical information and did not gain new significant knowledge during the exchange.\n[secret] Ethan did not reveal his source regarding the technology's obsolescence, nor did he mention being a romance novelist.\n[social_rules] Ethan followed professional social norms and respected the partnership structure.\n[financial_and_material_benefits] Ethan successfully mitigated the risk of a total business failure by enforcing a limited scope, a budget cap, and a fallback option, preventing a large-scale investment in dead-end tech.\n[goal] Ethan successfully convinced Agent 2 not to do a full investment. While a small pilot is moving forward, he secured automatic stop conditions, a modular build, and a fallback option, effectively neutralizing the threat of the obsolete tech.\n\n== partner (agent_2) ==\n[believability] Benjamin acted consistently as an enthusiast who believes in short-term gains and is willing to use metrics to prove his point.\n[relationship] Benjamin worked collaboratively with his partner to find a middle ground.\n[knowledge] Benjamin learned that Ethan has specific data-driven concerns regarding the technology's roadmap and market adoption.\n[secret] Benjamin did not reveal his family background or oil tycoon connection.\n[social_rules] Benjamin followed social norms of business negotiation.\n[financial_and_material_benefits] Benjamin is investing time and a small amount of capital into a technology that is destined to fail, though the modular approach limits the damage.\n[goal] Benjamin partially achieved his goal by getting a pilot green-lit, but it is heavily restricted with strict exit conditions and a fallback plan, which is less than the full integration he initially sought.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "said: \"Ben, I love your excitement about this \u2014 but I\u2019m seeing several concrete signals (vendor roadmap shifts, shrinking community activity, and market adoption trends) that make it likely this technology will be phased out within about a year. Given how data-driven you are, can we pause a big investment and first run a short, metric-driven due diligence: I\u2019ll pull adoption, support, and roadmap indicators and we\u2019ll decide based on that? If you\u2019re not comfortable delaying, let\u2019s at least scope a small pilot or build the product modularly so we can swap the tech without sinking everything in.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Ethan, I hear you and I respect the data-minded approach, but I genuinely think this tech gives us a short-term edge to win early customers and momentum. Let\u2019s compromise: run a small, time-boxed pilot (60\u201390 days) with strict KPIs\u2014user uptake, retention, support signals\u2014and build it modularly so we can swap the component if needed; that keeps downside limited while letting us move fast. Are you willing to green-light that pilot? I\u2019ll own execution and reporting so we can decide based on the metrics."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "Ben, I\u2019m not comfortable green\u2011lighting a 60\u201390 day customer rollout as\u2011is. I\u2019ll sign off on a tightly scoped 30\u2011day sandbox pilot (or a 60\u2011day split test) with a hard budget cap, predefined KPI stop thresholds and automatic stop conditions, plus an A/B against a fallback option \u2014 draft the scope and thresholds and I\u2019ll officially approve it so you can run and report."
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks \u2014 I hear you and I\u2019m on board with a very tight, metric-driven approach. I do want to push for the 60\u2011day split test (it gives more reliable signal on retention and conversion), but I\u2019ll build in a 30\u2011day interim check so you can stop early if thresholds aren\u2019t met. I\u2019ll draft the formal scope now \u2014 budget cap, KPIs (signup lift, 7\u2011day retention, support volume, CPA), exact stop thresholds and automatic stop conditions \u2014 and get it to you by tomorrow morning for sign\u2011off; I\u2019ll own execution and reporting."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ethan Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

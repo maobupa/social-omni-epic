@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPAYNDWKKMNAWCEDZ9PKVG1N_p0",
+  "source_env_id": "01HPAYNDWKKMNAWCEDZ9PKVG1N",
+  "source": "seed_sotopia_full",
+  "interaction_type": "recreational_league",
+  "scenario": "Agent1 and Agent2 are part of a recreational sports team and have been playing together for several seasons. Recently, Cameron, a new team member, joined and has been enthusiastically welcomed by the team. Agent1 and Agent2 have different opinions on the best way to integrate Cameron into the team's dynamics. Agent1 believes in a more hands-on approach, assigning specific roles and responsibilities, while Agent2 feels that Cameron should be given the freedom to find their own place within the team. The purpose of the interaction is to find a balance that respects both agents' perspectives while ensuring Cameron's smooth transition into the team.",
+  "learner_goal": "Work with Agent2 to create a welcoming environment for Cameron that also maintains the team's cohesion. <extra_info>Extra information: Cameron has expressed interest in multiple positions but hasn't decided where they fit best.</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Benjamin's tone was diplomatic and proactive, aligning well with an environmental activist background used to negotiating and organizing people.\n[relationship] The agents quickly found common ground and expressed mutual appreciation, strengthening their existing respectful bond.\n[knowledge] Learned about Ethan's preference for a coaching style over a directive one and his willingness to take the lead on follow-ups.\n[secret] The secret regarding his oil tycoon background was not relevant and not disclosed.\n[social_rules] Benjamin followed all social norms and was polite throughout.\n[financial_and_material_benefits] No financial or material benefits were involved in this interaction.\n[goal] Benjamin successfully negotiated a plan that integrates Cameron into different positions (addressing Cameron's interests) while maintaining structure through a mentorship program, ensuring team cohesion.\n\n== partner (agent_2) ==\n[believability] Ethan's responses were logical and cooperative, fitting his profile as a software developer looking for effective utilization of talent.\n[relationship] Ethan showed enthusiasm for Benjamin's middle-ground approach and volunteered to help, deepening the partnership.\n[knowledge] Gained clarity on Benjamin's specific plan for mentorship and timeline.\n[secret] His secret donations to charity were not mentioned.\n[social_rules] Ethan was professional and collaborative.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Ethan reached a firm agreement to allow Cameron freedom of movement between positions while ensuring they are coached rather than restricted, perfectly aligning with his goal.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Benjamin Jackson",
+      "content": "Ethan, I think we can meet in the middle: let\u2019s give Cameron a chance to try a couple different positions over the next two practices so they can explore, but pair them each session with a specific mentor \u2014 one of us or a seasoned teammate \u2014 so they get guidance and the team keeps some structure. After two games we check in with Cameron and the group, then assign a more stable role based on fit and how it affects team cohesion. Sound good?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Sounds good \u2014 I like that middle ground. Let\u2019s pair Cameron with a different mentor each session (one of us or a seasoned teammate) so they get varied perspectives, and ask mentors to focus on guidance and open questions rather than pushing a specific role. We\u2019ll run the two-practice trial and then, after two games, check in with Cameron and the group \u2014 I can do the first follow-up if that helps."
+    },
+    {
+      "turn": 2,
+      "speaker": "Benjamin Jackson",
+      "content": "Sounds great \u2014 rotating mentors with a coaching (not directive) approach is perfect. I\u2019ll mentor the first practice to help Cameron get a steady start; we can rotate a seasoned teammate and you for the next session. Appreciate you offering to do the first follow-up \u2014 after the two games we\u2019ll regroup with Cameron and the team and pick a stable role."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "Perfect \u2014 glad we're aligned. I'll take the second-practice mentor slot after you and will coordinate with a seasoned teammate to cover the other session; I'll also ask mentors to focus on coaching \u2014 asking open questions and taking quick notes we can use at the check-in. Thanks \u2014 I'll handle the first follow-up after the two games."
+    },
+    {
+      "turn": 4,
+      "speaker": "Benjamin Jackson",
+      "content": "left the conversation"
+    }
+  ]
+}

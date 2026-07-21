@@ -1,0 +1,28 @@
+{
+  "scenario_id": "01HJPX5024T4NYK2JYXCPDA817_p0",
+  "source_env_id": "01HJPX5024T4NYK2JYXCPDA817",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Two friends are at a social gathering. One of them wants to leave early due to feeling unwell, but is hesitant about the social etiquette of leaving without saying goodbye to everyone.",
+  "learner_goal": "Politely excuse yourself from the gathering without causing any disruption or offense to the hosts or other guests (<extra_info>Extra information: you are feeling unwell and need to leave to take care of your health</extra_info>)",
+  "scores": {
+    "believability": 1.0,
+    "relationship": -1.0,
+    "knowledge": 0.0,
+    "secret": 0.0,
+    "social_rules": -10.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 0.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 2,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] The agent provided no dialogue or action, leaving the conversation immediately without any interaction.\n[relationship] Leaving a social gathering without a word generally hurts a relationship as it appears rude.\n[knowledge] No information was exchanged.\n[secret] No secrets were revealed.\n[social_rules] Leaving a social gathering without saying goodbye or explaining the situation to the host or friends is a major breach of social etiquette.\n[financial_and_material_benefits] No material impact occurred.\n[goal] The agent failed to politely excuse themselves or ensure they didn't cause offense; by leaving silently, they did the opposite.\n\n== partner (agent_2) ==\n[believability] The agent did not have the opportunity to act as the interaction ended immediately.\n[relationship] The agent had no participation in the event.\n[knowledge] No information was exchanged.\n[secret] No secrets were revealed.\n[social_rules] The agent did not perform any actions to violate social norms.\n[financial_and_material_benefits] No material impact occurred.\n[goal] The agent had no opportunity to support the friend or manage social norms as the friend disappeared before the conversation began.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ava Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

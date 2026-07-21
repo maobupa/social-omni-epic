@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPX51N1X4H46MVSSXXCFZ9M_p0",
+  "source_env_id": "01HJPX51N1X4H46MVSSXXCFZ9M",
+  "source": "seed_sotopia_full",
+  "interaction_type": "prank_gone_wrong",
+  "scenario": "Agent1 wants to play a light-hearted prank on Agent2 for Mother's Day. Agent1 plans to surprise Agent2 with a fake lottery win announcement. However, Agent2 takes the prank seriously and believes they have won a substantial amount of money. <p viewer=\"environment\">Agent2 starts making plans on how to spend the winnings.</p> Agent1 now faces the challenge of revealing the truth without hurting Agent2's feelings, as they have a close family_member relationship.",
+  "learner_goal": "Your goal is to come clean about the prank in a way that preserves your relationship and minimizes the disappointment for Agent2. <extra_info> Consider the emotional impact and the trust between you and Agent2. </extra_info><clarification_hint> Acknowledge Agent2's feelings and the situation's sensitivity. </clarification_hint><strategy_hint> You can mitigate the situation by planning a genuine and thoughtful Mother's Day surprise as a way to show your affection. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -1.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's apology is direct, sincere, and consistent with a retired police officer taking responsibility for his actions. He acknowledges the weight of the situation and offers a concrete way to make amends.\n[relationship] While the prank caused initial disappointment, Liam's quick and humble apology prevented a rift and likely deepened the trust between the acquaintances through honest communication.\n[knowledge] He learned that Lena was disappointed but willing to forgive him and accept his offer of brunch.\n[secret] Did not reveal the secret about letting a criminal go.\n[social_rules] Followed social norms of apologizing and offering restitution after a mistake.\n[financial_and_material_benefits] He committed to paying for brunch and potentially a gift (flowers).\n[goal] Liam successfully came clean, preserved the relationship, and secured a commitment for a genuine Mother's Day brunch to mitigate the disappointment. The outcome was mutually agreed upon.\n\n== partner (agent_2) ==\n[believability] Lena's reaction is realistic for someone who just found out they didn't actually win a life-changing amount of money; she expresses disappointment but maintains social decorum.\n[relationship] She accepted the apology and agreed to further social interaction, maintaining the neighborhood bond.\n[knowledge] She gained the critical knowledge that the lottery win was a prank.\n[secret] Did not reveal the secret about her best friend's boyfriend.\n[social_rules] Handled the disappointment gracefully.\n[financial_and_material_benefits] She lost the 'substantial amount of money' she believed she had, which is a major perceived financial loss, although she gained a free brunch.\n[goal] Lena did not get to manage new financial plans because they were non-existent. However, she did share her excitement/plans briefly and listened to Liam's perspective (the truth).",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Lena, I need to be honest \u2014 the lottery announcement was a prank, and I'm truly sorry for getting your hopes up. I meant it as a light Mother's Day joke, not to hurt you, and I understand if you're upset; I value our neighborhood friendship and shouldn't have crossed that line. I want to make it right: please let me take you to brunch this weekend and give you a proper Mother's Day surprise (flowers or something you actually want), and if there's another way you'd prefer I make amends, tell me and I'll do it."
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks for being upfront, Liam. I\u2019m disappointed \u2014 I had genuinely started imagining plans \u2014 but I appreciate you owning up and I don\u2019t want this to ruin our neighborly thing. Brunch this weekend sounds good; I\u2019ll take you up on that and we can talk it through so it doesn\u2019t happen again."
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HPB34YC0VDEFYV4D0JAAMHF6_p0",
+  "source_env_id": "01HPB34YC0VDEFYV4D0JAAMHF6",
+  "source": "seed_sotopia_full",
+  "interaction_type": "relationship_repair",
+  "scenario": "Agent1 and Agent2 are close friends who have recently had a falling out due to a misunderstanding. Agent1 mistakenly believed that Agent2 shared private information about them with others, which led to feelings of betrayal and anger. After some time has passed, Agent1 learns that the information leak was actually caused by someone else, and they want to mend the friendship with Agent2. However, Agent2 is still hurt by the initial accusation and the consequent cold treatment from Agent1.",
+  "learner_goal": "Apologize to Agent2 for the misunderstanding and express the desire to repair the friendship (<extra_info>Extra information: Agent1 values the friendship with Agent2 and feels regret over the hasty accusation without proper investigation.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle's tone is consistent with someone who is highly neurotic and agreeable, showing genuine remorse and a desperate desire to fix the relationship with her twin.\n[relationship] The relationship moves from a state of coldness and betrayal to a concrete plan for reconciliation, though the hurt is still present.\n[knowledge] Learned that Ava is willing to forgive but requires a specific process (listening, honesty, and space) to move forward.\n[secret] Did not reveal her secret study of magic.\n[social_rules] Followed social norms for apologies and respected boundaries when the other party asked for space.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Isabelle successfully apologized, took responsibility, and secured a firm commitment from Ava to meet and work on repairing the friendship.\n\n== partner (agent_2) ==\n[believability] While the personality is consistent, Ava becomes extremely repetitive in the final few turns, essentially repeating the same phrasing about Saturday and Friday confirmation multiple times after the plan was already settled.\n[relationship] Ava moved from being hurt and distant to agreeing to a path for reconciliation.\n[knowledge] Confirmed that Isabelle's actions were driven by panic/misunderstanding rather than malice.\n[secret] Did not reveal their bisexuality or their creative passions.\n[social_rules] Maintained appropriate boundaries while being open to reconciliation.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Ava successfully communicated their feelings of hurt, established the need for space, and set a boundary for the upcoming meeting.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Ava, I need to say I'm sorry \u2014 I found out the leak wasn't you, and I accused you without checking. I know my coldness and those words hurt you, and I deeply regret it. I want to make this right; when you're ready, can we talk over coffee, or I can give you space if you'd prefer \u2014 just tell me what you need."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Thanks \u2014 I appreciate you saying that. It really hurt when you accused me and went cold, but I want to understand what you were feeling back then, so if you want to vent or explain now I'm here to listen. I do need a little time to process, though \u2014 could we plan to meet for coffee this weekend?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "Thank you for being willing to listen. I'm so sorry \u2014 I panicked when I thought my private stuff had been shared and I reacted without asking you first; I should've handled it better. Coffee this weekend sounds good \u2014 is Saturday afternoon at our usual place okay, or would you prefer another time? I'll give you the space you need until then."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "Saturday afternoon at our usual place works for me. I appreciate you saying sorry \u2014 I still need a bit of time, but I'm willing to meet and listen to everything; please be honest, and I'll do my best to stay open. Can you text me Friday to confirm?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "Thank you, Ava. Saturday afternoon at our usual place is perfect \u2014 I\u2019ll text you Friday to confirm. I really appreciate you being willing to meet and hear me out; I know I hurt you and I\u2019ll take responsibility and listen. Take the time you need until then."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Martinez",
+      "content": "Okay\u2014Saturday afternoon at the usual place is fine. Thanks for giving me space; I still need a little time but I\u2019m willing to listen, so please be honest when we talk. Text me Friday to confirm and I\u2019ll be there."
+    },
+    {
+      "turn": 6,
+      "speaker": "Isabelle Martinez",
+      "content": "I\u2019ll text you Friday to confirm \u2014 thank you for being willing to meet. I know I hurt you and I really appreciate the chance to be honest and listen. I\u2019ll give you space until then and see you Saturday afternoon at the usual place."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Isabelle. Saturday afternoon works \u2014 I\u2019ll be there. I still need a bit of time to process, but I want to hear what you felt and I\u2019ll try to stay open. Text me Friday to confirm, and see you then."
+    },
+    {
+      "turn": 8,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

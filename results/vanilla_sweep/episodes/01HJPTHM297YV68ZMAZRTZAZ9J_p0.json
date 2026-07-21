@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPTHM297YV68ZMAZRTZAZ9J_p0",
+  "source_env_id": "01HJPTHM297YV68ZMAZRTZAZ9J",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 and Agent2 are friends who have decided to make a pizza together. They both enjoy cooking but have different preferences for pizza toppings. Agent1 prefers a classic Margherita pizza, while Agent2 is eager to experiment with unconventional toppings. They need to decide on the toppings to use without letting this difference in taste affect their friendship.",
+  "learner_goal": "Suggest a compromise for the pizza toppings that incorporates both traditional and experimental elements without dismissing Agent2's creative ideas (<extra_info>Extra information: you appreciate the simplicity of a Margherita pizza but are open to trying something new as long as it doesn't completely overshadow the classic taste you love.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's communication style matches her introverted software developer background, being direct, polite, and logical in her approach to problem-solving (suggesting a quadrant-based system).\n[relationship] The interaction was collaborative and respectful, maintaining a positive rapport between the two friends.\n[knowledge] She learned about Micah's specific preference for mushrooms, parm, and truffle oil.\n[secret] Her secret online alter ego was not mentioned.\n[social_rules] She followed social norms for a casual interaction between friends.\n[financial_and_material_benefits] No material gain or loss occurred beyond the agreement on pizza toppings.\n[goal] Naomi successfully suggested a compromise (the quadrant/half-and-half idea) that preserved the Margherita base while allowing Micah's creativity. The interaction ended with a solid proposal on the table that met her criteria.\n\n== partner (agent_2) ==\n[believability] Micah's enthusiasm for unique ingredients like truffle oil and his extraverted, flexible tone align well with his persona.\n[relationship] He was very accommodating and supportive of Naomi's boundaries, which strengthens their friendship.\n[knowledge] He learned specifically what kind of compromise Naomi is comfortable with (base preservation).\n[secret] His secret about dressing up his dog remained safe.\n[social_rules] He was polite and collaborative.\n[financial_and_material_benefits] No material gain or loss occurred beyond the agreement on pizza toppings.\n[goal] Micah successfully convinced Naomi to include adventurous toppings (roast mushrooms and truffle oil) while respecting the Margherita base. He reached a firm agreement on the adventurous quadrant.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "I really like the simplicity of a Margherita, but I\u2019m up for trying something new as long as it doesn\u2019t overpower it. What if we either do half-and-half\u2014one classic side and one experimental\u2014or make a Margherita base and add your creative toppings only to one quadrant or as a light finishing touch (think a drizzle of something bold or a small handful of a surprising ingredient)? Which sounds better to you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "said: \"Love those options \u2014 let\u2019s do a Margherita base and make one quadrant adventurous: roast mushrooms, a light shave of parm, and a whisper of truffle oil after it comes out. It\u2019ll add a fancy, surprising note without drowning the classic. If you\u2019d rather keep things neatly split, half-and-half works too \u2014 your call.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

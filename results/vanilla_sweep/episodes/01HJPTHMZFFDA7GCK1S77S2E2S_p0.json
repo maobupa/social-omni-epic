@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHMZFFDA7GCK1S77S2E2S_p0",
+  "source_env_id": "01HJPTHMZFFDA7GCK1S77S2E2S",
+  "source": "seed_sotopia_full",
+  "interaction_type": "Las Vegas",
+  "scenario": "Agent1 and Agent2, both friends, are in Las Vegas after Agent1 has eloped to get married. Agent1 is ecstatic and wants to celebrate the impromptu wedding, while Agent2 is concerned about the spontaneity and potential repercussions of the decision. Agent1 is interacting with Agent2 to share the joy and possibly plan a small celebration, but Agent2 is trying to ensure that Agent1 has considered all aspects of this significant life change.",
+  "learner_goal": "Share the excitement of the elopement and convince Agent2 to join in the celebration <extra_info>Agent1 can express the happiness and love they feel</extra_info> <clarification_hint>Agent1 may discuss the personal significance of the decision</clarification_hint> <strategy_hint>Highlight the positive aspects of the situation to sway Agent2's perspective</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan's tone is consistently ecstatic and aligns with his established persona as an expressive chef and secret romance author. He effectively uses emotional language to convey his joy.\n[relationship] The bond between Ethan and Ava was strengthened as Ethan shared a major life milestone and Ava responded with supportive, albeit practical, care.\n[knowledge] Ethan learned that Ava has specific concerns about the legal and financial aspects of his marriage but is willing to help him navigate them.\n[secret] Ethan did not reveal his secret about being a romance novelist.\n[social_rules] Ethan followed all social norms, being polite and invitational.\n[financial_and_material_benefits] Ethan is paying for a dinner and drinks for his guest.\n[goal] Ethan successfully shared his excitement and secured a firm commitment from Ava to join the celebration tonight.\n\n== partner (agent_2) ==\n[believability] Ava's response reflects their character as a conscientious person involved in social justice and poetry, balancing empathy with practical concern.\n[relationship] Ava solidified their role as a trusted confidante who looks out for Ethan's long-term interests.\n[knowledge] Ava learned about the elopement and that Ethan and his partner have only discussed practical matters 'enough that it felt right,' indicating a need for more depth.\n[secret] Ava did not reveal their secret regarding their family and sexuality.\n[social_rules] Ava was respectful and supportive while introducing necessary concerns.\n[financial_and_material_benefits] Ava receives a free dinner at a high-quality Italian restaurant.\n[goal] Ava successfully communicated their concerns and reached a mutual agreement with Ethan to sit down and go through a practical checklist after the celebration.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "Ava \u2014 I have to tell you: I eloped. We just tied the knot in a tiny chapel and it felt absolutely right. I know it sounds sudden and you might have questions, but I couldn't wait to be with someone who gets me the way they do; it feels joyful and real. Please come celebrate with us tonight \u2014 dinner's on me at my favorite Italian spot and a little toast at the hotel; it would mean the world to have you there."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Ethan \u2014 congratulations, I\u2019m really happy for you; that joy is contagious. I do want to check in though: did you and your partner talk about the practical stuff \u2014 finances, legal paperwork, telling family, long-term plans \u2014 or was this mostly an in-the-moment thing? I\u2019d love to celebrate with you tonight, and afterwards can we sit down and go through a few of those details so you\u2019re sure this feels as good in the long run as it does right now."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "Thank you, Ava \u2014 that really means a lot. We did talk through some of the practical stuff enough that it felt right in the moment, but you\u2019re absolutely right I want to be thorough \u2014 would you come celebrate tonight? Dinner\u2019s on me at my favorite Italian, then a quick toast at the hotel, and afterward we can sit down and go through finances, paperwork, and family plans."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "Ethan \u2014 I\u2019m so happy for you, I\u2019ll absolutely come celebrate tonight; your joy is contagious. Dinner and a toast sounds perfect, and afterward we can sit with a checklist and walk through finances, legal paperwork, and how you want to tell family \u2014 I\u2019ll help you think through next steps so this feels right long-term. See you tonight, congrats again."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ethan Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

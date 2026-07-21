@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB34X6JBX71BCT1DE3QNFHC_p0",
+  "source_env_id": "01HPB34X6JBX71BCT1DE3QNFHC",
+  "source": "seed_sotopia_full",
+  "interaction_type": "misplaced_signage",
+  "scenario": "Agent1 accidentally walks into a restroom designated for the opposite gender due to a misplaced signage. Agent2, already inside, is initially startled by the presence of Agent1. The interaction takes place within the restroom where Agent1 is attempting to apologize and explain the mistake, while Agent2 is trying to understand the situation and ensure their own comfort and safety.",
+  "learner_goal": "You are Agent1 who has just walked into the wrong restroom. Your goals are to <extra_info>calmly explain the situation and apologize for the misunderstanding</extra_info>, <clarification_hint>assure Agent2 that it was an honest mistake caused by the incorrect signage</clarification_hint>, and <strategy_hint>find a peaceful resolution that maintains the dignity of both parties involved</strategy_hint>.",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 1.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Rafael remained calm and apologetic, staying true to his background and the prompt's instructions while immediately offering a solution.\n[relationship] The interaction was brief and professional; while awkward, it did not significantly alter their pre-existing acquaintance based on historical interests.\n[knowledge] Rafael learned that Oliver was uncomfortable and that his explanation was accepted.\n[secret] Rafael did not reveal his secret regarding cheating in medical school.\n[social_rules] Rafael handled a social faux pas with appropriate apologies and a quick exit.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Rafael successfully explained the situation, apologized, attributed the error to the signage, and achieved a peaceful resolution by agreeing to leave and notify staff.\n\n== partner (agent_2) ==\n[believability] Oliver\u2019s reaction was realistic for someone startled in a private space, and his request for space aligned with his analytical and meticulous character.\n[relationship] The relationship remains stable; the awkward encounter was resolved reasonably.\n[knowledge] Oliver learned the reason for the intrusion was faulty signage.\n[secret] Oliver did not reveal his secret about his feelings for his neighbor.\n[social_rules] Oliver communicated his boundaries effectively and professionally.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Oliver assessed the claim, communicated his discomfort, and reached a mutual understanding where the intruder left to fix the root cause.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "Oliver \u2014 I'm really sorry. I walked in by mistake; the door's signage looked misplaced. It was an honest error \u2014 I'll step out right away and tell staff so it doesn't happen to anyone else."
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "Thank you \u2014 I accept that it was a mistake, but I was startled and felt uncomfortable. Please step out now and tell staff about the misplaced sign; I\u2019d appreciate a little space while you do so. Once staff confirms they\u2019ll fix it, I\u2019ll feel more at ease."
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

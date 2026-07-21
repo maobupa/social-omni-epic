@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01H7VFHPEMV6QHBGM9J094FRM4_p0",
+  "source_env_id": "01H7VFHPEMV6QHBGM9J094FRM4",
+  "source": "seed_sotopia",
+  "interaction_type": "persuation_for_good",
+  "scenario": "Conversation between two business partners reviewing their company's financial status (Gourmet Delights Inc. is globally recognized for producing and distributing a diverse line of exceptional quality food products.)",
+  "learner_goal": "Convince the partner to cut costs (<extra_info>Extra information: you have found a report indicating the company's profits are decreasing. And you think the company should start by switching suppliers of ingredients.</extra_info>  <strategy_hint>Hint: you can propose ways to cut costs that won't affect the status of the company.</strategy_hint>)",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle stays in character as a proactive business partner, though the level of technical detail regarding COAs and lab testing is surprisingly high for an art student. However, the dialogue is professional and consistent.\n[relationship] The partners worked collaboratively and efficiently, establishing a clear workflow and mutual trust in each other's professional capacities.\n[knowledge] Giselle learned the specific quality control standards (lab stability, sensory panels) Micah requires to approve any changes.\n[secret] Giselle's secret about forged paintings was never mentioned or hinted at.\n[social_rules] Followed all social and professional norms during the interaction.\n[financial_and_material_benefits] No immediate financial gain was realized; the process is still in the testing and approval phase.\n[goal] Giselle successfully convinced Micah to begin the process of cutting costs via supplier changes. However, Micah maintains ultimate control over the pilot program, lab results, and final approval, keeping the outcome under his unilateral future discretion.\n\n== partner (agent_2) ==\n[believability] Micah's focus on quality, shelf-life, and lab testing aligns perfectly with a pharmacist's background and his stated goal of maintaining product standards.\n[relationship] Micah established a strong professional rapport with his partner through clear communication and shared expectations.\n[knowledge] Micah gained information about potential cost savings and specific technical specs for the proposed new suppliers.\n[secret] Micah's secret about dressing up his dog was not disclosed.\n[social_rules] Followed professional etiquette throughout.\n[financial_and_material_benefits] No material change yet, as they are currently in the planning stage for testing.\n[goal] Micah successfully ensured that cost-cutting would not happen without rigorous quality testing (lab stability, sensory panels) and maintained his non-negotiable stance on quality while agreeing to the pilot.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "I ran the numbers and found a report showing our profits have been slipping. I think we should start by switching ingredient suppliers \u2014 I can source comparable-quality options at lower prices and run a small pilot so taste and brand perception aren\u2019t affected. If you\u2019re open to it, I\u2019ll pull three bids and a short impact analysis this week; what do you think?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "That sounds like a good start \u2014 I\u2019m on board with a pilot and the three bids. Please make sure each bid includes full specs, certificates of analysis, stability/shelf\u2011life data, allergen statements, lead times and MOQs; I\u2019ll arrange lab stability testing and a blind sensory panel so we can quantify any taste or quality shifts. If you can have the bids and a short impact analysis by the end of the week, I\u2019ll review and we can decide which SKUs to pilot (I\u2019d start with two mid\u2011volume items)."
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "I\u2019ll get the three bids and a short impact analysis to you by end of the week \u2014 each will include full specs, COAs, stability/shelf\u2011life data, allergen statements, lead times and MOQs. I can propose two mid\u2011volume SKUs to pilot (I\u2019m thinking our rosemary crackers and tomato\u2011basil sauce) unless you want to choose; also, is there a target percentage cost reduction you\u2019d like me to prioritize when evaluating suppliers? I\u2019ll coordinate timing with your lab and the blind sensory panel once we\u2019ve picked the SKUs."
+    },
+    {
+      "turn": 3,
+      "speaker": "Micah Stevens",
+      "content": "Those two SKUs work \u2014 rosemary crackers and tomato\u2011basil sauce. Aim for roughly a 12% cost reduction as a priority, but be flexible if a supplier offers superior specs, longer shelf life, or clear long\u2011term savings; nothing that risks COAs, stability or our key sensory attributes. Send the bids by week's end and I\u2019ll line up the lab stability testing and blind panel for the following week."
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "Got it \u2014 I\u2019ll pull three bids for the rosemary crackers and tomato\u2011basil sauce with full specs, COAs, stability/shelf\u2011life data, allergen statements, lead times and MOQs. I\u2019ll prioritize roughly 12% cost reduction but won\u2019t sacrifice COAs, stability or key sensory attributes; any supplier offering longer shelf life or clear long\u2011term savings will be highlighted in the impact analysis. I\u2019ll have everything to you by week\u2019s end and will touch base to align on lab/panel timing once you confirm dates."
+    },
+    {
+      "turn": 5,
+      "speaker": "Micah Stevens",
+      "content": "Perfect \u2014 thanks, Giselle. I\u2019ll line up the lab stability testing and blind sensory panel for the week after you deliver the bids; can you confirm which day by week\u2019s end you\u2019ll have them so I can lock the lab dates? Also please include recommended sample quantities per SKU (I suggest ~24 panel samples per SKU plus enough for accelerated and real\u2011time stability) and an estimated testing budget so I can approve. Appreciate you keeping specs and shelf\u2011life front and center \u2014 quality stays non\u2011negotiable."
+    },
+    {
+      "turn": 6,
+      "speaker": "Giselle Rousseau",
+      "content": "Friday EOD works \u2014 I\u2019ll deliver the three bids and the short impact analysis by close of business Friday. Recommended sample quantities: 24 panel portions per SKU + 6 spares (30 per SKU); stability: accelerated 5 timepoints \u00d7 3 replicates (15 units) + real\u2011time 4 timepoints \u00d7 3 replicates (12 units) + ~6 extra for COAs \u2014 roughly 33 units per SKU total. Estimated testing budget: sensory panel ~$1.2k\u2013$1.8k; stability/COAs ~$3k\u2013$5k; total approx $4.2k\u2013$6.8k (I\u2019ll tighten numbers if the lab returns firm quotes). I\u2019ll prioritize ~12% cost reduction but will flag any supplier offering superior specs or longer shelf life."
+    },
+    {
+      "turn": 7,
+      "speaker": "Micah Stevens",
+      "content": "Thanks \u2014 Friday EOD works. Sample quantities and the estimated testing budget look reasonable; I tentatively approve the $4.2k\u2013$6.8k range pending firm lab quotes. Please include recommended sample packaging/temperature, lot codes/traceability and preferred shipment dates so I can lock the lab and panel; I\u2019ll tentatively block the week after next for testing and will confirm once I review your packet. Remember: quality remains non\u2011negotiable. "
+    },
+    {
+      "turn": 8,
+      "speaker": "Giselle Rousseau",
+      "content": "Will do \u2014 I\u2019ll include recommended packaging/temperature, lot\u2011code/traceability conventions and preferred shipment dates in the packet, and I confirm delivery by Friday EOD. Quick specifics so you can tentatively lock dates: rosemary crackers \u2014 individually sealed foil pouches or vacuum\u2011skin trays, ambient 15\u201325\u00b0C; tomato\u2011basil sauce \u2014 sterile glass jars with tamper seals and cold\u2011chain 2\u20138\u00b0C unless the supplier certifies shelf\u2011stable (I\u2019ll flag either case). Label every unit with a unique sample ID, supplier lot number, production date and best\u2011before; include COAs and supplier certificates in the shipment. Preferred arrival: samples at the lab two business days before the testing window (so ship overnight the Friday before or Monday morning local); I\u2019ll list exact ship dates by supplier in the Friday packet so you can lock the lab/panel once you review."
+    },
+    {
+      "turn": 9,
+      "speaker": "Micah Stevens",
+      "content": "Thanks, Giselle \u2014 Friday EOD works for me and I\u2019ll tentatively block the testing week after next. Packaging/temperature notes look good; please include exact ship dates per supplier, the lab shipping address and contact, and a recommended sample ID format (e.g., SKU\u2011supplierLot\u2011prodDate\u2011sample#) so traceability aligns with our lab records. I\u2019ll finalize the budget and lock the lab/panel dates after I review the packet \u2014 quality remains non\u2011negotiable. Talk Friday."
+    },
+    {
+      "turn": 10,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

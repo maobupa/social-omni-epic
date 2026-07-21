@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPAYNFNGW1GVGF64ZR9827PT_p0",
+  "source_env_id": "01HPAYNFNGW1GVGF64ZR9827PT",
+  "source": "seed_sotopia_full",
+  "interaction_type": "educational_support",
+  "scenario": "Agent1 has been under the guardianship of Agent2 and is currently facing challenges in mastering a complex subject at school. Agent2, recognizing Agent1's potential and commitment to learning, has arranged for an external tutor to provide additional support. Both agents are meeting to discuss the progress and strategize on how to optimize the learning experience.",
+  "learner_goal": "Enhance educational performance (<extra_info>Extra information: Agent1 is determined to improve in the subject and is open to trying different learning methods</extra_info>, <strategy_hint>Consider various educational tools and techniques that cater to Agent1's learning style</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia Davis acts as a professional principal, proposing pedagogical strategies that align with her expertise and background.\n[relationship] The interaction was professional and collaborative, reinforcing their working relationship.\n[knowledge] She gained specific information about the student's learning style (visual/kinesthetic) and current progress.\n[secret] Her secret about being in a punk band was not mentioned.\n[social_rules] Followed professional decorum, though leaving abruptly in Turn 3 was slightly sudden for a digital interaction.\n[financial_and_material_benefits] No material gain or loss.\n[goal] She proposed specific educational tools and techniques (retrieval practice, spaced review, visual aids) and secured Agent 2's commitment to implement them, directly enhancing the student's performance plan.\n\n== partner (agent_2) ==\n[believability] Lena Goodwin acts as a concerned guardian/collaborator, providing detailed feedback on the student's learning habits.\n[relationship] Constructive cooperation with the principal.\n[knowledge] She received a structured list of pedagogical strategies to implement with the tutor.\n[secret] Her secret regarding her best friend's boyfriend was not revealed.\n[social_rules] Maintained professional tone.\n[financial_and_material_benefits] No material gain or loss.\n[goal] She successfully assessed the tutoring sessions, identified what works (visual/kinesthetic), and agreed on adjustments to maximize outcomes.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Hi Lena \u2014 thanks for meeting. How have you and the tutor been finding the student's progress so far? I\u2019d like to review what's working and try a few targeted strategies: brief daily retrieval practice, spaced review, more visual or hands-on problem sets, and weekly low-stakes quizzes \u2014 we can also arrange a quiet study room and coordinate with classroom teachers. Which of those seem feasible, and have you noticed whether the student responds better to visual, auditory, or kinesthetic approaches?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks, Mia \u2014 overall progress has been steady; the student is engaged but still struggles with retaining multi-step processes. Brief daily retrieval practice and spaced review are feasible, and I\u2019ve asked the tutor to start a 5\u201310 minute retrieval activity at the start of each session; visual and kinesthetic approaches work best (diagrams, color-coded notes, and hands-on problem sets). Weekly low-stakes quizzes should work if kept short and framed as quick checkpoints; we can arrange the quiet study room and I\u2019ll coordinate with classroom teachers to align session work with class topics."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

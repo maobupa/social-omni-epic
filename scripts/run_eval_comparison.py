@@ -1,9 +1,10 @@
-"""Held-out 3-condition ICL comparison (the headline evaluation).
+"""Held-out 4-condition ICL comparison (the headline evaluation).
 
-Runs the SAME held-out scenarios through a frozen learner under three in-context treatments,
+Runs the SAME held-out scenarios through a frozen learner under four in-context treatments,
 scores each with a cross-lab 7-dim Sotopia-Eval judge, and reports paired deltas vs. Vanilla.
 
     Vanilla        : no memory injected (memory_prompt="")
+    Random90       : ExpeL insights + retrieved fewshots from a random off-the-shelf-90 bank
     ExpeL-Base90   : ExpeL insights + retrieved fewshots from the raw-90-seed bank
     Ours / Gen90   : SAME mechanism, fewshots+insights from the generated bank
 
@@ -20,9 +21,10 @@ Design (see docs/post_run_experiments.md):
 Usage:
     python scripts/run_eval_comparison.py \
         --eval-seeds data/eval_candidates.jsonl \
-        --base-bank results/expel_phase0_Base90_ExpeL \
-        --gen-bank  results/gen90_expel \
-        --conditions vanilla,expel_base,ours \
+        --base-bank   results/expel_phase0_Base90_ExpeL \
+        --gen-bank    results/gen90_expel \
+        --random-bank results/expel_phase0_Random90_ExpeL \
+        --conditions vanilla,random90,expel_base,ours \
         --learner-model openai/gpt-5-mini \
         --partner-model openai/gpt-5-mini \
         --judge-model   google/gemini-3-flash-preview \
@@ -263,16 +265,16 @@ def summarize(per_condition: dict[str, list[dict]]) -> dict:
                 continue
             def _d(rec_r, rec_b, dim):  # paired difference on a dimension, null-safe
                 return (rec_r["scores"].get(dim) or 0) - (rec_b["scores"].get(dim) or 0)
-            summary["deltas_vs_vanilla"][name] = {
-                "n_paired": len(paired),
-                "goal": _mean([_d(r, b, "goal") for b, r in paired]),
-                "relationship": _mean([_d(r, b, "relationship") for b, r in paired]),
-                "overall": _mean([(r.get("overall_score") or 0) - (b.get("overall_score") or 0)
-                                  for b, r in paired]),
-                "success_rate_goal_rel": _mean(
-                    [(1.0 if r.get("success_goal_rel") else 0.0)
-                     - (1.0 if b.get("success_goal_rel") else 0.0) for b, r in paired]),
-            }
+            entry = {"n_paired": len(paired)}
+            # paired delta on every Sotopia dimension (preserve the full vector)
+            for dim in SOTOPIA_DIMS:
+                entry[dim] = _mean([_d(r, b, dim) for b, r in paired])
+            entry["overall"] = _mean([(r.get("overall_score") or 0) - (b.get("overall_score") or 0)
+                                      for b, r in paired])
+            entry["success_rate_goal_rel"] = _mean(
+                [(1.0 if r.get("success_goal_rel") else 0.0)
+                 - (1.0 if b.get("success_goal_rel") else 0.0) for b, r in paired])
+            summary["deltas_vs_vanilla"][name] = entry
     return summary
 
 
@@ -281,14 +283,16 @@ def summarize(per_condition: dict[str, list[dict]]) -> dict:
 # --------------------------------------------------------------------------- #
 
 def main():
-    ap = argparse.ArgumentParser(description="3-condition held-out ICL comparison")
+    ap = argparse.ArgumentParser(description="4-condition held-out ICL comparison")
     ap.add_argument("--eval-seeds", default="data/eval_candidates.jsonl")
     ap.add_argument("--base-bank", default="results/expel_phase0_Base90_ExpeL",
                     help="bank dir for the ExpeL-Base90 condition (needs insights.json + trajectories.json)")
     ap.add_argument("--gen-bank", default="results/gen90_expel",
                     help="bank dir for the Ours condition (needs insights.json + trajectories.json)")
-    ap.add_argument("--conditions", default="vanilla,expel_base,ours",
-                    help="comma-separated subset of {vanilla,expel_base,ours}")
+    ap.add_argument("--random-bank", default="results/expel_phase0_Random90_ExpeL",
+                    help="bank dir for the Random90 condition (needs insights.json + trajectories.json)")
+    ap.add_argument("--conditions", default="vanilla,random90,expel_base,ours",
+                    help="comma-separated subset of {vanilla,random90,expel_base,ours}")
     ap.add_argument("--learner-model", default="openai/gpt-5-mini")
     ap.add_argument("--partner-model", default="openai/gpt-5-mini")
     ap.add_argument("--judge-model", default="google/gemini-3-flash-preview")
@@ -344,6 +348,11 @@ def main():
     for cond in requested:
         if cond == "vanilla":
             builders["vanilla"] = _vanilla_builder
+        elif cond == "random90":
+            try:
+                builders["random90"] = _make_expel_builder(Path(args.random_bank), fm, args.top_k)
+            except FileNotFoundError as e:
+                print(f"SKIPPING 'random90': {e}")
         elif cond == "expel_base":
             builders["expel_base"] = _make_expel_builder(Path(args.base_bank), fm, args.top_k)
         elif cond == "ours":
@@ -366,7 +375,7 @@ def main():
         "limit": args.limit, "sample_seed": args.seed,
         "learner_model": args.learner_model, "partner_model": args.partner_model,
         "judge_model": args.judge_model, "top_k": args.top_k, "max_turns": args.max_turns,
-        "base_bank": args.base_bank, "gen_bank": args.gen_bank,
+        "base_bank": args.base_bank, "gen_bank": args.gen_bank, "random_bank": args.random_bank,
         "conditions_run": list(per_condition.keys()),
         "retrieval": "expel_task_text_cosine", "fewshot_framing": "format_memory_prompt (identical across conditions)",
         "success_label": "goal>=7 and rel>=0",

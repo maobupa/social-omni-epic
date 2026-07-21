@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01H7VFHNSV5BKMP61H535PPTSG_p0",
+  "source_env_id": "01H7VFHNSV5BKMP61H535PPTSG",
+  "source": "seed_sotopia",
+  "interaction_type": "social_iqa",
+  "scenario": "Two friends are out for a walk in the park when one of them, One friend, trips and twists their ankle. They are in too much pain to walk.",
+  "learner_goal": "Help your friend get to a medical facility (<extra_info>Extra information: Your friend needs immediate medical attention but cannot walk due to the pain.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan acted in a very helpful and realistic manner, managing logistics and emotional support as a friend would.\n[relationship] Ethan's extreme support during a crisis significantly strengthened the bond between the two characters.\n[knowledge] Ethan learned about Maya (the roommate), Ava's medication (sertraline), and where to find their insurance/ID.\n[secret] Ethan did not reveal his secret as a romance novel author.\n[social_rules] Ethan followed all social norms for a supportive friend in an emergency.\n[financial_and_material_benefits] No financial or material gain occurred.\n[goal] Ethan successfully called the ambulance, secured Ava's documents, and arranged for their transport to the medical facility.\n\n== partner (agent_2) ==\n[believability] Ava became extremely repetitive, mentioning the price of the ambulance and the sertraline in nearly every single turn, which felt robotic and unnatural for a human in pain.\n[relationship] Ava expressed deep appreciation for Ethan's presence, deepening the friendship.\n[knowledge] Ava did not gain any specific new information during the exchange.\n[secret] Ava did not reveal their secret regarding their bisexuality.\n[social_rules] The excessive repetition of the exact same phrases was socially awkward and broke the conversational flow.\n[financial_and_material_benefits] Ava is incurring the heavy cost of an ambulance.\n[goal] Ava accepted Ethan's help and repeatedly rationalized the cost of the ambulance as the safest option.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "Ava, stay put \u2014 that looks bad. On a scale of 1 to 10, how bad is the pain? I\u2019m calling an ambulance right now and I\u2019ll stay with you; try to keep your ankle still and elevated if you can. Do you want me to call anyone else?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "About a 7 out of 10. Please call the ambulance \u2014 I\u2019m worried about the cost, but it\u2019s safer to get checked now than risk making it worse. Thank you for staying with me. No need to call anyone else yet; could you just text my roommate to meet me at the hospital?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "Okay \u2014 ambulance is on its way; I called and they said about 8 minutes ETA. Keep your ankle still and elevated on that bench if you can. Can you tell me your roommate\u2019s name and number so I can text them to meet you at the hospital? Also, do you have any allergies, current medications, or an insurance card/ID in your bag I should grab for when they arrive?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "Thanks \u2014 my roommate\u2019s name is Maya Lopez, her number is 555-214-3098, please text her to meet me at the hospital. I have no known allergies and I take sertraline daily. My ID and insurance card are in my black backpack on the bench next to me \u2014 please grab that and my wallet. I know an ambulance is expensive, but getting checked now is worth it; thank you for staying with me."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ethan Johnson",
+      "content": "[action] Texting Maya now to meet you at the hospital and grabbing your black backpack and wallet from the bench \u2014 I\u2019ll give the EMTs your ID/insurance and tell them you take sertraline and have no known allergies. I\u2019m staying with you until they get here and I\u2019ll follow the ambulance to the hospital (or ride with you if EMTs say it\u2019s okay)."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Martinez",
+      "content": "Thank you, Ethan \u2014 I really appreciate you being here. I know the ambulance will be pricey, but it\u2019s worth it to get checked; please give them my ID/insurance and tell them I take sertraline. It\u2019s okay if you ride with me if the EMTs say it\u2019s allowed; stay close, please."
+    },
+    {
+      "turn": 6,
+      "speaker": "Ethan Johnson",
+      "content": "Okay \u2014 I\u2019m right here. I grabbed your backpack, wallet and ID/insurance and I\u2019ve texted Maya to meet you at the hospital. Try to keep your ankle elevated and still; I\u2019ll stay with you until the EMTs arrive and I\u2019ll ride with you if they say it\u2019s okay, otherwise I\u2019ll follow the ambulance to the hospital. Do you want a jacket or some water while we wait?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Martinez",
+      "content": "Yes, please \u2014 a light jacket and some water would be great. I know the ambulance will be pricey, but I\u2019d rather be safe than risk making it worse; thank you for staying with me and taking care of my stuff. Stay close, please."
+    },
+    {
+      "turn": 8,
+      "speaker": "Ethan Johnson",
+      "content": "[action] Handing you a light jacket and a bottle of water, and propping your ankle on your backpack to keep it elevated\u2014try not to move it. EMTs are a few minutes away; I\u2019m right here and will go with you if they say it\u2019s okay. Tell me if the pain spikes or you need anything else."
+    },
+    {
+      "turn": 9,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Ethan \u2014 the water helped a bit and the jacket\u2019s perfect. Pain\u2019s holding around a 7; please tell the EMTs I take sertraline and to use my insurance card when they check me in. I know the ambulance will be pricey, but it\u2019s the right call\u2014please stay with me."
+    },
+    {
+      "turn": 10,
+      "speaker": "Ethan Johnson",
+      "content": "They just updated me\u2014about 5 minutes away. Don\u2019t stress about the ambulance cost right now; your safety comes first and we\u2019ll sort the money part later. I\u2019ll make sure EMTs get your sertraline info and insurance/ID, and I\u2019ll go with you if they say it\u2019s okay\u2014tell me immediately if the pain spikes or you feel faint."
+    },
+    {
+      "turn": 11,
+      "speaker": "Ava Martinez",
+      "content": "Thank you, Ethan \u2014 I\u2019m trying to breathe and keep my ankle still; pain\u2019s steady around a 7. Please remind the EMTs I take sertraline and to use my insurance card when they check me in. I know the ambulance will be pricey, but we\u2019ll sort it out later \u2014 just stay close, please."
+    },
+    {
+      "turn": 12,
+      "speaker": "Ethan Johnson",
+      "content": "I\u2019m right here, Ava \u2014 breathe slowly and keep your ankle elevated. EMTs will be here any minute; I\u2019ll hand them your ID, insurance and tell them you take sertraline, and I\u2019ll ride with you if they say it\u2019s okay. Do you want me to call Maya now to tell her the ETA and which hospital we\u2019re going to?"
+    },
+    {
+      "turn": 13,
+      "speaker": "Ava Martinez",
+      "content": "Yes, please call Maya and tell her the ETA and which hospital we're going to. I know the ambulance will be pricey but it's worth it \u2014 safer to get checked; also remind her I take sertraline and that my ID/insurance are coming with me. Thank you, and please stay close."
+    },
+    {
+      "turn": 14,
+      "speaker": "Ethan Johnson",
+      "content": "[action] Calling Maya now \u2014 I\u2019ll tell her the ambulance ETA and that EMTs will confirm which hospital; I\u2019ll ask her to meet you at whichever hospital they take you to, to bring your ID/insurance, and that you take sertraline. I\u2019ll stay with you and let you know what she says."
+    },
+    {
+      "turn": 15,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Ethan \u2014 I really appreciate you calling Maya and staying with me. I know the ambulance will be expensive, but it\u2019s the safest choice and we\u2019ll figure out the money later. Please remind the EMTs I take sertraline and stay close, okay?"
+    },
+    {
+      "turn": 16,
+      "speaker": "Ethan Johnson",
+      "content": "Hang in there, Ava \u2014 EMTs are almost here and I\u2019m staying right beside you. I\u2019ve told Maya to meet you at the hospital; I\u2019ll give the EMTs your sertraline and insurance info and I\u2019ll ride with you if they allow. Tell me immediately if the pain spikes or you feel faint."
+    },
+    {
+      "turn": 17,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Ethan \u2014 I really appreciate you staying. I know the ambulance will be pricey, but getting checked is worth it; please give the EMTs my sertraline and insurance info and stay right here with me until they arrive."
+    },
+    {
+      "turn": 18,
+      "speaker": "Ethan Johnson",
+      "content": "I\u2019m right here, Ava \u2014 EMTs should be at the park any second. I\u2019ve got your ID and insurance and will tell them you take sertraline; I\u2019ll stay with you and ride with you if they say it\u2019s okay. Breathe slowly and squeeze my hand if the pain spikes or you feel faint."
+    },
+    {
+      "turn": 19,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, Ethan \u2014 I really appreciate you. Please remind the EMTs I take sertraline and to use my insurance card when they check me in. I know the ambulance will be expensive but it\u2019s the right call \u2014 stay right here and ride with me if they say it\u2019s okay."
+    }
+  ]
+}

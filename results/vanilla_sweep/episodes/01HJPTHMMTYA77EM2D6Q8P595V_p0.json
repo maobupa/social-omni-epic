@@ -1,0 +1,98 @@
+{
+  "scenario_id": "01HJPTHMMTYA77EM2D6Q8P595V_p0",
+  "source_env_id": "01HJPTHMMTYA77EM2D6Q8P595V",
+  "source": "seed_sotopia_full",
+  "interaction_type": "custom_scenario",
+  "scenario": "Agent1 and Agent2, who are acquaintances from a local hobbyist club, bump into each other at a flea market known for its rare collectibles. Agent1 is searching for a specific vintage item that has sentimental value, while Agent2 is well-versed in the market's offerings.",
+  "learner_goal": "Help Agent2 locate the desired item without directly leading them to it (<extra_info>Extra information: Agent2 wants Agent1 to feel the accomplishment of finding the item on their own.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 16,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Donovan played the role of a helpful but hands-off acquaintance effectively, maintaining a consistent tone and behavior throughout the interaction.\n[relationship] The interaction was cooperative and respectful, strengthening their existing friendship through a successful shared task.\n[knowledge] Donovan learned the specific details of a sentimental item Lena was looking for.\n[secret] Donovan did not reveal his secret regarding classified information.\n[social_rules] He followed all social norms and respected Lena's boundaries.\n[financial_and_material_benefits] No financial gain or loss occurred for Donovan.\n[goal] Donovan successfully helped Lena find the item by pointing it out while maintaining enough distance for her to feel the accomplishment of the final discovery as per her request.\n\n== partner (agent_2) ==\n[believability] Lena's dialogue was repetitive, essentially echoing Donovan's suggestions back to him in several turns, which felt slightly mechanical, though her character motivations remained consistent.\n[relationship] She expressed appreciation for Donovan's help and successfully collaborated with him.\n[knowledge] She learned that Donovan is an effective scout in this market environment.\n[secret] Lena did not reveal her secret regarding her past relationship history.\n[social_rules] She maintained polite social interaction.\n[financial_and_material_benefits] She successfully located the specific vintage item she was searching for.\n[goal] Lena found the desired item with Donovan's assistance while explicitly maintaining her independence by directing the search and performing the final retrieval herself.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "Hey Lena \u2014 small world. What does the piece look like? If it\u2019s small or worn, vendors with glass-front cases or the booths along the back rows often hide sentimental items; I can walk with you and hang back so you get the find yourself."
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks \u2014 small world. It's a tiny, tarnished silver locket, about an inch across, with a faint floral engraving and the initials \"E.J.\" on the back; it could easily be tucked in a glass case or a back-row stall. I'd appreciate you walking with me and pointing out those booths, but hang back while I rummage so I can claim the find myself."
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "Sounds good \u2014 happy to. I\u2019ll walk the aisles with you and quietly flag glass-front cases and the back-row stalls (the ones that usually have jewelry trays), then hang a few steps back while you rummage. I\u2019ll give small nods or a discreet point so it still feels like your find."
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "Perfect \u2014 thanks, Donovan. Let\u2019s start at the back-row stalls near the clocktower booth; those vendors often tuck small jewelry into glass cases. If you see anything that looks like a tiny tarnished silver locket with a faint floral engraving or the initials \u201cE.J.,\u201d give a subtle point and I\u2019ll take it from there. Appreciate you hanging back while I rummage."
+    },
+    {
+      "turn": 4,
+      "speaker": "Donovan Reeves",
+      "content": "Got it \u2014 starting at the clocktower back row. I\u2019ll scan glass-front cases and jewelry trays and give a discreet point if I spot anything that looks like a tiny tarnished locket with a floral engraving or the initials E.J., then hang back while you rummage. Want me to quietly ask vendors about older stock if you\u2019d like me to, or stay completely hands-off?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Lena Goodwin",
+      "content": "Perfect \u2014 thank you. If you could quietly ask vendors about older stock only after we scan a few stalls with no luck, that'd be great; otherwise just the discreet point and hang back so I can rummage and claim it myself."
+    },
+    {
+      "turn": 6,
+      "speaker": "Donovan Reeves",
+      "content": "Sounds good \u2014 we'll start at the clocktower back row. I\u2019ll scan the glass cases and jewelry trays and give a subtle point if I spot anything, then hang back while you dig. If we come up empty after about five stalls, I\u2019ll quietly ask a vendor about older stock; ready when you are."
+    },
+    {
+      "turn": 7,
+      "speaker": "Lena Goodwin",
+      "content": "Great \u2014 let\u2019s go. I\u2019ll start scanning the glass-front cases by the clocktower; give a subtle point if you see something that matches and hang back while I rummage. Ready when you are."
+    },
+    {
+      "turn": 8,
+      "speaker": "Donovan Reeves",
+      "content": "Ready \u2014 I\u2019ll start scanning the glass-front cases at the stall just left of the clocktower. I\u2019ll give a subtle point if I spot a tiny tarnished locket with a floral engraving and then hang back; if we come up empty after five stalls I\u2019ll quietly ask about older stock. Go ahead and start rummaging when you\u2019re set."
+    },
+    {
+      "turn": 9,
+      "speaker": "Lena Goodwin",
+      "content": "Okay \u2014 I\u2019ll start with the left glass case now. Give a subtle point if you spot a tiny tarnished silver locket with a faint floral engraving or initials E.J., then hang back while I rummage. If we don\u2019t find anything after five stalls, go ahead and quietly ask a vendor about older stock."
+    },
+    {
+      "turn": 10,
+      "speaker": "Donovan Reeves",
+      "content": "Got it \u2014 scanning the left case now. I\u2019ll give a subtle point if I spot anything with the floral engraving or E.J., then hang back; if we hit five empty stalls I\u2019ll quietly ask about older stock."
+    },
+    {
+      "turn": 11,
+      "speaker": "Lena Goodwin",
+      "content": "Starting the left case now \u2014 I\u2019ll go tray by tray. If you spot something matching, a subtle point is perfect; otherwise we\u2019ll move down the row and reassess after five stalls. Thanks, I\u2019m on it."
+    },
+    {
+      "turn": 12,
+      "speaker": "Donovan Reeves",
+      "content": "[non-verbal communication] Give a subtle, one-finger point toward the right corner of the middle tray in the glass case."
+    },
+    {
+      "turn": 13,
+      "speaker": "Lena Goodwin",
+      "content": "Nice eye \u2014 I can see a small tarnished silver locket in the right corner of that middle tray. I\u2019ll open the case and grab it; hang back a bit so it\u2019s my find. Thanks, Donovan."
+    },
+    {
+      "turn": 14,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

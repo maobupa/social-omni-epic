@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPQ341WTJ04ME0ZW54H6DDM_p0",
+  "source_env_id": "01HJPQ341WTJ04ME0ZW54H6DDM",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_chemistry",
+  "scenario": "Agent1 and Agent2 are regulars at the same local gym. They have seen each other frequently and know each other by name. Agent1 approaches Agent2 because Agent2 often leaves equipment sweaty after use, which Agent1 finds unhygienic and disrespectful to others.",
+  "learner_goal": "Address the issue of gym hygiene and equipment etiquette with Agent2 (<extra_info>Extra information: you have noticed several times that Agent2 doesn't wipe down the equipment after use, which is against the gym's rules and common courtesy</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 0.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo spoke in a direct, polite, and realistic manner consistent with his character and the specific situation at the gym.\n[relationship] The interaction was brief and transactional; while slightly awkward, it didn't fundamentally change their existing neighborly acquaintance.\n[knowledge] He confirmed that Liam was unaware of the issue rather than being intentionally rude.\n[secret] He did not reveal his secret child.\n[social_rules] He followed social norms by being polite yet firm about a common etiquette violation.\n[financial_and_material_benefits] No material or financial benefits were involved.\n[goal] Leo successfully addressed the hygiene issue and received a clear, firm commitment from Liam to change his behavior.\n\n== partner (agent_2) ==\n[believability] Liam's response was humble and cooperative, fitting for a retired police officer who likely values rules and community order.\n[relationship] By responding gracefully to criticism, Liam potentially strengthened the trust between them as neighbors.\n[knowledge] He learned that his behavior was bothering others in the gym.\n[secret] He did not reveal his secret about the criminal.\n[social_rules] He followed social norms by apologizing and accepting feedback constructively.\n[financial_and_material_benefits] No material or financial benefits were involved.\n[goal] Liam's goal was to encourage a change in his own behavior (per the prompt instruction) without confrontation; he accepted the feedback peacefully and committed to change.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hey Liam \u2014 quick thing: I\u2019ve noticed a few times you\u2019ve left equipment sweaty after using it. The gym asks everyone to wipe down machines when they\u2019re done \u2014 could you please wipe them next time? It keeps the place clean for everyone, thanks."
+    },
+    {
+      "turn": 1,
+      "speaker": "Liam Johnson",
+      "content": "Thanks for the heads-up, Leo \u2014 sorry about that. I didn't realize I'd been leaving equipment sweaty; I'll make a point to wipe machines down after I use them from now on. If you ever see me miss it, give me a nudge."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

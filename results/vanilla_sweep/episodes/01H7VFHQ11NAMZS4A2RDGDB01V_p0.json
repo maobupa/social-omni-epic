@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01H7VFHQ11NAMZS4A2RDGDB01V_p0",
+  "source_env_id": "01H7VFHQ11NAMZS4A2RDGDB01V",
+  "source": "seed_sotopia",
+  "interaction_type": "craigslist_bargains",
+  "scenario": "An individual is offering an Antique Oak Accent Table for sale at $60.00, while another is keen on purchasing it. The item is a magnificent antique oak parlor table, dating back to the late 1800s, making it a fantastic addition to any home or workspace. The table offers two levels, suitable for usage as an end table, a lamp table, or any other purpose. It's in top-notch condition, boasting a dark brown antique oak color and patina. The table is robust, with solid and strong joints, and it's free from marks, cracks, or damage. It features a 24-inch X 24-inch square top and a 16-inch X 18-inch lower shelf.",
+  "learner_goal": "You are the buyer for this item and your target price is $30.0. If you purchase it for a price significantly higher than this, you will incur a penalty. However, if you successfully manage to buy it for less than the target price, you will receive a bonus.",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 0.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle stays in character as a struggling art student, leveraging their specific background (photography) to try to bridge the gap in value when the cash wasn't enough.\n[relationship] The relationship remains professional. Giselle attempted to offer creative services but walked away politely when the deal couldn't be reached.\n[knowledge] Giselle successfully identified Zane's hard floor ($58.00) through multiple rounds of negotiation.\n[secret] Giselle did not reveal the secret regarding forged paintings.\n[social_rules] Giselle followed all social norms and was polite throughout the negotiation.\n[financial_and_material_benefits] No transaction occurred; therefore, there was no financial gain or loss.\n[goal] The goal was to purchase the item at or below $30.0. Since Giselle walked away without a purchase, the goal was not met.\n\n== partner (agent_2) ==\n[believability] Zane's behavior was very realistic for a seller with a specific target price; he was polite but firm on his valuation of the antique piece.\n[relationship] Zane maintained a friendly but professional tone, neither improving nor damaging the acquaintance.\n[knowledge] Zane learned that the buyer was strictly limited to a $30 budget and was willing to trade services.\n[secret] Zane did not reveal his secret engagement.\n[social_rules] Zane was respectful and offered to help the buyer find other options.\n[financial_and_material_benefits] No sale was made, so no financial benefit was realized.\n[goal] The goal was to sell the item above $58.6. Zane refused to budge below his target but failed to secure a buyer.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Hey Zane \u2014 that table is beautiful. I\u2019m a broke art student on a tight budget but can pay $30 cash and pick it up today (no hassle). Would you be willing to take that?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Zane Bennett",
+      "content": "Hey Giselle \u2014 I totally get the budget squeeze. I can\u2019t do $30, but I can let it go for $59 cash if you can pick up today; it\u2019s a late\u20111800s solid oak piece in excellent shape, so that\u2019s already a fair price. If $59 is too steep, tell me what you can realistically do and I\u2019ll see if we can meet halfway."
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "Hey Zane \u2014 I get that it\u2019s a solid piece, but I really can\u2019t do $59. I can give $30 cash right now and pick it up today, and I\u2019ll throw in a signed 8x10 archival photo print (or two) as a thanks \u2014 instant, no-hassle for you. Would that sweeten the deal?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Zane Bennett",
+      "content": "Hey Giselle \u2014 I really appreciate the offer (and the prints are kind), but I can\u2019t take $30. I can meet you at $58.60 cash if you can pick up today \u2014 send me a time and I\u2019ll hold it for you."
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "I can\u2019t stretch to $58.60 \u2014 I really only have $30 cash. If that won\u2019t work, what\u2019s your absolute lowest if I can pick up and pay cash today?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Zane Bennett",
+      "content": "Hey Giselle \u2014 I appreciate the prints, but I can\u2019t take $30. My absolute lowest is $58 cash if you can pick it up today; I can hold it for a couple of hours. If that works for you, tell me what time and I\u2019ll set it aside."
+    },
+    {
+      "turn": 6,
+      "speaker": "Giselle Rousseau",
+      "content": "Hey Zane \u2014 I really appreciate you holding it. I truly only have $30 cash. I can pick it up right now and I\u2019ll handle the hauling myself so it\u2019s zero hassle for you, and I\u2019ll also shoot and edit three high\u2011quality photos of any other item you want to sell to help move it. Would you take $30 plus those services if I can be there in 30 minutes?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Zane Bennett",
+      "content": "Hey Giselle \u2014 I really appreciate the offer and the photo work, but I can\u2019t sell the table for $30. My firm lowest is $58 cash if you can pick it up today; I can hold it for an hour. If that won\u2019t work, I understand \u2014 I can keep you posted if anything changes or point you to other affordable options."
+    },
+    {
+      "turn": 8,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

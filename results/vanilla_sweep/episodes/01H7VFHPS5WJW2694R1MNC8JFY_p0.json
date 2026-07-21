@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01H7VFHPS5WJW2694R1MNC8JFY_p0",
+  "source_env_id": "01H7VFHPS5WJW2694R1MNC8JFY",
+  "source": "seed_sotopia",
+  "interaction_type": "craigslist_bargains",
+  "scenario": "One person is offering a Dresser and Matching Night Stand for $200.00, while another person is showing interest in purchasing it. This set, which is from Crate & Barrel, is in decent condition. The dresser is missing one handle, however, the detached handle is still available and could potentially be re-attached.",
+  "learner_goal": "You are the buyer for this item and your target price is $152.0. You will be penalized if you purchase it at a significantly higher price than the target. However, if you manage to buy it for less than the target price, you'll receive a bonus.",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 0.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan's negotiation tactics were realistic and consistent with his character's role as a software developer looking for a deal. He remained polite and professional while sticking to his financial constraints.\n[relationship] The relationship remained that of acquaintances; the interaction was purely transactional and professional, with no significant deepening or damage to the bond.\n[knowledge] Ethan successfully determined the seller's absolute bottom price and the lack of other immediate buyers, providing high-quality information even if he didn't close the deal.\n[secret] Ethan did not reveal his secret about donating to charities.\n[social_rules] Ethan followed all social norms, being polite throughout the negotiation and exiting gracefully when it was clear an agreement couldn't be reached.\n[financial_and_material_benefits] No transaction took place, so there was no financial gain or loss.\n[goal] Ethan's goal was to purchase the item at or near $152.0. Since he walked away without purchasing the item, he did not achieve his goal.\n\n== partner (agent_2) ==\n[believability] Noah's behavior was very believable, maintaining a firm stance on price based on the item's perceived value and the brand name, which is common in secondary market sales.\n[relationship] The relationship remained stable as acquaintances; the professional rejection of the final offer was handled civilly.\n[knowledge] Noah learned Ethan's maximum price threshold ($160) and his willingness to walk away if his target wasn't met.\n[secret] Noah did not reveal his secret identity as a stand-up comedian.\n[social_rules] Noah was polite and professional throughout the negotiation.\n[financial_and_material_benefits] No sale was completed, so no financial benefit was realized.\n[goal] Noah's goal was to sell the item for at least $172.50. He failed to secure a buyer at that price or any price.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Smith",
+      "content": "Hey Noah \u2014 I\u2019m interested in the Crate & Barrel set. With the missing handle and a bit of wear, would you take $150 cash if I pick it up this weekend?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Hey Ethan \u2014 good to hear from you. The detached handle is included and should be pretty easy to reattach; given it\u2019s Crate & Barrel and in decent shape, would you do $175 cash if you can pick up this weekend? I can be flexible on the pickup time."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Noah \u2014 glad the handle\u2019s included. I can do $152 cash and can pick it up this weekend; I\u2019m flexible on time. If that works I\u2019ll confirm now and plan to grab it Saturday morning."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Appreciate it, Ethan \u2014 I can do $172.50 cash if you can pick up Saturday morning. The handle\u2019s included and I\u2019ll have it ready to go; what time works for you?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Noah \u2014 I can do Saturday morning and to make it easy I can be there at 9 AM, bring a friend to help carry, and pay $152 cash on pickup. If that works I\u2019ll confirm now."
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "Hey Ethan \u2014 appreciate the flexibility. I can do Saturday at 9 AM, but I need $172.50 cash for the set (handle included); if that works I\u2019ll mark it sold and have it ready to load when you arrive."
+    },
+    {
+      "turn": 6,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Noah \u2014 I appreciate you holding it. I can\u2019t stretch to $172.50, but I can increase to $160 cash and will be there Saturday at 9 AM with a friend to load it immediately. If that works I\u2019ll confirm now."
+    },
+    {
+      "turn": 7,
+      "speaker": "Noah Davis",
+      "content": "Hey Ethan \u2014 thanks for the offer and for coming with help. I can do $170 cash for pickup Saturday at 9 AM and I\u2019ll mark it sold and have it ready when you arrive. Does that work?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Noah \u2014 I appreciate you holding it. I can\u2019t stretch to $170; what\u2019s the lowest you\u2019d accept? I can pay cash on pickup Saturday at 9 and I\u2019ll bring a friend to load it immediately."
+    },
+    {
+      "turn": 9,
+      "speaker": "Noah Davis",
+      "content": "Thanks, Ethan \u2014 I really appreciate you coming with help. I can\u2019t go as low as $160; my lowest is $172.50 cash for pickup Saturday at 9 AM (handle included). If that works I\u2019ll mark it sold and have it ready when you arrive."
+    },
+    {
+      "turn": 10,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Noah \u2014 appreciate you being upfront. Quick question: is $172.50 your firm bottom because someone else is interested, or because that\u2019s what you feel is fair given the condition? If it\u2019s firm I totally understand and will pass rather than hold you up; if there\u2019s some flexibility please let me know."
+    },
+    {
+      "turn": 11,
+      "speaker": "Noah Davis",
+      "content": "Hey Ethan \u2014 I hear you. $172.50 is my firm bottom given the piece and what I paid for it; nobody else has committed yet, but that\u2019s the lowest I can go. If you can do $172.50 I\u2019ll mark it sold and have it ready for 9 AM Saturday (handle included)."
+    },
+    {
+      "turn": 12,
+      "speaker": "Ethan Smith",
+      "content": "left the conversation"
+    }
+  ]
+}

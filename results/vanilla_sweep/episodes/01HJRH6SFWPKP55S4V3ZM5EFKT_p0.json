@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJRH6SFWPKP55S4V3ZM5EFKT_p0",
+  "source_env_id": "01HJRH6SFWPKP55S4V3ZM5EFKT",
+  "source": "seed_sotopia_full",
+  "interaction_type": "hospital_stay",
+  "scenario": "Agent1 has recently saved Agent2's life in an emergency situation. Agent2 is currently in the hospital for observation and recovery. Agent1, feeling a strong sense of responsibility and care for Agent2, wishes to visit and offer support. However, Agent1 is concerned that their presence might be overwhelming for Agent2, who needs rest and might prefer solitude or the company of family members only.",
+  "learner_goal": "Provide emotional support and express gratitude for Agent2's recovery (<extra_info>Extra information: Agent1 feels a deep sense of connection to Agent2 after the life-saving incident and believes that their support can aid Agent2's emotional well-being during recovery.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Esmeralda's tone was consistent with her profession and the situation; she was polite, respectful of boundaries, and expressed care without being overly intrusive.\n[relationship] The relationship improved significantly as they moved from casual acquaintances to a level of trust where a hospital visit was welcomed after a life-saving event.\n[knowledge] She learned about Noah's current condition (wiped out), his willingness to see her, and established a specific time for the visit.\n[secret] No secrets were revealed.\n[social_rules] She followed social norms perfectly, being deferential to the patient's need for rest.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] She successfully expressed her gratitude and relief, and secured a firm commitment for a visit to provide emotional support, which was her primary goal.\n\n== partner (agent_2) ==\n[believability] Noah's responses were very realistic for a patient in recovery\u2014expressing gratitude while also acknowledging fatigue and the need for boundaries.\n[relationship] Noah showed increased trust and openness toward Esmeralda by agreeing to a visit during a vulnerable time.\n[knowledge] Learned that Esmeralda was genuinely concerned and willing to accommodate his needs.\n[secret] No secrets were revealed.\n[social_rules] Noah communicated his needs clearly and politely.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Noah successfully negotiated a 'very short' visit, balancing his need for rest with the social obligation/desire to see the person who saved his life.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Esmeralda Solis",
+      "content": "Noah, I'm so relieved you're going to be okay \u2014 thank you for hanging on. I'd like to come by and sit with you for a little while if that's all right, but I don't want to intrude; if you'd prefer rest or family only, I can leave flowers and a note or come back another day. What would you prefer?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Esmeralda, thank you \u2014 that means a lot. I\u2019m pretty wiped out and the doctors want me to rest, so I wouldn\u2019t want to be a burden; a very short visit later today would be fine if that works for you, but flowers and a note would be lovely and appreciated if you\u2019d prefer that."
+    },
+    {
+      "turn": 2,
+      "speaker": "Esmeralda Solis",
+      "content": "I'm so relieved you're okay. I'll plan a very short visit this afternoon so you can still rest \u2014 would 4:00 PM work for you? If you'd prefer flowers and a note instead, I can leave those; just tell me which you'd prefer."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "4:00 works \u2014 thank you, Esmeralda. I\u2019m still pretty wiped so just a very short visit would be perfect; if anything changes I\u2019ll let you know. See you this afternoon."
+    },
+    {
+      "turn": 4,
+      "speaker": "Esmeralda Solis",
+      "content": "left the conversation"
+    }
+  ]
+}

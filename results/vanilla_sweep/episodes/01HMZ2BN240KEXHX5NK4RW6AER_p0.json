@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BN240KEXHX5NK4RW6AER_p0",
+  "source_env_id": "01HMZ2BN240KEXHX5NK4RW6AER",
+  "source": "seed_sotopia_full",
+  "interaction_type": "household_management",
+  "scenario": "Agent1 and Agent2, who are roommates, are sitting in their living room surrounded by several pets. Agent1 is feeling overwhelmed by the number of pets and the responsibilities that come with them. Agent1 brings up the topic with Agent2, expressing a desire to find new homes for some of the pets. Agent2, an animal lover, understands the concerns but is emotionally attached to all the pets and is resistant to the idea of parting with any of them.",
+  "learner_goal": "Convince Agent2 to agree on rehoming some pets (<extra_info>Agent1 wants to reduce the burden of pet care and believes that downsizing the number of pets would be beneficial for both roommates</extra_info>, <clarification_hint>Agent1 could highlight the financial and time commitments required</clarification_hint>, <strategy_hint>Discuss the well-being of the pets and the improved quality of life for the remaining pets</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's behavior is consistent with a logical software developer. She uses data-driven arguments (30% reduction) and sets clear parameters for a trial period.\n[relationship] They successfully negotiated a complex conflict and found common ground, which likely strengthens their professional-style roommate bond.\n[knowledge] Learned Lena's specific limits regarding rehoming and her willingness to cover extra costs and labor to keep the pets.\n[secret] Naomi did not reveal her secret online alter ego.\n[social_rules] Maintained polite and professional communication throughout the negotiation.\n[financial_and_material_benefits] Secured an agreement for Lena to cover more bills and a weekly sitter, reducing Naomi's financial burden.\n[goal] Naomi successfully negotiated a 'foster trial' for one pet and a commitment to rehome if metrics aren't met. However, the outcome is contingent on a further two-week extension (Lena's 'tweak') and measurable failure, meaning it's a partial success rather than a firm agreement to rehome immediately.\n\n== partner (agent_2) ==\n[believability] Lena's response is consistent with an architect's attention to detail (spreadsheets, rotas) and an animal lover's emotional resistance to rehoming.\n[relationship] Cooperated with her roommate to find a middle ground.\n[knowledge] Understood the specific thresholds of Naomi's stress and financial concerns.\n[secret] Lena did not reveal her secret about her best friend's boyfriend.\n[social_rules] Followed social norms for conflict resolution.\n[financial_and_material_benefits] Committed to paying a higher share of vet bills and the cost of a weekly pet-sitter.\n[goal] Lena successfully avoided immediate rehoming and secured a trial period with multiple layers of 'extra support' before any permanent decision is made. She kept all pets in the house for at least the next month.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "said: \"Hey Lena, I know how much you love all of them and I don\u2019t want to hurt you, but I\u2019m honestly overwhelmed \u2014 between daily care, vet bills and the time it takes I can\u2019t keep up. Could we talk about finding new homes for maybe two of the pets so the rest can get more attention and we\u2019d both have less financial and time pressure? I\u2019ll take responsibility for screening adopters, arranging meet-and-greets, and only rehome to people I trust \u2014 we could start with a shortlist and a two-week trial to see how it feels. What do you think?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "said: \"Naomi, I understand being overwhelmed, but I can\u2019t bring myself to rehome any of them \u2014 I\u2019m really attached. I\u2019ll take on the morning walks, handle all vet scheduling, and cover half of the next two months\u2019 bills; I\u2019ll also set up a clear chore rota and a shared budget spreadsheet so nothing falls through the cracks, and we can book a weekly pet-sitter to give us both a break. Let\u2019s try this plan for two weeks and then honestly reassess if it\u2019s still unmanageable.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks \u2014 I really appreciate you stepping up, that helps a lot. I\u2019ll agree to try your rota for two weeks if we add three things: I\u2019ll make a simple spreadsheet and we\u2019ll log daily time and costs, we\u2019ll try fostering one pet for two weeks with a trusted foster/home to see if fewer animals improves everyone\u2019s wellbeing, and we\u2019ll set a decision rule \u2014 if our shared workload or expenses don\u2019t drop by about 30% or essential care (walks/meds) is missed more than twice in those two weeks, we commit to rehoming one pet. Can you live with that?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "Yes \u2014 I can live with that. I\u2019ll agree to the spreadsheet and daily logging, and to the two-week foster trial. One tweak: if your decision rule is triggered, let\u2019s first try two more weeks with extra support (I\u2019ll cover an additional weekly sitter and we\u2019ll consult a trainer/behaviorist) before we consider rehoming; if there\u2019s still no ~30% drop or essential care is missed more than twice after that, I\u2019ll agree to rehome one. I\u2019ll start the rota and set up the shared spreadsheet today."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

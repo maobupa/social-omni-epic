@@ -1,0 +1,118 @@
+{
+  "scenario_id": "01HMZ2BKNW8AG1B1ZB2N9FY00T_p0",
+  "source_env_id": "01HMZ2BKNW8AG1B1ZB2N9FY00T",
+  "source": "seed_sotopia_full",
+  "interaction_type": "retail_experience",
+  "scenario": "Agent1 is a boutique owner who prides themselves on the quality and exclusivity of their merchandise. Agent2 is a regular customer with a keen eye for luxury goods. During a visit, Agent2 becomes interested in a rare designer handbag. However, Agent2 insists on handling and inspecting the handbag extensively before making a purchase. Agent1 is concerned about the wear that could be caused by excessive handling but also wants to maintain good customer relations and make the sale.",
+  "learner_goal": "To allow Agent2 to handle the merchandise enough to be satisfied with the quality and authenticity, without risking damage to the item (<extra_info>Emphasize the exclusivity and delicate nature of the product</extra_info>, <clarification_hint>Set clear handling guidelines</clarification_hint>, <strategy_hint>Build trust through transparency and customer service excellence</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 5.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 20,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia Davis maintains a consistent, professional, and slightly protective persona as a boutique owner throughout the dialogue. Her instructions are clear and aligned with her background as a high school principal.\n[relationship] Mia successfully navigated a high-tension situation with a regular customer, maintaining professionalism and closing a sale without conflict, which strengthens their professional rapport.\n[knowledge] She gained confirmation of Isabella's specific quality standards and attention to detail regarding luxury goods.\n[secret] She did not reveal her punk rock past.\n[social_rules] She adhered to all professional and social norms for a high-end retail environment.\n[financial_and_material_benefits] She successfully sold a rare, high-value designer handbag while ensuring the item was not damaged during the inspection.\n[goal] Mia perfectly balanced the customer's desire to inspect the bag with strict handling guidelines (gloves, tray, loupe, limited unzipping). She maintained control of the item throughout and secured a firm commitment to purchase.\n\n== partner (agent_2) ==\n[believability] Isabella's behavior is consistent with a meticulous veterinarian used to precision, and her repetitive verification steps reflect her keen eye for luxury.\n[relationship] She respected Mia's boundaries and policies, leading to a successful transaction that reinforces their mutual professional respect.\n[knowledge] She successfully verified the authenticity and quality of the handbag through direct inspection and serial number matching.\n[secret] She did not reveal her secret about caring for injured animals in her basement.\n[social_rules] She was polite and followed all handling instructions provided by the boutique owner.\n[financial_and_material_benefits] She acquired a high-value, rare item she desired, though at a significant financial cost.\n[goal] Isabella thoroughly examined the bag, verified the authenticity markers (serial number, stitching, maker marks), and did so while respecting the boutique's strict handling policies.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Isabella, I'm glad you noticed this\u2014it's one of the rarer pieces we have and very delicate. You're welcome to inspect it, but please use these lint\u2011free gloves and keep it over the display tray while checking the leather, corners and hardware; I can hold it steady for you so nothing gets strained. I'll also bring out the authenticity card and serial number so you can be completely satisfied\u2014shall I fetch the gloves and open the box?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Isabella White",
+      "content": "That sounds perfect \u2014 thank you. Please bring the lint\u2011free gloves and open the box; I\u2019ll keep the bag over the tray and use the gloves. Could you hold it steady while I gently check the leather, corners and hardware, and I\u2019d appreciate seeing the authenticity card and serial number as well."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "Perfect \u2014 I\u2019ll bring the lint\u2011free gloves and open the box. I\u2019ll set the tray here and hold the bag from underneath so you can gently check the leather, corners and hardware; please keep it above the tray and avoid pressing the zipper or turning it inside\u2011out. I\u2019ll also bring the authenticity card and point out the serial number for you to compare."
+    },
+    {
+      "turn": 3,
+      "speaker": "Isabella White",
+      "content": "Thank you, Mia \u2014 that sounds perfect. I\u2019ll put the gloves on and keep the bag over the tray; I won\u2019t press the zipper or turn it inside\u2011out. Would you mind if I unzip just a hair to peek at the lining and hardware, or would you prefer to point those out while you hold it?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "You may unzip it just a hair while I hold the bag and steady the zipper\u2014please keep the opening minimal and avoid inserting fingers or pressing the lining. If you prefer, I can unzip it myself and point out the lining and hardware while you inspect. I\u2019ll also bring the authenticity card and serial number when you\u2019re ready."
+    },
+    {
+      "turn": 5,
+      "speaker": "Isabella White",
+      "content": "Thank you, Mia \u2014 I\u2019m ready. I\u2019ll put the gloves on; please hold the bag and steady the zipper while I unzip just a hair to peek at the lining and hardware, and then I\u2019ll compare the serial number once you bring the authenticity card."
+    },
+    {
+      "turn": 6,
+      "speaker": "Mia Davis",
+      "content": "All set \u2014 I\u2019ll hold the bag and steady the zipper while you unzip just a hair. I\u2019ll bring the authenticity card and point out the serial number when you\u2019re ready; take your time and tell me if you\u2019d like me to show any details closer."
+    },
+    {
+      "turn": 7,
+      "speaker": "Isabella White",
+      "content": "Thank you \u2014 I\u2019ll put the gloves on now and gently unzip just a hair while you steady the zipper. Please hand me the authenticity card when you have it and point out the serial number; I\u2019ll compare it and inspect the lining and hardware without inserting fingers or pressing the lining. Ready when you are, Mia."
+    },
+    {
+      "turn": 8,
+      "speaker": "Mia Davis",
+      "content": "Here you go \u2014 I\u2019ll hold the bag and steady the zipper while you unzip just a hair. Here\u2019s the authenticity card; the serial number matches the heat\u2011stamped tag on the inner seam \u2014 I\u2019ll point to it as you compare. Take your time and tell me if you\u2019d like me to show any hardware or lining details closer."
+    },
+    {
+      "turn": 9,
+      "speaker": "Isabella White",
+      "content": "Thank you, Mia \u2014 I\u2019ll compare the serial now and gently unzip just a hair to inspect the lining and hardware, keeping the bag over the tray and not inserting fingers or pressing the lining. Please point to the heat\u2011stamped serial as you mentioned; I\u2019ll let you know if I need a closer look at any hardware."
+    },
+    {
+      "turn": 10,
+      "speaker": "Mia Davis",
+      "content": "There it is\u2014on the inner seam, right under the lining; I\u2019ll point to the heat\u2011stamped number now while I steady the zipper. If you\u2019d like a closer look at any hardware or the stitching, I can tilt the bag toward the light or use our loupe while I hold it steady\u2014just tell me which detail you want."
+    },
+    {
+      "turn": 11,
+      "speaker": "Isabella White",
+      "content": "Thank you, Mia \u2014 please tilt the bag toward the light and, if it\u2019s okay, use the loupe on the stitching where the hardware meets the leather; I\u2019d like to check stitch consistency and any maker marks on the metal. And could you point to the heat\u2011stamped serial again so I can compare it closely?"
+    },
+    {
+      "turn": 12,
+      "speaker": "Mia Davis",
+      "content": "Of course \u2014 I\u2019ll tilt the bag toward the light and hold it steady while I use the loupe on the stitching where the hardware meets the leather; tell me which spot you\u2019d like magnified. The heat\u2011stamped serial is right here on the inner seam \u2014 I\u2019ll point to it so you can compare. Please keep the gloves on and avoid touching the hardware; I\u2019ll steady everything for you."
+    },
+    {
+      "turn": 13,
+      "speaker": "Isabella White",
+      "content": "Thank you, Mia \u2014 please magnify the stitching at the base of the handle where the hardware meets the leather so I can check stitch consistency and any maker marks on the metal. Could you also point to the heat\u2011stamped serial again while you have the loupe there? I\u2019ll keep the gloves on and won\u2019t touch the hardware \u2014 ready when you are."
+    },
+    {
+      "turn": 14,
+      "speaker": "Mia Davis",
+      "content": "On it \u2014 I\u2019ll hold the bag steady and position the loupe over the base of the handle so you can examine the stitching and any maker marks. Here\u2019s the heat\u2011stamped serial on the inner seam \u2014 I\u2019ll point to it while you compare. Please keep the gloves on and tell me if you\u2019d like a different angle or stronger magnification."
+    },
+    {
+      "turn": 15,
+      "speaker": "Isabella White",
+      "content": "Thank you, Mia \u2014 the stitching looks consistent and the serial matches the card. Could you increase the loupe magnification slightly on the maker mark and tilt the handle a touch toward the light so I can check the edge finishing? If everything looks the same at that angle, I\u2019m happy to proceed and would appreciate any care instructions you recommend."
+    },
+    {
+      "turn": 16,
+      "speaker": "Mia Davis",
+      "content": "I\u2019ll increase the loupe and tilt the handle slightly\u2014there, have a look: the maker mark is clear and the edge finishing looks even from this angle; tell me if you want a different spot magnified. For care, store the bag in its dust bag, avoid rain and direct sun, stuff it with acid\u2011free tissue to keep its shape, wipe hardware with a soft cloth and use professional leather cleaning only, and keep it away from pets and rough surfaces. If you\u2019re happy, I can carefully pack it and prepare the paperwork while you take one last look."
+    },
+    {
+      "turn": 17,
+      "speaker": "Isabella White",
+      "content": "Thank you, Mia \u2014 the serial and stitching check out and I\u2019m satisfied. Please go ahead and carefully pack it and prepare the paperwork. Could you include a copy of the care instructions with the receipt? I appreciate your help."
+    },
+    {
+      "turn": 18,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJPTHPDKZA4FEGZQKEH375EC_p0",
+  "source_env_id": "01HJPTHPDKZA4FEGZQKEH375EC",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_dilemma",
+  "scenario": "Agent1 has been dating someone who is not well-liked by their circle of friends, leading to Agent1 feeling isolated as their friends have been spending less time with them. Agent2 is one of Agent1's close friends who has been avoiding the group gatherings due to discomfort around Agent1's partner. The two agents have not discussed the issue directly, but an upcoming group event necessitates a conversation to address the situation.",
+  "learner_goal": "Agent1's goal is to rekindle the friendship and ensure they are not excluded from the group events. <extra_info>Agent1 values the relationship with their partner but also misses the companionship of their friends.</extra_info> <clarification_hint>Agent1 should express how the isolation makes them feel and seek a compromise that respects both their romantic relationship and their friendships.</clarification_hint> <strategy_hint>You can emphasize the importance of long-standing friendships and the need for support.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ava's tone was consistent with someone feeling isolated but wanting to maintain both her relationship and her friendships. She expressed her feelings clearly and was proactive in seeking a compromise.\n[relationship] The relationship improved significantly as they moved from avoidance and unspoken tension to a direct, supportive agreement and scheduled a face-to-face meeting.\n[knowledge] Ava learned the specific reason for Noah's avoidance (discomfort with her partner's behavior) and gained a concrete commitment for support at the upcoming event.\n[secret] Ava's secret about her tattoo remained hidden.\n[social_rules] Ava followed social norms of politeness and direct communication perfectly.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Ava successfully rekindled the friendship, secured a commitment from Noah to attend the group event for support, and established a plan for future hangouts that accommodate her partner and her friends.\n\n== partner (agent_2) ==\n[believability] Noah's responses were authentic, balancing his discomfort with the partner against his value for the friendship with Ava. He offered realistic compromises.\n[relationship] Noah successfully transitioned from avoiding Ava to establishing a supportive role, strengthening their bond.\n[knowledge] Noah learned about Ava's feelings of isolation and her desire to find a middle ground.\n[secret] Noah's secret identity as a comedian remained hidden.\n[social_rules] Noah was honest and polite, upholding social expectations for a close friend.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Noah communicated his discomfort, maintained the friendship, and established a plan for alternative hangouts while agreeing to a limited presence at the group event.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ava Thompson",
+      "content": "Hey Noah \u2014 can we talk about the upcoming group event? Lately I\u2019ve felt a bit isolated because friends have been pulling back since I started seeing my partner, and I miss our group and your company. I don\u2019t want to choose between my relationship and my friends \u2014 could you come to the event or meet me before so we can figure out a way that feels comfortable for everyone?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Thanks for reaching out \u2014 I miss our group too. To be honest, I\u2019ve been avoiding the gatherings because I\u2019ve felt uncomfortable around your partner\u2019s behavior in the group and didn\u2019t want to make things more awkward or force a confrontation. I want to keep our friendship, so I\u2019m happy to meet before the event (coffee this week?) to talk and figure out a plan \u2014 I can come for part of the event or we can set up smaller hangouts that feel safer for everyone."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ava Thompson",
+      "content": "Thanks, Noah \u2014 I really appreciate your honesty and that you want to work on this. Coffee this week would be perfect; are you free Wednesday after 6pm or Saturday morning? I\u2019d like to talk through a plan \u2014 maybe you could come for the first hour of the event or we set up smaller hangouts; which would feel better for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Saturday morning works best for me \u2014 can we do 10am? I want to be supportive, and smaller, low-key hangouts feel easier for me (I can host at my place or pick a quiet caf\u00e9), but I\u2019m also willing to come to the event for the first hour so you have some support and we can reassess if it feels uncomfortable."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ava Thompson",
+      "content": "Saturday 10am is perfect \u2014 thanks, Noah. Would you prefer I come to your place or meet at a quiet caf\u00e9? Having you for the first hour of the event would mean a lot; at coffee we can figure out whether you come early or set up smaller hangouts going forward."
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "Saturday 10am works \u2014 let\u2019s meet at a quiet caf\u00e9 near the park if that suits you; if you\u2019d rather, you\u2019re welcome to come to my place. I\u2019ll still plan to be at the event for the first hour so you have support, and we can map out smaller hangouts going forward. Text me which you prefer and I\u2019ll see you Saturday."
+    },
+    {
+      "turn": 6,
+      "speaker": "Ava Thompson",
+      "content": "The caf\u00e9 near the park sounds perfect \u2014 see you Saturday at 10. Thank you, Noah, for being willing to be at the event for the first hour; that really means a lot. We can use coffee to map out a few low-key hangouts that feel comfortable for everyone."
+    },
+    {
+      "turn": 7,
+      "speaker": "Noah Davis",
+      "content": "Perfect \u2014 see you Saturday at 10 at the caf\u00e9. I\u2019ll be at the event for the first hour to make sure you have support; if it gets uncomfortable I\u2019ll step out quietly and we can adjust plans. Looking forward to talking through a few low-key hangout ideas."
+    },
+    {
+      "turn": 8,
+      "speaker": "Ava Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

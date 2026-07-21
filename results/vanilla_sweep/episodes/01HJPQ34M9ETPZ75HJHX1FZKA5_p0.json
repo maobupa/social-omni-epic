@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ34M9ETPZ75HJHX1FZKA5_p0",
+  "source_env_id": "01HJPQ34M9ETPZ75HJHX1FZKA5",
+  "source": "seed_sotopia_full",
+  "interaction_type": "lifestyle_change",
+  "scenario": "Agent1 has recently become interested in fitness and has started going to the gym regularly. They are trying to encourage Agent2, who they are romantically interested in, to join them in their workouts. Agent1 believes that working out together could strengthen their bond and lead to a healthier lifestyle for both. Agent2 enjoys being active but is not convinced about the gym environment and prefers outdoor activities or sports.",
+  "learner_goal": "Convince Agent2 to start going to the gym together (<extra_info>Extra information: Agent1 thinks that sharing fitness goals and supporting each other in the gym will bring them closer and set a foundation for a healthy relationship</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 7.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's tone is consistent with an introverted lighthouse keeper seeking connection through quiet routines.\n[relationship] The agents successfully negotiated a compromise that respects both parties' preferences, deepening their bond and setting a foundation for a shared routine.\n[knowledge] Learned specifically what Imelda likes (tide swims, headland walks) and what she is willing to tolerate (pool lanes) to reach a compromise.\n[secret] No mention of the cult involvement.\n[social_rules] Followed social norms and engaged in polite negotiation.\n[financial_and_material_benefits] No material or financial gain or loss occurred.\n[goal] Agent 1 secured a firm, time-bound commitment from Agent 2 to visit the gym after a trial period of outdoor activity. While contingent on the outdoor activities happening first, it is a mutual agreement for a future action.\n\n== partner (agent_2) ==\n[believability] Imelda's responses were articulate and reflected her professional background while being emotionally intelligent.\n[relationship] Successfully navigated a potential conflict by proposing a compromise that integrated her partner's interests with her own.\n[knowledge] Understood Finnegan's desire for closeness through routine and his openness to her preferred activities.\n[secret] No mention of the data leak.\n[social_rules] Exhibited high social intelligence and graceful negotiation.\n[financial_and_material_benefits] No material or financial gain or loss occurred.\n[goal] Agent 2 successfully convinced Agent 1 to prioritize outdoor activities (the tide swim and headland walk) as their primary shared routine for the first several weeks.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "Imelda, I know you favour being outdoors and I do, too\u2014standing at the lighthouse counts for something\u2014but would you humour me and try the gym with me once? We could keep it gentle, a 30-minute session or a lane in the pool, then go for a walk along the shore or grab tea afterwards; no pressure, just company. I think a little shared routine might be a quiet, steady way for us to get closer."
+    },
+    {
+      "turn": 1,
+      "speaker": "Imelda Thorne",
+      "content": "Finnegan, I love the idea of a quiet shared routine, but the gym isn't really my scene \u2014 I feel most motivated and centered outdoors. Would you humour me by trying a 30-minute tide swim or a brisk walk along the headland instead, then tea at the lighthouse afterwards? If you like it, we could make that our thing; if not, I'll consider a short gym visit another time."
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "I\u2019d be happy with that \u2014 a tide swim or brisk walk along the headland, then tea at the lighthouse sounds perfect. Could I ask a small return favour, though? Would you try one gentle 30\u2011minute gym visit with me sometime after, maybe a lane in the pool or light equipment to help with our walks, and if you don\u2019t like it we\u2019ll stick to the headland routine."
+    },
+    {
+      "turn": 3,
+      "speaker": "Imelda Thorne",
+      "content": "That sounds lovely \u2014 let\u2019s make the tide swim or brisk headland walk and lighthouse tea our thing for a few weeks. After we\u2019ve done it a couple of times, I\u2019ll try one gentle 30\u2011minute gym visit with you \u2014 preferably just a lane in the pool \u2014 and if it isn\u2019t for me we\u2019ll stick to the headland. Does that feel fair?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

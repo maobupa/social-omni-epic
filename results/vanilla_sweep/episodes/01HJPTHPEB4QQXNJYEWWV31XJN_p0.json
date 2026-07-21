@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJPTHPEB4QQXNJYEWWV31XJN_p0",
+  "source_env_id": "01HJPTHPEB4QQXNJYEWWV31XJN",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 is feeling hurt and confused after their romantic partner, Agent2, expressed that they didn't want Agent1 to attend a family party, citing that it would be awkward. Agent1 values their relationship with Agent2 and had hoped to become more integrated into Agent2's life, including family events. Agent1 seeks to understand Agent2's perspective and to communicate their own feelings of rejection without causing a rift in their relationship.",
+  "learner_goal": "Convince Agent2 to discuss the reasons behind the discomfort and explore ways to make future family interactions less awkward (<extra_info>Extra information: Agent1 feels excluded and is seeking validation and inclusion in Agent2's family life, but wants to approach the conversation with sensitivity to Agent2's feelings.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily Greenberg's tone is professional yet emotionally honest, consistent with her background as a 45-year-old lawyer. She articulates her needs clearly while remaining sensitive to her partner's boundaries.\n[relationship] The relationship improved significantly as they moved from a state of exclusion and confusion to mutual understanding and a concrete plan for integration.\n[knowledge] Lily learned specific reasons for Hendrick's hesitation (family drama, blunt relatives), identified safe family members (Ana and Marco), and discovered specific sensitive topics to avoid (politics, past relationships, career).\n[secret] Lily's secret about anonymous donations was not relevant to the prompt and was not revealed.\n[social_rules] Lily followed all social norms of polite negotiation and relationship maintenance.\n[financial_and_material_benefits] No material or financial gain occurred.\n[goal] Lily successfully convinced Hendrick to discuss his discomfort and established a concrete, actionable plan (the dinner on Saturday) to make future family interactions less awkward.\n\n== partner (agent_2) ==\n[believability] Hendrick's behavior is consistent with someone protecting their partner from family drama. His request to avoid 'career choices' as a topic is a subtle but excellent nod to his secret about faking credentials.\n[relationship] Hendrick successfully navigated a potential rift, showing he values Lily and is willing to compromise to keep the relationship healthy.\n[knowledge] Hendrick learned how deeply Lily felt excluded and what she requires to feel comfortable (early arrival, specific heads-up on etiquette).\n[secret] Hendrick successfully protected his secret about his culinary credentials, even steering Lily away from the topic of his career for the upcoming dinner.\n[social_rules] Hendrick was polite, apologetic, and proactive in suggesting solutions.\n[financial_and_material_benefits] No material gain or loss; Lily may bring dessert, but this is negligible.\n[goal] Hendrick explained the family dynamics, protected his boundaries regarding the larger party, and negotiated a controlled path forward (the small dinner) that respected Lily's desire for inclusion.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Hendrick, can we talk about what you meant when you said it would be awkward for me to come to your family party? I felt excluded and it matters to me to be part of your life \u2014 I want to understand your concerns so we can find a way for future family events to feel comfortable for both of us. Would you be willing to tell me what worries you or suggest a compromise that might work?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Lily, I'm really sorry you felt excluded \u2014 that was never my intention. My family can be... fraught; there are a few relatives who are very blunt and we've had past drama when I introduced partners too quickly, so I worried a big family party would put you in an awkward spot. I want you included, so could we try meeting a couple of them first at a small dinner or let me talk to them ahead of time to make it easier? I care about this relationship and will take responsibility for making future introductions more comfortable for both of us."
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks, Hendrick \u2014 I appreciate you explaining and that you want to include me. A small dinner feels like a good step; could we start with two people you trust and could you give me a quick heads-up about any sensitive topics to avoid? If that works, let\u2019s pick a time in the next couple of weeks."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks, Lily \u2014 that sounds good to me. I can arrange a small dinner with my sister Ana and my cousin Marco; they\u2019re both kind and I trust they\u2019ll be gentle. A couple of heads-up items: steer clear of politics and questions about past relationships or my career choices (they can be blunt), and I\u2019ll talk to them beforehand to keep the evening light \u2014 would this coming Saturday or the following Thursday evening work for you?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "Saturday works for me \u2014 thank you for arranging this. I appreciate you talking to Ana and Marco; a heads-up about topics helps \u2014 is there anything else about how they like to be greeted or any sensitive subjects I should avoid? What time should I arrive, and would you like me to bring anything?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Hendrick Heinz",
+      "content": "Perfect \u2014 let\u2019s plan for Saturday at 7:00 PM. No need to bring anything; if you want to, a small bottle of wine or a simple dessert would be welcome but absolutely optional. Greet them with a warm hello \u2014 Ana will likely offer a hug if she\u2019s comfortable, Marco is more of a reserved handshake \u2014 and please avoid politics, questions about past relationships, or my career choices. I\u2019ll speak to them beforehand to set a light tone, and if anything feels awkward during the evening, give me a look or slip into the kitchen and I\u2019ll handle it."
+    },
+    {
+      "turn": 6,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks, Hendrick \u2014 I really appreciate you arranging this and speaking with Ana and Marco. I can bring a small dessert if that\u2019s helpful; I\u2019ll plan to arrive a few minutes early (around 6:45) to help settle things \u2014 is that okay? I\u2019ll follow your heads-up on topics and will give you a look if I need you to step in."
+    },
+    {
+      "turn": 7,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks, Lily \u2014 6:45 is perfect and there\u2019s absolutely no obligation about the dessert, though that would be lovely. I\u2019ll talk to Ana and Marco again to set the tone and be there to steer the evening if anything feels awkward. I\u2019ll text you Saturday afternoon with the address and a quick note \u2014 looking forward to it."
+    },
+    {
+      "turn": 8,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

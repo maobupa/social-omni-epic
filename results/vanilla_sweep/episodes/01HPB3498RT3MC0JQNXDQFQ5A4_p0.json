@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB3498RT3MC0JQNXDQFQ5A4_p0",
+  "source_env_id": "01HPB3498RT3MC0JQNXDQFQ5A4",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_content",
+  "scenario": "Agent1 and Agent2 are both avid anglers who frequent the same popular fishing spot at a local lake. Agent1 is an early riser who prefers the calm of dawn to catch fish, using traditional rod and reel techniques. Agent2, on the other hand, is a fan of modern fishing gadgets and often uses a loud, motorized bait boat to drop lines at various points in the water. One morning, both agents arrive at the lake simultaneously, and Agent1 is concerned that the noise from Agent2's bait boat will disturb the fish and ruin the tranquility of the fishing experience.",
+  "learner_goal": "Secure a peaceful and productive fishing session by finding a way to minimize the disturbance caused by the other's fishing method (<extra_info>Extra information: You are Agent1, you value the quiet and traditional approach to fishing and believe that silence is key to a successful catch.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara stayed in character as a polite but firm nature enthusiast and successfully communicated her need for silence based on her traditional fishing values.\n[relationship] The interaction was friendly and collaborative, maintaining the established bond between the two characters.\n[knowledge] She learned that Benjamin was willing to accommodate her and discovered he has a low-noise setting on his equipment.\n[secret] Her secret involvement in animal-rights extremism was not mentioned.\n[social_rules] She followed social norms for addressing a friend with a request.\n[financial_and_material_benefits] No material or financial benefits were gained or lost.\n[goal] Benjamin offered two solutions to minimize disturbance, both of which align with Amara's goal. However, Amara left the conversation before explicitly confirming which option she preferred or finalizing the agreement, leaving the outcome to Benjamin's discretion.\n\n== partner (agent_2) ==\n[believability] Benjamin's response was highly believable, showing his characteristic passion for tech tempered by his values as an activist who respects others.\n[relationship] Benjamin was helpful and accommodating, reinforcing the friendship.\n[knowledge] He learned specifically how his hobby affects Amara's fishing experience and her preference for dawn tranquility.\n[secret] His family background remained a secret.\n[social_rules] He was polite and apologetic when confronted with the issue.\n[financial_and_material_benefits] No material or financial benefits were gained or lost.\n[goal] Benjamin successfully proposed a balance between using his gadgets and respecting Amara. However, since she left the conversation without choosing an option, he does not yet have a definitive plan to proceed without potentially bothering her.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Hey Ben \u2014 glad to see you. Quick favor: the motorized bait boat's noise really rattles the fish at dawn; could you either run it a bit farther down the shore or hold off for an hour so I can do a quiet rod-and-reel session? I'm happy to switch spots afterward or help set a quieter drop if that works for you."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Hey Amara \u2014 sorry, I didn\u2019t mean to throw off your dawn. I can move the bait boat further down the shore and run it on a low-noise setting, or if you\u2019d prefer I\u2019ll hold off for an hour \u2014 which do you want? I can also set a quieter drop for you afterward if that helps."
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

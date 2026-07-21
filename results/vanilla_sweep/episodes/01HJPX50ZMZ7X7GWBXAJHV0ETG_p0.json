@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPX50ZMZ7X7GWBXAJHV0ETG_p0",
+  "source_env_id": "01HJPX50ZMZ7X7GWBXAJHV0ETG",
+  "source": "seed_sotopia_full",
+  "interaction_type": "recreational_activities",
+  "scenario": "Agent1 challenged Agent2 to a soccer match to enjoy some outdoor activity and have fun. However, Agent1 is highly competitive and wants to keep score, aiming to win, while Agent2 views the match as a casual game and is not interested in keeping score. The relationship between Agent1 and Agent2 is that of siblings who often engage in sports together. The interaction involves Agent1 trying to persuade Agent2 to agree to a more competitive game, while Agent2 prefers a relaxed approach without keeping score.",
+  "learner_goal": "You are Agent1, who has initiated a soccer match and is eager to make it competitive by keeping score. Your goal is to convince Agent2 to agree to this format. <extra_info>Consider how the competitive aspect can make the game more engaging for you and possibly for Agent2 as well.</extra_info> <clarification_hint>Express why keeping score is important to you and how it adds to the enjoyment of the game.</clarification_hint> <strategy_hint>Offer incentives or compromises that can make the idea of a competitive match more appealing to Agent2.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara stayed true to her competitive nature while maintaining the friendly sibling dynamic. She effectively used incentives (snacks/dinner) to push for her preference.\n[relationship] The siblings reached a compromise that respected both parties' feelings, maintaining a positive bond through mutual agreement.\n[knowledge] She learned Ethan's specific boundaries regarding performance pressure and his willingness to compromise on structure.\n[secret] No secrets were revealed or hinted at during the negotiation.\n[social_rules] She followed all social norms and was polite throughout the negotiation.\n[financial_and_material_benefits] The dinner/snack outcome is contingent on the match results, so no immediate benefit was gained.\n[goal] Amara successfully convinced Ethan to keep a running tally of the score for the duration of the match, which was her primary objective, even if it was framed as 'relaxed'.\n\n== partner (agent_2) ==\n[believability] Ethan's responses were consistent with a person seeking a relaxed environment, and his suggestions for mini-challenges felt authentic to his character.\n[relationship] Ethan successfully navigated his sister's competitive streak without causing conflict, strengthening the sibling dynamic.\n[knowledge] He gained clarity on how much structure Amara needs to enjoy an activity.\n[secret] His secret as a romance novel author remained safe.\n[social_rules] He was cordial and constructive in his counter-proposals.\n[financial_and_material_benefits] No material benefits or losses occurred during the conversation.\n[goal] While he maintained a friendly game, he ultimately conceded to keeping a score (the 'running tally'), which was the specific thing he wanted to avoid.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Hey Ethan \u2014 can we keep score today? I just find it makes the game more fun and gives us little goals to push for; how about first-to-3 so it\u2019s short but competitive. We\u2019ll keep it friendly \u2014 no trash talk \u2014 and loser buys dinner (or I\u2019ll bring your favorite post-game snacks). Sound good?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "I get why you like first-to-3, but I\u2019d prefer to keep it casual \u2014 counting goals turns it into pressure and I want us just to enjoy kicking around without stressing about who\u2019s 'winning.' How about timed halves (say 20 minutes) with position switches and little fun mini-challenges between us (best dribble, nicest assist) instead of a score? If you really want a competitive edge, we can do one short first-to-3 warm-up and then drop the tally \u2014 loser still brings snacks or I\u2019ll make dessert, deal?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "Okay, I like the timed halves \u2014 let\u2019s do the short first-to-3 warm-up you suggested to loosen up. After that, can we keep a relaxed running tally during the 20-minute halves? I promise no trash talk and low pressure \u2014 it\u2019s just small goals to chase, and loser still buys dinner (or I\u2019ll bring your favorite snacks)."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "Alright \u2014 I\u2019ll do the first-to-3 warm-up and the 20-minute halves. I\u2019m fine with a relaxed running tally as long as it stays low-pressure: no stopping play to check scores, no trash talk, and we treat it as a loose count for fun; if that feels too tense, let\u2019s only keep score for the mini-challenges (best dribble, nicest assist) so the game stays about playing. Loser still buys dinner (or I\u2019ll make dessert) \u2014 see you at the field."
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

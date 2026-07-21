@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB34M0NZ13PG46CG5JRPZZN_p0",
+  "source_env_id": "01HPB34M0NZ13PG46CG5JRPZZN",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inheritance_dilemma",
+  "scenario": "Agent1 and agent2, who are siblings, have inherited a significant piece of artwork from a recently deceased relative. Both agents have different ideas about what should be done with the artwork. Agent1 believes it should be kept in the family as a cherished heirloom, while agent2 feels it should be sold to benefit from the financial gain. The agents must come to an agreement that respects both perspectives.",
+  "learner_goal": "Find a compromise regarding the inherited artwork that honors the family legacy and addresses financial considerations (<extra_info>Extra information: agent1 has an emotional attachment to the artwork and sees it as a family treasure.</extra_info> <clarification_hint>Clarification: agent1 should acknowledge the practical benefits of selling the artwork while advocating for its sentimental value.</clarification_hint> <strategy_hint>Hint: agent1 might suggest loaning the artwork to a museum or creating replicas to sell while keeping the original.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan played the role of the sentimental but pragmatic brother well, utilizing his background in high-quality aesthetics to suggest replicas while maintaining the heirloom's integrity.\n[relationship] The siblings moved from a potentially contentious conflict over an inheritance to a collaborative partnership, strengthening their bond.\n[knowledge] Ethan learned about Baxter's specific professional contacts and the technical requirements (conservator reports, insurance) for a museum loan.\n[secret] Ethan did not reveal his secret about being a romance novelist.\n[social_rules] Ethan followed all social norms and displayed professional courtesy.\n[financial_and_material_benefits] Ethan secured an agreement for a 50/50 split of future revenues from prints and loan fees while keeping the physical asset in the family.\n[goal] Ethan successfully negotiated a compromise that keeps the original artwork in the family (honoring legacy) while establishing a clear 50/50 financial split for revenue-generating activities like prints and loans.\n\n== partner (agent_2) ==\n[believability] Baxter's responses were highly consistent with his background as an antique restorer, focusing on technical details like condition reports and insurance.\n[relationship] The siblings reached a harmonious agreement, avoiding the typical conflict associated with divided inheritance.\n[knowledge] Baxter learned that Ethan has contacts for high-quality printing and is willing to fund the initial appraisal.\n[secret] Baxter did not reveal his possession of a priceless artifact.\n[social_rules] Baxter followed all social norms and communicated professionally.\n[financial_and_material_benefits] Baxter secured a 50/50 split of revenue and Ethan agreed to cover the upfront cost of the appraisal.\n[goal] Baxter maximized the financial potential through prints and loan fees while agreeing to a compromise that respects the family sentiment, though he did give up the prospect of a full sale of the original asset.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "Baxter Sterling, I get why you\u2019d want to sell \u2014 there\u2019s real value there and it could help both of us. That painting\u2019s been part of my family for years though, and it feels like something we should preserve. What if we compromise: get it professionally appraised, loan the original to a local museum for a fee or exhibition, and commission high-quality replicas or prints we can sell? That way we keep the heirloom and still get some of the financial benefit."
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "I like your plan \u2014 first step is a professional appraisal and a conservator\u2019s condition report so we know both market value and whether it can safely travel. If a museum wants it on loan, we demand a proper loan fee, insurance and strict conservation/display conditions, and split that fee and the profits from limited-edition prints 50/50; if you insist the original stays in the family, we can set up a rotating custody arrangement or a small family trust so it remains preserved while we both benefit. I can reach out to a couple of appraisers and conservators I trust if you want me to."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "Baxter Sterling, that all sounds fair and thoughtful. Please reach out to the appraisers and conservators you trust \u2014 I\u2019ll cover the appraisal cost and can arrange high-quality limited-edition prints through my contacts. I\u2019m on board with a 50/50 split for loan fees and print profits and a rotating custody or small family trust; let\u2019s meet after we have the appraisal and condition report to pick museum partners and finalize the terms."
+    },
+    {
+      "turn": 3,
+      "speaker": "Baxter Sterling",
+      "content": "Thanks, Ethan \u2014 I appreciate you covering the appraisal. I\u2019ll reach out to two appraisers and a conservator I trust this week and aim to have the appraisal and condition report within 10\u201314 days; I\u2019ll also gather preliminary estimates for loan fees, insurance, and printing costs. Once we have the reports, let\u2019s meet to pick museum partners and finalize the rotating custody or small trust arrangement. Sound good?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Ethan Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

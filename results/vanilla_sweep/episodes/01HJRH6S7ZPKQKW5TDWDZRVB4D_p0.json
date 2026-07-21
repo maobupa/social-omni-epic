@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJRH6S7ZPKQKW5TDWDZRVB4D_p0",
+  "source_env_id": "01HJRH6S7ZPKQKW5TDWDZRVB4D",
+  "source": "seed_sotopia_full",
+  "interaction_type": "refusing_to_talk_to_someone",
+  "scenario": "Agent1 and Agent2, who are friends, had a disagreement over a misunderstanding. Since the incident, Agent2 has been giving Agent1 the silent treatment. <p viewer=\"environment\">Agent1 misses the friendship and wants to resolve the issue, but Agent2 is still hurt and is not ready to initiate conversation.</p> Agent1 decides to approach Agent2 at a mutual friend's gathering, hoping to break the ice and mend their relationship.",
+  "learner_goal": "Your goal is to re-establish communication with Agent2 and repair the friendship. <extra_info> You are aware that Agent2 is still upset, but you value the relationship and want to make amends. </extra_info><clarification_hint> Be empathetic towards Agent2's feelings and understand that rebuilding trust may take time. </clarification_hint><strategy_hint> You can demonstrate your sincerity by acknowledging the misunderstanding and showing that you are willing to listen and understand their perspective. </strategy_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara's dialogue is perfectly consistent with her character's background as an empathetic wildlife biologist and her specific goal of making amends. She was respectful, patient, and followed her strategy of acknowledging the misunderstanding.\n[relationship] Amara successfully moved the relationship from the 'silent treatment' phase to a scheduled, agreed-upon time for a resolution-focused conversation, showing significant trust rebuilding.\n[knowledge] She learned that Oliver is indeed willing to talk and identified a specific time window where he feels comfortable enough to engage.\n[secret] She did not reveal her involvement in animal-rights extremism.\n[social_rules] She followed all social norms of politeness and boundaries, especially appropriate for a public gathering.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Amara fully re-established communication and secured a firm, mutual commitment to a follow-up meeting specifically designed to repair the friendship. While the actual healing happens later, the 're-establish communication' and 'make amends' process was successfully initiated and agreed upon.\n\n== partner (agent_2) ==\n[believability] Oliver's responses realistically reflect someone who is still hurt but values the neighborly bond. His setting of boundaries (20-30 minutes, tomorrow) is very consistent with his introverted architect profile and the scenario prompt.\n[relationship] He moved from a stance of silence to a stance of planned engagement, indicating a positive shift in the relationship's outlook.\n[knowledge] He confirmed that Amara is genuinely remorseful and willing to respect his boundaries.\n[secret] He did not reveal his hidden feelings for his neighbor.\n[social_rules] He was polite and assertive about his needs without being rude.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Oliver successfully maintained his stance of not speaking about the issue immediately while simultaneously setting firm boundaries for when he would be ready. He controlled the pace and the space for the interaction exactly as intended.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Oliver, can we talk for a minute? I feel awful about the misunderstanding \u2014 I never meant to hurt you, and I value our neighborly friendship. If you\u2019re willing, I\u2019d really like to hear how you\u2019re feeling and try to make things right."
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "Amara, I appreciate you saying that and I believe you didn\u2019t mean to hurt me. I\u2019m still processing what happened and I\u2019m not ready to talk about it right now. I do want to have a calm conversation when I\u2019ve had some time\u2014could we check in tomorrow or later this week?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "I understand \u2014 thank you for being honest. I can check in tomorrow evening or later this week; which would you prefer? I\u2019ll give you the space you need and I\u2019m here when you\u2019re ready."
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "Tomorrow evening works for me \u2014 can we talk around 7:00 PM for about 20\u201330 minutes? I appreciate you giving me space; I want a calm, honest conversation but I may need to keep it brief as I\u2019m still processing."
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

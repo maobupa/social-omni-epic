@@ -1,0 +1,98 @@
+{
+  "scenario_id": "01HJPTHN5TN95JDQ7SH4DYK65J_p0",
+  "source_env_id": "01HJPTHN5TN95JDQ7SH4DYK65J",
+  "source": "seed_sotopia_full",
+  "interaction_type": "job_fair",
+  "scenario": "Two individuals meet at a job fair. Agent1 is seeking new career opportunities after leaving a previous job due to dissatisfaction with pay and work conditions. Agent2 represents a company known for its progressive work environment and is looking for passionate individuals. Agent1 wants to ensure the new job will be fulfilling and well-compensated, while Agent2 wants to recruit the best talent.",
+  "learner_goal": "Agent1 wants to find a job that is both financially rewarding and personally fulfilling, <extra_info>concerned about work-life balance and company culture</extra_info>, <clarification_hint>asks about company policies, advancement opportunities, and employee satisfaction</clarification_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 16,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily acts consistently as a professional lawyer, asking pertinent questions and providing clear details about her experience and requirements.\n[relationship] The interaction strengthens their existing professional relationship, with Lena actively assisting Lily's career move.\n[knowledge] Lily gains comprehensive knowledge about the salary bands, hybrid policies, advancement opportunities, and turnover rates at the company.\n[secret] Lily's secret about charitable donations was not relevant and not revealed.\n[social_rules] Lily maintained professional etiquette throughout the interaction.\n[financial_and_material_benefits] No immediate financial gain, though a high-paying job opportunity was secured.\n[goal] Lily successfully inquired about all her requirements (pay, culture, policies) and secured a specific interview time with the hiring manager.\n\n== partner (agent_2) ==\n[believability] Lena acts as a helpful recruiter/referral source, providing detailed company information.\n[relationship] Lena builds goodwill by helping a professional contact with a high-quality referral.\n[knowledge] Lena learns about Lily's specific career goals, experience level, and availability.\n[secret] Lena's secret about the boyfriend was not revealed.\n[social_rules] Lena followed social and professional norms for a job fair/referral interaction.\n[financial_and_material_benefits] No immediate material gain, though she successfully funneled talent into her company's pipeline.\n[goal] Lena successfully recruited a highly qualified candidate (Lily) for a specific opening and highlighted the company's strengths as required.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Hi Lena \u2014 great to see you again since the community event. I left my last firm because pay and conditions weren\u2019t working for me, and I\u2019m now looking for a legal role that\u2019s both well\u2011compensated and genuinely fulfilling; could you tell me about typical compensation ranges for legal/compliance roles at your company, your hybrid/remote and flexible-hours policies, and how you approach advancement and measuring employee satisfaction/turnover? If you prefer, I\u2019d also appreciate being connected with the hiring manager for those roles."
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Hi Lily \u2014 glad to see you. For legal/compliance roles we typically offer (depending on market and level) roughly: entry/associate $90k\u2013$120k, mid-level $120k\u2013$160k, and senior/counsel up to $200k+ with competitive bonuses and equity where applicable. We have a flexible hybrid policy (most teams 2\u20133 days in office with flexible hours and some fully remote options), clear career ladders with mentorship and quarterly reviews, and we measure satisfaction with quarterly engagement surveys and exit interviews \u2014 our legal team's turnover has been below industry average and the company was recently recognized as a Best Place to Work; employees often highlight pay transparency and manager support. I can introduce you to the hiring manager \u2014 would you prefer a short email intro or a 20\u2011minute chat?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks, Lena \u2014 that\u2019s really helpful. I\u2019d prefer a 20\u2011minute chat so I can ask about the specific opening\u2019s responsibilities, the targeted compensation band for that role, and typical day\u2011to\u2011day workload/work\u2011life balance. Could you introduce me to the hiring manager by email and include their name and the level of the role you\u2019re recruiting for? I\u2019m available Tuesday and Wednesday mornings next week, or Thursday afternoon if that works better \u2014 I can share exact times once you confirm."
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks, Lily \u2014 I can make that intro by email. The hiring manager is Jordan Patel (Legal Hiring Manager); the opening is Compliance Counsel, mid-level (target compensation band $120k\u2013$160k). Do any of these 20\u2011minute slots work for you: Tue 9:00\u20139:20am, Wed 9:30\u20139:50am, or Thu 2:00\u20132:20pm? If you\u2019d like, I can attach your resume in the intro \u2014 should I include it, or would you prefer to send a version after I introduce you?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks, Lena \u2014 Wed 9:30\u20139:50am works best for me. Please go ahead and attach my resume in the intro; I\u2019ll send you the most current version after you\u2019ve made the intro if you need it. Looking forward to speaking with Jordan."
+    },
+    {
+      "turn": 5,
+      "speaker": "Lena Goodwin",
+      "content": "Great \u2014 thanks, Lily. I\u2019ll send an email intro to Jordan Patel now and attach your resume, requesting the Wed 9:30\u20139:50am slot. I\u2019ll cc you on the message so you have Jordan\u2019s contact and the calendar invite; is there anything specific you\u2019d like me to highlight about your background in the intro?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Lily Greenberg",
+      "content": "Please highlight my 10+ years in corporate legal/compliance work, experience building compliance programs and reducing regulatory risk, and my collaborative, mentorship-oriented leadership style. Also note that I\u2019m looking for a role with clear advancement and a healthy work\u2013life balance. I\u2019ll send you my most current resume right away in case you prefer to attach that instead \u2014 thanks so much for making the intro."
+    },
+    {
+      "turn": 7,
+      "speaker": "Lena Goodwin",
+      "content": "Perfect \u2014 thanks, Lily. Once I get your updated resume I\u2019ll attach it and send the intro to Jordan, requesting Wed 9:30\u20139:50am and cc\u2019ing you. I\u2019ll highlight your 10+ years in corporate compliance, program-building and risk-reduction experience, and mentorship-oriented leadership plus your interest in clear advancement and work\u2013life balance; expect the email shortly and tell me if you want any wording changed."
+    },
+    {
+      "turn": 8,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks, Lena \u2014 I\u2019m sending my updated resume to you now. Could you also note that I\u2019m particularly interested in roles with mentorship responsibilities and hybrid/remote flexibility? I appreciate you arranging Wed 9:30\u20139:50am \u2014 I\u2019ll watch for the email and calendar invite."
+    },
+    {
+      "turn": 9,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks, Lily \u2014 I received your resume. I\u2019ll highlight your mentorship experience and hybrid/remote preference, attach the resume, and introduce you to Jordan Patel requesting Wed 9:30\u20139:50am; I\u2019ll cc you so you\u2019ll get the calendar invite. Expect the email shortly and tell me if you want any wording adjusted."
+    },
+    {
+      "turn": 10,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks so much, Lena \u2014 I really appreciate you doing this. Please feel free to mention my openness to discuss targeted compensation and specific responsibilities during the call, and let Jordan know I prioritize mentorship opportunities and hybrid flexibility. I\u2019ll watch for the email and calendar invite and can send anything else you need."
+    },
+    {
+      "turn": 11,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks, Lily \u2014 I\u2019ll mention your openness to discuss targeted compensation and responsibilities, emphasize mentorship and hybrid flexibility, attach your resume, and request Wed 9:30\u20139:50am. I\u2019ll cc you on the intro and send the calendar invite; if Jordan proposes a different time I\u2019ll loop you in to confirm. Looking forward to hearing how the conversation goes."
+    },
+    {
+      "turn": 12,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks again, Lena \u2014 I really appreciate you making the intro. I\u2019ll watch for the email and calendar invite for Wed 9:30\u20139:50am and can be flexible if Jordan proposes an alternate slot (I\u2019m also available Tue morning or Thu afternoon); please let me know if you want any final tweaks to the intro wording."
+    },
+    {
+      "turn": 13,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks, Lily \u2014 I\u2019ll send the intro to Jordan shortly and attach your resume, requesting Wed 9:30\u20139:50am. I\u2019ll cc you so you receive Jordan\u2019s contact and the calendar invite; if they propose a different time I\u2019ll check with you before confirming. Looking forward to hearing how it goes \u2014 I\u2019ll follow up after the chat."
+    },
+    {
+      "turn": 14,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

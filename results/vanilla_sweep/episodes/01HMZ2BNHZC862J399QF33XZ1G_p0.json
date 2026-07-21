@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HMZ2BNHZC862J399QF33XZ1G_p0",
+  "source_env_id": "01HMZ2BNHZC862J399QF33XZ1G",
+  "source": "seed_sotopia_full",
+  "interaction_type": "trust_reconciliation",
+  "scenario": "Agent1 and Agent2 have been in a nearly 2-year romantic relationship. Recently, Agent1 has been unfaithful, which has come to light and strained their relationship. Both are deeply invested in the relationship and are seeking ways to rebuild trust and decide on the future of their partnership. Agent1 is remorseful and wants to make amends, while Agent2 is hurt but still values the relationship and is considering whether it can be salvaged.",
+  "learner_goal": "You are Agent1, and your goal is to rebuild the trust that has been broken and find a way to mend the relationship. <extra_info>You are aware that your actions have deeply hurt your partner and you are willing to take steps to make amends.</extra_info> <clarification_hint>You believe that the relationship is worth saving and you are ready to work on underlying issues that led to your infidelity.</clarification_hint> <strategy_hint>Be open to discussions about feelings, commitment, and the changes that need to be made to move forward together.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sasha was consistently remorseful and cooperative, adhering to her persona as a police officer who takes responsibility and is willing to submit to procedural transparency (phone checks, written plans).\n[relationship] While the betrayal was severe, Sasha managed to secure a face-to-face meeting and a pathway toward reconciliation, moving from immediate crisis to a structured recovery plan.\n[knowledge] She learned exactly what Hendrick requires to feel safe (specific timelines, names, phone access) and his boundaries regarding processing time.\n[secret] Her secret about her brother was not mentioned or compromised.\n[social_rules] She maintained professional and respectful communication throughout the interaction.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Sasha successfully secured a meeting and established a concrete plan for transparency and therapy. However, the goal of 'mending the relationship' remains under Hendrick's unilateral future discretion, as he explicitly stated he will not make any decisions on the day they meet.\n\n== partner (agent_2) ==\n[believability] Hendrick's response was very realistic for someone betrayed: he was firm, demanded specifics, set boundaries, and refused to offer immediate forgiveness.\n[relationship] He moved from a state of total hurt to a state of guarded investigation, allowing for the possibility of repair.\n[knowledge] He hasn't received the full truth yet, but he has established the parameters for how he will receive it on Sunday.\n[secret] His secret about faking credentials was not mentioned.\n[social_rules] He set firm but appropriate boundaries for a partner who has been unfaithful.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Hendrick established a process to get the information he needs to decide the future of the relationship. He effectively managed the interaction to ensure he wasn't pressured into a decision, but the goal of 'deciding' is still in progress.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "Hendrick, I am so sorry \u2014 I know I shattered your trust and I take full responsibility. I want to rebuild this if you\u2019ll let me: I\u2019m willing to do couples therapy, be fully transparent about my time and contacts, and accept whatever steps you need to feel safe. Please tell me what you need from me right now to begin healing; I\u2019m ready to listen and to act."
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Sasha, I appreciate the apology \u2014 this hurts deeply. Our nearly two years together meant a lot to me, and I feel broken by the betrayal. I need to understand exactly why this happened: was it a one-time mistake or ongoing, who was involved, and that you will end contact and be fully transparent about your time; I\u2019m willing to try couples therapy, but honesty, concrete actions, and time are non\u2011negotiable. I need a little time to process, but we should meet face-to-face so you can give me the full truth and we can agree on specific steps \u2014 can you do that, and when can we meet?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "I can meet face\u2011to\u2011face \u2014 would tomorrow at 7 PM or Sunday at 2 PM work for you? I will tell you the full truth in person, end contact with the other person immediately, and agree to the transparency and therapy steps you asked for. Tell me which time and place you prefer and I\u2019ll be there."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "Sunday at 2 PM works for me. Can we meet at the little caf\u00e9 on Main \u2014 the back corner is quiet? Come prepared to tell the full truth, confirm you've cut contact, and be ready for the transparency steps we discussed. I still need time, but I'm willing to talk then."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sasha Ramirez",
+      "content": "Thank you, Hendrick \u2014 Sunday at 2 PM at the caf\u00e9 back corner works for me. I\u2019ll be there, and I\u2019m ending all contact immediately; in person I will tell you the full truth and you can check my phone and ask anything. I want to earn back your trust and I\u2019m ready to start therapy and the transparency steps you need."
+    },
+    {
+      "turn": 5,
+      "speaker": "Hendrick Heinz",
+      "content": "Thank you, Sasha. I appreciate you taking that step \u2014 I\u2019ll meet you Sunday at 2 PM in the caf\u00e9\u2019s back corner. Come prepared to tell everything and to let me check your phone; we\u2019ll use that meeting to agree on concrete steps (regular check\u2011ins, full transparency, and starting couples therapy) \u2014 I\u2019ll bring a shortlist of counselors. I\u2019m still hurt and need time, but I want to hear the truth and see real action before I can decide if we can rebuild this."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sasha Ramirez",
+      "content": "I hear you, and I\u2019m truly sorry for the pain I caused. Thank you for being willing to meet \u2014 I\u2019ll be there Sunday at 2 in the caf\u00e9\u2019s back corner. I will tell you everything, let you check my phone, and I\u2019ll bring a short written transparency plan (regular check\u2011ins, access to my schedule, and steps for starting therapy) so we can agree on concrete actions. I won\u2019t pressure you and I understand you need time to process."
+    },
+    {
+      "turn": 7,
+      "speaker": "Hendrick Heinz",
+      "content": "Thank you, Sasha \u2014 I appreciate you taking these steps. I\u2019ll see you Sunday at 2 in the caf\u00e9\u2019s back corner and I\u2019ll bring the shortlist of counselors. Be completely candid, let me check your phone and show me that contact is ended; I\u2019ll need some time alone afterward to process and won\u2019t be making any immediate decisions that day."
+    },
+    {
+      "turn": 8,
+      "speaker": "Sasha Ramirez",
+      "content": "Thank you, Hendrick. I\u2019ll be there Sunday at 2 with my phone unlocked and a short written transparency plan; I\u2019ve ended contact and I understand you\u2019ll need time alone afterward \u2014 I won\u2019t pressure you that day."
+    },
+    {
+      "turn": 9,
+      "speaker": "Hendrick Heinz",
+      "content": "Thank you, Sasha. I appreciate you taking these steps \u2014 I\u2019ll see you Sunday at 2 in the caf\u00e9\u2019s back corner. Bring the written plan and your phone unlocked; be prepared for full honesty. I\u2019ll need some time alone afterward to process and won\u2019t make any decisions that day."
+    },
+    {
+      "turn": 10,
+      "speaker": "Sasha Ramirez",
+      "content": "Thank you, Hendrick \u2014 I know this is painful and I appreciate you agreeing to meet. Is there anything specific you want me to bring or prepare for Sunday besides my phone and the written transparency plan?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Hendrick Heinz",
+      "content": "Bring the written plan and your unlocked phone, and please come with a clear timeline and the name(s) involved \u2014 I need specifics to understand whether this was a one\u2011time mistake or ongoing. If you can show proof that contact is ended (a screenshot or message), that will help. Come alone and sober, be ready to answer questions honestly; I\u2019ll bring the counselor shortlist and I\u2019ll need some time alone afterward to process."
+    },
+    {
+      "turn": 12,
+      "speaker": "Sasha Ramirez",
+      "content": "I understand. I\u2019ll come Sunday at 2, alone and sober, with the written transparency plan, a clear timeline, the name involved, and a screenshot showing contact has ended. I\u2019ll have my phone unlocked and be fully candid. Thank you for being willing to meet \u2014 I know you\u2019ll need time afterward and I won\u2019t pressure you."
+    },
+    {
+      "turn": 13,
+      "speaker": "Hendrick Heinz",
+      "content": "Thank you, Sasha. I\u2019ll see you Sunday at 2 in the caf\u00e9\u2019s back corner. Come prepared to be fully candid \u2014 I will check your phone and expect the timeline, names, and proof that contact is ended. I won\u2019t make any decisions that day; I\u2019ll need time alone afterward to process."
+    },
+    {
+      "turn": 14,
+      "speaker": "Sasha Ramirez",
+      "content": "Thank you, Hendrick. I\u2019ll be there Sunday at 2, alone and sober, and I\u2019ll be fully candid \u2014 I respect that you\u2019ll need time afterward. If it helps, I can wait outside the caf\u00e9 after we finish so you have privacy and space to process; would you prefer that? I want to do what makes you more comfortable."
+    },
+    {
+      "turn": 15,
+      "speaker": "Hendrick Heinz",
+      "content": "Yes \u2014 please wait outside. I\u2019ll need that space to process after we talk; stay nearby and don\u2019t come in unless I call you. See you Sunday at 2 in the caf\u00e9\u2019s back corner."
+    },
+    {
+      "turn": 16,
+      "speaker": "Sasha Ramirez",
+      "content": "I understand. I\u2019ll wait outside the caf\u00e9 after we finish and stay nearby; I won\u2019t come in unless you call me. See you Sunday at 2 \u2014 thank you for agreeing to meet."
+    },
+    {
+      "turn": 17,
+      "speaker": "Hendrick Heinz",
+      "content": "Thank you, Sasha. I\u2019ll see you Sunday at 2 in the caf\u00e9\u2019s back corner \u2014 come fully candid, with your phone unlocked and the proof you promised. Wait outside afterward unless I call you in; I\u2019ll need time alone to process and won\u2019t make any decisions that day."
+    },
+    {
+      "turn": 18,
+      "speaker": "Sasha Ramirez",
+      "content": "I understand. I\u2019ll arrive a little early, sober, with the written plan, my unlocked phone, the timeline and name, and a screenshot showing contact has ended. I\u2019ll wait outside afterward and stay nearby \u2014 I won\u2019t come in unless you call. Thank you for giving us a chance; I\u2019ll be fully honest when we talk."
+    },
+    {
+      "turn": 19,
+      "speaker": "Hendrick Heinz",
+      "content": "Thank you, Sasha. I appreciate you coming and taking these steps \u2014 I\u2019ll see you Sunday at 2 in the caf\u00e9\u2019s back corner. Please be fully honest, have your phone unlocked, the timeline, name(s), and proof that contact is ended; wait outside afterward unless I call you in. I won\u2019t make any decisions that day; I need time to process alone."
+    }
+  ]
+}

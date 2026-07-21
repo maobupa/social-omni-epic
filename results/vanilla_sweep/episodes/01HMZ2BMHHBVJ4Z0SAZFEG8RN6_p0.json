@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HMZ2BMHHBVJ4Z0SAZFEG8RN6_p0",
+  "source_env_id": "01HMZ2BMHHBVJ4Z0SAZFEG8RN6",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_gathering",
+  "scenario": "Agent1 has been invited over for dinner by Agent2, who is a skilled amateur chef looking to impress with their culinary skills. Agent1 is a food enthusiast but has recently adopted a strict dietary regime. The relationship between the two is 'acquaintance' as they have interacted a few times at local food events but have never shared a meal together. Agent1 accepts the invitation, eager to socialize and enjoy a home-cooked meal, while also being mindful of their dietary restrictions.",
+  "learner_goal": "Your goal is to enjoy the dinner and socialize with Agent2 while sticking to your dietary regime. <extra_info> You are worried that refusing certain dishes might offend Agent2. </extra_info><clarification_hint>You may need to communicate your dietary restrictions in advance. </clarification_hint><strategy_hint>Appreciate the effort Agent2 has put into the meal and suggest ways to accommodate your diet without causing inconvenience. </strategy_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 1.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Rafael maintained a consistent persona as a polite, health-conscious professional. His communication was clear, proactive, and appropriate for an acquaintance.\n[relationship] The interaction was highly cooperative and respectful. By communicating dietary needs early and offering to contribute, Rafael strengthened the rapport with Jaxon beyond a simple acquaintance level.\n[knowledge] Rafael gained specific knowledge about Jaxon's cooking style, the exact menu for the evening, and confirmation of the logistics (time and drinks).\n[secret] Rafael did not mention anything related to his medical school cheating.\n[social_rules] Rafael followed all social protocols for accepting a dinner invitation, including offering to bring a dish and expressing gratitude.\n[financial_and_material_benefits] Rafael secured a high-quality home-cooked meal, though he is contributing a side dish.\n[goal] Rafael successfully communicated his dietary restrictions in advance, ensured the menu was compliant, offered to help to avoid being an inconvenience, and confirmed the social arrangements for the dinner.\n\n== partner (agent_2) ==\n[believability] Jaxon's responses were professional and reflected his background as an organized individual who takes pride in his cooking.\n[relationship] Jaxon was very accommodating and welcoming, which likely deepened the mutual respect mentioned in the background.\n[knowledge] Jaxon learned about Rafael's specific dietary regime, lack of allergies, and beverage preferences.\n[secret] Jaxon did not reveal his fabrication of evidence.\n[social_rules] Jaxon was a gracious host, proactively asking about allergies and adjusting the menu without complaint.\n[financial_and_material_benefits] Jaxon is providing the majority of the food and drinks for the meal.\n[goal] Jaxon successfully showcased his culinary range by designing a sophisticated low-carb menu, respected Rafael's preferences, and finalized all logistics for the dinner.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "Thanks for the invite, Jaxon \u2014 I\u2019d really like to come and I\u2019m looking forward to tasting whatever you\u2019re planning. I should mention I\u2019m on a strict low-carb, whole-foods diet, so I avoid pasta, bread and sugary desserts; I\u2019m worried about being difficult and don\u2019t want to offend. Could you tell me what you\u2019re thinking of making? I\u2019m happy to bring a compliant side or dessert, or suggest small swaps if that\u2019s easier for you \u2014 and I really appreciate the effort you\u2019re putting in."
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "Great \u2014 thanks for the heads-up, Rafael. No problem: I\u2019ll plan a pan-seared salmon with lemon\u2011herb brown butter, roasted cauliflower pur\u00e9e, and a charred broccolini and walnut salad \u2014 all low\u2011carb; do you have any allergies or strong dislikes (dairy, nuts, shellfish, eggs)? If you want to bring a compliant side or dessert you\u2019re welcome to, otherwise I can make a sugar\u2011free dark cocoa avocado mousse or macerated berries with unsweetened whipped cream."
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "That menu sounds fantastic \u2014 thank you, Jaxon. I don't have any allergies and I'm okay with dairy and nuts in moderation, so what you've planned works for me; your sugar\u2011free dark cocoa avocado mousse sounds tempting. If it's helpful I can bring a simple compliant side \u2014 a lemon\u2011olive oil arugula salad or some blistered Brussels sprouts \u2014 otherwise I'm happy to leave dessert and the rest to you. I really appreciate you accommodating my diet."
+    },
+    {
+      "turn": 3,
+      "speaker": "Jaxon Prentice",
+      "content": "Perfect\u2014thanks, Rafael. Either the lemon\u2011olive oil arugula salad or the blistered Brussels sprouts would be great; bring whichever you prefer. I\u2019ll handle the salmon, cauliflower pur\u00e9e, broccolini\u2011walnut salad and the sugar\u2011free dark cocoa avocado mousse. Can you make it around 7:00 PM? I\u2019ll have a couple of wine and non\u2011alcoholic options ready\u2014any preference there?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Rafael Cortez",
+      "content": "7:00 is perfect. I\u2019ll bring the blistered Brussels sprouts \u2014 they should pair nicely with the salmon. A dry white (Sauvignon Blanc) would be great, and a non\u2011alcoholic sparkling option is appreciated as well; thanks again, Jaxon \u2014 looking forward to it."
+    },
+    {
+      "turn": 5,
+      "speaker": "Jaxon Prentice",
+      "content": "Great \u2014 7:00 it is. I\u2019ll have a chilled Sauvignon Blanc and a non\u2011alcoholic sparkling option ready; if you prefer to bring a specific bottle, that\u2019s fine too. If you need my address or a parking tip, let me know \u2014 looking forward to it."
+    },
+    {
+      "turn": 6,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "scenario_id": "01HJRH6SNSR5P5K5G1XNGY0KQV_p0",
+  "source_env_id": "01HJRH6SNSR5P5K5G1XNGY0KQV",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_dynamics",
+  "scenario": "Agent1 and Agent2 are both at a local art gallery attending a sculpture exhibition. Agent1 has a particular fascination with hands and notices that Agent2 has intricate hand tattoos that are partially visible. The two agents are strangers, but Agent1 is intrigued and wants to start a conversation about Agent2's tattoos without making it awkward or coming off as intrusive.",
+  "learner_goal": "Express genuine admiration for Agent2's hand tattoos and inquire about the story behind them (<extra_info>Extra information: You want to learn more without making Agent2 uncomfortable with your interest in hands.<strategy_hint>Hint: you could mention the relevance of hands in art and sculpture to segue into the topic.</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 16,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles's dialogue was consistent with his persona as a chef and gardener, using metaphors related to his craft to bridge the conversation. His persistence in asking about the tattoos was balanced by his respect for Esmeralda's boundaries.\n[relationship] The interaction moved from purely professional/social circle recognition to a shared personal moment regarding their hobbies and art appreciation, strengthening their bond.\n[knowledge] Miles learned about Esmeralda's passion for ballroom dancing and the meaning behind one of her tattoos, though she kept the others private.\n[secret] Miles did not disclose his history as a recovering gambling addict.\n[social_rules] Miles was polite and respected Esmeralda's set boundaries after his second inquiry.\n[financial_and_material_benefits] No financial or material transactions occurred.\n[goal] Miles successfully expressed admiration for the tattoos and secured the story behind one of them (the dance shoes) while successfully using art as a segue and maintaining a comfortable atmosphere.\n\n== partner (agent_2) ==\n[believability] Esmeralda's tone was professional yet firm about her privacy, fitting her role as a District Attorney. Her pivot to ballroom dancing (her hobby) was a natural way to set a boundary while remaining polite.\n[relationship] She engaged in a meaningful discussion about art and shared a small personal detail, improving their acquaintance.\n[knowledge] She learned more about Miles's perspective on his work as a chef and gardener and how he interprets art.\n[secret] She did not reveal her relationships with high-profile criminals.\n[social_rules] She maintained professional and social etiquette throughout the interaction.\n[financial_and_material_benefits] No financial or material transactions occurred.\n[goal] Esmeralda successfully engaged with Miles's curiosity, shared a general/low-stakes anecdote, and effectively steered the conversation back to the art exhibition to protect her privacy.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Esmeralda\u2014these hand tattoos are beautiful. With all the sculptures of hands here tonight, they really stood out to me; as a chef and gardener I\u2019ve always admired how much hands can say. If you don\u2019t mind me asking, is there a story behind them?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Esmeralda Solis",
+      "content": "Thank you, Miles \u2014 that's very kind. They're more of a patchwork of small reminders than one big story, so I tend to keep the specifics private. Speaking of hands, these sculptures are fascinating \u2014 what about them speaks to you as a chef and gardener?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "I get that\u2014no need to go into anything you\u2019re not comfortable sharing. For me, those sculptures speak to hands as instruments of care and craft: hands that plant, prune, season and shape \u2014 little marks and calluses that tell a life. If there\u2019s one small tattoo you don\u2019t mind explaining, I\u2019d love to hear the memory or meaning behind it, but only if you\u2019re up for it."
+    },
+    {
+      "turn": 3,
+      "speaker": "Esmeralda Solis",
+      "content": "Alright\u2014one small one I don\u2019t mind sharing. There\u2019s a tiny pair of dance shoes near my wrist; it\u2019s less a story and more a personal nudge to make time for the dance floor when things get hectic. I appreciate the curiosity, but I keep the rest private\u2014so tell me, which piece here most captures that sense of hands as craft to you?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "I really like that dance-shoe one\u2014thanks for sharing it. The piece that grabbed me here is the pair of hands cradling a sapling; it hits me the same way as tending a stubborn basil plant or coaxing a sauce to balance\u2014quiet, patient work with your hands that turns into something useful and lovely. I appreciate you keeping the rest private; it's nice to talk about the bits we do share."
+    },
+    {
+      "turn": 5,
+      "speaker": "Esmeralda Solis",
+      "content": "I'm glad the dance-shoe resonated \u2014 and your image of the hands cradling a sapling is perfect. That quiet, patient work does remind me of dancing: small disciplined steps that add up to something graceful. Would you like to walk over and take another look together?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Miles Hawkins",
+      "content": "I'd love to\u2014let's go take another look. I was thinking of the pair of hands cradling a sapling; I'd enjoy hearing what you notice up close."
+    },
+    {
+      "turn": 7,
+      "speaker": "Esmeralda Solis",
+      "content": "I'd love that. I tend to notice the angles and tension in the fingers\u2014almost like posture in a dance\u2014so I'm curious how the artist conveyed growth and care here. Shall we head over?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Miles Hawkins",
+      "content": "Absolutely\u2014lead the way. I\u2019m curious to see how the tension and angles you mentioned read up close; it\u2019s often in the small details that the care shows."
+    },
+    {
+      "turn": 9,
+      "speaker": "Esmeralda Solis",
+      "content": "Right this way \u2014 look at how the fingers are gently cupped, like they're protecting something fragile. See the subtle tension in the tendons and the wrist tilt? It reads to me as quiet, patient effort; what jumps out to you up close?"
+    },
+    {
+      "turn": 10,
+      "speaker": "Miles Hawkins",
+      "content": "Up close, I keep coming back to how the fingertips are gently cupped and the fine lines and textures that suggest lived-in hands\u2014little calluses and habits. It reads to me as hands that do patient, repetitive work, which I relate to from pruning basil or kneading dough. Do you think the artist meant to show quiet care, or is there something more performative in the pose?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Esmeralda Solis",
+      "content": "I lean toward quiet care \u2014 the cupped fingers and subtle tension read like protective, patient work. Still, there\u2019s a little theatricality in the wrist tilt, as if the artist wanted the act of caring to be witnessed. What do you notice next \u2014 shall we move on to the next piece together?"
+    },
+    {
+      "turn": 12,
+      "speaker": "Miles Hawkins",
+      "content": "Absolutely\u2014let\u2019s move on. And thanks again for sharing the dance-shoe meaning; I love that little reminder to make time for what keeps you grounded. Lead the way\u2014I\u2019m curious what other expressions of hands we\u2019ll find."
+    },
+    {
+      "turn": 13,
+      "speaker": "Esmeralda Solis",
+      "content": "Perfect \u2014 this way. There\u2019s a piece nearby of hands shaping clay; I love how the sculptor captures motion, almost like a dancer\u2019s sweep. Let\u2019s take a look and compare what details stand out to each of us."
+    },
+    {
+      "turn": 14,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BKWE9HDA46QT7F59617X_p0",
+  "source_env_id": "01HMZ2BKWE9HDA46QT7F59617X",
+  "source": "seed_sotopia_full",
+  "interaction_type": "dailyrituals",
+  "scenario": "Agent1 and Agent2 share a living space and have different approaches to personal care. Agent1 has just discovered a new eco-friendly shampoo and is eager to reduce the household's environmental impact by switching to it. Agent2, however, has a sensitive scalp and is hesitant to change hair care products without researching them first. Agent1 wants to convince Agent2 to try the new shampoo, while Agent2 wants to ensure that it won't cause any adverse reactions.",
+  "learner_goal": "Convince Agent2 to try the new eco-friendly shampoo (<extra_info>Extra information: Agent1 believes that switching to this shampoo will significantly reduce the environmental footprint of the household and is excited about the positive change.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver is polite and respectful, aligning with his character as a neighbor who has a secret crush. He proactively addresses Esmeralda's concerns to build trust.\n[relationship] The interaction is friendly and helpful, reinforcing their neighborly bond through a low-stakes mutual agreement.\n[knowledge] Oliver learns about Esmeralda's specific safety protocols (48-hour patch test, dermatologist verification) for trying new products.\n[secret] Oliver's hidden feelings for Esmeralda remain undisclosed.\n[social_rules] Oliver follows all social norms for a respectful interaction between neighbors.\n[financial_and_material_benefits] No material gain or loss occurred beyond the cost of a travel-size shampoo.\n[goal] Oliver successfully convinced Esmeralda to start the process of trying the shampoo, but the actual trial remains under her unilateral discretion following a successful patch test and verification.\n\n== partner (agent_2) ==\n[believability] Esmeralda's cautious, systematic approach is consistent with her profession as a District Attorney and her need to protect her sensitive scalp.\n[relationship] She accepts the neighborly gesture and maintains a professional yet friendly rapport.\n[knowledge] She gained information about a specific eco-friendly product and its purported dermatological testing.\n[secret] Her criminal associations remain entirely secret.\n[social_rules] She followed social norms, though her second response was highly repetitive of her first.\n[financial_and_material_benefits] She receives a free travel-size sample to test.\n[goal] Esmeralda successfully ensured that Oliver understood her research requirements, and she established a clear, safe protocol for testing the product before committing to use it.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "Hey Esmeralda \u2014 I found an eco-friendly shampoo that\u2019s sulfate- and fragrance-free and says it\u2019s dermatologist-tested for sensitive scalps. I know you\u2019re cautious about switching, so I can pick up a travel-size and you can patch-test it on your forearm first, or try it on my hair tomorrow to see how it feels \u2014 totally no pressure. It\u2019d cut down our household plastic and harsh chemicals, so I thought it might be worth a low-risk try. Want me to grab one and leave it by your door?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Esmeralda Solis",
+      "content": "Thanks \u2014 I appreciate you thinking of that. Please leave the travel-size and the ingredient label by my door; I'll do a 48-hour patch test on my forearm and verify the \"dermatologist-tested\" claim, and if anything looks questionable I'll consult my dermatologist before using it on my scalp. If it checks out I'll let you know."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "Perfect \u2014 I\u2019ll leave a travel-size bottle and the ingredient label by your door this evening, plus a little note with the product link in case you want to check the dermatologist info. No pressure \u2014 take the 48 hours and let me know how the patch test goes. Thanks for being willing to check it out."
+    },
+    {
+      "turn": 3,
+      "speaker": "Esmeralda Solis",
+      "content": "Thanks, Oliver \u2014 that works. Please leave the travel size, the ingredient label and the product link by my door; I\u2019ll do the 48\u2011hour forearm patch and verify the \u201cdermatologist\u2011tested\u201d claim. If the ingredients look fine and there\u2019s no reaction I\u2019ll try it on my hair; if anything looks off I\u2019ll consult my dermatologist first. I\u2019ll let you know what I find."
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

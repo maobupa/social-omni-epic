@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPTHMG65PHVQKHJ8GMN7PXN_p0",
+  "source_env_id": "01HJPTHMG65PHVQKHJ8GMN7PXN",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_iqa",
+  "scenario": "Agent1 is part of the organizing committee for a local parade and is responsible for coordinating the walk on the parade ground. Agent2, a local business owner, has been assigned a spot in the parade. Agent1 needs to ensure that the parade runs smoothly and that all participants follow the schedule, while Agent2 is looking to maximize the exposure of their business during the event. Agent1 approaches Agent2 to discuss the timing and positioning of their walk in the parade.",
+  "learner_goal": "Agent1 wants to keep the parade organized and running on time and must convince Agent2 to adhere to their assigned schedule and position (<extra_info>Extra information: Agent1 is aware that Agent2 might want a prime spot for better visibility, but the schedule is designed to ensure a fair and orderly procession.</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 1.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles Hawkins stayed perfectly in character as a parade organizer and chef. His communication was professional, firm about safety and logistics, and utilized technical terms like 'spacing' and 'teardown cues' appropriate to the role.\n[relationship] The interaction was cordial and collaborative, reinforcing their professional respect. Miles managed to satisfy Ethan's needs without compromising the event, which likely maintains or slightly improves their professional bond.\n[knowledge] Miles learned Ethan's specific requirements for business visibility and confirmed Ethan's commitment to the schedule.\n[secret] Miles did not reveal his past gambling addiction.\n[social_rules] Miles followed all social norms, being polite but firm in his leadership role.\n[financial_and_material_benefits] There was no direct financial gain for Miles, as his role is organizational.\n[goal] Miles successfully convinced Ethan to adhere to the original assigned slot and position while managing Ethan's expectations. He secured a firm commitment from Ethan to be ready on time and stay off the walking route, ensuring the parade remains organized.\n\n== partner (agent_2) ==\n[believability] Ethan Johnson acted consistently as a business owner looking for exposure. His requests for longer sampling times and specific PA plugs were realistic for a chef in his position.\n[relationship] Ethan showed appreciation for Miles's help, which sustains their professional acquaintance.\n[knowledge] Ethan learned the constraints of the parade route and what specific promotional opportunities were available to him.\n[secret] Ethan did not reveal his secret as a romance novel author.\n[social_rules] Ethan followed social norms and negotiated professionally.\n[financial_and_material_benefits] Ethan secured high-visibility banner placement, a PA announcement with a discount code, and a 15-minute sampling window, all of which are likely to increase his business exposure and revenue.\n[goal] Ethan failed to get the 'best' spot (the stage/main intersection), but he negotiated significant concessions including a high-visibility banner placement, social media mentions, and an extended sampling window, greatly increasing his visibility.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Ethan, great to see you \u2014 and thanks for being part of this. I need you to stick to the assigned slot and start time so the parade keeps its spacing and the whole route stays on schedule; shifting your position throws off the bands and safety marshals. I can\u2019t move your spot, but I can boost your visibility \u2014 we can give you a banner placement, a short PA announcement as you pass, and a designated sampling stop at the vendor area; does that sound fair?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Miles \u2014 I appreciate you working with me. I\u2019ll stick to the assigned slot, but could we tweak the visibility a bit: place our banner at the main intersection or near the stage, have the PA mention our business name with a brief 20\u201330 second plug including a special offer, and allow a 20\u201330 minute sampling window at the vendor area? If any of that\u2019s doable I\u2019ll coordinate precisely so we\u2019re ready and don\u2019t slow the route down."
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "Ethan \u2014 I can\u2019t move you to the main intersection or the stage spot, those are already reserved and we need to keep the route spacing. Here\u2019s what I can do: place your banner at the high-visibility corner closest to the stage, arrange a 12\u201315 second PA mention with a pre-approved line, and give you a supervised 10\u2011minute sampling window in the vendor area off the walking route so you won\u2019t slow the procession. I\u2019ll also include you in the printed program and our social posts that morning \u2014 if that works I\u2019ll lock it in and send exact timing so we coordinate setup."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Miles \u2014 that sounds fair and I appreciate the options. One small ask: can we stretch the supervised sampling window to 15 minutes instead of 10? Also please send the pre-approved PA line and exact timing so I can prep the team to set up quickly and not hold up the route."
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "Alright \u2014 I can stretch the supervised sampling to 15 minutes on one condition: your team must be fully set up in the vendor area 10 minutes before your slot, stay entirely off the walking route, and clear immediately at the end of the 15 minutes so we don\u2019t slow the procession. Approved PA line (12\u201315 sec): \u201cPlease welcome Ethan Johnson of Johnson\u2019s Kitchen \u2014 stop by the vendor area for a special parade-day tasting and 10% off today only!\u201d Your slot is locked: PA at 11:22 AM, sampling 11:25\u201311:40 AM. I\u2019ll send a quick reminder with teardown cues \u2014 sound good?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Johnson",
+      "content": "Perfect \u2014 that works for me, Miles. We\u2019ll be fully set up in the vendor area by 11:15, stay off the walking route, and clear immediately at 11:40; the PA line looks good. Please send the reminder and teardown cues and confirm the banner placement at the high-visibility corner so I can brief my team \u2014 appreciate it."
+    },
+    {
+      "turn": 6,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

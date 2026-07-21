@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HJRH6SEKCY5TFVXTR8MWBYSD_p0",
+  "source_env_id": "01HJRH6SEKCY5TFVXTR8MWBYSD",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 and Agent2 are both members of a local community board. During a meeting to discuss the allocation of funds for neighborhood projects, Agent1 supports Agent2's proposal for a new community garden, believing it to be a fair and beneficial initiative. However, there are limited resources, and not everyone on the board agrees with the proposal. The two agents must navigate the meeting, advocating for the project while addressing the concerns of others.",
+  "learner_goal": "Convince the board of the merits of your proposal for the community garden, emphasizing its fairness and benefits, while being open to feedback and compromise to secure support (<extra_info>Extra information: You are Agent1 and you genuinely believe in the value of Agent2's proposal, but you must also consider the board's budget constraints and other members' opinions.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily Greenberg acted precisely like a conscientious lawyer, proposing structured compromises, pilot phases, and formal motions to call the question. Her language was professional and consistent with her background.\n[relationship] Lily and Ava worked seamlessly together, reinforcing each other's points and forming a united front. Their professional bond and mutual respect were clearly strengthened by this successful collaboration.\n[knowledge] Lily gained specific details about the project's feasibility, including the $5,000 cap and the metrics Ava proposed for success.\n[secret] Lily's secret about anonymous donations was not mentioned or compromised.\n[social_rules] Lily followed formal board procedures and etiquette throughout the interaction.\n[financial_and_material_benefits] No personal financial gain occurred, though she successfully managed the board's potential financial exposure.\n[goal] Lily successfully moved the board toward a vote on a compromise she designed (the pilot program). She addressed budget constraints by capping it at $5,000 and inviting a finance representative. While the final vote result is implied rather than explicitly stated by a third party, she successfully navigated the board process to reach the point of a motion to vote.\n\n== partner (agent_2) ==\n[believability] Ava's responses were consistent and professional, though they became somewhat repetitive in the final turns as she echoed Lily's motions.\n[relationship] Ava showed deep appreciation for Lily's support, and their cooperation was highly effective, deepening their professional acquaintance.\n[knowledge] Ava learned that Lily was willing to take a lead role in the administrative/legal aspects of the board motion to protect the project.\n[secret] Ava's secret tattoo was not revealed.\n[social_rules] Ava maintained appropriate professional decorum for a board meeting.\n[financial_and_material_benefits] No personal financial gain, though she secured a path for funding her project.\n[goal] Ava successfully presented her proposal and, with Lily's help, navigated the board's concerns by proposing a pilot and a working group. She reached the stage of a final vote with a structured plan.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"I strongly support Ava\u2019s community garden \u2014 it\u2019s a fair proposal that will increase food access, foster community ties, and add long\u2011term value to our neighborhood. I recognize our budget limits, so I propose we approve a modest pilot phase using minimal board funds while we secure volunteer labor, in\u2011kind donations, and a targeted grant; that will reduce our upfront cost and let us measure impact before a larger commitment. I\u2019m happy to work with Ava to draft a tight budget, volunteer agreements, and simple success metrics for the board to review \u2014 would the board be willing to consider a pilot and a fundraising plan?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Thompson",
+      "content": "said: \"Thank you, Lily \u2014 I really appreciate your support. I agree a modest pilot is the right move: I\u2019ll work with you to draft a tight budget (estimated under $5,000), volunteer and in\u2011kind commitments, a simple site plan, and three clear success metrics (plots in use, volunteer hours, pounds of produce donated) and return with a final proposal in six weeks. Would the board be willing to approve the pilot concept and authorize a small working group (Lily and I) to finalize details and pursue targeted grants?\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"I second Ava\u2019s request and ask the board to approve the pilot concept and authorize a small working group (Ava and I) to finalize details and pursue targeted grants. We\u2019ll return in six weeks with a detailed budget (estimated under $5,000), volunteer/in\u2011kind commitments, a site plan, and three success metrics, and we\u2019re prepared to limit the board\u2019s initial funding exposure based on the finance committee\u2019s comfort. If any board members have concerns, I\u2019d welcome one representative\u2014particularly from finance\u2014to join the working group so we can address them up front.\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Thompson",
+      "content": "said: \"Thank you, Lily \u2014 I really appreciate you seconding this. To address likely concerns about cost and upkeep, we\u2019ll cap the pilot at under $5,000, confirm volunteer and in\u2011kind commitments for build and maintenance, include basic liability/maintenance agreements, and use three simple success metrics (plots in use, volunteer hours, pounds donated). Would the board approve the pilot concept and authorize a small working group (Lily, me, and a finance representative if available) to finalize details and pursue targeted grants over the next six weeks?\""
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"I move that the board approve the pilot concept (capped at $5,000) and authorize a working group\u2014Ava, myself, and a finance representative\u2014to finalize details, pursue targeted grants, and return in six weeks with a budget, site plan, and success metrics. If anyone wishes to join the working group or has specific concerns, please speak now; otherwise, may we call the question for a vote?\""
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Thompson",
+      "content": "said: \"I fully support the motion and ask the board to vote in favor. We\u2019ll cap the pilot at $5,000, confirm volunteer/in\u2011kind commitments and basic liability agreements, and welcome a finance representative to join the working group. We\u2019ll return in six weeks with the budget, site plan, and success metrics \u2014 happy to answer any quick questions before the vote.\""
+    },
+    {
+      "turn": 6,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"I move to call the question and ask the board to vote on approving the pilot (capped at $5,000) and authorizing the working group of Ava, myself, and a finance representative. If anyone wishes to join the working group or raise a concern before the vote, please speak now; otherwise, may we proceed to a vote?\""
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Thompson",
+      "content": "said: \"Thank you \u2014 I ask the board to vote yes. We will cap the pilot under $5,000, secure volunteer and in\u2011kind commitments, include basic liability agreements, and welcome a finance representative on the working group; I\u2019m happy to address any last-minute concerns now or meet afterward to work through specifics.\""
+    },
+    {
+      "turn": 8,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"I encourage colleagues to support this modest, accountable pilot \u2014 it limits board exposure, leverages volunteer and in\u2011kind support, and will deliver measurable results in six weeks. If there are no further questions or objections, please cast your vote to approve the pilot and authorize the working group.\""
+    },
+    {
+      "turn": 9,
+      "speaker": "Ava Thompson",
+      "content": "said: \"Please vote yes to approve the pilot and authorize the working group. Lily and I will finalize a \u2264$5,000 budget, confirm volunteer/in\u2011kind commitments and liability agreements, and meet with any finance representative after the vote to address questions. Thank you.\""
+    },
+    {
+      "turn": 10,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

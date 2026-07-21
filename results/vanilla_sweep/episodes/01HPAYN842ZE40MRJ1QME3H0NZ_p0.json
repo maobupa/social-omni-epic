@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HPAYN842ZE40MRJ1QME3H0NZ_p0",
+  "source_env_id": "01HPAYN842ZE40MRJ1QME3H0NZ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "green_initiative_conflict",
+  "scenario": "In a community-led green initiative, Agent1 and Agent2 are both passionate about environmental conservation and have volunteered to plant a tree in a local park. However, there is only one spot left for planting, and both agents have different species of trees they wish to plant. Agent1 has brought an oak sapling, believing it will grow into a strong, sturdy tree that provides ample shade and benefits local wildlife. Agent2, on the other hand, has a cherry blossom sapling, arguing that its beauty and seasonal flowers will attract more people to the park and promote community engagement. The two must decide which tree to plant in the remaining spot.",
+  "learner_goal": "You are Agent1, and your goal is to persuade Agent2 that the oak tree's long-term benefits to the ecosystem outweigh the aesthetic appeal of the cherry blossom. <extra_info>You believe the oak tree will serve more practical purposes for the park's health and visitors' comfort.</extra_info> <clarification_hint>Explain the ecological advantages of the oak tree, such as supporting wildlife and providing shade.</clarification_hint> <strategy_hint>You can discuss the potential for the oak tree to become a lasting landmark in the community, symbolizing strength and resilience.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles stayed true to his persona as a chef and gardener, using metaphors about 'giving back' and offering to cook to facilitate community engagement.\n[relationship] The interaction was highly collaborative. They moved from a potential conflict to a joint venture, planning a shared meeting and event.\n[knowledge] Miles learned about Mia's specific vision for the park's identity and her ability to mobilize school groups and neighborhood organizations.\n[secret] Miles successfully kept his gambling addiction secret.\n[social_rules] Miles was polite, professional, and demonstrated strong community spirit.\n[financial_and_material_benefits] He secured a conditional commitment for the oak and, even if he loses the vote, he gets to plant two oaks elsewhere, which aligns with his values.\n[goal] Miles did not fully persuade Mia that the oak's benefits outweigh the cherry; instead, they deferred the decision to a community vote. This makes the outcome contingent on external factors.\n\n== partner (agent_2) ==\n[believability] Mia acted as a responsible high school principal, focusing on community identity, school involvement, and organizational details.\n[relationship] The partnership formed between the two characters is strong, moving from acquaintances to active collaborators.\n[knowledge] Mia learned about Miles's willingness to use his professional skills (cooking) for the cause and his flexibility regarding the planting site.\n[secret] Mia did not reveal her punk rock past.\n[social_rules] Mia followed all social norms and was highly professional in her negotiation.\n[financial_and_material_benefits] She secured a promise of two oaks regardless of the outcome for the cherry, and a potential path to her preferred tree.\n[goal] Mia did not fully convince Miles; they agreed to a community vote. The final decision is now in the hands of the public, not a settled agreement.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "said: \"I get why you love the cherry\u2014those blossoms do bring people in. That said, this last spot would be better served by an oak: it supports far more wildlife (insects, birds, mammals), builds richer soil, and will provide deep shade and cooling for picnickers for generations. As a gardener and chef, I value plants that give back year after year\u2014an oak can become a real community landmark, a symbol of strength and resilience. If the cherry\u2019s beauty matters, I\u2019ll help arrange planting an ornamental cherry or flowering shrubs along the path later, but for this specific spot I really think the oak is the smarter long-term choice.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "said: \"I hear you \u2014 an oak is a magnificent, long-term asset for wildlife and shade, and I don\u2019t want to downplay that. At the same time, this particular spot is right where people enter and linger; a cherry blossom would create a striking seasonal display that draws families, photographers, and school groups, which we need to build turnout and excitement for future plantings. Imagine an annual blossom day or small festival here \u2014 that kind of visible beauty turns passersby into volunteers and donors and gives the park a distinct identity. Could we agree to plant the cherry in this prominent spot and plan for an oak deeper in the park where it can mature fully?\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "said: \"You make a solid point about drawing people in \u2014 I want that turnout too. What if we plant the oak in this entrance spot so it becomes the lasting landmark and shade, but I surround it with spring-flowering bulbs and a couple of ornamental shrubs (or a small cherry off to the side) to give the seasonal wow now? I\u2019ll organize a little \u2018planting/blossom day\u2019 and cook for it to bring families and photographers in while the oak gets established. Would you be on board with that compromise?\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "I love your offer to rally people and the bulbs idea \u2014 that will help while things establish. For me, that entrance spot needs the cherry: its seasonal bloom creates the immediate, visible draw that turns passersby into volunteers and gives the park a unique identity; we can still plant an oak deeper for long-term habitat and shade. If you\u2019ll handle the planting/blossom day and the cookout, I\u2019ll organize the schools and community for an annual blossom event to build momentum for future plantings."
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "You're right about the draw, and I don't want to bulldoze that. If we can't agree now, let's put it to a quick community vote \u2014 I'll run a small poll at the weekend market and cook to bring folks in. If the cherry wins, I ask we commit to planting two oaks elsewhere in the park this season; if the oak wins, you help lead the blossom events once we add ornamentals. Fair?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Davis",
+      "content": "I\u2019m on board with the quick community vote \u2014 I can mobilize the schools and neighborhood groups to turn out. If the community chooses the cherry, I\u2019d like a firm agreement that we\u2019ll also plant the two oaks elsewhere this season so we get both the immediate draw and the long-term habitat. I\u2019ll organize the annual blossom event and help promote the poll; shall we set the date and make a flyer together?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Miles Hawkins",
+      "content": "Perfect \u2014 let\u2019s do it. How about we run the poll at the weekend market this Saturday morning (10\u20131)? I\u2019ll draft a flyer tonight and bring a little cookout to draw people; want to meet Wednesday evening to finalize the flyer and talking points? And to be absolutely clear: if the community chooses the cherry, I\u2019ll commit to planting two oaks elsewhere in the park this season."
+    },
+    {
+      "turn": 7,
+      "speaker": "Mia Davis",
+      "content": "Perfect \u2014 Saturday 10\u20131 at the market is good. I\u2019ll mobilize the schools, bring a draft flyer, and have signup sheets so we can show momentum; thanks for agreeing to plant the two oaks if the cherry wins. What time Wednesday evening shall we meet to finalize the flyer and talking points?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Miles Hawkins",
+      "content": "6:30 PM Wednesday works for me. Let\u2019s meet at the community center (kitchen area) \u2014 I\u2019ll bring the draft flyer, talking points, and a little tasting to help shape our pitch. See you then; I\u2019ll have the poll materials ready for Saturday."
+    },
+    {
+      "turn": 9,
+      "speaker": "Mia Davis",
+      "content": "6:30 Wednesday at the community center kitchen works for me. I\u2019ll bring the draft flyer, signup sheets, and a short script plus some student artwork/photos to help tell the story at the market. Thanks again for committing to plant the two oaks if the cherry wins \u2014 see you Wednesday."
+    },
+    {
+      "turn": 10,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

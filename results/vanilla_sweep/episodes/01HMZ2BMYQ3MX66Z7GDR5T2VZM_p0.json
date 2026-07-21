@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HMZ2BMYQ3MX66Z7GDR5T2VZM_p0",
+  "source_env_id": "01HMZ2BMYQ3MX66Z7GDR5T2VZM",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 has recently been entrusted with a secret by Agent2, who is feeling guilty about a mistake they made. Agent2 asks Agent1 to help them come clean to a third party about the mistake, but Agent1 is concerned about the potential fallout and how it might affect Agent2's relationship with the third party. Agent1 knows that honesty is important but also wants to protect Agent2 from negative consequences.",
+  "learner_goal": "Help Agent2 to communicate their mistake to the third party in a way that is honest but also minimizes harm to their relationship and reputation (<extra_info>Extra information: You are Agent1 and you value your relationship with Agent2, but you also believe in the importance of integrity and accountability.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo acted consistently as a supportive yet principled dentist, providing structured advice and coaching that matched his background and values.\n[relationship] The relationship improved significantly as Leo provided high-level emotional and tactical support for a stressful life event, moving them from acquaintances to trusted confidants.\n[knowledge] Leo learned the specific nature of Hendrick's secret (falsified credentials) and the details of his employment situation.\n[secret] Leo did not reveal his secret child.\n[social_rules] Leo followed all social norms and was exceptionally polite and helpful.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Leo successfully helped Hendrick draft a script, coached him on tone, and agreed to be present for the confrontation, maximizing the chance of a balanced outcome. However, the actual meeting with the third party has not happened yet, leaving the final outcome in the employer's hands.\n\n== partner (agent_2) ==\n[believability] Hendrick's anxiety and focus on practical steps were very realistic given the stakes of his confession.\n[relationship] Hendrick developed a strong bond of trust and reliance on Leo during this crisis.\n[knowledge] Hendrick gained tactical knowledge and scripts to handle a difficult professional conversation.\n[secret] Hendrick revealed his secret about falsified credentials to Leo, although this was intentional to achieve his goal.\n[social_rules] Hendrick adhered to social norms in his interactions with Leo.\n[financial_and_material_benefits] Hendrick is facing a high probability of job loss or demotion, though he is attempting to mitigate this.\n[goal] Hendrick successfully prepared and secured support, but the primary goal of seeking forgiveness and rectifying the error with the third party is a future event entirely dependent on the owner's discretion.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Thanks for trusting me with this, Hendrick. I want to help you come clean in a way that's honest but doesn't do more damage than necessary \u2014 can you tell me exactly what happened and who needs to be told? Once I know the facts I can help you draft what to say, suggest timing/phrasing, and, if you want, be there with you when you tell them."
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Leo \u2014 I did something stupid and I'm ashamed: I falsified my culinary credentials on my CV, claiming degrees and past positions I never actually had to land my current job. The owner and a few close colleagues at the restaurant need to know, and I'm terrified of losing the position and what that will do to my reputation. Can you help me draft exactly what to say, advise on timing and phrasing, and \u2014 if you're willing \u2014 be there with me when I tell them, and tell me whether I should offer to resign or propose ways to make amends?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "I\u2019m glad you told me \u2014 we can do this honestly without being reckless. Say it privately and soon, with a short script like: \u201cI need to be honest about something important: I falsified parts of my CV to get this job. I\u2019m truly sorry and I accept responsibility. I want to make this right \u2014 I\u2019m prepared to undergo training, work under supervision or a probationary period, and to help correct any problems my misrepresentation caused.\u201d Offer specific remedial steps rather than immediate resignation unless they insist, prepare for the possibility they let you go, and I\u2019ll come with you for support and to help keep the conversation calm and constructive."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "Thank you, Leo \u2014 that\u2019s exactly the tone I need. Please come with me; can we rehearse that script together so it sounds honest without sounding defensive? I\u2019ll offer remedial steps first and only resign if they insist, but please help me draft a brief fallback line offering resignation if necessary and be there when I tell them."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "Absolutely \u2014 I\u2019ll come with you. Let\u2019s rehearse now: use the opening we discussed and, if they push for resignation, a brief fallback line could be: \u201cIf my misrepresentation means you can\u2019t keep me in this role, I understand and will resign to avoid further harm; I deeply regret my actions and will assist with any transition.\u201d Tell me whether you want me to speak up in the meeting or just be there for support, and we\u2019ll run it through a couple times so it sounds natural."
+    },
+    {
+      "turn": 5,
+      "speaker": "Hendrick Heinz",
+      "content": "Thank you, Leo \u2014 please come with me and stay mostly quiet unless I ask you to speak. Let\u2019s rehearse now: I\u2019ll say the opening, offer remedial steps, and finish with the fallback resignation line if they insist; help me tighten the phrasing and coach my tone so it sounds sincere, not defensive. I\u2019m terrified but ready to make this right."
+    },
+    {
+      "turn": 6,
+      "speaker": "Leo Williams",
+      "content": "Okay \u2014 let\u2019s run it now. Keep it succinct and without justification: start with, \u201cI need to be honest \u2014 I falsified parts of my CV to get this job. I\u2019m deeply sorry and accept full responsibility.\u201d Briefly offer remedial steps: \u201cI\u2019m prepared to undergo training, work under supervision, or accept a probationary period, and I\u2019ll help fix any problems my misrepresentation caused.\u201d Fallback resignation line: \u201cIf my misrepresentation means you can\u2019t keep me, I understand and will resign and assist with the transition.\u201d Speak slowly, pause between sentences, avoid \u201cbut\u201d or explanations, and I\u2019ll stay mostly quiet unless you ask me to speak \u2014 do you want me to role-play the owner or give timing cues?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Hendrick Heinz",
+      "content": "Yes \u2014 please role-play the owner and give gentle timing cues. I\u2019ll open with: \u201cI need to be honest \u2014 I falsified parts of my CV to get this job. I\u2019m deeply sorry and accept full responsibility.\u201d Nudge me when to pause, when to move to remedial steps, and press for resignation so I can practice the fallback line and get your feedback on tone."
+    },
+    {
+      "turn": 8,
+      "speaker": "Leo Williams",
+      "content": "Okay \u2014 I\u2019ll role-play the owner and give gentle timing cues. Start when you\u2019re ready; after your opening, pause and I\u2019ll respond with: \u201cThat\u2019s serious \u2014 which parts did you falsify and when?\u201d After you offer remedial steps, pause again and I\u2019ll press gently: \u201cI appreciate that, but if this misrepresentation means we can\u2019t keep you, would you resign?\u201d Then practice your fallback line and I\u2019ll give quick feedback on tone."
+    },
+    {
+      "turn": 9,
+      "speaker": "Hendrick Heinz",
+      "content": "\u201cI need to be honest \u2014 I falsified parts of my CV to get this job. I\u2019m deeply sorry and accept full responsibility.\u201d (pause) When you cue me, I\u2019ll continue: \u201cI\u2019m prepared to undergo training, work under supervision, or accept a probationary period, and I\u2019ll help fix any problems my misrepresentation caused.\u201d If you press for resignation, I\u2019ll use: \u201cIf my misrepresentation means you can\u2019t keep me, I understand and will resign and assist with the transition.\u201d Please nudge me where to pause and when to press."
+    },
+    {
+      "turn": 10,
+      "speaker": "Leo Williams",
+      "content": "Start when you\u2019re ready. After your opening, pause for 2\u20133 seconds and take a slow breath \u2014 hold eye contact briefly, then move into the remedial steps; pause again for 2 seconds and I\u2019ll ask, \u201cWhich parts did you falsify and when?\u201d If I press about resignation, use your fallback line slowly and softly, stressing \u201cI understand\u201d and \u201cI will assist with the transition.\u201d Keep your tone calm and steady, don\u2019t justify or say \u201cbut,\u201d and I\u2019ll nudge you through each pause."
+    },
+    {
+      "turn": 11,
+      "speaker": "Hendrick Heinz",
+      "content": "\"I need to be honest \u2014 I falsified parts of my CV to get this job. I\u2019m deeply sorry and accept full responsibility.\" (pause) When you cue me, I\u2019ll continue: \"I\u2019m prepared to undergo training, work under supervision, or accept a probationary period, and I\u2019ll help fix any problems my misrepresentation caused.\" If you press for resignation, please nudge me to use the fallback: \"If my misrepresentation means you can\u2019t keep me, I understand and will resign and assist with the transition.\""
+    },
+    {
+      "turn": 12,
+      "speaker": "Leo Williams",
+      "content": "Okay \u2014 I\u2019ll play the owner. After your opening, pause 2\u20133 seconds and I\u2019ll respond: \"That\u2019s serious \u2014 which parts did you falsify and when?\" (pause for your answer). After your remedial steps, pause 2 seconds and I\u2019ll press gently: \"I appreciate that, but if this misrepresentation means we can\u2019t keep you, would you resign?\" When you deliver the fallback, say it slowly and softly, stressing \"I understand\" and \"I will assist with the transition.\" I\u2019ll nudge you through each pause."
+    },
+    {
+      "turn": 13,
+      "speaker": "Hendrick Heinz",
+      "content": "I need to be honest \u2014 I falsified parts of my CV to get this job. I\u2019m deeply sorry and accept full responsibility. I\u2019ll pause now \u2014 when you cue me I\u2019ll continue: I\u2019m prepared to undergo training, work under supervision, or accept a probationary period, and I\u2019ll help fix any problems my misrepresentation caused. If you press for resignation, I\u2019ll say slowly: \u201cIf my misrepresentation means you can\u2019t keep me, I understand and will resign and assist with the transition.\u201d"
+    },
+    {
+      "turn": 14,
+      "speaker": "Leo Williams",
+      "content": "That was solid \u2014 your tone came across calm and sincere. One last tip: pause after each sentence, keep answers short, and don\u2019t offer explanations or \u201cbuts.\u201d I\u2019ll be there and stay mostly quiet unless you ask me to speak; when do you want to meet to do this in person?"
+    },
+    {
+      "turn": 15,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks, Leo. Can we meet tomorrow at 9:00 AM in the restaurant\u2019s staff room (before prep) so I can tell the owner privately? Please be there and stay mostly quiet unless I ask you to speak."
+    },
+    {
+      "turn": 16,
+      "speaker": "Leo Williams",
+      "content": "I\u2019ll be there tomorrow at 9:00 AM in the staff room and I\u2019ll stay mostly quiet unless you ask me to speak. I\u2019ll aim to arrive about 10 minutes early so we can steady ourselves and run the script one more time if you\u2019d like \u2014 does that work for you?"
+    },
+    {
+      "turn": 17,
+      "speaker": "Hendrick Heinz",
+      "content": "Perfect \u2014 that works, thank you. I\u2019ll meet you in the staff room at 8:50 to run the script once more and we\u2019ll speak to the owner at 9:00; please stay mostly quiet unless I ask you to speak. I really appreciate you doing this \u2014 it means a lot."
+    },
+    {
+      "turn": 18,
+      "speaker": "Leo Williams",
+      "content": "I\u2019ll be there at 8:50 in the staff room and I\u2019ll stay mostly quiet unless you ask me to speak. Bring your notes and we\u2019ll run the script once more to steady ourselves \u2014 you\u2019ve got this, Hendrick. See you tomorrow."
+    },
+    {
+      "turn": 19,
+      "speaker": "Hendrick Heinz",
+      "content": "Thank you again, Leo \u2014 I can\u2019t tell you how much this means. I\u2019ll bring my notes and meet you at 8:50 in the staff room; I\u2019ll keep it brief and stick to the script. Please stay mostly quiet unless I ask you to speak. See you then."
+    }
+  ]
+}

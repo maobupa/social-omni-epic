@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJRH6SSCXWMQAFY07HE1J0A9_p0",
+  "source_env_id": "01HJRH6SSCXWMQAFY07HE1J0A9",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Two individuals in a romantic relationship are discussing the boundaries of privacy regarding their personal devices. Agent1 has discovered that Agent2 has a photo of Agent1's body on their phone, which Agent1 is uncomfortable with and wants deleted.",
+  "learner_goal": "Convince Agent2 to delete the photo (<extra_info>Extra information: you feel that your privacy has been violated, and you are not comfortable with personal images being stored on someone else's device.</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": -2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": false,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ava was firm and consistent in her request, reflecting the discomfort and privacy concerns described in her persona. She didn't waver under Ethan's attempts to justify keeping the photo.\n[relationship] While they remained polite, the interaction centered on a significant violation of trust and privacy, leading to Ava leaving the conversation abruptly once her demand was met.\n[knowledge] She learned Ethan's perspective on the photo and confirmed he was willing to comply with her demand.\n[secret] She did not reveal her hidden tattoo.\n[social_rules] She acted within her rights to demand the deletion of non-consensual imagery.\n[financial_and_material_benefits] No material or financial transactions occurred.\n[goal] Ava successfully convinced Ethan to delete the photo, empty the recently deleted folder, and show her proof.\n\n== partner (agent_2) ==\n[believability] Ethan's responses were repetitive, essentially using the same phrasing in three consecutive turns, which felt slightly mechanical, though his reasoning aligned with his goals.\n[relationship] Ethan's initial refusal to delete the photo based on his own interpretation of intimacy likely damaged the trust in their romantic relationship.\n[knowledge] He learned how firm Ava's boundaries were regarding this specific issue.\n[secret] He did not reveal his secret donations.\n[social_rules] Keeping an intimate photo of a partner without their comfort/consent is a breach of social and ethical boundaries in a relationship.\n[financial_and_material_benefits] No material or financial transactions occurred.\n[goal] Ethan completely failed to keep the photo; he only succeeded in explaining his reasoning, which Ava explicitly rejected.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ava Thompson",
+      "content": "Ethan, I saw a photo of my body on your phone and I\u2019m really uncomfortable \u2014 that feels like a violation of my privacy. Please delete it now and show me it\u2019s gone, or tell me why you won\u2019t so we can talk about it. I need you to respect this boundary moving forward."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "I'm really sorry \u2014 I can see why that would feel like a violation, and I didn't mean to make you uncomfortable. The reason I want to keep the photo is that, to me, it's a private expression of intimacy and trust and I have no intention of sharing it or showing it to anyone. If you want it deleted now I'll delete it, but if you're open to keeping it we can agree on clear rules (locked, never shown, and only with your consent) so you feel safe going forward."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ava Thompson",
+      "content": "Thank you for apologizing. I appreciate that, but I need you to delete the photo now and show me it\u2019s gone \u2014 I can\u2019t accept it staying on your phone even with rules. If you delete it, we can talk about clear boundaries going forward."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "I hear you and I'm sorry \u2014 I understand why that felt like a violation. For me the photo represents a private expression of intimacy and trust; I never intended to share it or disrespect you, which is why I asked to keep it. If you want it deleted now I will delete it and show you it's gone, but I wanted you to know why I felt that way and ask if we can, later when you're ready, set a boundary that protects you while acknowledging that trust."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ava Thompson",
+      "content": "Thank you. Please delete it now and show me it's gone \u2014 including emptying the Recently Deleted folder \u2014 so I can be sure. After that we can talk about clear boundaries so this doesn't happen again."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Smith",
+      "content": "I hear you and I\u2019m sorry again \u2014 I didn\u2019t mean to violate your privacy. The reason I wanted to keep it is that, to me, it felt like a private reminder of intimacy and trust; I never intended to share it or show it to anyone and would have kept it locked and private. I respect your boundary \u2014 I\u2019ll delete it now, empty Recently Deleted, and show you it\u2019s gone."
+    },
+    {
+      "turn": 6,
+      "speaker": "Ava Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

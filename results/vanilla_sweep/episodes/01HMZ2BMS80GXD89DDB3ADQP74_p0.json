@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BMS80GXD89DDB3ADQP74_p0",
+  "source_env_id": "01HMZ2BMS80GXD89DDB3ADQP74",
+  "source": "seed_sotopia_full",
+  "interaction_type": "neighborhood_council",
+  "scenario": "Agent1 and Agent2 are members of the local neighborhood council who are working together to organize a community event. While planning, Agent1 inadvertently made a mistake that led to a budget shortfall, which Agent2 had to cover using their own funds. They meet to discuss how to address the financial issue and ensure the event's success without straining the council's funds or their working relationship.",
+  "learner_goal": "You want to acknowledge your mistake and find a way to reimburse Agent2 for the funds they covered. <extra_info> You feel responsible for the budget shortfall and want to maintain a good relationship with Agent2. </extra_info><clarification_hint> Agent2 might be upset about having to cover the shortfall. </clarification_hint><strategy_hint> Offer to take on additional responsibilities or find alternative funding sources to balance the budget. </strategy_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily acts consistently with her persona as a professional lawyer. She is direct, takes responsibility for her mistakes, and offers concrete solutions that align with her character's values and background.\n[relationship] Lily successfully navigates a potentially tense situation by taking immediate responsibility. She maintains professionalism and reaches a mutually agreeable solution with Mia, preserving their working relationship.\n[knowledge] Lily learned Mia's preference for formal council accounting over personal reimbursement and her insistence on documenting the issue for the council.\n[secret] Lily's secret about anonymous donations was not revealed.\n[social_rules] Lily followed all professional social norms, showing appropriate contrition and professional courtesy.\n[financial_and_material_benefits] Lily successfully avoided immediate personal payment by negotiating a 4-week window for fundraising efforts first.\n[goal] Lily fully achieved her goal: she acknowledged the mistake, offered multiple reimbursement paths, took on additional responsibilities, and secured an agreement to resolve the shortfall.\n\n== partner (agent_2) ==\n[believability] Mia's response is consistent with her role as a school principal: she is firm about accountability, insists on proper documentation/processes, and prioritizes the integrity of the council's funds.\n[relationship] Mia moved from a position of potential resentment to a collaborative agreement, though she remained firm and professional rather than warm.\n[knowledge] Mia learned that Lily is willing to work extra hours and eventually pay out of pocket if fundraising fails.\n[secret] Mia's secret about her punk rock past was not revealed.\n[social_rules] Mia followed social norms for professional accountability and conflict resolution.\n[financial_and_material_benefits] Mia secured a concrete commitment to have her personal funds reimbursed and the council budget restored.\n[goal] Mia achieved her goal: she secured a repayment plan, ensured the event would proceed, held Lily accountable, and established a process to recover the funds through council-approved methods.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Mia, I\u2019m really sorry \u2014 that budget shortfall was my mistake and I appreciate you covering it. I want to make this right: I can reimburse you personally today, or if you prefer I\u2019ll take on extra responsibilities (sponsorship outreach and applying for a small community grant) to replenish the council funds. Which option would you prefer, or is there a different way you\u2019d like me to handle this?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Thank you, Lily \u2014 I appreciate you taking responsibility. I can\u2019t absorb that shortfall personally, so I\u2019d prefer the council funds be restored rather than you reimbursing me directly: either you follow through on the sponsorship/grant outreach you offered and we credit proceeds to the council, or you reimburse the council on a short repayment plan (two payments over a month). Which option works for you? I\u2019ll also ask to note this at our next council meeting so it\u2019s documented and we can avoid surprises going forward."
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "I\u2019ll take the sponsorship/grant outreach and credit any proceeds to the council. I\u2019ll contact three likely sponsors this week and submit the small community grant application by next Wednesday; if that doesn\u2019t raise the needed funds within four weeks, I\u2019ll reimburse the council in two equal payments over the following month. If you\u2019d rather I skip outreach and go straight to the repayment plan, tell me and I\u2019ll do that \u2014 otherwise I\u2019ll get started and I appreciate you noting this at the meeting."
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "That works, Lily \u2014 thank you. Please send me a brief list of the three sponsors and the planned grant submission timeline by Friday so I can add it to the council agenda and monitor progress. Forward any pledges/receipts as they come in so we can credit them to the council; if the funds aren't raised within four weeks we'll proceed with the two-payment reimbursement plan."
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

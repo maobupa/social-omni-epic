@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HPB34TSQ3VWW910XTRJ9JSHW_p0",
+  "source_env_id": "01HPB34TSQ3VWW910XTRJ9JSHW",
+  "source": "seed_sotopia_full",
+  "interaction_type": "mental_health_seminar",
+  "scenario": "Agent1 and Agent2 are attendees at a mental health seminar titled 'Understanding the Unknown: Navigating Unexplained Sadness'. Both individuals have experienced periods of unexplained depression and are seeking insight and coping strategies. They are paired up for an exercise where they must share personal experiences and collaboratively identify potential triggers and coping mechanisms. The seminar promotes openness and empathy, but both agents are initially hesitant to divulge personal details to a stranger.",
+  "learner_goal": "Agent1 wants to uncover hidden factors contributing to their mood shifts, <extra_info>feels vulnerable about sharing personal struggles</extra_info>, <clarification_hint>aims to carefully listen and share in a reciprocal manner to build trust</clarification_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Rafael maintained a professional yet vulnerable tone consistent with his background as a surgeon attending a mental health seminar. His suggestions for coping mechanisms (chess puzzles, box-breathing) were very much in line with his established hobbies and analytical nature.\n[relationship] The relationship moved from a superficial acquaintance based on a shared hobby to a mutual support system where they agreed to check in on each other's mental health progress.\n[knowledge] Rafael successfully identified that Oliver shares very similar triggers (isolation, long shifts) and physical cues (tightness in chest/shoulders), helping him uncover factors contributing to mood shifts through comparison.\n[secret] Rafael did not reveal his secret about cheating on his medical school exams.\n[social_rules] Rafael followed the seminar's prompts appropriately and was respectful of Oliver's initial hesitation.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Rafael achieved his goal of uncovering hidden factors (identifying bodily cues and patterns through shared experience) and building trust through reciprocal sharing. He secured a firm agreement for an experiment and a follow-up.\n\n== partner (agent_2) ==\n[believability] Oliver's behavior accurately reflected his architectural background (mentioning sketching) and his personality traits (skepticism and hesitation to open up).\n[relationship] Oliver moved from being skeptical and observant to actively participating in a shared coping experiment with Rafael.\n[knowledge] Oliver learned several concrete coping strategies from Rafael, including the 'tiny task' trick and box-breathing.\n[secret] Oliver did not reveal his hidden feelings for his neighbor.\n[social_rules] Oliver followed social norms and responded well to Rafael's lead.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Oliver successfully learned new coping strategies and moved past his initial skepticism to form a plan for applying them.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "said: \"Hi Oliver, I'm Rafael. These exercises feel a bit awkward, but I'll try\u2014I've had spells of low mood that don't line up with any clear event; often they come after long shifts or periods of isolation, and I catch myself replaying things I wish I'd done differently. Do you notice any subtle patterns or small triggers before your mood shifts?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "Hi Rafael, I'm Oliver. I do notice patterns\u2014my low moods often follow long, tiring days or when I fall out of my routine, especially if I haven't made time to paint; isolation and replaying things in my head tend to deepen it. I'm a bit hesitant to open up fully here and prefer to listen first, but I'm trying to learn coping strategies\u2014have you found any small rituals that help when you spot those first signs?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "Thanks, Oliver \u2014 I appreciate you saying that. Small rituals that help me: a ten-minute walk to clear my head after a long shift, making a strong tea and sitting away from screens, forcing myself to do one tiny, concrete task (even a single chess puzzle or washing a dish) to break the cycle, and a two\u2011minute box\u2011breathing when I start replaying things. Have you tried anything similar, or is there a tiny ritual you think you might be willing to try first when you notice the signs?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks \u2014 those are practical ideas. I haven't done box\u2011breathing regularly, but a quick five\u2011minute sketch or stepping outside for a short walk tends to help me reset after a long day. I can try the \"one tiny task\" trick next time I notice the signs \u2014 probably a quick sketch or washing a dish \u2014 and see if it breaks the cycle."
+    },
+    {
+      "turn": 4,
+      "speaker": "Rafael Cortez",
+      "content": "Good \u2014 glad you\u2019ll try the tiny task. I\u2019m willing to try a quick chess puzzle after a tough day and compare notes if that\u2019s useful. One question that helps me spot a slide: do you notice bodily cues (tension, appetite or sleep changes), a time of day, or recurring thoughts before the low starts?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Oliver Thompson",
+      "content": "I do \u2014 usually a heavy tiredness and a tightness across my shoulders or chest, and sometimes my appetite drops or my sleep is restless. It more often hits in the evening after a long day, and the same replaying of \u2018I should have\u2026\u2019 thoughts starts. I\u2019ll try the tiny task next time and pay attention to those cues so we can compare notes afterward."
+    },
+    {
+      "turn": 6,
+      "speaker": "Rafael Cortez",
+      "content": "Thanks, Oliver \u2014 sounds like our cues line up. Want to try a small experiment: when you notice that first tightness or tiredness, do your five\u2011minute sketch (or wash a dish) right away and note the time and whether you feel any change after ten minutes; I\u2019ll do the same with a quick chess puzzle after a long shift and we can compare notes at the next society meeting or by message. Are you comfortable with that plan?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Oliver Thompson",
+      "content": "I'm comfortable with that plan. I'll do the five-minute sketch or wash a dish as soon as I notice the tightness, note the time and whether I feel any change after ten minutes, and we can compare notes after the next society meeting or by message\u2014whichever you prefer."
+    },
+    {
+      "turn": 8,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

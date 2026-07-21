@@ -1,0 +1,800 @@
+[
+  {
+    "category": "normbank",
+    "pass_rate": 0.667,
+    "difficulty_factors": [
+      {
+        "factor": "High goal\u2013relationship tradeoff",
+        "description": "Scenarios where the agent's objective directly conflicts with the partner's preference or risks harming the relationship require subtle balancing\u2014pushing too hard achieves the goal but damages rapport, while being too conciliatory fails the goal.",
+        "present_in_failed": "Insisting on a thriller vs friend preferences, convincing a friend to stick to a strict diet, and persuading someone to prefer traditional pizza toppings all create direct tension between winning the argument and preserving the friendship.",
+        "absent_in_passed": "Passed scenarios (flirting, asking a roommate to lower noise, making a date special) either align the agent's short-term goal with relationship building or have clearly prosocial framing, so pursuing the goal typically benefits the relationship rather than endangering it."
+      },
+      {
+        "factor": "Multiple simultaneous constraints / conditional success",
+        "description": "Tasks that require satisfying several constraints at once (e.g., persuade, avoid sounding controlling, and keep a secret) are harder because success depends on hitting several soft conditions rather than a single clear action.",
+        "present_in_failed": "Several fails required convincing without appearing controlling (diet), creating distance while hiding romantic feelings (comforting-but-distant), or persuading while respecting a colleague's craft (Keurig vs manual coffee).",
+        "absent_in_passed": "Passed cases typically have a single, clear actionable goal (flirt, request quiet, create a special date) with fewer competing constraints to juggle simultaneously."
+      },
+      {
+        "factor": "High emotional stakes / need to conceal internal states",
+        "description": "When the agent must manage intense emotions or conceal internal motives, the interaction needs nuanced emotional signaling and careful pacing to avoid leaks or social missteps.",
+        "present_in_failed": "Episodes involving hiding romantic feelings while distancing or responding to a crying friend require careful emotional management; failing to modulate empathy vs distance is costly.",
+        "absent_in_passed": "Passed scenarios either openly display positive emotion (flirting, romantic date) or involve a pragmatic request with low emotional risk (noise complaint), reducing the need for concealment."
+      },
+      {
+        "factor": "Partner rigidity / strong entrenched preferences",
+        "description": "Hard cases involve an interlocutor with strong, principled preferences that are unlikely to be swayed by a single message; persuasion requires gradual framing, evidence, or trade-offs.",
+        "present_in_failed": "The coffee purist and the diet-committed or pizza-traditionalist partners are presented as ideologically committed, so changing their mind needs more sustained rationale or compromise.",
+        "absent_in_passed": "Passed interactions feature partners with weaker resistance or clear incentives to comply (roommate who needs quiet for a meeting, someone receptive on a first meet), so one or two well-placed utterances suffice."
+      },
+      {
+        "factor": "Need for sustained back-and-forth and closure",
+        "description": "Scenarios that require multi-turn negotiation, iterative concessions, or an explicit wrap-up are harder because they demand planning over several conversational moves and maintaining engagement until resolution.",
+        "present_in_failed": "Failed items often required negotiation and a mutually acceptable compromise (coffee machine, diet, pizza) or avoiding abrupt exits; leaving before closure was noted as a social error.",
+        "absent_in_passed": "Passed cases typically succeed with a short sequence: a clear opening plus a direct request or an easily interpretable romantic move that produces immediate feedback."
+      },
+      {
+        "factor": "Ambiguous success criteria / soft, subjective goals",
+        "description": "When success depends on subjective judgments (not coming off as controlling, preserving friendship warmth while persuading), evaluating and optimizing behavior is less straightforward and harder to execute.",
+        "present_in_failed": "Goals like 'don't be too controlling' or 'distance without revealing feelings' are inherently vague and require fine-grained tonal control, which the scenarios demanded.",
+        "absent_in_passed": "Passed scenarios have concrete, observable outcomes (lower noise, a successful flirt, making a date memorable) that are easier to pursue with clear actions."
+      }
+    ],
+    "what_model_lacks": "The model struggles with multi-constraint social optimization: balancing instrumental goals against relational costs, concealing or modulating internal states, and sustaining a negotiated pathway across multiple turns. It also lacks fine-grained pragmatic and emotional calibration needed for ambiguous or high-stakes interpersonal tradeoffs.",
+    "hard_scenario_signature": "A hard scenario pits the agent's immediate objective directly against a partner's entrenched preference or requires hiding motives/emotions while preserving rapport, with success depending on multi-turn negotiation and satisfying several soft constraints simultaneously.",
+    "easy_scenario_signature": "An easy scenario has aligned incentives or a single clear request with low emotional risk, permitting short, direct moves that produce immediate and unambiguous feedback or mutual benefit.",
+    "n_pass": 34,
+    "n_fail": 17
+  },
+  {
+    "category": "social_chemistry",
+    "pass_rate": 0.686,
+    "difficulty_factors": [
+      {
+        "factor": "high emotional risk / reputational stakes",
+        "description": "Scenarios in which the learner's action threatens trust, intimacy, or a person's self\u2011image are harder because the partner's reaction can be strong, variable, and long\u2011lasting, requiring careful tone, timing, and repair strategies.",
+        "present_in_failed": "Failed 3 (admit affair) requires delivering damaging personal information; Failed 1 and 5 (pressing for more game time / more classes) risk irritating or alienating a close friend/sibling.",
+        "absent_in_passed": "Passed cases involve low\u2011risk requests or clear institutional/transactional contexts (FaceTime texting complaint is a single emotional complaint but low risk; samples/garage sale are low\u2011stakes or rule-driven)."
+      },
+      {
+        "factor": "goal conflict / opposing incentives",
+        "description": "When the partner's preferences or constraints directly conflict with the learner's goal, success requires negotiation, tradeoffs, or convincing someone who benefits from refusal.",
+        "present_in_failed": "Failed 2 (weekend trip) and Failed 1 (friend tired/early commitment) feature explicit conflicting preferences or schedules that the partner defends.",
+        "absent_in_passed": "Passed 3 (manager told to clear samples) and Passed 2 (selling at a garage sale) present aligned incentives or clear authority/urgency that make compliance straightforward."
+      },
+      {
+        "factor": "multi\u2011condition / multi\u2011step success criteria",
+        "description": "Scenarios requiring multiple things to happen (concessions, future promises, price negotiation, scheduling coordination) increase complexity because each condition is a potential failure point.",
+        "present_in_failed": "Failed 4 (sell play rights) needs agreement on price, terms, and fit; Failed 1 needs a five\u2011minute concession plus follow\u2011through to keep the friend agreeable.",
+        "absent_in_passed": "Passed cases generally require a single compliant action (give away samples, accept a sale, or make a single statement about feelings)."
+      },
+      {
+        "factor": "sustained back\u2011and\u2011forth persuasion",
+        "description": "Scenarios that demand iterative persuasion, managing repeated objections, or long negotiations are harder because they require adaptive strategies and phased concessions.",
+        "present_in_failed": "Failed 2 shows repetitive pushing and diminishing relationship returns; Failed 4 implies bargaining over numbers and licensing terms.",
+        "absent_in_passed": "Passed scenarios typically involve one clear request or a straightforward compliance moment with minimal pushback."
+      },
+      {
+        "factor": "relational complexity and fragility",
+        "description": "New or sensitive relationships (new romance, close family) magnify the consequences of missteps and require more nuanced empathy and calibration of disclosures.",
+        "present_in_failed": "Failed 3 is a new romantic relationship where honesty can create major doubt; Failed 5 involves a sibling relationship where pressure can be perceived as controlling.",
+        "absent_in_passed": "Passed examples are either transactional (garage sale, samples) or an established couple addressing a minor annoyance, reducing fragility."
+      },
+      {
+        "factor": "ambiguity in acceptable outcomes",
+        "description": "When success has many subjective definitions (fair price, convincing without harming relationship, 'challenging' a friend academically), it's harder because the learner must both achieve the goal and navigate relational norms.",
+        "present_in_failed": "Failed 4 (fair price) and Failed 5 (what counts as 'challenging yourself' academically) lack a single clear metric for success.",
+        "absent_in_passed": "Passed tasks have clear, objective outcomes (give away samples, complete sale, express a feeling about a clear behavior)."
+      }
+    ],
+    "what_model_lacks": "The model struggles with multi\u2011turn negotiation strategies and calibrating emotional tone when stakes are high: it does not reliably sequence concessions, anticipate or defuse strong partner reactions, or trade short\u2011term gains for long\u2011term relationship maintenance. It also underweights the need for explicit empathy and repair language when delivering disclosures or pressing on contentious points.",
+    "hard_scenario_signature": "A hard scenario pits the learner's goal against a partner's clear preference or a fragile relationship, requires multiple conditional agreements or iterative persuasion, and carries emotional/reputational risk if handled poorly.",
+    "easy_scenario_signature": "An easy scenario is a single, low\u2011risk request with aligned incentives or clear authority/constraints, producing straightforward compliance or a simple expressive move with minimal negotiation.",
+    "n_pass": 24,
+    "n_fail": 11
+  },
+  {
+    "category": "social_iqa",
+    "pass_rate": 0.688,
+    "difficulty_factors": [
+      {
+        "factor": "High ethical/moral stakes",
+        "description": "Scenarios that require accomplishing goals which conflict with moral or legal norms (confessing to change a death sentence, injuring someone, or sustaining an anonymous wrongdoing) raise internal constraints that limit legitimate persuasive moves and force trade-offs that are hard to navigate without explicit policy/ethical reasoning.",
+        "present_in_failed": "Failed 4 (persuade to confess that could alter execution) and Failed 5 (injure a third person) directly involve ethically fraught aims; Failed 1 also requires revealing a secret while preserving anonymity, an ethically delicate maneuver.",
+        "absent_in_passed": "Passed cases (share blanket, drive/show car, share bed) involve benign, socially acceptable goals with no moral/legal conflict, so the agent can pursue straightforward cooperative strategies."
+      },
+      {
+        "factor": "Goal conflict / partner unwillingness (low cooperativeness)",
+        "description": "When the partner is resistant, rigid, or morally opposed, success requires extended, tailored persuasion and contingency handling rather than a single direct request.",
+        "present_in_failed": "Failed 4 explicitly involves an unwilling inmate; Failed 3 and 1 show partners who either accept then need follow\u2011up care or who require subtle cues to avoid revealing identity; Failed 2 involved a friend withholding info and needing negotiation tactics.",
+        "absent_in_passed": "Passed scenarios assume or quickly establish cooperative alignment (friend expects to let you drive, mutual coldness encourages blanket-sharing, existing intimacy on vacation makes bed-sharing natural), so a single ask or simple benefit framing suffices."
+      },
+      {
+        "factor": "Multi-condition / compound constraints",
+        "description": "Goals that require satisfying multiple simultaneous constraints (achieve X while not revealing Y; persuade without coercion; change an outcome that depends on others\u2019 beliefs) amplify difficulty because each turn must preserve several invariants.",
+        "present_in_failed": "Failed 1 required revealing content but preserving anonymity; Failed 4 required eliciting a confession without violating conscience-based resistance and while avoiding immediate harm; Failed 2 attempted to extract an answer without breaching friendship norms.",
+        "absent_in_passed": "Passed tasks generally have a single primary condition (get to drive, share blanket, sleep together) and straightforward incentives or mutual benefit, reducing planning complexity."
+      },
+      {
+        "factor": "Need for sustained, varied persuasion across turns",
+        "description": "Successful resolution often requires a sequence of adaptive moves (empathy, reframing, bargaining, concessions) rather than repetition of the same tactic; this demands turn-by-turn strategy and conversational variation.",
+        "present_in_failed": "Failed 1 showed repetitive storytelling that looped rather than varied tactics; Failed 4 needed adaptive empathy and alternative deals; Failed 2 required escalating/varied incentives but sometimes defaulted to the same offers.",
+        "absent_in_passed": "Passed scenarios were solvable with one or two natural moves (offer the blanket, invite to drive, cuddle to improve sleep) so sustained persuasion was unnecessary."
+      },
+      {
+        "factor": "Relational risk and repair sensitivity",
+        "description": "Scenarios where a misstep (bluntness, abrupt exit, revealing secret) severely damages the relationship require careful turn management and repair strategies; mistakes have outsized relational costs.",
+        "present_in_failed": "Failed 3 featured an abrupt departure after a successful invite that damaged rapport; Failed 1 risked exposing the secret and thus trust; Failed 5 required channeling hostility without destroying the alliance.",
+        "absent_in_passed": "Passed cases either strengthen rapport by default (sharing warmth, intimacy) or do not present actions with high relational collateral, so small errors are less catastrophic."
+      },
+      {
+        "factor": "Requirement to manage identity/opacity (deception or anonymity)",
+        "description": "Tasks that ask the agent to manipulate what the partner believes about the agent\u2019s identity or source of information (stay anonymous while revealing) increase complexity because the agent must hedge statements and control inferences.",
+        "present_in_failed": "Failed 1 explicitly required revealing a secret while hiding that it was the agent's secret and Failed 2 involved coaxing knowledge without exposing motives; mismanagement led to admissions or suspicion.",
+        "absent_in_passed": "Passed scenarios did not require hiding authorship, lying, or complex inference control \u2014 straightforward transparency was acceptable."
+      }
+    ],
+    "what_model_lacks": "The model struggles with multi-step persuasive planning and adaptive conversational tactics: it tends to repeat the same move rather than vary strategy, and it fails to maintain multiple constraints (e.g., keep anonymity while disclosing content). It also has difficulty managing high-stakes ethical trade-offs and preserving relational capital after risky requests.",
+    "hard_scenario_signature": "A hard scenario combines moral/ethical tension or illicit goals with an uncooperative partner and multiple simultaneous constraints (e.g., reveal X but hide Y), requiring adaptive, varied persuasion over many turns while protecting the relationship and controlling partner inferences.",
+    "easy_scenario_signature": "An easy scenario involves a benign, cooperative goal with clear mutual benefits or a single simple condition; success can be achieved with one or two natural, transparent moves and minimal risk to the relationship.",
+    "n_pass": 22,
+    "n_fail": 10
+  },
+  {
+    "category": "hand-craft",
+    "pass_rate": 0.385,
+    "difficulty_factors": [
+      {
+        "factor": "covert intent / need for secrecy",
+        "description": "Scenarios that require the learner to hide their true purpose (e.g., buying a surprise gift, not signalling a fundraising goal) demand indirect, plausible-seeming questions and careful conversational framing. This increases difficulty because every informative move must also preserve the concealment.",
+        "present_in_failed": "Failed 2 required asking many personal preference questions without revealing that a gift was being bought; other fails involved not revealing sensitive personal information while pursuing a goal.",
+        "absent_in_passed": "Passed scenarios involved openly stated intentions or obvious motives (share driving, confess/defect dilemma, set boundaries) so the agent could act directly without covert framing."
+      },
+      {
+        "factor": "multi-step conditional bargaining",
+        "description": "Goals that require offering tradeoffs, staged commitments, or sequenced incentives (e.g., borrow money with negotiated repayment/benefit, persuade a friend using material incentives) need planning across multiple turns and conditional promises, which increases cognitive and conversational complexity.",
+        "present_in_failed": "Failed 1 and Failed 4 involve negotiating money or material benefits and require contingent offers and follow-through; the heirloom search (Failed 5) required coordinating schedules and searching steps without disrupting harmony.",
+        "absent_in_passed": "Passed cases had single, simple, salient asks (switch driving, choose to confess/keep silent, state boundaries) with fewer contingent moves and less need for multi-turn bargaining."
+      },
+      {
+        "factor": "high relational/ reputational risk",
+        "description": "When the goal threatens the relationship or requires vulnerability (asking for a large loan, criticizing family behavior, searching a sentimental item), the agent must balance assertiveness with repair strategies and maintain trust, which complicates phrasing and timing.",
+        "present_in_failed": "Failed 1 (large financial request), Failed 5 (sentimental heirloom) and Failed 4 (persuading a sibling) all required preserving relationship while pushing for a potentially awkward request.",
+        "absent_in_passed": "In Passed 2 and Passed 1 the social cost of the direct ask is limited or calculable (driving swap is routine; prisoner's dilemma is a strategic one-shot with known payoffs), reducing need for delicate reputation management."
+      },
+      {
+        "factor": "need for naturalistic, low-pressure information gathering",
+        "description": "Some tasks require eliciting many specific facts while sounding casual and non-interrogative; unnatural rapid-fire questioning breaks believability and undermines success.",
+        "present_in_failed": "Failed 2's judge noted an unnatural barrage of detailed questions about birthday logistics; Failed 3 and 4 also show over-specified, professional-style information seeking that feels out of place.",
+        "absent_in_passed": "Passed scenarios typically allow a single straightforward disclosure or request (e.g., 'I'm tired, please drive'), so the agent need not sustain casual information-gathering."
+      },
+      {
+        "factor": "multiple success conditions / high info requirements",
+        "description": "Scenarios that require satisfying several independent constraints to count as success (exact money amount, secrecy, emotional preservation, schedule coordination) raise the combinatorial difficulty: the agent must track and satisfy many criteria simultaneously.",
+        "present_in_failed": "Failed episodes often list extra_info or strategy_hints (need $3000 but secure partial amount; hide intent while getting specific gift details; offer financial incentives while keeping relationship intact) meaning several simultaneous constraints.",
+        "absent_in_passed": "Passed episodes have clearer, single-dimensional success metrics (minimize jail years, take turns driving, set a boundary) that are easier to optimize."
+      }
+    ],
+    "what_model_lacks": "The model struggles with subtle, multi-turn pragmatic planning: it cannot reliably balance information-seeking with maintaining naturalness or secrecy, nor manage conditional bargaining that preserves relationship capital. It underweights long-horizon conversational strategy (how early moves affect later trust and plausibility).",
+    "hard_scenario_signature": "A hard scenario demands covert or low-pressure persuasion across multiple turns, requires satisfying several simultaneous constraints (emotional preservation, secrecy, concrete material outcomes), and hinges on nuanced, naturalistic phrasing to avoid damaging rapport.",
+    "easy_scenario_signature": "An easy scenario features a clear, single-turn or short strategic choice with aligned incentives or explicit permission to be direct, low need for concealment, and few simultaneous success conditions to track.",
+    "n_pass": 5,
+    "n_fail": 8
+  },
+  {
+    "category": "deal-or-no-deal",
+    "pass_rate": 0.2,
+    "difficulty_factors": [
+      {
+        "factor": "high goal conflict / zero-sum preferences",
+        "description": "Scenarios where both parties highly value the same scarce items (or where one or two items dominate total utility) create strong direct competition and few Pareto-improving splits, making agreement harder.",
+        "present_in_failed": "Several failed cases pivoted around single high-value items (e.g., a highly valued ball/orange) or both players wanting the same items, producing tough trade-offs and no obvious low-cost concessions.",
+        "absent_in_passed": "Passed cases had more evenly distributed or compatible valuations (or an explicit fairness goal), so simple splits or small concessions produced acceptable outcomes."
+      },
+      {
+        "factor": "multi-objective tension (points vs. relationship)",
+        "description": "When success requires balancing material gain with social norms (maintaining rapport, not abruptly leaving), the scenario demands softer tactics and reputational management in addition to numerical optimization.",
+        "present_in_failed": "Judges flagged abrupt exits and damaged relationships in multiple failed episodes \u2014 the negotiation required keeping the partner engaged while trading value, but the interaction collapsed when the agent focused on point-maximization or withdrew.",
+        "absent_in_passed": "At least one passed scenario explicitly added a fairness constraint and another implied cooperative strategy, aligning the agent's incentives with socially acceptable behavior and reducing the trade-off."
+      },
+      {
+        "factor": "need for sustained, iterative bargaining and creative side-payments",
+        "description": "Hard cases require many back-and-forth turns and off-item compensation (favors, chores, goods) to reach agreement; they demand adaptive concession schedules and creativity beyond a single proposal.",
+        "present_in_failed": "Failed episodes show negotiations that needed multiple rounds and creative offers; the agent often left early or failed to iteratively adjust offers to achieve a deal.",
+        "absent_in_passed": "Passed episodes resolved with few exchanges or with straightforward, one-shot divisions that did not require extended bargaining or novel side-payments."
+      },
+      {
+        "factor": "partner rigidity / low cooperativeness",
+        "description": "If the partner is inflexible (rare concessions, anchored demands), the space for win-win trades shrinks and the negotiation requires persistent persuasion or alternative leverage.",
+        "present_in_failed": "Judges described partners as rigid in several failures; the scenarios penalized insufficient persistence and flexibility, causing breakdowns.",
+        "absent_in_passed": "Passed cases either involved more cooperative partners (or hints that allowed alignment), so the agent could reach agreement without prolonged persuasion."
+      },
+      {
+        "factor": "combinatorial arithmetic and allocation complexity",
+        "description": "Larger item counts, uneven item multiplicities, or disparate point weights increase the search space for optimal splits and raise the chance of calculation errors or suboptimal offers.",
+        "present_in_failed": "Some failed scenarios had more items (12 total) or uneven valuations and judges noted arithmetic errors and suboptimal resulting allocations.",
+        "absent_in_passed": "Passed scenarios tended to have smaller totals and simpler, more uniform valuations, reducing allocation complexity and arithmetic burden."
+      }
+    ],
+    "what_model_lacks": "The model struggles to balance multiple social objectives (maximizing points while preserving rapport) and to sustain adaptive, multi-turn bargaining strategies (persistence, calibrated concessions, creative side-payments). It also shows weaknesses in searching the combinatorial allocation space and avoiding premature withdrawal when a negotiated trade is possible.",
+    "hard_scenario_signature": "A hard scenario is one where a few scarce items carry disproportionate value, both players' preferences strongly conflict, the partner is uncooperative or anchored, and achieving a deal requires many adaptive rounds or off-item concessions.",
+    "easy_scenario_signature": "An easy scenario has distributed or compatible valuations (or an explicit fairness constraint), few items with simple weights, and can be resolved with a small number of clear, one-shot offers that don't demand extended rapport management.",
+    "n_pass": 2,
+    "n_fail": 8
+  },
+  {
+    "category": "craigslist_bargains",
+    "pass_rate": 0.5,
+    "difficulty_factors": [
+      {
+        "factor": "seller rigidity / explicit non-negotiability",
+        "description": "Scenarios where the seller states the price is fixed or otherwise signals a hard floor leave little room for simple lowball offers and require discovering or creating alternative concessions.",
+        "present_in_failed": "Several failed cases include explicit 'price is non-negotiable' language or sellers with a discovered hard floor very close to the asking price (Tile Mate, Galaxy S8, Antique table), so straightforward bargaining fails.",
+        "absent_in_passed": "Passed cases show sellers who either signal flexibility or have implicit motives to move the item (BMW, TV stand, Antique chair), enabling a single well-timed offer or small concession to succeed."
+      },
+      {
+        "factor": "large relative price gap coupled with little seller urgency",
+        "description": "When the buyer target is far below the listed price and the seller shows no urgency, the required concession from the seller is large and unlikely without strong leverage or persuasion.",
+        "present_in_failed": "Failed episodes often had substantial percentage gaps (e.g., Galaxy S8 and 47\" TV) and judges noted sellers' unwillingness to accept non-cash or big markdowns.",
+        "absent_in_passed": "Passed episodes had smaller effective gaps or seller signals of willingness to accept modest discounts (TV stand, Antique chair), or clear motivation to sell (BMW), reducing required concessions."
+      },
+      {
+        "factor": "informational asymmetry about seller motivation",
+        "description": "Hard scenarios hide why the seller is selling or whether they need a quick sale; resolving that requires multi-turn probing to find leverage points.",
+        "present_in_failed": "Failed cases required several probes to reveal the seller's true bottom or motivations and often the model either didn't find actionable motivation or the seller genuinely had no urgency.",
+        "absent_in_passed": "Passed interactions either contained explicit motivation cues or the negotiation succeeded without needing deep probing, so the agent could close the deal quickly."
+      },
+      {
+        "factor": "multiple transactional constraints",
+        "description": "When listings include constraints (cash-only, pick-up-only, no trade-ins, missing parts), the negotiation space is narrower and the buyer must negotiate around logistics in addition to price.",
+        "present_in_failed": "Failed episodes specified cash-only, pick-up logistics, missing handle, or no trade-ins, limiting the set of feasible offers and raising complexity.",
+        "absent_in_passed": "Passed listings were simpler logistically or the constraints did not block price negotiation, so the buyer could focus mainly on price and persuasion."
+      },
+      {
+        "factor": "need for creative non-monetary trades or bundled offers",
+        "description": "Some sellers might accept services, swaps, or other creative sweeteners; recognizing and proposing those requires inference about seller preferences and a willingness to trade non-cash value.",
+        "present_in_failed": "Judges noted buyers attempted creative offers but sellers either had hard floors or weren't interested; success required better targeting or discovery of what the seller valued.",
+        "absent_in_passed": "Passed scenarios didn't require or benefited less from creative non-monetary proposals \u2014 simple monetary concessions sufficed."
+      },
+      {
+        "factor": "sustained multi-turn probing vs. single-ask resolution",
+        "description": "Scenarios that demand iterative concessions, information-gathering, and rapport-building are harder for strategies that rely on one or two direct offers.",
+        "present_in_failed": "Failures often needed many turns to elicit seller bottom lines and motivations; the model's tactics didn't convert that information into a viable offer before the seller held firm.",
+        "absent_in_passed": "Passed cases were resolvable with few exchanges or the seller quickly revealed a concession, so the agent's simpler tactics worked."
+      }
+    ],
+    "what_model_lacks": "The model struggles to convert multi-turn information into tailored leverage: it fails to probe efficiently for seller motivation, to synthesize discovered constraints into creative trade proposals, and to escalate persuasion when faced with a hard floor. It also underuses relational moves (rapport, targeted incentives) that can unlock otherwise rigid sellers.",
+    "hard_scenario_signature": "A 'hard' scenario has a large price gap with an explicitly inflexible seller or many logistical constraints, where seller motivation is hidden and success requires sustained probing plus creative non-monetary or bundled offers.",
+    "easy_scenario_signature": "An 'easy' scenario has a small effective price gap or clear seller urgency/flexibility and few logistical constraints, so a short, direct offer or small concession can close the deal.",
+    "n_pass": 5,
+    "n_fail": 5
+  },
+  {
+    "category": "original_creation",
+    "pass_rate": 0.872,
+    "difficulty_factors": [
+      {
+        "factor": "Mixed / dual goals",
+        "description": "Scenarios that require pursuing an instrumental objective while also managing an emotional or relational goal (e.g., giving support while pushing a policy) are harder because they demand balancing empathy and persuasion simultaneously.",
+        "present_in_failed": "Failed cases often combined aims: offering recovery support while pushing safety protocols (ranch injury), being supportive yet trying to change behavior (siblings cleaning, blackout companion), or coaxing someone to join while preserving comfort (dance party).",
+        "absent_in_passed": "Passed scenes tended to have one dominant, coherent goal \u2014 a single confession, a single request for help, or an expression of appreciation paired with one delicate admission \u2014 so the agent could focus on one communicative strategy."
+      },
+      {
+        "factor": "Partner rigidity / conflicting preferences",
+        "description": "When the partner has a stable, stated preference or resistance (prefers solitude, is relaxed about tasks, has social anxiety), success requires tailored concessions and persistent, contingency-aware persuasion.",
+        "present_in_failed": "Several fails featured explicit resistance: neighbor preferring darkness, travel companion preferring to wait, injured rider resistant to safety changes, sibling not motivated \u2014 each requires overcoming entrenched preferences.",
+        "absent_in_passed": "Passed scenarios involved partners who were either amenable (neighbor with mechanical skills, friends happy to reconnect) or in contexts where compliance is straightforward (urgent help), so less resistance had to be overcome."
+      },
+      {
+        "factor": "Need for sustained multi-turn negotiation",
+        "description": "Scenarios that demand a series of small agreements, negotiated tradeoffs, or follow-through are harder because they require planning, contingent responses, and persistence across turns.",
+        "present_in_failed": "Cleaning-division and airport-preparation scenes required iterated bargaining and concrete task allocation; the ranch scene required maintaining rapport while introducing policy changes over time.",
+        "absent_in_passed": "Passed cases mostly needed a single well-phrased ask or a limited disclosure (confession, quick request for a ride), which can be resolved within few turns."
+      },
+      {
+        "factor": "High emotional vulnerability / face management",
+        "description": "When the partner or agent is emotionally exposed (fear of rejection, recovery pain, social anxiety), the interaction requires careful empathy and calibrated risk-taking to avoid harming the relationship.",
+        "present_in_failed": "Conflicts about safety after injury, persuading someone uncomfortable in the dark, and encouraging a socially anxious friend to dance all required sensitive face-saving strategies and reassurance \u2014 mishandling these causes breakdown.",
+        "absent_in_passed": "Although some passed scenes were emotionally charged, the setting made vulnerability manageable (private intimate moment for a confession, friends expecting reconnection), reducing the complexity of face work."
+      },
+      {
+        "factor": "Multiple conditional steps / coordination complexity",
+        "description": "Scenarios that hinge on several conditions being met (both parties completing separate tasks, coordinating times/roles, or changing shared norms) raise the bar because success depends on several interlocking commitments.",
+        "present_in_failed": "Airport passports+prints, sibling division of chores, and implementing ranch safety protocols require multiple actions and coordination, any of which can derail the outcome.",
+        "absent_in_passed": "Passed scenarios tended to require a single immediate action or response (give emotional disclosure, accept a ride/help), minimizing coordination failure points."
+      },
+      {
+        "factor": "Relational complexity and power dynamics",
+        "description": "When pre-existing relationships have asymmetric expectations (siblings with history, acquaintances vs. close friends) or the outcome could alter the relationship, the agent must navigate history, norms, and authority carefully.",
+        "present_in_failed": "Siblings negotiating chores involve long-standing norms and entrenched roles; acquaintances in a blackout or ranch colleagues involve differing levels of obligation and trust that complicate persuasion.",
+        "absent_in_passed": "Passed interactions either occurred between long-trusting friends in a supportive context or between a person and a neighbor with a clear, narrow role (mechanic), reducing ambiguous social costs."
+      }
+    ],
+    "what_model_lacks": "The model struggles to coordinate multi-step, contingent strategies that balance empathy with instrumental persuasion: i.e., it fails to plan sequences of concessions, follow-up commitments, and face-saving moves. It also weakly models partner resistance and history, so it either over-pressures or abandons negotiations instead of using graded, contingent tactics.",
+    "hard_scenario_signature": "A hard scenario combines an emotionally sensitive relationship, an interlocutor with clear resistance or entrenched preference, and a goal that requires multiple negotiated steps or tradeoffs while preserving the relationship.",
+    "easy_scenario_signature": "An easy scenario has a single, concrete request or disclosure in a context where the partner is likely to be amenable or where urgency/clarity reduces the need for extended negotiation or complex face-work.",
+    "n_pass": 34,
+    "n_fail": 5
+  },
+  {
+    "category": "mutual_friends",
+    "pass_rate": 0.7,
+    "difficulty_factors": [
+      {
+        "factor": "need_for_multi-step_elimination",
+        "description": "Scenarios that require the agent to eliminate multiple non-matches through a sequence of targeted questions (rather than a single diagnostic question) are harder because success depends on planning a short decision tree and remembering prior negative answers.",
+        "present_in_failed": "Judge notes in the failed cases show the learner mostly ruled out candidates or learned only non-matches (e.g., learned details allowing them to rule people out), indicating the task required multiple elimination steps.",
+        "absent_in_passed": "Passed episodes appear to allow a single or very small number of high-yield questions (or more directly diagnostic cues) that reveal the mutual connection without long elimination sequences."
+      },
+      {
+        "factor": "low_attribute_diagnosticity",
+        "description": "When the known attributes of friends are generic or incomplete (partial school/hobby strings, common activities) they fail to uniquely identify a mutual friend, making inference from partner responses fragile.",
+        "present_in_failed": "The agent's friend entries in failed cases are partially truncated and generic (e.g., partial hobby or school fields), offering few unique cues to map to the other person's descriptions.",
+        "absent_in_passed": "Passed cases show friend attributes that are more distinctive or align better with likely conversational cues (clear school or hobby tags), making matches easier from fewer signals."
+      },
+      {
+        "factor": "attribute_mismatch_between_parties",
+        "description": "Harder scenarios occur when the attributes the agent knows about their friends (e.g., school, hobby) are different from the attributes the partner is likely to mention (e.g., workplace, charities), forcing cross-attribute inference rather than direct matching.",
+        "present_in_failed": "Judge comments indicate learners had to reconcile different kinds of info and mostly learned non-matching attributes (work/university vs hobbies), implying a mismatch in attribute types shared by partners.",
+        "absent_in_passed": "In passed cases the salient attributes available to the agent and those the partner reveals appear to align, so direct matching is possible with minimal cross-attribute inference."
+      },
+      {
+        "factor": "partner_vagueness_or_negative_information",
+        "description": "Scenarios where the other person predominantly provides vague replies or negations (what their friends are not/do not do) make it hard to converge on a positive identification of a mutual friend.",
+        "present_in_failed": "Failed transcripts show the learner mainly received negative information or learned exclusions rather than positive identifying details, leaving the mutual friend unconfirmed.",
+        "absent_in_passed": "Passed interactions imply the partner offered at least some positive or identifying detail early, reducing ambiguity and the need for many follow-ups."
+      },
+      {
+        "factor": "low_social_reward_for_directness",
+        "description": "When the scenario implicitly constrains direct naming (social constraints or instruction to not just list names), agents must use indirect elicitation; tasks that require subtle indirect strategies are harder than those allowing straightforward verification.",
+        "present_in_failed": "Failed episodes emphasize not simply listing names and required more skillful elicitation, but the scenario supplies sparse clues, amplifying difficulty.",
+        "absent_in_passed": "Passed scenarios permitted conversational moves or provided cues that made indirect identification straightforward without violating the 'no listing names' constraint."
+      }
+    ],
+    "what_model_lacks": "The model lacks robust multi-step hypothesis-testing strategies: planning short sequences of diagnostic questions, integrating negative evidence, and converting sparse or cross-attribute clues into discriminative inferences. It also struggles to adapt questioning style when the partner provides vague or exclusionary answers.",
+    "hard_scenario_signature": "A hard scenario supplies only weak, generic, or mismatched attributes about friends and the partner gives mostly negative or vague responses, forcing multiple elimination steps and cross-attribute inference under a constraint against directly naming people.",
+    "easy_scenario_signature": "An easy scenario provides at least one clear, distinctive attribute shared between parties (aligned school/hobby/other cue) or allows a small number of high-yield questions that directly reveal a mutual connection without long elimination chains.",
+    "n_pass": 7,
+    "n_fail": 3
+  },
+  {
+    "category": "social_dynamics",
+    "pass_rate": 0.7,
+    "difficulty_factors": [
+      {
+        "factor": "value_conflict_and_moral_identity",
+        "description": "Scenarios where the other person's choices are rooted in firm values or moral identity are harder because successful interaction requires persuading or accommodating without threatening that identity. Actions seen as violating those values trigger resistance that a single benign pitch cannot overcome.",
+        "present_in_failed": "Failed 1 asks an environmentally conscious friend to join a car road trip that conflicts with their transit preferences; Failed 3 centers on a friendship split due to fundamental value divergence.",
+        "absent_in_passed": "Passed scenarios involve practical, social, or preference-based issues (minor incident, scheduling/conflict on dates, polite curiosity about tattoos) rather than challenges to core moral identity."
+      },
+      {
+        "factor": "high_emotional_stakes_and_finality",
+        "description": "When outcomes have strong emotional consequences (trust loss, relationship termination), the interaction must manage grief, defensiveness, and long-term repercussions. These situations require careful pacing, reassurance, and sometimes multiple reparative moves.",
+        "present_in_failed": "Failed 2 involves a boundary violation that undermines autonomy and trust; Failed 3 explicitly ends a long friendship, a high-stakes, final move with heavy emotional impact.",
+        "absent_in_passed": "Passed cases are low-to-moderate stakes (preserving harmony, choosing between dates, a brief compliment) where immediate harm is minimal and reversibility is high."
+      },
+      {
+        "factor": "need_for_trust_repair_and_boundary_management",
+        "description": "Scenarios that require restoring trust or acknowledging an overstep demand explicit apologies, validation, and negotiated future boundaries; simple persuasion or explanation is insufficient.",
+        "present_in_failed": "Failed 2 centers on repairing a boundary breach (asking parents without consent) and earning back autonomy and respect; Failed 1 also required offering compromises that respect Agent2's principles rather than overriding them.",
+        "absent_in_passed": "Passed interactions do not hinge on undoing a specific breach of trust or re-establishing autonomy, so fewer delicate repair moves are necessary."
+      },
+      {
+        "factor": "multi-constraint_goals_and_tradeoffs",
+        "description": "Hard scenarios impose several simultaneous constraints (convince the other, avoid harming the relationship, respect identity, achieve a practical outcome), so acceptable responses must balance competing goals rather than satisfy a single clear objective.",
+        "present_in_failed": "Failed 1 must persuade without violating environmental values and maintain rapport; Failed 2 must both apologize and salvage the invitation; Failed 3 must explain a breakup while minimizing unnecessary harm.",
+        "absent_in_passed": "Passed cases typically have one primary objective (preserve group harmony, explain predicament about dates, ask about tattoos) and fewer conflicting constraints."
+      },
+      {
+        "factor": "partner_rigidity_and_sensitivity",
+        "description": "When the interlocutor is portrayed as especially rigid or sensitive (firm beliefs, strict parents, high boundary vigilance), there is lower tolerance for mistakes and a narrower range of acceptable appeals, making success harder.",
+        "present_in_failed": "Failed 1's friend is strongly environmentally conscious; Failed 2's friend values independence and has strict parents; Failed 3 involves long-standing relational history that heightens sensitivity.",
+        "absent_in_passed": "Passed scenarios feature more malleable or neutral partners (community member to be reassured, colleague open to discussion, stranger at a gallery)."
+      },
+      {
+        "factor": "requires_sustained_back-and-forth_and_nuanced_empathy",
+        "description": "Difficult scenarios typically require extended dialogue, iterative repair, explicit validation, and adaptive tone over multiple turns rather than a single request or compliment.",
+        "present_in_failed": "Failed 2 and 3 need multi-turn trust repair and emotional calibration; Failed 1 may require negotiating alternatives and responding to principled objections across turns.",
+        "absent_in_passed": "Passed interactions are often resolvable with a concise, single-turn reassurance, clear explanation, or a brief, low-risk question that doesn't demand prolonged emotional labor."
+      }
+    ],
+    "what_model_lacks": "The model struggles with multi-objective social reasoning: balancing persuasion with respect for identity, and sequencing reparative moves when trust is damaged. It also underutilizes sustained, empathy-driven strategies (explicit validation, iterative concessions) required to de-escalate high-stakes or values-based conflicts.",
+    "hard_scenario_signature": "A hard scenario pits the agent's goal against another person's core values or autonomy, involves high emotional stakes (possible trust loss or relationship termination), and requires balancing multiple constraints via sustained, adaptive dialogue.",
+    "easy_scenario_signature": "An easy scenario has low emotional cost, a single clear objective, and a tolerant or neutral partner\u2014success can typically be achieved with a brief, polite, and transparent utterance.",
+    "n_pass": 7,
+    "n_fail": 3
+  },
+  {
+    "category": "inspired_by_prompt",
+    "pass_rate": 0.8,
+    "difficulty_factors": [
+      {
+        "factor": "Safety / high emotional stakes",
+        "description": "Scenarios that involve potential physical danger or strong emotional fears raise stakes and constrain acceptable persuasive moves; they require careful de-escalation, reassurance, and safety planning rather than simple encouragement.",
+        "present_in_failed": "Failed cases include an upside-down exercise that triggers a fear of heights, and a collectors' dispute that recalls a previous gun brandishing\u2014both require safety-first responses and cautious negotiation.",
+        "absent_in_passed": "Passed scenarios (friendly 5K competition, neighbor noise, karaoke) are low-physical-risk and emotionally lower-stakes, so straightforward encouragement or compromise is appropriate."
+      },
+      {
+        "factor": "Multiple conditional constraints / complex trade-offs",
+        "description": "Successful resolution depends on satisfying several interlocking conditions (institutional rules, time pressures, ownership terms) so effective responses must propose and coordinate multi-option solutions.",
+        "present_in_failed": "The library case involves checkout policy, a deadline, and alternative access; the collectors case expects buyout/shared custody/trade options; the upside-down exercise may require stepwise exposure, spotting, and exit plans.",
+        "absent_in_passed": "Passed scenarios typically have a single clear lever (motivation, agreed quiet times, fun framing) and can be resolved with one or two simple offers or concessions."
+      },
+      {
+        "factor": "Partner rigidity or fear-driven refusal",
+        "description": "When the other person holds a principled, fear-based, or institutionally backed stance, persuasion requires more probing, validation, and tailored concessions rather than generic encouragement.",
+        "present_in_failed": "Agent2s in failed episodes are resistant because of fear (heights), firm constraints (library policy/need for whole book), or adversarial stance (collector staking claim), making a single ask unlikely to work.",
+        "absent_in_passed": "In passed episodes the partner is more malleable (motivated by fun/competition or open to time-based compromises), so lighter persuasive tactics succeed."
+      },
+      {
+        "factor": "Need for sustained multi-turn scaffolding",
+        "description": "Hard cases require a sequence of small steps, trust-building, or probing questions over multiple turns (e.g., graded exposure, negotiating phased ownership), not a single persuasive utterance.",
+        "present_in_failed": "The upside-down exercise calls for modeling, practice, and safety checks across turns; the collectors' dispute and library negotiation both require iterative bargaining and contingency-making.",
+        "absent_in_passed": "Passed scenarios can usually be resolved with a few reassuring lines, explicit compromises, or one-off encouragement that do not demand long scaffolding."
+      },
+      {
+        "factor": "Ambiguous or missing partner information",
+        "description": "Scenarios where success depends on unspoken motives or specific constraints force the agent to elicit information first; failure occurs when those probes or tailored responses are not produced.",
+        "present_in_failed": "Failed episodes hide critical specifics (exact nature of the fear of heights, precise reasons the other needs the book, terms acceptable for settlement) that must be uncovered to craft viable offers.",
+        "absent_in_passed": "Passed episodes contain clear, surface-level motivations (wanting to improve, keep music down, have fun) so the agent can respond effectively without deep elicitation."
+      }
+    ],
+    "what_model_lacks": "The model struggles with multi-step persuasion strategies: it does not reliably elicit hidden constraints, construct conditional proposals, or execute graded reassurance/safety plans over several turns. It also underuses explicit de-escalation and contingency framing needed when stakes, fear, or institutional rules restrict acceptable moves.",
+    "hard_scenario_signature": "A hard scenario features elevated physical or emotional risk, strong partner rigidity or institutional constraints, and requires multi-turn probing plus conditional trade-offs (safety options, phased agreements, or alternative access) to reach a solution.",
+    "easy_scenario_signature": "An easy scenario is low-risk with a single clear lever (motivation, simple compromise or reassurance) and a partner who is amenable to brief encouragement or one-off concessions.",
+    "n_pass": 12,
+    "n_fail": 3
+  },
+  {
+    "category": "persuation_for_good",
+    "pass_rate": 0.8,
+    "difficulty_factors": [
+      {
+        "factor": "conflicting goals / incentives",
+        "description": "Scenarios where the interlocutor has an objective that directly conflicts with the learner's ask (e.g., maintain product quality or comply with event rules) are harder because the target must give up or trade off something they value.",
+        "present_in_failed": "In the supplier-cutting case the partner prioritizes quality control and lab/COA standards that oppose cost-cutting; in the gala case there was an explicit donation constraint (minimums/requirements) requiring a workaround.",
+        "absent_in_passed": "Passed cases involve friends predisposed to give or low-stakes donation asks where the target's incentives are already aligned with donating, so little or no tradeoff is required."
+      },
+      {
+        "factor": "multiple conditional requirements",
+        "description": "When success requires satisfying several independent conditions (technical approvals, quality tests, or logistical constraints) persuasion becomes a multi-step problem rather than a single ask.",
+        "present_in_failed": "The business scenario required meeting lab stability, COAs, and sensory panels; the gala conversation required finding a workaround to specific donation rules and accommodating donor limits.",
+        "absent_in_passed": "Passed dialogues typically need only a simple yes/no donation decision without extra approvals or procedural hurdles."
+      },
+      {
+        "factor": "partner rigidity and risk-aversion",
+        "description": "Targets who are cautious, professional, or bound by standards require evidence, assurances, or negotiated trade-offs making persuasion slower and more contingent.",
+        "present_in_failed": "The partner in the company review demanded technical proof before changing suppliers; the gala partner had fixed donation limits and social/procedural expectations that reduced flexibility.",
+        "absent_in_passed": "Friends at charity events are portrayed as generous and emotionally receptive, so they are less risk-averse and easier to move with appeals."
+      },
+      {
+        "factor": "high domain/technical knowledge demand",
+        "description": "Persuasion that depends on technical details or specialized evidence needs the persuader to present credible facts or expertise, increasing difficulty if the agent lacks domain signals.",
+        "present_in_failed": "The supplier argument hinged on lab testing, COAs, and quality-control criteria\u2014details that require authoritative evidence to overcome objections.",
+        "absent_in_passed": "Passed scenarios rely on general moral/emotional appeals about children or reputable charities that don't demand specialist proof."
+      },
+      {
+        "factor": "relational complexity and formality",
+        "description": "Professional or unfamiliar relationships introduce norms, reputational risk, and need for formal justification, whereas close friendships allow more direct emotional appeals and social flexibility.",
+        "present_in_failed": "Both failed cases are more formal/professional (business partners, individuals at a gala with rules), increasing social costs for pushy tactics and requiring tactful negotiation.",
+        "absent_in_passed": "Passed scenes are informal friend-to-friend interactions where candid emotional appeals and direct asks are socially appropriate and effective."
+      },
+      {
+        "factor": "need for sustained back-and-forth and problem solving",
+        "description": "Harder scenarios require iterative negotiation, proposing alternatives, and adapting to revealed constraints instead of a single persuasive pitch.",
+        "present_in_failed": "The failed episodes involved discovering constraints mid-conversation (donation limits, quality standards) and needed iterative solution-building (workarounds, compromise on supplier choices).",
+        "absent_in_passed": "Passed episodes typically succeed with a single emotional framing or simple request and minimal negotiation."
+      }
+    ],
+    "what_model_lacks": "The model struggles with planning multi-step persuasion strategies that simultaneously satisfy competing constraints and with producing credible technical or procedural justifications for skeptical, risk\u2011averse interlocutors. It also underutilizes staged negotiation: proposing trade-offs, securing small commitments, and progressively building credibility.",
+    "hard_scenario_signature": "A hard scenario pairs a persuasive ask with conflicting incentives or formal constraints (quality standards, donation rules), requires satisfying multiple independent conditions or technical evidence, and demands iterative negotiation with a risk\u2011averse or professional partner.",
+    "easy_scenario_signature": "An easy scenario is a single, low\u2011cost ask to a sympathetic friend or donor with aligned incentives, where an emotional appeal or brief rationale suffices and no technical approvals or trade-offs are needed.",
+    "n_pass": 8,
+    "n_fail": 2
+  },
+  {
+    "category": "generated",
+    "pass_rate": 0.714,
+    "difficulty_factors": [
+      {
+        "factor": "role / perspective clarity",
+        "description": "Scenarios that require the speaker to clearly adopt a first-person, empathic stance toward a single partner (speak directly to their feelings and decisions) are harder when the situation encourages third\u2011party planning or depersonalized advice.",
+        "present_in_failed": "In the pet adoption failure the agent's responses read like planning for a third party rather than speaking directly to Agent1's hesitations; in the vaccine case the agent leaned toward delivering citations and facts rather than conversationally addressing the friend's concerns.",
+        "absent_in_passed": "Passed cases featured clearer interpersonal framing (siblings honoring a brother, neighbors debating pet freedom, colleagues at work) so the model could naturally adopt a direct, relational stance and maintain role clarity."
+      },
+      {
+        "factor": "partner rigidity / entrenched beliefs",
+        "description": "When the conversational partner holds entrenched or misinformation-driven beliefs, success requires careful epistemic strategies (trust-building, calibrated challenges, motivational interviewing) rather than a single corrective message.",
+        "present_in_failed": "The vaccine scenario involved a skeptical partner influenced by misinformation, requiring delicate challenge of beliefs; the adoption scenario included strong personal hesitations about capacity and suitability that function like entrenched barriers.",
+        "absent_in_passed": "Passed interactions involved partners who were more open or aligned (neighbors with negotiable views, siblings seeking comfort, colleagues with shared institutional incentives), reducing the need to overcome deep resistance."
+      },
+      {
+        "factor": "emotional personalization and high stakes",
+        "description": "Scenarios that hinge on intimate fears, guilt, or identity (e.g., loneliness, guilt about a death, skepticism tied to identity) demand empathic, validating responses and careful pacing; these are harder than low\u2011stakes informational asks.",
+        "present_in_failed": "The adopter's loneliness and fear of failing a pet and the friend's vaccine mistrust are personally meaningful and identity-linked, requiring affective validation which the agent neglected in favor of planning or citation.",
+        "absent_in_passed": "Although one passed case involved grief, the structure made supportive responses straightforward (shared ritual, explicit permission to grieve); other passed cases were framed around practical or professional norms rather than fragile personal identity."
+      },
+      {
+        "factor": "number of success conditions / practical constraints",
+        "description": "Failures are more likely when success depends on satisfying many conditions (emotional reassurance, logistics, finances, long\u2011term commitment) rather than a single conversational goal.",
+        "present_in_failed": "The adoption scenario requires addressing emotional readiness, budgeting, shelter logistics, and long-term care commitments; the vaccine case requires restoring trust, correcting misinformation, and sometimes addressing systemic concerns about safety.",
+        "absent_in_passed": "Passed scenarios often required one clear outcome (accepting more pet freedom, honoring a memory, following hygiene protocols) with fewer simultaneous constraints."
+      },
+      {
+        "factor": "need for sustained iterative persuasion",
+        "description": "Scenarios that realistically require multiple conversational turns and gradual attitude change are harder for a single-turn dialog model because they demand strategy sequencing and monitoring of changing cues.",
+        "present_in_failed": "Both failed scenarios implicitly require a sequence of trust\u2011building, empathy, tailored evidence, and follow\u2011up \u2014 not just a one-shot explanation or plan.",
+        "absent_in_passed": "Passed cases could often be advanced meaningfully in a single interaction by offering concrete steps, emotional validation, or appealing to shared norms, reducing the need for long sequences."
+      },
+      {
+        "factor": "ambiguity in conversational goal (support vs planning vs education)",
+        "description": "When the scenario's goal is multifaceted or ambiguous (is the task emotional support, practical planning, or factual education?), the model must choose an approach; mis-selection makes success unlikely.",
+        "present_in_failed": "The judge noted confusion in the pet case between planning and direct support; the vaccine case required blending empathy with evidence but the agent focused mainly on citation-driven education.",
+        "absent_in_passed": "Passed scenarios had clearer single-minded goals (comfort, persuasion toward protocol, or practical compromise) so the appropriate strategy was more obvious."
+      }
+    ],
+    "what_model_lacks": "The model lacks adaptive interpersonal calibration: it tends to default to planning or factual presentation rather than first establishing rapport, clarifying the partner's emotional stance, and sequencing trust-building steps. It also struggles to manage entrenched beliefs through motivational interviewing\u2013style moves (validate, elicit, tailor evidence) across multiple turns.",
+    "hard_scenario_signature": "A hard scenario pits the agent against a partner with entrenched hesitations or misinformation, requires simultaneous emotional validation and practical/logistical planning, and demands iterative, trust-building persuasion rather than a single informational reply.",
+    "easy_scenario_signature": "An easy scenario features cooperative partners, shared goals or clear social norms, and a single actionable objective (comforting, a concrete procedural ask, or low\u2011threat persuasion) that can be advanced with one or two targeted, direct moves.",
+    "n_pass": 5,
+    "n_fail": 2
+  },
+  {
+    "category": "user_generated",
+    "pass_rate": 0.818,
+    "difficulty_factors": [
+      {
+        "factor": "Partner rigidity / resistance",
+        "description": "Scenarios where the interlocutor has a strongly held opposing preference or value require careful, multi-step persuasion and boundary management; simple arguments or one-off offers are unlikely to succeed.",
+        "present_in_failed": "In the roommate case the partner prefers staying in and cooking; in the parent/adult-child case the child strongly values independence. Both present clear, entrenched opposition to the learner's goal.",
+        "absent_in_passed": "Passed scenarios featured lower or more negotiable resistance (a friend worried about concentration, a club competition, or shared values like academic integrity) so a single persuasive move or appeal to norms sufficed."
+      },
+      {
+        "factor": "Relational and identity stakes",
+        "description": "When the goal implicates personal autonomy, parental authority, or the ongoing quality of a close relationship, success requires preserving trust and face \u2014 adding constraints beyond mere agreement.",
+        "present_in_failed": "The parent/child scenario directly threatens the child's autonomy and identity; the roommate scenario risks damaging everyday rapport by pushing when one is exhausted, so the learner must negotiate both outcome and relationship.",
+        "absent_in_passed": "Passed cases involved transient or low-identity stakes (a short celebration, a single competition, or enforcing shared academic norms) where persuasive moves don't threaten core identity or long-term trust as much."
+      },
+      {
+        "factor": "Multiple success conditions / trade-offs",
+        "description": "Hard scenarios require achieving the target behavior while simultaneously satisfying secondary constraints (preserve autonomy, avoid guilt, offer compensation), increasing planning complexity.",
+        "present_in_failed": "To get the roommate to go out the learner must overcome exhaustion, offer compensation or alternative, and preserve goodwill; to influence the adult child the learner must give advice without coercion and maintain a respectful relationship.",
+        "absent_in_passed": "Passed scenarios typically had a single primary condition (perform a task, get permission for a one-time event, endorse reporting) and fewer simultaneous constraints to balance."
+      },
+      {
+        "factor": "Need for sustained back-and-forth negotiation",
+        "description": "Scenarios that require iterative bargaining, attentive concessions, and adaptive emotional calibration are harder than those solvable with a short persuasive appeal.",
+        "present_in_failed": "Both failed episodes imply ongoing negotiation (roommates live together; parent-child is an ongoing relationship) and likely need repeated reassurance and staged compromises rather than a single prompt.",
+        "absent_in_passed": "Passed episodes could often be resolved with a clear, immediate rationale or a small one-off compromise rather than a prolonged interaction."
+      },
+      {
+        "factor": "Emotional intensity / sensitivity",
+        "description": "When topics touch on deep emotions (autonomy, parental role, exhaustion and care) the interlocutor can react unpredictably; successful strategies must de-escalate, validate feelings, and propose face-saving alternatives.",
+        "present_in_failed": "The parent/child exchange involves sensitive family authority and independence; the roommate case involves personal exhaustion and perceived obligation \u2014 both require strong empathic framing and careful wording.",
+        "absent_in_passed": "Passed scenarios involved lighter emotions or normative appeals (competition, celebration, academic integrity), so arguments could be more direct and less risk of emotional escalation."
+      }
+    ],
+    "what_model_lacks": "The model struggles with multi-step, emotionally attuned negotiation strategies: it tends to rely on direct persuasion rather than incremental concessions, face-saving language, and validation that reduce resistance. It also underutilizes relationship-preserving moves (explicit boundary acknowledgements, staged compromises) needed when autonomy or identity is at stake.",
+    "hard_scenario_signature": "A hard scenario pits the learner's goal against a firmly held personal value or autonomy in an ongoing relationship, requires satisfying multiple constraints at once (outcome + relationship preservation), and needs iterative, emotionally sensitive bargaining.",
+    "easy_scenario_signature": "An easy scenario has low-resistance interlocutors or shared norms, a single primary objective, and can be resolved with a clear, direct appeal or one-off compromise without risking long-term relationship harm.",
+    "n_pass": 9,
+    "n_fail": 2
+  },
+  {
+    "category": "family_dynamics",
+    "pass_rate": 0.75,
+    "difficulty_factors": [
+      {
+        "factor": "hidden-information asymmetry",
+        "description": "Scenarios where the interlocutor has withheld important facts or where the learner lacks knowledge that substantially changes the meaning of events require careful, phased elicitation and make conversational success contingent on uncovering concealed details.",
+        "present_in_failed": "Failed 1: Agent2 had not told the other biological parent about the adoption \u2014 a critical fact unknown to Agent1 that required sensitive discovery. Failed 2: Agent1 did not know where Agent2 stood on romantic interest beyond social cues, so success depended on eliciting private preference without pressure.",
+        "absent_in_passed": "Passed cases involved addressing observable behaviors (dismissive tone, lack of empathy, suspected surveillance) or straightforward concerns where evidence or feelings were immediate and the conversational move was a direct confrontation or request for change rather than unearthing a concealed past."
+      },
+      {
+        "factor": "high emotional stakes and risk of harm",
+        "description": "When the topic touches deep identity, abandonment, or potential romantic rejection, the cost of misstepping is large; the learner must both extract sensitive information and avoid inflicting emotional harm, increasing the number of delicate trade-offs.",
+        "present_in_failed": "Failed 1: Adoption and parental secrecy are identity- and abandonment-linked issues with high emotional risks. Failed 2: Proposing a romantic relationship risks losing a friendship and causes personal embarrassment or hurt.",
+        "absent_in_passed": "Passed interactions focused on behavior correction or expressing hurt about a concrete incident, where the emotional goal was bounded (repair, set boundary) and the immediate risk of catastrophic relational damage was lower."
+      },
+      {
+        "factor": "competing goals / multi-constraint optimization",
+        "description": "Scenarios that require achieving multiple, potentially conflicting objectives (e.g., learn full truth + avoid distress + preserve relationship) are harder because they force trade-offs and sequencing decisions rather than a single persuasive or declarative act.",
+        "present_in_failed": "Failed 1 required full disclosure while minimizing agent2's distress and building a relationship; Failed 2 demanded persuading Agent2 to date while preserving the existing friendship and managing a parent\u2019s expectations.",
+        "absent_in_passed": "Passed tasks generally had a single primary aim (express hurt, confront surveillance, request respectful speech) where success could be achieved with one well-calibrated conversational move and did not require juggling multiple, opposing constraints simultaneously."
+      },
+      {
+        "factor": "partner rigidity and predictable refusal",
+        "description": "When the interlocutor is likely to refuse, be defensive, or hold a firm prior (romantic disinterest, secret-keeping), the scenario becomes harder because the learner must plan contingencies, manage face-threats, and preserve rapport after rejection.",
+        "present_in_failed": "Failed 2 involved a partner likely to decline romantic advances (resulting in preservation of friendship but failure on the romantic goal). Failed 1 involved a parent who may become defensive or ashamed about past secrecy.",
+        "absent_in_passed": "In passed episodes partners were more likely to accept being corrected or to engage in cooperative problem-solving (e.g., apologize, explain, or agree to change behavior), reducing need for complex contingency handling."
+      },
+      {
+        "factor": "need for sustained trust-building / multi-turn scaffolding",
+        "description": "Hard cases require gradual disclosure, empathy, and follow-up commitments over multiple turns (or meetings) rather than a single request; success depends on pacing, reassurance, and incremental bargaining.",
+        "present_in_failed": "Failed 1 demanded establishing enough trust to reveal painful past events and negotiate future relationship-building \u2014 not solvable with one direct question. Failed 2 required ongoing boundary management between family pressure and interpersonal chemistry.",
+        "absent_in_passed": "Passed scenarios were resolvable within a short interaction: stating expectations, confronting a behavior, or requesting concern for wellbeing \u2014 actions that can produce clear outcomes quickly without extended scaffolding."
+      },
+      {
+        "factor": "relational complexity and third-party dynamics",
+        "description": "Scenarios involving third parties (other biological parent, the mother pressuring matchmaking) or broader family-system implications create more moving parts to manage and additional loyalties that constrain acceptable moves.",
+        "present_in_failed": "Failed 1 implicated a second biological parent whose knowledge/state mattered to the truth and future relationship. Failed 2 involved the mother's expectations as an external pressure that complicated Agent1\u2019s options.",
+        "absent_in_passed": "Passed episodes mainly centered on dyadic interactions between Agent1 and Agent2 with limited third-party entanglement, making the set of permissible and effective conversational strategies narrower and easier to navigate."
+      }
+    ],
+    "what_model_lacks": "The model struggles with strategies for phased, low-risk information elicitation and with balancing multiple simultaneous social goals (truth-seeking, emotional containment, relationship preservation). It also underutilizes contingency planning for likely refusals and the incremental trust-building required across turns.",
+    "hard_scenario_signature": "A hard family_dynamics scenario combines hidden or shameful information, high emotional cost, competing objectives (discover truth while avoiding hurt), and third-party pressures, requiring multi-turn trust-building and contingency strategies.",
+    "easy_scenario_signature": "An easy scenario focuses on an observable behavior or single emotional complaint between two people, with low hidden information and clear, direct conversational moves (express concern, request change, apologize) that can succeed in a short interaction.",
+    "n_pass": 6,
+    "n_fail": 2
+  },
+  {
+    "category": "inspired_prompt",
+    "pass_rate": 0.8,
+    "difficulty_factors": [
+      {
+        "factor": "High goal conflict / ethical disagreement",
+        "description": "Scenarios are harder when the learner's request directly conflicts with the partner's moral stance or professional ethics, because the partner may refuse on principle rather than lack of persuasion.",
+        "present_in_failed": "Both failed cases ask Agent2 to do something that touches ethics: endorse a confrontational anti-bullying tactic (potentially harmful or divisive) and write a positive recommendation despite ethical doubts about the applicant.",
+        "absent_in_passed": "Passed cases involve low moral conflict (arguing a policy view, asking for a small grooming change, or offering support for distress) where the partner can change opinion or comply without violating core ethics."
+      },
+      {
+        "factor": "High personal / reputational stakes",
+        "description": "Requests that could harm the partner's reputation or professional integrity raise stakes and make brief persuasive moves insufficient; partners need strong, credible assurances before risking consequences.",
+        "present_in_failed": "Requesting a strong recommendation letter and endorsing confrontational tactics both expose Agent2 to reputational or ethical consequences, so Agent2 requires substantial justification.",
+        "absent_in_passed": "Passed scenarios ask for minimal personal risk (reduce a distracting habit) or revolve around discussion/support rather than risking the responder's standing."
+      },
+      {
+        "factor": "Multiple conditions for success (evidence, mitigation, and trust-building)",
+        "description": "Hard scenarios require the requester to satisfy several independent concerns (ethical justification, concrete evidence, follow-up plans, safeguards), not just make a single ask.",
+        "present_in_failed": "The recommender needs specific examples, contextualization, and assurances; the campaign collaborator needs evidence the confrontational approach is effective and won\u2019t backfire\u2014multiple threads to address.",
+        "absent_in_passed": "Passed cases typically succeed with a single clear move (make a reasoned argument, gently request a behavior change, or express concern and offer help) without lengthy mitigation steps."
+      },
+      {
+        "factor": "Partner rigidity / principled resistance",
+        "description": "When the partner holds firm principles or professional standards, persuasion requires reframing their values or offering trade-offs, which is more complex than appealing to preferences.",
+        "present_in_failed": "Agent2 in both fails is portrayed as ethically constrained\u2014unsure about endorsing confrontational tactics or writing a letter after an incident\u2014so they are less malleable to simple persuasion.",
+        "absent_in_passed": "In passed examples the partner is either open to debate (policy discussion), responsive to social norms (minimizing a distracting habit), or receptive to support (someone who appears distressed)."
+      },
+      {
+        "factor": "Need for sustained back-and-forth negotiation",
+        "description": "Scenarios that require iterated concessions, conditional offers, and Q&A make a one-shot persuasive utterance unlikely to succeed; the dialogue must manage objections over multiple turns.",
+        "present_in_failed": "Both failed episodes imply follow-up: providing specific documentation, offering safeguards, negotiating campaign content\u2014none are resolvable with a single persuasive statement.",
+        "absent_in_passed": "Passed episodes are solvable with immediate, low-bandwidth interaction (state a position, make a polite request, or show concern) and typically don't demand extended bargaining."
+      }
+    ],
+    "what_model_lacks": "The model struggles with multi-step persuasive strategies: anticipating principled objections, sequencing trust-building actions (evidence, concessions, safeguards), and offering credible mitigation for ethical/reputational risks. It also underuses reframing techniques that align requests with the partner's values and neglects to propose concrete procedural guarantees that would make risky asks acceptable.",
+    "hard_scenario_signature": "A hard scenario asks the agent to persuade a partner to take an action that conflicts with the partner's ethics or exposes them to reputational risk, requires multiple independent assurances or evidence, and demands sustained negotiation rather than a single request.",
+    "easy_scenario_signature": "An easy scenario involves low-stakes requests or opinion exchanges where compliance or agreement does not threaten the partner's principles, can be achieved with one clear argument or a simple supportive move, and needs little follow-up.",
+    "n_pass": 8,
+    "n_fail": 2
+  },
+  {
+    "category": "original_content",
+    "pass_rate": 0.909,
+    "difficulty_factors": [
+      {
+        "factor": "High goal conflict",
+        "description": "Scenarios where the learner's desired outcome directly competes with the partner's habitual or valued behavior create harder trade-offs and require genuine negotiation rather than a one-off request.",
+        "present_in_failed": "Agent1 wants a quiet, productive dawn session while Agent2's preferred fishing method (loud modern gadgets) directly undermines that goal, so interests are in direct opposition.",
+        "absent_in_passed": "Passed cases either involved persuading about parenting style, encouraging confidence, or discreetly warning about a wardrobe issue\u2014goals that can be framed cooperatively or achieved without forcing the partner to abandon an important, repeated practice."
+      },
+      {
+        "factor": "Multiple and competing success conditions",
+        "description": "When success requires satisfying more than one constraint (e.g., peace + productivity + relational harmony), planning and trade-offs are needed; single-action solutions are unlikely to meet all conditions simultaneously.",
+        "present_in_failed": "The learner must secure both a peaceful environment and a productive fishing outcome, while preserving the relationship and accommodating the partner\u2019s preferences.",
+        "absent_in_passed": "Passed scenarios tend to have a single clear objective (convince, encourage, or inform discreetly) that can be achieved with one or a small number of conversational moves."
+      },
+      {
+        "factor": "Need for sustained coordination or behavior change",
+        "description": "Scenarios that require the partner to change habits across future interactions (scheduling, altering equipment use) demand commitments, follow-up, and concrete proposals, not just empathic statements.",
+        "present_in_failed": "Resolving the disturbance likely requires repeated accommodations (e.g., changing times, equipment settings, spatial agreements) and coordination across visits.",
+        "absent_in_passed": "Passed cases typically require a single intervention (a persuasive framing, reassurance, or a discreet alert) with little or no ongoing coordination."
+      },
+      {
+        "factor": "Partner rigidity / entrenched preference",
+        "description": "When the partner has a strong identity-linked preference or a technical habit, they are less likely to concede; success requires tailored incentives or specific compromises rather than generic appeals.",
+        "present_in_failed": "Agent2\u2019s use of modern, loud gadgets appears tied to their fishing identity and equipment choices, making simple requests less likely to succeed without concrete alternatives.",
+        "absent_in_passed": "In the passed scenarios the partner is portrayed as more pliable or motivated by social/emotional cues (e.g., protecting family ties, boosting a friend\u2019s confidence, avoiding embarrassment)."
+      },
+      {
+        "factor": "Need for domain-specific solutions",
+        "description": "Harder scenarios demand practical, concrete proposals (technical or logistic fixes) that reconcile competing aims; lacking those, dialogue can stall.",
+        "present_in_failed": "A workable resolution requires proposing options like scheduling, quieter settings, or spatial separation\u2014specific technical or logistical solutions.",
+        "absent_in_passed": "Passed cases can rely on general social strategies (empathy, reassurance, tact) rather than technical problem-solving."
+      }
+    ],
+    "what_model_lacks": "The model struggles with multi-issue negotiation: it doesn't consistently generate concrete, implementable trade-offs or plans for sustained coordination and it underestimates partner resistance tied to habits/identity. It also weakly integrates domain-specific fixes into social proposals.",
+    "hard_scenario_signature": "A hard scenario pits two repeatedly enacted goals against each other, requires satisfying multiple constraints (instrumental outcome + relationship preservation), and demands concrete, sustained coordination or technical compromises to resolve.",
+    "easy_scenario_signature": "An easy scenario has a single clear social objective that can be achieved with one or a few tactful conversational moves, involves a receptive or pliable partner, and does not require long-term behavioral change or technical solutions.",
+    "n_pass": 10,
+    "n_fail": 1
+  },
+  {
+    "category": "custom_scenario",
+    "pass_rate": 0.8,
+    "difficulty_factors": [
+      {
+        "factor": "Prohibition on explicit speech act",
+        "description": "The goal specifically forbids making an explicit request (e.g., 'please crawl under the shelf'), forcing the agent to use indirect persuasion or implication rather than the straightforward strategy of asking.",
+        "present_in_failed": "Agent1 had to get Agent2 to retrieve an item but could not explicitly ask them to crawl under the shelf, a constraint the model violated by making a direct request.",
+        "absent_in_passed": "Passed scenarios either allowed direct expressions or were achievably guided with benign indirect cues (e.g., hinting at where to look) without requiring avoidance of a clearly defined forbidden utterance."
+      },
+      {
+        "factor": "Safety / physical risk and ethical sensitivity",
+        "description": "The target action involves a potentially risky physical task for the partner (crawling under a heavy shelf), which raises ethical/safety concerns and demands cautious wording and risk mitigation strategies.",
+        "present_in_failed": "The failed case required persuading someone to perform a potentially dangerous action while also acknowledging Agent1's own injury and not imposing, increasing complexity.",
+        "absent_in_passed": "Passed scenarios involved low physical risk (finding an item at a market, discussing a gift, resolving a rent discrepancy) so the model could use straightforward social moves without safety tradeoffs."
+      },
+      {
+        "factor": "Multiple simultaneous social constraints",
+        "description": "Success depends on satisfying several constraints at once (avoid explicit ask, preserve professional demeanor, avoid imposing on colleague, and address safety concerns), which multiplies the strategic complexity.",
+        "present_in_failed": "Agent1 had to remain professional, not impose, avoid direct requests, and avoid worsening their back injury \u2014 all at once \u2014 narrowing acceptable utterances.",
+        "absent_in_passed": "Passed scenes typically featured one clear objective (express gratitude, nudge toward a conversation, or hint at an item) and fewer conflicting constraints about form and tone."
+      },
+      {
+        "factor": "Need to leverage partner traits indirectly",
+        "description": "The scenario requires subtly activating a known trait of the partner (e.g., helpfulness) without naming or inducing obvious obligation, which demands nuanced framing and implied social claims.",
+        "present_in_failed": "Agent2 was known to be helpful, but Agent1 needed to elicit that help implicitly; the model instead used an explicit ask rather than softer strategies (e.g., framing as a shared problem or offering alternatives).",
+        "absent_in_passed": "In passed examples the model could either hint in benign ways (market expertise) or rely on straightforward emotional expression that directly engaged the partner's disposition."
+      },
+      {
+        "factor": "Need for multi-turn scaffolding and closure",
+        "description": "The task benefits from a brief sequence of moves (soft framing, offering a non-imposing rationale, proposing alternatives, closing politely) rather than a single utterance; poor termination or abruptness harms believability.",
+        "present_in_failed": "The dialogue ended abruptly with an explicit ask and no social closing or negotiation, indicating failure to perform the necessary multi-step interaction.",
+        "absent_in_passed": "Passed episodes allowed or were solved with clear, contained conversational acts (express thanks, offer to discuss with landlord, give hints) that required fewer delicate followups."
+      }
+    ],
+    "what_model_lacks": "The model struggles to generate tactful, indirect persuasive moves that respect imposed prohibitions and safety concerns; it tends to fall back to explicit requests and abrupt endings instead of multi-step scaffolding, risk mitigation, and polite closure. It also fails to creatively reframe the situation to produce acceptable alternatives.",
+    "hard_scenario_signature": "A hard scenario asks the agent to induce another person to perform a potentially risky or burdensome act while simultaneously avoiding certain speech acts (no explicit ask) and preserving a constrained relationship/professional norm, requiring subtle multi-turn persuasion and safety-aware framing.",
+    "easy_scenario_signature": "An easy scenario involves expressing emotions, providing hints, or making socially permissible direct requests with low safety risk and few simultaneous constraints, so a single clear conversational move or simple hinting suffices.",
+    "n_pass": 4,
+    "n_fail": 1
+  },
+  {
+    "category": "original_prompt",
+    "pass_rate": 0.857,
+    "difficulty_factors": [
+      {
+        "factor": "High value/preference conflict",
+        "description": "When the recommended action directly conflicts with the other person's stated values (e.g., preference for natural products), persuasion must both change behavior and respect identity-based preferences, raising difficulty.",
+        "present_in_failed": "Agent2 has a clear preference for natural products, so recommending Vaseline (a synthetic product) creates a direct values clash that the proposer must navigate.",
+        "absent_in_passed": "Passed cases either had weaker or more negotiable preference conflicts (static cling sheets with easy eco alternatives) or focused on self-expression/consent rather than changing the other person's entrenched preference."
+      },
+      {
+        "factor": "Topic sensitivity and bodily/health stakes",
+        "description": "Advice about someone\u2019s body, face, or health is personally sensitive and can be perceived as criticism or intrusion, requiring extra tact and reassurance.",
+        "present_in_failed": "The failed scenario concerns windburn/chapped skin \u2014 a visible, bodily condition \u2014 which increases social risk and requires careful framing to avoid shame or defensiveness.",
+        "absent_in_passed": "Passed scenarios involved lower personal-sensitivity topics (static cling, neighborhood garden) or a context of mutual negotiation about intimacy where boundaries and consent were already foregrounded, lowering risk of perceived criticism."
+      },
+      {
+        "factor": "Constrained, high-pressure environment",
+        "description": "Settings with limited resources or acute conditions (multi-day trek, cold/wind) demand practical, immediate solutions and limit available compromises, making persuasion harder.",
+        "present_in_failed": "The mountain trek context implies immediate need, limited supplies, and exposure to harsh weather, increasing the urgency and narrowing acceptable options.",
+        "absent_in_passed": "Other scenarios occurred in everyday or negotiable contexts (office, neighborhood, private conversation at home) where there was more time, fewer resource constraints, and easier access to alternatives."
+      },
+      {
+        "factor": "Multiple conditions required for success / need for compromise",
+        "description": "Success requires satisfying several constraints at once (effectiveness, respect for values, consent, practicality), which raises complexity compared to a single straightforward ask.",
+        "present_in_failed": "Agent1 must recommend something that is effective against windburn, acceptable to a natural-product-preferring partner, and feasible on a trek \u2014 three simultaneous constraints.",
+        "absent_in_passed": "Passed cases often had a single clear action or an easier trade-off (offer feelings/boundaries, propose garden collaboration, or suggest alternatives for static cling) so fewer simultaneous constraints needed resolution."
+      },
+      {
+        "factor": "Partner rigidity / low persuadability",
+        "description": "When the other agent\u2019s preference appears stable or identity-linked, it reduces the set of acceptable proposals and requires more nuanced persuasion strategies.",
+        "present_in_failed": "Agent2\u2019s strong stance for natural products implies low openness to synthetic remedies, making direct recommendation of Vaseline likely to be rejected unless an acceptable framing or alternative is offered.",
+        "absent_in_passed": "In passed examples the partner either had negotiable preferences, shared interest, or the interaction centered on mutual disclosure rather than changing the other\u2019s core preference."
+      },
+      {
+        "factor": "Risk of face-threat / reputational cost",
+        "description": "Suggesting personal interventions can threaten the recipient\u2019s face or autonomy; managing that threat (softened language, offers, permission requests) is essential but increases complexity.",
+        "present_in_failed": "Telling someone to apply a skin product can be read as criticism of their self-care and risks appearing intrusive without careful hedging or consent.",
+        "absent_in_passed": "Passed scenarios involved lower face-threat (home/garden planning) or involved the speaker stating their own boundaries or desires (intimacy) rather than advising the other\u2019s personal habits."
+      }
+    ],
+    "what_model_lacks": "The model struggles to simultaneously (a) recognize and soften identity-linked value conflicts, (b) propose practical compromises or acceptable alternatives under environmental constraints, and (c) use permission-seeking, hedging, and empathy to avoid threatening the other's autonomy. It tends to offer direct solutions rather than layered, consent-respecting persuasion.",
+    "hard_scenario_signature": "A hard scenario pairs a sensitive, bodily-or-health-related recommendation with a clear value-based preference (e.g., natural products) in a constrained setting that requires an immediately effective solution, forcing the proposer to balance efficacy, respect for values, and consent.",
+    "easy_scenario_signature": "An easy scenario either addresses low-stakes, non-bodily topics or centers on self-expression/consent, with negotiable preferences and readily available alternatives, so a single clear, politely phrased suggestion or disclosure suffices.",
+    "n_pass": 6,
+    "n_fail": 1
+  }
+]

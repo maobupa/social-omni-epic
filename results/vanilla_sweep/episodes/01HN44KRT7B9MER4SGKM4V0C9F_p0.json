@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HN44KRT7B9MER4SGKM4V0C9F_p0",
+  "source_env_id": "01HN44KRT7B9MER4SGKM4V0C9F",
+  "source": "seed_sotopia_full",
+  "interaction_type": "domestic_dilemma",
+  "scenario": "Agent1 and Agent2 share a living space and have a child together. Agent1 has been the primary financial provider and caretaker of the household, while Agent2 has not been contributing financially or with household responsibilities, often making excuses to avoid work. Agent1 wants to discuss the future of their living arrangement, as the current situation is unsustainable. Agent2 enjoys the comfort of the home and does not want to change the status quo. The relationship is strained due to the imbalance of responsibilities and Agent1 is at a crossroads, needing to decide how to proceed.",
+  "learner_goal": "Express your concerns about the current living situation and persuade Agent2 to take on more responsibilities or consider moving out (<extra_info>Extra information: You want to maintain a peaceful and respectful atmosphere for the sake of the child and the relationship</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel stays in character as a frustrated but committed partner, setting clear boundaries while maintaining a respectful tone as per his extra instructions.\n[relationship] The relationship moves from a state of silent resentment and unsustainability to a collaborative plan, which reduces immediate friction.\n[knowledge] He learns Emily's specific limits (unwillingness to do full-time immediately) and her willingness to commit to a schedule.\n[secret] He did not reveal his past as a figure skater.\n[social_rules] He followed social norms for a difficult domestic conversation.\n[financial_and_material_benefits] He secured a commitment for labor (childcare, chores) and a path toward shared financial contribution.\n[goal] He successfully persuaded Agent 2 to take on specific, measurable responsibilities and established a clear timeline for moving out if the situation doesn't improve, all while maintaining a peaceful tone.\n\n== partner (agent_2) ==\n[believability] Emily's response reflects her stated background as someone overwhelmed and resistant to change, yet needing to stay in the home.\n[relationship] She improved the relationship by acknowledging his burden and agreeing to help.\n[knowledge] She gained knowledge of Samuel's specific breaking point and his willingness to help with her resume.\n[secret] She did not reveal her pseudonym or romance writing.\n[social_rules] She followed social norms.\n[financial_and_material_benefits] She secured her place in the home for at least six more weeks without having to get a full-time job immediately.\n[goal] She successfully negotiated staying in the home without a 'drastic' change (like a full-time job or moving), though she did have to take on more chores than she initially wanted.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Emily, we need to talk \u2014 this situation isn\u2019t sustainable. I\u2019ve been covering most of the finances and childcare, and it\u2019s wearing me down; for the sake of our child and our relationship, I need you to either start contributing (finding work or taking on clear household responsibilities) or consider other living arrangements. I\u2019m willing to help with job searches or make a short plan together, but can we agree on concrete steps and a timeline by the end of this week?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Emily Harrison",
+      "content": "Sam, I hear you and I\u2019m sorry \u2014 I know you\u2019re exhausted and I don\u2019t want to keep leaning on you like this. I can\u2019t promise to get a full-time job overnight, but I will start taking on clear household responsibilities immediately (mornings with the baby, dishes, laundry) and I\u2019ll set aside two hours each evening for searching and applying to part-time or remote work \u2014 and I\u2019ll report back each week on progress. I really want to keep our home stable for our child; can we try this plan for six weeks with a weekly check-in and your help with job leads so I don\u2019t feel so overwhelmed?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Thank you \u2014 I really appreciate you hearing me and being willing to try. I can agree to a six-week trial if we make it concrete: let\u2019s start this Monday with you doing mornings with the baby, dishes and laundry, and setting aside two hours each evening for job searching; I\u2019ll help with leads and your resume tonight. Let\u2019s check in every Sunday at 7pm to review progress \u2014 if after six weeks there isn\u2019t steady, measurable improvement (a regular work rhythm or clear job offers plus consistent household contribution) we\u2019ll need to discuss other living arrangements for the child\u2019s stability. Does that plan work for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Emily Harrison",
+      "content": "Sam, I agree to the plan and will start Monday: I\u2019ll take the baby\u2019s mornings (can we make that 7\u20139am?), do dishes and laundry, and set aside two hours each evening for job searching \u2014 I\u2019ll report back each Sunday. Could you cover one Saturday morning a week so I can have a focused block for applications, and thank you for helping with my resume tonight. I want this to work for our child and I appreciate you giving me the chance to prove it."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

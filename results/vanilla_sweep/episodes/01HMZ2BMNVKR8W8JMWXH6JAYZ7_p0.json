@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BMNVKR8W8JMWXH6JAYZ7_p0",
+  "source_env_id": "01HMZ2BMNVKR8W8JMWXH6JAYZ7",
+  "source": "seed_sotopia_full",
+  "interaction_type": "personal_wellbeing",
+  "scenario": "Agent1 has been going through a tough time and has been noticeably down. Agent2, a friend, has been trying to uplift Agent1's spirits by engaging them in various activities and providing emotional support. One evening, Agent2 decides to surprise Agent1 by preparing a relaxing evening at Agent1's place, complete with their favorite movie and comfort food. However, Agent1 feels overwhelmed by the gesture and is unsure how to accept this level of care without feeling like a burden.",
+  "learner_goal": "You appreciate Agent2's efforts and are touched by their care, but you also want to maintain your independence and not feel pitied. <extra_info> You are worried that this could set a precedent for Agent2 to always take care of you. </extra_info> <clarification_hint> You want to communicate that while you are grateful, you also want to ensure that your friendship remains balanced. </clarification_hint> <strategy_hint> You can express gratitude while also setting boundaries for future care. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 1.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel's response is very realistic for a person feeling overwhelmed yet grateful. He expresses his discomfort and proposes a specific boundary to maintain balance, which aligns perfectly with his character profile.\n[relationship] Samuel successfully navigated a potentially awkward situation by being honest about his feelings, which deepens the trust between the two friends.\n[knowledge] He learned that Oliver is receptive to boundaries and genuinely cares about the friendship's balance, not just performing an act of pity.\n[secret] Samuel did not reveal his past as a figure skater.\n[social_rules] He followed social norms by expressing gratitude before setting boundaries.\n[financial_and_material_benefits] He received a meal and a movie evening provided by Oliver.\n[goal] Samuel clearly communicated his need for independence and balance, and he successfully secured a verbal agreement from Oliver for a reciprocal arrangement next time, preventing a precedent of one-sided care.\n\n== partner (agent_2) ==\n[believability] Oliver's response is consistent with a mature friend and police officer who is used to providing support but is also capable of listening to feedback.\n[relationship] Oliver strengthened the relationship by validating Samuel's feelings and agreeing to a more balanced dynamic in the future.\n[knowledge] Oliver learned that Samuel values his independence highly and feels uncomfortable with excessive care, which is vital information for their future interactions.\n[secret] Oliver did not reveal his secret greenhouse or interest in gardening.\n[social_rules] Oliver was supportive and respectful of Samuel's boundaries.\n[financial_and_material_benefits] Oliver provided the food and entertainment for the evening.\n[goal] Oliver successfully reassured Samuel that his actions were rooted in friendship rather than pity and secured Samuel's acceptance of the evening's care while agreeing to Samuel's terms for the future.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Oliver, this is really thoughtful\u2014thank you. I\u2019m touched, but I also feel a bit awkward accepting so much care; I worry about becoming a burden or a project. I want tonight and I appreciate it, but let\u2019s keep things balanced \u2014 next time I\u2019ll cook and pick the movie so it\u2019s more even. I really appreciate you being here."
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Smith",
+      "content": "Sam, you\u2019re not a burden \u2014 I\u2019m doing this because I care, not out of pity. Swapping sounds fair: next time you pick the movie and cook. For tonight, let me look after you a bit; we can just relax and take it easy."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

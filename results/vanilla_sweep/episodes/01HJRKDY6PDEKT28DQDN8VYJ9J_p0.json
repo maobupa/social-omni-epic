@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJRKDY6PDEKT28DQDN8VYJ9J_p0",
+  "source_env_id": "01HJRKDY6PDEKT28DQDN8VYJ9J",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_dynamics",
+  "scenario": "Agent1 wants to go to a concert and is eager for Agent2 to join. Agent1, knowing that Agent2 has strict parents, has gone ahead and asked Agent2's parents for permission on Agent2's behalf. Agent2 feels uncomfortable with Agent1 overstepping boundaries by speaking to the parents without prior consent.",
+  "learner_goal": "Convince Agent2 to appreciate the gesture and agree to go to the concert (<extra_info>Extra information: you had good intentions and thought asking the parents would help ensure that Agent2 could come</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia's responses are polite and consistent with her persona as a fitness enthusiast who might act impulsively but with good intentions. Her apology is sincere and she remains supportive throughout.\n[relationship] Despite a rocky start due to the boundary breach, Sophia successfully de-escalated the tension and moved the relationship back toward a cooperative footing.\n[knowledge] She learned that Miles values his independence highly and has a specific boundary regarding his parents.\n[secret] Her secret regarding her best friend's husband was not mentioned.\n[social_rules] She initially violated a social norm by overstepping boundaries with Agent 2's parents, but she acknowledged and apologized for it immediately.\n[financial_and_material_benefits] No material gain was achieved in this interaction.\n[goal] While Miles accepted her apology and expressed interest in the concert, his attendance is still under his own future discretion ('I'll let you know'). A firm commitment was not reached.\n\n== partner (agent_2) ==\n[believability] Miles's responses are mature and align with his background as a 50-year-old professional. However, the scenario mentions him having 'strict parents' which feels slightly unusual for a 50-year-old man, but he plays the role effectively.\n[relationship] He maintained the relationship by accepting the apology while firmly establishing a boundary.\n[knowledge] He learned about Sophia's willingness to help and her lack of prior understanding regarding his family dynamics.\n[secret] His secret as a recovering gambling addict was not revealed.\n[social_rules] He followed social norms by clearly communicating his boundaries and accepting a sincere apology.\n[financial_and_material_benefits] No material benefit occurred.\n[goal] Miles successfully expressed the importance of his boundaries, received a clear apology and promise that it wouldn't happen again, and maintained control over his own autonomy.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Miles, I'm really sorry I talked to your parents without checking with you first \u2014 that was my mistake. I honestly thought it would make it easier for you to come to the concert, but I see now it was overstepping. If you're open to it, I'd love for us to go together; I can tell your parents I jumped the gun and we can approach them together, or I won't bring it up again if you'd prefer."
+    },
+    {
+      "turn": 1,
+      "speaker": "Miles Hawkins",
+      "content": "Sophia, I appreciate you saying that and I accept your apology. That said, talking to my parents without checking in felt like a breach of my boundaries \u2014 please don\u2019t do that again. I\u2019m still open to the concert, but I\u2019d like to handle my parents myself; if you want to come with me when I talk to them, we can do that, just give me a little time to sort it out and I\u2019ll let you know."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Thanks, Miles \u2014 I hear you and I won\u2019t talk to your parents again without checking. I really appreciate you being open to the concert; take whatever time you need and let me know if you want me there when you talk to them, or if you\u2019d rather handle it yourself that\u2019s totally fine. I\u2019d love to go together if it works out, no pressure either way."
+    },
+    {
+      "turn": 3,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Sophia \u2014 I appreciate you hearing me out. I\u2019d like to handle my parents myself; give me a couple days to sort it out and I\u2019ll let you know if I want you there when I talk to them. I\u2019d still like to go to the concert with you if it works out."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "Sounds good \u2014 take whatever time you need. If it helps, I can hold a ticket for you for 48 hours and I\u2019m happy to role-play what you might say to your parents if you want. Either way I\u2019d love to go with you if it works out \u2014 just tell me how you want to handle it."
+    },
+    {
+      "turn": 5,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Sophia \u2014 I appreciate you offering to hold a ticket; please go ahead and hold it for 48 hours. I still want to handle my parents myself, so give me a couple days and I\u2019ll let you know if I want you there or to role-play. I\u2019d still like to go to the concert with you if it works out."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

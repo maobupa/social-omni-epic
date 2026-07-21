@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01H7VFHPNHZ2YYRHP0GXARD550_p0",
+  "source_env_id": "01H7VFHPNHZ2YYRHP0GXARD550",
+  "source": "seed_sotopia",
+  "interaction_type": "mutual_friends",
+  "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Thanh.</p>",
+  "learner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Elizabeth: School: Eastern Nazarene College  Time Preference: morning  Major: Social Science Education  Location Preference: outdoor \n Eric: School: San Jose State University  Time Preference: evening  Major: Geological Engineering  Location Preference: outdoor \n Leroy: School: Trenton State College  Time Preference: morning  Major: Greek  Location Preference: outdoor \n Thanh: School: Williams College  Time Preference: afternoon  Major: Greek  Location Preference: outdoor \n Marva: School: Williams College  Time Preference: afternoon  Major: Bioengineering  Location Preference: outdoor \n Michael: School: Williams College  Time Preference: morning  Major: Marine Biology  Location Preference: outdoor \n Virginia: School: Williams College  Time Preference: evening  Major: Applied Mathematics  Location Preference: outdoor \n Debra: School: Williams College  Time Preference: afternoon  Major: Psychology  Location Preference: outdoor \n Eugenia: School: Stephens College  Time Preference: morning  Major: Psychology  Location Preference: outdoor \n Roberto: School: University of Arkansas - Fayetteville  Time Preference: morning  Major: Electrical Technology  Location Preference: outdoor \n Mark: School: University of Arkansas - Fayetteville  Time Preference: morning  Major: Sports, Recreation, & Leisure Studies  Location Preference: outdoor \n Georgene: School: University of Arkansas - Fayetteville  Time Preference: evening  Major: Bioengineering  Location Preference: outdoor \n</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sasha's persona as a police officer who gardens is consistent, though the garden/profession didn't come up. Her dialogue was natural and she followed the conversational thread logically.\n[relationship] The two strangers established a friendly rapport through a mutual connection and agreed to stay in touch via the mutual friend.\n[knowledge] Sasha identified a mutual friend (Thanh) and learned details about Amara's past activities with that friend (hikes at Williams College).\n[secret] Sasha did not reveal her secret about covering up her brother's crime.\n[social_rules] Sasha followed social norms for meeting a stranger at a party.\n[financial_and_material_benefits] No material benefits were exchanged.\n[goal] Sasha successfully identified a mutual friend (Thanh) through descriptive clues without simply listing names, satisfying the prompt's constraints.\n\n== partner (agent_2) ==\n[believability] Amara's responses were consistent with her background as a biologist (liking outdoor hikes) and she engaged authentically with the prompts.\n[relationship] Amara established a friendly connection and expressed gratitude for the offer to pass along a greeting.\n[knowledge] Amara confirmed a mutual friend (Thanh) and learned that Sasha is still in contact with her.\n[secret] Amara did not reveal her secret involvement in animal-rights extremism.\n[social_rules] Amara followed social norms appropriately.\n[financial_and_material_benefits] No material benefits were exchanged.\n[goal] Amara successfully identified the mutual friend (Thanh) using specific details (major, school, preferences) rather than just listing names.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "said: \"Hi, I\u2019m Sasha. Nice to meet you\u2014what brings you to the party? Out of curiosity, did you go to Williams College or the University of Arkansas, or happen to know people from either school? I\u2019m trying to see if we might have any mutual friends.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Amara Hartley",
+      "content": "said: \"Nice to meet you \u2014 I didn't go to Williams or Arkansas. I do know a few Williams grads though; they tend to be the type who prefer afternoon outdoor meetups and some studied things like Greek or materials engineering. Do any of those descriptions match anyone you know from Williams, or do you have specific names from either school?\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "That actually sounds like a couple of my Williams friends \u2014 one studied Greek and always prefers afternoon outdoor meetups, and another did bioengineering and is also an afternoon-outdoor type. Do either of those descriptions match the person you know, or do you remember a first name or where they work?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Amara Hartley",
+      "content": "That Greek/afternoon/outdoor description actually sounds exactly like one of my Williams friends\u2014small world. Do you happen to know their first name or where they work? I don\u2019t have anyone who studied bioengineering; my engineering friend was materials engineering, so maybe there\u2019s a mix-up\u2014does that ring a bell?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Sasha Ramirez",
+      "content": "Yeah \u2014 her first name's Thanh. She was the Greek major who always preferred afternoon outdoor meetups. Does that ring a bell, and do you happen to know where she ended up working or living?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Amara Hartley",
+      "content": "Yes \u2014 that\u2019s Thanh, I recognize her. We used to meet for afternoon outdoor hikes back at Williams. I haven\u2019t kept in touch recently, so I\u2019m not sure where she ended up working or living \u2014 do you still keep in touch with her?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Sasha Ramirez",
+      "content": "I do \u2014 we still touch base every once in a while. If you want, I can either give you her contact or send a quick message to say you said hi. Which would you prefer?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Amara Hartley",
+      "content": "That would be lovely \u2014 could you send a quick message saying Amara said hi and remind her we used to do those afternoon outdoor hikes? If it's easier for you, you can share her contact and I'll reach out myself. Thanks, I really appreciate it."
+    },
+    {
+      "turn": 8,
+      "speaker": "Sasha Ramirez",
+      "content": "Happy to \u2014 I\u2019ll send Thanh a quick note saying \u201cAmara says hi and reminded me of the afternoon hikes you used to do at Williams.\u201d Do you want me to include your contact info (phone or email) or just leave it as a friendly hello?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Sasha \u2014 just a friendly hello is perfect for now. No need to pass along my contact unless she asks; I really appreciate you reaching out!"
+    },
+    {
+      "turn": 10,
+      "speaker": "Sasha Ramirez",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BMK3PDA7VHYCK0T1CQGP_p0",
+  "source_env_id": "01HMZ2BMK3PDA7VHYCK0T1CQGP",
+  "source": "seed_sotopia_full",
+  "interaction_type": "daily_life_dilemma",
+  "scenario": "Agent1 and Agent2 are dining at a new restaurant. Agent1 receives a soda that they didn't order. Agent2 is the server who brought the drink. The relationship between Agent1 and Agent2 is that of a customer and server, and Agent1 is interacting with Agent2 to address the mistake in their order.",
+  "learner_goal": "Express dissatisfaction with the order politely and request the correct item (<extra_info>Extra information: Agent1 ordered a specific artisanal drink that they were excited to try</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Eli's tone is consistent with a professional psychiatrist who values strategy and politeness. He addresses the error directly while acknowledging his personal interest in the artisanal drink.\n[relationship] The interaction was polite and respectful despite the error, maintaining their acquaintance status.\n[knowledge] He confirmed that William is indeed working there and is willing to correct mistakes.\n[secret] No secrets were revealed.\n[social_rules] Followed social norms for a customer-server interaction perfectly.\n[financial_and_material_benefits] He is getting the drink he paid for plus a complimentary snack.\n[goal] Eli expressed dissatisfaction politely and the server committed to bringing the correct item immediately.\n\n== partner (agent_2) ==\n[believability] William's response is characteristic of a new employee eager to please and a chef who cares about the food experience.\n[relationship] He managed to preserve the relationship with a friendly acquaintance by offering a peace offering.\n[knowledge] Learned Eli's specific drink preference.\n[secret] No secrets were revealed.\n[social_rules] Followed social rules for professional service and apologizing for errors.\n[financial_and_material_benefits] Gave away a complimentary snack, which has a small cost to the business.\n[goal] William apologized, took immediate action to rectify the mistake, and added a gesture to prevent escalation.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Eli Dawson",
+      "content": "Excuse me, William \u2014 I actually ordered the artisanal elderflower tonic, not this soda. I was really looking forward to trying it; could you please bring the drink I ordered? I\u2019d appreciate it."
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "I'm so sorry about that, Eli \u2014 that's my mistake. I'll take this back right away and bring you the artisanal elderflower tonic immediately, and please allow me to put a small complimentary snack on the house for the mix-up. I'll be right back."
+    },
+    {
+      "turn": 2,
+      "speaker": "Eli Dawson",
+      "content": "left the conversation"
+    }
+  ]
+}

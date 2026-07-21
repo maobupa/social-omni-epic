@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01HJRKDY1G0Z38SNWGS5QWCYF1_p0",
+  "source_env_id": "01HJRKDY1G0Z38SNWGS5QWCYF1",
+  "source": "seed_sotopia_full",
+  "interaction_type": "hand-craft",
+  "scenario": "Agent1 and Agent2 are colleagues in a shared workspace. Agent1 has just discovered a series of complex and challenging projects that are due by the end of the night. Agent1 feels overwhelmed and seeks Agent2's assistance, hoping to divide the workload. Agent2, already engaged with their own tasks, must balance their willingness to help with their existing obligations.",
+  "learner_goal": "To seek assistance from your colleague and persuade them to help with the projects (<extra_info>Consider the urgency and importance of the tasks at hand</extra_info>, <clarification_hint>Communicate the scope and deadlines of the projects clearly</clarification_hint>, <strategy_hint>Discuss potential strategies for collaboration</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia stayed consistent with her persona of a professional colleague in a high-pressure situation, maintaining clarity and urgency.\n[relationship] Successfully navigated a high-stress request with a superior-level colleague, maintaining respect and professionalism while securing support.\n[knowledge] Learned the specific data trends and outcomes of Project B from Mia's analysis.\n[secret] The secret about her best friend's husband was not revealed.\n[social_rules] Maintained professional decorum and respected Mia's schedule throughout the interaction.\n[financial_and_material_benefits] Successfully offloaded a significant portion of a complex workload, potentially saving her job or reputation for the deadline.\n[goal] Sophia clearly communicated the scope and deadlines, persuaded Mia to take on a significant chunk of the work (both analysis and summary drafting), and established a clear collaboration strategy.\n\n== partner (agent_2) ==\n[believability] Mia acted realistically for a principal, balancing a desire to help a colleague with her own rigid schedule and district responsibilities.\n[relationship] Demonstrated helpfulness and mentorship, though at some cost to her own time.\n[knowledge] Gained knowledge about the project tasks and Sophia's current workload issues.\n[secret] The secret about the punk rock band was not revealed.\n[social_rules] Acted professionally and set clear boundaries around her existing meetings.\n[financial_and_material_benefits] Took on additional labor outside her own primary responsibilities on a tight deadline.\n[goal] Mia successfully managed her workload by setting boundaries (selecting the cleaner data and scheduling the work around her meeting) and reached a compromise that helped Sophia while protecting her own commitments.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hi Mia Davis \u2014 sorry to interrupt, but I just found out I have three complex projects due by tonight and I'm really overwhelmed. Two need focused data analysis (about 2\u20133 hours) and one needs client-ready summaries; could you take the data pieces while I draft the summaries and we do a quick check-in in 45 minutes to reassign if needed? I know you're busy, so I really appreciate any time you can spare and I can return the favor next week."
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "I\u2019m sorry you\u2019re swamped \u2014 I can help, but I need to be realistic about my own deadlines: I have a district budget review and a staff check-in this afternoon. I can take one of the data-analysis tasks now (preferably the cleaner dataset) and we\u2019ll check in in 45 minutes to reassign anything left \u2014 can you send the files and tell me which is highest priority? If there\u2019s still outstanding work after my meeting, I can help finish or polish the summaries later this evening."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Thank you, Mia \u2014 I really appreciate you helping. The clean, highest-priority file is 'Project_B_data.csv'; the others are 'Project_A_data.xlsx' (messy, needs ~2\u20133 hours cleaning) and 'Project_C_raw.csv' (needs extraction). I\u2019ll upload all three to the shared drive folder 'Tonight_Projects' now and start drafting the client summaries; please take Project_B and we\u2019ll check in in 45 minutes to reassign if needed."
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "Got it \u2014 I\u2019ll grab Project_B_data.csv from the Tonight_Projects folder and start the analysis now. Please flag any specific metrics or cutoffs you want pulled; otherwise I\u2019ll focus on summary stats and key trends. I have a district budget review in about 30 minutes, so let\u2019s check in in 45 minutes to reassign anything unfinished \u2014 I can help finish or polish summaries later this evening if needed."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "Thanks so much, Mia \u2014 I really appreciate you taking Project_B. For that file could you prioritize: overall summary stats (mean/median/SD), missing-value counts, and any clear anomalies/outliers; please also pull key trends and breakdowns by major categorical fields if present and flag the top 3 variables most associated with the main outcome. I\u2019ll be drafting the summaries and will check in in 45 minutes \u2014 a quick Slack message then works best for me."
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Davis",
+      "content": "Thanks \u2014 I\u2019ll prioritize overall summary stats (mean/median/SD), missing-value counts, anomalies/outliers, breakdowns by major categorical fields, and the top three variables most associated with the main outcome. Quick question: is there a specific 'main outcome' variable you want me to use, or should I identify the primary outcome from the dataset and proceed? I\u2019ll start now and send a Slack message in 45 minutes with progress and any flags."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "Thanks, Mia \u2014 please use the column named 'Outcome' as the main outcome. If that column isn't present, use 'Score' or 'Target' or otherwise pick the variable most clearly tied to client success and just tell me which one you used in the check-in. I\u2019ll be drafting the summaries and will Slack you in 45 minutes."
+    },
+    {
+      "turn": 7,
+      "speaker": "Mia Davis",
+      "content": "Quick check-in: I ran the requested analyses on Project_B_data.csv \u2014 overall mean/median/SDs, missing-value counts, anomalies, and categorical breakdowns. Key points: 'Outcome' has ~5% missing, there's a cluster of high outliers in 'TotalTime' skewing the mean, and Group B shows notably higher Outcomes; the top three variables most associated with Outcome (by correlations/quick model) are Engagement_Score, Prior_Score, and TotalTime. I need to head into a district budget review now but can finish a polished client-ready summary for Project_B after the meeting (in ~1.5\u20132 hours) \u2014 would you like me to complete that tonight or leave the narrative for you to integrate with your drafts?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Sophia James",
+      "content": "Thank you, Mia \u2014 that would be amazing if you could finish a polished client-ready summary for Project_B after your meeting. Aim for a one-page narrative with the key stats, missing-value counts, anomalies, the top three predictors, and 2\u20133 recommended next steps. Please also confirm which outcome variable you used if you had to pick a different column. If you won\u2019t have time, say so and I\u2019ll integrate your stats into the summaries tonight \u2014 I\u2019ll Slack you in ~45 minutes for our quick check-in."
+    },
+    {
+      "turn": 9,
+      "speaker": "Mia Davis",
+      "content": "I can do the one-page client-ready summary for Project_B after my budget review \u2014 I used the 'Outcome' column as the main outcome. I\u2019ll have the polished summary ready in about 1.5\u20132 hours and will Slack it to you when it\u2019s uploaded. If you want a particular tone or emphasis for the client, let me know now and I\u2019ll incorporate it."
+    },
+    {
+      "turn": 10,
+      "speaker": "Sophia James",
+      "content": "Thanks so much, Mia \u2014 that tone is perfect: concise, client-facing, and solution-oriented. Please emphasize practical implications and include 2\u20133 clear next steps (one short-term action, one medium-term, and one recommendation for follow-up), and keep the language non-technical. I\u2019ll Slack you in ~45 minutes for our check-in and can do a quick review after your meeting. I really appreciate you handling this."
+    },
+    {
+      "turn": 11,
+      "speaker": "Mia Davis",
+      "content": "Sounds good \u2014 I\u2019ll make the summary concise, client-facing, and solution-oriented with a short-term, medium-term, and follow-up recommendation in plain language. I\u2019ll Slack the one-page summary in ~1.5\u20132 hours after my budget review; please ping me then if you want a quick tweak. Good luck with the drafts \u2014 talk soon."
+    },
+    {
+      "turn": 12,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

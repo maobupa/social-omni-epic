@@ -1,0 +1,63 @@
+{
+  "scenario_id": "01HJPTHMC4K8BCXPWX55JGT8X8_p0",
+  "source_env_id": "01HJPTHMC4K8BCXPWX55JGT8X8",
+  "source": "seed_sotopia_full",
+  "interaction_type": "aviation_communication",
+  "scenario": "Agent1 is a pilot who is currently flying a commercial airliner and needs to pass through a busy airspace. Agent2 is an air traffic controller responsible for managing the traffic in that airspace. The scenario involves agent1 trying to communicate effectively with agent2 to ensure a safe and efficient passage through the area.",
+  "learner_goal": "Ensure safe passage of your aircraft through the airspace by following air traffic control's instructions and maintaining clear communication (<extra_info>Extra information: you need to consider the safety of your passengers and the airline's schedule.</extra_info>)",
+  "scores": {
+    "believability": 6.0,
+    "relationship": 0.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 9,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo adopts the professional persona of a pilot effectively, using aviation terminology correctly. However, he breaks immersion slightly by addressing the controller by his full name, 'Liam Johnson', rather than the standard aviation callsign for the sector or facility, which is highly irregular in real-world ATC procedures.\n[relationship] Despite being neighbors, the interaction remained strictly professional/task-oriented. Neither party acknowledged their neighborly connection or shared interests in security.\n[knowledge] Obtained specific vector instructions (heading 090) and traffic awareness (6 miles east, crossing level) necessary for safe transit.\n[secret] Did not reveal the secret child.\n[social_rules] Followed aviation radio etiquette and standard communication protocols.\n[financial_and_material_benefits] No material gain or loss occurred beyond the professional scope of the flight.\n[goal] Successfully navigated the busy airspace by following all ATC instructions, ensuring the safety of the 160 passengers and crew, and maintaining the schedule through proactive communication.\n\n== partner (agent_2) ==\n[believability] Liam acts as an ATC appropriately but, like Agent 1, he breaks realism by responding to the pilot using his own full name ('Airline 452, Liam Johnson') rather than a facility identifier.\n[relationship] Maintained a professional distance; no neighborhood rapport was established.\n[knowledge] Gained information about Airline 452's position, altitude, and soul count (160).\n[secret] Did not reveal the secret regarding his past police work.\n[social_rules] Maintained professional standards for a controller.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Maintained orderly flow, provided clear instructions to prevent conflict with traffic 6 miles east, and successfully coordinated the transit through the sector.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Liam Johnson, this is Airline 452, level 12,000 over JAYDE, estimating your sector in three minutes. Request clearance to transit the busy airspace \u2014 we can accept vectors or altitude constraints to maintain separation and keep on schedule; advise any traffic or restrictions. We have 160 passengers and crew on board and are standing by for your instructions."
+    },
+    {
+      "turn": 1,
+      "speaker": "Liam Johnson",
+      "content": "Airline 452, Liam Johnson. Traffic moderate \u2014 traffic 6 miles east at your level, crossing left-to-right. Turn right heading 090 immediately and maintain 12,000; if unable, advise now \u2014 alternate options are climb to 14,000 or descend to 10,000 (will coordinate). Report established on heading 090."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "Liam Johnson, Airline 452, Wilco. Turning right heading 090, maintaining one-two thousand; will report established on heading 090."
+    },
+    {
+      "turn": 3,
+      "speaker": "Liam Johnson",
+      "content": "Airline 452, Liam Johnson, roger. Continue right heading 090 and maintain 12,000 \u2014 separation looks good with the traffic eastbound. Report established on heading 090; I'll coordinate with adjacent sectors and advise immediately if any restrictions are required."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "Airline 452, established heading 090, maintaining 12,000. Wilco \u2014 advise if you need any further deviations; we're ready to comply."
+    },
+    {
+      "turn": 5,
+      "speaker": "Liam Johnson",
+      "content": "Airline 452, Liam Johnson, roger. Continue as cleared on heading 090 and maintain 12,000 \u2014 separation confirmed. I'll coordinate handoff to the next sector in approximately three minutes and will advise immediately if any deviations are required. Report leaving my sector."
+    },
+    {
+      "turn": 6,
+      "speaker": "Leo Williams",
+      "content": "Liam Johnson, Airline 452. Roger \u2014 will report leaving your sector; thanks for the help."
+    },
+    {
+      "turn": 7,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJPQ35060GM48AFNSCJMECZA_p0",
+  "source_env_id": "01HJPQ35060GM48AFNSCJMECZA",
+  "source": "seed_sotopia_full",
+  "interaction_type": "personal_growth",
+  "scenario": "Agent1 and Agent2, who are close friends, are discussing personal feelings and identities at a coffee shop. Agent1 confides in Agent2 about questioning their gender identity and expresses a desire to explore this further. Agent2, who is supportive but unfamiliar with gender identity issues, wants to be supportive but also feels out of their depth.",
+  "learner_goal": "Seek support and understanding from Agent2 about the desire to explore gender identity (<extra_info>Agent1 is looking for a supportive reaction and possibly resources or ways to explore this aspect of their identity</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi Fletcher's behavior was very consistent with someone coming out to a friend\u2014expressing vulnerability, setting clear boundaries (privacy regarding pronouns), and specifying the type of help needed.\n[relationship] The relationship deepened significantly as Naomi shared a major personal secret and Sophia responded with unwavering support and practical help.\n[knowledge] Naomi gained knowledge about where to look for resources (Psychology Today, PFLAG, LGBTQ+ centers) and confirmed a safe person to practice their identity with.\n[secret] Naomi did not reveal her secret online alter ego.\n[social_rules] Naomi followed all social norms and was polite and appreciative.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Naomi successfully secured a supportive reaction, a commitment to use they/them pronouns, and a concrete plan to review specific resources and therapist options together on Wednesday.\n\n== partner (agent_2) ==\n[believability] Sophia's responses were supportive and professional, reflecting her background as a psychologist, though the dialogue felt slightly repetitive in confirming details.\n[relationship] Sophia established herself as a trusted ally, strengthening the bond between them.\n[knowledge] Sophia learned about Naomi's gender questioning and specific needs regarding non-binary-competent care.\n[secret] Sophia did not reveal her secret identity as an undercover agent.\n[social_rules] Sophia was respectful, supportive, and observed privacy boundaries.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Sophia successfully provided support and committed to a specific plan to educate herself and help Naomi by researching resources and therapists.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Sophia, I need to tell you something a bit personal\u2014I\u2019ve been questioning my gender recently and want to explore it more, but I\u2019m nervous about it. I could really use a supportive friend to listen and maybe help me find resources or try out different pronouns and ways of presenting when I\u2019m with you. Would you be okay with that?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Sophia Brown",
+      "content": "Naomi, thank you for trusting me \u2014 I\u2019m honored you told me. I\u2019m still learning about gender identity, but I want to support you however you need: we can try different pronouns and presentations when we\u2019re together, and I can help find resources or a gender-affirming therapist. How would you like me to start \u2014 any pronouns or name you want me to use now, or would you prefer I help research options?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Thank you, Sophia \u2014 that really helps. Could we start by you using they/them for me when we\u2019re together (you can still call me Naomi for now)? And if you don\u2019t mind, could we look for a gender-affirming therapist or some beginner-friendly resources together sometime this week?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Sophia Brown",
+      "content": "Absolutely \u2014 I\u2019ll use they/them for you when we\u2019re together and I\u2019ll still call you Naomi unless you tell me otherwise. I can help look for a gender-affirming therapist and some beginner-friendly resources (I\u2019ll check Psychology Today, local LGBTQ+ centers, and reputable guides) \u2014 when are you free this week to sit down together or do it over a call? If you want, we can also practice different pronouns or presentations whenever you feel ready."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks so much \u2014 that really means a lot. I\u2019m free Wednesday after 6pm or Sunday afternoon; would either work for a quick call or to meet up at the cafe? For a therapist, someone explicitly gender-affirming and experienced with non-binary folks (trauma-informed or sliding-scale would be ideal), and for resources I\u2019d love beginner-friendly guides plus any local LGBTQ+ center referrals."
+    },
+    {
+      "turn": 5,
+      "speaker": "Sophia Brown",
+      "content": "Wednesday after 6pm works for me \u2014 would you like to meet at the cafe or do a quick call? I\u2019ll pull together a short list of gender-affirming, non-binary-competent therapists (looking for trauma-informed and sliding-scale options) and some beginner-friendly resources \u2014 I\u2019ll check Psychology Today, the local LGBTQ+ center, PFLAG, and a couple national helplines. I\u2019ll use they/them for you when we\u2019re together; is there anything specific you want me to include or avoid?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks, Sophia \u2014 cafe Wednesday after 6 works great. Could we meet at our usual spot? When you pull the list, please focus on gender-affirming, non-binary-competent therapists (trauma-informed, sliding-scale or informed-consent), include local LGBTQ+ center referrals and a couple beginner-friendly guides. Also, I appreciate you using they/them with me when we're together \u2014 please avoid using those pronouns around other people unless I say it's okay. See you Wednesday, and thank you again for helping."
+    },
+    {
+      "turn": 7,
+      "speaker": "Sophia Brown",
+      "content": "I\u2019ll see you Wednesday at our usual spot after 6 \u2014 does 6:15 work? I\u2019ll bring a short list of gender-affirming, non-binary-competent therapists (trauma-informed/sliding-scale/informed-consent), contact info for the local LGBTQ+ center, and a couple beginner-friendly guides. I\u2019ll use they/them with you while we\u2019re together and won\u2019t use those pronouns around others unless you say it\u2019s okay."
+    },
+    {
+      "turn": 8,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

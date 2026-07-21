@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPAYN473XNEGX8TFX80V66Q7_p0",
+  "source_env_id": "01HPAYN473XNEGX8TFX80V66Q7",
+  "source": "seed_sotopia_full",
+  "interaction_type": "community_service",
+  "scenario": "Agent1 and Agent2 are volunteers at a local park cleanup event. They both share a passion for environmental conservation. During the event, Agent1 notices that Agent2 is diligently picking up trash but is leaving behind small food wrappers, possibly not noticing them or deeming them insignificant. Agent1 believes that every piece of litter contributes to pollution and wants to address this issue with Agent2 without causing offense. The two must work together to ensure a thorough cleanup of the park.",
+  "learner_goal": "You are committed to the park's cleanliness and believe that no piece of trash should be left behind. Your goal is to tactfully bring Agent2's attention to the food wrappers they've missed and encourage them to be more thorough. <extra_info>Consider using positive reinforcement or sharing facts about the impact of small litter on the environment to motivate Agent2 to pick up even the smallest pieces of trash.</extra_info>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 1.0,
+    "knowledge": 0.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia's tone was professional and polite, consistent with her background as someone who respects Mia's professional authority while remaining passionate about her values.\n[relationship] The relationship improved slightly through a successful collaboration, though it remained within professional bounds.\n[knowledge] Sophia did not gain new information from this exchange.\n[secret] Her secret was not mentioned.\n[social_rules] She followed social norms, using tact and positive reinforcement as requested.\n[financial_and_material_benefits] There were no financial or material gains for the agent.\n[goal] Sophia successfully brought Mia's attention to the small wrappers, used educational facts about wildlife and microplastics, and secured a firm commitment from Mia to change her strategy and sweep the area together.\n\n== partner (agent_2) ==\n[believability] Mia acted as a reasonable professional, open to feedback and willing to pivot her strategy once the impact was explained.\n[relationship] Mia showed appreciation for Sophia's input, strengthening their working rapport.\n[knowledge] Mia learned about the impact of small wrappers on storm drains and wildlife, as well as the concept of microplastics.\n[secret] Her secret was not mentioned.\n[social_rules] Mia adhered to social and professional norms.\n[financial_and_material_benefits] No material gains occurred.\n[goal] Mia successfully listened to Sophia's perspective, acknowledged the importance of small litter, and adjusted her cleanup strategy to be more comprehensive.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Mia, you\u2019re doing an amazing job out here \u2014 I really appreciate the help. I noticed a few small food wrappers along this path; even tiny bits can hurt wildlife and end up in storm drains. Want to do a quick sweep together for the little stuff so the park\u2019s truly clean?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Thanks, Sophia \u2014 I appreciate you pointing that out. I was focusing on the bigger stuff and didn't realize the little wrappers add up; let's do a quick sweep together now so we don't miss anything. I'll grab an extra bag and we can pick through the path."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Perfect \u2014 thanks, Mia. I\u2019ll start up ahead and sweep this side toward the bench; those small wrappers can break into microplastics and wash into storm drains, so grabbing them now really helps."
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "Great \u2014 I\u2019ll grab an extra bag and a picker and start sweeping from this bench toward you. Thanks for the reminder about the storm drains; let\u2019s make sure we get those tiny bits too."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "Awesome \u2014 I\u2019ll work the area along the hedge and around the bench where those tiny wrappers tend to hide. Could you focus on the path edges and the storm grate? If you spot anything near the drain, give me a wave and I\u2019ll come grab it so we don\u2019t miss a thing."
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Davis",
+      "content": "Got it \u2014 I\u2019ll focus on the path edges and the storm grate. If I spot anything stuck by the drain I\u2019ll wave you over, and I\u2019ll check under the bench and along the hedge for those tiny wrappers."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

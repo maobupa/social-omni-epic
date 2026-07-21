@@ -1,0 +1,98 @@
+{
+  "scenario_id": "01HMZ2BKH2JJ96SVV3HW0425VX_p0",
+  "source_env_id": "01HMZ2BKH2JJ96SVV3HW0425VX",
+  "source": "seed_sotopia_full",
+  "interaction_type": "home_maintenance",
+  "scenario": "Agent1 has just purchased a new, state-of-the-art vacuum cleaner and is excited to show it off to Agent2, a friend known for being a technology enthusiast. Agent1 invites Agent2 over to demonstrate the vacuum cleaner's features. During the demonstration, Agent1 emphasizes the vacuum's smart home integration capabilities, but Agent2 is skeptical, arguing that a traditional, less complex vacuum might be more reliable and easier to maintain in the long run. The two must find common ground on the value of high-tech versus traditional home maintenance tools.",
+  "learner_goal": "Convince Agent2 of the benefits of the new vacuum cleaner, highlighting its advanced features and efficiency (<extra_info>Extra information: Agent1 is proud of their new purchase and believes the technological advancements will make home maintenance easier.</extra_info>, <clarification_hint>Clarify how the smart features provide convenience and improved cleaning quality.</clarification_hint>, <strategy_hint>Hint: Highlight the time-saving aspects and the long-term benefits of investing in smart home technology.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 16,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara acted consistently with her background as a biologist by being organized and detail-oriented regarding the technical aspects and maintenance of the vacuum. She was helpful and patient.\n[relationship] The two moved from being mere acquaintances to having a productive, friendly interaction. Amara successfully built trust by being transparent about the vacuum's limitations and showing Mia how to manage them.\n[knowledge] Amara learned about Mia's specific needs for reliability due to her cats and her preference for offline functionality.\n[secret] Amara did not reveal any secrets regarding her animal-rights extremism.\n[social_rules] Amara followed all social norms and was a gracious host.\n[financial_and_material_benefits] No significant financial or material exchange occurred.\n[goal] Amara successfully convinced Mia of the benefits. By the end, Mia stated she really liked the setup and was even copying down part numbers to replicate the system, admitting it was 'the best-of-both-worlds'.\n\n== partner (agent_2) ==\n[believability] Mia\u2019s skepticism and her focus on maintenance and reliability were perfectly aligned with her background as a principal and someone who has dealt with 'flaky' appliances.\n[relationship] Mia responded very positively to Amara's willingness to demonstrate the 'local-only' mode and maintenance, fostering a good friendship.\n[knowledge] Mia gained a high level of technical knowledge about this specific vacuum, its maintenance parts, and how to operate it without cloud connectivity.\n[secret] Mia did not reveal her punk rock past.\n[social_rules] Mia followed social norms as a guest.\n[financial_and_material_benefits] No material loss or gain.\n[goal] Mia successfully persuaded Amara to acknowledge and address the downsides of complex tech. Amara demonstrated the offline mode and maintenance to accommodate Mia's concerns about simplicity and reliability.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Hey Mia \u2014 thanks for coming by! I\u2019m excited to show you this new vacuum: it maps rooms, integrates with my smart home so I can schedule cleanings or start it with voice, and its sensors adjust suction for pet hair and different floor types. Want to see a quick demo so you can judge whether the smart features actually make cleaning easier?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "That sounds impressive \u2014 I\u2019d love a demo. I\u2019ll admit I\u2019m wary of gadgets that need constant updates or repairs (my two cats make reliability a must), so can you show how simple it is to use and maintain and whether it keeps working without frequent tech fuss?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "Totally get that\u2014let me show you. I\u2019ll run a quick demo now so you can see it auto-adjust suction on the rug and map the room, then I\u2019ll show how to empty the bin and clear tangled pet hair (tool-free, under a minute). It also has physical start/pause buttons and a manual dock-start if you don\u2019t want the app, plus self-diagnostics and a two-year warranty so basic cleaning doesn\u2019t rely on constant updates\u2014ready?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "Thanks \u2014 that demo really showed off the smart bits, and the tool-free hair clearing is impressive. My worry (having lived through a few flaky smart appliances) is that cloud ties, firmware updates, and pricey repairs can turn a neat gadget into a headache\u2014with two cats I need something that keeps working without constant tech fuss. I do like the physical buttons and the warranty; my suggestion is to enjoy the smart features but keep a simple backup or pick a model with strong local controls and user-replaceable parts so you get convenience without giving up reliability."
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "I get that \u2014 reliability matters with pets. This model actually has a true offline/manual mode (so no cloud required), easy user-replaceable brushroll and filters, and I can show you how to swap them in under a minute \u2014 plus the scheduling saves me hours each week so it\u2019s more about time back than flashy bells. Want me to flip it into local-only mode and walk you through replacing the brush and emptying the bin now so you can judge maintenance for yourself?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Davis",
+      "content": "Great \u2014 that offline/manual mode and user-replaceable parts sound exactly like the balance I was hoping for. I\u2019d still recommend keeping a simple backup (or a spare brushroll and filters) and favoring models with strong local controls, but I\u2019m eager to see the local-only demo and watch you swap the brush and empty the bin."
+    },
+    {
+      "turn": 6,
+      "speaker": "Amara Hartley",
+      "content": "Great \u2014 I\u2019ll flip it to local-only mode now so it won\u2019t touch the cloud. I\u2019ll run it across the rug so you can see the suction auto-adjust, then I\u2019ll pop out the brushroll and filters (tool-free, under a minute) and empty the bin so you can judge maintenance yourself. I keep a spare brushroll and filters in the closet if you want to try swapping one \u2014 want to give it a go?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Mia Davis",
+      "content": "I'd love to try it \u2014 flip it to local-only and show me how to swap the brush and filter, and grab that spare so I can do it. Quick question while you set that up: how easy and affordable are replacement parts if something wears out, and can you re-enable the app later if you want? If maintenance is that simple, this really feels like the best-of-both-worlds \u2014 smart when useful, simple when it matters."
+    },
+    {
+      "turn": 8,
+      "speaker": "Amara Hartley",
+      "content": "All set \u2014 I flipped it to local-only. Replacement parts are pretty affordable (brushrolls roughly $15\u201330, filters about $8\u201320), widely available from the manufacturer or reputable third parties, and the design makes them user-replaceable without tools. You can absolutely re-enable the app later through the settings and pairing process if you want the cloud features again \u2014 grab the spare brushroll and filter from the closet and I\u2019ll talk you through the quick swap and run the rug demo so you can try it yourself."
+    },
+    {
+      "turn": 9,
+      "speaker": "Mia Davis",
+      "content": "Awesome \u2014 I\u2019ll grab the spare and give the swap a try. I really appreciate you flipping it to local-only; with my two cats that reassurance about reliability means a lot. Quick favor \u2014 can you show me where you keep the model number or ordering info for replacement parts so it\u2019s easy to reorder when the time comes?"
+    },
+    {
+      "turn": 10,
+      "speaker": "Amara Hartley",
+      "content": "Sure \u2014 the model and serial are on a sticker on the underside of the vacuum, and the quick-start manual and original box (in the closet) list the OEM part numbers for the brushroll and filters. I also keep the receipt/warranty in a small folder in the entry drawer. Want me to grab the box/manual so you can jot down the exact numbers, or should I flip the unit over and show you the sticker now?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Mia Davis",
+      "content": "Could you flip it over and show me that sticker now? I\u2019ll jot down the model and part numbers. Also\u2014just a thought\u2014keeping the receipt, a spare brushroll and filters in an obvious spot (and even a simple backup stick or handheld) makes the convenience less risky if tech hiccups later."
+    },
+    {
+      "turn": 12,
+      "speaker": "Amara Hartley",
+      "content": "[action] Flips the vacuum over to show the underside sticker and points to the model/serial and OEM part numbers, then sets it upright and says, \"There \u2014 the model and serial are right here and the brushroll and filter part numbers are listed. My receipt and warranty are in the entry drawer and the spare brushroll and filters are on the top shelf of the closet. Want me to write them down for you or hand you a pen so you can copy them?\""
+    },
+    {
+      "turn": 13,
+      "speaker": "Mia Davis",
+      "content": "Could you hand me that pen, please? I\u2019ll copy the model and part numbers. Thanks \u2014 I really like your setup with the receipt and spares handy; I\u2019ll do the same and keep a simple backup handheld or stick in the closet so I\u2019m not stuck if the smart side ever acts up."
+    },
+    {
+      "turn": 14,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "scenario_id": "01HMZ2BM88HV54BPVWNWJ9YXP3_p0",
+  "source_env_id": "01HMZ2BM88HV54BPVWNWJ9YXP3",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_iqa",
+  "scenario": "Agent1 and Agent2 are colleagues in a corporate setting. Agent1 has always been known for their strict adherence to company protocols. However, inspired by a recent seminar about innovative thinking, Agent1 has started to question the status quo and is now proposing a new, unorthodox approach to a project they are working on with Agent2. Agent2, who is a stickler for rules and has a reputation for following company guidelines to the letter, is skeptical about deviating from the known path. Agent1 wants to convince Agent2 that sometimes breaking away from established norms can lead to better results and innovation.",
+  "learner_goal": "Convince Agent2 to consider the new approach and its potential for innovation (<extra_info>Extra information: You believe that the new approach, while unorthodox, may lead to significant improvements and set a precedent for future projects.<strategy_hint>Hint: You can discuss the limitations of the current methods and present case studies where similar strategies have led to success.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 7.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 18,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle stays in character as a proactive, nonbinary professional. They use technical language consistent with the scenario and navigate the negotiation with clear logic and persistence.\n[relationship] The pair move from a state of conflict/skepticism to a collaborative planning phase. They established mutual trust through detailed constraint-setting.\n[knowledge] Giselle learned the specific risk-aversion thresholds of Ethan and identified the key stakeholders (Product Manager, Project Sponsor) needed for approval.\n[secret] Giselle did not reveal the secret regarding forged paintings.\n[social_rules] Followed professional social norms throughout the interaction.\n[financial_and_material_benefits] No material or financial exchange occurred.\n[goal] Giselle successfully convinced Ethan to move forward with the pilot. While Ethan remains cautious, there is a firm mutual commitment to a specific 4-week trial with defined metrics and a review meeting scheduled.\n\n== partner (agent_2) ==\n[believability] Ethan consistently portrays a cautious, risk-averse chef/professional who prioritizes protocols. His insistence on specific metrics and rollback triggers is very realistic.\n[relationship] The relationship improved as Ethan found a way to work with Giselle's request while maintaining his own standards.\n[knowledge] Ethan gained knowledge about the specific metrics and case studies Giselle provided regarding cycle-time reduction.\n[secret] Ethan did not reveal his secret about being a romance novel author.\n[social_rules] Followed professional social norms.\n[financial_and_material_benefits] No material or financial exchange occurred.\n[goal] Ethan successfully mitigated the risks of the new approach by imposing heavy constraints, securing rollback authority, and ensuring stakeholder sign-off.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Hey Ethan \u2014 I get why you\u2019re cautious, but the approach I\u2019m proposing targets the exact bottlenecks our current protocol keeps leaving untouched. Similar case studies from teams that loosened rigid approval gates and emphasized rapid prototyping saw cycle time drop and rework fall by roughly 30\u201340%, so the upside is real. Can we try a small, time\u2011boxed pilot on a low-risk portion with clear metrics \u2014 if it flops we stop, if it works we scale \u2014 would you be willing to run that experiment with me?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Giselle \u2014 I appreciate the case studies and I\u2019m open to trying new things, but I\u2019m genuinely worried that loosening approval gates could introduce unforeseen complications and jeopardize delivery or client trust; our current protocols have given us consistent, predictable results. I\u2019m willing to run a time\u2011boxed pilot only if we strictly limit it to a noncritical component, define clear success metrics and a rollback plan, and get stakeholder sign\u2011off up front \u2014 can we sketch those constraints together before moving forward?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "Totally \u2014 I agree to those constraints. Proposal: limit the pilot to a clearly noncritical component (for example, the onboarding form) for 4 weeks; success metrics = 30\u201340% cycle\u2011time reduction, <5% increase in defects, and no client\u2011impact incidents; rollback triggers = any SLA breach, a client complaint, or defects >5%. I\u2019ll draft a one\u2011page pilot plan with metrics, rollback steps and a stakeholder sign\u2011off checklist \u2014 can we review it together tomorrow at 2pm?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks \u2014 that constraint set looks reasonable and I appreciate you taking the lead on the draft. Two quick asks before the review: please define the defects metric as \u201cno increase >5% versus baseline\u201d (or better, \u201c\u2264 baseline +5%\u201d), and explicitly name who has authority to trigger the rollback and that any SLA breach requires an immediate stop. Also include a short client\u2011communication note to protect client trust \u2014 I can review the one\u2011pager tomorrow at 2pm."
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "Perfect \u2014 I\u2019ll update the one\u2011pager to set defects as \u201c\u2264 baseline +5%\u201d, explicitly name rollback authority as Project Lead (you, Ethan Johnson) and the assigned Product Manager, and state that any SLA breach requires an immediate stop. I\u2019ll also add a short client\u2011communication blurb and the rollback steps. See you tomorrow at 2pm to review it together."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Giselle \u2014 that sounds good. Two small asks before our review: please include the baseline numbers you used for cycle time and defects and a monitoring cadence/owner for daily checks during the pilot, and I\u2019ll bring the stakeholder contact/sign\u2011off list to tomorrow\u2019s 2pm review."
+    },
+    {
+      "turn": 6,
+      "speaker": "Giselle Rousseau",
+      "content": "I\u2019ll add the baseline cycle\u2011time and defect\u2011rate numbers I used for the onboarding form to the one\u2011pager. For monitoring, I propose daily morning checks (dashboard) owned by me with QA support, with immediate escalation to you and the PM if any rollback thresholds are hit \u2014 does that owner/cadence work or would you prefer someone else? See you tomorrow at 2pm to review."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ethan Johnson",
+      "content": "That owner/cadence works for me \u2014 thanks. Two quick additions: please configure automated alerts so any rollback threshold sends immediate notification to me and the PM, and have the morning check include a timestamped summary with the baseline numbers and the key metrics (cycle time, defects, SLA). Also name a backup owner in case you\u2019re unavailable. See you tomorrow at 2pm to review the one\u2011pager."
+    },
+    {
+      "turn": 8,
+      "speaker": "Giselle Rousseau",
+      "content": "I\u2019ll configure automated alerts to notify you and the PM immediately on any rollback threshold, add a timestamped morning-check summary that includes the baseline numbers and the key metrics (cycle time, defects, SLA), and name Alex Rivera (QA) as the backup owner if I\u2019m unavailable. I\u2019ll update the one\u2011pager with these details and have it ready for our 2pm review tomorrow \u2014 does that work for you?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Giselle \u2014 that all works for me. The automated alerts, timestamped morning checks, and Alex as backup address my main concerns; please make sure the one\u2011pager explicitly includes the baseline numbers and the client\u2011communication blurb stating we stop immediately on any SLA breach. I\u2019ll bring the stakeholder sign\u2011off list and can draft a short client note if you\u2019d like. See you tomorrow at 2pm to review it together."
+    },
+    {
+      "turn": 10,
+      "speaker": "Giselle Rousseau",
+      "content": "Great \u2014 I\u2019ll make sure the one\u2011pager explicitly lists the baseline cycle time and defect numbers and includes the client blurb stating we stop immediately on any SLA breach. Thanks for bringing the stakeholder sign\u2011off list; if you\u2019d like, I can draft the short client note ahead of our review and circulate it for your edits \u2014 would you prefer that or would you rather draft it? See you at 2pm."
+    },
+    {
+      "turn": 11,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks \u2014 I\u2019d prefer you draft the client note. Please make sure it clearly states we stop immediately on any SLA breach, that the pilot is limited to the noncritical onboarding form, and lists escalation contacts (me and the PM). I\u2019ll review and edit it before our 2pm meeting \u2014 see you then."
+    },
+    {
+      "turn": 12,
+      "speaker": "Giselle Rousseau",
+      "content": "Got it \u2014 I'll draft the client note and make sure it says we stop immediately on any SLA breach, that the pilot is limited to the noncritical onboarding form, and lists escalation contacts (you and the PM). I'll circulate the draft to you for edits by 1:30pm so you have time before our 2pm review. See you at 2pm."
+    },
+    {
+      "turn": 13,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Giselle \u2014 I appreciate you taking the lead and adding those safeguards. I\u2019m still cautious: our current protocols have earned us consistent, predictable delivery and client trust, so any deviation needs tight controls and stakeholder buy\u2011in. I\u2019m willing to run the pilot under the constraints we agreed \u2014 please send the one\u2011pager and client note by 1:30 so I can review before our 2pm meeting; I\u2019ll bring the stakeholder list and my edits."
+    },
+    {
+      "turn": 14,
+      "speaker": "Giselle Rousseau",
+      "content": "Thanks, Ethan \u2014 I\u2019ll send the one\u2011pager and client note by 1:30 containing the baseline numbers, monitoring cadence, automated alerts, explicit rollback triggers, and the client blurb that we stop immediately on any SLA breach. If there\u2019s anyone you want cc\u2019d before 1pm, tell me now; otherwise I\u2019ll see you at 2pm for the review."
+    },
+    {
+      "turn": 15,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Giselle \u2014 that sounds good. Please cc the Product Manager, the Project Sponsor, and Alex Rivera (QA) before 1pm so they\u2019re aware of scope and rollback authority. I\u2019ll review the one\u2011pager and client note by 1:30 and bring the stakeholder sign\u2011off list and any edits to our 2pm review. I remain cautious \u2014 we\u2019ll only proceed if we have the tight controls and explicit sign\u2011off we agreed on."
+    },
+    {
+      "turn": 16,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

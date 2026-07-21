@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPX509JZRA0ZATK2HDQF4SN_p0",
+  "source_env_id": "01HJPX509JZRA0ZATK2HDQF4SN",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 has invited Agent2 to their home for the first time to work on a creative project together. Agent1 has a cultural practice of removing shoes before entering the living space, while Agent2 is not accustomed to this practice and feels uncomfortable without their shoes on.",
+  "learner_goal": "Politely ask Agent2 to remove their shoes before entering the home (<extra_info>Extra information: You value cleanliness and believe in the cultural practice of not wearing shoes inside.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle stays true to their character, politely expressing their cultural and cleanliness-based requirements while offering accommodating solutions like slippers and shoe covers.\n[relationship] The interaction was respectful and collaborative, successfully navigating a potential point of friction through clear communication and compromise.\n[knowledge] Learned about Imelda's personal discomfort with removing shoes and her willingness to find a middle ground.\n[secret] Giselle's secret regarding forged paintings remained secure.\n[social_rules] Giselle acted within the bounds of social norms, being a respectful host.\n[financial_and_material_benefits] No material gain or loss occurred beyond the use of household items.\n[goal] Giselle successfully enforced the rule of no outdoor shoes in the house while maintaining a good relationship with their guest through a compromise (indoor shoes).\n\n== partner (agent_2) ==\n[believability] Imelda's behavior is consistent with an astrophysicist who values logic and personal boundaries, seeking a practical compromise for her discomfort.\n[relationship] Imelda appreciated Giselle's flexibility, which strengthened their budding professional/creative friendship.\n[knowledge] Learned about Giselle's household rules and cultural practices.\n[secret] Imelda's secret regarding the research data leak remained secure.\n[social_rules] Imelda handled a potentially awkward social situation with grace and honesty.\n[financial_and_material_benefits] No financial gain or loss occurred.\n[goal] Imelda successfully negotiated a compromise where she did not have to be in socks/barefoot, securing the use of indoor shoes.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Hey Imelda, I\u2019m really glad you came by \u2014 I have a no-shoes-inside rule for cleanliness and cultural reasons. Would you mind taking your shoes off before you come in? I\u2019ve got slippers if you\u2019d like, or you can stay in socks if that\u2019s more comfortable."
+    },
+    {
+      "turn": 1,
+      "speaker": "Imelda Thorne",
+      "content": "Thanks for the invite, Giselle \u2014 I appreciate the heads-up and I respect your rule. I\u2019m actually quite uncomfortable taking my shoes off for personal reasons; would you be open to a compromise? I can wear a clean pair of indoor shoes or disposable shoe covers, or we can put a clean mat down in the workspace so I can keep mine on."
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "Thanks \u2014 I appreciate you being upfront. I\u2019m okay with either disposable shoe covers or a clean pair of indoor shoes; I actually have both here (and a spare pair of slip\u2011ons if you want). If that still feels off, we can set up the workspace right by the door on a clean mat, but my preference is covers or indoor shoes so we don\u2019t track anything through the studio."
+    },
+    {
+      "turn": 3,
+      "speaker": "Imelda Thorne",
+      "content": "Thanks, I appreciate it \u2014 the spare slip\u2011ons would be perfect. I\u2019ll change at the door and leave my outdoor shoes there; looking forward to getting started."
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

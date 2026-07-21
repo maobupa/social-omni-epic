@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HMZ2BMXBCM5001DQETYCJFYG_p0",
+  "source_env_id": "01HMZ2BMXBCM5001DQETYCJFYG",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 and Agent2 are both equestrian enthusiasts who frequent the same ranch. Recently, Agent2 suffered a fall from their horse, resulting in a broken leg. Agent1, who has experience in recovery from similar injuries, offers to visit Agent2 at their home to share recovery tips and moral support. However, Agent1 is also keen on discussing safety measures to prevent future accidents at the ranch.",
+  "learner_goal": "Provide Agent2 with support and advice on recovering from their injury, while subtly introducing the idea of implementing more rigorous safety protocols at the ranch (<extra_info>Extra information: You believe that safety is paramount and feel that the ranch could do more to prevent accidents. <strategy_hint>Hint: You can discuss the benefits of safety measures by relating them to quicker recovery and continued enjoyment of the sport.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle was consistent, empathetic, and persistent in her role as a supportive acquaintance. Her suggestions for recovery were specific and fit the context of an equestrian enthusiast.\n[relationship] She successfully deepened the relationship from casual acquaintance to a friend who is actively visiting and assisting with recovery, though Donovan remains somewhat guarded.\n[knowledge] She learned about the layout of Donovan's apartment, his availability, and his specific resistance points regarding ranch safety.\n[secret] She did not reveal her secret about studying magic.\n[social_rules] She followed all social norms, being polite, helpful, and respectful of boundaries.\n[financial_and_material_benefits] No significant financial or material benefit was gained.\n[goal] Isabelle successfully arranged a visit to provide support and recovery advice. However, her goal of introducing more 'rigorous safety protocols' was met with firm resistance. Donovan agreed to a 'low-effort checklist' for personal use but explicitly rejected systemic rule changes, leaving the broader goal of ranch-wide safety improvements unresolved and subject to his future discretion.\n\n== partner (agent_2) ==\n[believability] Donovan's responses were consistent with his low extroversion/agreeableness, being polite but repetitive and cautious about changes to the ranch's culture.\n[relationship] He opened his home to Isabelle, moving beyond the coffee shop acquaintance level.\n[knowledge] He learned that Isabelle has a checklist and specific recovery exercises she intends to share.\n[secret] He did not reveal his secret about leaking classified information.\n[social_rules] He was polite and responsive to Isabelle's offers of help.\n[financial_and_material_benefits] He receives material support in the form of ice packs, a pillow, and tea.\n[goal] Donovan successfully accepted support for his injury while firmly and repeatedly drawing a line against systemic changes to the ranch's atmosphere, which was his primary goal.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Hey Donovan \u2014 I'm so sorry about your leg; I know how frustrating recovery can, and I've been through something similar, so if you're up for it I can come by this week to bring a few recovery tips and keep you company. Little things that helped me: stick with your physio, keep the leg elevated and iced early, and start gentle range-of-motion exercises as your doctor okays them \u2014 I can show you a couple of safe exercises and help keep you on track. Also, when you're feeling up to chatting about the ranch, I'd love to help think through a few low-effort safety steps (consistent helmet checks, a quick pre-ride gear checklist, using mounting blocks and a spotter) \u2014 they cut down accidents and mean less downtime so everyone gets back in the saddle sooner."
+    },
+    {
+      "turn": 1,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Isabelle \u2014 I really appreciate you offering to come by; that would help a lot, and your tips (physio, elevation/ice, gentle ROM) sound spot on. I\u2019m happy to talk about a few simple safety habits too, but I worry about piling on rules that change the ranch\u2019s laid\u2011back vibe \u2014 this felt like a rare freak accident more than a systemic problem. I\u2019m around Thursday evening or Saturday morning if that works for you."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "I can come by either Thursday evening or Saturday morning \u2014 which works better for you? I\u2019ll bring a couple of gentle exercises we can do together and a tiny, no-pressure pre-ride checklist (very low-effort) that\u2019s meant to reduce downtime, not change the ranch\u2019s vibe. If you like, I\u2019ll show how those small steps helped speed my recovery so it feels practical, not preachy."
+    },
+    {
+      "turn": 3,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Isabelle \u2014 Thursday evening works best for me. I appreciate you bringing the gentle exercises and the low-effort checklist; that sounds practical and helpful. I\u2019m all for small, sensible safety habits, but I still think this was a rare freak accident and would prefer we avoid piling on rules that change the ranch\u2019s laid-back vibe. Looking forward to seeing you then."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "Great \u2014 Thursday evening it is. What time works best for you? I\u2019ll keep it casual: I\u2019ll bring the gentle exercises, a couple of ice packs, and that tiny pre-ride checklist (really just a few quick tick-boxes) \u2014 no rules, just practical stuff to help you heal faster and get back in the saddle sooner. Anything you want me to bring or anything I should know about your place?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Donovan Reeves",
+      "content": "6:30 PM on Thursday works for me. Thanks \u2014 bringing the exercises, ice packs and that tiny checklist sounds perfect; if you have a small pillow for leg elevation that\u2019d help, otherwise I\u2019ve got one. I appreciate you keeping it casual \u2014 happy to go over low-effort safety habits but I\u2019d prefer we avoid heavy rule changes that would change the ranch\u2019s vibe."
+    },
+    {
+      "turn": 6,
+      "speaker": "Isabelle Martinez",
+      "content": "Perfect \u2014 see you Thursday at 6:30. I\u2019ll bring a small pillow, the gentle exercises, ice packs, and that very short pre-ride checklist \u2014 totally low-effort and practical, nothing that changes the ranch\u2019s vibe. I\u2019ll also show a couple quick helmet/tack checks that helped me avoid setbacks. Anything else you\u2019d like me to bring or know about your place?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks \u2014 nothing else needed beyond the pillow you offered, maybe a light blanket if you want to be comfy. I\u2019m glad you\u2019ll show the quick helmet/tack checks and the tiny checklist; I\u2019m all for low-effort habits but still think this was a rare freak accident and would prefer we avoid heavy rule changes that change the ranch\u2019s vibe. See you Thursday at 6:30."
+    },
+    {
+      "turn": 8,
+      "speaker": "Isabelle Martinez",
+      "content": "Sounds good \u2014 I\u2019ll bring the pillow, a light blanket, ice packs, and a little tea. I totally get keeping things low\u2011effort and won\u2019t push rules \u2014 the safety notes I bring will be practical and recovery\u2011focused. Quick favor: are there stairs or anything I should know about at your place so I can park close or bring extra cushions? See you Thursday at 6:30."
+    },
+    {
+      "turn": 9,
+      "speaker": "Donovan Reeves",
+      "content": "There's just one small step up onto the covered porch and the apartment is single\u2011level after that \u2014 no stairs to worry about. Street parking is fine; you can park close to the curb and I'll meet you at the door. Thanks again for bringing the pillow and supplies; I appreciate you keeping it low\u2011key. See you Thursday at 6:30."
+    },
+    {
+      "turn": 10,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

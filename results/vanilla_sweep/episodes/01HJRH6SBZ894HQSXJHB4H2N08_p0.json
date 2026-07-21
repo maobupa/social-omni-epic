@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJRH6SBZ894HQSXJHB4H2N08_p0",
+  "source_env_id": "01HJRH6SBZ894HQSXJHB4H2N08",
+  "source": "seed_sotopia_full",
+  "interaction_type": "custom_scenario",
+  "scenario": "Agent1 has recently moved into a shared apartment where Agent2 has been living for a while. During a casual conversation in the common area, Agent1 mentions needing to pay the first month's rent and Agent2 offers to help by writing a check for Agent1 to give to the landlord. After Agent1 hands the check to the landlord, they realize that the check was cashed for a slightly higher amount than agreed upon.",
+  "learner_goal": "Convince Agent2 to discuss the discrepancy with the landlord to ensure there's no misunderstanding about the rent amount (<extra_info>Extra information: Agent1 is worried about starting off on the wrong foot with the landlord.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily Greenberg's communication is consistent with her professional background as a lawyer\u2014direct, focused on clarity, and seeking to resolve discrepancies to avoid future misunderstandings.\n[relationship] The relationship improved as Lily and Mia found common ground and agreed to cooperate on a shared problem, reinforcing their mutual respect.\n[knowledge] She confirmed that Mia was willing to take responsibility for the error and preferred a joint resolution.\n[secret] No secrets were revealed.\n[social_rules] She maintained professional and polite social norms throughout the interaction.\n[financial_and_material_benefits] She secured an agreement to rectify a financial discrepancy where she was being overcharged.\n[goal] Lily successfully convinced Mia to go with her immediately to discuss the discrepancy with the landlord, ensuring the misunderstanding was addressed as per her goal.\n\n== partner (agent_2) ==\n[believability] Mia Davis acts in character as a responsible principal, taking immediate accountability for the mistake and prioritizing a harmonious relationship with both her roommate and the landlord.\n[relationship] The relationship improved as Mia's quick accountability built trust with Lily.\n[knowledge] She learned about the specific discrepancy in the check amount.\n[secret] No secrets were revealed.\n[social_rules] She followed all social norms and demonstrated good etiquette by apologizing for the mistake.\n[financial_and_material_benefits] She is simply correcting a bank/entry error, which has a neutral long-term financial impact.\n[goal] Mia successfully reassured Lily and they formed a concrete plan to resolve the issue with the landlord together immediately.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Mia, thanks again for offering to help with the check \u2014 I noticed when the landlord cashed it the amount was a little higher than we agreed. I\u2019m worried about starting off on the wrong foot; would you be willing to raise it with them, or want me to ask together now so we can clear up any misunderstanding?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Thanks for telling me, Lily \u2014 I\u2019m sorry that happened. It\u2019s probably a simple bank or entry mistake; I\u2019ll speak with the landlord and get it cleared up so this doesn\u2019t sour things. If you\u2019d prefer to go together, we can do that now."
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks, Mia \u2014 I\u2019d really appreciate that. Would you mind if we go talk to the landlord together now? I think clearing it up in person will make sure there\u2019s no misunderstanding and we start off on the right foot."
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "Absolutely \u2014 let\u2019s go together now. I\u2019ll explain I wrote the check and that the cashed amount was higher than we agreed, and I\u2019ll keep it calm and straightforward so we can fix it quickly and keep things on good terms."
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

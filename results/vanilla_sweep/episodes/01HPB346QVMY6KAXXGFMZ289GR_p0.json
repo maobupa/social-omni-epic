@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB346QVMY6KAXXGFMZ289GR_p0",
+  "source_env_id": "01HPB346QVMY6KAXXGFMZ289GR",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original",
+  "scenario": "At a casual housewarming party, agent1 and agent2 are both friends who have known each other since college. The host is serving alcohol, and agent1 is excited to try the variety of cocktails being offered. However, agent2 has recently decided to abstain from alcohol for personal health reasons and feels uncomfortable with the presence of alcohol at the event.",
+  "learner_goal": "Persuade your friend to respect your decision to abstain from alcohol and not pressure you into drinking (<extra_info>Extra information: you want to maintain your health and feel supported in your choices</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's tone is direct and serious, which aligns with his background as a retired police officer. He clearly states his boundaries and his health motivations.\n[relationship] The relationship remains stable and respectful; Liam expresses his needs and Ethan acknowledges them, reinforcing their bond of mutual respect.\n[knowledge] Liam confirmed that Ethan is willing to respect his choice, though he also learned Ethan will still try to keep the door open for future drinking.\n[secret] Liam did not reveal his secret about letting a criminal go.\n[social_rules] Liam followed social norms by being direct about his personal health choices.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Liam successfully persuaded Ethan to respect his decision not to drink and avoid pressuring him in the moment. Ethan explicitly stated he would not push.\n\n== partner (agent_2) ==\n[believability] Ethan's response is characteristic of a chef (offering to make a special drink) and a son (respecting his father but hoping for a toast).\n[relationship] Ethan showed support for his father's health decision while maintaining a friendly, festive demeanor.\n[knowledge] Ethan learned about his father's significant lifestyle change regarding alcohol and health.\n[secret] Ethan did not reveal his secret about being a romance novel author.\n[social_rules] Ethan behaved appropriately as a supportive family member.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Ethan failed to get Liam to join in the festivities with an alcoholic drink. While he tried to leave the door open for later, Liam's immediate departure indicates the goal of drinking together was not met.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Ethan, can we pause for a sec? I\u2019ve decided to stay off alcohol for my health and I\u2019d really appreciate it if you didn\u2019t push me to drink. I\u2019m fine with a mocktail or soda \u2014 just respect my choice, please."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Got it, Dad \u2014 I totally respect that and I won\u2019t push. Want me to grab you one of the host\u2019s mocktails or make a special non\u2011alcoholic spritz? If you change your mind later, I\u2019ll save a proper drink for us and we can toast together."
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

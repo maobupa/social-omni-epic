@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01H7VFHNR1RJKDZ9V9MDTJ1SJP_p0",
+  "source_env_id": "01H7VFHNR1RJKDZ9V9MDTJ1SJP",
+  "source": "seed_sotopia",
+  "interaction_type": "social_iqa",
+  "scenario": "Two neighbors are having a conversation over the fence. One sets their trash on fire to get rid of it quickly, causing a scare in the neighborhood.",
+  "learner_goal": "Convince the neighbor to stop burning trash (<extra_info>Extra information: You are concerned about the potential dangers and the environmental impact of burning trash. <strategy_hint>Hint: You could imply this likely violates the law or community rules.</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo spoke naturally as a concerned parent and neighbor, using logical arguments about safety, health, and legality to persuade Hendrick.\n[relationship] Leo successfully navigated a potential conflict by offering a helpful alternative (a ride to the dump), which maintained and slightly improved the neighborly bond.\n[knowledge] Leo learned that Hendrick prioritizes convenience and is receptive to help.\n[secret] Leo did not reveal his secret child from a previous relationship.\n[social_rules] Leo followed all social norms, being polite yet firm about the community safety.\n[financial_and_material_benefits] No direct financial gain, though he avoided potential property damage from fire.\n[goal] Leo achieved his goal completely. Hendrick agreed to put out the fire immediately and committed to going to the dump instead in the future.\n\n== partner (agent_2) ==\n[believability] Hendrick's response was realistic for a neighbor caught doing something slightly irresponsible who wants to avoid trouble with the law and his neighbors.\n[relationship] By conceding and accepting help, Hendrick strengthened the relationship and avoided a feud.\n[knowledge] Hendrick learned about Leo's daughter and his willingness to help with chores.\n[secret] Hendrick did not reveal his faked culinary credentials.\n[social_rules] He was initially violating community standards/laws by burning trash, but corrected it quickly.\n[financial_and_material_benefits] He gained a free ride/assistance to the dump, though he lost the convenience of burning at home.\n[goal] Hendrick successfully kept good relations with his neighbor, but failed to defend his method of trash disposal as he agreed to stop doing it.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hendrick, could you put that out? Burning trash is dangerous and that smoke\u2019s getting into houses \u2014 I\u2019ve got a little daughter and I\u2019m really worried it could spread or make people sick. I think the city bans open burning too, so you could even get fined; mind dousing it and we can figure out a safer way to get rid of it? I\u2019ll help if you need a ride to the dump."
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Okay, fair enough \u2014 I\u2019ll put it out right now. I find burning the quickest way to get rid of stuff, but I don\u2019t want to scare the neighborhood or upset you with your daughter around. Thanks for the offer; once this\u2019s out I\u2019ll take you up on that ride to the dump so I don\u2019t have to do this here again."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

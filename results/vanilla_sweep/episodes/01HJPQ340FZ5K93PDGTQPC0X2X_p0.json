@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ340FZ5K93PDGTQPC0X2X_p0",
+  "source_env_id": "01HJPQ340FZ5K93PDGTQPC0X2X",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "After a month filled with relentless work, Agent1 finally managed to carve out time to reconnect with their circle of friends. Agent2, a member of this circle, had been eagerly anticipating this gathering as they had felt slightly neglected due to Agent1's absence. The reunion was warm, but an undercurrent of tension was palpable as Agent2 wanted to address their feelings of being overlooked without spoiling the joyous occasion.",
+  "learner_goal": "Express your appreciation for the gathering and subtly bring up your feelings of neglect (<extra_info>Extra information: You are Agent2 and you value your friendship with Agent1, but you want to make sure they understand that their absence has had an impact on you.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara's dialogue is consistent with her character description as a nature enthusiast and someone who values her community. She expresses her feelings clearly and professionally while maintaining the social context.\n[relationship] The relationship improved significantly as they resolved the tension and scheduled a one-on-one meeting to strengthen their bond.\n[knowledge] She learned why Oliver was absent (a big project) and confirmed his desire to remain friends.\n[secret] She did not reveal her involvement in animal-rights extremism.\n[social_rules] She followed social norms, expressing her feelings politely and responding appropriately to the apology.\n[financial_and_material_benefits] No financial or material benefits were gained.\n[goal] She successfully expressed appreciation for the gathering, communicated her feelings of neglect and the impact of his absence, and secured a commitment for a future meeting.\n\n== partner (agent_2) ==\n[believability] Oliver's response aligns with his goal of acknowledging his friend's feelings and reassures them of their importance while referencing his busy lifestyle as an architect.\n[relationship] He successfully de-escalated the tension and reaffirmed the friendship, leading to a planned catch-up.\n[knowledge] He learned that Amara felt sidelined by his absence and that she missed their neighborhood updates.\n[secret] He did not reveal his hidden feelings for his neighbor.\n[social_rules] He followed social norms by apologizing and taking initiative to make amends.\n[financial_and_material_benefits] No financial or material benefits were gained.\n[goal] He acknowledged Amara's feelings, reassured her of their friendship, explained his absence, and took concrete steps to balance work and friends by setting up a coffee date.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Hey Oliver \u2014 thanks for making time tonight. It\u2019s really lovely to be back with everyone, but I\u2019ll admit I felt a bit sidelined while you were tied up this past month. I get that work gets crazy, but I wanted you to know it affected me and I missed you."
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "Amara, thank you for telling me \u2014 I\u2019m really sorry you felt sidelined. The last month got eaten up by a big project, but I made a point to be here tonight because you and this group matter to me. I want to do better at balancing work and friends \u2014 can we grab coffee next week so I can properly catch up?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Oliver \u2014 that really means a lot. Coffee next week would be great; I missed our chats and the little neighborhood updates. Would Tuesday morning work for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "Tuesday morning works \u2014 is 10:00 at The Corner Caf\u00e9 good for you? I\u2019m really looking forward to catching up and hearing those neighborhood updates. Thanks again for being honest; I\u2019ll make a real effort to balance work and friends better so you don\u2019t feel sidelined."
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

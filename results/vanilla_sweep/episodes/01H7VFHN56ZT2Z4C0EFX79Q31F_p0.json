@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01H7VFHN56ZT2Z4C0EFX79Q31F_p0",
+  "source_env_id": "01H7VFHN56ZT2Z4C0EFX79Q31F",
+  "source": "seed_sotopia",
+  "interaction_type": "hand-craft",
+  "scenario": "Two friends deciding on a movie to watch on Netflix",
+  "learner_goal": "To watch a comedy film with your friend (<strategy_hint>Hint: provide financial/material-wise benefits to persuade them to watch the genre you like</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle stays in character as a twin sister who is both supportive and slightly competitive. She uses her barista background consistently to negotiate.\n[relationship] The sisters maintain a very warm, collaborative tone even while disagreeing, and settle on a compromise that respects both interests.\n[knowledge] She learns Ava's movie preference (Nightcrawler), Ava's willingness to pay via Venmo, and their interest in social/political themes.\n[secret] She did not reveal her secret study of magic.\n[social_rules] She followed all social norms for a casual interaction between siblings.\n[financial_and_material_benefits] She successfully negotiated getting $5 via Venmo plus fresh brownies from Ava.\n[goal] She achieved a 50/50 contingency (the 15-minute test) and secured a firm commitment for her movie to be watched next time if the thriller works out. However, she did not definitively secure a comedy for tonight.\n\n== partner (agent_2) ==\n[believability] Ava's nonbinary identity is respected, and their passion for social justice and baking is integrated naturally into the negotiation.\n[relationship] Ava shows great flexibility and generosity, strengthening the bond through compromise and baking.\n[knowledge] Learned about Isabelle's movie suggestion and her specific 'test' requirements for selection.\n[secret] Ava successfully kept their bisexuality a secret from their family context.\n[social_rules] Followed all social norms for a casual interaction.\n[financial_and_material_benefits] Ava agreed to pay $5 and provide homemade brownies to incentivize their choice.\n[goal] Ava successfully got their movie (Nightcrawler) chosen as the primary option to watch tonight, subject to a 15-minute trial, and effectively used material benefits to persuade Isabelle.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Hey Ava \u2014 how about we watch a comedy on Netflix? It\u2019s already on our plan so no rental fees, and I can grab coffees and a big tub of popcorn with my barista discount so we\u2019ll save cash. Comedies are usually shorter too, so we\u2019ll still have time for homework tonight. What do you think?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Love the discount idea \u2014 clutch. How about a thriller instead? Several good thrillers are on our Netflix plan too (so still no rental fees), your barista discount still covers popcorn, and because they\u2019re so gripping we\u2019ll probably finish in about the same time and be more awake to do homework after \u2014 I\u2019ve got one in mind, want me to pick?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "Ooh okay \u2014 hear me out: there\u2019s a dark satirical comedy on Netflix, Sorry to Bother You, that hits the social/political notes you care about but is still a comedy. If we do that tonight I\u2019ll grab extra drinks and a big snack haul with my barista discount, and you get to pick the thriller next time. Deal?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "I love that pick \u2014 thanks for offering the snack haul. Can we do a thriller tonight instead? It\u2019s on our plan (so no rental), your barista discount still covers popcorn, and I\u2019ll bake my famous brownies plus Venmo you $5 for extra drinks so you don\u2019t lose out. I promise we\u2019ll watch Sorry to Bother You next time and you get first pick \u2014 deal?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "Which thriller is it? Quick compromise: we watch the first 15 minutes of your pick \u2014 if it\u2019s gripping, we go thriller; if not, we switch to Sorry to Bother You and I get dibs on the snack haul. Sound fair?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Martinez",
+      "content": "It\u2019s Nightcrawler \u2014 super gripping. Deal: we do your 15-minute test; if those first 15 minutes hook us, we watch the thriller, and if not, we switch to Sorry to Bother You and you get the snack haul. I\u2019ll still bake brownies and Venmo you $5 for extra drinks so you don\u2019t lose out."
+    },
+    {
+      "turn": 6,
+      "speaker": "Isabelle Martinez",
+      "content": "Perfect \u2014 deal! I\u2019ll grab popcorn and extra drinks with my barista discount, you bring brownies, and we\u2019ll start in 20? Timer on for 15 minutes \u2014 if it hooks us we keep Nightcrawler, if not we swap to Sorry to Bother You and I get the snack haul. Venmo me the $5 and I\u2019ll pick everything up."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Martinez",
+      "content": "Sending you the $5 on Venmo now. Brownies will be fresh \u2014 I\u2019ll be there in about 20 minutes. Ready to start the timer for the 15-minute test!"
+    },
+    {
+      "turn": 8,
+      "speaker": "Isabelle Martinez",
+      "content": "Got the $5\u2014thanks! I\u2019ll swing by the shop now and grab the popcorn and extra drinks with my discount, be there in ~20. I\u2019ll start the 15\u2011minute timer as soon as we hit play \u2014 can\u2019t wait!"
+    },
+    {
+      "turn": 9,
+      "speaker": "Ava Martinez",
+      "content": "On my way! Brownies will be fresh and warm\u2014I\u2019ll pop them in a tin so they travel safe. I\u2019ll set my phone to DND and be there in ~20. Ready to start the 15\u2011minute timer when you hit play!"
+    },
+    {
+      "turn": 10,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

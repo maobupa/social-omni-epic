@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BKX5TF57VR8B11Z5A8M1_p0",
+  "source_env_id": "01HMZ2BKX5TF57VR8B11Z5A8M1",
+  "source": "seed_sotopia_full",
+  "interaction_type": "romantic_encounter",
+  "scenario": "Agent1 and Agent2, after chatting online for a few weeks, have finally decided to meet for a first date at a local coffee shop. They have been enjoying each other's company when the topic of dessert comes up. Agent1 is enthusiastic about trying the shop's famous cheesecake, but Agent2 confesses a strong dislike for cheesecake, preferring instead to have a fruit salad. Agent1 sees this as an opportunity to find a compromise that will satisfy both their dessert preferences while keeping the mood light and enjoyable.",
+  "learner_goal": "Find a dessert option that both Agent1 and Agent2 can enjoy together, considering their different tastes (<extra_info>Extra information: Agent1 is excited about the cheesecake and wants to share the experience with Agent2, but also respects Agent2's preferences.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Donovan's dialogue was consistent with his background as a software developer and matched the goal of finding a compromise for the dessert dilemma.\n[relationship] The interaction was friendly and collaborative, showing mutual respect for each other's preferences, which is a positive start for a first date.\n[knowledge] Donovan learned that Oliver is willing to compromise and has a playful/flirtatious side.\n[secret] Donovan's secret regarding classified information was never mentioned or hinted at.\n[social_rules] Donovan abruptly left the conversation immediately after Oliver agreed to the compromise, which is socially awkward/rude for a first date.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Donovan successfully negotiated a dessert option where both parties get what they want (cheesecake for him, fruit for Oliver) and agreed on a shared experience.\n\n== partner (agent_2) ==\n[believability] Oliver's response was warm and flirtatious, consistent with his goal and the established scenario.\n[relationship] Oliver responded positively to the compromise and added a flirtatious 'sneaking a taste' comment, deepening the connection.\n[knowledge] Oliver learned that Donovan is considerate and attentive to his dietary preferences.\n[secret] Oliver's secret about his neighbor was not revealed.\n[social_rules] Oliver followed social norms perfectly, being polite and charming.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Oliver successfully maintained a flirtatious and positive atmosphere, though the date ended abruptly due to Donovan leaving.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "How about a compromise \u2014 we order one slice of the famous cheesecake to share and a small fruit salad on the side? That way you get the fruit you want, I get to try the cheesecake, and we both sample something. Or if you prefer, we can ask them to top the cheesecake with extra fresh berries so it feels fruitier \u2014 what do you think?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "Perfect compromise \u2014 thanks for suggesting that. Let's order the cheesecake to share plus a small fruit salad: you can enjoy the cheesecake and I'll stick mostly to the fruit, although I won't say no to a berry-covered taste if you sneak me one. Deal?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

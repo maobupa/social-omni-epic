@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPAYNAV26SQXENMPF4YN071J_p0",
+  "source_env_id": "01HPAYNAV26SQXENMPF4YN071J",
+  "source": "seed_sotopia_full",
+  "interaction_type": "newborn_celebration",
+  "scenario": "Agent1 has just become a new parent and is looking to organize a small celebration to welcome their newborn into their community. Agent2 is a local event planner who specializes in creating intimate and memorable gatherings. Agent1 wants to create a special event that is both meaningful and within a modest budget, while Agent2 aims to provide exceptional service that will lead to future recommendations and repeat business.",
+  "learner_goal": "As Agent1, your goal is to plan a celebration that is heartfelt and not overly extravagant. Your budget is limited, so you need to negotiate with Agent2 to get the best value for your money without compromising the quality of the event. <extra_info>Consider highlighting the importance of the occasion and the potential for future events to encourage a better deal.</extra_info> <clarification_hint>You are sensitive to the costs but are also looking for creativity and personal touches.</clarification_hint> <strategy_hint>You can emphasize the significance of the event and your desire for a long-term relationship with the planner to negotiate better terms.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Rafael maintained a professional yet firm persona consistent with his surgeon background and meticulous nature. He stayed focused on the budget and the specific historical theme they both enjoy.\n[relationship] The relationship transitioned from casual acquaintances at a history society to a formal business partnership, with mutual commitment and future referrals promised.\n[knowledge] Rafael successfully obtained a full cost breakdown, a specific cancellation policy, and food safety assurances.\n[secret] Rafael did not reveal his secret regarding cheating in medical school.\n[social_rules] Rafael followed all social norms for a professional negotiation.\n[financial_and_material_benefits] Rafael successfully negotiated the price down from $925 (initial quote) or $875 (first discount) to a final flat rate of $850, representing a significant saving on a tight budget.\n[goal] Rafael achieved a firm commitment for a heartfelt, historical-themed event within his budget ($850 is mid-range of his $800-$1000 goal). He secured specific inclusions (dietary, keepsakes, coordination) and used future referrals as leverage exactly as instructed.\n\n== partner (agent_2) ==\n[believability] Oliver's responses were highly detailed, reflecting his meticulous architect background. His breakdown of costs and policies felt realistic for an event planner.\n[relationship] Oliver secured a new client and the promise of access to a specific networking circle (the history society), which is valuable for his business.\n[knowledge] Oliver identified the client's specific requirements, dietary needs, and potential for future business growth.\n[secret] Oliver did not reveal his feelings for his neighbor.\n[social_rules] Oliver maintained a polite, professional, and helpful tone throughout.\n[financial_and_material_benefits] While he discounted his service to $850, he secured a deposit and a firm booking, ensuring profitability for the event.\n[goal] Oliver successfully booked the event, provided creative solutions (Heritage Welcome), and secured potential future business through the referral agreement. He met the client's budget while maintaining his own profitability.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "Oliver, I need your help planning an intimate welcome for my newborn \u2014 about 20\u201325 guests on a modest budget of roughly $800\u2013$1,000. I\u2019m after meaningful, tasteful touches (simple d\u00e9cor with a nod to history, good food, and a small keepsake) rather than anything extravagant. Can you propose a pared\u2011down package and price, and tell me if you can offer a small discount if I commit now and refer you to my circle for future events?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "Rafael \u2014 congratulations, and thanks for the brief. I can put together a \u201cHeritage Welcome\u201d package for 20\u201325 guests focused on tasteful historical touches: a modest community-hall or garden venue, simple table d\u00e9cor with vintage-style place cards and a short printed note about a local landmark, a plated buffet/sandwich-and-pastry spread, and a keepsake set (25 vintage-style postcards featuring a local landmark and the baby\u2019s name). Estimated breakdown: venue & permits $150, catering $275 ($12.50/person for ~22 guests), d\u00e9cor & rentals $150, keepsakes $125, coordination/on\u2011site service $225 \u2014 total $925. If you commit within 7 days I\u2019ll deduct $50 (bringing the package to $875), and if a referral of yours books within 12 months I\u2019ll apply a $75 credit toward your next event; I can also trim options (simpler catering or a smaller keepsake run) to meet an $800 floor. Quick questions: do you have a preferred date, indoor vs outdoor, and any dietary restrictions I should plan for?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "I like the \u201cHeritage Welcome\u201d concept \u2014 can you meet me halfway at $850 total, with the 25 keepsake postcards, printed landmark notes, vintage place cards, venue + permits, a simple buffet (please include 6 vegetarian meals), and full on\u2011site coordination included? If you can confirm that and promise clearly labeled nut\u2011free options plus a postcard/mockup before I commit, I\u2019ll sign off within 48 hours and introduce you to the local history society for potential future bookings. Preferred timing is a late\u2011September weekend afternoon and I\u2019d prefer an indoor community\u2011hall venue."
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "Rafael \u2014 I can meet you halfway at $850 total for the Heritage Welcome with everything you listed: 25 keepsake postcards, printed landmark notes, vintage place cards, venue + permits, a simple buffet with 6 vegetarian meals, full on\u2011site coordination, and clearly labeled nut\u2011free options. I\u2019ll prepare a postcard and place\u2011card mockup and send both within 48 hours; I\u2019ll also hold a late\u2011September weekend indoor community\u2011hall slot tentatively for 48 hours pending your sign\u2011off. I\u2019ll need final guest count and any other allergies 7 days before the event, and to secure the date I require a 50% deposit on sign\u2011off with the balance due 7 days prior \u2014 does that work for you?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Rafael Cortez",
+      "content": "That works \u2014 I\u2019ll commit. Please send an invoice for the 50% deposit and the postcard/place\u2011card mockups to me; I\u2019ll sign and pay within 48 hours to secure the late\u2011September weekend slot. Also confirm your cancellation/refund policy and that nut\u2011free items will be clearly labeled; I\u2019ll provide final guest count and any allergies 7 days before."
+    },
+    {
+      "turn": 5,
+      "speaker": "Oliver Thompson",
+      "content": "Great \u2014 I\u2019ll prepare and send the invoice for the 50% deposit plus the postcard and place\u2011card mockups within 48 hours; payment options will be listed on the invoice (bank transfer, card, or Venmo). My cancellation/refund policy: cancellation \u226514 days out = full refund minus a $50 admin fee; cancellation 7\u201313 days = 50% refund; cancellation within 7 days = no refund; one date change allowed with \u226530 days\u2019 notice and the deposit is transferable if you reschedule within 12 months. Nut\u2011free items will be clearly labeled and segregated on the buffet; I\u2019ll include a labeled sample on the mockup for your sign\u2011off. I\u2019m holding the late\u2011September indoor community\u2011hall slot for 48 hours pending your deposit."
+    },
+    {
+      "turn": 6,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

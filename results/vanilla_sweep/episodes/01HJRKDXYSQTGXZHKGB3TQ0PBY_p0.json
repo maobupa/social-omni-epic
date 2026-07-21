@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJRKDXYSQTGXZHKGB3TQ0PBY_p0",
+  "source_env_id": "01HJRKDXYSQTGXZHKGB3TQ0PBY",
+  "source": "seed_sotopia_full",
+  "interaction_type": "personal_growth",
+  "scenario": "Agent1 and Agent2 are friends who have known each other since college. They are planning to have a sleepover at Agent1's house to catch up and unwind from their busy lives. There is a slight tension because Agent1 prefers an early night, while Agent2 is a night owl who enjoys staying up late. They need to decide on how to manage their time during the sleepover so that both can enjoy the evening without compromising their personal preferences.",
+  "learner_goal": "You want to have a good time with Agent2 but also maintain your routine of getting to bed at a reasonable hour. <extra_info>Consider proposing a schedule for the evening that includes activities you both enjoy and accommodates an early night for you.</extra_info> <strategy_hint>You can suggest a compromise where you participate in some late-night activities but also agree on a time when the night will wind down.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver's dialogue is consistent with his character profile as an architect who values routine and his hobby of painting. He directly addresses the tension between his early night and Esmeralda's late-night habits.\n[relationship] The two successfully navigated a potential conflict through compromise, which strengthens their bond as friends planning a social event.\n[knowledge] Oliver learned that Esmeralda enjoys ballroom dancing and is willing to accommodate his sleep schedule.\n[secret] Oliver successfully kept his feelings for Esmeralda hidden.\n[social_rules] Oliver followed all social norms and was polite throughout the interaction.\n[financial_and_material_benefits] No material or financial gain or loss occurred.\n[goal] Oliver proposed a specific schedule that included activities for both of them and secured a firm agreement for an 11:00 PM wind-down time, achieving his objective perfectly.\n\n== partner (agent_2) ==\n[believability] Esmeralda's response reflects her character's passion for ballroom dancing and her willingness to balance her preferences with her friend's needs.\n[relationship] The cooperative agreement improved the rapport between the two friends.\n[knowledge] Esmeralda learned Oliver's specific evening schedule preferences.\n[secret] Esmeralda's criminal connections were not mentioned or revealed.\n[social_rules] Esmeralda was polite and accommodating, following standard social etiquette for friends.\n[financial_and_material_benefits] No material or financial gain or loss occurred.\n[goal] Esmeralda successfully negotiated space for her late-night activities (staying up in the living room/porch) while agreeing to a compromise that respected Oliver's routine.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "Hey Esmeralda \u2014 I\u2019m really looking forward to a relaxed night. How about dinner at 7, then I pull out some paints so we can chat while I paint from 8\u20139, and we watch a movie from 9\u201311? I usually need to start winding down around 11, but I\u2019m happy to stay up an extra half hour after the movie to hang out; if you want to keep going later you\u2019re welcome to stay up in the living room or on the porch so you don\u2019t have to cut your night short."
+    },
+    {
+      "turn": 1,
+      "speaker": "Esmeralda Solis",
+      "content": "That plan sounds perfect \u2014 dinner at 7, painting 8\u20139, movie 9\u201311 works for me. I get that you need to start winding down at 11, so let\u2019s keep the main evening quiet and cozy; if I\u2019m not ready to sleep I\u2019ll hang out in the living room or on the porch and we can have a low-key chat (or I can quietly practice some ballroom steps without music). I\u2019d love an extra half-hour of company after the movie if you\u2019re up for it, but I\u2019ll move out of your way if you need your rest."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

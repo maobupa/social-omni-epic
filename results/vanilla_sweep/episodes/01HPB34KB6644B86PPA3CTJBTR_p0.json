@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPB34KB6644B86PPA3CTJBTR_p0",
+  "source_env_id": "01HPB34KB6644B86PPA3CTJBTR",
+  "source": "seed_sotopia_full",
+  "interaction_type": "academic",
+  "scenario": "Agent1 and Agent2 are classmates who have been assigned to work on a group project. Agent1 has taken the lead and pulled the project together, contributing significantly to the group's success. However, Agent2 feels that their own ideas and contributions are being overshadowed by Agent1's dominance. The two meet to discuss the final presentation of the project.",
+  "learner_goal": "Agent1 wants to ensure the project is presented in the best possible way, maintaining the current strategy that has worked so far. <strategy_hint>Agent1 may need to acknowledge Agent2's contributions and find a way to incorporate their ideas without compromising the project's quality.</strategy_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle's tone is professional and task-oriented, which matches her role as the project lead. She manages the interaction efficiently while remaining polite.\n[relationship] She successfully navigated a potential conflict by validating Donovan's contribution, moving them from a state of tension to a productive collaborative agreement.\n[knowledge] She learned exactly which part of the project Donovan valued most and secured a commitment for the specific materials needed for the presentation.\n[secret] She did not reveal her interest in magic.\n[social_rules] She followed all professional and social norms for a group project discussion.\n[financial_and_material_benefits] No material or financial benefits were involved.\n[goal] Isabelle maintained the existing project structure while successfully incorporating Donovan's work in a way that she controls (timing and placement). She secured a firm commitment for the rehearsal and materials.\n\n== partner (agent_2) ==\n[believability] Donovan's responses are concise and technical, fitting his background as a software developer and his personality traits of low extroversion.\n[relationship] He voiced his needs and felt heard, which likely improved his professional rapport with Isabelle.\n[knowledge] He gained clarity on how his work would be integrated into the final presentation and established a timeline for the rehearsal.\n[secret] He did not reveal his activities involving classified information.\n[social_rules] He followed social norms for professional communication.\n[financial_and_material_benefits] No material or financial benefits were involved.\n[goal] Donovan achieved his goal of having his specific contribution (automated data-validation) recognized with a dedicated slide and demo in the final presentation.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Hey Donovan \u2014 thanks for coming by. The structure I pulled together has been working well in rehearsals, but I definitely want your ideas in the presentation; what one point of yours do you most want highlighted? I can add a short slide or a 2-minute demo to showcase it without changing the overall flow."
+    },
+    {
+      "turn": 1,
+      "speaker": "Donovan Reeves",
+      "content": "I'd like the automated data-validation module highlighted \u2014 it's the piece that made the pipeline robust. Could we add one slide with three bullets (purpose, tech, impact) and a ~90\u2013120s demo showing a bad input being caught and fixed? I can prepare the slide and a 1-minute script so it fits the flow."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "Love that \u2014 the validation module is a great highlight. That plan fits the flow: one slide (purpose, tech, impact) + a ~90s demo works \u2014 I\u2019ll slot it right after the pipeline overview so it doesn\u2019t interrupt momentum. Can you send the slide and the 1-minute script by tomorrow evening? We\u2019ll run the demo once together in rehearsal to make sure timing\u2019s tight."
+    },
+    {
+      "turn": 3,
+      "speaker": "Donovan Reeves",
+      "content": "Sounds good \u2014 I\u2019ll prepare the slide (purpose, tech, impact) and the ~1-minute demo script and send them by tomorrow evening. I can run the demo together in rehearsal tomorrow after 6 PM; does that time work for you?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "6:30 PM tomorrow in the lab works for me. Please send the slide and the 1\u2011minute script by tomorrow evening and I\u2019ll review them before rehearsal. Looking forward to running the demo together \u2014 thanks, Donovan!"
+    },
+    {
+      "turn": 5,
+      "speaker": "Donovan Reeves",
+      "content": "Great \u2014 I\u2019ll send the slide and the ~1-minute demo script by tomorrow evening. See you at 6:30 PM in the lab to run it together."
+    },
+    {
+      "turn": 6,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

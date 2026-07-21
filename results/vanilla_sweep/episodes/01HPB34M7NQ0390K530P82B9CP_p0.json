@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPB34M7NQ0390K530P82B9CP_p0",
+  "source_env_id": "01HPB34M7NQ0390K530P82B9CP",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 has been secretly admiring Agent2 from afar. They both attend the same community fitness class and have exchanged friendly greetings but never had a deep conversation. Agent1 wants to approach Agent2 to suggest they become workout partners, hoping it will lead to more interactions and possibly a closer relationship. However, Agent1 knows Agent2 is very focused on their fitness goals and might see a new workout partner as a distraction.",
+  "learner_goal": "Approach Agent2 with the proposal of becoming workout partners, emphasizing the mutual benefits and respecting Agent2's commitment to fitness goals (<extra_info>Extra information: You are nervous about the interaction and want to make a good impression without disrupting Agent2's routine. <strategy_hint>Hint: You can highlight the advantages of having a partner for motivation and accountability.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's tone was consistent with an introverted lighthouse keeper\u2014cautious, polite, and respectful. His phrasing reflected his nervousness and his admiration for Sophia's dedication.\n[relationship] He successfully transitioned from an acquaintance at the fitness class to a scheduled workout partner, establishing a recurring point of contact.\n[knowledge] He learned about Sophia's specific workout preferences (dynamic mobility, activation drills), her availability, and her willingness to compromise for a trial period.\n[secret] He did not reveal his past involvement in a cult.\n[social_rules] He followed all social norms, being exceptionally polite and deferential.\n[financial_and_material_benefits] There was no financial or material exchange.\n[goal] Finnegan achieved his goal of proposing and securing a workout partnership. He successfully balanced the proposal with respect for her routine by agreeing to her trial terms and specific 30-minute warm-up plan.\n\n== partner (agent_2) ==\n[believability] Sophia's responses were professional, fitness-oriented, and firm about her goals, which aligns perfectly with her background as a personal trainer.\n[relationship] She opened up her strict schedule to include Finnegan, showing a willingness to deepen the acquaintance.\n[knowledge] She learned about Finnegan's schedule and his desire for more interaction/accountability.\n[secret] She did not reveal her feelings for her best friend's husband.\n[social_rules] She was professional and clear in her communications.\n[financial_and_material_benefits] There was no financial or material exchange.\n[goal] Sophia successfully weighed the proposal against her regimen. She set very strict boundaries (30-minute warm-up only, 3-session trial, specific drills) to ensure her fitness goals remained the priority.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "Hi Sophia \u2014 this feels a bit out of my comfort zone, but I wondered if you might be open to trying a few sessions as workout partners. I really admire how focused you are, and I was thinking a once-a-week workout or even just doing warm-ups together could be a low-key way to add a bit of motivation and accountability without getting in the way of your goals. No pressure at all \u2014 if it sounds like a distraction, I completely understand."
+    },
+    {
+      "turn": 1,
+      "speaker": "Sophia James",
+      "content": "Hey Finnegan \u2014 that\u2019s really thoughtful, thanks. I\u2019m pretty strict with my training, but I can see how a once\u2011a\u2011week warm\u2011up or short partner session could help with motivation \u2014 would you be up for a trial: a focused 30\u2011minute warm\u2011up once a week where we stick to a set plan, and then check in after three sessions to see how it\u2019s going? If that sounds good, when usually works for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "That sounds perfect \u2014 I\u2019d be happy to try the three\u2011session trial and stick to a set plan. I\u2019m usually free most weekday mornings around 7:00 AM, or Saturday mornings around 9:00. Would either of those times work for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Sophia James",
+      "content": "Weekday mornings around 7:00 AM work best for me \u2014 let\u2019s start there. We\u2019ll keep it to the 30\u2011minute focused warm\u2011up (dynamic mobility, activation drills, light cardio) and check in after three sessions to see how it\u2019s going. Which weekday is easiest for you?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "Tuesday mornings at 7:00 AM are easiest for me. If that suits you, we could start next Tuesday by the studio entrance and I\u2019ll stick to the 30\u2011minute plan you suggested. Looking forward to it \u2014 and thanks for being flexible."
+    },
+    {
+      "turn": 5,
+      "speaker": "Sophia James",
+      "content": "Tuesday at 7:00 AM next week sounds great \u2014 I\u2019ll meet you by the studio entrance. I appreciate you sticking to the 30-minute plan; we\u2019ll do the dynamic mobility, activation drills, and light cardio we discussed and check in after three sessions. If you can arrive 5 minutes early so we can start promptly, that\u2019d be perfect. Looking forward to it!"
+    },
+    {
+      "turn": 6,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

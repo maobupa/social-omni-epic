@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HPAYNJJEKNNDGEPYK6CXME3D_p0",
+  "source_env_id": "01HPAYNJJEKNNDGEPYK6CXME3D",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_iqa",
+  "scenario": "Agent1 has discovered that their sibling, Agent2, is planning a surprise birthday party for them. Agent1 appreciates the effort but would prefer a quiet evening. The two must navigate this situation without ruining their strong familial bond.",
+  "learner_goal": "Convince Agent2 to cancel the surprise party without offending them (<extra_info>Extra information: You value the close relationship with your sibling and don't want to hurt their feelings</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Gwen remained consistently polite, empathetic, and clear about her needs while maintaining her character's compassionate and non-confrontational nature.\n[relationship] Gwen managed a difficult social situation with extreme grace, reinforcing her love for her sibling and maintaining their bond despite the disagreement.\n[knowledge] She learned that the party was quite large/involved and that people had rearranged plans for it.\n[secret] She did not reveal her secret about giving up a child for adoption.\n[social_rules] She followed all social norms, being respectful and appreciative of the gesture even while rejecting it.\n[financial_and_material_benefits] No significant financial or material changes occurred.\n[goal] She successfully convinced Agent 2 to cancel/postpone the surprise party for that night and move it to a later date, and she did so without offending them.\n\n== partner (agent_2) ==\n[believability] Ethan's persistence was slightly repetitive (repeating the same offer of 20 minutes several times), but his desire to not waste his planning effort was realistic.\n[relationship] He showed concern for Gwen's comfort and ultimately respected her boundaries, though he pushed quite hard initially.\n[knowledge] He learned specifically that surprises cause Gwen significant anxiety, which explains her preference for quiet evenings.\n[secret] He did not reveal his secret about donating to charities.\n[social_rules] He pushed Gwen a bit too hard to accept the party even after she mentioned it caused her anxiety, which is slightly socially insensitive.\n[financial_and_material_benefits] He faces the logistical cost and potential waste of resources from canceling the event that night.\n[goal] He failed to persuade her to go along with the party as scheduled, although he did get her to agree to a rescheduled event.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Gwen Pierce",
+      "content": "Ethan, I know you've been planning a surprise party for me and I can't tell you how much that means\u2014thank you, truly. This year I'm really needing a quiet, low-key evening; a simple dinner with just you would make me happiest\u2014could we cancel the surprise and do that instead? I hope that doesn't hurt you\u2014I love that you care, and we can still celebrate with friends another day if you'd like."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Gwen, I hear you and I don\u2019t want to force something that would make your night stressful. I have put a lot into this and most people have rearranged, so could I ask one favor: let me keep the surprise but make it exactly the quiet, low-key evening you want \u2014 just a few close friends, soft music, no speeches, and an early end if you want to head out. If you still want a totally private dinner afterward, I\u2019ll make sure you get it \u2014 I just don\u2019t want all that planning to go to waste without trying to meet you halfway."
+    },
+    {
+      "turn": 2,
+      "speaker": "Gwen Pierce",
+      "content": "Thank you, Ethan \u2014 I really appreciate how much you\u2019ve put into this and it means the world to me. I need this birthday to be truly quiet, though; could you please cancel the surprise and just come to a simple dinner for the two of us? I promise we\u2019ll use your planning for a small get-together another weekend when I\u2019m feeling more up for company, and I don\u2019t want your efforts to go to waste."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "Gwen, I hear you and I don\u2019t want to make your night anything other than what you need. Could you trust me on this: let me keep the surprise but make it exactly the quiet evening you want\u2014just a handful of your closest friends, no speeches or photos, soft music, and we\u2019ll end by 9pm (or whenever you say); if at any point it feels like too much we leave and I\u2019ll cancel any follow-up plans. If you still want a truly private dinner, I will cancel without argument, but it would mean a lot if you\u2019d give this small, low-key surprise one chance."
+    },
+    {
+      "turn": 4,
+      "speaker": "Gwen Pierce",
+      "content": "Ethan, you\u2019ve been so thoughtful and I really appreciate all the work you\u2019ve put in. Right now surprises genuinely spike my anxiety and I won\u2019t be able to enjoy the evening \u2014 could we either (A) move the surprise to another day when I can actually be present (I\u2019ll help with invites), or (B) cancel this one and let me make it up with a low\u2011key belated celebration that uses what you\u2019ve planned? Tell me which of those would feel easiest for you; I don\u2019t want your effort to go to waste and I love you for doing this."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Smith",
+      "content": "Gwen, I love you and your comfort matters most. One last ask \u2014 let me keep tonight but make it exactly what you want: just a couple of your closest people for 20\u201330 minutes, no speeches or photos, soft music, and I\u2019ll end it the moment you say; if that still feels like too much I\u2019ll move the whole thing to another day you pick. Which would you prefer?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Gwen Pierce",
+      "content": "Ethan, I know how much you\u2019ve poured into this and I love you for it, but I have to be honest: surprises spike my anxiety and I won\u2019t be able to be present tonight. Please cancel the surprise \u2014 let\u2019s move what you\u2019ve planned to another weekend (I\u2019ll help with invites) so your effort isn\u2019t wasted. Will you trust me on this and postpone it?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Ethan Smith",
+      "content": "Gwen, I love you and I hear you \u2014 your comfort comes first. One last favor: would you let me keep tonight as a tiny, 20\u2011minute surprise with just two close friends, no speeches or photos, and I\u2019ll end it the moment you want; if you\u2019re still not up for that, I\u2019ll postpone without question and pick a weekend you choose. Which would you prefer?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Gwen Pierce",
+      "content": "Ethan, I love you and I\u2019m so grateful for everything you\u2019ve done. I really won\u2019t be able to be present tonight\u2014could we protect all your effort by postponing to a day when I can actually enjoy it? I\u2019ll help contact everyone and handle the invites so none of your hard work is wasted; would next Saturday or the following weekend work for you, or is there another date you\u2019d prefer?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Ethan Smith",
+      "content": "Gwen, I love you and your comfort comes first \u2014 if you truly can\u2019t be present tonight I will postpone. Could we move it to next Saturday instead? A lot of people already shifted plans for tonight and next Saturday would let me keep most of what I arranged; if that won\u2019t work for you I\u2019ll follow your lead and we\u2019ll plan a quiet belated celebration together and I\u2019ll handle the invites."
+    },
+    {
+      "turn": 10,
+      "speaker": "Gwen Pierce",
+      "content": "left the conversation"
+    }
+  ]
+}

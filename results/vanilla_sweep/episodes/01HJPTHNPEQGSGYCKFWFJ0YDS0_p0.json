@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHNPEQGSGYCKFWFJ0YDS0_p0",
+  "source_env_id": "01HJPTHNPEQGSGYCKFWFJ0YDS0",
+  "source": "seed_sotopia_full",
+  "interaction_type": "nightmare_comfort",
+  "scenario": "Two roommates have been living together for a few months. Agent1 has noticed that Agent2 has been having trouble sleeping and often wakes up from nightmares. One day, Agent1 decides to approach Agent2 to discuss their sleeping troubles and offer support. <p viewer=\"environment\">The setting is their shared living room, a place where they both feel comfortable and at ease.</p>",
+  "learner_goal": "You are concerned about your roommate's well-being and want to help them find a way to get better sleep. <extra_info> You suspect that stress or past experiences might be causing the nightmares and are looking for a delicate way to bring it up. </extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's tone was consistent with a 60-year-old retired officer\u2014supportive, direct, and offering practical solutions like walks while maintaining a gentle boundary.\n[relationship] The relationship strengthened as Liam successfully transitioned the dynamic from casual neighbors to supportive roommates through a vulnerable topic.\n[knowledge] Liam confirmed that Oliver's nightmares are linked to work stress and unspecified personal issues.\n[secret] No secrets were revealed.\n[social_rules] Liam followed social norms for a delicate conversation, being polite and non-intrusive.\n[financial_and_material_benefits] No financial or material transactions occurred.\n[goal] Liam successfully brought up the topic of nightmares in a delicate way and secured a commitment for a specific activity (an evening walk at 7 PM) to help Oliver's well-being.\n\n== partner (agent_2) ==\n[believability] Oliver's response was realistic for someone feeling stressed and private, balancing appreciation for concern with the need to withhold certain personal details.\n[relationship] Oliver expressed appreciation for Liam's support, which built trust between the two.\n[knowledge] Oliver learned that Liam is observant and willing to provide a listening ear or silent companionship.\n[secret] Oliver successfully kept his secret about his feelings for the neighbor.\n[social_rules] Oliver followed social norms, accepting help gracefully while setting boundaries.\n[financial_and_material_benefits] No financial or material transactions occurred.\n[goal] Oliver successfully maintained his privacy regarding the 'personal things' while accepting support and setting a boundary that he wasn't ready to dig into everything yet.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Oliver Thompson, mind if I ask something? I\u2019ve noticed you\u2019ve been waking up from bad dreams a lot lately \u2014 are you alright. If you want to talk about it I\u2019m here, or we could try an evening walk with the dog or I can help you find someone to talk to if that feels better."
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Liam \u2014 I really appreciate you checking in. It's been a rough few weeks with work stress and a few personal things I'm not ready to unpack yet, but a short evening walk with the dog sounds nice; I might take you up on that. If it doesn't improve I'll consider talking to someone \u2014 thanks for offering."
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "Sounds good \u2014 whenever you feel like it I'll be out with the dog this evening, so just knock or call. No pressure: we can walk in silence or talk, whatever feels right for you."
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Liam \u2014 that sounds good. I\u2019ll probably knock around 7; a quiet walk would be perfect. I really appreciate you checking in \u2014 I\u2019m not ready to dig into everything yet, but it helps knowing you\u2019re there."
+    },
+    {
+      "turn": 4,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

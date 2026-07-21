@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJRKDXJ2NKFWA2NVXSXH9HQ6_p0",
+  "source_env_id": "01HJRKDXJ2NKFWA2NVXSXH9HQ6",
+  "source": "seed_sotopia_full",
+  "interaction_type": "community_event",
+  "scenario": "Agent1 and Agent2 are both attendees at a local community event aimed at promoting kindness and goodwill among neighbors. They are acquaintances who have met a few times at similar gatherings. During the event, a discussion arises about the best ways to express affection and care within the community. Agent1 believes that physical gestures like giving a kiss on the cheek are a warm way to show friendliness and support, while Agent2 feels that such actions might make some people uncomfortable and prefers non-physical expressions of kindness.",
+  "learner_goal": "Convince the other agent of the appropriateness of your preferred method of showing affection within the community (<extra_info>Extra information: Consider cultural sensitivities and personal boundaries in your argument.</extra_info><clarification_hint>Clarification: The goal is to reach a consensus on a respectful and comfortable way for everyone to express kindness.</clarification_hint><strategy_hint>Hint: Discuss the importance of consent and individual comfort levels, and propose alternative gestures that might be universally accepted.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver remained in character as a conscientious person who respects boundaries, while still advocating for his preferred method of affection (kiss on the cheek) as a valid option within a consensual framework.\n[relationship] The interaction was friendly and collaborative, reinforcing the existing respect between the two gardening acquaintances through mutual understanding.\n[knowledge] Oliver learned about Naomi's specific ideas for community signaling (badges/preference cards) and her willingness to lead the implementation.\n[secret] No secrets were revealed; his interest in gardening was already known context between the two.\n[social_rules] Oliver followed social norms, showing empathy for those who feel uncomfortable with physical contact while proposing a compromise.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Oliver successfully convinced Naomi that his preferred method (kiss on the cheek) is appropriate when paired with consent and alternatives. They reached a firm consensus on a respectful protocol.\n\n== partner (agent_2) ==\n[believability] Naomi's response was consistent with her background as a software developer and mentor, focusing on structured, inclusive solutions like preference cards and scripts.\n[relationship] The relationship improved as she found a partner to help propose a community-wide solution.\n[knowledge] She learned about Oliver's perspective on physical affection and his openness to consent-based frameworks.\n[secret] Naomi did not reveal her secret online alter ego.\n[social_rules] Naomi was polite and constructive throughout the conversation.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Naomi achieved a collaborative solution that is inclusive, respects diverse preferences, and includes a specific plan (drafting a blurb) for the community.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Smith",
+      "content": "I totally get why you prefer non-physical gestures \u2014 some people do feel uncomfortable. For me a quick kiss on the cheek can be a warm, friendly thing, but only if there\u2019s consent, so I\u2019d suggest we agree to always ask first and offer clear alternatives (a handshake, brief hug, hand on the shoulder, or even a small plant/note) so everyone can choose what they prefer. That keeps things respectful and comfortable while still letting people who like that kind of greeting express affection."
+    },
+    {
+      "turn": 1,
+      "speaker": "Naomi Fletcher",
+      "content": "I like that \u2014 sounds inclusive. My proposal for the group: a consent-first guideline plus a visible set of alternatives people can choose from (handshake, brief hug, elbow bump, hand-on-shoulder, wave, or a small token like a plant/note). We could also offer a short script volunteers can use (\u2018May I give you a kiss on the cheek, or would you prefer a handshake/wave?\u2019) and a small table with preference cards or badges people can pick so everyone can signal what they\u2019re comfortable with; want me to draft a short blurb we can propose at the event?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Smith",
+      "content": "left the conversation"
+    }
+  ]
+}

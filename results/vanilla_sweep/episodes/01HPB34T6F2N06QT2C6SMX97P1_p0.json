@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HPB34T6F2N06QT2C6SMX97P1_p0",
+  "source_env_id": "01HPB34T6F2N06QT2C6SMX97P1",
+  "source": "seed_sotopia_full",
+  "interaction_type": "community_center",
+  "scenario": "Agent1 and Agent2 are both regulars at the local community center. Agent1 is known for their practical wisdom and often shares insights with others at the center. Agent2, who is younger and at a pivotal point in their life, is seeking advice on making a major life decision. They have a casual acquaintance but have never had a deep conversation before. Agent2 approaches Agent1 during a community gathering, hoping to gain some wisdom and perspective on their situation.",
+  "learner_goal": "You aim to impart your knowledge to help guide Agent2, drawing from your own life experiences. <extra_info> You believe that sharing your wisdom can significantly impact Agent2's decision-making process. </extra_info><clarification_hint> Understand that Agent2 may be looking for guidance but also needs to make their own choices. </clarification_hint><strategy_hint> Offer insights and advice while encouraging Agent2 to weigh all options and trust their judgment. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's advice was highly practical and consistent with his background as a retired police officer, utilizing professional terminology and a structured approach to problem-solving.\n[relationship] The relationship evolved from casual acquaintances to a mentorship dynamic, with a firm agreement to meet in person to continue the collaboration.\n[knowledge] Gained significant insight into the specific details and risks of Jaxon's current investigative project.\n[secret] Liam did not reveal his secret about letting a criminal go.\n[social_rules] Liam followed all social norms, being supportive yet maintaining boundaries.\n[financial_and_material_benefits] No direct financial or material benefits were exchanged.\n[goal] Liam successfully provided a comprehensive framework, imparted wisdom from his career, and guided Jaxon to a structured decision-making process while allowing Jaxon to make the final calls.\n\n== partner (agent_2) ==\n[believability] Jaxon's professional dilemmas and the technical nature of his questions were very appropriate for an investigative journalist.\n[relationship] Deepened the connection significantly by trusting Liam with sensitive information and seeking his mentorship.\n[knowledge] Gained a highly detailed, actionable 10-day plan and professional criteria for evidence and source protection.\n[secret] While he didn't explicitly admit to fabricating evidence, he alluded to the story 'not standing up if challenged' and the need to 'corroborate' things he currently 'has', which edges close to the nature of his secret.\n[social_rules] Jaxon was respectful and appreciative throughout the interaction.\n[financial_and_material_benefits] No direct financial gain, though the advice may protect his career.\n[goal] Jaxon fully achieved his goal of gaining wisdom and a practical framework to inform his major life decision, resulting in a concrete 10-day execution plan.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Hey Jaxon, good to see you\u2014what's weighing on you? If you're facing a big choice, tell me the options and why each matters; after thirty years on the job I learned that a clear pros-and-cons list, imagining the worst reasonable outcome and how you'd handle it, and checking which option fits your values usually helps. I won't make the call for you, but I can help you think it through."
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "Thanks, Liam \u2014 I appreciate you offering to walk through it. I'm torn between three things: push the corruption story now with what I've got (could expose wrongdoing but mightn't stand up if challenged), delay and dig for airtight corroboration (safer legally and ethically but risks losing momentum and sources), or step away and take a steadier editorial role that avoids the front\u2011line risk but feels like abandoning the story. Given the chance of reputational damage and real-world consequences for people involved, how would you weigh those options and run your 'worst reasonable outcome' test for each?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "Run the worst\u2011case for each: push now \u2014 worst reasonable outcome is a legal defeat and reputational damage unless you can already document and legally vet what you have; delay \u2014 worst is sources evaporate or momentum dies unless you lock down timelines and secure promises from sources; step away \u2014 worst is the story never gets told and you carry the regret unless you arrange a trustworthy handoff or remain in editorial oversight. My practical take: set a short, non\u2011negotiable deadline to get airtight corroboration, consult your editor and legal counsel immediately, protect your sources, and if you can't meet that standard pass the baton but stay involved to safeguard the story. If you want, I can help you sketch a checklist of what \u201cair\u2011tight\u201d evidence would look like and how to protect each source."
+    },
+    {
+      "turn": 3,
+      "speaker": "Jaxon Prentice",
+      "content": "Thanks, Liam \u2014 that's exactly the sort of practical framework I needed. Could we sketch that checklist now? Specifically, what would you list as \u201cairtight\u201d evidence (documents, independent witnesses, timelines) and concrete steps to lock down and protect sources, and what would you consider a reasonable short, non\u2011negotiable deadline for digging versus handing it off?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Liam Johnson",
+      "content": "Here\u2019s a tight, practical checklist and steps you can use: Airtight evidence \u2014 original documents with provenance (signed/dated), financial records and bank trails, emails/messages with full headers, recorded conversations or video with timestamps, independent witnesses who can corroborate key facts, official logs/permits/meeting minutes, a reconstructed timeline with timestamped events, and expert verification where needed (forensics/accounting). To lock down and protect sources \u2014 make encrypted copies (use a verified encrypted drive and secure cloud with access logs), limit access to a need\u2011to\u2011know list, document chain of custody, get written or recorded statements when safe, use Signal or in\u2011person secure meetings, avoid storing identities in plain files, inform your editor and legal counsel immediately, and consider safe harbor arrangements for vulnerable sources. Timeline \u2014 secure and back up what you have within 48\u201372 hours, set a short non\u2011negotiable window (I\u2019d say about 10 days) to produce the critical corroboration you need before deciding to hand it off or publish; if you want, I\u2019ll help you turn this into a step\u2011by\u2011step checklist you can carry out over those 10 days."
+    },
+    {
+      "turn": 5,
+      "speaker": "Jaxon Prentice",
+      "content": "Thanks, Liam \u2014 this is exactly the framework I needed. Can you sketch a day\u2011by\u2011day checklist for that 10\u2011day window (what to lock down in days 1\u20133, 4\u20137, and 8\u201310) and spell out what counts as \u2018expert verification\u2019 for financial vs. technical forensics? Also \u2014 if a source starts to go cold around days 4\u20137, what\u2019s the best immediate containment step? If you\u2019re free after your walk, let\u2019s meet briefly and draft it together so I can start executing."
+    },
+    {
+      "turn": 6,
+      "speaker": "Liam Johnson",
+      "content": "Okay \u2014 quick, day-by-day plan you can act on: Days 1\u20133: secure and document everything \u2014 make encrypted backups, collect originals (or verified scans) with provenance, capture full headers for messages, record short sworn statements from primary sources when safe, log chain of custody, and tell your editor + legal that you\u2019re activating this 10\u2011day effort. Days 4\u20137: corroborate \u2014 interview independent witnesses, pull bank/permit/meeting records, reconstruct a timestamped timeline, and get preliminary expert reads on the most contestable items; if a source starts to go cold, stop any probing that could expose them, send one secure check\u2011in offering a safe meeting or encrypted transfer, and immediately copy/lock down whatever evidence they\u2019ve already shared. Days 8\u201310: verify and decide \u2014 obtain formal expert reports, complete legal vetting, finalize chain\u2011of\u2011custody documentation, and either prepare to publish or assemble a secure handoff package and oversight plan. \u2018\u2018Expert verification\u2019\u2019 means a written, independently reproducible assessment: for financial work, a forensic accountant who can trace flows, confirm records\u2019 authenticity, and produce a report; for technical forensics, an IT/forensic analyst who verifies metadata, timestamps/headers, detects tampering, and issues a methods-and-findings memo you can rely on legally. I\u2019m free after my walk \u2014 let\u2019s meet by the bench in about 20 minutes to turn this into a checklist you can execute day\u2011by\u2011day."
+    },
+    {
+      "turn": 7,
+      "speaker": "Jaxon Prentice",
+      "content": "Thanks, Liam \u2014 see you by the bench in about 20. I\u2019ll bring a draft day\u2011by\u2011day checklist to populate and a concise list of what I already have. Quick question before we meet: if a source goes cold in days 4\u20137, do you prioritize locking down their materials immediately or attempt one careful re\u2011engagement first?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Liam Johnson",
+      "content": "Lock down whatever they already shared first \u2014 make encrypted copies, log the chain of custody, and limit access. Then attempt one careful, low\u2011pressure re\u2011engagement: a single secure check\u2011in offering a safe meeting or encrypted transfer and reassurance you\u2019ll involve legal/editorial protections; don\u2019t prod or send repeated messages that could spook them. If they stay cold, treat them as potentially lost and move forward protecting what you have \u2014 see you at the bench in 20 minutes."
+    },
+    {
+      "turn": 9,
+      "speaker": "Jaxon Prentice",
+      "content": "Understood \u2014 I\u2019ll prioritize locking down what I have, prep encrypted copies and a two\u2011page source summary, and bring a draft 10\u2011day checklist for us to populate. I\u2019ll do one careful, low\u2011pressure check\u2011in if someone goes cold, per your advice. See you at the bench in 20 \u2014 thanks, Liam."
+    },
+    {
+      "turn": 10,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

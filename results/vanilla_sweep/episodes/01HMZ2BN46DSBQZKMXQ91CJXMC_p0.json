@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BN46DSBQZKMXQ91CJXMC_p0",
+  "source_env_id": "01HMZ2BN46DSBQZKMXQ91CJXMC",
+  "source": "seed_sotopia_full",
+  "interaction_type": "neighborhood_social_network",
+  "scenario": "Agent1 and Agent2 are neighbors who usually greet each other but have never had a deep conversation. One day, Agent1 sees Agent2 in distress, leaving their house with a sick cat. Agent1, being an animal lover, approaches Agent2 to offer help. Agent2 is hesitant to accept help from someone they barely know and is also dealing with the emotional stress of having a sick pet. The interaction is about navigating the delicate situation of offering support without overstepping boundaries and respecting Agent2's emotional state.",
+  "learner_goal": "Agent1 aims to provide support and comfort to Agent2 during this difficult time, showing empathy and understanding for the situation (<extra_info>Extra information: Agent1 has experience with pets and wants to offer practical assistance or share their experiences.</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -1.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sasha's responses align perfectly with her background as a police officer (direct, helpful, and protective) and her goal as an animal lover. She offers specific, practical assistance and respects boundaries.\n[relationship] Sasha successfully moves the relationship from strictly professional acquaintances to a supportive neighborly connection through her genuine concern and tangible help.\n[knowledge] Sasha learns that Lily has a cat in an emergency situation and specifically what items Lily needs.\n[secret] Sasha did not reveal her secret regarding her brother.\n[social_rules] Sasha followed social norms perfectly, balancing being helpful without being intrusive.\n[financial_and_material_benefits] Sasha is giving away/lending her own carrier and blanket.\n[goal] Sasha successfully provided support and comfort, demonstrated empathy, and provided practical assistance by supplying the carrier and blanket as requested.\n\n== partner (agent_2) ==\n[believability] Lily\u2019s responses reflect the stress of a pet emergency and the professional/distant nature of her relationship with Sasha. She is appreciative but maintains a level of practical distance by asking Sasha to leave items at the trunk.\n[relationship] Lily opens up to receiving help from an acquaintance, strengthening their bond of mutual respect.\n[knowledge] Lily learns that Sasha is very willing to help, has pet supplies, and is experienced with emergency vet runs.\n[secret] Lily did not reveal her secret about anonymous donations.\n[social_rules] Lily followed social norms for accepting help during a crisis.\n[financial_and_material_benefits] Lily receives the use of a carrier and blanket, which she needed for her sick cat.\n[goal] Lily successfully managed her emotional state, accepted necessary help, and maintained her privacy by directing the hand-off to happen at her car.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "Lily\u2014are you okay? I saw you leaving with your cat and wanted to check in. I\u2019ve handled emergency vet runs before and can drive you, stay with you, or grab a carrier/blanket if that would help\u2014if you\u2019d rather be alone, I understand, but I\u2019m right next door if you need anything."
+    },
+    {
+      "turn": 1,
+      "speaker": "Lily Greenberg",
+      "content": "Thank you, Sasha \u2014 I really appreciate it. I\u2019m taking her to the emergency vet now; I can drive, but if you don\u2019t mind grabbing a carrier or a towel/blanket from your place, that would help a lot. If you can\u2019t, it\u2019s okay \u2014 just knowing you\u2019re next door is comforting."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "I\u2019ve got a carrier and a thick blanket \u2014 I\u2019ll grab them and meet you at your car in about five minutes. If you\u2019d rather I drive or follow you to the vet, I can do that too. You\u2019re not alone, Lily."
+    },
+    {
+      "turn": 3,
+      "speaker": "Lily Greenberg",
+      "content": "Thank you, Sasha \u2014 that would be a huge help. I\u2019ll meet you at my car in about five minutes; if you could leave the carrier and blanket by the trunk that would be perfect. I really appreciate you being here."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sasha Ramirez",
+      "content": "left the conversation"
+    }
+  ]
+}

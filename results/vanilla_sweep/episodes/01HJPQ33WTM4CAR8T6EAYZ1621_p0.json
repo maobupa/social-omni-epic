@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HJPQ33WTM4CAR8T6EAYZ1621_p0",
+  "source_env_id": "01HJPQ33WTM4CAR8T6EAYZ1621",
+  "source": "seed_sotopia_full",
+  "interaction_type": "hand-craft",
+  "scenario": "Agent1 and Agent2, who are roommates, are cleaning their shared apartment when Agent1 realizes they have misplaced a valuable family heirloom. Agent1 is distressed and hopes to find it with Agent2's help. Despite their busy schedules, they both decide to search the apartment thoroughly.",
+  "learner_goal": "To find the misplaced family heirloom with the help of Agent2, while ensuring not to disrupt the existing harmony and respect in the shared living space (<extra_info>Consider the heirloom has sentimental value and is irreplaceable</extra_info>, <clarification_hint>Explain the significance of the heirloom to Agent2 to elicit empathy and assistance</clarification_hint>, <strategy_hint>Offer to help Agent2 with a future task in return for their help in searching</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo consistently portrayed a distressed parent and roommate, providing specific details about the heirloom and his daughter that aligned with his persona as a cherishing father.\n[relationship] The interaction significantly strengthened the bond between these acquaintances. Leo was vulnerable and appreciative, and Hendrick was exceptionally helpful and accommodating.\n[knowledge] Leo learned that Hendrick is willing to go above and beyond his initial time constraints to help, and identified several locations where the heirloom definitely is not.\n[secret] Leo did not reveal his secret about the child from a previous relationship; his mentions of his daughter refer to his known family life.\n[social_rules] Leo followed all social norms, being polite, apologetic for the disruption, and offering fair compensation for the help.\n[financial_and_material_benefits] No material gain or loss occurred as the item was not found during the dialogue.\n[goal] Leo successfully elicited empathy by explaining the locket's significance and offered future help. However, the locket was not actually found by the end of the interaction, and finding it was a primary component of his goal.\n\n== partner (agent_2) ==\n[believability] Hendrick's systematic approach to searching reflected his professional background as a chef who likely values organization and efficiency.\n[relationship] Hendrick demonstrated he is a reliable and supportive roommate, moving the relationship from acquaintances toward a friendship.\n[knowledge] Hendrick gained specific knowledge about the locket's appearance, the family history, and the layout/contents of various areas of the shared apartment.\n[secret] Hendrick's secret about his faked credentials was never mentioned or hinted at.\n[social_rules] Hendrick was helpful and communicative, adhering to expectations of roommate cooperation.\n[financial_and_material_benefits] Leo repeatedly promised to pay for groceries and take over chores, which provides a future material benefit to Hendrick.\n[goal] Hendrick successfully assisted in the search, implemented a systemized approach, asked for specific details, and remained mindful of his time constraints (though he extended them slightly).",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hey Hendrick, sorry to stop you while we\u2019re cleaning, but I think I\u2019ve misplaced a family heirloom \u2014 my late mother\u2019s locket that was meant for my daughter. It\u2019s really important to me and irreplaceable, so I\u2019d appreciate your help checking the living room and bedroom quickly. I owe you one \u2014 I can take care of next week\u2019s groceries or help with anything you need in return."
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "I'm really sorry \u2014 let's find it. Quick question before we start: where did you last have the locket and what places have you already checked? I can spare about 20\u201330 minutes now; suggest we split up \u2014 I'll take the living room (cushions, under furniture, shelves, coat pockets) and you check the bedroom (nightstands, laundry, drawers, bags) and we regroup in 20 minutes to compare notes. Sound good?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "Thanks, that plan works. I last had it in the bedroom \u2014 I was packing my daughter\u2019s bag and set the locket on the dresser; I\u2019ve already checked the dresser top and her backpack but haven\u2019t emptied the nightstand drawers, laundry basket, or my coat pockets. I\u2019ll take those now and meet you in 20 minutes; I really appreciate this \u2014 it\u2019s my late mother\u2019s locket meant for my daughter, so it\u2019s irreplaceable, and I owe you one (I can grab next week\u2019s groceries or help with anything you need)."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "Got it \u2014 I'll take the living room and search systematically (left-to-right: couch cushions, between and under furniture, behind/under shelves, inside any bags or coat pockets, under rugs). If you can empty the nightstand drawers and check laundry and shoe pockets, that should cover the likely spots. Meet back in 20 minutes \u2014 we'll find it."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "Thanks, Hendrick \u2014 I really appreciate it. The nightstand has two drawers (top one sometimes has small jewelry), the laundry basket is by the dresser, and my coat pockets are in the hallway closet \u2014 be careful when lifting the couch cushions and under the rug. I\u2019ll meet you in 20 minutes; it\u2019s my late mother\u2019s locket that I want to give to my daughter, so it means a lot, and I owe you groceries next week or whatever you need."
+    },
+    {
+      "turn": 5,
+      "speaker": "Hendrick Heinz",
+      "content": "Okay \u2014 I\u2019ll be careful with the cushions and rugs and check under/behind the furniture, shelves, and any bags or coat pockets. If I find anything I\u2019ll call out immediately; meet you back here in 20 minutes. We\u2019ll find it."
+    },
+    {
+      "turn": 6,
+      "speaker": "Leo Williams",
+      "content": "On it \u2014 I\u2019ll empty both nightstand drawers, sort through the laundry basket and check the coat pockets in the hallway closet. Could you double-check inside any bags, under/behind the couch base, and beneath the rug? Call out if you see anything and I\u2019ll meet you back here in 20 minutes \u2014 I really appreciate you helping me with this."
+    },
+    {
+      "turn": 7,
+      "speaker": "Hendrick Heinz",
+      "content": "On it \u2014 I\u2019ll check all bags, between and under the couch base, under the rug, behind the shelves, and any coat pockets I come across. Quick question: does the locket have a chain or any distinctive marks (size, color) so I can spot it more quickly? I\u2019ll call out immediately if I find anything; see you in about 20 minutes."
+    },
+    {
+      "turn": 8,
+      "speaker": "Leo Williams",
+      "content": "Thanks \u2014 it\u2019s a small silver heart-shaped locket, about 2 cm across, on a thin silver chain (around 18 inches), with my mother\u2019s initials \u201cM.W.\u201d engraved on the back and a tiny photo inside. If it\u2019s in a crevice or a coat pocket it should glint \u2014 call out if you see any silver or a little heart shape. I really appreciate you helping; I\u2019ll grab next week\u2019s groceries for you as promised."
+    },
+    {
+      "turn": 9,
+      "speaker": "Hendrick Heinz",
+      "content": "Got it \u2014 small silver heart locket (~2 cm) on a thin chain with \u201cM.W.\u201d engraved. That helps a lot. I\u2019ll start searching the living room now (cushions, under/behind couch, bags, coat pockets, under the rug) and I\u2019ll call out immediately if I spot any silver; I\u2019ve got about 20\u201330 minutes and will meet you back here in 20."
+    },
+    {
+      "turn": 10,
+      "speaker": "Leo Williams",
+      "content": "Thanks, Hendrick \u2014 I\u2019m heading to the bedroom now to empty the nightstand drawers, go through the laundry basket, and check the hallway coat pockets. Please call out if you spot any silver; I\u2019ll meet you back here in 20 minutes. I really appreciate you helping \u2014 it means a lot."
+    },
+    {
+      "turn": 11,
+      "speaker": "Hendrick Heinz",
+      "content": "Quick update \u2014 I\u2019ve checked the couch cushions, under and behind the couch, under the rug, and inside the bags/coat pockets but haven\u2019t found the locket. I did see a silver button that glinted but it wasn\u2019t it. How\u2019s the bedroom search going? I can spare another 10 minutes if you want me to expand to the kitchen, laundry machine, or shoes \u2014 any other spots you want me to hit next?"
+    },
+    {
+      "turn": 12,
+      "speaker": "Leo Williams",
+      "content": "Quick update \u2014 I emptied both nightstand drawers and sorted the laundry basket but still nothing. Could you expand to the kitchen (countertop, under the sink), check inside the washer/dryer and any shoes by the door, and look through any tote bags or the backpack in the hall? It\u2019s my late mother\u2019s locket that I\u2019m saving for my daughter, so I really appreciate you helping \u2014 I\u2019ll cover a chore for you this week in return."
+    },
+    {
+      "turn": 13,
+      "speaker": "Hendrick Heinz",
+      "content": "Okay \u2014 I\u2019ll expand to the kitchen (countertop and under the sink), check inside the washer/dryer, shoes by the door, and go through any tote bags/backpack in the hall. I can spare another ~10 minutes and I\u2019ll also quickly check pockets of clothes in the laundry if you want. I\u2019ll call out immediately if I spot the silver heart \u2014 meet back in the living room if one of us finds it?"
+    },
+    {
+      "turn": 14,
+      "speaker": "Leo Williams",
+      "content": "Thanks, Hendrick \u2014 I really appreciate you expanding the search. Quick tip: use your phone flashlight to spot any glint under cushions or in shoes and check the dryer lint trap and inside pockets again. I\u2019ll check under the bed, the hallway coat hooks, and the backpack/tote in the hall; let\u2019s meet back in 10 minutes and if it\u2019s still missing we\u2019ll calmly retrace the last hour. This locket was my mother\u2019s and I\u2019d really like to get it to my daughter \u2014 thank you for helping."
+    },
+    {
+      "turn": 15,
+      "speaker": "Hendrick Heinz",
+      "content": "Good tip \u2014 I\u2019ll use my phone flashlight. I\u2019ll check the dryer lint trap, pockets of clothes, inside shoes, the tote/backpack in the hall, and the kitchen (countertop and under the sink). I\u2019ve got about 10 minutes more; I\u2019ll call out if I see any silver and meet you back here in 10 minutes \u2014 we\u2019ll find it."
+    },
+    {
+      "turn": 16,
+      "speaker": "Leo Williams",
+      "content": "Quick update: I checked under the bed, the hallway coat hooks, emptied the backpack/tote and went through my daughter\u2019s bag but still nothing. Could you, if you have a spare 10 minutes, check the car (under the seats and glovebox) and the entry trash bin \u2014 it might\u2019ve slipped when I was grabbing something? This locket was my mother\u2019s and means a lot to me, so I really appreciate you helping; I\u2019ll make it up to you with a chore or whatever you need this week."
+    },
+    {
+      "turn": 17,
+      "speaker": "Hendrick Heinz",
+      "content": "I can do that \u2014 I\u2019ll check the car (under the seats and glovebox) and the entry trash bin now. Where are the car keys\u2014should I grab them from the hallway hook or do you want to bring them? I\u2019ve got about 10 minutes; I\u2019ll call out if I spot any silver and meet you back here when I\u2019m done."
+    },
+    {
+      "turn": 18,
+      "speaker": "Leo Williams",
+      "content": "The car keys are on the hallway hook \u2014 go ahead and grab them. I really appreciate you doing this, Hendrick; I owe you one (I\u2019ll take care of next week\u2019s groceries or run an errand for you). Call out if you spot anything and I\u2019ll come help right away."
+    },
+    {
+      "turn": 19,
+      "speaker": "Hendrick Heinz",
+      "content": "Got it \u2014 I\u2019ll grab the keys from the hallway hook and check the car (under the seats and glovebox) and the entry trash bin now. I\u2019ve got about 10 minutes; I\u2019ll call out immediately if I spot any silver and come back here when I\u2019m done."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB34DPYRA21Y93B8ZAS8XE5_p0",
+  "source_env_id": "01HPB34DPYRA21Y93B8ZAS8XE5",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 has been tasked with hiring and training new employees for their department. Agent2 is one of the new hires who is eager to learn but has a different perspective on the training process. Agent1 believes in a structured, formal training program, while Agent2 feels that a hands-on, learn-as-you-go approach would be more beneficial. They need to discuss and agree upon the best way to proceed with the training.",
+  "learner_goal": "Convince Agent2 to appreciate the structured training program and its benefits for a solid foundation in their new role (<extra_info>Extra information: you believe that a well-organized training program is essential for understanding company policies and procedures, and you want to ensure that Agent2 starts off on the right foot.</extra_info>)",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 1.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan maintained his persona as a lighthouse keeper, using metaphors related to his profession to explain his preference for structure.\n[relationship] The exchange was respectful and they found common ground before the conversation ended abruptly.\n[knowledge] Finnegan learned that Isabella was willing to meet in the middle and had specific ideas for practical training.\n[secret] The secret regarding the cult was not mentioned.\n[social_rules] Leaving the conversation abruptly without responding to the final proposal is a breach of social etiquette.\n[financial_and_material_benefits] No material gains were made.\n[goal] Finnegan managed to get Isabella to appreciate the value of structure and agree to a foundational period, but he left before a final agreement was reached on the specifics of the interleaving.\n\n== partner (agent_2) ==\n[believability] Isabella's response was professional and aligned with her background as a veterinarian who values practical experience.\n[relationship] She was collaborative and constructive in her approach to Agent 1's concerns.\n[knowledge] She learned about Agent 1's rigid stance on the initial training block.\n[secret] The secret regarding the animals in her basement was kept.\n[social_rules] She followed all social norms during the interaction.\n[financial_and_material_benefits] No material gains were made.\n[goal] Isabella successfully proposed a compromise that integrated hands-on learning, but the conversation ended before she received a commitment from Agent 1.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "Isabella, I understand the appeal of learning as you go \u2014 I love painting by the sea but I follow a steady routine for the light because small, orderly steps keep people safe. A short, structured program will give you the policies and procedures so when you do jump in you'll know what to watch for; how about we do two weeks of organized training and then move straight into hands-on shadowing with a mentor? Would that balance feel workable to you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Isabella White",
+      "content": "I really like that balance \u2014 two weeks of structure followed by shadowing sounds workable. Could we tweak it so we interleave hands\u2011on from day two or three (short supervised practicals, simulation scenarios, and mini\u2011shifts) while keeping the formal policy sessions? That way trainees build confidence and retention with real\u2011world variability sooner, and I\u2019m happy to help design the practical exercises and debrief plan."
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

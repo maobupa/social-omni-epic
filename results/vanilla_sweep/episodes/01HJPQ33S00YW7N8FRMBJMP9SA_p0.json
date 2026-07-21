@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJPQ33S00YW7N8FRMBJMP9SA_p0",
+  "source_env_id": "01HJPQ33S00YW7N8FRMBJMP9SA",
+  "source": "seed_sotopia_full",
+  "interaction_type": "communal_shower_conflict",
+  "scenario": "In a shared living space, Agent1 and Agent2 both need to use the communal shower before heading out for important early morning appointments. The shower can only accommodate one person at a time, and there's a limited window in which both can get ready without being late. Agent1 has a job interview, while Agent2 is scheduled for an early flight.",
+  "learner_goal": "You are Agent1, and your goal is to use the shower first to ensure you are on time for your job interview. <extra_info>Your interview attire requires special preparation, and you can't risk being late.</extra_info> <clarification_hint>Explain the importance of the interview and your need to look presentable.</clarification_hint> <strategy_hint>You can negotiate a schedule or offer a favor in return for priority.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 3.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Micah stays in character as a 25-year-old extravert, using persuasive and energetic language while remaining persistent about his career goal.\n[relationship] Despite the conflict, they reached a compromise that involved mutual help (steaming the suit/rideshare), maintaining their acquaintance status.\n[knowledge] Micah learned about Noah's financial constraints, the non-refundable nature of his flight, and his willingness to perform domestic tasks in exchange for time.\n[secret] The secret about dressing up the dog was never mentioned.\n[social_rules] Micah followed social norms for negotiation and conflict resolution between roommates/acquaintances.\n[financial_and_material_benefits] Micah secured a free rideshare and labor (suit steaming and hair help) from Noah.\n[goal] Micah's primary goal was to use the shower first. He explicitly conceded this to Noah in the end, failing to achieve his main objective despite negotiating assistance.\n\n== partner (agent_2) ==\n[believability] Noah was a bit repetitive in his phrasing regarding the 'non-refundable flight' and 'losing the fare', but his persistence matched his cautious personality.\n[relationship] Noah secured his needs while offering significant help to Micah, preserving the relationship.\n[knowledge] Noah learned the importance of Micah's interview and his specific grooming requirements.\n[secret] Noah's secret identity as a stand-up comedian was not revealed.\n[social_rules] Noah remained polite but firm, consistent with social negotiation.\n[financial_and_material_benefits] Noah avoided losing the cost of his flight fare, though he incurred the cost of a rideshare for Micah.\n[goal] Noah successfully negotiated to use the shower first, which was his sole primary objective to ensure he made his flight.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Micah Stevens",
+      "content": "Hey Noah \u2014 quick request: I have a job interview at 8 and my outfit needs precise prep (suit steamed, hair done), so I really need the shower first to make it on time. Could you let me go ahead? I\u2019ll be super quick and I\u2019ll grab you a coffee and cover a cab to the airport so you don\u2019t miss your flight."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "I know the interview\u2019s important, but I\u2019ve already checked in and my flight is non\u2011refundable\u2014if I miss it I lose the fare and can\u2019t swing that. Could I go first? I\u2019ll be out in 8\u201310 minutes and I\u2019ll steam your suit and help with your hair right after so you still make it."
+    },
+    {
+      "turn": 2,
+      "speaker": "Micah Stevens",
+      "content": "I get it \u2014 don\u2019t want you to lose the fare. My interview\u2019s at 8 and I really need time to steam the suit and do my hair, but I can be in and out in about 7 minutes. If I go first I\u2019ll order a rideshare to be waiting, sort your boarding pass/check\u2011in and text you the second I\u2019m done so you can head straight out \u2014 can we do that so we both make it?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "I\u2019m really sorry \u2014 I can\u2019t risk missing this flight. I\u2019m already checked in and it\u2019s non\u2011refundable; if I miss it I\u2019d lose the fare and can\u2019t swing that. Can I go first? I\u2019ll be out in 8\u201310 minutes and I\u2019ll steam your suit and sort your hair and rideshare right after so you still make your interview."
+    },
+    {
+      "turn": 4,
+      "speaker": "Micah Stevens",
+      "content": "I totally get you can\u2019t lose the fare, but this interview could really shape my career in pharmacy \u2014 I need to be first for a focused 7\u2011minute shower and to steam my suit properly. Is there anywhere else you can freshen up for 10 minutes (gym, quick sink rinse) so I can be done fast? If not, tell me what will absolutely get you to your flight and I\u2019ll figure an alternative right away."
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "I\u2019m really sorry, but I can\u2019t risk missing this flight \u2014 I\u2019m already checked in and it\u2019s non\u2011refundable; losing the fare would wipe me out. Please let me take the shower first \u2014 I\u2019ll be out in 8 minutes, then I\u2019ll steam your suit, sort your hair and order a rideshare so you still make the interview. I\u2019ll cover your cab if that helps."
+    },
+    {
+      "turn": 6,
+      "speaker": "Micah Stevens",
+      "content": "Look, this interview could really shape my career \u2014 I can\u2019t risk being late. If you absolutely must go first, can you promise to be out in exactly 8 minutes, steam my suit immediately and text me the second you\u2019re done so I can sprint to the interview? If you can\u2019t make that exact commitment, I have to go first."
+    },
+    {
+      "turn": 7,
+      "speaker": "Noah Davis",
+      "content": "I promise I\u2019ll be out in exactly 8 minutes \u2014 I\u2019ll steam your suit and sort your hair the second I step out and I\u2019ll text you the instant I\u2019m done. I really can\u2019t afford to miss this non\u2011refundable flight (I\u2019d lose the fare), so please let me go first; I\u2019ll also order and cover your rideshare."
+    },
+    {
+      "turn": 8,
+      "speaker": "Micah Stevens",
+      "content": "left the conversation"
+    }
+  ]
+}

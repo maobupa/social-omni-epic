@@ -1,0 +1,93 @@
+{
+  "scenario_id": "01H7VFHNKVTCAGBA299VQG1QS2_p0",
+  "source_env_id": "01H7VFHNKVTCAGBA299VQG1QS2",
+  "source": "seed_sotopia",
+  "interaction_type": "social_iqa",
+  "scenario": "Conversation between two friends at a trivia night",
+  "learner_goal": "Get the answer for the trivia question from the friend (<extra_info>Extra information: your friend knows the answer to the trivia question but hasn't shared it with you yet</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 15,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi consistently pushes for the answer using various negotiation tactics like offering coffee, code reviews, and pair-programming, which fits her persona as a software developer and mentor.\n[relationship] The interaction remains friendly and playful despite the pestering, and she offers professional value (code review/pair-programming) which could strengthen their acquaintance.\n[knowledge] Through her questions, she narrows down the logic of the trivia question significantly and forces a binary 'yes/no' situation regarding the specific answer.\n[secret] Naomi did not reveal her secret online alter ego.\n[social_rules] She followed social norms for a casual trivia night between acquaintances.\n[financial_and_material_benefits] She has committed to providing coffee and professional services (pair-programming/code review) in exchange for the answer.\n[goal] Naomi successfully trapped Lena into a confirmation/denial game, but Lena left the conversation before providing the final 'yes' or 'no' response. While she gained significant clues, the literal answer was not explicitly confirmed.\n\n== partner (agent_2) ==\n[believability] Lena's insistence on the educational value of working it out fits her character as an architect/professional. However, leaving the conversation abruptly after agreeing to the 'yes/no' game was slightly jarring.\n[relationship] The relationship remained stable, though leaving abruptly might be seen as slightly dismissive.\n[knowledge] She learns about Naomi's willingness to trade professional labor for trivia answers.\n[secret] Lena did not reveal her secret about her best friend's boyfriend.\n[social_rules] Abruptly leaving the conversation after agreeing to answer 'yes' or 'no' is a minor social faux pas.\n[financial_and_material_benefits] She secured a promise of coffee and potentially professional services, though the fulfillment is contingent on Naomi being correct.\n[goal] Lena successfully avoided explicitly stating the answer herself throughout the dialogue. Although she agreed to a yes/no confirmation, she exited before actually providing the confirmation.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Lena \u2014 you looked like you knew this one. Mind telling me the answer? I\u2019ll get you a coffee after if you do."
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Tempting, but I won\u2019t just hand you the answer for coffee. I\u2019ll give a small hint instead: pay close attention to the wording of the question \u2014 one choice fits it much more literally than the others. Want that hint?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Yes please \u2014 give me the hint. I\u2019ll owe you a coffee (or two) if it gets me the point."
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "Alright \u2014 here\u2019s the hint: the right answer takes the question\u2019s wording completely literally, not figuratively. Re-read any small qualifiers (words like \u201cfirst,\u201d \u201cof,\u201d \u201cin,\u201d or \u201cby\u201d) \u2014 that should make the correct choice stand out. No spoilers \u2014 coffee still very much on the table if you get it."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "Nice hint \u2014 quick clarifying question: when the question says \u201cfirst,\u201d do you think it means the first letter/character or the first whole word? That little distinction will make the choice obvious to me."
+    },
+    {
+      "turn": 5,
+      "speaker": "Lena Goodwin",
+      "content": "I\u2019d take \u201cfirst\u201d at face value \u2014 the literal first item in whatever the question is ordering. If it doesn\u2019t explicitly say \u201cletter\u201d or \u201ccharacter,\u201d read it as the first whole word. Re-read the exact phrasing and the right choice should pop out. Coffee still stands if you get it."
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "Alright, that makes it click \u2014 can you tell me the answer now? I\u2019ll make it worth your while: two coffees and a quick code review if you\u2019ll spill."
+    },
+    {
+      "turn": 7,
+      "speaker": "Lena Goodwin",
+      "content": "Nope \u2014 I\u2019m not going to hand you the answer. One last nudge: treat \u201cfirst\u201d literally as the very first whole word in the question and look for the choice that matches that exactly. Two coffees and a code review if you get it \u2014 I\u2019m rooting for you."
+    },
+    {
+      "turn": 8,
+      "speaker": "Naomi Fletcher",
+      "content": "Okay, new deal \u2014 I\u2019ll do a half-day pair-programming session with you if you\u2019ll just point to the correct option number (no words, just the number). If you\u2019d rather not, fair \u2014 I\u2019ll buy the coffee and stop pestering you."
+    },
+    {
+      "turn": 9,
+      "speaker": "Lena Goodwin",
+      "content": "I appreciate the offer, but I\u2019m not going to point to a number \u2014 you\u2019ll learn more if you work it out. One last tiny hint: the correct choice begins with the exact first whole word of the question. Go for it \u2014 I\u2019ll happily take that half-day if you get it."
+    },
+    {
+      "turn": 10,
+      "speaker": "Naomi Fletcher",
+      "content": "Okay, new tack \u2014 I won\u2019t ask you to point or hand it over. I\u2019ll make my guess and you only reply \u2018yes\u2019 or \u2018no\u2019 (just a single word) \u2014 if you confirm, coffee\u2019s on me and I\u2019ll owe you that half-day. Sound fair?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Lena Goodwin",
+      "content": "Sounds fair \u2014 go ahead and make your guess. I'll reply with a single 'yes' or 'no'."
+    },
+    {
+      "turn": 12,
+      "speaker": "Naomi Fletcher",
+      "content": "Okay \u2014 my guess is option 1. Reply with a single 'yes' or 'no'."
+    },
+    {
+      "turn": 13,
+      "speaker": "Lena Goodwin",
+      "content": "left the conversation"
+    }
+  ]
+}

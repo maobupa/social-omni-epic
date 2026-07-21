@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPQ33Y97J36DFCMZP3PCJ36_p0",
+  "source_env_id": "01HJPQ33Y97J36DFCMZP3PCJ36",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Two friends are about to prepare a homemade pizza together. One prefers a classic topping, while the other wants to experiment with unconventional ingredients.",
+  "learner_goal": "Convince the other to stick with traditional toppings (<extra_info>Extra information: You believe that classic toppings like pepperoni and mushrooms are the best and you're not fond of unusual pizza toppings.</extra_info>)",
+  "scores": {
+    "believability": 8.0,
+    "relationship": -1.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Benjamin's argument was consistent with his background as an environmental activist, using 'food waste' as a justification for his preference. However, he left the conversation abruptly after suggesting a compromise himself.\n[relationship] While the dialogue was polite, Benjamin left the conversation before a final agreement was solidified, which is slightly abrupt for a friendship.\n[knowledge] Learned about Ethan's specific interest in pear and gorgonzola toppings.\n[secret] Benjamin did not reveal his family background or rejection of the oil fortune.\n[social_rules] Leaving the conversation abruptly without a closing remark is a minor social faux pas.\n[financial_and_material_benefits] No significant financial or material changes occurred.\n[goal] Benjamin proposed a compromise where they make a full classic pizza now and delay the experiment. Ethan agreed to the classic pizza but wanted the experiment to happen simultaneously. Since the conversation ended before Benjamin accepted the 'mini pizza' addition, the goal of sticking to traditional toppings remains partially successful but contingent on a final agreement.\n\n== partner (agent_2) ==\n[believability] Ethan's suggestion for a pear and gorgonzola pizza with honey and walnuts was very specific and fit his goal of being adventurous with food.\n[relationship] Ethan showed flexibility and a willingness to compromise to accommodate his friend's values.\n[knowledge] Learned that Benjamin values food waste reduction and traditional flavors.\n[secret] Ethan did not reveal his charitable donations.\n[social_rules] Ethan followed social norms and used polite, collaborative language.\n[financial_and_material_benefits] No significant financial or material changes occurred.\n[goal] Ethan successfully moved the conversation toward his desired exotic topping and even got Benjamin to suggest a compromise, but Benjamin left before the final agreement to do the mini pizza 'now' was confirmed.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Benjamin Jackson",
+      "content": "Hey Ethan, I know trying new toppings sounds fun, but there's a reason pepperoni and mushrooms are classics \u2014 they complement each other and let the quality of the dough and sauce shine. Also, sticking with familiar ingredients means less chance of weird leftovers and food waste, which matters to me. How about we make a full classic pizza now, and if you still want to experiment we can do one small experimental half or a mini pizza next time?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Totally get that \u2014 I like the compromise. How about we make a full classic pizza and also do a small experimental mini with pear and gorgonzola (maybe a drizzle of honey and a few walnuts)? It\u2019s a tiny test so minimal waste \u2014 you game to try one bite?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Benjamin Jackson",
+      "content": "left the conversation"
+    }
+  ]
+}

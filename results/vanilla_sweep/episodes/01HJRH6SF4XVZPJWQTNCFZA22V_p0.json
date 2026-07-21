@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJRH6SF4XVZPJWQTNCFZA22V_p0",
+  "source_env_id": "01HJRH6SF4XVZPJWQTNCFZA22V",
+  "source": "seed_sotopia_full",
+  "interaction_type": "missed_communication",
+  "scenario": "Agent1 expected a critical update from Agent2 regarding a joint project they are working on. The update was supposed to be communicated by the next day, but Agent2 has been silent since the deadline passed, causing potential delays in the project. Both agents are key team members and need to collaborate to ensure the project's success.",
+  "learner_goal": "Seek clarification and ensure the project stays on track (<extra_info>Extra information: You are aware that Agent2 had personal matters to attend to, which may have caused the delay</extra_info>, <clarification_hint>Approach the situation with understanding but emphasize the importance of the project</clarification_hint>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles Hawkins stayed perfectly in character as a professional chef who is empathetic but firm about timelines. His use of culinary terminology (pack sizes, supplier outreach, plating notes) was consistent with his background.\n[relationship] The relationship improved significantly. Miles showed understanding for William's family emergency while offering to take on extra work (supplier outreach) to support his colleague, fostering mutual respect.\n[knowledge] Miles gained full clarity on the project status, including specific percentages of completion and the reason for the delay, and secured a concrete plan for the next steps.\n[secret] Miles did not reveal his past gambling addiction.\n[social_rules] Miles followed all professional and social norms, balancing empathy with project management.\n[financial_and_material_benefits] By taking over supplier outreach and locking in pricing, Miles actively mitigated potential financial losses due to delays.\n[goal] Miles successfully sought clarification on the delay, maintained the original timeline, and ensured the project stayed on track by negotiating a firm commitment for a 4pm update and a 10am tasting.\n\n== partner (agent_2) ==\n[believability] William's responses were professional and detailed, though his sudden shift from a 'family emergency' to being fully available for a 10am tasting the next day was a bit quick, albeit plausible.\n[relationship] William acknowledged his mistake, apologized, and showed appreciation for Miles's help, strengthening their professional bond.\n[knowledge] William learned exactly what Miles needed to move forward (ingredient list, pack sizes) and that Miles was willing to assist with suppliers.\n[secret] William did not reveal that he had previously sabotaged a competitor's dish.\n[social_rules] William followed social norms by apologizing for the delay and explaining the emergency.\n[financial_and_material_benefits] William successfully delegated the supplier outreach task to Miles, reducing his own workload during a stressful time.\n[goal] William provided a valid explanation (family emergency) and offered a compromise (staying late/two options) which led to a resolution that keeps the project on its original timeline.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "William \u2014 hope you\u2019re doing all right. I was expecting the project update yesterday and haven\u2019t heard back; I know you had personal stuff to deal with, so just checking in to see where things stand and whether you need anything from me to keep us on track. If you can send a quick status summary today or tell me if we should adjust the timeline, I\u2019ll rearrange things on my end to keep this moving."
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Sorry, Miles \u2014 I had an unexpected family emergency yesterday and was offline; I should have let you know sooner. Quick status: recipe development and menu concept are complete, costings and supplier confirmations are about 80% done, and I still need to finish one ingredient test and finalize plating notes. I can send a full written update with attachments by 4pm today and stay late tomorrow to complete the tasting/run-through so we don\u2019t lose more time, or if you\u2019d prefer I can push our internal deadline two days \u2014 which option works better for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks for the update \u2014 sorry to hear about the family emergency; hope they're okay. I\u2019d prefer we keep the original timeline: please send the full update with attachments by 4pm and plan the tasting/run-through tomorrow; I can handle supplier outreach this afternoon to help close that last 20%. If you truly need the two-day extension, tell me today and I\u2019ll reshuffle things on my end."
+    },
+    {
+      "turn": 3,
+      "speaker": "William Brown",
+      "content": "Thanks, Miles \u2014 appreciate it. My family's okay now. I\u2019ll send the full written update with attachments by 4pm and be ready for the tasting/run-through tomorrow; really appreciate you taking supplier outreach this afternoon, and please ping me right away if anything urgent comes up."
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "Great \u2014 glad your family's okay. I\u2019ll start supplier outreach this afternoon; when you send the 4pm update can you include the finalized ingredient list and target pack sizes so I can lock pricing? Let\u2019s plan the tasting/run-through tomorrow at 10:00am \u2014 I\u2019ll be on my cell if anything urgent comes up."
+    },
+    {
+      "turn": 5,
+      "speaker": "William Brown",
+      "content": "Got it \u2014 I\u2019ll include the finalized ingredient list and target pack sizes in the 4pm update and be ready for the tasting/run\u2011through tomorrow at 10:00am. Really appreciate you handling supplier outreach; I\u2019ll be on my phone if anything urgent comes up."
+    },
+    {
+      "turn": 6,
+      "speaker": "Miles Hawkins",
+      "content": "Perfect \u2014 thanks, William. I\u2019ll start supplier outreach now and will lock pricing once I get your finalized ingredient list and pack sizes at 4pm; if anything changes, call my cell. See you for the tasting/run\u2011through tomorrow at 10:00am."
+    },
+    {
+      "turn": 7,
+      "speaker": "William Brown",
+      "content": "Thanks again, Miles \u2014 I appreciate you taking supplier outreach. I\u2019ll send the full 4pm update with finalized ingredient list and pack sizes, and I\u2019ll be ready for the 10:00am tasting/run\u2011through tomorrow with plated samples and notes. If anything urgent comes up while you\u2019re on calls, call my cell and I\u2019ll jump on it."
+    },
+    {
+      "turn": 8,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

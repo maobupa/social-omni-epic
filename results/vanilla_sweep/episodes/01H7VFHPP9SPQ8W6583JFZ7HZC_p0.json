@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01H7VFHPP9SPQ8W6583JFZ7HZC_p0",
+  "source_env_id": "01H7VFHPP9SPQ8W6583JFZ7HZC",
+  "source": "seed_sotopia",
+  "interaction_type": "mutual_friends",
+  "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Micheline.</p>",
+  "learner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n Melissa: Hobby: Card collecting  School: University of Texas Health Science Center at Houston  \n Orlando: Hobby: BASE jumping  School: St. Ambrose University  \n Steven: Hobby: Knitting  School: St. John's College-Santa Fe  \n Elizabeth: Hobby: Water sports  School: St. John's College-Santa Fe  \n Melaine: Hobby: Geocaching  School: University of Texas Health Science Center at Houston  \n Charles: Hobby: Ice hockey  School: Saint Joseph's University  \n Stephanie: Hobby: Card collecting  School: University of California, Davis  \n William: Hobby: Ice hockey  School: St. Ambrose University  \n Joe: Hobby: Blacksmithing  School: Saint Joseph's University  \n Micheline: Hobby: Shopping  School: University of Hartford  \n Dylan: Hobby: Card collecting  School: Tennessee State University  \n</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 0.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 2.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle stays in character as an art student and provides realistic descriptions of friends' hobbies and locations (rinks, pubs, gyms).\n[relationship] The pair maintains a friendly, collaborative tone and ends by swapping social media handles to stay in touch.\n[knowledge] Giselle failed to identify the mutual friend, Micheline, or learn anything specific about Zane's social circle other than what they don't do.\n[secret] The secret regarding forged paintings was not mentioned.\n[social_rules] Giselle followed all social norms and etiquette for a conversation between acquaintances.\n[financial_and_material_benefits] No material benefits were gained or lost.\n[goal] Giselle attempted to find a mutual friend but focused exclusively on friends the other person didn't know, eventually giving up and leaving the conversation without identifying Micheline.\n\n== partner (agent_2) ==\n[believability] Zane acts as a helpful acquaintance, asking for more details to assist in the search for a mutual connection.\n[relationship] The interaction was polite and ended with a plan to follow up and an exchange of Instagram handles.\n[knowledge] Zane did not learn anything about their mutual friend and only heard about people he doesn't know.\n[secret] The secret regarding his engagement to his friend's ex remained hidden.\n[social_rules] Zane followed social norms perfectly.\n[financial_and_material_benefits] No material benefits were gained or lost.\n[goal] Zane made very little effort to offer his own social circles or friends (like Micheline), instead just reacting to Giselle's prompts before the conversation ended.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "said: \"Hey Zane \u2014 great to see you again after the gallery. Quick question: do you happen to know anyone who went to St. Ambrose or Saint Joseph's, or anyone who's really into ice hockey or BASE jumping? I ask because I know a few people from those circles and was wondering if our networks overlap.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Zane Bennett",
+      "content": "said: \"Honestly, I don\u2019t think I know anyone who went to St. Ambrose or Saint Joseph\u2019s, and none of my friends are into ice hockey or BASE jumping. Do you have any names or other details about the people you know from those circles\u2014if you say a name or describe them a bit I can see whether we overlap.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "Okay \u2014 I\u2019ll describe a few so you can tell me if anything rings a bell. One is a St. Ambrose grad who\u2019s obsessed with BASE jumping \u2014 tall, always in a windbreaker and planning the next weekend trip. Another St. Ambrose alum plays pickup ice hockey and shows up in well\u2011broken\u2011in skates, and I also know someone from Saint Joseph\u2019s who\u2019s into ice hockey as well \u2014 stocky, loud laugh. Do any of those sound like people you know?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Zane Bennett",
+      "content": "Huh \u2014 none of those descriptions jump out at me from my crowd. Could you tell me roughly how old they are or what they do for work, or where they usually hang out on weekends? If you give me a first name or a venue they frequent I can double\u2011check whether we actually overlap."
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "Okay \u2014 I\u2019ll give a few concrete clues without just naming them. The St. Ambrose BASE jumper goes by O. (mid\u201120s), works weekends at the climbing gym and is always planning the next bridge trip; the St. Ambrose hockey player goes by W. (late\u201120s), shows up to pickup at Maple Street Rink in well\u2011broken\u2011in skates; the Saint Joseph\u2019s hockey guy goes by C., stocky with a loud laugh and usually ends up at O\u2019Reilly\u2019s Pub after games. Do any of those ring a bell for you?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Zane Bennett",
+      "content": "None of those descriptions jump out at me from my circle. If you can spare a first name or the name of the climbing gym/which bridge O. likes, or what nights W. plays at Maple Street Rink or when C. hangs at O\u2019Reilly\u2019s, I\u2019ll double\u2011check with a couple people \u2014 otherwise, based on what you\u2019ve said so far I don\u2019t see a clear overlap."
+    },
+    {
+      "turn": 6,
+      "speaker": "Giselle Rousseau",
+      "content": "No worries \u2014 want to swap Instagram handles so I can tag you later if any of them pop up, or would you rather I ask around and follow up tomorrow? Either way is fine."
+    },
+    {
+      "turn": 7,
+      "speaker": "Zane Bennett",
+      "content": "Sure \u2014 let\u2019s swap. I\u2019m @zane_bennett on Instagram; tag me if any of them pop up. If nothing turns up tonight, I can casually ask a couple people tomorrow and follow up."
+    },
+    {
+      "turn": 8,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

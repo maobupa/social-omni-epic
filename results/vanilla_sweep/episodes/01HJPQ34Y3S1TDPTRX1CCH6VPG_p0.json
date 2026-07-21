@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HJPQ34Y3S1TDPTRX1CCH6VPG_p0",
+  "source_env_id": "01HJPQ34Y3S1TDPTRX1CCH6VPG",
+  "source": "seed_sotopia_full",
+  "interaction_type": "apple_orchard_negotiation",
+  "scenario": "Agent1 has an apple orchard with a bountiful harvest this season and wants to sell a large quantity of apples. Agent2 is a local vendor who is interested in buying apples in bulk for their store. The apples are fresh, organic, and of a variety known for its crisp texture and sweet flavor. Agent1 is interacting with Agent2 to negotiate a deal for the apples.",
+  "learner_goal": "You are Agent1, the owner of the apple orchard. Your goal is to sell the apples at a price that covers your costs and ensures a profit margin. <extra_info>Your target price is $2.00 per pound.</extra_info> <clarification_hint>You must convince the buyer of the quality and organic nature of your apples.</clarification_hint> <strategy_hint>You can provide volume discounts to achieve your goal.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi stayed in character as a business-minded orchard owner, leveraging her software developer connection with Donovan and negotiating firmly but professionally.\n[relationship] The interaction was professional and friendly, building on their existing acquaintance through a mutually beneficial business deal.\n[knowledge] She identified Donovan's price ceiling and his interest in long-term procurement.\n[secret] Naomi's secret online alter ego was never mentioned or hinted at.\n[social_rules] Naomi followed all social and professional norms during the negotiation.\n[financial_and_material_benefits] She secured a deal for a bulk sale of 500+ lbs, although at a price lower than her initial target.\n[goal] Naomi reached a verbal agreement for $1.60/lb, which is below her $2.00 target but within her discount strategy. However, the agreement is contingent on a sample inspection which Donovan unilaterally controls, and she left before a final confirmation of her last compromise was clearly accepted without further pushback on the monthly rates.\n\n== partner (agent_2) ==\n[believability] Donovan's behavior as a local vendor looking for a competitive price while ensuring quality through inspections was highly realistic.\n[relationship] Donovan maintained a positive, collaborative tone despite the haggling over price.\n[knowledge] He successfully obtained product details, organic certification proof, and established a price point for the supplier.\n[secret] Donovan's involvement in hacking and releasing government info remained hidden.\n[social_rules] Donovan adhered to social expectations for a business negotiation.\n[financial_and_material_benefits] He secured his target price of $1.60/lb (close to his $1.50 target) including delivery.\n[goal] Donovan successfully negotiated the price down to $1.60/lb, but the sale is contingent on his own future inspection of a sample, and the agent_1 left before a final consensus on the monthly rates of the follow-up orders was solidified.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Donovan \u2014 nice to see a familiar face from the comps. I\u2019ve got a bountiful harvest of certified-organic apples, picked this week: a crisp, sweet variety that\u2019s been selling great at farmers\u2019 markets and stores. I\u2019m asking $2.00/lb, but I can do bulk pricing \u2014 200\u2013499 lb at $1.85/lb and 500+ lb at $1.70/lb, with delivery or pickup options. How much would you be interested in and when would you need them?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Donovan Reeves",
+      "content": "Hey Naomi \u2014 nice to see a familiar face. I\u2019m interested in a large quantity (around 500 lb+), but to make it work for my store I\u2019d need closer to $1.50/lb. Would you take $1.50/lb for 500+ lb with delivery included this week? Also can you send a photo of the organic certification and arrange a small sample or inspection before finalizing?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks, Donovan \u2014 I can\u2019t do $1.50/lb. My best for 500+ lb is $1.70/lb with delivery included this week if you\u2019re within ~25 miles. I\u2019ll bring the original organic certificate and a 10\u2011lb sample box so you can inspect before finalizing. Does a weekday afternoon delivery work and where should I bring them? If you\u2019d like photos first, send me the best number and I\u2019ll text them."
+    },
+    {
+      "turn": 3,
+      "speaker": "Donovan Reeves",
+      "content": "I can\u2019t stretch to $1.70 \u2014 my margin needs about $1.50, but I can meet you halfway at $1.60/lb for 500+ with delivery included, pending a quick inspection of the 10\u2011lb sample and a photo of the organic certificate. Weekday afternoons work \u2014 I\u2019m available Thursday or Friday 2\u20134pm; where should I expect delivery, and can you text the cert/photos or would you like me to send my number?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Donovan \u2014 I want to make this work. I can come down to $1.65/lb for 500+ lb with delivery included this week, and I\u2019ll bring the original organic certificate plus a 10\u2011lb sample for inspection. Thursday 2\u20134pm works for me \u2014 send the delivery address or your best number and I\u2019ll text photos of the cert first."
+    },
+    {
+      "turn": 5,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Naomi \u2014 I appreciate you coming down on price. I can do $1.60/lb for 500+ with delivery included this week if you text the organic cert/photos and bring the 10\u2011lb sample for a quick inspection Thursday between 2\u20134pm; if the sample checks out I can commit to regular monthly orders. Delivery address is 42 Elm Ave, Suite B \u2014 text photos to (555) 123-4567 and I\u2019ll confirm the window."
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "I can do $1.60/lb for this 500+ delivery this week \u2014 on one condition: you commit to placing monthly orders for the next three months at $1.65/lb. If that works, I\u2019ll text the organic cert/photos now to (555) 123-4567 and bring the original certificate plus a 10\u2011lb sample Thursday between 2\u20134pm to 42 Elm Ave, Suite B. Sound good?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Naomi \u2014 I can accept $1.60/lb for this 500+ delivery this week, but I need the three monthly follow-ups at $1.60/lb as well (same 500+ minimum) to make the ongoing commitment. Please text the cert/photos to (555) 123-4567 and I\u2019ll expect the 10\u2011lb sample and original certificate Thursday 2\u20134pm at 42 Elm Ave, Suite B; final purchase is contingent on a quick inspection."
+    },
+    {
+      "turn": 8,
+      "speaker": "Naomi Fletcher",
+      "content": "Alright \u2014 here\u2019s a compromise I can do: I\u2019ll take $1.60/lb for this 500+ delivery this week, and in return I need a commitment to three monthly follow-up orders (500+ lb each) at $1.62/lb. I\u2019ll text the organic cert/photos to (555) 123-4567 now and bring the original certificate plus the 10\u2011lb sample Thursday 2\u20134pm to 42 Elm Ave, Suite B. Sound good?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Naomi \u2014 I appreciate you coming down. I can do $1.60/lb for this 500+ delivery and for the three monthly follow-ups (500+ lb each). Please text the cert/photos to (555) 123-4567 and I\u2019ll expect the original certificate plus the 10\u2011lb sample Thursday 2\u20134pm at 42 Elm Ave, Suite B; final purchase is contingent on a quick inspection of the sample."
+    },
+    {
+      "turn": 10,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

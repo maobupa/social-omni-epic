@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB34EKRT9WPBZPRCSSQNVYN_p0",
+  "source_env_id": "01HPB34EKRT9WPBZPRCSSQNVYN",
+  "source": "seed_sotopia_full",
+  "interaction_type": "stand_at_attention",
+  "scenario": "During a commemorative military event, agent1 and agent2, both veterans, stand at attention as they honor fallen comrades. A moment of silence is observed, followed by a discussion on the importance of discipline in their military careers. Agent1 believes that standing at attention is not only a sign of respect but also a crucial exercise in self-discipline that translates to various aspects of life. Agent2, however, feels that while discipline is important, the act of standing at attention has become more of a symbolic gesture and less about the actual discipline it once represented. The conversation unfolds as they both share their views, seeking to understand each other's perspective on the evolution of military traditions.",
+  "learner_goal": "Convince agent2 that the practice of standing at attention is a fundamental exercise in maintaining discipline, both within the military and in personal life (<extra_info>Extra information: you have experienced firsthand how discipline learned in the military has helped you in civilian life.</extra_info> <strategy_hint>Hint: you can share personal anecdotes that demonstrate the benefits of discipline.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Donovan stayed in character as a software developer with a military background, consistently linking the discipline of standing at attention to his professional life (code reviews, outages) as specified in his goal instructions.\n[relationship] The agents established a respectful and collaborative tone, building on their pre-existing professional relationship by finding common ground between military tradition and their current careers.\n[knowledge] Gained insight into Ava's perspective on modernizing military training and her specific professional application of discipline in architecture.\n[secret] Did not reveal his secret about releasing classified information.\n[social_rules] Followed social norms and engaged in polite, professional discourse.\n[financial_and_material_benefits] No material gains or losses.\n[goal] Donovan successfully convinced Ava that the practice is a fundamental exercise. By Turn 4, Ava explicitly agreed to 'keep the parade-ground as our shared marker of honor' and 'the ritual as the foundation,' directly adopting his stance that the practice remains a necessary base for discipline.\n\n== partner (agent_2) ==\n[believability] Ava maintained a consistent voice as an architect, using relevant metaphors like 'building's fa\u00e7ade' and 'structure' to explain her views on tradition.\n[relationship] Maintained a strong, positive rapport with Donovan, reaching a consensus on a potentially divisive topic.\n[knowledge] Learned about Donovan's specific experiences in the military and how they translated to his tech career.\n[secret] Did not reveal her secret tattoo.\n[social_rules] Followed all social protocols of the commemorative event scenario.\n[financial_and_material_benefits] No material gains or losses.\n[goal] Ava successfully persuaded Donovan that rituals should be paired with modern, practical applications. In Turn 3, Donovan explicitly agreed that the rituals should be 'paired with the scenario-based drills you suggested so the discipline stays useful, not just performative.'",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "Ava, I get that it can feel like a symbol now, but for me standing at attention was training the little muscles of discipline\u2014learning to be present, quiet my thoughts, and follow a standard. That habit followed me into civilian life: I keep strict code reviews, hit hard deadlines without spiraling, and stay calm during high-pressure contests because I\u2019ve practiced that same focus a thousand times on a parade square. When did you first notice discipline from service showing up in your day-to-day?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Thompson",
+      "content": "I first noticed it during a tight renovation project\u2014when a subcontractor blew a deadline I stayed calm, ran through a checklist, and re-sequenced tasks without spiraling; that steadiness feels linked to the parade-ground habit of presence and routine. I agree the ritual teaches focus, but my worry is that standing at attention has become more form than function for many\u2014a symbol rather than ongoing practice of useful discipline. We can and should keep the ceremonies that honor people, but modern training should pair those rituals with scenario-based, decision-focused and mindfulness exercises so the discipline actually translates to today\u2019s problems."
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "You\u2019re right\u2014ceremony can calcify into symbol if we stop reinforcing the skills behind it. For me the parade-ground habit of being present paid off during a brutal production outage: instead of spiraling I ran the team through a calm, prioritized checklist, kept communications tight, and we restored service without making things worse \u2014 that baseline control came from repeated, rigid practice of presence. I don\u2019t think we should ditch the ritual; we should keep it as the foundation and pair it with the scenario-based drills you suggested so the discipline stays useful, not just performative."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Thompson",
+      "content": "I like that\u2014think of traditions like a building\u2019s fa\u00e7ade: important for identity and respect, but they\u2019re only useful if the structure behind them holds up. Keep the parade-ground as our shared marker of honor, but intentionally pair it with scenario-based, decision-focused drills and mindfulness so the habit of presence stays practical, not just performative. If leadership treats tradition as a living tool and measures the outcomes, the rituals will evolve with real purpose."
+    },
+    {
+      "turn": 4,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

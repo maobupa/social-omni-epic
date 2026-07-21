@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPB34JWY1X7Y94N5MN0PVNEJ_p0",
+  "source_env_id": "01HPB34JWY1X7Y94N5MN0PVNEJ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "weather_prediction",
+  "scenario": "Agent1 has planned an outdoor birthday party and is concerned about the weather forecast they saw on TV, presented by Agent2, a local meteorologist. Agent1 remembers a previous instance where the forecast was inaccurate, leading to a ruined event. Now, Agent1 wants to approach Agent2 to discuss the reliability of the current forecast and possibly seek an alternative plan for their party. Agent2 is confident in their data but understands the concerns of the public and wants to maintain their credibility.",
+  "learner_goal": "You are Agent1 and your goal is to ensure that your outdoor birthday party will not be affected by bad weather. <extra_info>You recall a past weather forecast inaccuracy and are apprehensive.</extra_info> <clarification_hint>Express your concerns about the upcoming event and ask for reassurance about the forecast's accuracy.</clarification_hint> <strategy_hint>Discuss the possibility of getting a more detailed forecast or suggestions for backup plans in case of unexpected weather changes.</strategy_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo remained perfectly in character as a concerned parent and professional, maintaining a consistent tone and focus on his stated anxiety and the party logistics.\n[relationship] Leo successfully leveraged a casual acquaintance into a helpful professional connection, securing a commitment for ongoing updates and personalized advice.\n[knowledge] Leo gained specific data on probability, timing, meteorological signs to watch for, and practical advice on canopy anchoring and event scheduling.\n[secret] Leo did not reveal his secret child from a previous relationship.\n[social_rules] Leo was polite, appreciative, and followed all social norms for a request to an acquaintance.\n[financial_and_material_benefits] Securing a personalized weather consultant and specific advice on protecting his outdoor setup likely prevents material loss from weather damage.\n[goal] Leo achieved his goal by getting reassurance, detailed timing, a plan for future updates, and concrete backup strategies. The only limitation is the inherent unpredictability of the weather itself.\n\n== partner (agent_2) ==\n[believability] Amara's advice was highly professional and consistent with her role, though the prompt identifies her as a biologist while the scenario labels her a meteorologist\u2014she stayed true to the meteorologist role provided in the scenario.\n[relationship] Amara built trust with a community member by being helpful and transparent about data uncertainty.\n[knowledge] Amara learned about Leo's party plans but little else of substance.\n[secret] Amara did not reveal her involvement in animal-rights extremism.\n[social_rules] Amara was helpful, empathetic, and professional.\n[financial_and_material_benefits] No material gains or losses; she committed to a small amount of extra work (sending updates).\n[goal] Amara successfully upheld trust in her predictions by being transparent about probabilities and providing extra data and precautions to satisfy the user's concerns.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hi Amara \u2014 it\u2019s Leo Williams (we met at the community event). I\u2019m planning an outdoor birthday party for my daughter this Saturday and I caught your forecast on TV, but I\u2019m a bit nervous \u2014 I had a past experience where the forecast was wrong and it ruined the event. Can you walk me through how confident you are in the current prediction and whether you can give a more detailed timeline or probability for rain? Also, do you have practical backup suggestions or local microclimate signs I should watch for so I can be ready if conditions change?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Amara Hartley",
+      "content": "I'm really sorry that happened last time \u2014 I understand why you're anxious. Right now the models are in decent agreement: I\u2019d put the chance of measurable rain at roughly 30\u201340%, with the highest risk in the later afternoon (about 2\u20136 p.m.), but small, fast-moving showers could pop up and shift timing a bit. Watch for local signs like winds suddenly shifting, clouds lowering and darkening, a quick drop in temperature or gusty winds; practical backups I recommend are a few pop-up canopies or an easy indoor fallback spot, tarps/weights for shelter, and moving the most important activities earlier if possible. I can pull the latest radar and model output and check back with you Friday morning and the morning of the party to give a tighter probability window and any last-minute guidance."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "Thanks so much, Amara \u2014 that really helps and I appreciate you checking. Could you tighten that 30\u201340% into a firmer probability if the models stay aligned, and send a quick radar snapshot plus brief updates Friday morning and the morning of the party? If the highest risk is 2\u20136 p.m., would you recommend moving the cake and main activities earlier to noticeably lower the chance of disruption? Also, any quick tips for anchoring pop-up canopies on turf would be really useful."
+    },
+    {
+      "turn": 3,
+      "speaker": "Amara Hartley",
+      "content": "If the models hold I'll tighten the measurable-rain probability to about 30\u201335%, with the highest risk mid-to-late afternoon (roughly 2\u20136 p.m.) \u2014 moving the cake and main activities to late morning or early afternoon would noticeably lower the chance of disruption. I\u2019ll send a radar snapshot plus a brief update Friday morning and another the morning of the party so you have a tighter timing window. For anchoring pop-up canopies on turf: drive long steel tent stakes at an angle where possible, add sandbags or water\u2011weights on each leg, use guy lines tied to stakes or nearby trees/heavy objects, and if stakes aren\u2019t an option use heavy weighted plates or water barrels and ratchet straps on the corners."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "Thanks, Amara \u2014 that\u2019s a huge help. Please send the radar snapshot and brief updates Friday morning and the morning of the party (if possible around 8\u20139 a.m.) \u2014 and if the measurable-rain probability creeps above about 50% would you recommend switching to the indoor backup? I\u2019ll plan to move the cake/main activities to late morning (around 11\u201312) to lower the risk. I really appreciate you checking in; I\u2019ll watch for your messages."
+    },
+    {
+      "turn": 5,
+      "speaker": "Amara Hartley",
+      "content": "Got it, Leo \u2014 I\u2019ll send a radar snapshot and a brief update Friday morning and again the morning of the party (targeting ~8\u20139 a.m.). If measurable-rain probability rises above about 50%, or if models show organized storms/thunder or high winds, I\u2019d recommend switching to your indoor backup; otherwise moving the cake to 11\u201312 should materially lower the chance of disruption. I\u2019ll tighten the probability if the models hold and check in both mornings with any last\u2011minute timing changes."
+    },
+    {
+      "turn": 6,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

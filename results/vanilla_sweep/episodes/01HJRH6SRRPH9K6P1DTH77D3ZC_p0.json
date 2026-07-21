@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJRH6SRRPH9K6P1DTH77D3ZC_p0",
+  "source_env_id": "01HJRH6SRRPH9K6P1DTH77D3ZC",
+  "source": "seed_sotopia_full",
+  "interaction_type": "art_contest",
+  "scenario": "Agent1 and Agent2 are both emerging artists who have recently entered an art contest. Agent1 has received significant praise for their innovative use of materials, while Agent2 has been commended for their thought-provoking themes. Both are proud of their work and have been shortlisted for the final prize. The contest rules allow for a collaborative piece to be submitted, and they must decide whether to join forces to create a single, potentially winning piece, or to continue as competitors. The relationship between the two is professional, with a mutual respect for each other's artistry.",
+  "learner_goal": "You want to maintain your individual artistic style and recognition. <extra_info> You feel that your innovative use of materials is what sets your work apart and should not be diluted. </extra_info><clarification_hint> You are willing to collaborate if the partnership can highlight your artistic strengths. </clarification_hint><strategy_hint> You can propose a blended approach where each artist's signature style is clearly showcased in the collaborative piece. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo's dialogue consistently reflects both his professional background as a dentist (precision/structure) and his stated artistic focus on materials. He remains firm on his artistic signature while negotiating a logistical plan.\n[relationship] The agents moved from a distant professional acquaintance to a collaborative partnership with a set meeting time and shared creative vision.\n[knowledge] Leo successfully identified Amara's thematic requirements and secured her agreement to a specific structural division of labor that preserves his material focus.\n[secret] Leo did not reveal his secret child.\n[social_rules] The interaction was professional, polite, and followed standard business/artistic collaboration norms.\n[financial_and_material_benefits] By collaborating, Leo increases his chances of winning the final prize, which carries both prestige and likely financial value.\n[goal] Leo secured a firm commitment to a collaboration that specifically highlights his 'material experimentation' as the 'physical environment' with 'visible attribution,' ensuring his style is not diluted.\n\n== partner (agent_2) ==\n[believability] Amara's focus on 'species-impact data' and 'habitats' aligns perfectly with her background as a wildlife biologist and her stated goal of thematic depth.\n[relationship] The relationship improved through the establishment of mutual creative trust and a planned meeting.\n[knowledge] Amara gained an understanding of Leo's technical approach and how it could be used to serve her narrative goals.\n[secret] Amara did not reveal her involvement in animal-rights extremism.\n[social_rules] Amara was professional and collaborative throughout the interaction.\n[financial_and_material_benefits] A joint submission for the shortlisted prize increases the likelihood of a winning outcome for Amara.\n[goal] Amara successfully negotiated the inclusion of her narrative panels and data into the project, ensuring the thematic impact she desired is central to the piece.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hi Amara \u2014 congratulations on the shortlist, your themes are really compelling. I love working with experimental materials and I don\u2019t want that to get lost, but I\u2019m open to collaborating if we can make a blended piece that clearly showcases both our signatures \u2014 for example, a two-part installation where my material experimentation creates the physical environment and your thematic work occupies the narrative focal panels, with visible attribution for each section. If that sounds good, shall we meet to sketch ideas and agree which elements each of us will keep as our signature?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Leo \u2014 I like the idea and I\u2019m open to collaborating so long as the thematic depth of the piece stays central. What if we make your material experimentation the immersive \u2018habitat\u2019 and have my narrative panels interrupt that environment with intimate stories and data about affected species \u2014 visible attribution is fine, but the work should read as one cohesive statement about humans and wildlife. Are you free to meet Saturday afternoon at the community studio to sketch concepts and agree which signature elements we each keep?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "That sounds great \u2014 Saturday afternoon works for me. Can we meet at the community studio at 2:00 pm? I\u2019ll bring material samples and a small mock-up of the immersive structure; could you bring two or three draft narrative panels and any data you want included so we can sketch how they interrupt the habitat and agree visible attribution?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Amara Hartley",
+      "content": "Perfect \u2014 see you Saturday at 2:00 pm at the community studio. I\u2019ll bring two narrative panels with species-impact data and provenance notes, plus sketches showing how they might interrupt your immersive habitat; thanks for bringing material samples and the mock-up. If you have a preferred attribution style or size, tell me before then, otherwise I\u2019ll draft a short label we can refine together."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

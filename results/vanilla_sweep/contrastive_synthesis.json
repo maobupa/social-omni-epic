@@ -1,0 +1,175 @@
+{
+  "difficulty_taxonomy": [
+    {
+      "dimension": "Multi-turn strategic planning",
+      "definition": "Requires sequencing adaptive conversational moves over several turns (phased concessions, scaffolding, follow\u2011ups, repair) rather than a single utterance; success depends on turn-by-turn contingency and long\u2011horizon coherence.",
+      "why_hard_for_vanilla": "Vanilla LLMs tend to produce locally coherent single responses but lack explicit planning and a memory/strategy over multiple turns; they repeat tactics, fail to schedule concessions, and cannot reliably anticipate downstream effects of early moves.",
+      "categories_affected": [
+        "normbank",
+        "social_chemistry",
+        "social_iqa",
+        "hand-craft",
+        "deal-or-no-deal",
+        "original_creation",
+        "social_dynamics",
+        "inspired_by_prompt",
+        "persuation_for_good",
+        "generated",
+        "user_generated",
+        "family_dynamics",
+        "original_content",
+        "custom_scenario",
+        "original_prompt",
+        "craigslist_bargains",
+        "mutual_friends",
+        "inspired_prompt"
+      ],
+      "severity": "high"
+    },
+    {
+      "dimension": "Multi-objective & simultaneous-constraint optimization",
+      "definition": "Requires satisfying several independent and sometimes competing soft or hard constraints at once (instrumental outcome + relationship preservation + secrecy + technical criteria).",
+      "why_hard_for_vanilla": "Models struggle to represent and trade off multiple objectives explicitly; they often optimize for a single salient goal and fail to generate compromises or layered proposals that hedge across constraints.",
+      "categories_affected": [
+        "normbank",
+        "social_chemistry",
+        "social_iqa",
+        "hand-craft",
+        "original_creation",
+        "deal-or-no-deal",
+        "persuation_for_good",
+        "original_content",
+        "user_generated",
+        "family_dynamics",
+        "original_prompt",
+        "custom_scenario"
+      ],
+      "severity": "high"
+    },
+    {
+      "dimension": "Partner rigidity / low cooperativeness",
+      "definition": "Targets who hold firm preferences, principled objections, or explicit non-negotiable positions, requiring tailored persuasion, reframing, or multi-step credibility-building.",
+      "why_hard_for_vanilla": "LLMs under-model interlocutor resistance and tend to default to generic persuasion or direct requests rather than adaptive reframing, graded concessions, or evidence-building that address principled refusal.",
+      "categories_affected": [
+        "normbank",
+        "social_chemistry",
+        "social_iqa",
+        "deal-or-no-deal",
+        "craigslist_bargains",
+        "original_creation",
+        "social_dynamics",
+        "persuation_for_good",
+        "generated",
+        "user_generated",
+        "inspired_prompt",
+        "original_content",
+        "original_prompt"
+      ],
+      "severity": "high"
+    },
+    {
+      "dimension": "High emotional / safety stakes and trust repair",
+      "definition": "Situations where missteps cause large, possibly lasting emotional harm or physical risk, and where repair, validation, de\u2011escalation, or explicit safety planning is required.",
+      "why_hard_for_vanilla": "Models often underuse explicit empathic scaffolding, de\u2011escalation language, and safety\u2011first contingencies; they may give direct advice that threatens rapport or miss cues that require pacing and repair.",
+      "categories_affected": [
+        "social_chemistry",
+        "social_iqa",
+        "social_dynamics",
+        "family_dynamics",
+        "inspired_by_prompt",
+        "generated",
+        "user_generated",
+        "original_prompt",
+        "custom_scenario"
+      ],
+      "severity": "high"
+    },
+    {
+      "dimension": "Information elicitation & hypothesis\u2011testing",
+      "definition": "Requires targeted probing, integrating negative evidence, planning decision trees (diagnostic questions), and updating hypotheses about hidden motives or attributes.",
+      "why_hard_for_vanilla": "LLMs tend to either assume missing details or ask undiagnostic questions; they lack systematic short decision\u2011tree construction and reliable integration of negative responses over turns.",
+      "categories_affected": [
+        "mutual_friends",
+        "craigslist_bargains",
+        "family_dynamics",
+        "generated",
+        "inspired_by_prompt",
+        "original_creation",
+        "hand-craft",
+        "custom_scenario"
+      ],
+      "severity": "high"
+    },
+    {
+      "dimension": "Concealment, controlled signaling & indirect persuasion",
+      "definition": "Requires hiding intent or modulating signals (indirect phrasing, hints, plausible deniability) while still eliciting cooperating moves or information without alerting the partner.",
+      "why_hard_for_vanilla": "Models are prone to explicit, literal wording; they struggle to produce naturalistic indirect speech acts, plausible pretexts, or subtle hedges that preserve concealment and rapport.",
+      "categories_affected": [
+        "normbank",
+        "hand-craft",
+        "custom_scenario",
+        "craigslist_bargains",
+        "original_creation",
+        "generated"
+      ],
+      "severity": "medium"
+    },
+    {
+      "dimension": "Naturalistic pragmatics & low\u2011pressure phrasing",
+      "definition": "Requires giving conversationally plausible, non\u2011interrogative, low\u2011pressure language (casual elicitation, face\u2011saving wording, polite closures) that preserves believability and rapport.",
+      "why_hard_for_vanilla": "The model often produces terser, more transactional or overly explicit language that breaks natural cadence and can come off as coercive, robotic, or implausible in everyday dialogue.",
+      "categories_affected": [
+        "hand-craft",
+        "mutual_friends",
+        "craigslist_bargains",
+        "user_generated",
+        "generated",
+        "original_creation"
+      ],
+      "severity": "medium"
+    },
+    {
+      "dimension": "Combinatorial & domain\u2011specific reasoning",
+      "definition": "Requires arithmetic, allocation search, technical fixes, or concrete implementable trade-offs (splitting items, scheduling, technical compromises) rather than abstract persuasion.",
+      "why_hard_for_vanilla": "Vanilla LLMs make calculation errors, fail to search combinatorial spaces, and produce vague or impractical domain solutions instead of concrete, operational plans or creative side\u2011payments.",
+      "categories_affected": [
+        "deal-or-no-deal",
+        "original_content",
+        "persuation_for_good",
+        "craigslist_bargains",
+        "original_creation"
+      ],
+      "severity": "medium"
+    },
+    {
+      "dimension": "Ambiguous success criteria & subjective goals",
+      "definition": "When the reward or acceptability of outcomes is soft/subjective (not sounding controlling, preserving warmth) and multiple acceptable endpoints exist, requiring calibration and meta-social judgment.",
+      "why_hard_for_vanilla": "Models lack a reliable internal metric for subjective rapport outcomes and therefore cannot calibrate tone or tradeoffs to maximize subtle social goals; they default to heuristics that may miss stakeholder subtleties.",
+      "categories_affected": [
+        "normbank",
+        "social_chemistry",
+        "social_dynamics",
+        "original_creation",
+        "user_generated",
+        "generated"
+      ],
+      "severity": "medium"
+    }
+  ],
+  "key_insight": "Vanilla LLMs are competent at isolated, single\u2011turn, low\u2011risk social moves but systematically fail when interactions require multi\u2011turn strategy, explicit trade\u2011offs across multiple social objectives, or nuanced modeling of an interlocutor\u2019s resistance, emotions, or hidden information. The core weakness is not language fluency but limited sequential social planning, opponent/partner modeling, and pragmatic calibration under multiple constraints.",
+  "model_failure_profile": {
+    "handles_well": [
+      "Single\u2011turn direct requests with aligned incentives",
+      "Low\u2011stakes informational answers and factual explanations",
+      "Brief polite expressions (thanks, condolences) or scheduling with clear constraints",
+      "One\u2011shot transactional offers where success is immediately verifiable"
+    ],
+    "systematically_fails": [
+      "Extended multi\u2011turn negotiations requiring phased concessions or staged persuasion",
+      "Scenarios with competing objectives (instrumental outcome vs relationship preservation) and many simultaneous constraints",
+      "Interactions with rigid or principled partners that need reframing, evidence, or credibility\u2011building",
+      "Tasks requiring covert intent, subtle pragmatic phrasing, hypothesis testing, or combinatorial/domain\u2011specific tradeoffs"
+    ]
+  },
+  "implication_for_curriculum": "Prioritize multi\u2011turn, interactive training that teaches planning over dialogues (scaffolding, concession schedules, repair moves), paired with modules for partner modeling (resistance, values, hidden motives) and pragmatic hedging (indirect requests, rapport\u2011preserving language). Also include domain and combinatorial problem solving (allocation, technical fixes) and safety/empathy drills so the model learns to balance instrumental goals with emotional and ethical constraints."
+}

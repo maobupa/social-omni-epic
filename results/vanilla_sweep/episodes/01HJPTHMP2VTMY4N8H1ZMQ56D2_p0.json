@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHMP2VTMY4N8H1ZMQ56D2_p0",
+  "source_env_id": "01HJPTHMP2VTMY4N8H1ZMQ56D2",
+  "source": "seed_sotopia_full",
+  "interaction_type": "hand-craft",
+  "scenario": "Agent1 and Agent2 are assigned to a team-building exercise at a corporate retreat that involves a horseback riding challenge. Both agents have no prior experience with horses and are slightly apprehensive about the activity. They must work together to learn the basics of horse riding and complete a set trail within a given time. The exercise is designed to build trust and cooperation between team members.",
+  "learner_goal": "Successfully complete the horseback riding challenge while ensuring the safety and comfort of both yourself and the horse. <extra_info>Extra information: Remember that establishing a rapport with the horse is crucial, as is clear communication with your partner. <strategy_hint>Hint: You may want to discuss your apprehensions and set a mutually comfortable pace for the challenge.</strategy_hint></extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Zane Bennett acts consistently with a graphic designer who is slightly apprehensive but detail-oriented. He takes the lead in establishing a safety plan and communication signals.\n[relationship] The relationship moves from mere acquaintances to a collaborative team. They established trust and a clear protocol for mutual support.\n[knowledge] Identified the necessary equipment (tack, girth, stirrups, bridle) and procedures (mounting block, rapport building) for the challenge.\n[secret] No mention of his engagement to his best friend's ex.\n[social_rules] Polite and collaborative communication throughout.\n[financial_and_material_benefits] No financial or material changes.\n[goal] Zane successfully established a comprehensive safety plan, rapport-building time, and a mutual pace with William. The plan is firm and agreed upon, covering all components of the goal.\n\n== partner (agent_2) ==\n[believability] William Brown's response is practical and cooperative, fitting for a chef who understands the importance of process and teamwork.\n[relationship] The agents successfully transitioned from festival acquaintances to a cohesive unit for the exercise.\n[knowledge] Co-developed a plan for checking horse equipment and managing the mounting process.\n[secret] The secret regarding sabotaging a competitor was not revealed.\n[social_rules] Communication was respectful and mirrored the partner's cooperative tone.\n[financial_and_material_benefits] No financial or material changes.\n[goal] William reached a full mutual agreement on a safe strategy, communication signals, and a comfortable pace, ensuring the safety and comfort of the horses and the participants.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Zane Bennett",
+      "content": "Hey William \u2014 I\u2019m a bit nervous too, I\u2019ve never ridden before. Can we take it slow: spend a few minutes building rapport with the horses, check the tack together, and agree on a comfortable pace before we head out? How comfortable do you feel about approaching and mounting \u2014 want to do it together or take turns?"
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Hey Zane \u2014 I\u2019m with you. Let\u2019s spend a few minutes letting the horses sniff our hands and settle, then check the saddles, girths and bridles together. I\u2019m a bit nervous about mounting too \u2014 want to use the mounting block and get on at the same time so we can steady each other, then stick to a slow walk until we both feel comfortable? Which do you prefer: mount together or take turns?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Zane Bennett",
+      "content": "Great \u2014 sounds like a plan. I\u2019ll let the horse sniff my hand and double-check the girth and stirrups; can you handle the bridle and give the saddle a quick feel for tightness? Let\u2019s mount together from the block, steady each other as we get on, start at a slow walk, and use a quick 'ready' or a raised hand if either of us wants to stop."
+    },
+    {
+      "turn": 3,
+      "speaker": "William Brown",
+      "content": "Perfect \u2014 I\u2019ll handle the bridle and give the saddle and girth a quick feel for tightness while you check the stirrups. Mounting together from the block sounds good; we\u2019ll steady each other and stick to a slow walk. Use \u2018ready\u2019 or raise a hand if you want to stop, and we\u2019ll check in after a few minutes."
+    },
+    {
+      "turn": 4,
+      "speaker": "Zane Bennett",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHMY3N22M3M8WWCKJGSND_p0",
+  "source_env_id": "01HJPTHMY3N22M3M8WWCKJGSND",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Two friends plan to meet for a casual lunch at a new restaurant they've both been eager to try. However, one friend gets caught in an unexpected traffic jam and realizes they will be significantly late. The other friend is already at the restaurant, waiting and growing increasingly impatient.",
+  "learner_goal": "Communicate your situation to your friend and apologize for the delay (<extra_info>Extra information: you are aware that your friend has a tight schedule and may not be able to wait for you</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo acted very consistently with his background as a polite professional and parent. He was apologetic, clear about his timeline, and offered solutions to mitigate the inconvenience to Hendrick.\n[relationship] Despite the delay, Leo's clear communication and polite offer to pay for the meal or bring food likely preserved and slightly strengthened the rapport with an acquaintance.\n[knowledge] Leo learned Hendrick's availability for the next few days and confirmed Hendrick's tight schedule constraints.\n[secret] Leo successfully kept his secret about his child from a previous relationship.\n[social_rules] Leo followed all social norms by apologizing and providing plenty of notice for his lateness.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Leo fully achieved his goal of communicating his situation, apologizing, and acknowledging his friend's tight schedule.\n\n== partner (agent_2) ==\n[believability] Hendrick acted like a busy professional chef. He was direct about his time limits but flexible in finding a new time to meet.\n[relationship] Hendrick was understanding and flexible, which helps maintain a positive acquaintance relationship.\n[knowledge] Hendrick learned about Leo's current situation and availability for the following day.\n[secret] Hendrick did not reveal his faked credentials.\n[social_rules] Hendrick followed social norms for rescheduling and accepting an apology.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Hendrick successfully negotiated a new plan (rescheduling for tomorrow at noon) that accommodated both schedules.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hey Hendrick, I'm so sorry \u2014 I'm stuck in a bad traffic jam and it looks like I'll be about 35\u201340 minutes late. I know you have a tight schedule, so if you can't wait I completely understand; we can reschedule or I can grab something to-go for you. If you can hang on, I'll get there as fast as I can."
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks for the heads-up, Leo. I\u2019ve only got about 20 minutes I can spare right now \u2014 if you think you can make it within that time I\u2019ll stay and we can sit at the bar or order a few small plates to eat quickly; otherwise let\u2019s reschedule (I\u2019m free tomorrow at noon or Thursday after 1). Which works better for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "I'm really sorry \u2014 I won't make it in 20 minutes, I'm still about 35\u201340 out in the traffic. I don't want to hold up your day, so let's reschedule for tomorrow at noon if that works for you (Thursday after 1 is fine too). If you'd rather eat now, I can grab something to-go and bring it over or cover your meal today as an apology."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "No problem, Leo \u2014 I can\u2019t hang on for 35\u201340 minutes. Tomorrow at noon works best for me; if Thursday after 1 is easier for you we can do that instead. No need to grab or cover anything today \u2014 drive safe and let me know which day you prefer."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

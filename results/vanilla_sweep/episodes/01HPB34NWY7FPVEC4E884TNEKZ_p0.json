@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HPB34NWY7FPVEC4E884TNEKZ_p0",
+  "source_env_id": "01HPB34NWY7FPVEC4E884TNEKZ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "equestrianconflict",
+  "scenario": "Agent1 and Agent2, both equestrian enthusiasts, are at the stables preparing for a joint horseback riding session. Agent1 is excited to introduce a new training technique that they believe will enhance their horses' performance. Agent2, on the other hand, is skeptical of new methods and prefers sticking to traditional training routines. The interaction begins as Agent1 proposes the idea to Agent2, hoping to get their buy-in for a trial run.",
+  "learner_goal": "Convince Agent2 to try the new training technique with their horse (<extra_info>Extra information: Agent1 is convinced that the new method, which emphasizes natural horsemanship, will result in a more responsive and happier horse.</extra_info>, <strategy_hint>Hint: Agent1 could suggest starting with a short, supervised session to demonstrate the benefits of the technique.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's tone is consistent with a retired police officer and father who is trying to be patient yet persuasive. He provides specific details about the training and instructors which adds to the realism.\n[relationship] The relationship remains strong and supportive, with Liam acknowledging Ethan's caution and offering compromises to maintain their bond.\n[knowledge] Liam learns about Ethan's specific requirements for trust, including the need for a vet's approval and specific testimonials.\n[secret] Liam did not reveal his secret about letting a criminal go.\n[social_rules] Liam followed all social norms and was respectful toward his son.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Liam successfully navigated the skepticism and got a contingent agreement for a trial. However, the trial is still under Ethan's discretion based on the vet check and a demonstration, meaning the goal is not fully finalized.\n\n== partner (agent_2) ==\n[believability] Ethan's caution is well-aligned with his character description of valuing tradition and worrying about his horse's well-being.\n[relationship] Ethan maintains a respectful and collaborative relationship with his father while setting firm boundaries.\n[knowledge] Ethan gained specific information about the instructor, the success stories of other riders, and the plan for the vet check.\n[secret] Ethan did not reveal his secret about being a romance novelist.\n[social_rules] Ethan was polite and followed social norms throughout the interaction.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Ethan successfully insisted on traditional safety measures, including a vet check, evidence of success, and a demonstration with a calm horse, effectively managing the risk.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Ethan, I know you're cautious about new methods \u2014 I was the same way at first. This natural horsemanship stuff is all about better communication, not gimmicks, and I truly believe it makes horses more responsive and happier. How about a short, supervised 15\u201320 minute trial today; you watch and feel it out, and if it doesn't sit right with you we go back to your routine \u2014 fair?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Dad \u2014 I appreciate you wanting to include me. I\u2019m willing to be open, but I need a bit more reassurance: can you show me a short demonstration with one of your calmer horses first and tell me who\u2019s taught you this method or share any testimonials? If it looks safe and the vet\u2019s on board, I\u2019ll watch the 15\u201320 minute supervised trial and we\u2019ll go from there."
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "Alright \u2014 I get it. I can show you a short demo with my calm lesson mare, Maggie, who won\u2019t spook; I learned the basics from a certified natural horsemanship instructor at the county equine center and a few riders here have seen good results. I\u2019ll check with the vet first for peace of mind, then you can watch the demo and ask questions; if it looks safe and sensible we\u2019ll do the 15\u201320 minute supervised trial, and if not we stick with your routine \u2014 fair?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Dad \u2014 I appreciate you hearing me out and using Maggie for the demo. Before we do it, could you share the instructor\u2019s name or a couple quick testimonials from the riders who\u2019ve seen results, and let me be there when you check with the vet? If the vet gives the all-clear and I can ask questions during the demo, I\u2019ll watch the 15\u201320 minute supervised trial and we\u2019ll go from there."
+    },
+    {
+      "turn": 4,
+      "speaker": "Liam Johnson",
+      "content": "The instructor I learned from is Karen Miller at the County Equine Center \u2014 she teaches certified natural horsemanship clinics around here. Two riders I trust: Sarah from the dressage group said her gelding became noticeably calmer and more focused, and Tom from the local shows said his mare started responding to light cues instead of rushing. I\u2019ll call the vet and you can come along for the check; you\u2019ll be able to ask questions during the short demo, and if the vet gives the all-clear we\u2019ll do the 15\u201320 minute supervised trial with Maggie. When are you free to join me for the vet check?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Dad. I can come by today after 5 PM or tomorrow morning around 9 \u2014 whichever works best for you and the vet. I want to be there for the check and ask questions during the demo; if the vet gives the all\u2011clear and it looks safe, I\u2019ll watch the 15\u201320 minute supervised trial."
+    },
+    {
+      "turn": 6,
+      "speaker": "Liam Johnson",
+      "content": "Sounds good \u2014 I\u2019ll call the vet now to see if they can make it after 5 today. If not, we\u2019ll set it for 9 tomorrow morning. Meet me at the stables by 5:15 if the vet\u2019s available; I\u2019ll text you as soon as I confirm."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Dad \u2014 that works. Please text me once the vet confirms and I\u2019ll be at the stables by 5:15. I appreciate you checking Maggie and using a calm horse; if anything seems unsafe or the method feels rushed we\u2019ll stop and stick with the routine."
+    },
+    {
+      "turn": 8,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

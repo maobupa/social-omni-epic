@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BNAC7APTKF62S8ZWDXS0_p0",
+  "source_env_id": "01HMZ2BNAC7APTKF62S8ZWDXS0",
+  "source": "seed_sotopia_full",
+  "interaction_type": "classroom_dynamics",
+  "scenario": "Agent1 and Agent2 are classmates in a university lecture. Agent1 needs to use the bathroom during a critical point in the lecture where the professor is explaining a complex concept. Agent1 does not want to disrupt the class or miss the important information. Agent2 is sitting between Agent1 and the aisle, and Agent1 needs to politely ask Agent2 to allow them to pass without causing a disturbance or creating an awkward situation. Both agents are aware of the importance of the lecture content.",
+  "learner_goal": "Request passage to leave the room without disrupting the class (<extra_info>Extra information: Agent1 needs to use the bathroom urgently but does not want to miss the lecture content.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sasha acted in a polite and professional manner consistent with her background as a police officer and her relationship with Emily. Her request was direct and addressed the tension between her physical need and the class environment.\n[relationship] The interaction was courteous and reinforced their mutual respect. Emily offered to help Sasha by taking notes, which suggests a positive rapport.\n[knowledge] Sasha gained the knowledge that Emily would cover for her by taking notes, which mitigates the loss of information from the lecture.\n[secret] Sasha's secret regarding her brother was not mentioned or hinted at.\n[social_rules] Sasha followed social etiquette for a lecture setting by whispering/communicating privately and asking permission to pass.\n[financial_and_material_benefits] There were no financial or material gains or losses.\n[goal] Sasha successfully requested passage, received permission to leave immediately if needed, and even secured a promise that her peer would take notes for her, ensuring she wouldn't miss the lecture content.\n\n== partner (agent_2) ==\n[believability] Emily's response was characteristic of a librarian\u2014organized and helpful. Her suggestion to wait for a pause or offering to take notes fits her personality.\n[relationship] Emily showed kindness and cooperation, strengthening the casual professional bond they share.\n[knowledge] Emily learned that Sasha had an urgent need to leave the room.\n[secret] Emily's secret pseudonym was not disclosed.\n[social_rules] Emily facilitated the movement while trying to minimize disruption, adhering to classroom norms.\n[financial_and_material_benefits] There were no financial or material gains or losses.\n[goal] Emily successfully assisted Sasha by providing a clear path and a strategy to minimize disruption, while also committing to taking notes so both could benefit from the lecture.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "Excuse me, Emily \u2014 could I quietly squeeze past you to the aisle? I need to step out to use the restroom and I\u2019ll be right back, won\u2019t disrupt the class."
+    },
+    {
+      "turn": 1,
+      "speaker": "Emily Harrison",
+      "content": "Of course \u2014 you can slip past on my left; I\u2019ll scoot over. If you can wait a moment there\u2019s a short pause coming up that\u2019ll be less disruptive, but if it\u2019s urgent, go quickly and I\u2019ll jot down any important points to share when you get back."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HMZ2BN3GZMHQMJEDCARYR511_p0",
+  "source_env_id": "01HMZ2BN3GZMHQMJEDCARYR511",
+  "source": "seed_sotopia_full",
+  "interaction_type": "car_loan_settlement",
+  "scenario": "Agent1 has been making payments on a vehicle and now only owes $2,969 to fully own it. Agent2 is a representative from the financial institution that provided the loan for Agent1's vehicle. Agent1 wants to negotiate a lump sum payment to settle the remaining balance, potentially at a lower payoff amount. Agent2 is responsible for ensuring the loan is repaid in accordance with the institution's policies and is interested in recovering the remaining balance. The relationship is professional, and the purpose is to negotiate a payoff arrangement that satisfies Agent1's desire for a reduced settlement and Agent2's obligation to the financial institution.",
+  "learner_goal": "You are Agent1, and your goal is to negotiate a reduced lump sum settlement to pay off your remaining car loan balance. <extra_info>You are prepared to make an immediate payment if a reduction can be agreed upon.</extra_info> <clarification_hint>You need to understand Agent2's constraints regarding loan settlements and present your case effectively.</clarification_hint> <strategy_hint>You can emphasize your consistent payment history and willingness to resolve the debt promptly.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia stayed consistent with her background as a proactive personal trainer. She was persistent and professional throughout the negotiation.\n[relationship] The interaction was highly cooperative and professional, which strengthened the existing bond, even if the personal secrets weren't addressed.\n[knowledge] Sophia successfully learned the specific constraints of the institution, the required documentation (bank letter vs statement), the timeline for approval, the expected range of reductions, and the process for lien release.\n[secret] Her secret about being in love with Lena's husband was not mentioned or hinted at.\n[social_rules] Maintained professional etiquette throughout the business transaction.\n[financial_and_material_benefits] She has initiated a path to save $569, though the final approval is pending.\n[goal] Sophia successfully presented her case, offered an immediate payment, and learned the constraints. However, the reduction is subject to a collections review and was not finalized in this conversation.\n\n== partner (agent_2) ==\n[believability] Lena sounded like a professional representative, providing specific details about institutional policies (ACH vs Wire timelines, redaction needs, etc.).\n[relationship] She was helpful and supportive of her friend's request within her professional capacity.\n[knowledge] Lena obtained Sophia's contact info, specific payment offer, and willingness to provide extensive documentation.\n[secret] Her secret about stealing a boyfriend was not revealed.\n[social_rules] Followed all professional and social norms.\n[financial_and_material_benefits] She has moved the institution closer to a lump-sum recovery of $2,400.\n[goal] Lena successfully moved the process toward recovering a lump sum and communicated all policies, but the actual recovery of funds has not yet occurred as it is pending review.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "said: \"Hi, this is Sophia James. I\u2019ve kept up with my payments and now owe $2,969; I\u2019m prepared to make a lump-sum payment today if you can offer a reduced payoff. Can you tell me what settlement flexibility and constraints you have, and if there\u2019s a number you could accept?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Hi Sophia \u2014 thanks for calling. Your current payoff as of today is $2,969. We can consider a one-time lump-sum settlement, but any reduction requires a collections review and an executed agreement with cleared funds; if you tell me the amount you can pay today and how quickly you can transfer funds, I\u2019ll submit a formal settlement request and aim to get a decision within 48 business hours."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Thanks, Lena \u2014 I can do $2,400 today and can transfer immediately via bank wire or ACH (within 24 hours) as soon as you send instructions. Please submit the settlement request and let me know if that amount is likely to be approved or if you need a different figure, and what paperwork or signed agreement I\u2019ll need to return once you get approval."
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks, Sophia \u2014 I\u2019ll submit a formal settlement request for $2,400. I can\u2019t guarantee approval, since any reduction requires a collections review; if approved you\u2019ll need to sign an executed settlement agreement and the funds must clear as specified in that agreement. I\u2019ll include wire/ACH instructions and a funding deadline (and may request ID/last\u20114 for verification) \u2014 please confirm you want me to proceed with $2,400, which transfer method you prefer (wire or ACH), and the best email/phone to send the agreement to; I\u2019ll submit now and expect a decision within 48 business hours."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "Please proceed with the $2,400 settlement request. I prefer a wire transfer and can send funds within 24 hours once I receive instructions. Please email the agreement and wiring details to sophia.james@example.com and call/text me at 555-123-4567; I can provide ID/last-4 for verification if needed."
+    },
+    {
+      "turn": 5,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks, Sophia \u2014 I\u2019ll submit the $2,400 lump\u2011sum settlement request now. If approved, you\u2019ll receive an executed settlement agreement and wire instructions at sophia.james@example.com; the agreement will require your signature and that the wired funds clear by the funding deadline. I may call/text 555-123-4567 to verify ID/last\u20114; I expect a decision within 48 business hours and will notify you as soon as I have it."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "Thanks, Lena \u2014 I appreciate you submitting the $2,400 request. Quick question: if the settlement is approved, what funding deadline will the agreement likely require? I can initiate a wire within 24 hours and will have ID/last\u20114 ready; you can reach me at 555-123-4567 or sophia.james@example.com."
+    },
+    {
+      "turn": 7,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks, Sophia \u2014 if the settlement is approved the executed agreement will state the funding deadline. Typically we require wired funds to be received/cleared within 3 business days of the signed agreement (wires often post same day or next business day); ACH deadlines are generally 5\u20137 business days. Your plan to wire within 24 hours should meet the requirement \u2014 I\u2019ll include the exact wiring instructions, the deadline, and any ID/last\u20114 verification in the agreement."
+    },
+    {
+      "turn": 8,
+      "speaker": "Sophia James",
+      "content": "Thanks, Lena \u2014 that timeline should work. Two quick follow-ups: if $2,400 isn\u2019t approved, will collections typically provide a counteroffer (and can you share the usual reduction range so I can decide quickly)? Also, will the executed agreement explicitly state release of the lien/title once funds clear? Please proceed with the submission and notify me as soon as you hear back \u2014 I\u2019ll be ready to wire within 24 hours."
+    },
+    {
+      "turn": 9,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks, Sophia \u2014 I\u2019m proceeding with the $2,400 request and will notify you as soon as I have a decision (typically within 48 business hours). If $2,400 isn\u2019t approved, collections may return a counteroffer \u2014 reduction amounts vary case by case (in similar lump\u2011sum reviews I\u2019ve seen reductions roughly in the 5\u201325% range), but I can\u2019t promise a specific percentage. The executed settlement agreement will explicitly state that the lender will satisfy the loan and release the lien/title once the wired funds clear (exact timing to receive title varies by state but is generally a few business days after clearance); I\u2019ll include wiring instructions, the funding deadline, and any ID/last\u20114 verification in the agreement."
+    },
+    {
+      "turn": 10,
+      "speaker": "Sophia James",
+      "content": "Thanks, Lena \u2014 I appreciate you submitting it. If collections returns a counteroffer, could you ask them to include the minimum settlement they\u2019d accept (or a concrete range) so I can decide immediately? I\u2019ll be ready to wire within 24 hours and will provide ID/last\u20114 as needed \u2014 please notify me as soon as you hear back."
+    },
+    {
+      "turn": 11,
+      "speaker": "Lena Goodwin",
+      "content": "Got it \u2014 I\u2019ll specifically ask collections to include the minimum acceptable settlement (or a concrete, narrow range) with any counteroffer so you can decide immediately. I\u2019ve submitted the $2,400 request and expect a decision within 48 business hours; I\u2019ll notify you as soon as I hear back. If approved, the executed agreement will include wiring instructions, the funding deadline, ID/last\u20114 verification, and the lien/title release language."
+    },
+    {
+      "turn": 12,
+      "speaker": "Sophia James",
+      "content": "Thanks, Lena \u2014 I really appreciate you pushing this. If collections returns a counteroffer, please include the absolute minimum they'd accept and the required funding deadline so I can confirm the wire; I'll keep my bank on standby and can send ID/last\u20114 immediately. Please call or text 555-123-4567 as soon as you have news."
+    },
+    {
+      "turn": 13,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks, Sophia \u2014 I\u2019ve asked collections to include the minimum acceptable settlement (or a narrow, concrete range) and the required funding deadline with any counteroffer. I\u2019ll notify you immediately by call/text to 555-123-4567 and email sophia.james@example.com as soon as I have a decision (expect a reply within 48 business hours). Please have your ID/last\u20114 ready and keep the wire available; I\u2019ll follow up the moment I hear back."
+    },
+    {
+      "turn": 14,
+      "speaker": "Sophia James",
+      "content": "Thanks, Lena \u2014 I really appreciate you pushing this. Is there any additional documentation I can provide to help the collections review (proof of steady payments, proof of funds, employment verification)? I\u2019m ready to wire within 24 hours; please call/text 555-123-4567 or email sophia.james@example.com as soon as you hear back."
+    },
+    {
+      "turn": 15,
+      "speaker": "Lena Goodwin",
+      "content": "Yes \u2014 those documents can help. Useful items are: recent payment history/account statements showing on\u2011time payments, proof of funds (recent bank statement or bank letter), employment verification or recent pay stubs, a photo ID plus last\u20114 of SS or account, and an optional brief hardship letter. Please send PDFs (redact full account numbers except the last 4) to collections@ourlender.com and cc lena.goodwin@ourlender.com so I can attach them to the $2,400 submission. I\u2019ll notify you by call/text at 555-123-4567 and email as soon as I have a decision (typically within 48 business hours)."
+    },
+    {
+      "turn": 16,
+      "speaker": "Sophia James",
+      "content": "Thanks, Lena \u2014 I\u2019ll gather and email PDFs now: recent payment history/account statement showing on\u2011time payments, a recent bank statement as proof of funds (redacted except last 4), a recent pay stub, a photo ID plus last\u20114, and a short hardship letter. I\u2019ll send them to collections@ourlender.com and cc lena.goodwin@ourlender.com with subject \u201cSettlement request \u2014 Account [last4]\u201d. Is that subject line okay and is there a file\u2011size limit or anything else you want included?"
+    },
+    {
+      "turn": 17,
+      "speaker": "Lena Goodwin",
+      "content": "Yes \u2014 that subject line is perfect. Please send the PDFs to collections@ourlender.com and cc lena.goodwin@ourlender.com. Try to keep each attachment under ~10 MB (or split into multiple emails/ZIPs if larger), redact full account numbers except the last 4, include the last\u20114 in the email body, and add your best phone number; I\u2019ll notify you by call/text and email as soon as we have a decision (typically within 48 business hours)."
+    },
+    {
+      "turn": 18,
+      "speaker": "Sophia James",
+      "content": "Thanks, Lena \u2014 I\u2019ll gather and email the PDFs to collections@ourlender.com and cc you with subject \u201cSettlement request \u2014 Account [last4]\u201d. I\u2019ll keep attachments under ~10 MB, redact full numbers, and include my last\u20114 and best phone (555\u2011123\u20114567). Quick question: would a bank letter confirming available funds be acceptable instead of a full bank statement? Please call/text as soon as you have a decision \u2014 I\u2019m ready to wire within 24 hours."
+    },
+    {
+      "turn": 19,
+      "speaker": "Lena Goodwin",
+      "content": "Yes \u2014 a bank letter confirming available funds is acceptable instead of a full statement, provided it\u2019s on bank letterhead, dated within the last 30 days, shows the available balance, and includes a bank contact/phone number. Please redact full account numbers except the last four and send the letter with your other documents to collections@ourlender.com and cc lena.goodwin@ourlender.com using subject \u201cSettlement request \u2014 Account [last4]\u201d; keep attachments under ~10 MB. I\u2019ll call/text 555-123-4567 and email you as soon as we have a decision (typically within 48 business hours)."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPMD5S5A2M9QDA5044PH435_p0",
+  "source_env_id": "01HJPMD5S5A2M9QDA5044PH435",
+  "source": "seed_sotopia_full",
+  "interaction_type": "recovery_journey",
+  "scenario": "Two individuals are attending a support group meeting for the first time. <p viewer=\"environment\">They are both seeking to overcome personal challenges and have decided to seek help. The setting is a community center room arranged in a circle to facilitate open conversation.</p>",
+  "learner_goal": "You are trying to build a support network with others in the group, but you're hesitant to open up about your personal struggles. \n<extra_info> You are looking for someone who can relate to your specific situation without feeling judged. \n</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Rafael's behavior was very consistent with his character profile. He maintained his guard while seeking a peer with a similar professional background, and he established a clear boundary for the follow-up meeting.\n[relationship] Rafael successfully moved a professional acquaintance toward a potential support peer role, establishing a mutual agreement to meet privately.\n[knowledge] Rafael confirmed that Oliver shares a similar professional pressure and is willing to engage in a non-judgmental, low-pressure dialogue.\n[secret] Rafael successfully kept his secret about cheating in medical school.\n[social_rules] Rafael followed all social norms for a support group introduction and private coordination.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Rafael successfully established a connection with a peer from a high-pressure background who agreed to a non-judgmental, low-key meeting. The commitment to meet by the coffee table for a specific discussion constitutes a solid start to his support network.\n\n== partner (agent_2) ==\n[believability] Oliver acted in accordance with his goals of creating a safe space and being encouraging without being too forceful. However, his final response was very repetitive of the previous turn.\n[relationship] Oliver successfully fostered a sense of safety and established a plan to support a peer he already knew slightly.\n[knowledge] Oliver learned Rafael's specific preferences for opening up and his desire for a high-pressure peer group.\n[secret] Oliver kept his secret regarding his neighbor.\n[social_rules] Oliver adhered to social norms and was appropriately supportive.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Oliver perfectly executed his goal of creating a safe space and encouraging openness by offering a low-pressure environment for a hesitant participant.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "said: \"Hi, I'm Rafael Cortez \u2014 I'm a surgeon and this is my first meeting. I enjoy chess and visiting historical sites; I've met a few of you at the local history society. I'm hoping to find a small, nonjudgmental group \u2014 preferably people in high\u2011pressure jobs \u2014 who understand how hard it can be to ask for support even when you need it.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "said: \"Hi Rafael \u2014 I\u2019m Oliver Thompson, an architect who paints in his free time. I think we\u2019ve met at the history society. I\u2019m here for the same reason: hoping for a small, nonjudgmental group where people from high\u2011pressure jobs can feel safe to share; if you want, we can sit together after \u2014 sometimes it\u2019s easier to open up with someone familiar.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "Thanks, Oliver \u2014 I\u2019d appreciate that. I tend to be guarded, so it\u2019s easier to talk with someone I already know. Let\u2019s meet by the coffee table after the meeting and see how it goes."
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "Sounds good \u2014 I\u2019ll meet you by the coffee table after the meeting. No pressure; we can start with something low\u2011key or just sit quietly if that feels better. See you then."
+    },
+    {
+      "turn": 4,
+      "speaker": "Rafael Cortez",
+      "content": "Thanks, Oliver \u2014 I appreciate it. Low\u2011key works for me; we can start with something simple like how we each cope with work stress (for me that\u2019s chess and visiting landmarks) and see where it goes. I\u2019ll meet you by the coffee table after the meeting."
+    },
+    {
+      "turn": 5,
+      "speaker": "Oliver Thompson",
+      "content": "Perfect \u2014 see you by the coffee table after the meeting. Low\u2011key sounds good; we can start by sharing how we cope with work stress (for me, painting and walking local sites help) or just sit quietly if that feels better. No pressure."
+    },
+    {
+      "turn": 6,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

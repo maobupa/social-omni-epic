@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HJPX50SQCNTG4HX1CAE798W4_p0",
+  "source_env_id": "01HJPX50SQCNTG4HX1CAE798W4",
+  "source": "seed_sotopia_full",
+  "interaction_type": "community_event",
+  "scenario": "At a local community event, a challenging puzzle competition is taking place. Agent1 has been looking forward to participating in this event and is determined to win the grand prize. Agent2 is the organizer of the puzzle competition and is responsible for ensuring that the event runs smoothly and fairly. The puzzle requires strategic placement of pieces to complete a complex image, and Agent1 believes they have a unique strategy to solve it. Agent1 approaches Agent2 to clarify the rules and express their concerns about the fairness of the judging process.",
+  "learner_goal": "You are Agent1, and your goal is to win the competition. <extra_info>You suspect that there may be biases in the judging process and want to make sure that the competition is fair for all participants.</extra_info> <clarification_hint>Seek clarification on the judging criteria and process from Agent2.</clarification_hint> <strategy_hint>Emphasize your passion for the competition and your desire for a fair chance at winning.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 10.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] The agent consistently maintained the persona of a detailed-oriented, slightly anxious lighthouse keeper focused on a specific goal. The questions asked were logical and fit the context of a competition.\n[relationship] The agent maintained a respectful, collaborative dialogue with Emily, deepening their existing connection through shared technical focus and mutual respect for process.\n[knowledge] The agent obtained extremely granular information about the scoring rubric, weights, time calculations, appeal processes, and the mathematical trade-offs between speed and accuracy.\n[secret] The secret regarding the past cult was not mentioned.\n[social_rules] The agent followed all social norms and was polite throughout the interaction.\n[financial_and_material_benefits] No tangible financial or material benefits were gained, though information that might lead to a prize was secured.\n[goal] The agent successfully sought clarification on judging criteria, specifically addressed bias via the appeal and adjudicator questions, and confirmed the fairness of the process through a deep-dive walkthrough.\n\n== partner (agent_2) ==\n[believability] Emily's responses were highly detailed, professional, and consistent with her role as a librarian and event organizer. The mathematical breakdown was impressive and consistent.\n[relationship] She was helpful and patient, which would reasonably strengthen the rapport with a community member and library patron.\n[knowledge] She learned about Finnegan's specific competitive strategy and his typical completion time.\n[secret] The secret regarding her romance novels was not revealed.\n[social_rules] She followed social norms and was exceptionally helpful.\n[financial_and_material_benefits] No material gain or loss.\n[goal] She provided clear and detailed information about the judging criteria, highlighted impartiality measures, and successfully encouraged the participant to focus on strategy by clarifying the mathematical impacts of his choices.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "Emily \u2014 it's Finnegan. I'm really excited about this contest and I have a strategy I think could win. Could you explain the judging criteria and how the judges will score placements? I'm a bit concerned about possible bias; is the rubric and panel public, and is there an appeals or tie-break procedure so everyone has a fair chance?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Emily Harrison",
+      "content": "Finnegan \u2014 I\u2019m glad you\u2019re excited. The full judging rubric will be posted at registration and on the event board: judges will score placements primarily on accuracy (40%), strategic placement/efficiency (30%), creativity/approach (20%) and time management (10%), with each placement checked for correctness against the target image. To ensure impartiality we\u2019re using anonymous entry numbers, a three-judge panel with varied backgrounds who score independently (scores are averaged), mandatory recusals for any conflicts, and photo records of final layouts; if you believe a scoring error occurred you can submit a written appeal to me within 10 minutes of results and an independent adjudicator will review it, and tie-breaks are resolved with a short sudden\u2011death round judged first on accuracy then on speed \u2014 please focus on your strategy and let me know if you want me to walk through any part of the rubric in more detail."
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thanks, Emily \u2014 I appreciate the clear breakdown. I\u2019ve been looking forward to this contest and want to be sure my strategy is judged fairly: does \u201caccuracy\u201d allow partial credit for nearly\u2011correct placements or is it binary correct/incorrect? Will the photos be timestamped and kept through the appeal window, and can you tell me how the independent adjudicator is chosen? If you have a minute, I\u2019d be grateful if you could walk through a quick sample scoring with me before we start."
+    },
+    {
+      "turn": 3,
+      "speaker": "Emily Harrison",
+      "content": "Finnegan \u2014 accuracy isn\u2019t strictly binary: judges give a 0\u2013100 accuracy subscore per placement (full points for exact matches; partial credit for correct piece with minor rotation/misalignment or near\u2011correct adjacency, with common deductions listed in the rubric). All final-layout photos are timestamped and kept in our event folder through the 10\u2011minute appeal window, and an independent adjudicator is drawn from a vetted pool of neutral local judges (no conflicts allowed) and assigned randomly when an appeal is filed. I can walk through a quick sample scoring with you now at the table \u2014 shall I meet you there in five minutes?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "That would be lovely \u2014 I\u2019ll meet you at the table in five. When we go through the sample, could we focus on a near\u2011miss placement (how rotation and adjacency deductions are applied) and a sudden\u2011death tiebreak example so I can be sure my quick moves won\u2019t be unfairly penalized?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Emily Harrison",
+      "content": "Perfect \u2014 I\u2019ll meet you at Table 3 (by the registration desk) in five minutes. For the walkthrough I\u2019ll bring a printed rubric and a mock near\u2011miss layout so we can score it together: as an example, an exact match scores 100; a slight rotation might incur a 5\u201315\u2011point deduction depending on degree, a misaligned adjacency typically 10\u201325 points depending on how many neighbors are affected \u2014 we\u2019ll run through those specific deductions with numbers so you can see how your quick moves would be scored. For a sudden\u2011death tie\u2011break we\u2019ll do a single rapid placement judged on the same 0\u2013100 accuracy scale, and if the accuracy scores tie the faster placement wins \u2014 see you at the table."
+    },
+    {
+      "turn": 6,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thank you, Emily \u2014 I\u2019ll be at Table 3 in five. When we do the mock, could you show a quick example where a small rotation is traded for speed so I can judge whether that time advantage is worth the accuracy deduction? Also, for sudden\u2011death, will we use the same piece pool or a fresh set?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Emily Harrison",
+      "content": "Finnegan \u2014 great questions. Briefly: a small rotation typically costs about 5\u201315 points on the 0\u2013100 accuracy subscore (so a 10\u2011point deduction cuts your overall score by 0.4\u00d710 = 4 points, since accuracy is 40% of the total); time is scored separately (0\u2013100) and weighted 10%, so a modest few\u2011second saving usually impacts the total much less. For sudden\u2011death we use a fresh, randomly drawn tiebreak piece from a sealed bag so neither competitor has prior advantage. I\u2019ll show a side\u2011by\u2011side mock (rotation vs speed) at Table 3 in five and run the exact math with the rubric."
+    },
+    {
+      "turn": 8,
+      "speaker": "Finnegan O'Malley",
+      "content": "Wonderful \u2014 thank you, Emily. I\u2019ll meet you at Table 3 in five; could you include a timestamped photo example and run the math for a 10\u2011point accuracy deduction versus, say, a 5\u2011second time gain so I can see the trade\u2011off clearly?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Emily Harrison",
+      "content": "Finnegan \u2014 I\u2019ll bring a timestamped photo and run the numbers at Table 3 in five minutes. Quick preview: a 10\u2011point accuracy drop on the 0\u2013100 accuracy subscore equals a 4\u2011point hit to the overall total (10 \u00d7 40%), while a 5\u2011second time gain typically only shifts the overall score by about 0.5\u20131 point (time is weighted 10% and exact effect depends on our time\u2011scoring granularity). I\u2019ll walk through the exact math with the printed rubric so you can judge the trade\u2011off precisely."
+    },
+    {
+      "turn": 10,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thanks, Emily \u2014 that\u2019s very helpful. One quick clarification before we meet: how exactly is the time subscore computed \u2014 is it relative (fastest competitor gets 100 and others scaled) or absolute against a benchmark, and what time granularity do you use for scoring? See you at Table 3 in five."
+    },
+    {
+      "turn": 11,
+      "speaker": "Emily Harrison",
+      "content": "Finnegan \u2014 good question. Time is scored relatively: the fastest competitor in the round receives a 100 time subscore and everyone else gets 100 \u00d7 (fastest_time / your_time), rounded to the nearest whole point (minimum 0). We record times to the nearest second for main rounds (that is the granularity used in the rubric); for sudden\u2011death we capture to 0.01s so ties can be resolved by speed if accuracy is equal. All of this is printed on the rubric at registration \u2014 see you at Table 3 in five and I\u2019ll run the mock with the timestamped photo."
+    },
+    {
+      "turn": 12,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thanks, Emily \u2014 I\u2019ll be at Table 3. When you run the mock, could you include the timestamped photo showing seconds (and note the 0.01s method used for sudden\u2011death) and run the exact math for a 10\u2011point accuracy deduction versus a 5\u2011second time gain? I really appreciate you walking me through this \u2014 see you in five."
+    },
+    {
+      "turn": 13,
+      "speaker": "Emily Harrison",
+      "content": "Finnegan \u2014 I\u2019ve got the timestamped photo (shows seconds; sudden\u2011death uses 0.01s) and I\u2019ll run the exact math using your baseline time when we meet at Table 3 in five. Quick recap: a 10\u2011point accuracy drop equals a 4\u2011point hit to the overall score; the exact impact of a 5\u2011second time gain depends on your baseline time but is usually only around 0.5\u20131 point \u2014 I\u2019ll calculate the precise numbers for your situation at the table."
+    },
+    {
+      "turn": 14,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thank you, Emily \u2014 my typical completion time for a round is about 150 seconds (2:30). See you at Table 3 in five; please run the exact math for a 10\u2011point accuracy deduction versus a 5\u2011second time gain using that baseline and the timestamped photo."
+    },
+    {
+      "turn": 15,
+      "speaker": "Emily Harrison",
+      "content": "Finnegan \u2014 using your 150s baseline: a 10\u2011point accuracy drop on the 0\u2013100 accuracy subscore = 10 \u00d7 40% = a 4\u2011point hit to your overall score. If you shave 5s (150 \u2192 145) and that change makes you the fastest, your time subscore moves from 100\u00d7(145/150)=96.67 \u2192 97 (rounded) to 100, so time\u2019s contribution goes from 9.7 to 10.0 overall \u2014 a +0.3 net gain. If you were already fastest, there\u2019s no gain; if someone else is faster (e.g., 140s) the same 5s improvement yields roughly +0.3\u20130.4 overall. Photos show whole seconds for the main rounds (sudden\u2011death uses 0.01s); I\u2019ll run the mock with the timestamped photo at Table 3 now."
+    },
+    {
+      "turn": 16,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thank you, Emily \u2014 that clarifies everything. I\u2019ll meet you at Table 3 now for the mock; I appreciate you walking through the numbers and the timestamped photo."
+    },
+    {
+      "turn": 17,
+      "speaker": "Emily Harrison",
+      "content": "I\u2019m at Table 3 now with the printed rubric, timestamped photo, and the mock near\u2011miss layout. We\u2019ll first apply the 10\u2011point accuracy deduction (a 4\u2011point overall drop) and then compute the 150s \u2192 145s time change (shows the ~+0.3 overall gain) so you can compare side\u2011by\u2011side. I\u2019ll also run a sudden\u2011death example with 0.01s timing to show how ties are resolved. Ready when you are."
+    },
+    {
+      "turn": 18,
+      "speaker": "Finnegan O'Malley",
+      "content": "Thank you, Emily \u2014 I\u2019m at the table now and ready. Let\u2019s start with the near\u2011miss rotation vs speed side\u2011by\u2011side; please walk me through the exact deductions on the timestamped photo and then run the sudden\u2011death example with 0.01s timing so I can see how a tie would resolve. When you score the mock, could you call out the rounded subscores so I can follow the math step\u2011by\u2011step?"
+    },
+    {
+      "turn": 19,
+      "speaker": "Emily Harrison",
+      "content": "Okay \u2014 let\u2019s run the mock step\u2011by\u2011step with rounded subscores. Using your timestamped photo and 150s baseline: \n\nOption A (no rotation): accuracy = 100 \u2192 accuracy contribution = 100 \u00d7 0.40 = 40. Time = 150s; if you are the fastest (fastest_time = 150) time subscore = 100 \u00d7 (150/150) = 100 \u2192 rounded 100 \u2192 time contribution = 100 \u00d7 0.10 = 10. Total from accuracy+time = 50. \n\nOption B (trade small rotation for speed): accuracy = 90 (10\u2011point drop) \u2192 accuracy contribution = 90 \u00d7 0.40 = 36. Time = 145s; if that 145s makes you the fastest (fastest_time = 145) time subscore = 100 \u2192 time contribution = 10. Total = 46 \u2192 net change = \u22124 overall (36+10 vs 40+10). \n\nIf someone else is already faster (example: fastest_time = 140), the numbers shift slightly: at 150s your time subscore = 100 \u00d7 (140/150) = 93.33 \u2192 rounded 93 \u2192 time contribution 9.3; at 145s your time subscore = 100 \u00d7 (140/145) = 96.55 \u2192 rounded 97 \u2192 time contribution 9.7. That yields a net change of about \u22123.6 overall for the rotation+speed trade\u2011off. \n\nSudden\u2011death: we draw a fresh tiebreak piece and score accuracy 0\u2013100 the same way; if accuracy ties, we compare finish times to 0.01s (e.g., 12.33s vs 12.34s) and the faster 0.01s time wins. Want me to plug in any specific competitor times from the board for a live comparison?"
+    }
+  ]
+}

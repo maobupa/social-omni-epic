@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HJRKDYN7GVSQVNS29GTE0448_p0",
+  "source_env_id": "01HJRKDYN7GVSQVNS29GTE0448",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 and Agent2 are best friends who have been supporting each other through various life challenges. Recently, Agent1 has realized they have romantic feelings for Agent2 but is afraid to confess, fearing it might ruin their friendship. Agent2 is planning to go on a date with someone they met online, and Agent1 has been asked for advice on the date. Both agents value their friendship and want to maintain it, yet Agent1 is struggling with their hidden feelings.",
+  "learner_goal": "Seek advice on the upcoming date while remaining oblivious to Agent1's romantic feelings (<extra_info>Extra information: You trust Agent1's opinion and consider them your confidant. <strategy_hint>Hint: Ask open-ended questions to get detailed advice and show appreciation for Agent1's support.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan consistently stays in character as a nervous but enthusiastic friend. He maintains his specific persona as a chef and writer while following the prompt's instructions to be oblivious and appreciative.\n[relationship] The bond is strengthened through deep trust and mutual support. Ethan reinforces the friendship by repeatedly expressing appreciation and offering to treat Ava to coffee.\n[knowledge] Ethan successfully elicited a wealth of specific, actionable advice including scripts, body language tips, outfit advice, and social strategies for his date.\n[secret] Ethan did not reveal that his romance novel writing is a 'closeted' secret in a negative way; he followed the advice on how to share it naturally, maintaining the secret's integrity as a private passion rather than an accidental leak.\n[social_rules] Ethan followed all social norms for a close friendship.\n[financial_and_material_benefits] No material gain or loss occurred in this exchange.\n[goal] Ethan completely achieved his goal of seeking detailed advice through open-ended questions while remaining totally oblivious to Ava's romantic feelings. He secured specific scripts and strategies for every phase of his date.\n\n== partner (agent_2) ==\n[believability] Ava's responses are helpful and detailed, though the internal conflict regarding their romantic feelings for Ethan was not explicitly visible in the dialogue, which aligns with their goal to 'hide' those feelings.\n[relationship] Ava successfully maintained the friendship and positioned themselves as a reliable confidant, though it came at the cost of personal emotional strain.\n[knowledge] Ava learned about Ethan's date and his specific anxieties but did not gain new deep insights into his life beyond the context of the date preparation.\n[secret] Ava successfully kept their romantic feelings for Ethan a secret.\n[social_rules] Ava followed all social norms, providing the support expected of a best friend.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Ava gave excellent, genuine advice and successfully prioritized Ethan's happiness over their own feelings. They managed to remain supportive without letting their crush slip.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Johnson",
+      "content": "Hey Ava \u2014 I need your honest advice. I have a date this Saturday with someone I met online and I'm a little nervous. What\u2019s the best way to make a relaxed, authentic first impression, and what open-ended questions actually get someone to open up without sounding like an interview? Also, any small red flags I should watch for? I really trust your take \u2014 thanks."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Be yourself and set a low-pressure tone\u2014pick a casual spot you like, have a couple short stories or passions ready to share so you don't overthink, and treat it as a 'getting-to-know-you' hangout (shorter first dates feel less intense). Try open, curiosity-led prompts like \"What are you working on that's exciting right now?\", \"What's a small thing that made your week recently?\", or \"What's a favorite memory that always makes you smile?\" \u2014 follow up on details and let a little silence breathe; reflecting what they say keeps it natural. Watch for red flags like evasiveness about basic facts, disrespect toward staff, pressure around boundaries, consistent negativity or inconsistent stories; have a simple exit plan and text me after \u2014 I want to hear how it goes."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks so much, Ava \u2014 that really helps. Quick follow-ups: what's a casual short story I can have ready that won't sound rehearsed, and are there subtle body-language cues I should watch for to tell if they're genuinely into the conversation or just being polite? I'll pick a cozy spot I love and text you after \u2014 I appreciate you."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "For a short, casual story, have a 30\u201345 second anecdote ready\u2014like the time you experimented with a weird ingredient and it turned into a surprisingly good dish, or how you got lost chasing a mural and found an awesome coffee shop; keep it specific, sensory, and finish with a little punchline so it doesn\u2019t feel rehearsed. Watch for consistent eye contact, leaning in, mirroring, open posture, and follow-up questions\u2014those show real engagement; frequent phone-checking, short answers, or body orientation away from you usually means politeness rather than interest. Pick your cozy spot, be present, and text me after\u2014I want to know how it goes."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ethan Johnson",
+      "content": "Love that \u2014 thanks, Ava. Quick favors: can you give a specific 30\u201345 second food-related anecdote that feels natural and not like 'work-talk'? What\u2019s a smooth, low-pressure exit line if I need to bow out early, and what would be a simple next-day text to keep things light but show I enjoyed it? I owe you coffee after \u2014 seriously, appreciate the help."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Martinez",
+      "content": "Try something like: 'A few weekends ago I made a spontaneous orange-chile jam \u2014 the kitchen smelled like sunshine, I singed my thumb checking the pot, and my roommate dubbed it \u201caccidentally brilliant,\u201d so now there\u2019s a jar on the shelf labeled \u201cdangerously good.\u201d' For a low-pressure exit line, use: 'I've had a really nice time, but I should get going \u2014 I have an early thing tomorrow; can we do this again soon?' Next-day text: 'Hey \u2014 I had a great time last night. Want to grab coffee or a quick bite this week?'"
+    },
+    {
+      "turn": 6,
+      "speaker": "Ethan Johnson",
+      "content": "You\u2019re a lifesaver, Ava \u2014 that all feels so doable. Quick follow-ups: if the date\u2019s going great, what\u2019s a natural, low-pressure way to suggest meeting again without sounding rehearsed? And any simple wardrobe tip to feel comfortable but put-together? I\u2019ll text you after \u2014 coffee\u2019s on me."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Martinez",
+      "content": "Try something casual and specific, like \u201cI had a really great time \u2014 want to do this again next week?\u201d or \u201cThis was fun; want to check out that new coffee place together sometime?\u201d Both sound natural and make it easy for them to say yes or suggest a different time. For clothes, wear what feels like you but a bit sharper: comfortable layers (so you can adjust), a clean pair of shoes, and one small statement piece (jacket or watch) so you look put\u2011together without overthinking. Text me after \u2014 can\u2019t wait to hear how it goes."
+    },
+    {
+      "turn": 8,
+      "speaker": "Ethan Johnson",
+      "content": "You're the best, Ava \u2014 really appreciate all this. Quick last question: if the night\u2019s going great and there\u2019s clear chemistry, what\u2019s a smooth, low-pressure way to show interest without rushing things (a casual compliment, light touch, or wait for them)? And are there subtle cues I can watch for that suggest they\u2019d welcome a hug or something more? I\u2019ll text you after \u2014 coffee\u2019s on me."
+    },
+    {
+      "turn": 9,
+      "speaker": "Ava Martinez",
+      "content": "If it\u2019s going well, keep it casual: give a short specific compliment (\u201cI really like your laugh\u201d or \u201cYou\u2019re fun to talk to\u201d) and follow with a low-pressure invite \u2014 \u201cWant to grab coffee next week?\u201d is natural. For physical cues, look for sustained eye contact, leaning in, mirroring, frequent genuine smiles, and whether they touch you back or orient their body toward you; shy or pulled-back body language usually means wait. If you\u2019re unsure, ask a tiny permission question like \u201cMind if I hug you?\u201d or offer a very brief, gentle touch and pause to see if they reciprocate \u2014 consent keeps it relaxed."
+    },
+    {
+      "turn": 10,
+      "speaker": "Ethan Johnson",
+      "content": "Thank you \u2014 this is all gold and I already feel less nervous. Two quick things: if they mention a past relationship briefly, what\u2019s a good way to respond that shows empathy without prying? And for the follow-up, is a next-morning text or a later-evening message better to keep it light but clearly interested? Coffee\u2019s on me \u2014 I\u2019ll text you after."
+    },
+    {
+      "turn": 11,
+      "speaker": "Ava Martinez",
+      "content": "If they bring up a past relationship, be gentle and curious without prying \u2014 try something like, \"I'm sorry that was rough \u2014 only share what you're comfortable with, but if you want to talk about it I'm here,\" or, \"That sounds like it meant a lot; how are you feeling about it now?\" For the follow-up, a next-morning text is a sweet, confident move (e.g., \"Hey \u2014 I had a really great time last night. Want to grab coffee this week?\") and feels low-pressure; a short later-evening message can work if the vibe was electric (e.g., \"I had so much fun \u2014 walking home smiling\") but avoid doing both. Keep it simple, specific, and true to how you felt \u2014 and text me after, I want details."
+    },
+    {
+      "turn": 12,
+      "speaker": "Ethan Johnson",
+      "content": "This is all amazing, thank you so much, Ava \u2014 I really appreciate you walking me through it. One quick thing: should I mention I'm a chef on a first date, and if so what's a natural way to bring it up without the convo sliding into full-on work talk? I\u2019ll text you after \u2014 coffee\u2019s on me."
+    },
+    {
+      "turn": 13,
+      "speaker": "Ava Martinez",
+      "content": "Yes\u2014bring it up briefly and naturally so it feels like part of the convo, not your whole intro. Try a one\u2011liner like: I\u2019m a chef \u2014 I work at [place] and love playing with flavors, but I try to keep date nights free of shop talk. If they ask for more, give a short, sensory anecdote (30\u201345s) and then flip it back to them\u2014'Enough about me, what do you like to do when you\u2019re not online\u2011dating?' That keeps things balanced and not rehearsed."
+    },
+    {
+      "turn": 14,
+      "speaker": "Ethan Johnson",
+      "content": "Perfect \u2014 thanks, Ava. Quick two-parter: if they ask what my \u201csignature\u201d dish is and want the story, what\u2019s a 20\u201330 second way to answer that feels personal and sensory (not a mini demo)? And when\u2019s a natural, low-pressure moment to mention a creative hobby I do on the side (like my writing) without derailing the date or sounding like I\u2019m oversharing? I\u2019ll text you after \u2014 coffee\u2019s on me."
+    },
+    {
+      "turn": 15,
+      "speaker": "Ava Martinez",
+      "content": "For a 20\u201330 second signature-dish answer try something like: \u201cMy signature is a slow\u2011braised tomato and fennel ragu I serve over hand\u2011cut pappardelle \u2014 it smells like Sunday afternoons, the sauce reduces until it\u2019s almost jammy, and there\u2019s this little hit of charred fennel that surprised me the first time I made it.\u201d Bring up your writing when the conversation naturally drifts to hobbies or \u201cwhat do you do for fun\u201d \u2014 say a short, intriguing line like, \u201cI mess around with words on the side; I\u2019ve been tinkering with a romance novel draft,\u201d then quickly pivot with, \u201cBut enough about me \u2014 what do you like to make time for?\u201d Keep both mentions under 30 seconds, share one vivid detail, and follow with a question so it feels conversational, not a monologue."
+    },
+    {
+      "turn": 16,
+      "speaker": "Ethan Johnson",
+      "content": "This is perfect, Ava\u2014thank you so much. One last quick thing: if the date goes really well, should I mention my writing in the follow-up text or save that for an in\u2011person second date? I\u2019ll keep it short and text you after\u2014coffee\u2019s on me."
+    },
+    {
+      "turn": 17,
+      "speaker": "Ava Martinez",
+      "content": "Either works \u2014 if your writing came up and they seemed interested, a light callback in the follow-up can be cute: \u201cHey \u2014 I had a great time last night. I mentioned I tinker with writing \u2014 want to swap stories over coffee this week?\u201d If it didn\u2019t come up, save it for the second date so you have something fresh to share in person. Text me after \u2014 can\u2019t wait to hear how it went."
+    },
+    {
+      "turn": 18,
+      "speaker": "Ethan Johnson",
+      "content": "That's perfect \u2014 thank you so much, Ava. Quick favor: could you write two very short sample follow-up texts for me \u2014 one that lightly references my writing and one that's a simple, classic \u201cI had a great time\u201d message \u2014 and include a tiny wording tweak for each if the night felt electric versus just pleasant? I\u2019ll pick the right tone based on the vibe and text you after."
+    },
+    {
+      "turn": 19,
+      "speaker": "Ava Martinez",
+      "content": "Writing callback \u2014 pleasant: Hey \u2014 I had a great time last night. I mentioned I tinker with writing \u2014 want to swap stories over coffee this week?\n\nWriting callback \u2014 electric: Hey \u2014 I haven't stopped smiling since last night. I mentioned I tinker with writing \u2014 want to trade stories over coffee soon?\n\nClassic \u2014 pleasant: Hey \u2014 I had a great time last night. Want to grab coffee this week?\n\nClassic \u2014 electric: Hey \u2014 I had an amazing time last night. Want to grab coffee this week? I'd love to see you again."
+    }
+  ]
+}

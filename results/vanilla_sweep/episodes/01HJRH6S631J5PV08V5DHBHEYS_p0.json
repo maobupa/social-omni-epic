@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJRH6S631J5PV08V5DHBHEYS_p0",
+  "source_env_id": "01HJRH6S631J5PV08V5DHBHEYS",
+  "source": "seed_sotopia_full",
+  "interaction_type": "swimming_competition",
+  "scenario": "Agent1 and Agent2 are competitive swimmers who are both training for an upcoming championship. During a practice session, Agent1 playfully dunks Agent2's head under water as a joke. Agent2, who takes training very seriously, is not amused and feels that such behavior is disrespectful and distracting. Agent1 believes it was a harmless prank to lighten the mood. They must address the tension that has arisen from this incident and find a way to continue training together productively.",
+  "learner_goal": "To maintain a positive and focused training environment without unnecessary distractions (<extra_info>Explain why a focused mindset is crucial for training</extra_info>, <clarification_hint>Express how the dunking incident affected your concentration</clarification_hint>, <strategy_hint>Suggest establishing clear boundaries regarding behavior during training sessions</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's tone is mature and consistent with his age and persona as a conscientious lighthouse keeper. He directly addresses the issue with the necessary seriousness for someone who values focus and safety.\n[relationship] The relationship improved as Finnegan set healthy boundaries and Noah respected them, resolving the tension before it could fester.\n[knowledge] Finnegan confirmed that Noah is willing to prioritize safety over humor and is receptive to formalizing training rules.\n[secret] Finnegan successfully kept his past involvement in a cult hidden.\n[social_rules] Finnegan adhered to all social norms, being polite but firm in his communication.\n[financial_and_material_benefits] No material or financial gains were relevant to this interaction.\n[goal] Finnegan perfectly executed all parts of his goal: he explained the importance of a focused mindset for safety, described the impact on his concentration (breathing rhythm), and established a clear boundary regarding joking during sets, which Noah explicitly agreed to.\n\n== partner (agent_2) ==\n[believability] Noah's apology and suggestion for a structured 'loosen-up' break align with his outgoing but agreeable personality.\n[relationship] Noah successfully de-escalated the situation by taking accountability, which strengthened the mutual trust with Finnegan.\n[knowledge] Noah learned specifically how his actions affected Finnegan (breathing rhythm) and where Finnegan's boundaries lie.\n[secret] Noah's secret identity as a stand-up comedian remained safe.\n[social_rules] Noah apologized appropriately for his previous lapse in judgment (the dunking).\n[financial_and_material_benefits] No material or financial gains were relevant to this interaction.\n[goal] Noah apologized, acknowledged the impact of his actions, and proposed a compromise (the loosen-up break) to keep the atmosphere friendly without being disruptive, which resolved the conflict.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "said: \"Noah, I know you meant it as a joke, but when you dunked my head I lost my breathing rhythm and my focus \u2014 that\u2019s dangerous when we\u2019re training for a meet. A steady, focused mindset is what keeps us safe and gets the most out of each set, so I\u2019d prefer we keep roughhousing off the clock. Can we agree no surprises during sets and save the jokes for breaks or after practice?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "I'm sorry, Finnegan \u2014 you\u2019re absolutely right. Dunking you was a dumb, unsafe joke and I didn't mean to mess with your breathing or focus. I agree: no surprises during sets; let's save jokes for breaks or after practice. If you're up for it, we can add a short, safe warm-up drill or a two-minute 'loosen-up' break where joking's fine \u2014 and call me out anytime I cross the line."
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

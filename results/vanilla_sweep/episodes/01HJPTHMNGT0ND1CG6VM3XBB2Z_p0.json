@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPTHMNGT0ND1CG6VM3XBB2Z_p0",
+  "source_env_id": "01HJPTHMNGT0ND1CG6VM3XBB2Z",
+  "source": "seed_sotopia_full",
+  "interaction_type": "community_garden_negotiation",
+  "scenario": "In a local community garden, two individuals have adjacent plots. Agent1 notices that Agent2's plants are encroaching onto their plot, partially covering a small area where Agent1 was planning to plant a new vegetable patch. Agent2 has been using organic fertilizers, which Agent1 believes is causing the robust growth. The two have never spoken before, but both are passionate about their gardening activities.",
+  "learner_goal": "You are Agent1, and your goal is to have Agent2 trim back their plants without causing a rift, as you would like to maintain a cordial relationship with your fellow gardeners. <extra_info>Consider discussing mutual gardening interests to build rapport.</extra_info> <clarification_hint>Ensure you express the importance of your own plot's boundaries.</clarification_hint> <strategy_hint>Highlight the benefits of having well-defined spaces in the community garden.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily acts consistently with her conscientiousness and professional background, using polite but firm language to address the boundary issue.\n[relationship] The interaction was cordial and ended on a positive note of cooperation, though the conversation was very brief.\n[knowledge] Lily learned that Lena uses organic fertilizers and is willing to collaborate on a physical border and trimming.\n[secret] Did not reveal any secrets.\n[social_rules] Followed social norms perfectly.\n[financial_and_material_benefits] Lily secured a commitment for her planting space to be cleared and a formal border to be established.\n[goal] Lily successfully got Agent 2 to agree to trim the plants and redefine the boundary without causing conflict. However, the conversation ended abruptly without a final confirmation of the Saturday meeting, though the agreement was mostly reached.\n\n== partner (agent_2) ==\n[believability] Lena responds like an architect, suggesting tools like tape measures and stakes, and showing a collaborative spirit.\n[relationship] Lena was accommodating and proposed a joint meeting, improving the potential for a friendly neighbor relationship.\n[knowledge] Lena learned about Lily's specific plans for a vegetable patch and her concerns about the boundary.\n[secret] Secrets kept.\n[social_rules] Followed social norms.\n[financial_and_material_benefits] Lena managed to keep using her fertilizers and secured a way to keep her plants healthy while resolving the dispute.\n[goal] Lena successfully maintained her use of fertilizers and proposed a collaborative solution. However, the agreement is contingent on a future meeting that was not explicitly confirmed because the conversation ended.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Hi Lena \u2014 it\u2019s Lily from the plot next to yours; we met at the community event. I love how well your plants are doing, but I\u2019ve noticed a few have grown over the boundary and are covering the spot where I\u2019d planned a small vegetable patch. Would you mind trimming them back a bit or agreeing on a clear edge so both our plots can thrive? I\u2019m happy to help with the trimming or work out a schedule that suits you \u2014 having defined borders really helps keep things healthy and tidy for everyone."
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Hi Lily \u2014 thanks for the heads-up, and sorry about the encroachment. I do use organic fertilizers which have made some plants more vigorous; I\u2019d like to keep using them but I\u2019m happy to work with you to redefine the boundary so both plots have clear edges. Could we meet at the garden Saturday morning around 10 to walk the line, mark a new edge (maybe a low border or move a few plants inward), and I\u2019ll trim the overhang now and bring stakes and a tape measure?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

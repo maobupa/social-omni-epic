@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPQ34QB8SYBW6FEWRB4YXP3_p0",
+  "source_env_id": "01HJPQ34QB8SYBW6FEWRB4YXP3",
+  "source": "seed_sotopia_full",
+  "interaction_type": "ex_relationship_challenges",
+  "scenario": "Two ex-partners, who have maintained a friendly relationship after their breakup, find themselves at the same mutual friend's out-of-town wedding. They both mistakenly double-booked the same hotel room for the night due to a booking error and there are no other rooms available. Both agents must decide how to handle the situation considering their past romantic relationship and current platonic friendship.",
+  "learner_goal": "You are agent1, and your goal is to maintain a comfortable atmosphere and ensure that both of you can stay in the room without any awkwardness. <extra_info>You value your current friendship and do not want to rekindle the romance.</extra_info> <clarification_hint>You should communicate your boundaries clearly.</clarification_hint> <strategy_hint>Consider suggesting a fair and respectful arrangement for sharing the space.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 5.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel acted consistently with his background as a software developer and a pragmatic person. He was direct and set clear boundaries immediately.\n[relationship] The relationship remained stable and friendly, avoiding potential tension through clear communication.\n[knowledge] He confirmed that Emily was willing to respect his boundaries and stay in the room under his proposed conditions.\n[secret] He did not reveal his secret about figure skating.\n[social_rules] He followed social norms by being polite and accommodating.\n[financial_and_material_benefits] He secured a place to stay without paying for a second room or being forced to find a new hotel in an out-of-town location where none were available.\n[goal] Samuel successfully maintained a comfortable atmosphere, established clear platonic boundaries, and reached a fair arrangement for sharing the space, which Emily accepted.\n\n== partner (agent_2) ==\n[believability] Emily's response was polite and agreeable, though she did not attempt to gauge his feelings or hint at her desire to rekindle the romance as her goal suggested.\n[relationship] The friendship remains intact and positive.\n[knowledge] She learned that Samuel is strictly interested in keeping things platonic and has no interest in rekindling the romance.\n[secret] She did not reveal her secret about writing romance novels.\n[social_rules] She was polite and respectful in her response.\n[financial_and_material_benefits] She secured the bed in a fully booked town at no extra cost/effort.\n[goal] While she was sensitive and respectful, she did not engage in open communication about her own intentions or feelings regarding rekindling the romance, opting instead to simply agree to his terms.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Emily \u2014 weird coincidence. I want to keep things comfortable and strictly platonic tonight, so how about we split the space: you can take the bed and I\u2019ll set up on the couch/air mattress (I don\u2019t mind), we\u2019ll keep our stuff separate and no romantic stuff or awkwardness. If you\u2019d rather have full privacy, I can try to find somewhere else to crash, but otherwise I\u2019ll make sure we both get a good night\u2019s sleep and I\u2019ll whip up coffee/breakfast in the morning so it\u2019s easy."
+    },
+    {
+      "turn": 1,
+      "speaker": "Emily Harrison",
+      "content": "Thanks, Sam \u2014 I appreciate you offering to take the couch. Platonic and keeping our things separate sounds perfect; I don\u2019t want to make things awkward either. I\u2019ll take the bed and coffee tomorrow sounds lovely \u2014 see you in the morning."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

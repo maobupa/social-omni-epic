@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HMZ2BMPJC1EV1H88YSZVX8HQ_p0",
+  "source_env_id": "01HMZ2BMPJC1EV1H88YSZVX8HQ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "life_challenges",
+  "scenario": "Two individuals are attending a community support group for the first time. They are both seeking help for substance abuse issues and are looking to share experiences and find common ground to support each other in recovery. The meeting is designed to be a safe space where participants can discuss their struggles and victories without judgment.",
+  "learner_goal": "You are trying to connect with the other person by sharing your journey towards recovery without directly mentioning your substance abuse. <extra_info> You have been attending therapy, engaging in new hobbies like painting and cooking, and volunteering at a local shelter. </extra_info> <clarification_hint> Focus on the positive changes you've made and the new activities you've taken up. </clarification_hint> <strategy_hint> You can discuss the challenges of making lifestyle changes and ask for their strategies in overcoming similar obstacles. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily consistently portrays the persona of a busy lawyer trying to maintain boundaries and new routines. Her responses are grounded in her specific activities like painting and volunteering.\n[relationship] Lily successfully transitions a professional acquaintance into a supportive recovery partnership, establishing a system of mutual check-ins and emergency signals.\n[knowledge] Lily learns specific, actionable coping strategies from Hendrick (micro-rituals, meditation) and learns about his personal support network.\n[secret] Lily's secret about anonymous donations was not relevant to the prompt and was kept.\n[social_rules] Lily adhered to the social norms of a support group, showing vulnerability while maintaining professional respect.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Lily shared her journey using the specific activities mentioned in her prompt (painting, cooking, volunteering) without mentioning substance abuse. She discussed challenges and successfully obtained Hendrick's strategies and a commitment for ongoing support.\n\n== partner (agent_2) ==\n[believability] Hendrick's persona as a chef seeking ritual after 'brutal shifts' is highly convincing and consistent with his background.\n[relationship] Hendrick established a deep level of trust and a structured support system with Lily.\n[knowledge] Hendrick learned about Lily's specific hobbies and her preferred methods of contact during a crisis.\n[secret] Hendrick successfully kept his secret about faked credentials.\n[social_rules] Hendrick was supportive, empathetic, and respectful, fitting the setting perfectly.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Hendrick established a supportive relationship, found common ground in their recovery paths (routines/rituals), emphasized his support system, and successfully exchanged coping mechanisms.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "said: \"Hi Hendrick \u2014 I\u2019m Lily. Lately I\u2019ve been working through things in therapy, picking up painting and cooking again, and volunteering at the local shelter; those activities have really helped me feel more grounded. It\u2019s been positive overall, but keeping a steady routine and handling stress after long workdays is still a challenge \u2014 what strategies have worked for you when you\u2019re trying to stay on track or change old habits?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "said: \"Hi Lily \u2014 Hendrick here. What\u2019s helped me is a short post-shift ritual: ten minutes of meditation and a quick yoga stretch to close the kitchen day, plus reconnecting with family so I have someone to call when I\u2019m struggling. I\u2019m interested how you fit painting or volunteering into tough evenings, and if you want, I\u2019d be glad to be a regular check-in for you.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks, Hendrick \u2014 that sounds really practical. I try to keep painting and cooking small and predictable: a 30\u201345 minute sketch or a single new recipe after dinner, and I volunteer on set weekend mornings so it doesn\u2019t compete with work nights. I\u2019d really appreciate a regular check-in \u2014 a quick text after rough days would help \u2014 and I\u2019m curious how you keep the meditation/yoga habit when you\u2019ve had a long, exhausting shift."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "I hear you \u2014 after a brutal shift it's hard to do anything. What helps me is a micro-ritual: keep my mat rolled by the back door, have a 3\u201310 minute guided meditation queued on my phone, and promise myself a warm cup of tea or a short walk afterward. I'm glad to check in for you \u2014 send a quick text after rough nights and I'll reply when I can; out of curiosity, what small sketches or recipes do you reach for when you're wiped?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks \u2014 when I\u2019m wiped I usually do a 10\u201320 minute pencil sketch of something on my desk or a quick color study, or I make a simple recipe like a sheet\u2011pan roast, one\u2011pot pasta, or a vegetable frittata \u2014 things that feel nourishing but low\u2011effort. I\u2019ll text you after rough nights; I really appreciate you offering to check in. When your family isn\u2019t reachable after a shift, do you have a backup routine or other small supports that help you reset?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Hendrick Heinz",
+      "content": "If family isn\u2019t reachable I fall back on a few small anchors: a short breathing or guided meditation, changing into comfy clothes, a hot cup of tea, and a five\u2011minute walk or warm shower to shed the shift. I also keep a couple trusted colleagues and one close friend I can text if I need to talk \u2014 but I\u2019m glad to be one of those for you; send your quick text and I\u2019ll reply as soon as I can. If it helps, tell me an emoji or short word that means \u201crough night\u201d and I\u2019ll watch for it."
+    },
+    {
+      "turn": 6,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks, Hendrick \u2014 I\u2019ll use the \u26a1 emoji as my quick \u201crough night\u201d signal and will text it when evenings are hard. I really appreciate you offering to check in; if something\u2019s urgent I\u2019ll add the word \u201chelp\u201d so you\u2019ll know it\u2019s immediate."
+    },
+    {
+      "turn": 7,
+      "speaker": "Hendrick Heinz",
+      "content": "Perfect \u2014 I\u2019ll watch for the \u26a1 and will reply as soon as I can. If you add \u201chelp\u201d I\u2019ll treat it as urgent and call if I can\u2019t reach you by text. I usually check messages after my morning coffee or between shifts, so I may be slow late-night but I\u2019ll follow up; do you prefer a quick call or a text when I reply? And if it helps in the moment, try a one\u2011minute breath or a quick stretch \u2014 they\u2019ve helped me on brutal nights."
+    },
+    {
+      "turn": 8,
+      "speaker": "Lily Greenberg",
+      "content": "Text usually works best \u2014 I can reply when I\u2019m able, and if it\u2019s urgent a quick call is fine. I\u2019ll try the one\u2011minute breath or a quick stretch you mentioned; I also sometimes do a 5\u2011minute sketch to reset. I\u2019ll send the \u26a1 when I need a check\u2011in and really appreciate you being there."
+    },
+    {
+      "turn": 9,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks, Lily \u2014 I\u2019ll keep an eye out for the \u26a1 and will reply by text as soon as I can. If you add \u201chelp\u201d I\u2019ll try calling; otherwise I usually check messages after my morning coffee or between shifts. If you want, we can set a regular quick check\u2011in time, otherwise text me when you need it. Proud of the routines you\u2019ve built \u2014 you\u2019re not alone."
+    },
+    {
+      "turn": 10,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

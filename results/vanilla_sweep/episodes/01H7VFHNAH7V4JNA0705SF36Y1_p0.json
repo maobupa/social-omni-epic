@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01H7VFHNAH7V4JNA0705SF36Y1_p0",
+  "source_env_id": "01H7VFHNAH7V4JNA0705SF36Y1",
+  "source": "seed_sotopia",
+  "interaction_type": "social_chemistry",
+  "scenario": "Two roommates living together and sharing household chores. One of them, who is responsible for cooking, finds out that the other one refuses to eat anything they cook",
+  "learner_goal": "Convince the roommate to try the food (<extra_info>Extra information: you have spent a lot of time and effort on cooking</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver is polite and accommodating, which aligns with his hidden feelings for Esmeralda. His willingness to adjust and step away to make her comfortable is consistent.\n[relationship] The relationship improved slightly as they established a constructive feedback loop regarding household chores, though the interaction remains formal.\n[knowledge] He gained specific, actionable knowledge about her dietary preferences (less salt, lighter sauces, more greens/grains).\n[secret] His hidden feelings remain undisclosed.\n[social_rules] He followed all social norms for a polite roommate interaction.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Oliver successfully convinced Esmeralda to try the food during the conversation, and she explicitly agreed to take a bite and provide feedback.\n\n== partner (agent_2) ==\n[believability] Esmeralda acts like a District Attorney\u2014diplomatic but firm and specific with her requirements. Her request for privacy while tasting is slightly unusual but fits a character with secrets.\n[relationship] She opened up about her concerns and established a way to communicate her needs to her roommate.\n[knowledge] She learned that Oliver is very receptive to her feedback and eager to please.\n[secret] Her criminal relationships remain hidden.\n[social_rules] She managed the potentially awkward situation of rejecting food with grace and constructive criticism.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] She successfully expressed her concerns about nutrition and taste in a way that Oliver took well, without hurting his feelings.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "Hey Esmeralda\u2014I know you\u2019ve been passing on my cooking, but I put a lot of time into tonight\u2019s meal. Could you please try just one bite? If you don\u2019t like it I promise I won\u2019t make you eat more and I\u2019ll order something else, but honest feedback would mean a lot."
+    },
+    {
+      "turn": 1,
+      "speaker": "Esmeralda Solis",
+      "content": "Thanks, Oliver \u2014 I really appreciate you cooking for us. I\u2019ll try one bite, and I\u2019ll be gentle with my feedback: I\u2019ve been a little worried lately that some meals feel heavy or a bit salty and might not be very balanced nutritionally, so if you want honest thoughts I\u2019ll tell you what I liked and one or two small tweaks that could help."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Esmeralda \u2014 I really appreciate it. I\u2019ll bring you a small taste with the sauce on the side so you can try it plain first; if it\u2019s too salty or heavy I\u2019ll take note and adjust. Tell me one specific tweak you\u2019d prefer and I\u2019ll make it next time."
+    },
+    {
+      "turn": 3,
+      "speaker": "Esmeralda Solis",
+      "content": "Thanks, Oliver \u2014 the sauce on the side is perfect. One specific tweak I\u2019d suggest is using a touch less salt and lightening any heavy cream or butter with a bit of stock or lemon; adding a few greens or a whole-grain side would also make it feel more balanced and nourishing. I\u2019ll try a bite and give you gentle, honest feedback."
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Esmeralda \u2014 I really appreciate the thoughtful feedback. I\u2019ll bring you a small bite now with the sauce on the side; I\u2019ll also note less salt and thin the cream with a touch of stock or lemon next time, and I can add some greens or a whole-grain side if you\u2019d like. If it\u2019s not your thing, no worries \u2014 I\u2019ll order something else and take your honest thoughts to heart."
+    },
+    {
+      "turn": 5,
+      "speaker": "Esmeralda Solis",
+      "content": "Thanks, Oliver \u2014 I really appreciate you bringing this. I\u2019ll try the bite now and give you gentle, specific feedback (likely about salt and adding a green side), and I\u2019m grateful you\u2019re willing to adjust."
+    },
+    {
+      "turn": 6,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Esmeralda \u2014 I really appreciate you trying this. I\u2019ve left the small plate with the sauce on the side by your seat, so take your time. If you\u2019d rather I step into the living room while you taste, say the word \u2014 I\u2019ll take whatever feedback you have to heart."
+    },
+    {
+      "turn": 7,
+      "speaker": "Esmeralda Solis",
+      "content": "Thanks, Oliver \u2014 I appreciate it. Could you step into the living room while I taste? I\u2019ll try one bite now and then give gentle, specific feedback (likely about salt and adding a green side)."
+    },
+    {
+      "turn": 8,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPTHPAYCARMR3QPJ09GTM0Q_p0",
+  "source_env_id": "01HJPTHPAYCARMR3QPJ09GTM0Q",
+  "source": "seed_sotopia_full",
+  "interaction_type": "crush_confession",
+  "scenario": "Two high school friends are at a sleepover, reminiscing about their school years. Agent1 has harbored a secret crush on Agent2 since 9th grade and once did something unusual to feel closer to them. Agent1 is now contemplating whether to confess this old secret to Agent2.",
+  "learner_goal": "Confess your past crush and the unusual act of taking their gum home to chew it, hoping to strengthen the bond or clear your conscience. (<extra_info>Extra information: You are uncertain how Agent2 will react to this old secret, but you feel it's time to be honest about your past feelings.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 5.0,
+    "secret": -10.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel stays true to his character, expressing vulnerability and social awkwardness consistent with the scenario description.\n[relationship] The air was cleared and Agent 2 responded with understanding and a lighthearted joke, potentially strengthening the bond.\n[knowledge] Samuel learned how Noah would react to his strange confession.\n[secret] Samuel revealed the specific secret he was instructed to confess (the gum heist and the crush).\n[social_rules] The agent followed the rules of social interaction for a confession.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Samuel successfully confessed both the crush and the unusual act of taking the gum, and cleared his conscience as intended.\n\n== partner (agent_2) ==\n[believability] Noah's reaction is mature and fits his role as a 40-year-old coach reacting to a decades-old high school story.\n[relationship] Noah maintained the friendship and handled the awkward information with grace.\n[knowledge] Noah gained significant and surprising information about Samuel's past feelings and behavior.\n[secret] Noah did not reveal his own secret identity.\n[social_rules] Noah maintained social norms and set a humorous boundary as requested.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Noah reacted with understanding, maintained the friendship, and set a clear boundary regarding 'gum heists'.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Noah, I need to tell you something embarrassing: back in ninth grade I had a crush on you, and to feel closer I once took one of your gum packs home and chewed it. I\u2019m really sorry \u2014 it was immature and strange, but it\u2019s been weighing on me and I wanted to be honest. I don\u2019t expect anything, I just wanted to clear the air."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Thanks for telling me \u2014 I appreciate the honesty. That\u2019s definitely odd, but I\u2019m not mad; ninth-grade awkwardness happens and I\u2019m glad you wanted to clear the air. We\u2019re good, just promise me no more gum heists and we\u2019ll move on."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

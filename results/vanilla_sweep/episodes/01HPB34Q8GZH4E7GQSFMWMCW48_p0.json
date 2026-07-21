@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB34Q8GZH4E7GQSFMWMCW48_p0",
+  "source_env_id": "01HPB34Q8GZH4E7GQSFMWMCW48",
+  "source": "seed_sotopia_full",
+  "interaction_type": "neighborhood_park",
+  "scenario": "Agent1 and Agent2 are acquaintances who usually greet each other during their regular evening jogs in the neighborhood park. Agent1, after having a bad experience with fast food the previous night, is feeling unwell and is considering skipping their evening jog for a health break. Agent2, who is a fitness enthusiast, believes in the 'no days off' philosophy and is surprised to see Agent1 considering a break. They meet in the park to discuss the importance of health and consistent exercise routines.",
+  "learner_goal": "You are feeling unwell and want to convince Agent2 that taking a break is necessary for recovery. <extra_info> You believe that rest is an important aspect of maintaining overall health. </extra_info><clarification_hint> Explain your condition without getting into unpleasant details. </clarification_hint><strategy_hint> Emphasize the importance of listening to one's body and taking proactive health measures. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle stays in character as a student who is feeling unwell, maintaining a polite but firm stance on her need for rest.\n[relationship] The interaction was respectful and resulted in mutual understanding, strengthening their acquaintance.\n[knowledge] She learned that Donovan is willing to be flexible with his 'no days off' philosophy when presented with a health reason.\n[secret] She did not reveal her secret about studying magic.\n[social_rules] She followed all social norms for a polite disagreement and health-related boundary setting.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Isabelle successfully convinced Donovan that she needed a full night of rest for recovery and secured his agreement to skip the run.\n\n== partner (agent_2) ==\n[believability] Donovan's behavior aligns with a fitness enthusiast who is also a logical software developer, pivoting to recovery as a long-term strategy.\n[relationship] He showed empathy and flexibility, which likely improved his standing with Isabelle.\n[knowledge] He learned about Isabelle's current health state and her approach to recovery.\n[secret] He did not reveal his secret about classified information.\n[social_rules] He was supportive and encouraged health-conscious behavior.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] He successfully provided alternatives and encouragement, ensuring she stayed committed to the 'long game' of consistency even though she chose full rest tonight.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Donovan, I\u2019m really feeling off after some bad fast food last night \u2014 a bit queasy and lightheaded \u2014 so I need to skip tonight\u2019s run. I get the \u2018no days off\u2019 mindset, but rest is part of staying healthy; listening to your body now helps you recover sooner rather than making it worse. Let\u2019s pick up our usual jog tomorrow or do a gentle walk once I\u2019m back on my feet."
+    },
+    {
+      "turn": 1,
+      "speaker": "Donovan Reeves",
+      "content": "Totally makes sense to rest if you\u2019re feeling queasy. If you want to keep the habit without pushing yourself, how about a gentle 15\u201320 minute walk or some light stretching and extra fluids tonight, and we pick up the usual jog tomorrow if you feel better? If you\u2019d rather fully rest, that\u2019s fine too \u2014 get some recovery and tell me tomorrow what works."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "Thanks, Donovan \u2014 I appreciate the offer. I think I\u2019ll fully rest tonight, sip fluids and sleep it off so I don\u2019t risk making it worse; listening to my body now will help me recover faster. I\u2019ll check in tomorrow and we can either do our usual jog or a gentle walk depending on how I feel."
+    },
+    {
+      "turn": 3,
+      "speaker": "Donovan Reeves",
+      "content": "Good call \u2014 rest, hydrate, and get some sleep. Consistency is a long game; skipping one run to recover actually helps you stay consistent overall. Check in tomorrow and if you\u2019re up we\u2019ll do the usual jog or an easy 15\u201320 minute walk and some stretches, whatever feels right."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB34FWZDATJJKPDGRF1KPG9_p0",
+  "source_env_id": "01HPB34FWZDATJJKPDGRF1KPG9",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_planning",
+  "scenario": "Agent1 is considering a weekend outing and thinks a visit to the zoo would be a fun activity. Agent1 recalls that Agent2, an acquaintance from a local community group, mentioned a fondness for animals during a previous encounter. Agent1 decides to reach out to Agent2 with an invitation to join the zoo visit. The relationship between the two is 'acquaintance', as they have interacted a few times in group settings but have not yet developed a close friendship.",
+  "learner_goal": "Your goal is to organize a pleasant and memorable outing to the zoo with a companion who shares an interest in animals. <extra_info> You are aware that Agent2's schedule might be tight, and they may have other preferences for weekend activities. </extra_info><clarification_hint> You might need to propose a flexible plan that accommodates Agent2's availability and interests. </clarification_hint><strategy_hint> Consider suggesting multiple dates or alternative activities to ensure that both of you can enjoy the outing. </strategy_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's communication is consistent with a professional software developer and acquaintance; she is polite, organized, and offers clear options.\n[relationship] Naomi successfully transitioned a casual acquaintance into a concrete social plan, strengthening the bond through shared interests.\n[knowledge] She learned Donovan's weekend availability, his specific interest in Saturday morning, and that he is busy with coding-comp prep on Sunday.\n[secret] Naomi's secret online alter ego remained undisclosed.\n[social_rules] Naomi followed all social norms for making plans with an acquaintance, offering flexibility and low-pressure options.\n[financial_and_material_benefits] No material gain or loss occurred, though she offered to purchase tickets ahead of time.\n[goal] Naomi successfully organized a zoo outing for Saturday at 10:00 AM, including a coffee meet-up, effectively managing Agent 2's schedule constraints.\n\n== partner (agent_2) ==\n[believability] Donovan's responses are natural, reflecting his interests in coding and his stated preference for Saturday.\n[relationship] Donovan reciprocated the interest in building a friendship and committed to a one-on-one outing.\n[knowledge] He learned Naomi's availability and her willingness to be flexible with plans.\n[secret] Donovan's hacking activities and government data leaks were not mentioned.\n[social_rules] Donovan was polite and responsive to the invitation.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Donovan successfully weighed his options, expressed interest in the zoo, and fit the outing into his schedule while maintaining his Sunday commitment.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Donovan \u2014 it\u2019s Naomi from the coding comps. I remember you mentioned you like animals; I\u2019m thinking of a relaxed trip to the city zoo this weekend and wondered if you\u2019d like to join. I\u2019m free Saturday morning or Sunday afternoon, but I can shift to another weekend or we could do something low-key instead (botanical garden or coffee) if that suits you better. No pressure\u2014just thought it could be a fun, easy outing."
+    },
+    {
+      "turn": 1,
+      "speaker": "Donovan Reeves",
+      "content": "Hey Naomi \u2014 nice to hear from you. The zoo sounds great and I\u2019d be up for it; Saturday morning works best for me. If that doesn\u2019t work, I\u2019m tied up Sunday afternoon with some coding-comp prep, so the botanical garden or coffee another day would also be perfect \u2014 what time/place were you thinking?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Perfect \u2014 Saturday morning works for me too. How does 10:00 AM at the zoo's main entrance (by the fountain) sound? I can grab tickets online beforehand unless you'd prefer buying at the gate, and I'm happy to meet for coffee first if you'd rather ease into it. If 10 doesn't work, I can do 9:30 or later."
+    },
+    {
+      "turn": 3,
+      "speaker": "Donovan Reeves",
+      "content": "10:00 AM at the fountain works great. If you can grab tickets online that\u2019d be ideal, otherwise I can buy at the gate. I\u2019m up for coffee beforehand too\u2014how about 9:15 at the cafe by the zoo entrance, or I\u2019ll meet you at 10 if that\u2019s easier. See you Saturday!"
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

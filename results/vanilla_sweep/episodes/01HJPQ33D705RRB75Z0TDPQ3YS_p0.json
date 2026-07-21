@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HJPQ33D705RRB75Z0TDPQ3YS_p0",
+  "source_env_id": "01HJPQ33D705RRB75Z0TDPQ3YS",
+  "source": "seed_sotopia_full",
+  "interaction_type": "childhood_fear",
+  "scenario": "Agent1 is hosting a small get-together at their home. Agent2, a friend of one of the invited guests, arrives unannounced and hides under the bed in the spare room, hoping to surprise the mutual friend. Agent1 discovers someone is hiding and intends to find out who it is and ensure the safety of their home.",
+  "learner_goal": "Agent1 wants to identify the unexpected guest and ensure the safety of the home <extra_info>without causing unnecessary alarm among other guests</extra_info> <clarification_hint>and is willing to listen to a reasonable explanation</clarification_hint>.",
+  "scores": {
+    "believability": 7.0,
+    "relationship": 1.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Eli acts with the caution of a forensic psychiatrist, though his repetitive demands for Liam to keep his hands visible feel a bit excessive for a retired cop he knows personally. His tone is professional and controlled.\n[relationship] Eli maintains a professional and civil rapport with Liam, managing a potentially volatile situation with grace, which likely preserves their acquaintance status.\n[knowledge] Eli successfully identified the intruder, confirmed his identity as an acquaintance, and discovered his specific motive (surprising Mark).\n[secret] Eli did not reveal his secret about funding a student.\n[social_rules] He somewhat violates the 'unnecessary alarm' part of his goal by repeatedly announcing the situation to the entire group of guests in a way that might feel high-stakes, though it was done to ensure safety.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Eli identified the guest and ensured safety by having him sit in view. However, the goal of doing so 'without causing unnecessary alarm' was partially compromised by the repetitive and somewhat dramatic public questioning of Mark in front of the other guests. Furthermore, the final resolution of whether Liam stays remains under Mark's unilateral discretion.\n\n== partner (agent_2) ==\n[believability] Liam's compliance and apologetic tone are consistent with a retired officer caught in a socially awkward and potentially misunderstood prank.\n[relationship] While he was cooperative, hiding under a bed in an acquaintance's home is a significant boundary violation that offsets the rapport built through his compliance.\n[knowledge] He learned that Eli is very cautious and that Mark is currently present at the party.\n[secret] Liam did not reveal his secret about letting a criminal go.\n[social_rules] Hiding under a bed in someone's home unannounced is a major breach of social etiquette and privacy, regardless of intent.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Liam failed to remain hidden until the right moment; he was caught immediately and the surprise was spoiled by the host's public announcement before he could see Mark.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Eli Dawson",
+      "content": "said: \"Hi\u2014this is Eli, the host. I heard someone in the spare room; please come out and tell me your name and why you're here. If this was meant to be a surprise for a friend, I'm willing to listen, but I need to make sure my home and everyone here is safe, so please come out now.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Liam Johnson",
+      "content": "Hi, Eli \u2014 it\u2019s Liam Johnson. I was trying to surprise a friend and I\u2019m under the spare-room bed; I\u2019m sorry for the scare. I understand your concern about safety\u2014if you want me to come out right now, I will."
+    },
+    {
+      "turn": 2,
+      "speaker": "Eli Dawson",
+      "content": "Liam \u2014 thanks for letting me know. I remember you from the case. Please come out slowly with your hands visible and sit where I can see you so I can make sure everyone\u2019s safe; tell me who you were trying to surprise and we\u2019ll sort this out calmly."
+    },
+    {
+      "turn": 3,
+      "speaker": "Liam Johnson",
+      "content": "Okay \u2014 I'll come out now, slowly, with my hands visible. I was trying to surprise a friend of one of your guests and didn't mean to cause alarm; where would you like me to sit?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Eli Dawson",
+      "content": "All right, Liam \u2014 thanks for coming out. Sit on the armchair by the window so I can see you and keep your hands visible. Who were you trying to surprise, and please stay put for a moment while I let the others know what's happening calmly."
+    },
+    {
+      "turn": 5,
+      "speaker": "Liam Johnson",
+      "content": "Alright, Eli \u2014 I\u2019m sitting in the armchair by the window now with my hands visible. I was trying to surprise your guest Mark Thompson; he\u2019s an old friend. I\u2019ll stay put while you let everyone know."
+    },
+    {
+      "turn": 6,
+      "speaker": "Eli Dawson",
+      "content": "said: \"Thanks, Liam \u2014 I appreciate you coming out and staying put. I\u2019m going to let the other guests know you\u2019re here and that you were trying to surprise Mark; please keep your hands visible and remain seated while I do that.\""
+    },
+    {
+      "turn": 7,
+      "speaker": "Liam Johnson",
+      "content": "Thanks, Eli \u2014 I appreciate it. I\u2019ll stay right here with my hands visible. Sorry again for the scare; if you\u2019d prefer I step outside or wait in my car until Mark\u2019s ready, just say the word."
+    },
+    {
+      "turn": 8,
+      "speaker": "Eli Dawson",
+      "content": "Thanks, Liam \u2014 I appreciate it. Please stay seated with your hands visible for a few minutes while I quietly let Mark and the other guests know; I'll be right back and then we'll decide whether you should wait inside or step outside."
+    },
+    {
+      "turn": 9,
+      "speaker": "Liam Johnson",
+      "content": "Thanks, Eli \u2014 I\u2019ll stay right here with my hands visible. Tell Mark I\u2019m trying to surprise him; I\u2019m happy to wait outside or in my car if you prefer, just say the word."
+    },
+    {
+      "turn": 10,
+      "speaker": "Eli Dawson",
+      "content": "Liam \u2014 thank you. I\u2019m going to quietly tell Mark and the others what\u2019s happened; please remain seated with your hands visible for a couple of minutes. If Mark prefers you wait outside I\u2019ll ask you to step out then, otherwise stay put and I\u2019ll be right back."
+    },
+    {
+      "turn": 11,
+      "speaker": "Liam Johnson",
+      "content": "Understood, Eli \u2014 I'll stay seated with my hands visible. Thanks for handling this; tell Mark I was only trying to surprise him and I'll step outside if that's what he prefers."
+    },
+    {
+      "turn": 12,
+      "speaker": "Eli Dawson",
+      "content": "said: \"Quick update, everyone\u2014no need to worry. The person in the spare room is Liam Johnson; he says he was trying to surprise Mark and he's seated by the window with his hands visible. Mark, would you like him to wait outside or is it okay for him to stay?\""
+    },
+    {
+      "turn": 13,
+      "speaker": "Liam Johnson",
+      "content": "said: \"Thanks, Eli. Mark \u2014 whatever you prefer, I can wait outside or stay inside; I don't want to spoil the surprise and I'm sorry again for the scare.\""
+    },
+    {
+      "turn": 14,
+      "speaker": "Eli Dawson",
+      "content": "said: \"Mark\u2014could you tell us whether you\u2019d like Liam to stay or wait outside? Liam, thanks for staying put; please remain seated for a moment and I\u2019ll escort you out quietly if Mark prefers that.\""
+    },
+    {
+      "turn": 15,
+      "speaker": "Liam Johnson",
+      "content": "said: \"Mark \u2014 it\u2019s your call. I\u2019m sorry again for the scare; I can step outside and wait in my car, or stay quietly inside if you\u2019d prefer. Whatever you decide, I\u2019ll follow it.\""
+    },
+    {
+      "turn": 16,
+      "speaker": "Eli Dawson",
+      "content": "said: \"Mark \u2014 a quick yes or no will do: would you prefer Liam wait outside or is it okay for him to stay quietly? Liam, thanks again; please keep your hands visible and remain seated just until Mark answers so everyone stays comfortable.\""
+    },
+    {
+      "turn": 17,
+      "speaker": "Liam Johnson",
+      "content": "said: \"Thanks, Eli \u2014 I\u2019ll stay put with my hands visible. Mark \u2014 take your time; when you\u2019re ready say the word and I\u2019ll step outside quietly, or I can stay if you prefer.\""
+    },
+    {
+      "turn": 18,
+      "speaker": "Eli Dawson",
+      "content": "said: \"Mark \u2014 quick one-word reply will do: say 'stay' if you want Liam to remain quietly, or 'outside' if you'd prefer him to wait in his car. Liam, thank you \u2014 please keep seated with your hands visible for another minute while we wait for Mark's answer.\""
+    },
+    {
+      "turn": 19,
+      "speaker": "Liam Johnson",
+      "content": "said: \"No problem \u2014 I\u2019ll stay seated with my hands visible. Mark, take your time; I\u2019ll step outside quietly if you say \u2018outside\u2019. Thanks, Eli, for handling this.\""
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "scenario_id": "01HMZ2BKT1DSFFQ8BSKF18Y5D5_p0",
+  "source_env_id": "01HMZ2BKT1DSFFQ8BSKF18Y5D5",
+  "source": "seed_sotopia_full",
+  "interaction_type": "psychological_wellness",
+  "scenario": "Agent1 has been experiencing anxiety due to their persistent thumb-sucking habit, which has become a source of embarrassment in social situations. Agent2 is a behavioral therapist with a track record of helping adults overcome ingrained habits. Agent1 approaches Agent2 for a therapy session to explore methods for breaking their thumb-sucking habit. The relationship between Agent1 and Agent2 is 'stranger', as they are meeting for the first time in a professional setting.",
+  "learner_goal": "Your goal is to find effective strategies to manage and eventually eliminate your thumb-sucking habit. <extra_info> You are skeptical about the effectiveness of therapy and concerned about the judgment from others. </extra_info><clarification_hint>You may need to discuss your previous attempts to quit and what triggers your habit. </clarification_hint><strategy_hint>Be honest about your habit's impact on your life and express willingness to follow the therapeutic process. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 10.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 18,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Rafael maintained his persona as a high-stakes surgeon effectively. He balanced his skepticism with a professional willingness to adopt a structured plan, and his technical questions regarding the operating room (OR) environment were highly consistent with his background.\n[relationship] The relationship transitioned from casual acquaintances with a shared hobby to a professional therapeutic alliance based on mutual respect and trust.\n[knowledge] Rafael acquired a comprehensive set of strategies: habit reversal training, discrete competing responses for different environments (OR and social), a pre-surgical ritual, and a specific relapse-prevention mindset.\n[secret] The agent did not reveal the secret regarding medical school cheating.\n[social_rules] The agent adhered to professional etiquette throughout the interaction.\n[financial_and_material_benefits] No material gains or losses occurred in this exchange.\n[goal] Rafael successfully obtained a detailed, personalized plan with specific strategies to manage his habit, addressed his triggers (surgery/fatigue), and overcame his skepticism to commit to a trial.\n\n== partner (agent_2) ==\n[believability] Oliver provided highly professional, evidence-based behavioral therapy advice (Habit Reversal Training) that was perfectly tailored to the client's specific needs and professional constraints.\n[relationship] Oliver successfully established a professional rapport, moving the relationship from 'stranger/acquaintance' to a committed therapist-client bond.\n[knowledge] Oliver gained significant insight into Rafael's triggers (post-surgery, exhaustion), frequency of the habit, and specific psychological barriers (skepticism and fear of judgment).\n[secret] The agent did not reveal the secret regarding feelings for his neighbor.\n[social_rules] Oliver maintained a supportive, non-judgmental, and professional tone throughout.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Oliver fully assessed the client's habit, addressed concerns about stigma and skepticism, and developed a complete 8-week plan with mutual commitment for follow-up sessions.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "Oliver \u2014 it's Rafael Cortez from the history society. I need help with a persistent thumb\u2011sucking habit I've had since childhood that's become a real source of embarrassment and anxiety in social and professional situations. I've tried gum, bitter polish, bandages and keeping my hands busy but I relapse under stress or fatigue; I'm skeptical about therapy and worried about judgment, yet willing to try a structured approach \u2014 how would you proceed with an adult habit like this?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "Rafael \u2014 thanks for reaching out; I can hear how frustrating and anxiety\u2011provoking this has become, and I\u2019ll be non\u2011judgmental and practical about it. I\u2019d begin with a brief assessment of when and how often the thumb\u2011sucking happens, typical triggers, what you\u2019ve already tried and your readiness to change, then tailor an evidence\u2011based plan (habit reversal training: awareness + a competing response, stimulus control, stress\u2011management/mindfulness, and relapse prevention) with weekly check\u2011ins. If that sounds acceptable, may I ask a few quick questions now so we can start shaping a personalized plan?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "Yes \u2014 go ahead and ask. A bit of background: it\u2019s been with me since childhood and currently happens several times a day, especially when I\u2019m stressed (before/after demanding surgeries), fatigued, or bored in the evenings, and sometimes in social situations when I feel judged. I\u2019ve tried gum, bitter polish, bandages, fidget tools and keeping my hands busy \u2014 they helped briefly but I relapse under stress or exhaustion. I\u2019m willing to try a structured plan though I\u2019m skeptical, so ask whatever you need to shape it."
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "That background is very helpful \u2014 thank you for the detail, Rafael. A few quick questions to tailor the plan: on a typical day about how many times does it happen and how long is each episode, how strong are the urges on a 0\u201310 scale and which situations trigger it most reliably, and do you have any oral/dental issues or medications I should know about? Lastly, would you be willing to try a specific competing response (e.g., clenching your fist or occupying your hands) plus a brief daily mindfulness practice and a weekly 15\u2011minute check\u2011in to monitor progress?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Rafael Cortez",
+      "content": "On a typical day it happens about 6\u201310 times, usually for 30\u201390 seconds per episode (longer when I'm exhausted). Urges are about 7\u20138/10 around surgeries or when fatigued and 3\u20134/10 otherwise; reliable triggers are pre/post demanding operations, evening boredom, and situations where I feel judged. I\u2019m on no regular medications and have no major dental issues, though I have a persistent callus on the thumb and some nail damage from years of sucking. I\u2019m willing to try a discreet competing response (clench my fist or press the thumb into my palm), a brief daily mindfulness practice (5\u201310 minutes), and weekly 15\u2011minute check\u2011ins \u2014 I\u2019m skeptical but willing to commit to a structured, practical plan."
+    },
+    {
+      "turn": 5,
+      "speaker": "Oliver Thompson",
+      "content": "Great \u2014 thanks, Rafael. Here\u2019s a practical 8\u2011week plan: 1) start awareness logging (note each episode, trigger, urge strength and duration), 2) habit reversal training \u2014 practice a discreet competing response when the urge hits (options: clench your fist, press your thumb into your palm, or hold a small object) for the first 60\u201390 seconds, 3) stimulus control and pre\u2011planning for high\u2011risk times (evenings, post\u2011surgery, fatigue), 4) 5\u201310 minutes daily mindfulness and brief breathing exercises for acute urges, and 5) relapse\u2011prevention we\u2019ll refine in weekly 15\u2011minute check\u2011ins. For this week: pick which competing response feels most doable, begin logging episodes and immediately use the chosen response when an urge arises, and tell me a preferred day/time for our weekly 15\u2011minute check\u2011ins and a start date that works for you. I\u2019ll be non\u2011judgmental and practical throughout \u2014 any questions or concerns about those steps?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Rafael Cortez",
+      "content": "Alright \u2014 I\u2019ll go with pressing my thumb into my palm as the competing response; it seems discreet and doable in most settings. I\u2019ll start logging episodes, do the 5\u201310 minute daily mindfulness, and commit to weekly 15\u2011minute check\u2011ins on Wednesdays at 19:00 starting next Wednesday. One question: during operations my hands are occupied and urges spike \u2014 what\u2019s the best strategy for those high\u2011risk surgical times?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Oliver Thompson",
+      "content": "Good question \u2014 for times when your hands are occupied I\u2019d switch to a hands\u2011free competing response you can practice until it becomes automatic. Two easy, discreet options: press the tip of your tongue to the roof of your mouth (or behind your front teeth) or gently clench your jaw/hold your teeth together for the first 30\u201360 seconds of the urge, paired with a 10\u201320 second slow breathing or \u201curge\u2011surfing\u201d (notice the urge without acting). Also plan a brief mindfulness/grounding routine just before operations, prioritize rest/hydration, and rehearse the hands\u2011free response beforehand \u2014 want to add one of these into this week\u2019s plan so we can monitor how it works in your Wednesday check\u2011ins?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Rafael Cortez",
+      "content": "I\u2019ll add the tongue\u2011to\u2011roof-of-mouth hands\u2011free response \u2014 seems most discreet during operations. I\u2019ll rehearse it with a brief 30\u201360 second grounding/breathing routine before each surgery so it\u2019s more automatic when urges spike. Confirming our Wednesday 19:00 check\u2011ins starting next week \u2014 one quick question: any practical cue or rehearsal you recommend I use immediately before scrubbing in so it carries over into the OR?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Oliver Thompson",
+      "content": "A simple pre\u2011OR ritual works well: take 20\u201330 seconds after you finish scrubbing to do two slow diaphragmatic breaths, press the tip of your tongue to the roof of your mouth and silently say a short cue word (e.g., \u201csteady\u201d), then rehearse the hands\u2011free response for 30\u201360 seconds so it feels automatic when an urge hits. Anchor that rehearsal to a consistent, existing motion (adjusting your scrub cap, tying your gown, or placing your hands on the table) so the cue reliably transfers into the OR. Confirming our Wednesday 19:00 check\u2011ins starting next week \u2014 we\u2019ll review how the cue carried over and tweak it if needed."
+    },
+    {
+      "turn": 10,
+      "speaker": "Rafael Cortez",
+      "content": "That sounds workable \u2014 I\u2019ll make the 20\u201330 second post\u2011scrub ritual part of my routine, anchor it to adjusting my scrub cap, silently say \u201csteady,\u201d and rehearse the tongue\u2011to\u2011roof response for 30\u201360 seconds. I\u2019ll log OR episodes separately (urge strength, whether I used the hands\u2011free response, and outcome). Confirming Wednesdays at 19:00 starting next week for our 15\u2011minute check\u2011ins \u2014 I\u2019m committed to giving this a fair trial."
+    },
+    {
+      "turn": 11,
+      "speaker": "Oliver Thompson",
+      "content": "Excellent \u2014 I appreciate your commitment, Rafael. Confirming our 15\u2011minute check\u2011ins Wednesdays at 19:00 starting next Wednesday. For this week, focus on logging each episode and rehearsing the 20\u201330s post\u2011scrub ritual anchored to adjusting your cap; bring your log to the first check\u2011in and we\u2019ll review what worked and tweak the plan as needed. If anything urgent comes up before then, message me and we\u2019ll address it."
+    },
+    {
+      "turn": 12,
+      "speaker": "Rafael Cortez",
+      "content": "Thanks, Oliver \u2014 I\u2019ll start next Wednesday and keep our Wednesday 19:00 15\u2011minute check\u2011ins. One quick thing before we finish: if I slip (especially when exhausted), what\u2019s a brief, non\u2011judgmental self\u2011response you recommend I use immediately afterward so I don\u2019t get stuck in guilt and risk a longer relapse?"
+    },
+    {
+      "turn": 13,
+      "speaker": "Oliver Thompson",
+      "content": "If you slip, try a quick, non\u2011judgmental three\u2011step reset: 1) Pause and take two slow diaphragmatic breaths, 2) Notice and label it calmly (\u201cThat was a slip, not a failure\u201d), 3) Reorient with a short compassionate cue (\u201cOkay \u2014 I\u2019ll try again\u201d) and immediately use your chosen competing response for 30\u201360s. Afterward, log the episode (trigger, urge strength, what you did) as useful data, and avoid punishment \u2014 slips are information we use to tweak the plan. I\u2019ll review any slips in our Wednesday check\u2011ins and we\u2019ll adjust what\u2019s not working."
+    },
+    {
+      "turn": 14,
+      "speaker": "Rafael Cortez",
+      "content": "That three\u2011step reset sounds practical \u2014 I\u2019ll use two slow breaths, label it (\u201cthat was a slip, not a failure\u201d) and silently say \u201csteady \u2014 try again,\u201d then immediately use the tongue\u2011to\u2011roof competing response. I\u2019ll log each slip (trigger, urge strength, what I did) and bring the notes to our Wednesday check\u2011ins. Thanks \u2014 I\u2019m more comfortable giving this a proper try now."
+    },
+    {
+      "turn": 15,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Rafael \u2014 I appreciate your commitment. I\u2019ll expect our first 15\u2011minute check\u2011in next Wednesday at 19:00; bring your log and any notes about slips or OR episodes and we\u2019ll tweak the plan as needed. If anything urgent comes up before then, message me and I\u2019ll respond; otherwise, see you next Wednesday."
+    },
+    {
+      "turn": 16,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

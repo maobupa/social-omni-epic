@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ34164S4F18XWW9NNM0JB_p0",
+  "source_env_id": "01HJPQ34164S4F18XWW9NNM0JB",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_by_prompt",
+  "scenario": "Two friends, who are fitness enthusiasts, challenge each other to a month-long fitness competition. The goal is to see who can improve their personal best time in a 5K run the most. Both are competitive and want to win, but they also want to ensure the competition remains friendly and motivating.",
+  "learner_goal": "Encourage agent2 to push their limits and improve their 5K run time (<extra_info>Extra information: you have been training consistently and believe that a healthy competition will help both of you reach new personal records.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's dialogue is consistent with his character as a disciplined, somewhat introverted lighthouse keeper who values craftsmanship (the seascape print prize). He stayed on task and initiated the challenge naturally.\n[relationship] The agents solidified their friendship through a shared goal and a structured plan for regular interaction over the next month.\n[knowledge] Learned that Noah has a swimming pool and is willing to host him there for recovery.\n[secret] Did not reveal his past involvement in a cult.\n[social_rules] Followed all social norms for a friendly competition between acquaintances.\n[financial_and_material_benefits] The potential gain of coffee is balanced by the potential loss of a custom painting.\n[goal] Finnegan successfully convinced Noah to participate in a structured, month-long competition with weekly meetups to push their limits, which was his primary objective.\n\n== partner (agent_2) ==\n[believability] Noah's energetic response and focus on metrics/prizes fit his persona as a coach and his outgoing personality.\n[relationship] Successfully deepened the bond with Finnegan by offering his home (pool) and organizing weekly activities.\n[knowledge] Confirmed Finnegan's commitment to training and his willingness to paint for the competition.\n[secret] Maintained his secret identity as a stand-up comedian.\n[social_rules] Behaved in a friendly, encouraging manner consistent with his role as a coach.\n[financial_and_material_benefits] Committed to providing prizes (protein bars) and pool access.\n[goal] Noah successfully implemented a multi-tiered reward system (weekly prizes, coffee, and a final grand prize) that Finnegan explicitly agreed to.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "said: \"Noah \u2014 I've been training steadily and thought we should make it official: a friendly, month-long challenge to see who can shave off the most time from their 5K. Let's do a baseline run this weekend, meet once a week to push each other, and pick a final race date in four weeks \u2014 loser buys coffee, winner gets a small seascape print I paint. You in?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "I'm in \u2014 love the idea. Baseline run this weekend works for me. To keep motivation high, let's do a simple reward system: loser buys coffee after each weekly meet (keeps the stakes friendly), and each week the person with the biggest week-to-week improvement gets a small prize (I can bring protein bars or offer a recovery dip in my pool). Final winner gets your seascape print plus the choice of celebration (pool recovery hangout at my place or a post-race dinner), and we'll measure by percent improvement over the month with fastest final time as the tie-breaker. Sound good?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "Perfect \u2014 that plan sounds fair and motivating. Percent improvement with fastest final time as tie-breaker works for me. How about we do the baseline this Saturday at 8 AM along the Harbor Bay path and keep our weekly meetups at the same time? Loser buys coffee and I\u2019ll have a small seascape ready for the winner."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Perfect \u2014 Saturday 8 AM at Harbor Bay it is. I\u2019ll bring protein bars and a stopwatch, and I\u2019m happy to host a recovery dip at my pool (weather permitting) as a weekly prize option; loser buys coffee after each meetup and the biggest week-to-week improver gets the small prize. We\u2019ll measure percent improvement ((baseline \u2212 final)/baseline \u00d7 100) with fastest final time as the tie-breaker \u2014 want me to set up a shared note to log times and splits?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

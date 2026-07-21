@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HMZ2BMTCD15SB6GCJP4H0664_p0",
+  "source_env_id": "01HMZ2BMTCD15SB6GCJP4H0664",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_prompt",
+  "scenario": "In a crowded public space, Agent1 observes Agent2 suddenly collapse to the ground. Agent1 rushes to assist and recognizes the signs of a cardiac arrest. Agent1 has basic first aid knowledge and begins to perform chest compressions, but hesitates to do mouth-to-mouth resuscitation due to concerns about transmissible diseases. Agent2 is unresponsive and in critical need of both compressions and ventilations to survive. Agent1 must quickly decide how to proceed to maximize Agent2's chances of survival while also considering their own health and safety.",
+  "learner_goal": "Determine the best course of action to assist Agent2 while minimizing personal health risks (<extra_info>Extra information: Agent1 knows that using a barrier device can reduce the risk of disease transmission during mouth-to-mouth.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] William acts like a trained chef/first responder would in a crisis: authoritative, repetitive to ensure clarity under stress, and focused on safety protocols. His behavior remains consistent with his goal of balancing lifesaving with personal health risks.\n[relationship] William and Ava formed a strong bond through a high-stress life-or-death situation, transitioning from acquaintances to a coordinated emergency response team.\n[knowledge] He learned that Ava is capable of finding medical equipment quickly and is willing to perform ventilations herself, which shifted his tactical approach.\n[secret] William did not reveal his secret about sabotaging a competitor.\n[social_rules] He followed emergency social norms, taking a leadership role and communicating clearly.\n[financial_and_material_benefits] No financial or material gains or losses occurred for the agent.\n[goal] William successfully secured a barrier device (face shield) and gloves, allowing him to provide full CPR (compressions and breaths) while mitigating his own risk of disease transmission, exactly as planned.\n\n== partner (agent_2) ==\n[believability] While the actions were helpful, the dialogue became highly repetitive and robotic. Ava repeated the exact same instructions and status updates multiple times in a way that felt like a loop rather than a natural conversation, especially between turns 4, 6, and 8.\n[relationship] Ava worked closely with William, building trust and a mutual history of saving a life together.\n[knowledge] Ava successfully located the AED and learned how to coordinate its use with chest compressions.\n[secret] Ava did not reveal their secret regarding their sexuality or family.\n[social_rules] Ava adhered to the social rules of an emergency situation, effectively delegating tasks to bystanders.\n[financial_and_material_benefits] No financial or material gains or losses occurred for the agent.\n[goal] Ava successfully located an AED, brought it to the scene, ensured 911 was called, and integrated the device into the CPR cycle.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "William Brown",
+      "content": "said: \"Call 911 now and get an AED \u2014 and someone bring a CPR face shield or any barrier device and gloves if you can. Ava, stay with me \u2014 I\u2019ll keep doing firm chest compressions; if a barrier shows up I\u2019ll add breaths, but if not I\u2019ll continue hands-only until EMS arrives.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "said: \"On it \u2014 I\u2019ll run and find the nearest AED and a CPR face shield. Someone please grab gloves and meet me here. Keep compressions up, William; I\u2019ll be right back.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "William Brown",
+      "content": "Good \u2014 hurry. Tell 911 exactly where we are and ask them to send the AED to the main entrance; have someone wait there to flag them down. If you find a shield and gloves, hand them to me without touching the mouth and I\u2019ll add breaths; if not, I\u2019ll keep steady compressions. Keep talking to me \u2014 count out compressions with me."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "said: \"Someone call 911 right now \u2014 tell them our exact location and request an AED be sent to the main entrance, and have someone wait there to flag them down. Two people, please grab gloves and a CPR face shield and bring them here. I\u2019m running to the entrance to find the AED \u2014 keep compressions up, William, I\u2019ll be back fast.\""
+    },
+    {
+      "turn": 4,
+      "speaker": "William Brown",
+      "content": "said: \"Keep compressions up \u2014 count with me aloud. If anyone finds an AED, CPR face shield, or gloves, bring them here and hand them to me without touching the patient's face; I\u2019ll add breaths only with a barrier, otherwise I\u2019ll continue hands\u2011only. Someone please wait at the main entrance to flag EMS and bring the AED here.\""
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Martinez",
+      "content": "said: \"I\u2019m calling 911 right now and telling them our exact location \u2014 ask them to send the AED to the main entrance and please have someone wait there to flag them down. I\u2019m running to the entrance to get the AED and a CPR face shield; someone else please grab gloves and meet me there, and keep compressions steady, William.\""
+    },
+    {
+      "turn": 6,
+      "speaker": "William Brown",
+      "content": "said: \"Keep compressions steady \u2014 count with me. Ava, get the AED and tell 911 to send it to the main entrance and have someone meet them; someone at the entrance please flag them down. If anyone has gloves and a CPR face shield or a pocket mask, hand them to me without touching his face; otherwise I\u2019ll continue hands\u2011only until EMS arrives.\""
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Martinez",
+      "content": "said: \"Found the AED, a CPR face shield, and gloves \u2014 bringing them back now. 911 confirms EMS is en route and someone will wait at the main entrance to flag them down. William, keep compressions steady; I\u2019ll be back in a few seconds.\""
+    },
+    {
+      "turn": 8,
+      "speaker": "William Brown",
+      "content": "said: \"Good \u2014 bring them here fast and hand me the gloves and CPR face shield without touching his face. Someone turn on the AED and bring it to his left side and follow the voice prompts; I\u2019ll keep compressions and only pause when the AED tells us to analyze or deliver a shock. Ava, if you can, help me put gloves on and get the shield ready.\""
+    },
+    {
+      "turn": 9,
+      "speaker": "Ava Martinez",
+      "content": "said: \"Here \u2014 gloves and the CPR face shield. I\u2019ll help you put the gloves on and get the shield ready; someone please turn on the AED and bring it to his left side now and follow the voice prompts. Keep compressions steady, William \u2014 I\u2019m right here.\""
+    },
+    {
+      "turn": 10,
+      "speaker": "William Brown",
+      "content": "said: \"Okay \u2014 help me get these gloves on fast. Ava, hold the CPR face shield over his mouth and nose; I\u2019ll do 30 compressions, then give two breaths through the shield watching for chest rise, and immediately resume compressions. Whoever has the AED, stick the pads on now and follow the voice prompts \u2014 everyone clear when it tells us to analyze or shock.\""
+    },
+    {
+      "turn": 11,
+      "speaker": "Ava Martinez",
+      "content": "said: \"On it \u2014 helping you get the gloves on now. I\u2019ll hold the CPR face shield over his mouth and nose for the breaths; someone please turn the AED on, put the pads on his bare chest, and follow the voice prompts. If anyone here is trained in advanced first aid or certified in CPR/AED, please take over compressions or coach us; clear when the AED tells us to analyze or shock.\""
+    },
+    {
+      "turn": 12,
+      "speaker": "William Brown",
+      "content": "said: \"Someone turn the AED on and attach the pads now \u2014 follow its voice prompts and be ready to clear when it analyzes or shocks. Ava, are you comfortable giving the two breaths through the face shield after my 30 compressions? If not, say so now and I\u2019ll do them with the shield; keep counting compressions with me \u2014 ready, start compressions.\""
+    },
+    {
+      "turn": 13,
+      "speaker": "Ava Martinez",
+      "content": "said: \"I\u2019m comfortable \u2014 I\u2019ll give two breaths through the face shield after your 30 compressions. Keep counting compressions with me; I\u2019m ready. Start compressions now.\""
+    },
+    {
+      "turn": 14,
+      "speaker": "William Brown",
+      "content": "said: \"Starting compressions now \u2014 count with me. One, two, three...\""
+    },
+    {
+      "turn": 15,
+      "speaker": "Ava Martinez",
+      "content": "said: \"Counting with you \u2014 I\u2019m ready to give two breaths through the shield after your 30 compressions. Keep going, William, stay with us!\""
+    },
+    {
+      "turn": 16,
+      "speaker": "William Brown",
+      "content": "said: \"Keep counting with me \u2014 I\u2019m doing 30 compressions now. One, two, three... After 30, Ava give two breaths through the shield and watch for chest rise; if you don\u2019t see rise, resume compressions immediately and don\u2019t spend more than 10 seconds on breaths. Whoever\u2019s on the AED, be ready to analyze or shock and loudly call \u2018clear\u2019 before it delivers anything.\""
+    },
+    {
+      "turn": 17,
+      "speaker": "Ava Martinez",
+      "content": "said: \"Giving two breaths now through the shield \u2014 watching for chest rise. If there\u2019s no rise I\u2019ll resume compressions immediately and won\u2019t spend more than 10 seconds. Someone please make sure the AED is ready to analyze as soon as we stop compressions.\""
+    },
+    {
+      "turn": 18,
+      "speaker": "William Brown",
+      "content": "said: \"Resume compressions now \u2014 I\u2019m starting 30, count with me. Ava, keep the shield in place and watch for chest rise on those breaths; if you didn\u2019t see rise, tell me and we\u2019ll go straight back to compressions. Whoever\u2019s on the AED, be ready to hit analyze when it tells you and loudly call \u2018clear\u2019 before any shock.\""
+    },
+    {
+      "turn": 19,
+      "speaker": "Ava Martinez",
+      "content": "said: \"Counting with you \u2014 I\u2019ll watch for chest rise and give two breaths after your 30. AED operator, be ready to analyze and loudly call \u2018Clear\u2019 before any shock.\""
+    }
+  ]
+}

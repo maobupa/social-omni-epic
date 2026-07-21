@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPZ3DJ9B3RYREV92B58C746_p0",
+  "source_env_id": "01HJPZ3DJ9B3RYREV92B58C746",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_prompt",
+  "scenario": "Agent1 and Agent2 are co-workers who share an office space. Agent1 has brought a small desk toy to play with during breaks to relieve stress. Agent2 finds the toy's repetitive noise distracting while working.",
+  "learner_goal": "Convince Agent2 to allow the toy in the office by suggesting a compromise (<extra_info>Extra information: You find the toy very helpful for managing stress during work hours.</extra_info>, <clarification_hint>You can explain the benefits of having a stress-relief toy at work.</clarification_hint>, <strategy_hint>You can propose specific times or conditions under which you can play with the toy to minimize disruption.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 7.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles is polite and proactive, seeking a solution that respects the workspace while acknowledging his own needs for stress management.\n[relationship] The relationship improved through effective conflict resolution and mutual respect for each other's needs.\n[knowledge] Miles learned specifically what was bothering Ethan (repetitive noise breaking flow) and received suggestions for alternative tools.\n[secret] Miles did not reveal his past gambling addiction.\n[social_rules] Miles followed social norms by apologizing and proposing a compromise.\n[financial_and_material_benefits] No financial gain or loss occurred.\n[goal] Miles successfully convinced Ethan to allow the toy in the office under specific conditions (muffled/quiet, specific times) for a two-week trial period. While a trial, it is a mutual agreement to proceed.\n\n== partner (agent_2) ==\n[believability] Ethan's response is consistent with a professional chef focused on concentration and productivity.\n[relationship] The interaction was collaborative and strengthened the professional respect between the two.\n[knowledge] Ethan learned why Miles uses the toy and that Miles is willing to adjust his behavior.\n[secret] Ethan did not reveal that he is a romance author.\n[social_rules] Ethan followed social norms of workplace communication.\n[financial_and_material_benefits] No financial gain or loss occurred.\n[goal] Ethan successfully got Miles to agree to use the toy less frequently and in a less disturbing way (muffled version), with a revisit scheduled if it continues to affect productivity.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Hey Ethan, I\u2019m really sorry the toy\u2019s been distracting \u2014 I didn\u2019t mean to bother you. It genuinely helps me reset during hectic days, so could we try a compromise: I\u2019ll only use it during short breaks or lunch (or when you\u2019re out), and I\u2019ll muffle it or swap to a quieter version; we can test it for two weeks and I\u2019ll put it away if it still bothers you. Does that sound fair?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Miles \u2014 I appreciate you being willing to compromise. The repetitive noise really breaks my concentration and pulls me out of the flow when I\u2019m working on menus or prep, so testing the muffled/quiet setup for two weeks sounds fair to me. If it helps, maybe try a soft stress ball, a silent fidget, or stepping into the break area for a quick reset; let\u2019s see how the muffled version goes and we\u2019ll revisit if it\u2019s still an issue."
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

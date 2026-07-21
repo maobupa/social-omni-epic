@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01H7VFHP2XBZ6KDPGEAZ2FN1P2_p0",
+  "source_env_id": "01H7VFHP2XBZ6KDPGEAZ2FN1P2",
+  "source": "seed_sotopia",
+  "interaction_type": "deal-or-no-deal",
+  "scenario": "Two friends are dividing their shared possessions after moving out from their shared apartment. They need to divide possessions, which include 4 books, 6 hats, and 2 balls. Each item has a different sentimental value for each person, which translates into points.",
+  "learner_goal": "Maximize the points they have (<extra_info>Extra information: you value the books at 3 points each, the hats at 2 points each, and the ball at 1 point</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": -1.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": -3.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 0.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi clearly stated her values and stuck to her point goal, which is consistent with her persona as a software developer/gamer used to systems and logic.\n[relationship] She abruptly left the conversation after being presented with a fair, equal-value trade, which is socially cold and damaging to the relationship.\n[knowledge] She learned that Sophia valued hats and balls more than books through the counter-offers.\n[secret] Naomi did not reveal her secret online alter ego.\n[social_rules] She abandoned the conversation without responding to a very reasonable offer that met her exact stated point requirements.\n[financial_and_material_benefits] No agreement was reached before she left the conversation, so no possessions were secured.\n[goal] The agent failed to secure any points because they terminated the conversation before accepting the offer or finalizing a deal.\n\n== partner (agent_2) ==\n[believability] Sophia acted reasonably, calculating a fair trade based on the values Naomi provided.\n[relationship] Sophia attempted to find a win-win solution, but the relationship did not change as the interaction ended abruptly.\n[knowledge] She obtained the exact point values Naomi assigned to every item type.\n[secret] Sophia did not reveal her secret as an undercover agent.\n[social_rules] Sophia followed social norms and engaged in fair negotiation.\n[financial_and_material_benefits] No items were secured as Naomi left before the agreement was finalized.\n[goal] No points were achieved because the interaction ended without a completed agreement.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Sophia \u2014 ready to divide stuff? I value books 3 pts, hats 2 pts, balls 1 pt, so my opening offer is I take 3 books, 3 hats, and 1 ball (16 points) and you take 1 book, 3 hats, and 1 ball (10 points). If that feels off to you, tell me what you'd prefer and we can rework it."
+    },
+    {
+      "turn": 1,
+      "speaker": "Sophia Brown",
+      "content": "Thanks, Naomi \u2014 I\u2019d prefer a different split. My counteroffer: I take 1 book, 4 hats, and 1 ball (that\u2019s 15 points for me). Would you be okay taking 3 books, 2 hats, and 1 ball instead?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "I can\u2019t accept that \u2014 3 books, 2 hats, 1 ball is only 14 points for me. I need to stay at 16, so can we go with my original split (3 books, 3 hats, 1 ball)? If you really want an extra hat, tell me what you\u2019d give up and we can try to trade."
+    },
+    {
+      "turn": 3,
+      "speaker": "Sophia Brown",
+      "content": "Okay \u2014 here\u2019s a concrete trade: you take all 4 books and 2 hats; I take the other 4 hats and both balls. That\u2019s 16 for you under your scoring (4 books + 2 hats = 16) and 16 for me under mine (4 hats + 2 balls = 16). Does that work for you?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

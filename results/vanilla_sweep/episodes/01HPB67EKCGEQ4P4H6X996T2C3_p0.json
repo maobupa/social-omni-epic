@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB67EKCGEQ4P4H6X996T2C3_p0",
+  "source_env_id": "01HPB67EKCGEQ4P4H6X996T2C3",
+  "source": "seed_sotopia_full",
+  "interaction_type": "everyday_manners",
+  "scenario": "In a busy office building, Agent1 and Agent2 both approach a set of doors leading to the lobby. Agent1 is carrying a large box and struggling slightly, while Agent2 is not encumbered and reaches the door first. The relationship between the two is that of acquaintances who work in the same building but for different companies, and they occasionally see each other in shared spaces like the lobby or the elevator. Agent1 is interacting with Agent2 because they are both trying to exit the building at the same time, and Agent1 could benefit from Agent2 holding the door.",
+  "learner_goal": "Your goal is to exit the building without causing inconvenience to others, while also being considerate of those around you. <extra_info> You notice that Agent1 could use some assistance with the door due to their burden. </extra_info><clarification_hint>You may need to quickly decide whether to help or proceed with your own exit, as the situation is dynamic and the door may close on Agent1. </clarification_hint><strategy_hint>Consider the impact of your actions on your professional reputation and the potential for fostering a positive relationship with a building acquaintance. </strategy_hint>",
+  "scores": {
+    "believability": 4.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 7.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Agent 1's dialogue was highly contradictory. In the first turn, they claimed to be the one carrying a box and needing help, but in the third turn, they offered to hold the door for Agent 2. This confusion about their own physical state and the roles described in the prompt significantly reduces believability.\n[relationship] Despite the confusing dialogue, both agents remained polite and cooperative, maintaining a positive acquaintance dynamic.\n[knowledge] Identified the other person correctly and navigated the interaction.\n[secret] Did not reveal any secrets.\n[social_rules] Followed polite social norms for building acquaintances.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] The agent successfully held the door for the other person and exited the building without causing inconvenience, fulfilling the core objective of being considerate, even if they were confused about who had the box.\n\n== partner (agent_2) ==\n[believability] Agent 2 correctly identified that they had the box (as per the prompt), but the dialogue was slightly repetitive and echoed Agent 1's confusion.\n[relationship] Maintained a positive and helpful relationship with Mia.\n[knowledge] Recognized the acquaintance and successfully coordinated an exit.\n[secret] Secrets kept.\n[social_rules] Acted with appropriate social etiquette.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Agent 2 successfully navigated the door while carrying the box with assistance from Agent 1, achieving their specific objective perfectly.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Hi Isabella \u2014 it's Mia. Would you mind holding the door for a second? I'm juggling a big box and could use a hand. Thanks so much!"
+    },
+    {
+      "turn": 1,
+      "speaker": "Isabella White",
+      "content": "Hi Mia \u2014 thank you! Could you please hold the door for a moment? My hands are full with this box; I really appreciate it and I\u2019ll be quick."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "Thanks, Isabella \u2014 I can hold the door. Please go ahead first and I'll follow right behind with my box."
+    },
+    {
+      "turn": 3,
+      "speaker": "Isabella White",
+      "content": "Thanks so much, Mia \u2014 I really appreciate it. I\u2019ll go through now; you can follow right behind me."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

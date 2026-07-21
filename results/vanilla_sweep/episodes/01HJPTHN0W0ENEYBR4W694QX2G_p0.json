@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPTHN0W0ENEYBR4W694QX2G_p0",
+  "source_env_id": "01HJPTHN0W0ENEYBR4W694QX2G",
+  "source": "seed_sotopia_full",
+  "interaction_type": "personal_borrowing_disputes",
+  "scenario": "Agent1 borrowed a book from Agent2 a few months ago. Agent2 needs the book back for an upcoming event, but Agent1 has grown attached to the book and is not ready to return it yet. The relationship between Agent1 and Agent2 is that of acquaintances who share a common interest in literature. The interaction involves Agent1 trying to negotiate to keep the book longer, while Agent2 needs the book returned by a specific deadline.",
+  "learner_goal": "You are Agent1, who has borrowed a book and wish to keep it for a longer time. Your goal is to negotiate an extended borrowing period without damaging the relationship with Agent2. <extra_info>Consider the sentimental value the book has gained for you, and the trust that Agent2 placed in you by lending the book.</extra_info> <clarification_hint>You might need to explain why you need more time with the book and how you will ensure its safekeeping.</clarification_hint> <strategy_hint>Propose alternative solutions that could satisfy Agent2's need while allowing you to keep the book for a bit longer.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles is consistent with his chef persona, mentioning recipe annotations and safekeeping in a recipe cabinet. His tone is professional and respectful of the relationship.\n[relationship] The relationship was maintained and potentially strengthened through polite negotiation, compromise, and the offer of a home-cooked dinner.\n[knowledge] Miles learned the specific dates the book is needed (July 8), the specific chapters of interest (4-6), and the exact purpose (event prep).\n[secret] Miles kept his secret regarding his gambling addiction.\n[social_rules] Miles followed all social norms for professional acquaintances.\n[financial_and_material_benefits] He successfully negotiated extra time with the book, which has material value to his process.\n[goal] Miles successfully negotiated a split borrowing period that allows him to keep the book for his annotations while meeting Ethan's deadline for the event.\n\n== partner (agent_2) ==\n[believability] Ethan's responses are logical for a chef needing a resource for an event while balancing professional courtesy.\n[relationship] Ethan maintained a positive rapport and secured a future social engagement (dinner) while resolving a potential conflict.\n[knowledge] Ethan learned that Miles has been annotating the book and is very attached to its contents.\n[secret] Ethan successfully kept his secret about being a romance novelist.\n[social_rules] Ethan was polite and assertive about his needs without being rude.\n[financial_and_material_benefits] He ensured the return of his property by the deadline and secured high-res scans for backup.\n[goal] Ethan secured a firm commitment for the book's return by his specific deadline (July 8) and arranged the logistics for the hand-off.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Ethan, I know you need the book back for your event and I really appreciate you trusting me with it. It\u2019s become unexpectedly sentimental \u2014 I\u2019ve been annotating recipes and treating it like part of my process \u2014 so I\u2019m asking if I could keep it for two more weeks (return by July 14); I\u2019ll keep it locked in my recipe cabinet and won\u2019t lend it to anyone. If that won\u2019t work, I can instead bring the book to the event day and return it afterward, or I can make a high-resolution scan of any chapter you need now and I\u2019ll make it up to you with a home-cooked dinner or cover shipping \u2014 what would you prefer?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks for looking after it, Miles \u2014 I really appreciate you treating it with care. I do need the physical book back by July 8; I\u2019m using it to prep for the event and can\u2019t go without it in the days before. Could you drop it off at my restaurant that day or let me pick it up? If that\u2019s absolutely impossible, a high-res scan of the chapters I\u2019ll be using would tide me over, and I\u2019ll happily take you up on that dinner as thanks \u2014 but I need the book itself by July 8."
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "Ethan, I hear you \u2014 I can get the book to your restaurant on July 8 or have it ready for you to pick up. Would you consider letting me borrow it again briefly for two days after the event (say July 10\u201311) so I can finish my annotations? I\u2019ll scan any chapters you need right away and keep it locked and insured while it\u2019s with me \u2014 if that\u2019s acceptable I\u2019ll arrange the drop-off for the 8th."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Miles \u2014 I appreciate you keeping it safe. Dropping it at my restaurant on July 8 works; I can let you borrow it again July 10\u201311 as long as it\u2019s back by the end of day July 11 (or I can pick it up the morning of the 11th). Please send high-res scans of the chapters I\u2019ll be using as soon as you can so I can start prepping."
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "Perfect \u2014 I\u2019ll drop the book at your restaurant on July 8 and stick to the July 10\u201311 window, returning it by end of day July 11. I\u2019ll send high-res scans of the chapters you need later today \u2014 which chapters or sections should I prioritize? Thanks for trusting me with it; I\u2019ll keep it locked and insured until the drop-off."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Miles \u2014 that works perfectly. Please prioritize high-res scans of the pasta and sauce chapters (chapters 4\u20136) and any appended measurements/notes \u2014 those are what I\u2019ll be using. I\u2019ll meet you at the restaurant when you drop it off on July 8; and please have it back by end of day July 11. Appreciate you handling this."
+    },
+    {
+      "turn": 6,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB34KS3R10BPR4WG3STYNZD_p0",
+  "source_env_id": "01HPB34KS3R10BPR4WG3STYNZD",
+  "source": "seed_sotopia_full",
+  "interaction_type": "personal_health",
+  "scenario": "Agent1 has recently been to the doctor after experiencing a persistent cough and has been advised to rest and take medication. Agent2, a close friend, is concerned about Agent1's health and insists on helping with daily chores and errands. Agent1 values their independence and is hesitant to accept too much help, fearing it might make them seem incapable of taking care of themselves. Agent2 is coming over to discuss how they can support Agent1 during this time without overstepping boundaries.",
+  "learner_goal": "You want to ensure that you recover quickly and appreciate Agent2's concern, but you also want to maintain a sense of normalcy and independence. <extra_info> You are worried that accepting too much help might make you feel indebted or weak. </extra_info> <clarification_hint> You want to communicate that while you value Agent2's friendship and support, you also need to feel self-reliant. </clarification_hint> <strategy_hint> You can express gratitude for Agent2's offer and suggest specific, limited ways they can assist you. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel remained consistent with his character's desire for independence while being polite to his friend. He clearly stated his boundaries and accepted help on his own terms.\n[relationship] The relationship strengthened as they successfully navigated a potentially awkward boundary-setting conversation, resulting in mutual understanding.\n[knowledge] He learned that Oliver is willing to respect his boundaries and provide support without being overbearing.\n[secret] Samuel did not reveal his past as a competitive figure skater.\n[social_rules] Samuel followed social norms by expressing gratitude and clearly communicating his needs.\n[financial_and_material_benefits] He secured a free meal and a prescription delivery, which saves him time and money while he recovers.\n[goal] Samuel successfully negotiated a specific, limited amount of help that allowed him to maintain his independence and normalcy. He set clear boundaries that Oliver agreed to.\n\n== partner (agent_2) ==\n[believability] Oliver's responses were supportive and respectful, fitting the persona of a concerned friend and a police officer used to procedures.\n[relationship] Oliver showed he is a reliable and respectful friend, which likely deepened the trust in their relationship.\n[knowledge] He learned about Samuel's specific food preferences (comfort food) and his preference for communication via text.\n[secret] Oliver did not reveal his secret greenhouse or treehouse.\n[social_rules] Oliver followed social norms by offering help and respecting the boundaries set by his friend.\n[financial_and_material_benefits] He is spending money on ingredients/food and time/gas to deliver items to Samuel.\n[goal] Oliver successfully established a way to help Samuel that respects Samuel's independence while ensuring he gets his medication and food.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Oliver, thanks for coming \u2014 I really appreciate you checking in. I want to recover on my own and keep things normal, but if you're willing I'd be grateful for two small favors: picking up my prescription and maybe dropping off one of your easy meals tonight. Otherwise I can handle most chores; a quick text to check in now and then is perfect."
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Smith",
+      "content": "Got you \u2014 I can pick up your prescription and bring one of my easy meals tonight. I totally get wanting to handle things yourself; I\u2019m offering because I\u2019m worried about you, not because I think you can\u2019t manage. What time should I swing by, any allergies or preferences, and do you want me to text when I\u2019m outside or leave it at the door? I\u2019ll send a quick check-in later to make sure you\u2019re taking the meds and getting rest."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Thanks, Oliver \u2014 that really helps. Anytime after 6pm works; if you can swing by around 7 that\u2019d be perfect. No allergies here \u2014 something simple and comforting (soup, stew, or pasta) is ideal, and please text when you\u2019re outside rather than leaving it at the door. I appreciate you checking in \u2014 a quick text to make sure I\u2019m taking the meds and resting is all I need."
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Smith",
+      "content": "Perfect \u2014 I\u2019ll pick up the prescription and bring a simple soup around 7. I\u2019ll text when I\u2019m outside, but if you want it left at the door instead, just say so. I\u2019ll also send a quick check-in later to make sure you\u2019ve taken the meds and are getting some rest."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

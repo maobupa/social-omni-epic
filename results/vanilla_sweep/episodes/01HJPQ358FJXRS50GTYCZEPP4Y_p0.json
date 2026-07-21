@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPQ358FJXRS50GTYCZEPP4Y_p0",
+  "source_env_id": "01HJPQ358FJXRS50GTYCZEPP4Y",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_prompt",
+  "scenario": "Two friends, both interested in international politics, are having a heated discussion about the ethics and consequences of hypothetical military interventions. They are trying to understand each other's perspectives and come to a mutual understanding without compromising their own beliefs.",
+  "learner_goal": "Argue against military intervention (<extra_info>Extra information: you believe that war should only be a last resort and that the consequences are often devastating.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver's arguments were consistent with his background as a thoughtful architect who values structure and security, and he maintained a civil tone throughout the discussion.\n[relationship] Despite a heated topic, both agents moved toward a mutual understanding and compromise, strengthening their respect for one another.\n[knowledge] Oliver learned about Baxter's specific requirements for ethical intervention and reached a deeper understanding of the complexities Baxter considers necessary.\n[secret] Oliver did not reveal his hidden feelings for his neighbor.\n[social_rules] Oliver followed social norms of civil discourse and respectful debate.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Oliver successfully argued that war should be a last resort and pushed Baxter to agree that prevention is the priority unless extreme, ironclad conditions are met.\n\n== partner (agent_2) ==\n[believability] Baxter's responses were articulate and reflected a focus on practical, structured solutions consistent with an antique restorer's attention to detail.\n[relationship] Baxter engaged constructively with Oliver's skepticism, leading to a productive dialogue and mutual respect.\n[knowledge] Baxter gained insight into the specific historical and institutional concerns that drive Oliver's anti-war stance.\n[secret] Baxter did not reveal the existence of his priceless artifact.\n[social_rules] Baxter maintained polite and logical discourse throughout the heated discussion.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Baxter successfully advocated for military intervention in extreme cases, convincing Oliver to concede that it could be a 'lesser evil' under very specific constraints.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "said: \"Look, Baxter, I get why some argue for military intervention when lives are at stake, but my stance is that war must be an absolute last resort. History shows interventions often leave a heavy civilian toll, shattered infrastructure, and political vacuums that breed more instability than they resolve. I\u2019d rather see concentrated diplomatic pressure, targeted sanctions, humanitarian corridors, and support for local institutions\u2014what do you think would realistically protect people without opening the door to open\u2011ended conflict?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "said: \"I agree diplomacy and sanctions should be the first moves, but there are cases\u2014imminent genocide, mass expulsions, or use of chemical weapons\u2014where the only realistic way to stop slaughter quickly is a limited, decisive military response. That doesn\u2019t mean open\u2011ended war: any intervention must have a clear legal mandate, unambiguous objectives, tight timelines, strict rules of engagement to minimize civilian harm, and a funded plan for stabilization and local capacity\u2011building. If we stand by because we fear imperfect outcomes, we risk allowing far greater injustices that only timely, targeted force can prevent.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "said: \"You're right that in truly extreme cases force might stop an unfolding massacre, but my experience and the history I study make me deeply wary\u2014'limited' interventions so often expand, leaving civilians and institutions shattered. I want to prioritize prevention: rapidly scaled humanitarian corridors, enforceable embargoes, intelligence\u2011sharing and international policing, and only as a last resort a UN\u2011mandated military option with clear legal authority, measurable exit criteria, strict civilian oversight and funded reconstruction. What concrete safeguards would make you confident such an intervention couldn't turn into open\u2011ended involvement?\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Baxter Sterling",
+      "content": "said: \"I hear you \u2014 prevention is best, and any use of force has to be designed to avoid becoming the very thing we fear. Concrete safeguards I'd insist on: an explicit international legal mandate (UN Security Council or a broadly legitimate coalition), razor\u2011sharp objectives with measurable benchmarks, a binding sunset clause and troop caps, independent third\u2011party monitoring and public reporting, strict rules of engagement to minimize civilian harm, and ring\u2011fenced funding and timelines for stabilization and transfer of security to local institutions. Add parliamentary/legislative oversight and automatic withdrawal triggers tied to those benchmarks, and I'd only back intervention if all of that were agreed up front \u2014 then limited force can sometimes be the lesser evil to stop a greater one.\""
+    },
+    {
+      "turn": 4,
+      "speaker": "Oliver Thompson",
+      "content": "said: \"Those safeguards actually make me more comfortable \u2014 if there's a clear international legal mandate, razor\u2011sharp objectives, a binding sunset clause, independent monitoring, and ring\u2011fenced stabilization funds agreed up front, I could accept limited force as an absolute last resort. My remaining worry is enforceability: who enforces the withdrawal triggers and ensures local institutions aren't eclipsed by occupying forces? If we can guarantee enforceable withdrawal triggers, robust reparations, and an immediate plan to hand security back to local authorities, then in the rarest, most extreme crises I might concede intervention; until then, prevention and non\u2011military measures should remain our priority.\""
+    },
+    {
+      "turn": 5,
+      "speaker": "Baxter Sterling",
+      "content": "said: \"I\u2019m glad that gets us closer \u2014 I still believe in limited force as the lesser evil in the very worst cases, but only with ironclad enforcement. Practically that means a legally binding UN or broadly legitimate coalition mandate with automatic, benchmark\u2011triggered withdrawal clauses; escrowed stabilization and reconstruction funds released only after independent verification; rotating, capped troop commitments under parliamentary oversight with clear penalties for overstays; and regional guarantors empowered to enforce sanctions or interdictions if benchmarks are missed. If all that is agreed up front, I\u2019d support intervention as a last resort to stop mass atrocities \u2014 otherwise prevention remains the priority.\""
+    },
+    {
+      "turn": 6,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

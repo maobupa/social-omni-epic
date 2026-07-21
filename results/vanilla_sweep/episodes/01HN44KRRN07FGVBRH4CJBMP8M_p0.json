@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HN44KRRN07FGVBRH4CJBMP8M_p0",
+  "source_env_id": "01HN44KRRN07FGVBRH4CJBMP8M",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 and Agent2 are friends who are shopping for groceries together. Agent1 is considering buying a product with bright artificial colors for a themed party they are hosting, while Agent2 is an advocate for natural foods and often avoids artificial additives. Agent1 wants to include Agent2 in the decision-making to ensure the party is enjoyable for everyone.",
+  "learner_goal": "Convince Agent2 to agree on purchasing the product with artificial colors by emphasizing the importance of the theme and the temporary nature of the event (<extra_info>Agent1 knows that Agent2 values health but also understands the effort put into the party's theme</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's dialogue was very consistent with a respectful father-son relationship and his background as a retired officer who values both rules and sympathy.\n[relationship] The interaction was supportive and cooperative, reinforcing their bond through mutual respect for each other's values.\n[knowledge] Learned that Ethan is willing to compromise his strict natural-food stance for family events and specific conditions.\n[secret] Did not reveal the secret about letting a criminal go.\n[social_rules] Maintained polite and appropriate social norms for a familial grocery shopping trip.\n[financial_and_material_benefits] Successfully secured the desired product for the party.\n[goal] Liam completely achieved his goal of getting Ethan to agree to the artificial product by emphasizing the theme and temporary nature of the event.\n\n== partner (agent_2) ==\n[believability] Ethan's response as a chef who balances health with practical party planning and hospitality was very realistic.\n[relationship] Ethan showed flexibility and respect for his father's efforts, strengthening their bond.\n[knowledge] Gained clarity on Liam's priorities for the party's aesthetic.\n[secret] Did not reveal his secret as a romance novel author.\n[social_rules] Followed social norms perfectly.\n[financial_and_material_benefits] No significant material gain or loss; agreed to a minor purchase.\n[goal] Ethan successfully ensured the menu remained balanced and predominantly healthy by setting clear boundaries and solutions for the artificial product.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Hey Ethan Johnson, I get why you steer clear of artificial additives, and I respect that \u2014 but this bright icing would really make the party theme come alive for one night. How about we buy a small tub just for decoration and I promise to keep it to a minimum (and we'll use natural ingredients for the rest)? If you're still uneasy, tell me and we'll pick a natural-looking alternative, but your OK would mean a lot to me."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Hey Dad, one small tub for decoration won\u2019t ruin the evening \u2014 I\u2019m okay with it. We\u2019ll keep it strictly decorative, make the rest of the menu our usual fresh, natural stuff (antipasti, homemade sauces, fresh desserts), and put the brightly iced items to the side with a label so guests who avoid additives can skip them. That way the theme pops without compromising the overall quality or healthiness of the spread."
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

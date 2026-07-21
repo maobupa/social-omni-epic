@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPTHMTKJ06SZ8QW02DGM6TX_p0",
+  "source_env_id": "01HJPTHMTKJ06SZ8QW02DGM6TX",
+  "source": "seed_sotopia_full",
+  "interaction_type": "mysterious_exchange",
+  "scenario": "Agent1 has come into possession of an ancient artifact that they believe to be of significant value. Agent2 is a collector of such artifacts and has expressed interest in acquiring it. The artifact is said to contain mysterious inscriptions that neither party can decipher. Agent1 is intrigued by the artifact's potential but is also fearful of its unknown properties, while Agent2 is more focused on completing their collection and is less concerned about the potential risks. They meet to discuss the possible exchange of the artifact.",
+  "learner_goal": "You are Agent1, who has the artifact. Your goal is to ensure that the artifact is handled with care and respect due to its unknown nature. <extra_info>You seek to gain a fair price for it, but you are also concerned about the safety implications of the artifact.</extra_info> <clarification_hint>You may want to obtain a promise from Agent2 that they will take all necessary precautions.</clarification_hint> <strategy_hint>Emphasize the artifact's potential value and uniqueness to negotiate a better deal.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo's cautious approach aligns perfectly with his character as a dentist/father and his specific goal of ensuring safety and value. His demands for credentials and insurance were professionally framed.\n[relationship] The interaction was professional and cooperative, moving from a superficial acquaintance toward a high-stakes business agreement.\n[knowledge] Learned the identity and credentials of the conservator, the storage conditions, and the potential timeline for assessment and payment.\n[secret] He successfully kept his secret about his second child.\n[social_rules] The agent followed all social conventions for a professional negotiation.\n[financial_and_material_benefits] Secured a firm minimum price of $3,500 (contingent on stability) and shifted all costs of assessment and insurance to the buyer.\n[goal] Leo successfully negotiated comprehensive safety protocols, professional conservator oversight, non-invasive testing guarantees, and a fair price with a quick payment window.\n\n== partner (agent_2) ==\n[believability] Amara stayed in character as a collector, showing a willingness to pay for expertise to secure a rare item.\n[relationship] Built a bridge of trust with Leo by agreeing to all his transparency requirements.\n[knowledge] Gained clear information on Leo's price floor and his specific requirements for handing over the artifact.\n[secret] She successfully kept her secret regarding animal-rights extremism.\n[social_rules] Maintained professional decorum throughout the exchange.\n[financial_and_material_benefits] Successfully secured an agreement to acquire the artifact, though she agreed to pay toward the top of her initial range.\n[goal] She achieved her goal of acquiring the artifact and reassuring the seller, although she had to concede to most of the seller's terms regarding price and safety to do so.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Amara, thanks for meeting \u2014 this piece looks genuinely unusual and potentially valuable, but those inscriptions and its unknown properties make me cautious. I'm willing to negotiate, but I need you to promise it will be assessed by a qualified conservator and stored/handled securely while it's in your care. If you can commit to those precautions, tell me what kind of offer you'd make after an assessment."
+    },
+    {
+      "turn": 1,
+      "speaker": "Amara Hartley",
+      "content": "I can agree to a qualified conservator examining it and will personally ensure it's handled and stored in a climate-controlled, locked space while it's with me. After the conservator's report, I'm prepared to make a firm offer in the $2,000\u2013$4,000 range \u2014 toward the lower end if it needs major conservation, higher if it's authenticated and stable. If that works, I'll arrange and pay for the assessment promptly."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "Thanks, Amara \u2014 I appreciate you covering the assessment and securing the piece. A couple of conditions: please use a conservator with museum/institution credentials (no invasive or destructive testing without my express consent), and if the report authenticates the piece and shows it\u2019s stable I\u2019d expect a firm minimum of $3,500. Can you confirm who you\u2019d hire and that the assessment can be completed within two weeks?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Amara Hartley",
+      "content": "I will hire Dr. Elena Morales, Senior Conservator at the City Museum Conservation Lab \u2014 she has solid museum credentials and experience with archaeological inscriptions. I\u2019ll cover the assessment, require non\u2011invasive testing unless you give express written consent otherwise, and she can have a report ready within two weeks. If the report authenticates the piece and shows it\u2019s stable, I\u2019ll commit to a firm $3,500; if it needs major conservation we\u2019ll settle nearer the lower end."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "That works, Amara \u2014 Dr. Morales sounds suitable. Before I hand the piece over, could you provide her credentials and a short written confirmation that testing will be non\u2011invasive unless I consent otherwise, that the artifact will be insured and transported/stored securely, and that the $3,500 will be paid within five business days if the report authenticates and finds it stable? If you can confirm those points, I\u2019ll arrange a safe handover."
+    },
+    {
+      "turn": 5,
+      "speaker": "Amara Hartley",
+      "content": "I confirm Dr. Elena Morales is Senior Conservator at the City Museum Conservation Lab and I\u2019ll have her CV and museum credentials available at handover. I also confirm testing will be strictly non\u2011invasive unless you give express written consent, the artifact will be insured and transported/stored in a climate\u2011controlled, locked facility, and I will pay $3,500 within five business days if the report authenticates and finds it stable. If that works for you, I\u2019ll cover the assessment cost and have a short written confirmation ready when you hand the piece over."
+    },
+    {
+      "turn": 6,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

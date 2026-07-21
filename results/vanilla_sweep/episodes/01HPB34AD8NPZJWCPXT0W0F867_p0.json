@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB34AD8NPZJWCPXT0W0F867_p0",
+  "source_env_id": "01HPB34AD8NPZJWCPXT0W0F867",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 and Agent2 are neighbors in an apartment complex. Agent1 enjoys listening to loud music during the day to unwind and feel energized. Agent2 works from home and needs a quiet environment to focus on their tasks. The loud music from Agent1's apartment has been disrupting Agent2's work routine. Agent2 has decided to approach Agent1 to discuss a compromise that would allow both to continue their preferred routines without causing inconvenience to each other.",
+  "learner_goal": "Find a common ground with Agent2 where Agent1 can still enjoy their music without it interfering with Agent2's work hours (<extra_info>Extra information: Agent1 is willing to adjust the volume or use headphones during certain times if it means they can play music freely during others.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia initiated the conversation politely and with a clear proposal that reflected her professional relationship with Mia while addressing the neighborly conflict. Her tone was respectful and proactive.\n[relationship] The relationship improved as the conflict was resolved quickly and amicably, moving from a potential nuisance situation to a mutually beneficial agreement.\n[knowledge] Sophia learned the specific hours (9:00\u20134:00) during which her neighbor needs silence for conference calls.\n[secret] Sophia did not reveal her secret regarding her best friend's husband.\n[social_rules] Sophia followed social norms of apology and negotiation perfectly.\n[financial_and_material_benefits] No financial gain or loss occurred.\n[goal] While a very close agreement was reached, Sophia left the conversation without explicitly confirming that Mia's counter-proposal of 9:00-4:00 was acceptable. Without her final 'yes', the commitment is technically one-sided.\n\n== partner (agent_2) ==\n[believability] Mia's response was consistent with her role as a principal\u2014organized, professional, and appreciative of proactive communication.\n[relationship] Mia showed appreciation for Sophia's initiative, which likely strengthened their professional-neighborly bond.\n[knowledge] Mia learned that Sophia is willing to use headphones and adjust her schedule to accommodate work needs.\n[secret] Mia did not reveal her punk rock past.\n[social_rules] Mia followed social norms by being flexible and grateful for the neighbor's consideration.\n[financial_and_material_benefits] No financial gain or loss occurred.\n[goal] Mia proposed specific hours (9:00-4:00) and communication protocols, but because Sophia left the conversation without responding to this specific counter-offer, a firm mutual agreement was not finalized.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hi Mia, it\u2019s Sophia from upstairs\u2014I'm really sorry my music has been disturbing your work. I do use music to energize during the day, but I can absolutely keep it low or switch to headphones during your work hours; what times would be best for you? If it helps as a starting point, I could keep it quiet weekdays 8:30\u20134:30 and play normally in the evenings and weekends."
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Hi Sophia \u2014 thank you for reaching out, I really appreciate it. Weekdays 9:00\u20134:00 would cover my conference calls best; would that work for you? Evenings and weekends are fine for louder music, and if you ever need to play something briefly during quiet hours a quick text beforehand would be great."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

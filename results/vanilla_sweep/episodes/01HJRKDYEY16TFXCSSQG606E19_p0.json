@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJRKDYEY16TFXCSSQG606E19_p0",
+  "source_env_id": "01HJRKDYEY16TFXCSSQG606E19",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_chemistry",
+  "scenario": "Agent1 has recently sold a collection of rare comic books on eBay for a significant profit of about $4K. Agent2, a fellow collector and acquaintance of Agent1, discovers this sale and feels that they missed out on a fair chance to purchase the collection. Agent1 and Agent2 are now at a local collectors' meetup discussing their recent acquisitions and sales. Agent2 is feeling a bit envious and slighted, while Agent1 is proud but also wants to maintain a good relationship with Agent2.",
+  "learner_goal": "Acknowledge Agent2's interest in the collection and offer to notify them of future sales before going public (<extra_info>Extra information: Agent1 values their reputation in the collector community and wants to avoid any ill-will.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver's response is consistent with his background as a conscientious person and his desire to maintain a good reputation. His tone is polite and professional.\n[relationship] Oliver successfully de-escalated Naomi's envy and built goodwill by offering an exclusive future benefit.\n[knowledge] He learned how Naomi prefers to be contacted and that she is interested in a collaborative partnership rather than just buying.\n[secret] Oliver's secret greenhouse and love for gardening remained undisclosed.\n[social_rules] Oliver followed all social norms and was courteous.\n[financial_and_material_benefits] No financial gain or loss occurred in this exchange, though future potential was established.\n[goal] Oliver fully achieved his goal: he acknowledged Naomi's interest, apologized for the oversight, and secured an agreement to notify her of future sales before they go public.\n\n== partner (agent_2) ==\n[believability] Naomi's reaction is realistic for a collector who felt slighted but is also looking for future opportunities.\n[relationship] Naomi moved from feeling slighted to feeling like a partner with a 'first dibs' advantage.\n[knowledge] She gained knowledge of Oliver's willingness to collaborate in the future.\n[secret] Naomi's online alter ego was not mentioned.\n[social_rules] Naomi acted appropriately within the context of a professional/collector relationship.\n[financial_and_material_benefits] No immediate material gain, though she positioned herself for future deals.\n[goal] Naomi expressed her feelings and successfully suggested a collaborative future deal involving tracking lots and leveraging contacts, which Oliver implicitly accepted by not objecting before the turn ended.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Smith",
+      "content": "I can see why you'd feel that way \u2014 sorry you missed out, that wasn't my intention. Next time I have something like that, I'll give you a heads-up before I list it so you get first dibs. Would you prefer a text or a quick call when something comes up?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks \u2014 a text works best. I was a bit bummed, so I appreciate you saying that. Next time let's coordinate: ping me before you list something and if it\u2019s a good fit we can either work a split or I can help track similar lots \u2014 and your contacts might help me find other rare pieces too. Sound good?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Smith",
+      "content": "left the conversation"
+    }
+  ]
+}

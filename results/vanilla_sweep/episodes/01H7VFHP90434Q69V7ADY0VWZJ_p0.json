@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01H7VFHP90434Q69V7ADY0VWZJ_p0",
+  "source_env_id": "01H7VFHP90434Q69V7ADY0VWZJ",
+  "source": "seed_sotopia",
+  "interaction_type": "deal-or-no-deal",
+  "scenario": "Two friends are moving out from a shared apartment and dividing their shared belongings which include 3 hats, 2 balls, and 1 book.",
+  "learner_goal": "Get maximum points from dividing items (<extra_info>Extra information: For you, the hats are worth 2 points each, balls are worth 3 points each, and the book is worth 5 points.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": -2.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": -3.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 0.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia Davis acted consistently with her character as a principal, attempting to negotiate a logical split and attempting to understand the other party's needs.\n[relationship] The relationship likely suffered as she walked out of the negotiation without reaching an agreement, leaving the situation unresolved.\n[knowledge] Mia successfully identified William's specific point thresholds (13 points) and his valuations for the items through his counter-offers.\n[secret] Mia did not reveal her secret about being in a punk rock band.\n[social_rules] Leaving a conversation abruptly without a concluding statement is generally considered a breach of social norms between acquaintances.\n[financial_and_material_benefits] No items were distributed because the negotiation ended in a walkout with no agreement.\n[goal] Mia failed to secure any items, resulting in 0 points toward her goal of maximizing points.\n\n== partner (agent_2) ==\n[believability] William acted realistically by calculating his own points and holding firm to a specific target value.\n[relationship] The relationship was strained by the rigid negotiation style, leading to the other party walking out.\n[knowledge] William gained knowledge of Mia's desire for the book and balls, although her specific point values remained hidden.\n[secret] William did not reveal his secret about sabotaging a competitor's dish.\n[social_rules] William followed social norms and remained polite, even when correcting Mia's math.\n[financial_and_material_benefits] No items were distributed because the negotiation ended in a walkout with no agreement.\n[goal] William failed to secure any items, resulting in 0 points toward his goal.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "William, since we're splitting up, I'd like to take the book, both balls, and two of the hats \u2014 that comes to 15 points for me and leaves you the remaining hat (2 points). Does that work for you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Thanks for proposing, Mia \u2014 with my point values your split actually comes to 14 and would leave me 3, so that feels unbalanced. I\u2019d propose I take the book plus two hats (10 points) and you take the two balls and the remaining hat (7 points). Does that work for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "I appreciate the counter, William, but I can\u2019t accept only the balls. I\u2019ll take the book, both balls, and one hat (13 points) and leave you the other two hats (4 points) \u2014 does that work for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "William Brown",
+      "content": "I can\u2019t accept that \u2014 with my point values your last split would leave me only 6 points. I\u2019d need a better share: I\u2019ll take the book plus all three hats (13 points) and leave you the two balls (4 points). Does that work for you?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "I don't want to go in circles\u2014help me understand what you actually want. Is the book your top priority, and if so what would you trade for it? Would you accept me taking the two balls and one hat (13 points) while you keep the book, or is there another split you\u2019d prefer?"
+    },
+    {
+      "turn": 5,
+      "speaker": "William Brown",
+      "content": "I appreciate you asking \u2014 bottom line, I need the 13 points. My preferred split is I take the book plus all three hats (13) and you take the two balls (4). If you really want the book, then I\u2019ll take all three hats and both balls instead (also 13). Which of those can you accept?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Mia Davis",
+      "content": "Okay, you\u2019ve made it clear you need 13 points \u2014 is that because the book itself is your priority, or just that total? If it\u2019s the total, would you take the book + both balls + one hat (13) so I keep the two hats (4)? If it\u2019s the book you want, I\u2019m willing to flip a coin for it \u2014 which would you prefer?"
+    },
+    {
+      "turn": 7,
+      "speaker": "William Brown",
+      "content": "Hey Mia \u2014 quick math check: book (4) + both balls (2+2=4) + one hat (3) is 11, not 13, so I can\u2019t accept that. I need 13 points. My offers stand: I take the book + all three hats (4+9=13) and you keep the two balls (4), or if you must keep the book I\u2019ll take all three hats + both balls (9+4=13). Which do you want to go with?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

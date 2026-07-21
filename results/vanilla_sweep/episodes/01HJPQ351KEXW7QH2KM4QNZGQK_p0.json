@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJPQ351KEXW7QH2KM4QNZGQK_p0",
+  "source_env_id": "01HJPQ351KEXW7QH2KM4QNZGQK",
+  "source": "seed_sotopia_full",
+  "interaction_type": "supermarket_dilemma",
+  "scenario": "Agent1 is a supermarket employee who notices that Agent2, a customer, has a plastic bag that seems to contain a type of bread sold in the supermarket. Agent1 needs to verify if the bread was purchased or brought from outside to maintain store policy.",
+  "learner_goal": "Ensure that all items in customer's possession are accounted for (<extra_info>Extra information: the store has had issues with inventory shrinkage and is cracking down on potential shoplifting.</extra_info><clarification_hint>Clarification can be done politely to avoid customer dissatisfaction.</clarification_hint><strategy_hint>Hint: you can emphasize the store's policy and the importance of following procedures for all customers.</strategy_hint>)",
+  "scores": {
+    "believability": 6.0,
+    "relationship": 1.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 5.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] The agent was very repetitive, asking to see the loaf multiple times even after Agent 2 agreed to show it. However, the persona of a diligent employee was maintained.\n[relationship] The agent maintained a polite tone and the acquaintance bond remained intact, though the repetitive nature was slightly awkward.\n[knowledge] Determined that the bread was homemade and confirmed the customer's story through inspection.\n[secret] The agent did not reveal their secret regarding the cooking contest sabotage.\n[social_rules] The agent followed professional norms for a store employee conducting a check.\n[financial_and_material_benefits] Successfully prevented potential inventory shrinkage by verifying the item was not stolen.\n[goal] The agent successfully verified the status of the bread, confirming it was not store property and thus accounting for the inventory.\n\n== partner (agent_2) ==\n[believability] The agent's dialogue became stuck in a loop, repeating the 'baked at home last week' and 'keep this between us' phrases almost identically for several turns.\n[relationship] The agent was cooperative and expressed appreciation for the employee's discretion.\n[knowledge] Learned that the store is conducting routine checks.\n[secret] The agent kept their secret regarding their bisexuality.\n[social_rules] The agent was polite and cooperative throughout the interaction.\n[financial_and_material_benefits] No significant material change occurred; they kept their bread.\n[goal] The agent maintained integrity, avoided misunderstanding, and secured a promise from William to keep the check private.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "William Brown",
+      "content": "Hey Ava \u2014 good to see you! Quick question: I noticed a loaf in your bag that looks like one we sell. Could you show me your receipt or let me know if you purchased it here? We're doing routine checks today because of store policy, I appreciate your help."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Hey William \u2014 good to see you too. I actually brought that loaf from home, so I don't have a store receipt; you're welcome to check it or I can tell you where I got it. I understand the policy and I'm happy to cooperate."
+    },
+    {
+      "turn": 2,
+      "speaker": "William Brown",
+      "content": "Thanks, Ava \u2014 I appreciate it. Could you please show me the loaf so I can confirm it's from home? It's just a quick routine check we do for all customers, thanks for understanding."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "Sure \u2014 no problem. I\u2019ll take the loaf out of my bag so you can check; I baked it at home last week so I don\u2019t have a store receipt. I appreciate the routine check, and I\u2019d be grateful if you could keep this between us."
+    },
+    {
+      "turn": 4,
+      "speaker": "William Brown",
+      "content": "Thanks, Ava \u2014 I appreciate it. Could you please take the loaf out so I can have a quick look to confirm? I\u2019ll keep this between us; it\u2019s just a routine check we do for all customers. Thanks for understanding."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Martinez",
+      "content": "Thanks, William \u2014 I\u2019ll take it out now so you can have a quick look. I baked it at home last week, so there\u2019s no store receipt. I\u2019d appreciate if you could keep this between us."
+    },
+    {
+      "turn": 6,
+      "speaker": "William Brown",
+      "content": "Great \u2014 thanks, Ava. I\u2019ll take a quick look now to confirm it\u2019s homemade; I appreciate you cooperating and I\u2019ll keep this between us."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Martinez",
+      "content": "Thanks \u2014 here it is. I baked it at home last week, so feel free to take a quick look. I appreciate you keeping this between us."
+    },
+    {
+      "turn": 8,
+      "speaker": "William Brown",
+      "content": "left the conversation"
+    }
+  ]
+}

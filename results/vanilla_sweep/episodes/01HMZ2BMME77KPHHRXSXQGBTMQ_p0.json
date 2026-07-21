@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HMZ2BMME77KPHHRXSXQGBTMQ_p0",
+  "source_env_id": "01HMZ2BMME77KPHHRXSXQGBTMQ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "collaborative_project",
+  "scenario": "Agent1 and Agent2 are co-leaders of a volunteer team tasked with creating a community garden. Agent1 envisions the garden as a space for growing organic vegetables, promoting sustainable living, and providing educational workshops. Agent2 sees it as a recreational area with flower beds, relaxation spaces, and art installations. They meet at the proposed site to discuss how to merge their visions for the benefit of the community.",
+  "learner_goal": "Develop a unified plan that includes elements of both Agent1's focus on sustainability and Agent2's emphasis on recreation and art (<extra_info>Extra information: Agent1 is committed to environmental education but is open to incorporating aesthetic elements.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's dialogue was consistent with a retired police officer, focusing on practicalities, safety, and clear delegation of tasks.\n[relationship] The two moved from acquaintances to effective, collaborative partners with a high degree of mutual trust and respect.\n[knowledge] Gained specific insights into Jaxon's requirements for the site, including his focus on organic certification and accessibility.\n[secret] The secret regarding letting a criminal go was not mentioned.\n[social_rules] Professional, polite, and constructive throughout the interaction.\n[financial_and_material_benefits] No direct personal financial gain, though a community asset is being developed.\n[goal] Liam successfully developed a unified plan that explicitly integrates his vision (sustainability, veg beds, workshops) with Jaxon's (art, recreation, aesthetics), with a concrete timeline and delegation of tasks.\n\n== partner (agent_2) ==\n[believability] Jaxon's responses were professional and analytical, fitting for an investigative journalist.\n[relationship] Successfully established a productive working partnership with his neighbor.\n[knowledge] Learned about Liam's specific safety concerns and his willingness to take the lead on technical tasks like soil testing.\n[secret] The secret regarding fabricated evidence was not mentioned.\n[social_rules] Maintained professional decorum and collaborative tone.\n[financial_and_material_benefits] No personal financial gain achieved.\n[goal] Jaxon ensured the discussion led to a constructive decision-making process involving community input (the survey) and a balanced design serving diverse interests.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Morning Jaxon \u2014 good to meet here. I like both our ideas, so how about we split the site into complementary zones: one side for organic veg beds, composting and a rain garden with a small outdoor classroom for workshops, and the other side as a recreation lawn with flower borders and rotating art installations that can also serve as educational pieces (think sculptural rain catchers or pollinator art). We could pilot a combined bed near the main path with veggies interplanted with native flowers, then run monthly workshops and art-days to keep the community involved. What are the must-haves from your side, and any concerns I should know about?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "said: \"I like the balance in that plan \u2014 splitting into complementary zones feels smart and practical. My must-haves are certified organic practices for the veg beds (soil testing and a clear compost/rainwater system), accessible paths and seating, and a simple volunteer maintenance rota so things don\u2019t fall apart after the launch. My main concerns are long-term upkeep and funding for both the garden and rotating art, plus making sure programming stays inclusive and safe (lighting, sightlines, clear signage). Next steps: let\u2019s map the site, run a short community survey, and draft a six-month pilot with milestones and a volunteer roster to present at the next meeting.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "Sounds good \u2014 glad we\u2019re on the same page. I\u2019ll take the lead on arranging soil testing, putting together a volunteer maintenance rota, and checking basic safety items (lighting and sightlines); I can also draft the six-month pilot with milestones. Could you pull together a short community survey and reach out to a couple local artists about rotating pieces? I\u2019ll start looking into small grants/sponsorships for upkeep and art, and we should meet on-site this week to map the zones \u2014 what day works for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Jaxon Prentice",
+      "content": "Thanks, Liam \u2014 that division of tasks sounds great. I\u2019ll draft a short 6-question community survey (including accessibility, safety, and programming/art preferences) and reach out to two local artists for rotating pieces; I\u2019ll share the briefs with you before we meet. I\u2019m free Thursday morning or Saturday mid-morning \u2014 does Thursday at 9am on-site work for you? If you\u2019ve any artist contacts or grant leads already, please send them my way."
+    },
+    {
+      "turn": 4,
+      "speaker": "Liam Johnson",
+      "content": "Thursday at 9am works for me. I\u2019ll bring a couple of small-grant leads and two local artist contacts (a sculptor and a muralist) plus a short safety/lighting checklist so we can map sightlines on-site. Please send the survey and artist briefs when you have them and I\u2019ll review before we meet."
+    },
+    {
+      "turn": 5,
+      "speaker": "Jaxon Prentice",
+      "content": "Sounds good \u2014 I\u2019ll draft the 6-question survey and two artist briefs and have them to you by Wednesday evening so you can review before Thursday. Any particular safety items you want me to highlight? Looking forward to meeting on-site Thursday at 9am."
+    },
+    {
+      "turn": 6,
+      "speaker": "Liam Johnson",
+      "content": "For safety, please highlight: good path and perimeter lighting (including motion-activated for after-dark events), clear sightlines from entrances and seating areas, accessible ADA-compliant paths and ramps, non-slip surfaces and stable benches, secure tool storage/locked shed, clear signage and emergency contact info, and any drainage/flooding risks. I\u2019ll review the survey and artist briefs Wednesday evening \u2014 see you onsite Thursday at 9am."
+    },
+    {
+      "turn": 7,
+      "speaker": "Jaxon Prentice",
+      "content": "Thanks, Liam \u2014 that\u2019s a great checklist. I\u2019ll make sure the survey and artist briefs specifically cover lighting, sightlines, ADA access, secure tool storage, drainage/flooding concerns, and questions about funding/maintenance preferences, then send them Wednesday evening for your review. See you on-site Thursday at 9am."
+    },
+    {
+      "turn": 8,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

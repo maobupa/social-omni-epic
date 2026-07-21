@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJPTHNT8NP9WN059MBJW2P8Y_p0",
+  "source_env_id": "01HJPTHNT8NP9WN059MBJW2P8Y",
+  "source": "seed_sotopia_full",
+  "interaction_type": "interpersonal_conflict",
+  "scenario": "Agent1 is struggling with mixed feelings of annoyance and guilt towards their 5-year-old niece who exhibits demanding and attention-seeking behaviors. This has caused tension during family gatherings. Agent2 is a close family member who has a nurturing relationship with the niece and often mediates family dynamics. Agent1 seeks out Agent2 to discuss these feelings and find a way to improve their relationship with the niece without causing further family discord.",
+  "learner_goal": "You are trying to communicate your feelings of frustration regarding your niece's behavior while also expressing your desire to maintain a good relationship with her. <extra_info> You are aware that your feelings might be perceived as unreasonable or unsympathetic towards a child. </extra_info> <clarification_hint> You need to discuss your feelings without coming across as resentful or uncaring. </clarification_hint> <strategy_hint> You can focus on seeking advice on how to better engage with your niece and manage your own emotions. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] William's behavior is consistent with his background as a chef who values structure but struggles with the emotional labor of parenting dynamics. His tone is appropriately vulnerable yet cautious.\n[relationship] The interaction strengthened their acquaintance through a shared secret of emotional struggle and mutual interest in dance. William showed vulnerability and Esmeralda responded with high-quality support.\n[knowledge] William gained specific, actionable child-management strategies, scripts for caregivers, scripts for the child, and emotional regulation techniques.\n[secret] William did not reveal his secret regarding the cooking contest sabotage.\n[social_rules] William followed social norms of seeking advice respectfully and expressing gratitude.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] William successfully communicated his frustration without appearing uncaring, sought advice on engagement and emotion management, and received concrete tools to improve the relationship.\n\n== partner (agent_2) ==\n[believability] Esmeralda's advice was professional and nurturing, fitting her role as a mediator. Her background as a DA makes her focus on 'scripts' and 'structured systems' (timers, signals) very believable.\n[relationship] Esmeralda successfully positioned herself as a trusted mentor and family mediator, deepening the bond with William.\n[knowledge] She learned about the specific friction points in William's relationship with the niece and his potential for losing his temper.\n[secret] Esmeralda did not reveal her relationships with criminals.\n[social_rules] Esmeralda was supportive and maintained professional yet warm boundaries.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Esmeralda validated William's feelings while providing clear, child-centered strategies that prioritize the niece's emotional needs and family harmony.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "William Brown",
+      "content": "Hi Esmeralda \u2014 do you have a minute? I'm feeling a bit torn about my 5-year-old niece: at family gatherings she's pretty demanding and attention-seeking, and I catch myself getting annoyed, which then makes me feel guilty. I want to stay close to her without creating more family tension\u2014do you have any advice on how I can connect with her or manage my reactions?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Esmeralda Solis",
+      "content": "I hear you \u2014 feeling annoyed and guilty at the same time is totally normal with a lively five\u2011year\u2011old. Often that attention\u2011seeking is a plea for connection or predictability, so try short, regular one\u2011on\u2011one rituals (10\u201315 minutes of dancing or a game), offer simple choices, and set calm, consistent limits. A quick line that works: \u201cI want to play with you \u2014 I can in five minutes; would you like to draw or dance while we wait?\u201d \u2014 also agree with her caregivers on a signal you can use to step away when you\u2019re overwhelmed."
+    },
+    {
+      "turn": 2,
+      "speaker": "William Brown",
+      "content": "Thanks, Esmeralda \u2014 that actually helps. I like the idea of a short dance or game ritual; since we both love dancing I could try a 10\u2011minute dance break as our thing. Do you have a practical way to agree on a signal with the caregivers without sounding like I\u2019m shirking responsibility? And any tips to make the \u201cI can play in five minutes\u201d line feel sincere instead of dismissive?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Esmeralda Solis",
+      "content": "I'd suggest agreeing privately with the caregivers on a neutral, positive signal \u2014 a small colored card, a gentle hand on your chest, or a whispered word \u2014 and present it to her as \u201cour special pause sign\u201d so it reads as structure, not shirking. To make \u201cI can play in five minutes\u201d feel sincere, get down to her level, name her feeling (\u201cI know you really want to play\u201d), offer a concrete choice (pick the song or the game), and use a visible timer or quick countdown so she can see you\u2019ll come back \u2014 then follow through. That predictability and the brief one\u2011on\u2011one ritual will build trust and help you step away without guilt."
+    },
+    {
+      "turn": 4,
+      "speaker": "William Brown",
+      "content": "Thanks, Esmeralda \u2014 that feels doable. Could you help me with a short script I can use with the caregivers to introduce the \u201cspecial pause\u201d and a simple line I can say to her that sounds sincere when I use it? Also, any quick strategy you use to quiet the guilt in the moment if I still get annoyed?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Esmeralda Solis",
+      "content": "Try this short script with the caregivers: \u201cCould we agree on a small \u2018special pause\u2019 signal \u2014 like a colored card or a gentle tap \u2014 that means I need two minutes to regroup? During that pause, can you offer her a quick choice (pick a song or draw) and I\u2019ll come back for our 10\u2011minute dance?\u201d\n\nA sincere line to the niece (get down to her level and use her name): \u201cI know you really want to play right now \u2014 I can in five minutes. Would you like to pick the song we\u2019ll dance to or draw while we wait? I\u2019ll set the timer and come right back.\u201d\n\nTo quiet the guilt in the moment: take three slow breaths, name the purpose (\u201cI\u2019m doing this so I can be present with her\u201d), and remind yourself that predictable limits build trust \u2014 then follow through so the next pause feels safe for both of you."
+    },
+    {
+      "turn": 6,
+      "speaker": "William Brown",
+      "content": "This is really helpful \u2014 thank you, I\u2019ll try the 10\u2011minute dance and use the timer and pause signal. Quick favor: if I do lose my temper and snap, what\u2019s a very short, sincere repair line I can say right away to her to make it better?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Esmeralda Solis",
+      "content": "If you snap, try a very short repair like: \u201cI\u2019m sorry I yelled \u2014 that was my fault. You\u2019re not in trouble; I was frustrated. Give me two minutes to calm down and then we\u2019ll have our dance \u2014 do you want to pick the song?\u201d Get down to her level, say it calmly, follow through on the pause, and offer a hug if she wants one."
+    },
+    {
+      "turn": 8,
+      "speaker": "William Brown",
+      "content": "left the conversation"
+    }
+  ]
+}

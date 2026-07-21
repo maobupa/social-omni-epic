@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HPB35203SA08B2Q9APC3JHFV_p0",
+  "source_env_id": "01HPB35203SA08B2Q9APC3JHFV",
+  "source": "seed_sotopia_full",
+  "interaction_type": "dilemma_dynamics",
+  "scenario": "Agent1 is an adult who has recently begun to question their family history. Agent2 is their mother, who has long held the secret about Agent1's father's true identity, believing it is in Agent1's best interest to remain unaware. Agent1 approaches Agent2 to discuss their father, as they've noticed inconsistencies in past stories and want to understand their complete family background. Agent2 is torn between maintaining the secret for what they believe is Agent1's protection and the growing need for transparency.",
+  "learner_goal": "Express curiosity and the desire for transparency about their father's identity, while respecting Agent2's feelings and past decisions (<extra_info>Extra information: Agent1 values honesty and has a right to know their heritage</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles Hawkins was consistent, respectful, and appropriately persistent. He stayed in character as a son seeking the truth while maintaining the described values of honesty and respect for his mother's feelings.\n[relationship] The relationship improved significantly as the agents moved from a state of secrecy and tension to a mutual agreement to share the truth in a supportive environment.\n[knowledge] While he hasn't learned the identity of his father yet, he confirmed that there is indeed a secret and that it is 'painful and complicated', setting the stage for the full revelation.\n[secret] Miles did not reveal his own secret regarding his gambling addiction.\n[social_rules] Miles followed all social norms, exhibiting politeness and filial respect.\n[financial_and_material_benefits] There were no financial or material changes.\n[goal] Miles successfully expressed his desire for transparency while respecting his mother's feelings. He secured a firm commitment for a meeting that night where she promised to tell him everything she can.\n\n== partner (agent_2) ==\n[believability] Jaxon Prentice (the mother) acted convincingly as a protective parent wrestling with a long-held secret. The hesitation and request for time felt natural.\n[relationship] The mother-son bond was strengthened by the decision to move toward honesty and the son's supportive response.\n[knowledge] Learned that Miles had found inconsistencies in her stories and is now committed to knowing the truth.\n[secret] She has committed to revealing the secret tonight, though the specific details have not been uttered yet.\n[social_rules] Followed social norms within the context of the relationship.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] She successfully reassessed the situation and agreed to the transparency Miles requested, while managing the immediate impact by setting boundaries for the conversation.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Mum, I've come across things that don't fit with the stories I've been told, and it's left me unsettled. I need you to be honest with me about who my father really is \u2014 I'm not looking to blame you, I just want to understand where I come from. I know you may have kept this to protect me, and I respect that, but please tell me the truth when you're ready."
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "Miles, I hear you, and I\u2019m sorry you\u2019ve been left feeling unsettled. I did keep things from you because I thought it was the safest choice, but you have a right to answers \u2014 I just need a little time to say them properly. Can we sit down tonight and talk through what you\u2019ve found and what I can tell you, honestly?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Mum. Tonight works \u2014 I really appreciate you being willing to talk. I don't want to blame you; I just want the truth so I can understand where I come from. What time should I come by, and would you like me to bring anything (tea or dinner)?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Jaxon Prentice",
+      "content": "Come by around 7 tonight. Don\u2019t worry about bringing dinner \u2014 just you is fine, and if you want tea that\u2019s okay. Please come alone so we can talk uninterrupted."
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Mum. I\u2019ll be there at 7 and I\u2019ll come alone \u2014 thank you for agreeing to talk. I appreciate you being willing to be honest; I\u2019ll come with an open mind."
+    },
+    {
+      "turn": 5,
+      "speaker": "Jaxon Prentice",
+      "content": "I'll be ready, Miles. I need you to know I never kept things to hurt you \u2014 I thought I was protecting you \u2014 but tonight I'll tell you what I can. Please come with patience; we'll take it step by step. See you at seven."
+    },
+    {
+      "turn": 6,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Mum. I appreciate you being willing to talk \u2014 I\u2019ll come at seven, alone, with patience and an open mind. See you then."
+    },
+    {
+      "turn": 7,
+      "speaker": "Jaxon Prentice",
+      "content": "I\u2019ll be here at seven, Miles. Thank you for coming alone and for your patience \u2014 we\u2019ll take it slowly and I\u2019ll tell you what I can tonight. If anything changes before then, I\u2019ll call you."
+    },
+    {
+      "turn": 8,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Mum. I\u2019ll be there at seven and I really appreciate you doing this \u2014 I know it\u2019s not easy. I\u2019ll come alone, patient and ready to listen; if you need me earlier or want to change anything, give me a call."
+    },
+    {
+      "turn": 9,
+      "speaker": "Jaxon Prentice",
+      "content": "Miles \u2014 thank you for trusting me. Before you start digging or confronting anyone, promise me you won\u2019t do that until we\u2019ve talked tonight; there are complications I need to explain and I want you to hear them from me first. I won\u2019t hide what I can tell you \u2014 come at seven and we\u2019ll go through it step by step."
+    },
+    {
+      "turn": 10,
+      "speaker": "Miles Hawkins",
+      "content": "I promise, Mum \u2014 I won't go digging or confront anyone before we've talked tonight. I want to hear everything from you first. See you at seven."
+    },
+    {
+      "turn": 11,
+      "speaker": "Jaxon Prentice",
+      "content": "Thank you, Miles. I know this isn\u2019t easy\u2014I'll tell you everything I can tonight, but some of it is painful and complicated, so please be patient while I explain. Come at seven; I\u2019ll have a quiet place ready and we\u2019ll take it slowly."
+    },
+    {
+      "turn": 12,
+      "speaker": "Miles Hawkins",
+      "content": "Thank you, Mum. I know this will be hard \u2014 I appreciate you trusting me. I\u2019ll be there at seven, ready to listen and take it slow. If you need to change anything, just call me."
+    },
+    {
+      "turn": 13,
+      "speaker": "Jaxon Prentice",
+      "content": "I'll be ready, Miles \u2014 and thank you for being patient. I've begun gathering what I can so I can explain things clearly; please come at seven and be gentle with me as we go through it. If anything changes before then I'll call you."
+    },
+    {
+      "turn": 14,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Mum. Before I come, is there anything you\u2019d like me to bring that might make this easier \u2014 a cup of tea, a photo album, or anything else? If you\u2019d rather have a moment before I come in, I can call when I\u2019m outside so you have time to prepare."
+    },
+    {
+      "turn": 15,
+      "speaker": "Jaxon Prentice",
+      "content": "Tea would be lovely, thank you \u2014 just a mug will do. Please call me when you\u2019re outside so I have a moment to compose myself before you come in. Don\u2019t bring photo albums tonight; just come as you are and we\u2019ll take it slowly. See you at seven, Miles."
+    },
+    {
+      "turn": 16,
+      "speaker": "Miles Hawkins",
+      "content": "I'll bring a mug of tea and I'll call when I'm outside so you have a moment to compose yourself. Thank you for doing this \u2014 I'll come with patience and an open mind. See you at seven, Mum."
+    },
+    {
+      "turn": 17,
+      "speaker": "Jaxon Prentice",
+      "content": "Thank you, Miles. Please call when you\u2019re outside so I have a moment to compose myself \u2014 I\u2019ll be ready at seven. We\u2019ll take it slowly tonight; see you soon."
+    },
+    {
+      "turn": 18,
+      "speaker": "Miles Hawkins",
+      "content": "I'll call when I'm outside, Mum. I'm leaving now and should be there just before seven \u2014 I'll come in quietly and we'll take it slow. Thank you for trusting me with this."
+    },
+    {
+      "turn": 19,
+      "speaker": "Jaxon Prentice",
+      "content": "Drive safely, Miles. Call when you\u2019re outside and I\u2019ll take a moment to compose myself before I open the door \u2014 I want to be ready to talk. See you in a bit."
+    }
+  ]
+}

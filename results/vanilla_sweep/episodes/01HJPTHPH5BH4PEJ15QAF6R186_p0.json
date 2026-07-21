@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHPH5BH4PEJ15QAF6R186_p0",
+  "source_env_id": "01HJPTHPH5BH4PEJ15QAF6R186",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 and Agent2, both friends, run into each other at a mutual friend's party. Agent1 has recently gone through a breakup and is struggling with the fact that their ex is now frequently seen with Agent1's former best friend, Agent2. The party atmosphere is light and fun, but the tension between Agent1 and Agent2 is palpable as they try to navigate their changed relationship dynamics in a social setting.",
+  "learner_goal": "Express your discomfort with the situation without causing a scene at the party (<extra_info>Extra information: You still care about your friendship with Agent2 and don't want to completely ruin the relationship.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo's communication was polite and direct, consistent with his character description as a professional dentist trying to handle a delicate situation maturely.\n[relationship] Leo managed to de-escalate potential tension and secured a commitment for a private talk, preserving the foundation of the friendship.\n[knowledge] He learned that Hendrick's relationship with the ex is 'not serious', which provides significant context to his discomfort.\n[secret] Leo did not reveal his secret child.\n[social_rules] Leo followed social norms by using private messaging to avoid a public scene at the party.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Leo expressed his discomfort, avoided a scene, and secured a specific time and place (back patio in 20 minutes) to resolve the issue while maintaining the friendship.\n\n== partner (agent_2) ==\n[believability] Hendrick acted in a conciliatory manner, consistent with a chef who values social circles and wine-tasting nights.\n[relationship] Hendrick responded with empathy and honesty, which helped stabilize the relationship after the initial awkwardness.\n[knowledge] He confirmed the depth of Leo's discomfort regarding the situation.\n[secret] Hendrick did not reveal his faked credentials.\n[social_rules] Hendrick handled the private conversation appropriately and respected Leo's request for space.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Hendrick acknowledged Leo's feelings, provided his side of the story (stating it wasn't serious), and agreed to a conversation to maintain the friendship.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hey Hendrick, quick honest thing \u2014 it's been awkward for me seeing you with my ex; I'm still working through the breakup. I value our friendship and don't want to make a scene tonight. Could we step aside later for a quick chat so we can clear the air?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Leo, I\u2019m really sorry \u2014 I didn\u2019t mean to make things harder for you. I value our friendship and I appreciate you bringing this up. Let\u2019s step aside later and talk; I\u2019ll be honest about my situation with your ex (we\u2019ve been seeing each other but it\u2019s not serious). Can we talk in about 20 minutes?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "Thanks, Hendrick \u2014 I appreciate the honesty. That works for me; let\u2019s step out by the back patio in about 20 minutes. I do care about our friendship and just want to clear the air calmly."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "Sounds good, Leo \u2014 I\u2019ll meet you on the back patio in about 20 minutes. I really value our friendship and I\u2019m sorry for any hurt; I didn\u2019t mean to be disrespectful. I\u2019ll be honest with you when we talk."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

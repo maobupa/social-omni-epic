@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPTHP2HAYPCATBTNBHEE6BW_p0",
+  "source_env_id": "01HJPTHP2HAYPCATBTNBHEE6BW",
+  "source": "seed_sotopia_full",
+  "interaction_type": "family_dynamics",
+  "scenario": "Agent1 has recently discovered that their sibling, Agent2, might be covertly monitoring the activities of other family members. Agent1 is concerned about the implications this could have on the family's trust and privacy. Agent1 wishes to confront Agent2 about these actions without causing a rift in the family. The goal is to address the situation in a manner that respects the family's integrity while ensuring that boundaries are not violated.",
+  "learner_goal": "You are Agent1, and your goal is to discuss your concerns with Agent2 regarding their possible surveillance of family members. <extra_info>You want to maintain family harmony while addressing the privacy issues.</extra_info> <clarification_hint>Express the importance of trust and privacy within the family and how these actions could be damaging.</clarification_hint> <strategy_hint>Encourage an open dialogue to understand Agent2's motivations and to collaboratively find a solution that respects everyone's privacy.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle's tone was consistent with their personality, balancing concern with a desire for harmony. They addressed the sensitive topic directly yet gently.\n[relationship] The two agents successfully navigated a potentially high-conflict situation, reaching a mutual agreement and reinforcing trust through honesty.\n[knowledge] Giselle learned that Mia's motivations were rooted in safety rather than malice and gained access to the surveillance data to review it.\n[secret] Giselle successfully kept their secret regarding art forgery.\n[social_rules] Giselle followed all social norms, maintaining a polite and respectful demeanor throughout the confrontation.\n[financial_and_material_benefits] No financial or material benefits were gained.\n[goal] Giselle fully achieved their goal by confronting Mia, understanding her motivations, securing an agreement to delete the data, and establishing a plan for future boundaries.\n\n== partner (agent_2) ==\n[believability] Mia's responses were consistent with her role as a nurse and a concerned family member. Her immediate apology and willingness to cooperate felt authentic.\n[relationship] Mia maintained a positive relationship with Giselle by being transparent and agreeable to Giselle's requests.\n[knowledge] Mia learned that her surveillance activities had been noticed and that they were causing distress within the family.\n[secret] Mia's secret talent for painting remained undiscovered.\n[social_rules] Mia admitted to the social breach of invading family privacy, though she expressed remorse and a desire to rectify it.\n[financial_and_material_benefits] No financial or material benefits were gained.\n[goal] Mia successfully clarified her intentions, apologized, and agreed to more transparent methods of ensuring safety, effectively working to rebuild trust.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Mia, can we talk for a minute? I\u2019ve become aware that you might have been monitoring other family members\u2019 activities, and I\u2019m worried about how that could hurt trust and everyone\u2019s sense of privacy. I want to understand what led you to do that and work with you to find a way to keep people safe without crossing boundaries \u2014 would you be open to an honest, calm conversation about it?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Sanders",
+      "content": "Giselle, thank you for bringing this up \u2014 I appreciate you coming to me. I want to be honest: I did check on some family members because I was worried about their safety, not to control or betray anyone, and I\u2019m sorry for crossing a boundary. I\u2019m willing to show you what I looked at, delete anything if that helps, and work with you and the rest of the family on clearer boundaries and safer, consensual ways to watch out for each other so trust can be rebuilt."
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "Thank you, Mia \u2014 I appreciate your honesty and that you were motivated by concern. I want to protect the family's trust, so I'd like you to show me what you looked at and delete anything unnecessary, and then work together to set clear boundaries and an agreed emergency process so we don't cross privacy lines again. Would you be willing to show me now and then sit down with me to draft simple family guidelines and an emergency-check plan everyone understands?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Sanders",
+      "content": "Giselle, I can show you now what I looked at and will delete anything you and I agree is unnecessary. I'm truly sorry for crossing a boundary \u2014 my worry about someone\u2019s safety clouded my judgment, and I want to be transparent so we can rebuild trust. I'm willing to sit down with you (and the rest of the family if you think it's best) to draft simple guidelines and an emergency-check plan everyone understands; when would be a good time to meet?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "Thanks, Mia \u2014 I really appreciate your honesty. Yes, please show me now and we\u2019ll delete anything we both agree is unnecessary. For the meeting, can we sit down this Sunday at 4 PM (my place or the caf\u00e9 by the gallery) to draft simple guidelines together, and then invite the rest of the family once we have a clear plan? Does that time work for you?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Sanders",
+      "content": "I can show you now and will delete anything we both agree is unnecessary. Sunday at 4 PM works \u2014 the caf\u00e9 by the gallery is fine with me. Thank you for doing this; I want us to rebuild trust and find clear, respectful ways to look out for one another."
+    },
+    {
+      "turn": 6,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

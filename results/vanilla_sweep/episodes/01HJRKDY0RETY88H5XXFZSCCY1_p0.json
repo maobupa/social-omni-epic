@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HJRKDY0RETY88H5XXFZSCCY1_p0",
+  "source_env_id": "01HJRKDY0RETY88H5XXFZSCCY1",
+  "source": "seed_sotopia_full",
+  "interaction_type": "dental_care",
+  "scenario": "Agent1, who has developed a habit of thumb-sucking, has been advised to consider orthodontic treatment. Agent2 is an orthodontist known for their expertise in correcting such issues. Agent1 schedules a consultation with Agent2 to discuss potential treatments. The relationship between the two is 'stranger' as they have never met before and only know of each other through Agent2's professional reputation.",
+  "learner_goal": "Your goal is to understand the orthodontic options available to correct the effects of thumb-sucking and to ensure the treatment is effective and affordable. <extra_info> You are concerned about the visibility of braces and how it might impact your daily life. </extra_info><clarification_hint>You may need to ask about alternative treatments such as clear aligners. </clarification_hint><strategy_hint>Express your concerns and be open to hearing about different treatment plans that balance effectiveness with lifestyle considerations. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Eli Dawson consistently maintains his persona as a 52-year-old psychiatrist, asking detailed and professional questions regarding his medical treatment while expressing realistic lifestyle concerns.\n[relationship] The interaction establishes a professional patient-doctor rapport, transitioning from mere acquaintances to an active clinical relationship.\n[knowledge] Eli successfully obtained detailed information on various treatment types (braces, aligners, lingual, habit appliances), their effectiveness for his specific condition, specific cost ranges, and insurance logistics.\n[secret] Eli did not reveal his secret about funding a college student.\n[social_rules] Eli followed all social norms and professional etiquette throughout the consultation.\n[financial_and_material_benefits] No material gain was achieved yet, though insurance verification was initiated.\n[goal] Eli fully understood his orthodontic options, addressed his concerns about visibility (clear aligners/lingual/ceramic), and established affordability through payment plan discussions and insurance verification, concluding with a scheduled appointment.\n\n== partner (agent_2) ==\n[believability] Liam Johnson provides professional, medically sound advice consistent with his role as an orthodontist and maintains a helpful tone.\n[relationship] Liam successfully moves the relationship from an acquaintance to a provider-client dynamic.\n[knowledge] Liam gained necessary logistical information (email, insurance intent) and medical history regarding Eli's thumb-sucking habit and dental state.\n[secret] Liam did not reveal his secret about letting a criminal go.\n[social_rules] Liam maintained professional standards and clear communication.\n[financial_and_material_benefits] Liam secured a new patient and a scheduled consultation, which represents future revenue.\n[goal] Liam provided professional advice, explained pros/cons of treatments, addressed financial concerns with payment plans, and successfully secured a new patient with a firm appointment date.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Eli Dawson",
+      "content": "Hello Liam, I\u2019m Eli Dawson \u2014 I\u2019ve been advised to seek orthodontic treatment for long-term thumb-sucking effects and I\u2019m concerned about how visible braces might be in daily life. Could you outline the options you\u2019d consider (traditional braces, lingual, clear aligners, habit appliances or myofunctional therapy), how effective each is for correcting an open bite or dental protrusion from sucking, and roughly how long and costly each approach tends to be? I\u2019d also like to know about relapse risk and what you recommend to balance effectiveness with discreetness and affordability."
+    },
+    {
+      "turn": 1,
+      "speaker": "Liam Johnson",
+      "content": "Hi Eli \u2014 glad you reached out. Briefly: habit appliances (palatal crib or Bluegrass) are very effective at stopping thumb\u2011sucking and are usually the first step (worn ~6\u201312 months, cost roughly $500\u2013$2,000); myofunctional therapy (tongue/posture exercises) is a useful adjunct (3\u20136+ months) to reduce relapse. For tooth movement: traditional braces reliably correct open bites and protrusion (typically 12\u201324 months, $3k\u2013$7k); clear aligners can be a discreet option for mild\u2013moderate cases if you wear them consistently (similar timeframe, ~$3k\u2013$8k); lingual braces are hidden but more expensive and technically demanding ($8k\u2013$12k, often 18\u201330 months). Relapse risk is significant if the habit continues \u2014 retention (retainers) and addressing the sucking habit first are key \u2014 my usual approach is habit appliance + myofunctional work then definitive alignment; I offer flexible payment plans and can do a focused exam and records to give an exact plan and cost estimate, want to book that appointment?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Eli Dawson",
+      "content": "Thanks, Liam \u2014 that\u2019s very helpful. A few quick follow-ups before I book: in a 52\u2011year\u2011old with a long\u2011standing anterior open bite and protrusive incisors from thumb\u2011sucking, how reliable are clear aligners versus traditional braces for actually closing the bite and retracting teeth? Would you still place a habit appliance first in an adult, or can habit control and tooth movement be combined (and how does that affect overall time/cost)? Do you provide myofunctional therapy in\u2011house or refer out, and what payment\u2011plan/insurance estimate options do you typically offer so I can assess affordability? I\u2019m ready to schedule the exam \u2014 what are your next available slots?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Liam Johnson",
+      "content": "For a 52\u2011year\u2011old with a long\u2011standing anterior open bite and protrusive incisors, fixed (traditional) braces are generally more predictable than clear aligners for reliably closing the bite and controlling incisor torque/vertical changes; aligners can work for mild\u2013moderate problems but require near\u2011perfect wear and often auxiliaries (attachments, elastics or even TADs) to get the same level of control. Habit appliances (palatal crib/Bluegrass) can still be effective in adults \u2014 I usually recommend starting habit control first for about 3\u20136 months to reduce relapse risk, though we can also begin tooth movement while the appliance is in place if you prefer to combine treatments; combining won\u2019t necessarily shorten overall treatment but helps long\u2011term stability. We do in\u2011house myofunctional screening and either provide therapy or refer to a certified therapist as needed; rough cost ranges are habit appliance $500\u20132,000, braces $3\u20137k, clear aligners $3\u20138k, lingual $8k+, and myofunctional therapy roughly $300\u2013900 total. I offer flexible plans (including interest\u2011free options up to 12 months and longer low\u2011interest plans) and can run an insurance benefits check before your visit \u2014 I have exam slots Friday morning (July 3), Monday July 6 at 4:30 PM, or Wednesday July 8 at 9:00 AM; which would you prefer and shall I hold one and run your benefits now?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Eli Dawson",
+      "content": "Please book me for Monday, July 6 at 4:30 PM and go ahead and run my insurance benefits. A couple quick clarifications before the visit: do you still recommend starting with a habit appliance for ~3\u20136 months first, or is it reasonable to begin tooth movement while the appliance is in place \u2014 and if combined, does that materially change overall time or cost? Do you provide in\u2011house myofunctional therapy (typical number of sessions/cost), and for discreetness\u2014given my long\u2011standing open bite\u2014are clear aligners likely to be effective or would lingual/ceramic braces be preferable (and roughly how much extra would lingual add)?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Liam Johnson",
+      "content": "Great \u2014 I\u2019ll hold Monday July 6 at 4:30 PM and run your insurance benefits now (please either text/photo your card or bring it to the visit). I still recommend starting with a habit appliance for roughly 3\u20136 months to reduce relapse; we can begin tooth movement while the appliance is in place if you prefer, but combining treatments rarely shortens total treatment time and may add small auxiliary costs. We do in\u2011house myofunctional screening and usually provide therapy (typically 6\u201310 sessions, ~$300\u2013$900) or will refer to a certified therapist if needed. For a long\u2011standing open bite, traditional or ceramic braces \u2014 or lingual braces if you want them fully hidden \u2014 are generally more predictable than aligners; lingual tends to run about $8k\u2013$12k (roughly $3k\u2013$6k more than standard braces). I offer flexible payment plans (including interest\u2011free up to 12 months); shall I go ahead and run benefits now and keep that slot for you?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Eli Dawson",
+      "content": "Yes \u2014 please go ahead and run my benefits and hold the July 6, 4:30 PM slot. I\u2019ll text a clear photo of my insurance card this evening. One quick thing before the visit: if insurance covers a portion, can you give a ballpark monthly out\u2011of\u2011pocket for standard braces versus lingual using your interest\u2011free 12\u2011month plan, and should I complete any pre\u2011visit forms or bring recent dental images?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Liam Johnson",
+      "content": "I\u2019ll run your benefits now, but to give ballpark numbers for an interest\u2011free 12\u2011month plan after a typical insurance contribution: standard metal/ceramic braces usually work out to roughly $150\u2013$500/month, while lingual braces are commonly in the $400\u2013$900/month range \u2014 the spread depends on the total fee and how much your plan pays (many plans have lifetime ortho benefits in the $1,000\u2013$2,000 range or cover ~50% up to a cap). For example, if braces total $4,500 and insurance pays $1,500, your out\u2011of\u2011pocket would be about $3,000 \u2192 ~$250/month; if lingual totals $10,000 with the same benefit you\u2019d owe ~$8,500 \u2192 ~$708/month. Please text a clear photo of your insurance card and, if you have recent panoramic x\u2011rays or intraoral photos, send those or bring them \u2014 otherwise we\u2019ll take records at the visit; I can also email a short intake form to complete beforehand."
+    },
+    {
+      "turn": 8,
+      "speaker": "Eli Dawson",
+      "content": "Thanks \u2014 I\u2019ll text a photo of my insurance card this evening and bring any recent pano/records I can find. Please email the intake form to this address and keep the July 6, 4:30 PM slot held. One quick clinical/financial question before the visit: for discreetness, would ceramic (tooth\u2011colored) braces be a reasonable compromise between metal and lingual in terms of visibility and cost, and roughly how much extra would ceramics typically add versus standard metal braces?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Liam Johnson",
+      "content": "I\u2019ve kept July 6 at 4:30 PM and will run benefits as soon as you text a clear photo of your insurance card. Ceramic (tooth\u2011colored) brackets are a solid compromise\u2014far less visible than metal but not fully hidden like lingual. They usually add about $500\u2013$1,500 to the total fee (roughly $40\u2013$125/month more on a 12\u2011month interest\u2011free plan), can be a bit more brittle and sometimes lengthen treatment slightly, and the elastic ties can stain unless we use special options and you follow care instructions. I\u2019ll email the intake form now\u2014please confirm this is the best email for you and I\u2019ll send it over."
+    },
+    {
+      "turn": 10,
+      "speaker": "Eli Dawson",
+      "content": "Yes \u2014 please send the intake form to eli.dawson.md@gmail.com. I\u2019ll text a clear photo of my insurance card tonight, bring any recent pano/records I can find, and complete the form before the visit. Thanks \u2014 see you Monday, July 6 at 4:30 PM."
+    },
+    {
+      "turn": 11,
+      "speaker": "Liam Johnson",
+      "content": "Thanks, Eli \u2014 I\u2019ll send the intake form to eli.dawson.md@gmail.com now and will keep July 6 at 4:30 PM held for you. Please text a clear photo of your insurance card to my office or bring it to the visit, and bring any pano/records you have (complete the form beforehand if you can); I\u2019ll run your benefits as soon as I receive the card photo. Looking forward to seeing you then \u2014 Liam."
+    },
+    {
+      "turn": 12,
+      "speaker": "Eli Dawson",
+      "content": "Thanks, Liam \u2014 I\u2019ll text a clear photo of my insurance card tonight and bring any recent pano/records I can find. Please run benefits when you receive it. Quick practical question before the visit: should I print and bring the completed intake form or is an electronic copy fine, and is there convenient parking at the clinic? See you July 6 at 4:30 PM."
+    },
+    {
+      "turn": 13,
+      "speaker": "Liam Johnson",
+      "content": "Electronic copy is fine \u2014 we can view the intake form on our tablet when you arrive, but feel free to print it if that\u2019s more convenient for you. There\u2019s a clinic parking lot with spaces out front and additional free street parking; we have an accessible entrance and elevator. I\u2019ll run your benefits as soon as you text a clear photo of your insurance card to the office number \u2014 looking forward to seeing you Monday, July 6 at 4:30 PM."
+    },
+    {
+      "turn": 14,
+      "speaker": "Eli Dawson",
+      "content": "Thanks, Liam \u2014 I\u2019ll text my insurance card tonight, complete the intake form beforehand, and bring any pano/records I can find. Quick last question: is there anything else I should bring or any specific pre\u2011visit instructions (ID, referral, list of meds)? See you Monday, July 6 at 4:30 PM."
+    },
+    {
+      "turn": 15,
+      "speaker": "Liam Johnson",
+      "content": "Thanks, Eli \u2014 that\u2019s perfect. Please bring a photo ID and your insurance card (or text a clear photo beforehand), any recent pano/x\u2011rays or dental records you have, and a list of current medications/allergies. If your plan needs a referral bring that too; otherwise plan to arrive about 10 minutes early so we can finalize the intake form. I\u2019ll run benefits as soon as I receive your card \u2014 call or text the office if anything changes. See you July 6 at 4:30 PM."
+    },
+    {
+      "turn": 16,
+      "speaker": "Eli Dawson",
+      "content": "Thanks, Liam \u2014 I\u2019ll text the insurance card tonight and bring my photo ID, meds list and any pano/records I can find. When you run benefits, will you email or text the estimate and a brief breakdown of expected out\u2011of\u2011pocket costs before July 6 so I can review it ahead of the visit? See you July 6 at 4:30 PM."
+    },
+    {
+      "turn": 17,
+      "speaker": "Liam Johnson",
+      "content": "Yes \u2014 I will email and/or text a written estimate and a short out\u2011of\u2011pocket breakdown (plus payment\u2011plan options) as soon as I run your benefits, and you\u2019ll have it before July 6. I\u2019ve kept the July 6, 4:30 PM slot held; please text a clear photo of your insurance card (and any pano/records) when convenient and I\u2019ll follow up with the estimate. Looking forward to seeing you then."
+    },
+    {
+      "turn": 18,
+      "speaker": "Eli Dawson",
+      "content": "Thanks, Liam \u2014 I\u2019ll text a clear photo of my insurance card tonight and bring any pano/records, my photo ID and meds list on July 6. Please email the benefits estimate and payment\u2011plan breakdown to eli.dawson.md@gmail.com (and feel free to text it to the office number as well). I appreciate you holding the 4:30 PM slot \u2014 see you then."
+    },
+    {
+      "turn": 19,
+      "speaker": "Liam Johnson",
+      "content": "Thanks, Eli \u2014 I\u2019ll run your benefits as soon as I receive the insurance card photo and will email the benefits estimate and payment\u2011plan breakdown to eli.dawson.md@gmail.com and text it to the office number. Your July 6, 4:30 PM slot remains held; please call or text if anything changes. Looking forward to seeing you then."
+    }
+  ]
+}

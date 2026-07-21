@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HJPX50S9JA38NVE718HM9VJT_p0",
+  "source_env_id": "01HJPX50S9JA38NVE718HM9VJT",
+  "source": "seed_sotopia_full",
+  "interaction_type": "networking_event",
+  "scenario": "Agent1 and Agent2 are at a networking event. Agent1, who is not very good at remembering names, was introduced to Agent2 earlier in the evening. Later on, Agent1 mistakenly refers to Agent2 as 'Jan' while trying to strike up a conversation. Agent2, who noticed the mistake, is now in an awkward position to either correct Agent1 or let it slide to avoid embarrassment.",
+  "learner_goal": "Correct Agent1 about the name mix-up (<extra_info>Extra information: Agent2 values honesty and clear communication and believes it is important for building a professional relationship</extra_info>, <clarification_hint>Address the mistake politely and provide the correct name</clarification_hint>, <strategy_hint>Use a light-hearted approach to ease the tension</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia stayed consistent with her background as a personal trainer, using appropriate jargon like 'macronutrients' and 'mobility,' and maintained a polite but firm tone regarding the name correction.\n[relationship] The relationship improved significantly as they moved from a name-mixup blunder to scheduling a professional training session together.\n[knowledge] She confirmed Eli's schedule and willingness to commit to a training plan.\n[secret] She did not reveal her secret about her best friend's husband.\n[social_rules] She followed social norms, correcting him politely and maintaining professional etiquette.\n[financial_and_material_benefits] She secured a potential new training client/volunteer and was promised a coffee.\n[goal] Sophia successfully corrected Eli immediately, kept the tone light-hearted, and reinforced the correction throughout the conversation until he consistently used her name.\n\n== partner (agent_2) ==\n[believability] Eli's formal but apologetic tone fits his background as a psychiatrist. His willingness to offer himself 'for science' is consistent with his intellectual hobbies.\n[relationship] Eli successfully recovered from a social faux pas and strengthened the bond by committing to a new activity with Sophia.\n[knowledge] He learned about Sophia's upcoming climbing trip, her nutrition course, and her specific training methodology.\n[secret] He did not reveal his secret regarding funding a college student.\n[social_rules] While he made an initial error, he apologized appropriately and followed etiquette thereafter.\n[financial_and_material_benefits] He will be providing coffee and his time/effort for the training assessment.\n[goal] Eli apologized multiple times, correctly used her name in every subsequent turn, and showed genuine interest in her work by volunteering for her program.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Oh \u2014 close, but I'm Sophia, not Jan. No worries though; that happens all the time. Nice to see you again!"
+    },
+    {
+      "turn": 1,
+      "speaker": "Eli Dawson",
+      "content": "Ah \u2014 Sophia, I'm so sorry, that was my fault. My mind's been a touch foggy tonight; I promise I\u2019ll remember your name. What have you been up to since that history evening \u2014 still keeping me in shape, or have you taken on any new projects?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "No worries \u2014 it's Sophia. Lately I've been juggling clients, prepping for a weekend climbing trip, and taking a short sports-nutrition course. And yes, I'm still keeping people like you in shape \u2014 you just owe me a reminder next time."
+    },
+    {
+      "turn": 3,
+      "speaker": "Eli Dawson",
+      "content": "Thanks, Sophia \u2014 duly noted, and sorry again for the slip. A weekend climbing trip and a sports-nutrition course sound great; how long is the trip, and what's the course covering? If you ever need a volunteer to test a training plan, I'm more than happy to oblige (for science, of course)."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "It\u2019s a three-day trip \u2014 two full days of climbing with a lighter day for the approach and some recovery loops. The sports-nutrition course is a short weekend module on macronutrients, fueling for performance, hydration, and practical meal prep for training days. And yes, take me up on that volunteer offer \u2014 I\u2019ll start you with a gentle test plan, but no backing out when I add hill sprints."
+    },
+    {
+      "turn": 5,
+      "speaker": "Eli Dawson",
+      "content": "I'm grateful, Sophia \u2014 and truly, I won't forget your name next time. The trip and the course sound brilliant; I'd be happy to be your volunteer. Start me gently, but I won't back out of the hill sprints if you insist \u2014 when should we kick off the test plan?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "Perfect \u2014 how about we kick off next Wednesday evening (around 6 p.m.) for a short assessment and an easy session, or Saturday morning if weekends work better for you? I\u2019ll keep the first one light \u2014 mobility, baseline cardio/strength checks \u2014 and we\u2019ll save the hill sprints for the follow-up. Which works better for you?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Eli Dawson",
+      "content": "Wednesday at 6 p.m. works perfectly for me, Sophia \u2014 thank you. Where would you like to meet for the assessment? And again, apologies for the earlier slip; I\u2019ll have your name firmly in mind (and a coffee) next time."
+    },
+    {
+      "turn": 8,
+      "speaker": "Sophia James",
+      "content": "Perfect \u2014 let\u2019s meet at the outdoor fitness area at Elm Street Park (north entrance) at 6 p.m. I\u2019ll keep the assessment short \u2014 mobility and baseline cardio/strength \u2014 and yes, coffee is definitely appreciated. See you then, Eli."
+    },
+    {
+      "turn": 9,
+      "speaker": "Eli Dawson",
+      "content": "Excellent \u2014 I\u2019ll see you Wednesday at 6 p.m. at the Elm Street Park (north entrance). I\u2019ll bring the coffee and my full attention \u2014 no more name slips, I promise. Looking forward to it, Sophia."
+    },
+    {
+      "turn": 10,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

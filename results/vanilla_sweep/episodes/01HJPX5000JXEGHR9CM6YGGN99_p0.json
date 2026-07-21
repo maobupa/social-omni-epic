@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPX5000JXEGHR9CM6YGGN99_p0",
+  "source_env_id": "01HJPX5000JXEGHR9CM6YGGN99",
+  "source": "seed_sotopia_full",
+  "interaction_type": "small_claims_resolution",
+  "scenario": "Agent1 is attempting to resolve a minor financial dispute in a small claims court and has decided to enter the courtroom without a lawyer. Agent2 is the opposing party in the dispute, also without legal representation. They have a shared interest in resolving the matter quickly to avoid prolonged litigation and additional expenses.",
+  "learner_goal": "Negotiate a fair settlement (<extra_info>Extra information: Agent1 believes they are owed a specific amount but is willing to consider a compromise to expedite the process</extra_info>, <strategy_hint>Propose a structured payment plan or alternative compensation that could be acceptable to both parties</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia's behavior is consistent with a personal trainer who is firm yet willing to leverage her professional services to reach a settlement. Her negotiation tactics were realistic for a small claims scenario between acquaintances.\n[relationship] The agents maintained an amicable tone despite the financial dispute, and Sophia showed flexibility to preserve the relationship.\n[knowledge] She learned about Eli's specific financial constraints and his willingness to use her training services as a form of payment.\n[secret] Sophia did not reveal her secret regarding her best friend's husband.\n[social_rules] She followed courtroom decorum and social norms for a negotiation between friends.\n[financial_and_material_benefits] She secured a structured payment of $850 plus the value of two training sessions, totaling close to her $1,000 compromise goal.\n[goal] Sophia successfully negotiated a structured settlement that included alternative compensation (training sessions) and a clear timeline, which were her specific objectives. The agreement was reached in the final turn before she ended the interaction.\n\n== partner (agent_2) ==\n[believability] Eli's responses were consistent with his background as a psychiatrist\u2014calm, acknowledging, and focused on his current financial reality.\n[relationship] Eli successfully avoided a conflict-heavy litigation by reaching a compromise, likely preserving their friendly status.\n[knowledge] He understood Sophia's bottom line and her willingness to accept non-cash compensation.\n[secret] Eli kept his secret about funding a college student.\n[social_rules] Eli remained respectful and transparent about his financial situation throughout the negotiation.\n[financial_and_material_benefits] He managed to reduce the immediate cash outflow from $1,200 to $850 and deferred payment into installments.\n[goal] Eli achieved his goal of minimizing financial loss by reducing the debt from $1,200 to $850 and incorporating training sessions he would likely have to provide or pay for anyway.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hi Eli \u2014 I\u2019d really like to settle this today so we both avoid extra time and court costs. I believe I\u2019m owed $1,200; I\u2019m willing to accept either $1,000 as a single payment within 30 days or $1,200 paid in four monthly installments of $300 starting next month. If cash won\u2019t work, I\u2019d consider trading some personal training sessions toward part of the balance \u2014 what sounds fair to you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Eli Dawson",
+      "content": "Sophia, I acknowledge the debt and I\u2019d like to settle today but I\u2019m short on cash. Would you accept $700 total \u2014 $400 within 30 days and $300 one month after that \u2014 plus two of your personal training sessions toward the balance? If that won\u2019t work, I can aim for $1,000 but would need 90 days to come up with it."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Thanks, Eli \u2014 I appreciate you wanting to settle. I can take your $700 plus the two training sessions if you add $150 more paid within 60 days (so $850 + two sessions), or if you prefer cash-only I\u2019ll accept $1,000 but need it within 60 days instead of 90 \u2014 which do you prefer?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Eli Dawson",
+      "content": "Sophia \u2014 I appreciate the flexibility. I can accept $850 plus the two training sessions: $400 paid within 30 days and the remaining $450 by day 60. If that works, we\u2019ll consider the debt settled with no further claims. Does that sound good to you?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

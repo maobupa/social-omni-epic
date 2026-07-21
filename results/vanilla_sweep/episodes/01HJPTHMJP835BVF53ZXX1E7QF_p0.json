@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPTHMJP835BVF53ZXX1E7QF_p0",
+  "source_env_id": "01HJPTHMJP835BVF53ZXX1E7QF",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 has just moved into a new home and is excited to decorate. They have a collection of family photos that they want to display prominently in the living room. Agent2 is a close friend who has come over to help with the interior design. Agent1 wants to create a large photo wall with their children's pictures, but Agent2 is concerned about privacy and the potential overexposure of the children on social media if the pictures are posted online. They need to find a way to respect both Agent1's desire to celebrate their family and Agent2's concerns for privacy.",
+  "learner_goal": "Decorate your living room with your children's pictures while addressing Agent2's privacy concerns (<extra_info>Extra information: You value family and want your children to be a central part of your home decor. However, you understand Agent2's concerns and want to find a compromise that keeps your children's images safe.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's responses were consistent with her role as a mother and a developer, blending sentimental value with technical solutions for privacy.\n[relationship] The interaction was highly collaborative and polite, strengthening the mentor-student bond through mutual respect for boundaries.\n[knowledge] She gained specific technical and practical advice on privacy-conscious interior design, such as silhouette prints and street-view considerations.\n[secret] She successfully kept her online alter ego a secret.\n[social_rules] She followed social norms for inviting a friend over and discussing personal matters.\n[financial_and_material_benefits] No significant financial or material gains occurred in this dialogue.\n[goal] Naomi reached a firm agreement to decorate her home with her children's pictures using a variety of formats (prints, digital frame) while explicitly incorporating all of Sophia's privacy suggestions.\n\n== partner (agent_2) ==\n[believability] Sophia's advice was professional and aligned with her background as a psychologist and her secret life as an agent concerned with security.\n[relationship] She solidified her role as a trusted advisor and friend.\n[knowledge] She learned about Naomi's home layout and her openness to privacy measures.\n[secret] She successfully kept her identity as an undercover agent a secret.\n[social_rules] She provided helpful advice without being overbearing.\n[financial_and_material_benefits] No significant financial or material changes.\n[goal] Sophia successfully persuaded Naomi to adopt multiple privacy-preserving alternatives to a standard photo wall, including placement away from windows, offline frames, and abstract prints.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks for flagging that, Soph \u2014 I love having the kids front-and-center at home but I don't want them overexposed online either. What if we do a big printed gallery wall here (no social posts), and for anything I might share later I promise to either use cropped/obscured shots or a private, password\u2011protected album I only send to close family \u2014 and I'll run any post by you first. I can also set up an offline digital frame that never uploads to the cloud if you'd like extra reassurance; does that sound reasonable?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Sophia Brown",
+      "content": "That all sounds really reasonable \u2014 I love the offline frame and the private album idea. A couple extra suggestions: put the gallery on an interior wall (not visible from the street), mix in cropped/detail shots, silhouettes or abstracted prints so faces aren\u2019t identifiable, and add a gentle \u201cplease don\u2019t post\u201d sign for guests. Also confirm any digital frame is fully offline and location/tagging is off for photos you might share; I\u2019m happy to help pick which images to print or obscure if you want."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks, Soph \u2014 I love those ideas. Let\u2019s do the gallery on the interior wall with a mix of cropped/detail shots, a few silhouettes/abstract prints, and a small \u201cplease don\u2019t post\u201d sign for guests. I\u2019ll get an offline digital frame and triple-check that location/tagging/cloud upload are off, and I\u2019ll only share anything online via a password\u2011protected album sent to close family (and I\u2019ll run posts by you first). Want to come over after lunch or this weekend to help pick which photos to print/obscure and to verify the frame settings?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Sophia Brown",
+      "content": "I'd love to \u2014 I can come over after lunch today around 1:30, or if that's tight, Saturday morning works too. I'll bring my laptop and a few sample frames/mockups and we can pick images to print or obscure and go through the offline-frame settings together."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "1:30 today is perfect \u2014 thanks! I\u2019ll have a folder of candidate photos on a USB and my phone, plus a quick sketch of the interior wall and a couple of frame samples. Can you bring your laptop and the mockups and we\u2019ll pick which images to print/obscure and go through the offline-frame settings together? See you at 1:30!"
+    },
+    {
+      "turn": 5,
+      "speaker": "Sophia Brown",
+      "content": "Perfect \u2014 see you at 1:30. I\u2019ll bring my laptop, a few mockups, and a short privacy-settings checklist for the frame, plus sample edits (cropped/blurred/silhouettes) so we can pick which images to print or obscure. If anything changes, text me."
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

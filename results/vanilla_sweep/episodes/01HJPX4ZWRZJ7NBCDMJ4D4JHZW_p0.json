@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPX4ZWRZJ7NBCDMJ4D4JHZW_p0",
+  "source_env_id": "01HJPX4ZWRZJ7NBCDMJ4D4JHZW",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Two friends are preparing to attend a casual party. Agent1 notices that Agent2 has accidentally put on their shirt backwards and wants to point it out without embarrassing them.",
+  "learner_goal": "Inform Agent2 about the shirt mishap in a discreet and friendly manner (<extra_info>Extra information: Agent1 values Agent2's feelings and does not want to cause any embarrassment</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 1.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's tone as a father and retired police officer was spot on\u2014protective, observant, and direct yet kind. His actions in turn #3 perfectly reflected the character description.\n[relationship] The interaction strengthened their bond through a display of care and lighthearted teasing, reinforcing their existing mutual respect.\n[knowledge] Liam learned that Ethan is feeling 'fragile' tonight, which provides emotional context for his son's state of mind.\n[secret] Liam did not reveal his secret about letting a criminal go.\n[social_rules] Liam followed social norms by addressing the embarrassing situation privately and helping his son fix it.\n[financial_and_material_benefits] Ethan promised to buy him a beer, which is a minor material gain.\n[goal] Liam successfully informed Ethan of the mistake privately, helped him fix it, and maintained a friendly atmosphere, fully achieving his goal.\n\n== partner (agent_2) ==\n[believability] Ethan's response was consistent with his background as a son who respects his father, and his use of humor to mask sensitivity ('I'm fragile tonight') felt authentic.\n[relationship] Ethan allowed his father to help him and engaged in playful banter, which deepened their connection.\n[knowledge] Ethan learned his shirt was on backwards.\n[secret] Ethan did not reveal that he is a romance novel author.\n[social_rules] Ethan handled a potentially embarrassing social mishap with grace and humor.\n[financial_and_material_benefits] Ethan committed to paying for a beer.\n[goal] Ethan successfully turned the situation into a joke, invited his father to roast him, and kept the mood light, which aligned with his goal of not taking the mistake too seriously.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Hey Ethan\u2014quick heads-up, your shirt's on backwards. Want me to fix it for you before we go in?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Nice save, Dad \u2014 I guess I\u2019m starting a new trend. Mind fixing it for me? I\u2019ll buy you a beer and you have my full permission to roast me on the way in."
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "[action] Straighten his shirt for him: flip it so it's on correctly, smooth the back and collar, then give a mock-stern grin and a quick nudge. \"There \u2014 good as new. Beer better be cold, and I will roast you a little on the way in.\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "Thanks, Dad \u2014 you're a lifesaver. Beer\u2019s on me; roast away on the way in, but go easy, I\u2019m fragile tonight."
+    },
+    {
+      "turn": 4,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

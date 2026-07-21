@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HJPX50HW3TF15XJQPWQK4SX1_p0",
+  "source_env_id": "01HJPX50HW3TF15XJQPWQK4SX1",
+  "source": "seed_sotopia_full",
+  "interaction_type": "modern_tech_challenge",
+  "scenario": "Agent1 and Agent2 are friends who have recently purchased the latest model of a highly anticipated smartphone. As they explore the new features, they realize that one of the phone's advanced security features, which requires facial recognition, is not working as intended for Agent2. Agent1, being more tech-savvy, tries to assist Agent2 in resolving the issue. They both value their privacy and security but have different views on technology's role in their lives.",
+  "learner_goal": "Help your friend troubleshoot the facial recognition feature without compromising their privacy or security (<extra_info>Extra information: You are aware of alternative security methods that could be used if the facial recognition cannot be fixed</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel's character as a tech-savvy software developer is highly consistent. He provides specific, technically accurate advice while maintaining a helpful, friend-oriented tone.\n[relationship] Samuel demonstrated patience and deep respect for Oliver's privacy concerns, strengthening their bond through helpfulness and technical guidance.\n[knowledge] Samuel learned about Oliver's specific preferences regarding local-only storage and his aversion to biometric convenience features.\n[secret] Samuel did not reveal his past as a competitive figure skater.\n[social_rules] Samuel followed all social norms, acting as a supportive and knowledgeable friend.\n[financial_and_material_benefits] No material or financial benefits were exchanged.\n[goal] Samuel successfully troubleshot the Face ID issue, and when it couldn't be fixed, he provided multiple alternative security methods (alphanumeric passcode, hardware keys, local password managers) all while strictly adhering to Oliver's privacy requirements.\n\n== partner (agent_2) ==\n[believability] Oliver's skepticism of cloud technology and preference for physical security (as a police officer) is very believable and consistent throughout the dialogue.\n[relationship] Oliver showed trust in Samuel by allowing him to guide him through sensitive security setups and expressed appreciation for the help.\n[knowledge] Oliver learned how to set up local-only KeePass databases, the difference between cloud and local storage, and how to configure advanced security settings on his phone.\n[secret] Oliver did not reveal his secret greenhouse or gardening hobby.\n[social_rules] Oliver was polite and clear in his communication.\n[financial_and_material_benefits] No material or financial benefits were exchanged.\n[goal] Oliver accepted Samuel's help, attempted to fix Face ID, and successfully transitioned to less invasive, more secure measures (custom alphanumeric passcode and local-only manager) that aligned with his privacy beliefs.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Oliver \u2014 sorry Face ID's being flaky. Want me to help troubleshoot? We can try re-enrolling your face in good, even lighting (no hat or sunglasses), wipe/inspect the front camera, restart the phone, and check for any OS or Face Recognition setting updates. I won't send any of your biometric data anywhere \u2014 we'll use the phone's on-device setup only; if it still fails I can help you switch to a strong alphanumeric passcode, fingerprint (if available), or a hardware security key. Want me to walk through re-enrolling now?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Smith",
+      "content": "Thanks, Sam \u2014 appreciate the offer. I'm okay to try re-enrolling to see if we can fix it, but please keep everything on-device and let's try the least invasive steps first (restart, wipe/inspect the front camera, and check for updates). If it still misbehaves, I'd rather skip Face ID and set a strong alphanumeric passcode or use a hardware security key \u2014 can you help me do that if needed?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Sounds good \u2014 we'll stick to the least invasive on-device steps. First, restart the phone, then gently wipe the front camera with a microfiber cloth and remove any case or screen protector that could block the sensor; after that we'll check Settings \u2192 General \u2192 Software Update and then Settings \u2192 Face ID & Passcode. Want me to walk you through the restart now or do you want to try the cleaning first?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Smith",
+      "content": "Restart it now \u2014 tell me if you want me to hold the side button or use the Settings \u2192 General \u2192 Shut Down option. Once it boots I'll wipe the front camera with a microfiber cloth and remove the case. And yes, keep everything on-device; if Face ID still misbehaves we'll switch to a strong alphanumeric passcode or set up a hardware security key."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "Do the side-button method \u2014 press and hold the side/power button and either volume button until the power\u2011off slider appears, then slide to power off. Wait ~10\u201315 seconds, then press and hold the side/power button to boot it back up. Once it's on, wipe the front camera with the microfiber cloth and remove the case, then I\u2019ll walk you through checking Software Update and Face ID settings \u2014 everything we do stays on\u2011device."
+    },
+    {
+      "turn": 5,
+      "speaker": "Oliver Smith",
+      "content": "All done \u2014 I used the side button to restart, wiped the front camera with the microfiber cloth, and removed the case. Ready for you to walk me through checking Software Update and Face ID & Passcode. If it still acts up, let's skip Face ID and set a strong alphanumeric passcode or add a hardware security key."
+    },
+    {
+      "turn": 6,
+      "speaker": "Samuel Anderson",
+      "content": "Okay \u2014 open Settings \u2192 General \u2192 Software Update and tell me whether it says up to date or shows an update. If it\u2019s up to date, go back to Settings \u2192 Face ID & Passcode, enter your passcode, tap Reset Face ID, then choose Set Up Face ID \u2014 I\u2019ll talk you through lighting and positioning while you re-enroll. Everything we do stays on\u2011device; if it still fails we\u2019ll set a strong alphanumeric passcode or add a hardware security key and I\u2019ll help you with that."
+    },
+    {
+      "turn": 7,
+      "speaker": "Oliver Smith",
+      "content": "Software Update says it\u2019s up to date. Okay \u2014 walk me through Reset Face ID and the re-enroll; I\u2019ll take off my glasses, keep a neutral expression, and follow your lighting/positioning prompts. Please keep everything strictly on\u2011device; if it still misbehaves we\u2019ll skip Face ID and set a strong alphanumeric passcode or add a hardware security key."
+    },
+    {
+      "turn": 8,
+      "speaker": "Samuel Anderson",
+      "content": "Great \u2014 go to Settings \u2192 Face ID & Passcode, enter your passcode, tap Reset Face ID, then tap Set Up Face ID. Hold the phone about an arm\u2019s length (10\u201320 inches) from your face in even indoor lighting (no strong backlight), keep a neutral expression, remove glasses/hat, and slowly rotate your head when prompted so the camera captures different angles. If it still fails, we\u2019ll skip Face ID and I\u2019ll help you set a strong alphanumeric passcode or add a hardware security key \u2014 and everything we do stays strictly on\u2011device."
+    },
+    {
+      "turn": 9,
+      "speaker": "Oliver Smith",
+      "content": "Okay \u2014 I'm at the Set Up Face ID screen and starting now. I'm holding the phone about an arm's length in even indoor light with no backlight and no glasses; talk me through the head rotations/prompts. Reminder: keep everything strictly on\u2011device \u2014 if it still fails, let's skip Face ID and set a strong alphanumeric passcode or add a hardware security key."
+    },
+    {
+      "turn": 10,
+      "speaker": "Samuel Anderson",
+      "content": "Okay \u2014 when the first circle prompt appears, slowly move your head in a full, steady circle so the camera captures left/right/top/bottom angles; don\u2019t rush. For the second scan, tilt your chin up and down a little while rotating so it gets under\u2011chin and forehead angles. If it says \u201cTry Again\u201d or fails, repeat once more; if it still won\u2019t enroll we\u2019ll skip Face ID and I\u2019ll help you set a strong alphanumeric passcode or add a hardware security key \u2014 and we\u2019ll keep everything strictly on\u2011device."
+    },
+    {
+      "turn": 11,
+      "speaker": "Oliver Smith",
+      "content": "It failed \u2014 after the second scan it just says \u201cTry Again\u201d and won\u2019t complete. Let\u2019s skip Face ID; can you help me set a strong alphanumeric passcode now, and then walk me through adding a hardware security key as a backup? Please keep everything strictly on\u2011device."
+    },
+    {
+      "turn": 12,
+      "speaker": "Samuel Anderson",
+      "content": "Okay \u2014 let\u2019s set a strong alphanumeric passcode first (all on\u2011device). Go to Settings \u2192 Face ID & Passcode, enter your current passcode, tap Change Passcode \u2192 Passcode Options \u2192 Custom Alphanumeric Code, then enter a long passphrase (aim for 12+ characters \u2014 mix upper/lowercase, numbers and a symbol; use a memorable phrase rather than a single word). Hardware security keys won\u2019t replace the device unlock but are excellent as a backup for your Apple ID/2FA: if you have a compatible key (YubiKey or similar), go to Settings \u2192 [your name] \u2192 Password & Security \u2192 Security Keys \u2192 Add Security Key and follow the on\u2011screen prompts (use NFC/USB/Lightning as your key supports); want me to walk you through either step now, and do you have a hardware key handy?"
+    },
+    {
+      "turn": 13,
+      "speaker": "Oliver Smith",
+      "content": "Yes \u2014 walk me through changing to a strong alphanumeric passcode now (I'll follow the Settings steps you gave). I don't have a hardware security key on me, so we'll add one later; when I get one, please help me add it. And please keep everything strictly on\u2011device."
+    },
+    {
+      "turn": 14,
+      "speaker": "Samuel Anderson",
+      "content": "Okay \u2014 go to Settings \u2192 Face ID & Passcode, enter your current passcode, tap Change Passcode \u2192 Passcode Options \u2192 Custom Alphanumeric Code. Enter a long passphrase (aim for 12+ characters \u2014 mix upper/lowercase, numbers and a symbol; use a memorable phrase rather than a single word, e.g. Pancakes!4SundayRun), then confirm it. When you're done tell me and I\u2019ll show an on\u2011device storage option (iCloud Keychain or a local-only password manager) and enable Require Passcode Immediately if you want."
+    },
+    {
+      "turn": 15,
+      "speaker": "Oliver Smith",
+      "content": "All done \u2014 I changed to a custom alphanumeric passcode. I\u2019d prefer a local-only password manager over iCloud Keychain for privacy, so please walk me through the on\u2011device storage option (local-only if available) and show how to enable Require Passcode Immediately. I\u2019ll get a hardware security key later and will ask you to help add it then \u2014 thanks, Sam."
+    },
+    {
+      "turn": 16,
+      "speaker": "Samuel Anderson",
+      "content": "Good call \u2014 we\u2019ll avoid iCloud Keychain. Quick notes: iCloud Keychain syncs to Apple servers, so for local-only try a KeePass-compatible app (Strongbox or KeePassium) from the App Store \u2014 after installing, create a new vault and choose local/on\u2011device storage (no cloud), set a strong master password, and keep an encrypted backup of the .kdbx file offline. To enable Require Passcode Immediately: Settings \u2192 Face ID & Passcode \u2192 enter your passcode \u2192 Require Passcode \u2192 set to Immediately. Also consider tightening Auto\u2011Lock: Settings \u2192 Display & Brightness \u2192 Auto\u2011Lock \u2192 30 Seconds or 1 Minute. Want me to walk you through installing and creating a local vault in one of those apps now, and do you want biometrics enabled for the password app or strictly password-only?"
+    },
+    {
+      "turn": 17,
+      "speaker": "Oliver Smith",
+      "content": "Yes \u2014 walk me through installing a local-only password app (Strongbox or KeePassium) and creating a new on-device vault; I want it strictly password-only (no Face ID/biometrics). Also show me how to set Require Passcode to Immediately and Auto\u2011Lock to 30 seconds. I don\u2019t have a hardware key yet \u2014 I\u2019ll get one later and ask you to help add it then."
+    },
+    {
+      "turn": 18,
+      "speaker": "Samuel Anderson",
+      "content": "Okay \u2014 let\u2019s do this. First, open the App Store and install either \u201cStrongbox\u201d or \u201cKeePassium\u201d (both are KeePass-compatible). Open the app, choose Create New Vault / New Database, and when asked where to store it select On\u2011Device / Local (do NOT choose iCloud, Dropbox, or any cloud option). Pick a strong master password (12+ characters or a memorable passphrase with mixed case, numbers and a symbol), confirm it, and finish creating the vault. In the app\u2019s settings explicitly disable Face ID/biometrics so it\u2019s password\u2011only and turn off any cloud sync options. After that: Settings \u2192 Face ID & Passcode \u2192 enter passcode \u2192 Require Passcode \u2192 Immediately, and Settings \u2192 Display & Brightness \u2192 Auto\u2011Lock \u2192 30 Seconds. When you\u2019ve completed those steps tell me and I\u2019ll walk you through exporting an encrypted .kdbx backup to keep offline and answer any questions."
+    },
+    {
+      "turn": 19,
+      "speaker": "Oliver Smith",
+      "content": "Done \u2014 I installed KeePassium, created a local vault with a strong master password, disabled biometrics and cloud sync, and set Require Passcode to Immediately and Auto\u2011Lock to 30 seconds. Please walk me through exporting an encrypted .kdbx backup to keep offline and recommend the best place to store it (USB thumb drive vs. external HDD) and any filename/encryption choices I should use."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB34C3KP067MFM02CVC1W0J_p0",
+  "source_env_id": "01HPB34C3KP067MFM02CVC1W0J",
+  "source": "seed_sotopia_full",
+  "interaction_type": "restaurant_etiquette",
+  "scenario": "Agent1 and agent2 are colleagues who have decided to eat out together after a successful project completion. They choose a restaurant that is famous for its 'meal for two' deals. However, upon arriving, they realize that they have very different preferences in cuisine, and the 'meal for two' offer is only for a specific set menu which doesn't cater to both of their tastes. They need to negotiate a way to order their meals in such a way that they both get to enjoy their dinner without missing out on the deal.",
+  "learner_goal": "You want to enjoy a meal that suits your culinary preference while also taking advantage of the 'meal for two' deal. <extra_info> You have specific dietary restrictions or preferences that make the set menu less appealing. </extra_info><clarification_hint> You need to communicate your dietary needs to agent2. </clarification_hint><strategy_hint> You can suggest ordering from the regular menu while still trying to keep the cost similar to the deal. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ava remains true to her architect background and clear communication style, identifying the problem and proposing structural solutions for the meal.\n[relationship] They reached a quick, respectful agreement that accommodated both parties' needs, strengthening their professional rapport.\n[knowledge] She learned that Hendrick is very keen on the set menu but is also flexible and accommodating of her dietary needs.\n[secret] The hidden tattoo remained a secret.\n[social_rules] Politely communicated dietary needs and proposed compromises without being demanding.\n[financial_and_material_benefits] They agreed on a plan that maintains the financial benefit of the 'meal for two' deal or its equivalent cost.\n[goal] She successfully communicated her vegetarian needs and secured an agreement to either swap the menu item or order a custom set that approximates the deal's price.\n\n== partner (agent_2) ==\n[believability] Hendrick's response is consistent with a chef who appreciates a set menu but also understands the importance of accommodating dietary restrictions.\n[relationship] Showed professional courtesy and flexibility, which is beneficial for their ongoing relationship.\n[knowledge] He learned about Ava's vegetarianism and her willingness to find creative pricing solutions.\n[secret] His fake credentials remain undiscovered.\n[social_rules] Followed social norms of dining etiquette and compromise.\n[financial_and_material_benefits] He gets to experience the restaurant's famous set menu while maintaining the shared cost advantage.\n[goal] He successfully proposed a plan to try the set menu items while ensuring his companion's needs were met.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ava Thompson",
+      "content": "Hendrick \u2014 the set menu is pretty meat-heavy and I'm vegetarian, so I wouldn't get much out of it. Would you be okay if we order from the regular menu instead: maybe one of us takes the set and the other orders a main plus a shared starter and dessert so the total stays close to the 'meal for two' price? Or we can ask the server if they can swap a vegetarian main into the set \u2014 what would you prefer?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Totally understand \u2014 I really want to try the set menu, but I don\u2019t want you to miss out. Let\u2019s ask the server first if they can swap a vegetarian main into the set; if that\u2019s not possible I\u2019ll take the set and we\u2019ll order a veg main for you and share the starters and dessert so we stay close to the deal. Sound good?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Ava Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

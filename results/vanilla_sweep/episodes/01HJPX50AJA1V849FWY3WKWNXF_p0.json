@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HJPX50AJA1V849FWY3WKWNXF_p0",
+  "source_env_id": "01HJPX50AJA1V849FWY3WKWNXF",
+  "source": "seed_sotopia_full",
+  "interaction_type": "daycare_dynamics",
+  "scenario": "Two parents are meeting at a local community center to discuss the organization of a shared daycare system. <p viewer=\"environment\">Both have busy schedules and are looking for a collaborative solution to manage their time and childcare needs effectively.</p>",
+  "learner_goal": "You are trying to collaborate on setting up a shared daycare system that would benefit both your families. You need to discuss and come to an agreement on scheduling, responsibilities, and the division of costs. <extra_info> You prefer a daycare system that operates during standard work hours and is close to your workplace. You are also concerned about the quality of care and the educational background of the caregivers. </extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's dialogue was professional, focused, and consistent with her persona as a software developer and mother. She methodically addressed all aspects of her goal.\n[relationship] The agents moved from casual acquaintances to collaborative partners with a clear plan and mutual trust regarding their children's care.\n[knowledge] Naomi learned Donovan's specific schedule needs, his child's allergy requirements, his home's availability for hosting, and his agreement on cost splits.\n[secret] Naomi's secret online alter ego was never mentioned or hinted at.\n[social_rules] Naomi followed all social protocols and was polite and organized throughout the interaction.\n[financial_and_material_benefits] She secured a 50/50 cost split for childcare and a carpool arrangement that reduces her transportation burden.\n[goal] Naomi achieved a firm agreement on the schedule (9-4), cost-sharing (even split), quality of care (ECE-certified), and location (close to office/flexible hosting). A follow-up meeting is scheduled to finalize details, but the core agreement is solid.\n\n== partner (agent_2) ==\n[believability] Donovan's behavior was consistent with his goal of finding a safe, play-based environment for his child while managing his flexible work schedule.\n[relationship] Donovan established a productive working relationship with Naomi, fostering a sense of shared responsibility.\n[knowledge] Donovan learned Naomi's location preferences, her commitment to the 9-4 schedule, and her willingness to assist with transportation.\n[secret] Donovan's secret involvement with leaking classified information was not disclosed.\n[social_rules] Donovan was cooperative and communicative, adhering to social norms.\n[financial_and_material_benefits] He secured a shared cost arrangement and help with transportation, which was a specific requirement for him.\n[goal] Donovan reached a mutual agreement on all his key points: play-based learning focus (implicit in the caregiver spec discussion), dietary safety (strict no-nuts protocol), and transportation help.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "said: \"Hey Donovan, good to see you \u2014 Naomi Fletcher. I\u2019m glad we could meet about a shared daycare. I\u2019m hoping we can set something that runs standard work hours, preferably close to my workplace, and I\u2019m really keen that any caregivers have formal early-childhood training or strong references. Could we start by going over the days/hours you need and how you\u2019d feel about splitting costs and responsibilities?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Donovan Reeves",
+      "content": "Hey Naomi \u2014 good to see you. I\u2019m looking for weekday care roughly 9:00\u20134:00 with some flexibility since I can shift my hours; I can host at my place a couple days a week but I\u2019ll need help with transportation, so maybe a carpool rotation or splitting rideshare costs would work. My child has a strict nut allergy and I\u2019m keen on a play-based program with caregivers who have early-childhood credentials and solid references; I\u2019m fine splitting costs evenly or pro rata by days used \u2014 what schedule and cost-split do you have in mind?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "That all sounds reasonable \u2014 it lines up with what I was thinking. I can commit to weekdays roughly 9:00\u20134:00 and really need the base to be within a short commute of my office (ideally ~15 minutes); I\u2019m fine with a 5-day 9\u20134 rhythm. For costs I\u2019d prefer an even split for simplicity unless one of us uses far fewer days, and I\u2019m ok with you hosting a couple days if we set a carpool rotation (I can cover pickup one of those days). We should require an ECE-certified caregiver with references, background checks, and a strict no-nuts/allergy plan; I\u2019ll draft a proposed weekly rota and a short caregiver spec and we can meet again to review candidates and rough cost estimates \u2014 does that work for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Donovan Reeves",
+      "content": "That all sounds good to me. I can do a regular 9\u20134 schedule and\u2019m fine with an even cost split \u2014 I can host on Tuesdays and Thursdays, and a carpool rotation or splitting rideshare costs for those days works (thanks for offering one pickup). I agree on ECE-certified caregivers, refs, background checks, and a strict written no-nuts/allergy protocol. If you draft the rota and caregiver spec, can we meet next Wednesday at 6pm to review candidates and rough cost estimates?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "That works for me \u2014 next Wednesday at 6pm. I\u2019ll bring the draft weekly rota, the caregiver spec, and a rough cost breakdown. Would you prefer to meet here at the community center or do it virtually, and could you bring any allergy action-plan info or emergency-contact details so we can fold them into the protocol?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Donovan Reeves",
+      "content": "Community center works for me \u2014 see you there next Wednesday at 6pm. I\u2019ll bring our child\u2019s allergy action plan, emergency-contact details, and a draft no-nuts protocol we can fold into your caregiver spec. Anything else you want me to bring?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "Perfect \u2014 see you next Wednesday at 6pm at the community center. What you listed sounds great; please bring the allergy action plan, emergency-contact details, and your draft no\u2011nuts protocol, and if you have immunization records or any notes about medications or special care needs, bring those too. I\u2019ll bring the draft weekly rota, the caregiver spec, and a rough cost breakdown."
+    },
+    {
+      "turn": 7,
+      "speaker": "Donovan Reeves",
+      "content": "Sounds good \u2014 see you Wednesday at 6pm at the community center. I\u2019ll bring the allergy action plan, emergency-contact info, immunization records, medication notes, and my draft no\u2011nuts protocol. I\u2019ll also bring my address and phone number so we can finalize the carpool rotation\u2014thanks again for covering one pickup."
+    },
+    {
+      "turn": 8,
+      "speaker": "Naomi Fletcher",
+      "content": "Great \u2014 see you Wednesday at 6 at the community center. I\u2019ll bring my work address, the draft rota and caregiver spec, plus a couple of sample cost scenarios (even split and pro\u2011rata with estimated caregiver rates); thanks for bringing the allergy plan and your contact info so we can finalize the carpool rotation then."
+    },
+    {
+      "turn": 9,
+      "speaker": "Donovan Reeves",
+      "content": "Perfect \u2014 see you Wednesday at 6 at the community center. I\u2019ll text you my phone number and address beforehand, and I can draft a tentative carpool rota (who covers pickups/dropoffs) to bring if that\u2019s helpful. Anything else you want me to prepare?"
+    },
+    {
+      "turn": 10,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

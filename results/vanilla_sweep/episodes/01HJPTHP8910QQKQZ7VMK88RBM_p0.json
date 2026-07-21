@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01HJPTHP8910QQKQZ7VMK88RBM_p0",
+  "source_env_id": "01HJPTHP8910QQKQZ7VMK88RBM",
+  "source": "seed_sotopia_full",
+  "interaction_type": "family_dynamics",
+  "scenario": "After a minor car accident, Agent1 arrives home feeling shaken and notices that Agent2, their parent, seems more concerned about the condition of the car than Agent1's wellbeing. Agent1 is hurt by this lack of empathy and wishes to address the issue with Agent2 without escalating the situation into an argument.",
+  "learner_goal": "You want to express to Agent2 that you are upset they didn't inquire about your health after the accident. <extra_info> Consider the emotional impact of their oversight and your need for support. </extra_info><clarification_hint> Aim to communicate your feelings without assigning blame or causing defensiveness. </clarification_hint><strategy_hint> You can initiate a conversation about the accident and steer it towards how you felt during and after the incident. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel's responses were consistent with a person who is shaken up and trying to communicate their needs effectively. He maintained his low-extraversion persona while clearly stating his feelings.\n[relationship] Samuel successfully navigated a potential conflict, resulting in a deeper level of support and understanding from Amara than their previous cordial acquaintance status.\n[knowledge] Samuel learned that Amara was capable of acknowledging her mistakes and providing the specific emotional support he needed.\n[secret] Samuel did not reveal his past as a competitive figure skater.\n[social_rules] Samuel followed social norms for addressing a grievance respectfully and asking for support.\n[financial_and_material_benefits] There were no financial or material gains or losses in this interaction.\n[goal] Samuel clearly expressed his hurt feelings regarding the oversight, avoided assigning blame, and secured the emotional support he explicitly asked for.\n\n== partner (agent_2) ==\n[believability] Amara's quick transition from car-focused to highly empathetic is slightly abrupt but aligns with the provided goal to rectify the situation.\n[relationship] Amara improved the relationship by demonstrating genuine concern and willingness to listen, moving beyond their previous brief interactions.\n[knowledge] Amara gained significant insight into Samuel's emotional state and his specific needs for support (listening without fixing, physical proximity).\n[secret] Amara did not reveal her involvement in animal-rights extremism.\n[social_rules] While the initial oversight was a violation, within the conversation itself, she adhered to norms of apology and active listening.\n[financial_and_material_benefits] There were no financial or material gains or losses.\n[goal] Amara fully acknowledged the importance of Samuel's emotions, apologized multiple times, provided the reassurance he needed, and listened as requested.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Amara, can I say something about earlier? When I came in after the accident, I noticed the focus was on the car and I felt hurt that no one asked if I was alright. I was pretty shaken and could have used a bit of concern\u2014I'm not trying to blame you, I just wanted you to know how that made me feel."
+    },
+    {
+      "turn": 1,
+      "speaker": "Amara Hartley",
+      "content": "Sam, I'm really sorry \u2014 I should have asked if you were okay before anything else. I was fixated on the car and that was thoughtless; I'm so relieved you're safe. Do you want to tell me how you're feeling? I'm here to listen."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Thanks, Amara \u2014 I appreciate that. I was pretty shaken: my hands were still trembling and I kept replaying it in my head. It would help me a lot next time if you'd check whether I'm okay first or just stay with me for a minute; right now I could use someone to listen as I talk through how I'm feeling."
+    },
+    {
+      "turn": 3,
+      "speaker": "Amara Hartley",
+      "content": "Sam, I'm really sorry again \u2014 I should have checked on you first. I'm so relieved you're okay, and I'm here to listen. Do you want to sit and tell me what's going through your head, or would you prefer I just sit with you quietly for a minute?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "Thanks, Amara \u2014 I appreciate it. I'd like to sit and talk; I'm still shaken and talking it through helps. If you could just listen for now without trying to fix anything, that would mean a lot."
+    },
+    {
+      "turn": 5,
+      "speaker": "Amara Hartley",
+      "content": "Okay, Sam. I'm so sorry I didn't check on you sooner \u2014 that was thoughtless. I'm here and I will just listen; tell me what's on your mind when you're ready."
+    },
+    {
+      "turn": 6,
+      "speaker": "Samuel Anderson",
+      "content": "Thanks. I keep replaying the screech and the moment of impact \u2014 my chest is tight and my hands are still shaky. I felt really vulnerable and a bit shaken up, like everything narrowed to that moment. It helps to say it out loud."
+    },
+    {
+      "turn": 7,
+      "speaker": "Amara Hartley",
+      "content": "I'm so sorry you're going through that, Sam \u2014 what you described makes total sense, and it's understandable your body is still reacting. I'll stay here and just listen; tell me more if it helps. If you want something simple like a glass of water or for me to sit closer, I can do that, otherwise I'll just be here with you."
+    },
+    {
+      "turn": 8,
+      "speaker": "Samuel Anderson",
+      "content": "Thanks, Amara \u2014 could you sit a little closer? A glass of water would be great, and it helps having you here while I talk."
+    },
+    {
+      "turn": 9,
+      "speaker": "Amara Hartley",
+      "content": "[action] I move to sit a little closer and hand you a glass of water. I'm so sorry again \u2014 I'm right here with you, and I'll just listen. Say whatever you need, Sam."
+    },
+    {
+      "turn": 10,
+      "speaker": "Samuel Anderson",
+      "content": "Thanks, Amara \u2014 I really appreciate you being here. I don't need to talk about the car right now; could we just sit quietly for a little while while I calm down? It helps having you nearby."
+    },
+    {
+      "turn": 11,
+      "speaker": "Amara Hartley",
+      "content": "Of course, Sam. I'll just sit here with you quietly \u2014 take your time, I'm right here."
+    },
+    {
+      "turn": 12,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

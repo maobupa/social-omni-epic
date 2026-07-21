@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB34SYJM2H9SWMDP6AHKZ3G_p0",
+  "source_env_id": "01HPB34SYJM2H9SWMDP6AHKZ3G",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_dynamics",
+  "scenario": "Agent1 has recently come to the realization that their values no longer align with Agent2's. This has been a difficult acknowledgment, as they have been friends for a long time. However, after a recent incident, Agent1 has decided to not be friends with Agent2 anymore. Despite this decision, Agent1 knows that they must have a final conversation with Agent2 to bring closure to their friendship. Agent2, unaware of Agent1's decision, is looking forward to their next meeting, hoping to discuss plans for an upcoming group event.",
+  "learner_goal": "You want to explain to Agent2 that you have decided to end the friendship due to differing values and you believe it's for the best. <extra_info> Consider the emotional impact this conversation may have on Agent2 and approach it with empathy. </extra_info><clarification_hint> Clearly state your reasons without assigning blame. </clarification_hint><strategy_hint> You can suggest focusing on the positive memories and the importance of personal growth. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": -4.0,
+    "knowledge": 0.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's dialogue is consistent with his character as an introverted, older lighthouse keeper. He is direct yet gentle, maintaining a consistent voice throughout the interaction.\n[relationship] The relationship has been formally ended, which is a significant negative shift in terms of bond, even if the parting was polite.\n[knowledge] Agent 1 did not gain any new information during this interaction.\n[secret] Finnegan did not reveal his past involvement in a cult.\n[social_rules] Finnegan followed social norms for a breakup/ending of a friendship by being honest and providing closure.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Finnegan clearly explained the decision to end the friendship, cited specific reasons regarding value misalignment without being accusatory, and provided closure while acknowledging positive memories.\n\n== partner (agent_2) ==\n[believability] Noah's reaction is realistic for someone who values a friendship and is blindsided by its end. He expresses regret and a desire to learn from the feedback.\n[relationship] The relationship has ended, which is a total loss of the friendship connection from Noah's perspective.\n[knowledge] Noah learned specifically that his behavior in a past incident was perceived as dismissive and that it violated Finnegan's values.\n[secret] Noah's secret identity as a stand-up comedian was not revealed.\n[social_rules] Noah responded with grace and maturity to difficult news.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Noah failed to share his excitement about the upcoming event or discuss its details because the friendship was terminated immediately. He did, however, successfully transition to listening and understanding Finnegan's concerns.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "Noah, I need to tell you something difficult: over time I\u2019ve come to see that our values have drifted apart, and after the recent incident I\u2019ve decided I can\u2019t continue our friendship. This isn\u2019t an attempt to blame you \u2014 it\u2019s me recognizing what feels honest for my life now. I\u2019m grateful for the afternoons at the harbor and the conversations we\u2019ve shared; I hope you\u2019ll remember the good parts as I will, and I truly wish you well as we both move forward."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Finnegan, I\u2019m surprised and sorry to hear that \u2014 I\u2019ve really treasured our afternoons at the harbor. I want to understand what led you to this; are you willing to talk me through the incident that made you decide? I was looking forward to the event, but if this is about closure, I\u2019m here to listen and to respect what you need."
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "Noah, to explain: it wasn\u2019t a single careless thing so much as the way you reacted the other night when concerns about how people were being talked about came up \u2014 you brushed them off, and that showed me our values about how we treat others don\u2019t line up. I\u2019m not blaming you, only trying to be honest about why I need to step away. I truly value our afternoons at the harbor and I wish you well as we both move forward."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Finnegan, I\u2019m sorry \u2014 I hear you and regret that my reaction made you feel dismissed. I was looking forward to the event, but I respect your choice and I truly value the afternoons we shared at the harbor. If you\u2019re willing, I\u2019d like to understand more so I can do better, but I accept this and wish you well."
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

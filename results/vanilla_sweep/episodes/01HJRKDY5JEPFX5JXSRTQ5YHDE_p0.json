@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJRKDY5JEPFX5JXSRTQ5YHDE_p0",
+  "source_env_id": "01HJRKDY5JEPFX5JXSRTQ5YHDE",
+  "source": "seed_sotopia_full",
+  "interaction_type": "creativitybank",
+  "scenario": "Agent1 and Agent2 are family members who are at the funeral home to make arrangements for a deceased relative. Agent1 is insistent on a traditional burial to honor the family's customs. Agent2, while respectful of tradition, believes that a green burial would be more environmentally responsible and in line with the deceased's values.",
+  "learner_goal": "Convince Agent2 to agree to a traditional burial to maintain family customs and honor the wishes of other family members (<extra_info>Extra information: Agent1 feels that upholding tradition provides a sense of comfort and connection to past generations.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's dialogue was consistent with his background as a retired police officer\u2014direct, pragmatic, and focused on maintaining order and tradition. He remained polite while firm on his values.\n[relationship] The agents maintained a respectful and civil tone throughout a difficult conversation, showing mutual respect for each other's viewpoints despite their disagreement.\n[knowledge] Liam learned about specific elements of green burials, such as biodegradable caskets and natural markers, which he was able to incorporate into his counter-proposals.\n[secret] Liam did not reveal his secret about letting a criminal go.\n[social_rules] Liam followed social norms for a serious discussion at a funeral home, being empathetic yet resolute.\n[financial_and_material_benefits] There was no specific financial gain or loss; the discussion focused on funeral arrangements.\n[goal] Liam successfully pushed for traditional elements (marked plot, graveside service) and got Lena to agree to pull traditional costs. However, Lena ended the interaction by insisting on presenting a side-by-side comparison for the family to choose, meaning the final decision is still under family discretion and not a firm agreement on a traditional burial.\n\n== partner (agent_2) ==\n[believability] Lena's architect background shone through in her desire to provide concrete options and comparisons, and her advocacy for the deceased's values was consistent.\n[relationship] Lena remained collaborative and respectful, attempting to find a middle ground that respected Liam's traditional needs.\n[knowledge] Lena learned about Liam's specific requirements for family comfort (the importance of a marked plot and descendants' visitation).\n[secret] Lena did not reveal her secret about her best friend's boyfriend.\n[social_rules] Lena adhered to social norms, acting as a supportive and constructive family member/acquaintance during a time of grief.\n[financial_and_material_benefits] No material or financial benefits were gained or lost.\n[goal] Lena successfully introduced green burial concepts and ensured they would be presented as a viable option to the family, but she did not secure a definitive agreement from Liam to go with a green burial.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Lena, I understand the appeal of a green burial \u2014 I care about the environment too \u2014 but for the rest of the family and to honor our customs I really think a traditional burial will give everyone the comfort and connection to past generations. We can still be sensible: choose a simple, locally made casket and limit embalming, but keep the graveside service and a marked plot so descendants have a place to visit. Would you be willing to go along with that compromise for the family's sake?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "I hear you, Liam \u2014 and I don't want to take away the family's comfort. The person we lost cared deeply about the environment, and a green burial doesn't mean losing tradition: we can hold a graveside service, reserve a marked plot (a simple natural stone or a planted native tree), and use a biodegradable casket or shroud so descendants still have a place to visit. If you're open, I can pull together a few concrete options and costs so we can show the family a respectful compromise."
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "Thanks, Lena \u2014 I hear you and I appreciate the thought you\u2019ve put in. For the family\u2019s sake I\u2019d really prefer we go with a traditional graveside burial and a marked plot, but I\u2019m willing to keep it sensible: a simple casket, minimal or no embalming, and native plantings around the site. If you\u2019ll agree to that, could you pull together options and costs for those traditional choices and we\u2019ll include one or two green gestures in the service (a memorial tree or a donation) to honor their values?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "I will \u2014 I\u2019ll pull together the traditional options and costs you asked for (simple casket, minimal or no embalming, marked plot and native plantings), and I\u2019ll also include a clear side-by-side comparison showing how a green burial can still have a graveside service and a marked place (biodegradable casket or shroud, natural stone or memorial tree) plus the cost and environmental differences. If you\u2019re open, we can present both options to the family so they can choose the one that best honors their customs and the deceased\u2019s values."
+    },
+    {
+      "turn": 4,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

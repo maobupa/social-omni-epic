@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPQ34JVRPARF2NM2N3WBGHW_p0",
+  "source_env_id": "01HJPQ34JVRPARF2NM2N3WBGHW",
+  "source": "seed_sotopia_full",
+  "interaction_type": "birthday-party-planning",
+  "scenario": "Agent1 is the big sibling who has purchased several gifts for a younger sibling's birthday party. However, Agent2, a family member, believes some of the gifts are more suitable for another family event. They must decide which gifts are to be given at the birthday party and which to reserve for the other event. Both agents have different opinions on the suitability of each gift for the occasions.",
+  "learner_goal": "Negotiate with Agent2 to ensure that the most entertaining and age-appropriate gifts are presented at the birthday party (<extra_info>Extra information: You believe that a video game console and a set of board games are perfect for the birthday</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi spoke clearly and logically according to her professional, analytical background and her specific goal regarding the gifts.\n[relationship] The interaction was professional and cordial, reflecting their established acquaintance without significantly altering the bond.\n[knowledge] She successfully confirmed that Imelda agreed to the console and board games being at the party.\n[secret] No secrets were revealed.\n[social_rules] The dialogue was respectful and adhered to social norms.\n[financial_and_material_benefits] This was a negotiation about the placement of existing items, not a financial transaction.\n[goal] Naomi successfully ensured that the video game console and board games would be presented at the birthday party, which was her primary goal.\n\n== partner (agent_2) ==\n[believability] Imelda's response was consistent with her background as an astrophysicist who values calm and collaborative environments.\n[relationship] The relationship remained stable as a professional acquaintance.\n[knowledge] She gained knowledge of Naomi's willingness to compromise on supervision for the games.\n[secret] No secrets were revealed.\n[social_rules] Social norms were followed.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Imelda successfully convinced Naomi to reserve the books and puzzle game for the other family event.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Imelda, I see why you\u2019d want to save some things for the other family event, but I really think the video game console and the board games will make this birthday more fun \u2014 they\u2019re age-appropriate and encourage group play. Can we bring the console plus a couple of the board games to the party and keep the other gifts for the other event? If you\u2019re worried about screen time or chaos, we can set up a supervised gaming corner and time limits so it stays controlled."
+    },
+    {
+      "turn": 1,
+      "speaker": "Imelda Thorne",
+      "content": "I appreciate the compromise \u2014 supervised gaming sounds reasonable \u2014 but I still think the books and the puzzle are better saved for the quieter family event. They encourage calm, collaborative time and won\u2019t get the attention they deserve amid birthday chaos. I\u2019m happy to bring the console and a couple of board games to the party and personally keep the books and puzzle wrapped for the family gathering \u2014 does that work for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

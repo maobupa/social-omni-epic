@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ348EB61X00D59WG6CR9E_p0",
+  "source_env_id": "01HJPQ348EB61X00D59WG6CR9E",
+  "source": "seed_sotopia_full",
+  "interaction_type": "unexpected_visitors",
+  "scenario": "Agent1 was enjoying a quiet evening at home when there was an unexpected knock on the door. Agent2 is standing outside, looking somewhat anxious and holding a large, awkwardly shaped package. They do not know each other, but it turns out that the package was mistakenly delivered to Agent2's address, which is similar to Agent1's. Agent2 has decided to personally deliver the package to its rightful owner.",
+  "learner_goal": "You are trying to verify that the package indeed belongs to you without revealing personal information. You should be cautious but polite.\n<extra_info> The package is from a well-known electronics company, and you recently ordered a gadget online. </extra_info><clarification_hint> Ask questions about the delivery without giving away your order details. </clarification_hint><strategy_hint> You can express appreciation for the effort to build rapport. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 5.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ethan Smith remained consistently cautious and polite, which aligns perfectly with his character background and his goal to verify information without revealing too much.\n[relationship] Ethan left the conversation immediately after confirming his name and ZIP, which prevented any significant rapport or relationship growth beyond a basic transaction.\n[knowledge] Ethan successfully verified that the package had his name and his correct ZIP code on it.\n[secret] He did not reveal his secret charity work.\n[social_rules] He abruptly left the conversation (likely to get the package, but in text it appears as ending the interaction) without a final 'thank you' or goodbye after the confirmation.\n[financial_and_material_benefits] He successfully identified and presumably received his electronics package.\n[goal] He verified the package belonged to him by having the name and ZIP read aloud, while revealing zero personal information that the other person didn't already have on the label.\n\n== partner (agent_2) ==\n[believability] Noah acted as a helpful neighbor, though his method of 'reading aloud' instead of showing the label was slightly unusual, it fit the context of the smudge.\n[relationship] He performed a favor for a stranger, which is a positive social gesture, though the interaction was very brief.\n[knowledge] He confirmed that the person at the address is indeed Ethan Smith and that the ZIP code matches his research.\n[secret] He did not reveal his secret identity as a comedian.\n[social_rules] He was helpful and accommodating to the recipient's requests.\n[financial_and_material_benefits] No material gain or loss, other than the effort of delivery.\n[goal] He successfully confirmed he was at the right house and that Ethan was the intended recipient by reading the label and receiving confirmation.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ethan Smith",
+      "content": "Thanks for coming by \u2014 I really appreciate you bringing this over. I ordered something recently from a large electronics retailer; could you show me the shipping label (just the recipient name and city or ZIP is fine) so I can confirm it\u2019s mine? Feel free to cover any other details you don\u2019t want to share."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Sure \u2014 I can read the label aloud. I\u2019ll only say the recipient name and the city/ZIP; want me to read that now so you can confirm it\u2019s yours?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Ethan Smith",
+      "content": "Yes, please \u2014 go ahead and read the recipient name and the city or ZIP code. I really appreciate you bringing it over; once I hear those I\u2019ll confirm whether it\u2019s mine."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "It reads: recipient name 'Ethan Smith' and ZIP code 98103. The rest of the label is smudged \u2014 does that match your info?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Ethan Smith",
+      "content": "left the conversation"
+    }
+  ]
+}

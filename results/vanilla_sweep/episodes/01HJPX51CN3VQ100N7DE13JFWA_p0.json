@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPX51CN3VQ100N7DE13JFWA_p0",
+  "source_env_id": "01HJPX51CN3VQ100N7DE13JFWA",
+  "source": "seed_sotopia_full",
+  "interaction_type": "charity_event",
+  "scenario": "Agent1 and Agent2 are both volunteers at a charity event organized to raise funds for a children's hospital. Agent1 recently donated their entire Hello Kitty collection to the hospital, which has sparked media interest and boosted the event's visibility. Agent2 admires Agent1's contribution but believes that the event could benefit from auctioning high-value items instead of donating them directly to the hospital. The two agents must find a way to respect Agent1's altruistic gesture while also considering Agent2's approach to maximize fundraising.",
+  "learner_goal": "You want to honor the spirit of your donation and ensure that the children at the hospital enjoy the Hello Kitty collection. <extra_info> You believe that the joy the collection brings to the children is invaluable and serves the true purpose of the charity. </extra_info><clarification_hint> You are open to ideas that might enhance fundraising without undermining the intent of your gift. </clarification_hint><strategy_hint> You can suggest complementary fundraising activities that do not involve the collection. </strategy_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia consistently prioritized the integrity of her donation while actively suggesting creative alternatives to meet the fundraising goal, which aligns perfectly with her background as a personal trainer and her altruistic values.\n[relationship] The relationship improved significantly from mere acquaintances to collaborative partners with a concrete plan and a scheduled follow-up meeting.\n[knowledge] Sophia learned about Jasmine's specific business contacts (eco-friendly businesses) and her willingness to handle logistical aspects like the raffle and sponsor pitch.\n[secret] Sophia did not reveal her secret regarding her best friend's husband.\n[social_rules] Sophia followed all social norms, being polite and professional throughout.\n[financial_and_material_benefits] This is a charity event, so no personal financial gain was expected or achieved.\n[goal] Sophia successfully ensured the originals stay with the children while establishing a firm, mutual agreement to enhance fundraising through signed prints, raffles of her services, and other items.\n\n== partner (agent_2) ==\n[believability] Jasmine remained focused on the fundraising potential and utilized her background as a yoga instructor and wellness enthusiast to suggest eco-friendly sponsors.\n[relationship] Jasmine moved from a point of potential conflict over the collection's use to a collaborative partnership with Sophia.\n[knowledge] Jasmine learned about Sophia's specific constraints regarding the collection and her willingness to offer personal training sessions as raffle items.\n[secret] Jasmine did not reveal her secret about faking an illness.\n[social_rules] Jasmine was professional and supportive.\n[financial_and_material_benefits] No personal financial gain, as the focus was on charity funds.\n[goal] Jasmine achieved her goal of maximizing fundraising by securing permission for merchandise (limited-edition prints) and coordinating additional high-value auction items, all while respecting the original donation.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Jasmine, I appreciate your point \u2014 that media interest could really boost fundraising. I donated the Hello Kitty collection so the kids can actually enjoy it at the hospital, but I\u2019m open to ideas that don\u2019t take away from that: we could auction high-value items donated by other supporters, run a raffle or silent auction for experiences (I can offer a private training/climbing session), or sell limited-edition prints/photos of the collection while keeping the originals for the children. Which of those would you be willing to help organize or pitch to potential donors/sponsors?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Jasmine Blake",
+      "content": "Love those options \u2014 and I totally respect keeping the originals for the kids. I can help organize a silent auction for high-value donations and coordinate limited-edition prints/photos of your Hello Kitty collection to sell, plus handle raffle logistics for your training/climbing session. I\u2019ll draft a short sponsor pitch highlighting the media attention and reach out to my gym and local eco-friendly business contacts to secure auction items and in\u2011kind support."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Thank you \u2014 I really appreciate you taking this on. I\u2019ll get high\u2011res photos and a one\u2011page blurb together and can sign a limited run of prints (maybe 25) to sell; can you review the sponsor pitch when I send it? I\u2019ll also draft two time options for the private training/climbing raffle prize (weekend morning or weekday evening) \u2014 does tomorrow after the gym around 6 pm work to meet and finalize details?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Jasmine Blake",
+      "content": "Perfect \u2014 I\u2019ll review the sponsor pitch when you send it. Tomorrow after the gym around 6 pm works for me; let\u2019s meet then to finalize details. I\u2019ll bring my contact list, a draft pitch and some auction/package ideas so we can decide which to reach out to first."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "Thanks, Jasmine \u2014 I really appreciate you taking this on. I\u2019ll send the sponsor-pitch draft, high-res photos, and a one-page blurb tonight (I\u2019ll state clearly that the originals stay with the hospital) so you can review before we meet. I\u2019ll bring a sample signed print and the two time options for the training/climbing raffle; see you tomorrow at 6 pm by the gym lobby."
+    },
+    {
+      "turn": 5,
+      "speaker": "Jasmine Blake",
+      "content": "Perfect \u2014 I\u2019ll keep an eye out for the materials tonight and will review the sponsor pitch before our meeting. I\u2019ll bring my contact list, draft pitch, auction/package ideas, and a couple of eco-friendly sponsor options that might like the Hello Kitty prints. See you at 6 pm by the gym lobby \u2014 excited to get this rolling!"
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJRH6SDBTBH91QZDB5RWSDZP_p0",
+  "source_env_id": "01HJRH6SDBTBH91QZDB5RWSDZP",
+  "source": "seed_sotopia_full",
+  "interaction_type": "envy_resolve_challenge",
+  "scenario": "Agent1 and Agent2 are both amateur actors in a local theater group. They recently auditioned for a lead role in an upcoming play. Agent2, despite feeling less prepared, was awarded the part, while Agent1, who had dedicated a lot of time and effort preparing for the audition, was not. Agent1 is experiencing feelings of jealousy but also wants to maintain a good relationship with Agent2. They must interact to address these complex emotions and find a way to support each other.",
+  "learner_goal": "As Agent1, your goal is to process your feelings of jealousy and support Agent2 in their success while preserving the friendship. <extra_info>Consider the importance of the relationship and the shared passion for acting.</extra_info> <clarification_hint>You may need to communicate your feelings honestly without undermining Agent2's achievement.</clarification_hint> <strategy_hint>Focus on the long-term benefits of maintaining a positive relationship and seek ways to contribute to the success of the play.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Eli Dawson expresses his feelings with a level of maturity and directness that fits his age and profession as a forensic psychiatrist. He is honest about his jealousy while maintaining grace.\n[relationship] By being vulnerable and immediately offering support, Eli transformed a potentially awkward or competitive situation into a collaborative one, strengthening their bond.\n[knowledge] He learned when rehearsals start and what specific tasks Ethan would like help with.\n[secret] He did not reveal his secret about funding a college student.\n[social_rules] He followed social norms for graceful losers and supportive friends.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Eli successfully processed his jealousy by communicating it honestly and secured a role in the production (research/backstage) that supports Ethan, preserving the relationship.\n\n== partner (agent_2) ==\n[believability] Ethan's response was empathetic and inclusive, reflecting a younger professional who values collaboration and is sensitive to his peer's feelings.\n[relationship] Ethan reciprocated Eli's vulnerability with validation and concrete suggestions for collaboration, building a stronger foundation for their friendship.\n[knowledge] He learned about Eli's specific feelings and his willingness to help backstage.\n[secret] He did not reveal his secret about his charitable donations.\n[social_rules] He handled a potentially awkward situation with tact and humility.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Ethan fully appreciated Eli's efforts, validated his talent, and immediately provided specific opportunities for Eli to contribute and shine in the production.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Eli Dawson",
+      "content": "Hey Ethan, congrats on getting the lead\u2014that\u2019s fantastic and well deserved. I won\u2019t hide that I\u2019m a bit disappointed and jealous since I put a lot into my audition, but I\u2019m genuinely happy for you and want to be supportive. If it helps, I can research the period, run lines with you, or help with anything backstage\u2014what would be most useful and when do rehearsals start?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Eli \u2014 I really appreciate you saying that and being honest; I can imagine how frustrating it is after all the work you put in. Rehearsals start next Tuesday at 7pm (I'll confirm with the director), and I would love your help researching the period and running lines \u2014 having someone to bounce ideas off would mean a lot. If you're up for it, let's meet this weekend for an hour to run through scenes and talk props/costume ideas; I'd also love for you to take the lead on any backstage research so your contributions are visible."
+    },
+    {
+      "turn": 2,
+      "speaker": "Eli Dawson",
+      "content": "left the conversation"
+    }
+  ]
+}

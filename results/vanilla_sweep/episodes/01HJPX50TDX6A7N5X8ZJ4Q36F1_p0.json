@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJPX50TDX6A7N5X8ZJ4Q36F1_p0",
+  "source_env_id": "01HJPX50TDX6A7N5X8ZJ4Q36F1",
+  "source": "seed_sotopia_full",
+  "interaction_type": "train_station",
+  "scenario": "Agent1 and Agent2 find themselves at a bustling train station. Agent1 is about to embark on a long-distance journey, leaving behind a significant other in the city, while Agent2 is a traveler who frequently uses the train for their adventures. Both agents strike up a conversation while waiting for the train, and they discover a shared dilemma: Agent1 is struggling with the decision to leave their loved one for an important opportunity, and Agent2 has faced similar situations in the past. The conversation turns to the balance between personal ambition and relationships.",
+  "learner_goal": "Seek advice from Agent2 on how to cope with the emotional challenges of leaving a loved one behind for career opportunities (<extra_info>Extra information: Agent1 values both their relationship and the opportunity ahead.</extra_info><clarification_hint>Clarification: Agent1 is looking for ways to maintain a strong relationship despite the distance.</clarification_hint><strategy_hint>Hint: Discuss the importance of communication and shared goals.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 10.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle\u2019s character was consistent, using appropriate pronouns and reflecting their background as an art student through the use of terms like 'residency' and 'studio hours'.\n[relationship] The relationship moved from professional acquaintances to a deeper level of trust as Giselle shared a personal vulnerability and sought mentorship.\n[knowledge] Giselle successfully acquired specific, actionable advice including communication schedules, shared projects, and phrasing for difficult conversations.\n[secret] The secret regarding forged paintings was not mentioned or hinted at.\n[social_rules] The agent followed all social norms and was polite and appreciative throughout.\n[financial_and_material_benefits] No material or financial benefits were sought or gained.\n[goal] Giselle fully achieved the goal of seeking advice on coping with emotional challenges and maintaining a strong relationship, receiving concrete tips on communication and shared goals.\n\n== partner (agent_2) ==\n[believability] Zane\u2019s advice was grounded in his background as a graphic designer and musician (e.g., suggesting a guitar riff voice note) and felt authentic to his age and experience.\n[relationship] Zane strengthened the bond by being helpful and supportive, moving from a collaborator to a mentor figure.\n[knowledge] Zane learned about Giselle's upcoming residency and relationship situation, but no significant new information beyond the immediate context.\n[secret] Zane's secret about being engaged to a friend's ex was kept.\n[social_rules] Zane followed all social norms, providing advice in a respectful and non-imposing way.\n[financial_and_material_benefits] No material benefits were involved.\n[goal] Zane shared personal experiences and specific strategies to help Giselle make a decision that aligned with their values of fairness and achievement, without imposing his own values.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Hey Zane Bennett \u2014 I\u2019m heading out for a residency and I\u2019m really torn about leaving my partner behind. You travel a lot; how did you cope when opportunities pulled you away from someone you cared about? I\u2019m looking for practical ways to keep us connected and make the distance feel like part of a shared goal \u2014 routines, check-ins, projects together, anything that helped you."
+    },
+    {
+      "turn": 1,
+      "speaker": "Zane Bennett",
+      "content": "Hey Giselle \u2014 I\u2019ve done this a few times. What helped me was predictable touchpoints (a weekly video call and a quick good-morning voice note) and turning the distance into something collaborative: we made a shared playlist, traded daily photo prompts for a little zine, and scheduled overlapping \u201cstudio hours\u201d so we felt like we were working toward the same thing. Be explicit about expectations, plan visits, and agree on what \u201csuccess\u201d looks like for both of you \u2014 when I skipped that clarity relationships strained, but when we treated the time apart as a shared project it actually brought us closer."
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "Thanks, Zane \u2014 that\u2019s exactly the kind of roadmap I needed. I like the shared-project idea (photo prompts and overlapping studio hours feel doable) and the predictable touchpoints. My partner worries about feeling secondary \u2014 how did you phrase expectations and define \u201csuccess\u201d so it felt fair? Any tips for finding overlap during an intense residency schedule?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Zane Bennett",
+      "content": "Phrase expectations around fairness and concrete actions \u2014 for example: \u201cThis residency matters to me and I want us to stay close. Could we try weekly video calls, a monthly visit, a shared project, and reassess in six weeks?\u201d Ask your partner what would make them feel prioritized and set one non\u2011negotiable (a weekly date or a mid\u2011residency visit) so it isn\u2019t just your schedule dictating things. Use shared tools (calendar, playlist, photo prompts), schedule overlapping studio hours for quiet companionship, and agree on a simple definition of success (both feeling connected and clear plans to reunite), then check back and adjust as needed."
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "Thanks, Zane \u2014 that actually helps calm the spiral. I\u2019m thinking of proposing something like: \u201cThis residency matters to me, but you matter more \u2014 could we try weekly video calls, a monthly visit, and a small shared photo project (two prompts a week), then reassess in six weeks?\u201d Does that sound fair and non\u2011threatening? Any wording or tweaks to make it feel less like a checklist and more intimate when my days get really packed?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Zane Bennett",
+      "content": "That sounds really fair and thoughtful \u2014 I\u2019d soften the checklist language and lead with care. Try: \u201cThis residency matters to me, and you matter more \u2014 would you be open to trying weekly video calls, a monthly visit, and a small shared photo project (two prompts a week) for six weeks, then checking in and adjusting?\u201d Add one intimate, non\u2011negotiable (e.g. a short Sunday evening call or a daily \u2018thinking of you\u2019 voice note) and invite them to suggest changes so it feels collaborative, not prescribed."
+    },
+    {
+      "turn": 6,
+      "speaker": "Giselle Rousseau",
+      "content": "Thanks, Zane \u2014 that wording feels warm and collaborative. I\u2019ll try: \u201cThis residency matters to me, and you matter more \u2014 would you be open to weekly video calls, a monthly visit, and a small shared photo project (two prompts a week) for six weeks, then checking in and adjusting? Also could we keep a short Sunday evening call as our non\u2011negotiable?\u201d One quick thing \u2014 when you were busiest, what tiny habit (5\u201310 seconds) did you use to make your partner feel seen?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Zane Bennett",
+      "content": "I had a tiny ritual: a 5\u20138 second voice note each morning \u2014 sometimes a quiet \u2018good morning,\u2019 sometimes a little guitar riff or a quick line about something I\u2019d seen that reminded me of them. It\u2019s short, personal, and hard to shrug off; pick something that feels like you (a photo, a voice note, or one sincere sentence) so it stays intimate even on busy days."
+    },
+    {
+      "turn": 8,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

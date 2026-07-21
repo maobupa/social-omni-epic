@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPTHNQ9RH8GMRNZWPDANXM0_p0",
+  "source_env_id": "01HJPTHNQ9RH8GMRNZWPDANXM0",
+  "source": "seed_sotopia_full",
+  "interaction_type": "custom_scenario",
+  "scenario": "Agent1 has recently received a thoughtful present from Agent2 at a going away party. Now, Agent1 is meeting Agent2 for a last coffee before leaving town to express gratitude and discuss the significance of the gift. During this encounter, they discover they have differing views on the emotional value of parting gifts.",
+  "learner_goal": "Express sincere appreciation for the present received from Agent2 and discuss the personal significance it holds (<extra_info>Extra information: you are emotionally touched by the gesture and want to convey your feelings</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Donovan's tone was consistent with his background in software development and his interest in architectural design. He expressed sincere gratitude and used specific terminology like 'scale and restraint' that fit the context of his bond with Ava.\n[relationship] The interaction deepened their connection as they navigated a difference in perspective regarding gifts, ending on a warm and supportive note.\n[knowledge] Donovan learned about Ava's specific anxieties regarding performative social gestures and her philosophy on gift-giving.\n[secret] Donovan did not reveal his secret about releasing classified information.\n[social_rules] Donovan followed all social norms for a farewell meeting.\n[financial_and_material_benefits] No material or financial benefits were exchanged in this specific conversation, though he retained the gift previously given.\n[goal] Donovan explicitly and repeatedly expressed his sincere appreciation and clearly explained the personal significance of the gift (how it connects him to their past conversations and helps him transition), fully satisfying his goal.\n\n== partner (agent_2) ==\n[believability] Ava's dialogue reflected her profession as an architect and her internal conflict between practicality and sentimentality.\n[relationship] The relationship improved as she felt understood and validated by Donovan's response to her gift.\n[knowledge] Ava gained a deeper understanding of how Donovan perceives sentiment and how her specific gift impacted him.\n[secret] Ava did not reveal her hidden tattoo.\n[social_rules] Ava conducted herself appropriately during the social encounter.\n[financial_and_material_benefits] No material benefits were gained or lost during this conversation.\n[goal] Ava successfully explored Donovan's perspective and reconciled her own skepticism about parting gifts by refining her definition of what makes them meaningful (intention and usefulness), without diminishing the gesture's value.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "Thank you, Ava \u2014 really. The model you gave me at the party means a lot: every time I look at it on my desk it\u2019ll pull me back to our conversations about form and detail and make leaving feel less abrupt. I know you said parting gifts can be overdone, but this one actually helps me hold onto the city and our talks \u2014 what made you pick it for me?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Thompson",
+      "content": "That means a lot to hear \u2014 I'm really glad it sits on your desk. I picked the model because our conversations about proportion and detail kept coming back to me; I wanted something quiet and architectural that could evoke the city without being over-the-top. I do worry parting gifts can feel performative, so I tried to keep it useful rather than sentimental \u2014 what about it makes leaving feel less abrupt for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "It's the scale and restraint \u2014 the proportions feel like a quiet skyline rather than a souvenir. Every time I look at it, I get pulled back to our late-night chats about detail and form; it turns leaving into something I carry with me instead of something I close the door on. Thank you, seriously \u2014 that was exactly the right pick."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Thompson",
+      "content": "I\u2019m really glad it landed the way you described \u2014 that quiet skyline was exactly what I hoped for. I still worry about performative gestures, but this felt like a small, useful anchor rather than a showy goodbye, so hearing it actually helps you makes me happy. Do you think a keepsake like this matters mainly because of the object itself or because of the conversations and routines it brings back for you?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Donovan Reeves",
+      "content": "Honestly, it\u2019s both \u2014 the model is quiet on its own, but it becomes meaningful because it ties back to our late-night chats and the little rituals I\u2019ll keep at my desk. Having something tangible makes those conversations feel less like a closed chapter and more like something I can return to when I need a creative nudge. Thank you again, Ava \u2014 I really will miss your perspective, and I\u2019ll keep you posted on whatever architectural rabbit holes I fall into next."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Thompson",
+      "content": "Hearing you say it becomes a prompt for those rituals really helps me see why keepsakes matter \u2014 my worry was more about gifts that are only for show, not the quiet ones that reconnect you to a practice. I don\u2019t think parting gifts are inherently overdone; intention and usefulness are what make them meaningful. Promise me you\u2019ll send photos of any architectural rabbit holes you tumble into, and if you ever want to chat from afar I\u2019m only a message away."
+    },
+    {
+      "turn": 6,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

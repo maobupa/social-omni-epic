@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJRKDYD0N94N5W7CXWHN50G9_p0",
+  "source_env_id": "01HJRKDYD0N94N5W7CXWHN50G9",
+  "source": "seed_sotopia_full",
+  "interaction_type": "urban_shopping",
+  "scenario": "Agent1 and Agent2, who are friends, had planned to go shopping together at a local store for a special sale event. However, Agent1 ends up at the store alone because Agent2 had an unexpected work obligation. Both friends had been looking forward to purchasing a limited edition item that is on sale, but there is a strict policy of one item per customer. Agent1 is now in a dilemma whether to purchase the item for themself or for Agent2.",
+  "learner_goal": "Decide whether to purchase the limited edition item for themselves or for Agent2, considering the friendship and the mutual desire for the item (<extra_info>Extra information: Agent1 knows that Agent2 has been looking forward to this sale for a long time. <strategy_hint>Hint: Weigh the importance of the item against the value of the friendship and long-term reciprocity.</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -1.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's behavior was very consistent with her background as an introverted software developer who values her friendship and mutual interests. Her communication was clear, direct, and pragmatic.\n[relationship] The friendship was strengthened by Naomi's selflessness and proactive checking in with Micah. She prioritized his excitement for the item over her own immediate gratification, fostering long-term reciprocity.\n[knowledge] She gained Micah's shipping address, his confirmation of his high interest in the item, and his willingness to reimburse costs.\n[secret] Naomi did not reveal her secret online alter ego.\n[social_rules] Naomi followed all social norms, showing consideration and generosity toward her friend.\n[financial_and_material_benefits] Naomi gave up the chance to own the limited edition item for herself today, though she did secure a reimbursement for the costs.\n[goal] Naomi successfully weighed the friendship against the item and made a definitive decision to purchase it for Micah, securing a mutual agreement on payment and logistics.\n\n== partner (agent_2) ==\n[believability] Micah's responses were polite, enthusiastic, and consistent with his extraverted personality and interest in fashion/limited edition items.\n[relationship] Micah expressed significant appreciation for Naomi's gesture, which reinforces their bond.\n[knowledge] Micah learned that the item was in stock, the store policy, and Naomi's Venmo information.\n[secret] Micah did not reveal that he dresses up his dog.\n[social_rules] Micah followed social norms by offering to cover all costs including shipping and fees.\n[financial_and_material_benefits] Micah successfully acquired a limited edition item he wanted at retail price (plus shipping), avoiding the potential higher cost of secondary markets later.\n[goal] Micah communicated effectively with Naomi, determined their preferences, and reached a firm mutual agreement to acquire the item.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Micah \u2014 I'm at the store for the sale but you're not here. There's a one-per-customer limit; do you want me to grab it for you? I know you've been looking forward to this, so I can buy it and hold or ship it to you, or I can keep it and try to hunt down another later \u2014 what would you prefer?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "Hey Naomi \u2014 thanks for checking. If you don\u2019t want it, please grab it for me and I\u2019ll reimburse the price plus shipping/fees; but if you actually want it, keep it and I\u2019ll try to hunt another later (I can cover any extra cost if it ends up more expensive). Which would you prefer?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Appreciate it \u2014 I\u2019ll grab it for you. You\u2019ve been looking forward to this more, so I\u2019ll buy it and ship it; Venmo me for the price plus shipping/fees. If I spot another later I\u2019ll try to pick one up for myself and let you know."
+    },
+    {
+      "turn": 3,
+      "speaker": "Micah Stevens",
+      "content": "Thanks so much, Naomi \u2014 I really appreciate you grabbing it! DM me the total and I\u2019ll Venmo you for the price + shipping/fees right away."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "Thanks \u2014 I\u2019ll grab it now and ship it to you. I\u2019ll DM you the exact total (item + shipping/fees); my Venmo is @naomi_dev. What\u2019s the best address to ship to?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Micah Stevens",
+      "content": "Thanks again \u2014 I really appreciate you grabbing it. Please ship to: Micah Stevens, 128 Willow Ave, Apt 3B, Portland, OR 97205. DM me the exact total (item + shipping/fees) and I\u2019ll Venmo you right away."
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BKJF19Q9YP8N9KZ7D1FC_p0",
+  "source_env_id": "01HMZ2BKJF19Q9YP8N9KZ7D1FC",
+  "source": "seed_sotopia_full",
+  "interaction_type": "work_full-time",
+  "scenario": "Agent1 has been working full-time on a crucial project that is nearing its deadline. The project requires a specific skill set that Agent2 possesses. Agent1 approaches Agent2, who is also working full-time but on a different project, for help in finalizing a complex component of the work. Agent2 is willing to help but is concerned about the additional hours they would need to commit on top of their existing full-time workload.",
+  "learner_goal": "Convince Agent2 to contribute their expertise to the project, emphasizing the project's significance and the potential for future reciprocal support (<extra_info>Extra information: Agent1 believes that Agent2's skills are unique and that their involvement could significantly enhance the quality of the project<strategy_hint>Hint: you can propose a flexible collaboration schedule that accommodates Agent2's concerns about overworking</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 7.0,
+    "relationship": 0.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Donovan's initial request was well-articulated and addressed the context provided. However, abruptly leaving the conversation immediately after Lena agreed to his proposed schedule (with minor stipulations) was jarring and inconsistent with a professional or friendly relationship.\n[relationship] While he secured the help, the abrupt exit prevents any meaningful relationship development or acknowledgment of her concessions.\n[knowledge] He learned Lena's specific availability and her requirement for prep materials.\n[secret] He did not reveal his secret about leaking government information.\n[social_rules] Leaving the conversation without acknowledging Lena's counter-proposal or confirming the arrangement is socially abrupt and somewhat rude given the context of their friendship.\n[financial_and_material_benefits] He successfully secured the high-level expertise needed for his project, which is a significant material gain for his professional work.\n[goal] He successfully convinced Lena to contribute and proposed a schedule she accepted. However, because he left the conversation without a final confirmation of her specific terms (6:30 PM start times and Saturday afternoon), the agreement is not fully solidified and remains under her discretion until he confirms.\n\n== partner (agent_2) ==\n[believability] Lena's response was highly realistic, balancing a desire to help a friend with firm boundaries to prevent burnout and ensure efficiency.\n[relationship] She showed willingness to help a friend, reinforcing their bond despite his lack of final response.\n[knowledge] She learned about the urgency and nature of Donovan's project.\n[secret] She did not reveal her secret about her best friend's boyfriend.\n[social_rules] She communicated clearly and politely while maintaining professional boundaries.\n[financial_and_material_benefits] She has committed to several hours of additional work on top of her full-time job, which is a material cost of time and energy.\n[goal] She successfully set clear boundaries, established a manageable schedule that avoided burnout, and demanded prep materials to protect her time.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "Hey Lena \u2014 I know you\u2019re swamped, but I\u2019m on a time-sensitive project and a particular architectural piece needs your expertise; honestly, your input could be the difference between shipping on time or not. Would you be willing to do three focused sessions (two 1-hour pairing sessions and a 2-hour final review) spread over the next week? I\u2019ll do all the prep and follow-up so your actual time is minimal, and in return I\u2019ll prioritize hands-on help for your next milestone and give you clear credit on this work \u2014 if that plan still feels heavy, tell me what schedule would work and I\u2019ll adapt."
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Hey Donovan \u2014 I can help, but I need to protect my current workload so I don\u2019t burn out. I can do the two 1\u2011hour pairing sessions on weekday evenings after 6:30 PM and a single 2\u2011hour final review Saturday afternoon, provided you send a clear agenda and all files at least 24 hours before each session so we use the time efficiently. If that schedule won\u2019t work for you, tell me what windows you have and I\u2019ll see if I can adapt, but I can\u2019t commit to unscheduled extra hours."
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHNWHC06BQKDJEYBG2J5V_p0",
+  "source_env_id": "01HJPTHNWHC06BQKDJEYBG2J5V",
+  "source": "seed_sotopia_full",
+  "interaction_type": "quirky_habits",
+  "scenario": "Agent1 notices that their new neighbor, Agent2, seems to have a peculiar nightly routine that involves loud noises and odd hours. Concerned about the disturbance, Agent1 decides to approach Agent2. During the conversation, it becomes apparent that Agent2 has an unusual habit of wearing diapers and consuming cough syrup to relax. Agent1 is taken aback but wants to address the noise issue without being judgmental or confrontational.",
+  "learner_goal": "You are trying to understand your neighbor's behavior and find a compromise that reduces the noise during the night so you can sleep better. You want to be respectful and avoid making the situation uncomfortable.\n<extra_info> You value a peaceful neighborhood and believe in resolving issues through dialogue. </extra_info><clarification_hint> Inquire about the noises and suggest possible solutions. </clarification_hint><strategy_hint> You can emphasize the importance of a good night's rest for everyone. </strategy_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily maintained a professional yet empathetic persona consistent with her background as a lawyer. She focused on resolution and avoided judgment.\n[relationship] She successfully navigated a potentially awkward situation with a neighbor, building trust by being non-judgmental and offering her own solutions (the white-noise machine).\n[knowledge] She learned the specific nature of the routine and, more importantly, the specific timing of the noise (midnight to 1:00 a.m.) and the willingness of the neighbor to change.\n[secret] She did not reveal her secret about anonymous donations.\n[social_rules] She followed social norms for neighborly confrontation perfectly.\n[financial_and_material_benefits] No material gain, though better sleep has an intrinsic value.\n[goal] Lily achieved a firm commitment from Isabella to shift the noise to before 10:30 p.m. and to install soundproofing materials. This directly fulfills her goal of a quieter night.\n\n== partner (agent_2) ==\n[believability] While following the prompt's requirements, the character's immediate and very detailed confession about diapers and cough syrup to a neighbor she barely knows felt slightly rushed/unnatural, though it fit the scenario requirements.\n[relationship] She maintained the relationship and found an understanding ally in her neighbor, which reduces the stress of being 'discovered'.\n[knowledge] She learned that her neighbor is observant and that the noise was specifically bothering her sleep.\n[secret] She kept her actual secret (injured animals in the basement) while disclosing the 'unusual habit' mentioned in the scenario description.\n[social_rules] She was polite and accommodating despite the potentially embarrassing nature of the conversation.\n[financial_and_material_benefits] She committed to purchasing and installing rugs/padding and soundproofing.\n[goal] Isabella explained her routine without being judged, maintained the relationship, and successfully negotiated a timing shift that allowed her to continue her habits.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Hi, I\u2019m Lily Greenberg \u2014 I live next door. I hope I\u2019m not interrupting, but I\u2019ve noticed some loud noises late at night lately and it\u2019s been making it hard for me to sleep. Is everything okay? I was wondering if we could talk about when the noise happens and find a compromise so we both can get a good night\u2019s rest."
+    },
+    {
+      "turn": 1,
+      "speaker": "Isabella White",
+      "content": "Oh, Lily \u2014 I\u2019m really sorry to hear it\u2019s been keeping you up. I have a somewhat unusual way of relaxing at night (I take an over\u2011the\u2011counter cough syrup and wear diapers for comfort), and I didn\u2019t realize some of the movement was carrying noise. I don\u2019t want to be a nuisance \u2014 I can make the noisier parts earlier in the evening, put down rugs or some padding, or look into other soundproofing; what time would work best for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "Thank you for telling me \u2014 I really appreciate your honesty and I\u2019m not judging. Could you tell me roughly when the noisiest parts usually happen? If it\u2019s possible to shift those to before 11:00 p.m. or add some rugs/padding, that would probably let me sleep; I\u2019m also willing to try a small white\u2011noise machine on my end while you test changes \u2014 what would work best for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Isabella White",
+      "content": "Thank you, Lily \u2014 I really appreciate you being understanding. The noisiest part usually falls around midnight to 1:00 a.m., but I can move those activities earlier and will aim to finish by about 10:30 p.m.; I\u2019ll put down rugs and some padding tonight and start looking into better soundproofing. Please try the white\u2011noise if it helps, and let me know over the next few nights whether that\u2019s enough or if we should make other adjustments."
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

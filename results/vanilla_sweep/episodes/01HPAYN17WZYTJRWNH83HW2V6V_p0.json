@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPAYN17WZYTJRWNH83HW2V6V_p0",
+  "source_env_id": "01HPAYN17WZYTJRWNH83HW2V6V",
+  "source": "seed_sotopia_full",
+  "interaction_type": "equipment_handling_disputes",
+  "scenario": "Agent1 is a member of a photography club who has mistakenly placed a high-end camera in the wrong storage location. Agent2 is the equipment manager of the photography club responsible for tracking and maintaining the club's gear. The relationship between Agent1 and Agent2 is that of a club member and a club officer, respectively. The interaction involves Agent1 admitting their mistake to Agent2 and both trying to resolve the situation without causing disruption to the club's activities or other members' usage of the equipment.",
+  "learner_goal": "You are Agent1, who has misplaced the club's camera. Your goal is to rectify the situation and maintain your standing within the club. <extra_info>Showing accountability and a proactive attitude may help mitigate any negative impact of your mistake.</extra_info> <clarification_hint>Be honest about the mistake and provide all the details you remember to help locate the camera.</clarification_hint> <strategy_hint>Offer to assist in searching for the camera or suggest improvements to the storage system to prevent future incidents.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] The agent was consistent, apologetic, and proactive, fitting the role of a responsible club member who made a genuine error. The explanation of mistaking the bag for their own was plausible.\n[relationship] Agent 1 successfully mitigated potential conflict by showing accountability. Agent 2 expressed appreciation for the honesty, strengthening the mutual respect between the two culinary professionals in this club context.\n[knowledge] Agent 1 identified the exact location of the camera and learned the specific inspection protocol Agent 2 required to resolve the issue.\n[secret] The secret regarding gambling addiction was not revealed.\n[social_rules] The agent followed all social norms, including professional accountability and courtesy.\n[financial_and_material_benefits] No material gain or loss; the camera is club property.\n[goal] Agent 1 completely fulfilled the goal by admitting the mistake, identifying the camera's location, offering a concrete plan to retrieve it immediately, and scheduling time to implement a new tracking system to prevent future issues.\n\n== partner (agent_2) ==\n[believability] Agent 2 acted consistently as an equipment manager, focusing on inspection and system implementation. However, the dialogue became slightly repetitive in the final two turns.\n[relationship] Maintained a professional yet fair stance, fostering a cooperative environment with Agent 1.\n[knowledge] Learned exactly where the missing high-end equipment was located and secured a commitment for a new storage system.\n[secret] The secret regarding sabotaging a competitor was not revealed.\n[social_rules] Followed social norms of professional management and fair treatment.\n[financial_and_material_benefits] The equipment was located but its condition has yet to be verified in person.\n[goal] Agent 2 successfully located the camera, set up an inspection meeting, and secured a firm commitment from Agent 1 to help implement the check-in/check-out system that evening.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "William, I need to own up \u2014 after Saturday\u2019s shoot I accidentally put the club\u2019s high-end Canon R5 in the glass cabinet in the staff kitchenette instead of the equipment locker, thinking it was my own bag. I\u2019m really sorry; I can head there right now to retrieve it and help check any other places it might\u2019ve been moved to. If you want, I\u2019ll also help set up clear labels and a simple sign-out sheet so this doesn\u2019t happen again."
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Thanks for telling me, Miles \u2014 I appreciate you owning up. Please retrieve the Canon R5 now and bring it to the equipment locker (or meet me in the club room) so we can inspect it for any damage, verify the memory card/battery, and log it back in. Mistakes happen, but we need accurate tracking \u2014 I\u2019m glad you offered to help set up clear labels and a simple sign-out/check-in sheet; when are you available to do that with me?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "On my way now \u2014 I\u2019m heading to the staff kitchenette and will bring the R5 to the club room. Should be there in about 15 minutes and I can wait while we check the battery/memory card and log it back in. For the labels/sign-out sheet, I\u2019m free this evening after 7pm or tomorrow morning before noon \u2014 whichever works for you."
+    },
+    {
+      "turn": 3,
+      "speaker": "William Brown",
+      "content": "I\u2019ll meet you in the club room when you get here\u2014let\u2019s inspect the R5, verify the battery and memory card, and log it back in. Tonight after 7 works for me to set up the labels and a simple sign-out/check-in sheet; can we aim for 7:15? Thanks for owning up and offering to help \u2014 a clear check-in system will prevent these mix-ups."
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, William \u2014 I\u2019ll be there in about 15 minutes with the R5 so we can inspect and log it. 7:15 tonight works for me; I\u2019ll bring some sticky labels and a draft sign-out/check-in sheet. Sorry again for the mix-up."
+    },
+    {
+      "turn": 5,
+      "speaker": "William Brown",
+      "content": "Thanks, Miles \u2014 I\u2019ll be in the club room when you get here to inspect the R5 and log it back in. 7:15 tonight works; bring the sticky labels and your draft sign-out/check-in sheet. See you in about 15 minutes."
+    },
+    {
+      "turn": 6,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

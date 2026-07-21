@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJRH6SAVB2V27HWNXPFEASK7_p0",
+  "source_env_id": "01HJRH6SAVB2V27HWNXPFEASK7",
+  "source": "seed_sotopia_full",
+  "interaction_type": "user_generated",
+  "scenario": "After returning from a trip to Japan, two friends are reminiscing about the amazing sushi they had. Agent1 wants to continue exploring Japanese cuisine by cooking a sushi meal at home, while Agent2 is eager to find an authentic Japanese restaurant to recapture the experience. They need to decide whether to dine out or prepare a meal at home.",
+  "learner_goal": "Encourage Agent2 to try cooking sushi at home (<extra_info>Extra information: you believe that cooking at home can be a fun way to learn more about Japanese cuisine and it's more budget-friendly.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia Davis stayed in character as a high school principal, showing organized behavior and a willingness to compromise while maintaining her goal of education through home cooking.\n[relationship] The interaction was very cordial and ended with two confirmed plans, strengthening their acquaintance.\n[knowledge] Mia learned Benjamin's preference for professional quality and his availability for the upcoming weekends.\n[secret] Mia did not reveal her punk rock past.\n[social_rules] Mia followed all social norms and was polite in negotiation.\n[financial_and_material_benefits] No immediate financial gain as they are going out first, though she will save money the following week.\n[goal] Mia successfully secured a firm commitment from Benjamin to come to her home for a sushi-making night the following weekend, which was her primary goal.\n\n== partner (agent_2) ==\n[believability] Benjamin's dialogue reflected his desire for an authentic experience and a relaxed evening, consistent with his persona.\n[relationship] The interaction was friendly and collaborative, improving their rapport.\n[knowledge] Benjamin learned about Mia's willingness to host and teach him a skill.\n[secret] Benjamin did not reveal his wealthy background.\n[social_rules] Benjamin was polite and respectful throughout.\n[financial_and_material_benefits] He will be spending money on a restaurant meal and making a reservation.\n[goal] Benjamin successfully persuaded Mia to go to a professional restaurant first, fulfilling his primary objective.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Benjamin, instead of hunting for a restaurant, why don\u2019t we try making sushi at my place next weekend? It\u2019s surprisingly easy with a rolling mat and good rice, much cheaper than dining out, and we can do fresh fish or veggie options \u2014 I\u2019ll handle the shopping and host (don\u2019t worry, my cats will be kept out of the kitchen). It could be a fun, hands-on way to relive Japan together \u2014 what day works for you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Hey Mia \u2014 thanks, that\u2019s a generous offer and I love the idea of a hands-on night (cats safely out of the way sounds ideal). For next weekend, though, how about we try an authentic Japanese restaurant instead? I\u2019d really like to experience what a pro chef can do \u2014 it\u2019s more authentic, lets us unwind without the prep, and it\u2019s a nice way to support a local place; I can find a spot and make a reservation for Saturday evening (or Sunday if that\u2019s better)."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "That sounds lovely\u2014go ahead and reserve Saturday evening. How about we do the restaurant this time and plan a sushi-making night at my place the following weekend? I\u2019ll handle the shopping and teach you the rolling tricks (cats safely barred from the kitchen, promise)."
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Perfect \u2014 I\u2019ll make the reservation for Saturday evening. Does 7:00 PM work for you? I\u2019ll pick an authentic spot nearby and send you the reservation details, and I\u2019m already looking forward to your sushi-rolling masterclass the following weekend (cats safely out of the kitchen!)."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

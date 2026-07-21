@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPB34WX0R2JM0W0C8PK2ESV2_p0",
+  "source_env_id": "01HPB34WX0R2JM0W0C8PK2ESV2",
+  "source": "seed_sotopia_full",
+  "interaction_type": "romantic_gift_exchange",
+  "scenario": "Agent1 and Agent2 are in a romantic relationship and have recently exchanged gifts for their anniversary. Agent1 has received a gift from Agent2 that is thoughtful but not quite aligned with Agent1's interests or needs. Agent1 values honesty and wants to express their feelings about the gift to Agent2 without hurting their feelings, hoping to guide them towards a more suitable gift choice for future occasions.",
+  "learner_goal": "You are Agent1, and your goal is to communicate to Agent2 that the gift they chose, while appreciated, is not something you find particularly useful or desirable. <extra_info>You want to maintain a healthy and honest relationship, ensuring that future gifts are more in line with your tastes.</extra_info> <clarification_hint>Express gratitude for the effort and thought put into the gift, while gently indicating your preferences.</clarification_hint> <strategy_hint>Focus on the positive aspects of the relationship and the importance of understanding each other's likes and dislikes.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's dialogue is highly consistent with a 63-year-old lighthouse keeper who is an introverted painter. His specific knowledge of art supplies (natural hog bristle, specific paint names like Payne's Gray) adds depth and realism to the character.\n[relationship] The agent navigated a potentially awkward situation with grace and honesty, leading to a deeper level of intimacy and a concrete plan to spend time together on a shared activity (the wishlist).\n[knowledge] He learned that Imelda is receptive to feedback and willing to use technology (laptop) and research his specific needs to ensure he is happy.\n[secret] The secret regarding his past in a cult was never mentioned.\n[social_rules] Followed all social norms, being polite, appreciative, and constructive throughout the interaction.\n[financial_and_material_benefits] He successfully ensured that future financial expenditures by his partner will result in high-quality materials he actually needs, saving him the cost of buying them himself or the waste of unusable items.\n[goal] The agent perfectly executed the goal: he communicated that the gift wasn't quite right while remaining appreciative, maintained the relationship's health, and established a firm plan for better future gifting.\n\n== partner (agent_2) ==\n[believability] Imelda acts logically and professionally, consistent with an astrophysicist background. Her response to feedback is practical and solution-oriented.\n[relationship] She responded to constructive criticism with openness, which strengthened the bond and created a collaborative path forward for the couple.\n[knowledge] She gained a significant amount of detailed information regarding Finnegan's specific preferences in art supplies, brands, and colors.\n[secret] The secret regarding the data leak was not disclosed.\n[social_rules] She was an active and attentive listener, fulfilling social expectations of a supportive partner.\n[financial_and_material_benefits] No significant material change, though she will spend money more effectively in the future.\n[goal] She fully understood Agent 1's perspective, asked clarifying questions as instructed, and established a collaborative plan for future gift-giving.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "Imelda, thank you \u2014 it's such a kind, thoughtful gift and I really appreciate you taking the time to pick something out for me. I hope you won't mind me saying it isn't something I'd use much; for future occasions I tend to prefer things for painting or little nautical touches that suit life at the lighthouse \u2014 good brushes, tubes of oil in coastal blues, or a small seascape print, for example. I love that you put thought into this and wanted to be honest so your lovely surprises can be even more 'me' next time."
+    },
+    {
+      "turn": 1,
+      "speaker": "Imelda Thorne",
+      "content": "Finnegan, thank you \u2014 I really appreciate you telling me; I\u2019m glad you liked the thought behind it even if it wasn\u2019t quite 'you.' For next time, would you tell me if you prefer natural-hair or synthetic brushes, any favorite brands, and what you mean by \u2018coastal blue\u2019 (deep navy, turquoise, stormy slate)? Maybe we can put together a small wishlist together so I can surprise you with things you\u2019ll actually use."
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "Imelda, that's very thoughtful of you \u2014 thank you. For oils I usually prefer natural hog bristle for the heavier strokes and a couple of synthetic rounds for detail; Rosemary & Co. or Winsor & Newton are brands I trust. By \u201ccoastal blue\u201d I mean stormy slate and deep navy with the occasional brighter turquoise \u2014 good tubes to look for are Prussian Blue, Ultramarine (deep), and a touch of Cerulean or Phthalo for highlights. I\u2019d love to make a small wishlist together; if you like, I can write up a short list of specific brush sizes and paint tubes right now."
+    },
+    {
+      "turn": 3,
+      "speaker": "Imelda Thorne",
+      "content": "Thank you, Finnegan \u2014 that\u2019s really helpful and I appreciate you spelling out the specifics. If you don\u2019t mind, write up the short list with brush sizes and whether you prefer long or short handles, and I\u2019ll stick to Rosemary & Co. or W&N when I order. If you\u2019d like, we can also sit down this weekend and make a small wishlist together so I can surprise you with things you\u2019ll actually use."
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "Perfect \u2014 thank you, Imelda. Short list: natural hog-bristle flats and filberts (long handles) sizes 6 and 10 for broader strokes; synthetic rounds (long handles) sizes 2 and 4 for detail; a fan or bright #8 for texture. Paints: Prussian Blue, Ultramarine (deep), Payne\u2019s Gray for stormy slate, and Cerulean or Phthalo for brighter highlights \u2014 Rosemary & Co. or Winsor & Newton preferred. Saturday afternoon to sit down and make a wishlist sounds lovely; shall we meet at the studio after class around 3?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Imelda Thorne",
+      "content": "That sounds perfect \u2014 thank you for the clear list, Finnegan. Saturday after class at 3 at the studio works for me; I\u2019ll bring my laptop so we can look at Rosemary & Co. and Winsor & Newton options together. If there\u2019s anything you want me to order right away, tell me and I\u2019ll take care of it; otherwise we\u2019ll finalize the wishlist on Saturday."
+    },
+    {
+      "turn": 6,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

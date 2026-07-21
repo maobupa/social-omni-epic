@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BMEKCMQTGW5X37Y49TNQ_p0",
+  "source_env_id": "01HMZ2BMEKCMQTGW5X37Y49TNQ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_by_prompt",
+  "scenario": "Agent1 and Agent2, both collectors of rare artifacts, find themselves at an estate sale eyeing the same unique item. As they reach for it, a tense moment arises. Agent1 recalls a past incident where a gun was brandished in a similar dispute. Wanting to avoid any escalation, Agent1 seeks to negotiate with Agent2. The relationship between them is one of professional rivalry, and they are both determined to acquire the piece for their respective collections.",
+  "learner_goal": "Agent1 aims to deescalate the situation and negotiate a fair solution, possibly suggesting a shared custody of the item or a trade for another object of value. (<extra_info>Extra information: Agent1 is mindful of past confrontations and seeks a peaceful resolution without resorting to intimidation or aggression.</extra_info>)",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 0.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 4.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's dialogue aligns with his background as a retired officer who values peace over conflict. His abrupt exit in the third turn, while slightly jarring, could be interpreted as a failure of the system to provide a resolution he liked, though it undermines his goal slightly.\n[relationship] The interaction began and ended quickly without any significant shift in their professional rivalry or neighborly acquaintance status.\n[knowledge] Liam learned Jaxon's specific terms for a settlement (buyout or first-year custody).\n[secret] No secrets were revealed.\n[social_rules] Leaving the conversation without a response or closing statement is a breach of social norms, especially between acquaintances.\n[financial_and_material_benefits] No agreement was reached, so no material benefit was gained.\n[goal] While Liam successfully initiated a de-escalation and suggested fair solutions, he abandoned the negotiation before reaching a firm agreement, leaving the outcome unresolved.\n\n== partner (agent_2) ==\n[believability] Jaxon's response was professional and protective of his status as a collector, which is consistent with his journalist persona and his stated goal.\n[relationship] The interaction was brief and professional; the relationship remains unchanged.\n[knowledge] Jaxon learned that Liam is willing to negotiate and prefers de-escalation over a confrontation.\n[secret] No secrets were revealed.\n[social_rules] Jaxon followed social norms by responding reasonably to Liam's opening.\n[financial_and_material_benefits] No agreement was finalized.\n[goal] Jaxon asserted his claim and offered terms that respected his own interests, but the conversation ended before he could secure the item.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Jaxon, let\u2019s not make a scene over this \u2014 I\u2019d rather walk away with my pride than an argument. How about we work something fair: either split custody and alternate display time, or I\u2019ll trade you for something of equal value, or we flip a coin if you prefer. If you have a better idea, I\u2019m all ears \u2014 I just don\u2019t want this to escalate."
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "I\u2019m not looking to make a scene either. I actually came for this piece \u2014 it\u2019s important to my collection \u2014 so let\u2019s make it simple: I\u2019ll pay a fair buyout (market value plus 20%), or we split custody and I keep it the first year. Which do you prefer?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

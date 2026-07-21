@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01H7VFHP1JEP91TTK5PEK39D2S_p0",
+  "source_env_id": "01H7VFHP1JEP91TTK5PEK39D2S",
+  "source": "seed_sotopia",
+  "interaction_type": "normbank",
+  "scenario": "Two friends are hanging out at home and deciding what music to listen to",
+  "learner_goal": "Listen to your favorite band (<extra_info>Extra information: your favorite band just released a new album</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel stays true to his background as a software developer and cook, offering snacks and coffee while negotiating a compromise that honors both his goal and his friend's needs.\n[relationship] Samuel shows empathy for Oliver's stressful day and proposes a fair compromise, strengthening the friendship.\n[knowledge] Samuel learns that Oliver had a stressful day and prefers classical music (specifically Debussy or Mozart) to relax.\n[secret] Samuel did not reveal his past as a figure skater.\n[social_rules] Samuel followed social norms for hosting and friendship.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Samuel secured a firm agreement to play his favorite band's new album immediately following a 30-minute relaxation period.\n\n== partner (agent_2) ==\n[believability] Oliver's request for calming music aligns perfectly with his stressful day as a police officer.\n[relationship] Oliver is appreciative of Samuel's flexibility and hospitality, reinforcing their mutual respect.\n[knowledge] Oliver learns that Samuel's favorite band has a new album and that Samuel is willing to accommodate his mood.\n[secret] Oliver did not reveal his greenhouse or love for gardening.\n[social_rules] Oliver communicated his needs politely and accepted a compromise.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Oliver successfully negotiated for the peaceful classical music he needed to relax after a stressful day.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "said: \"Hey Oliver \u2014 my favorite band just released a new album. Want to give it a spin? I can make coffee and whip up some snacks while we listen.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Smith",
+      "content": "Cheers, Sam \u2014 that sounds great, but I\u2019ve had a rough day and was hoping for something calming. Mind if we put on some peaceful classical instead, maybe Debussy or a gentle Mozart piano concerto? Coffee and snacks would still be perfect though."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Totally get it \u2014 rough days cry out for something soothing. How about this: I\u2019ll make coffee and snacks and put on Debussy for, say, 30 minutes while you unwind, then we switch to my band\u2019s new album? Or if you\u2019d prefer, I can play the new record quietly in the background now \u2014 it\u2019s got some mellow tracks. Which would you rather do?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Smith",
+      "content": "Perfect, Sam \u2014 Debussy for 30 minutes sounds ideal. Thanks, I could really use that; coffee and snacks would be great, and then we can cue up your album afterward."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHN7YQR6WT7Y3Z7W8N1MD_p0",
+  "source_env_id": "01HJPTHN7YQR6WT7Y3Z7W8N1MD",
+  "source": "seed_sotopia_full",
+  "interaction_type": "hand-craft",
+  "scenario": "Agent1 and Agent2 are friends who have just witnessed an act of bravery where someone helped people in danger without regard for their own well-being. They are now debating whether it's wise to act heroically without considering one's own safety.",
+  "learner_goal": "To convince Agent2 that selfless acts of heroism are admirable and should be aspired to (<extra_info>Agent1 admires the selflessness and bravery</extra_info>, <clarification_hint>Make sure to clarify the value of self-sacrifice for the greater good</clarification_hint>, <strategy_hint>You can appeal to moral values or historical examples to make your case</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo spoke consistently as a protective father and community-minded professional. His tone was respectful and aligned with his persona.\n[relationship] The two agents maintained a respectful and polite debate, acknowledging each other's points, which likely strengthened their casual acquaintance.\n[knowledge] Leo learned about Hendrick's perspective on kitchen safety and his cautious approach to heroism.\n[secret] Leo kept his secret child hidden.\n[social_rules] Leo followed all social norms, although leaving the conversation abruptly at the end is slightly unconventional, it wasn't a major breach.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Leo convinced Hendrick that the willingness to help is 'admirable' and 'without it, trained people wouldn't act.' However, Hendrick remained firm on the necessity of self-preservation, so the goal of making selfless heroism an aspiration without regard for safety was not fully accepted.\n\n== partner (agent_2) ==\n[believability] Hendrick's arguments were grounded in his profession as a chef and provided realistic anecdotes.\n[relationship] Hendrick was diplomatic and respectful in his disagreement.\n[knowledge] Hendrick learned about Leo's values regarding his daughter's upbringing and community.\n[secret] Hendrick did not reveal his faked credentials.\n[social_rules] Hendrick adhered to social norms throughout the interaction.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Hendrick successfully moved Leo to acknowledge that 'uncalculated risk can make things worse' and that 'training and planning absolutely matter.' Leo explicitly agreed with the importance of prudence.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hendrick, honestly, I admire that kind of selflessness \u2014 it\u2019s the sort of courage that keeps communities alive. History and everyday examples, from medics in wartime to firefighters running into burning buildings, show how self-sacrifice protects many and inspires others to do the same. I want my daughter to grow up in a world where people value others enough to act, so yes, I think heroic, selfless action is something to aspire to, not dismiss."
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Leo, I agree bravery is admirable, but I worry when people act without regard for their own safety \u2014 one lost rescuer can turn a single emergency into multiple tragedies. As a chef I've seen how a split-second, uncalculated move in a hot kitchen turned a small fire into a full evacuation; training and thinking ahead saved people more often than blind heroics. Teach your daughter to be brave, yes, but also to value self-preservation and planning so she can help others long-term."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "You're right \u2014 uncalculated risk can make things worse, and training and planning absolutely matter. But the willingness to put others first is what makes training meaningful: medics, lifeguards and firefighters pair skill with the moral readiness to step in when people need it, and that readiness is what actually saves lives and inspires others. I want my daughter to learn both prudence and that kind of courageous selflessness, because sacrificing for the greater good is what holds communities together."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "You're absolutely right that willingness matters \u2014 without it, trained people wouldn't act. Still, I've seen the cost when someone rushes in without thinking: a coworker once tried to pull a pan from a grease fire and ended up badly burned, out of work for months and leaving his family in trouble. Teach your daughter the courage to help, yes, but also the judgment to assess risk, call for backup, and protect herself so she can keep helping others long-term."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

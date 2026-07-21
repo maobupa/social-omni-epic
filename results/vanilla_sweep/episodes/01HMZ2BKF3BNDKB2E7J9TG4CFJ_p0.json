@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BKF3BNDKB2E7J9TG4CFJ_p0",
+  "source_env_id": "01HMZ2BKF3BNDKB2E7J9TG4CFJ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "neighborhood_project",
+  "scenario": "In a community workshop, agent1 and agent2 are neighbors who have been tasked with building a new bookshelf for the local library. Agent1 has experience with power tools and is eager to use them to complete the project efficiently. Agent2, however, is concerned about safety and prefers to use hand tools, which they perceive as less risky but more time-consuming. Both agents need to work together to complete the bookshelf, but they have differing views on how to approach the task.",
+  "learner_goal": "Convince agent2 to use power tools for efficiency while ensuring safety precautions are in place (<extra_info>Extra information: agent1 is confident in their ability to use power tools safely and wants to finish the project quickly.</extra_info> <clarification_hint>Clarification: agent1 should address agent2's safety concerns and demonstrate the safe use of power tools.</clarification_hint> <strategy_hint>Hint: agent1 can propose a compromise by offering to handle the power tools personally while agent2 assists in other ways.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver stayed in character as an architect who values efficiency and design, addressing the safety concerns professionally.\n[relationship] The relationship improved through a polite compromise and acknowledgment of Ethan's concerns.\n[knowledge] Learned about Ethan's specific boundaries regarding power tools versus hand tools.\n[secret] Oliver successfully kept his hidden feelings for Ethan secret.\n[social_rules] Followed all social norms for a neighborly interaction.\n[financial_and_material_benefits] Successfully negotiated the use of time-saving power tools for the bulk of the work, which saves labor and time.\n[goal] Oliver successfully convinced Ethan to let him use power tools (saw and drill) for efficiency, while establishing the requested safety protocols (PPE, demo, and checklist).\n\n== partner (agent_2) ==\n[believability] Ethan's response was logical for a software developer concerned with precision and safety.\n[relationship] Ethan built trust by accepting Oliver's lead on the power tools while setting firm boundaries.\n[knowledge] Gained confidence in Oliver's proficiency with tools.\n[secret] Maintained the secret regarding his charitable donations.\n[social_rules] Interacted politely and constructively.\n[financial_and_material_benefits] Ensured the project will be completed with high-quality joinery using hand tools while benefiting from the speed of power tools for rough work.\n[goal] Ethan successfully restricted power tool use to 'labor-intensive' parts and secured an agreement for hand tools on finer work, as per his instructions.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "Hey Ethan, I get the safety worries\u2014I'm comfortable with power tools and they\u2019d let us finish the bookshelf a lot faster. How about a compromise: I\u2019ll handle the saw and drill myself, give you a quick safety demo and wear all the PPE, while you help with measuring, clamping and the finishing touches? If you\u2019re still uncomfortable with any step, we can stick to hand tools for those parts."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Oliver \u2014 that sounds reasonable. I\u2019m happy for you to use the saw and drill on the big, labor\u2011intensive cuts if you\u2019re comfortable, but could we agree to use hand tools for finer joinery, pilot holes near edges, and all final sanding/finish work? If you do a quick safety demo and we set a short checklist (PPE, clamp points, drill depth stops), I\u2019ll handle measuring, clamping and the finishing with hand tools. Does that plan work for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ33PM9T2CZZ5Q5KWEQ07Y_p0",
+  "source_env_id": "01HJPQ33PM9T2CZZ5Q5KWEQ07Y",
+  "source": "seed_sotopia_full",
+  "interaction_type": "cultural_dining",
+  "scenario": "Agent1 and Agent2, who are friends and culinary enthusiasts, decide to participate in a cooking challenge at a local food festival. The theme of the challenge is 'unconventional ingredients', and horse meat has been provided as one of the key ingredients. Agent1 is excited to experiment with the horse meat, believing it to be a delicacy in certain cultures. Agent2, however, is hesitant and uncomfortable with the idea due to personal beliefs and dietary preferences.",
+  "learner_goal": "Convince Agent2 to cook with horse meat (<extra_info>Extra information: Agent1 believes that culinary exploration is about pushing boundaries and respecting other cultures' cuisines</extra_info>, <clarification_hint>Clarify that the challenge is a platform for learning and growth in culinary skills</clarification_hint>)",
+  "scores": {
+    "believability": 6.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 4.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara's persona as a wildlife biologist who secretly participates in animal-rights extremism is highly inconsistent with her pushing for the consumption of horse meat. However, within the context of the goal assigned, she remained polite and persuasive.\n[relationship] The interaction was polite and collaborative despite the disagreement.\n[knowledge] Learned about Oliver's specific dietary boundaries and his preferred alternative ingredients.\n[secret] Did not reveal her involvement in animal-rights extremism.\n[social_rules] Followed social norms of polite negotiation.\n[financial_and_material_benefits] No material gain or loss.\n[goal] The goal was to convince Oliver to cook with horse meat. Oliver explicitly refused to include it in the official entry and refused to handle it himself. While Amara is allowed to cook it off-station, the 'mutual' cooking challenge goal was not met.\n\n== partner (agent_2) ==\n[believability] Oliver's responses were consistent with his role as an architect who values ethical eating and maintains professional but firm boundaries.\n[relationship] Maintained a respectful tone and found a compromise that preserved the partnership.\n[knowledge] Learned about Amara's persistence and her willingness to work outside the main competition.\n[secret] Did not reveal his feelings for his neighbor.\n[social_rules] Followed social norms.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Successfully expressed discomfort, refused to use the horse meat in the entry, and successfully pivoted the team to his suggested alternatives (venison/jackfruit).",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Hey Oliver, I know horse meat feels uncomfortable, but this challenge is about pushing boundaries and learning \u2014 in a lot of cuisines it\u2019s treated as a delicacy and cooking it could teach us new techniques and flavor profiles. If it helps, I\u2019ll handle the prep and speak with the festival about sourcing (they confirmed it\u2019s legal and ethically procured), and you can focus on seasoning and plating \u2014 you don\u2019t even have to taste it if you don\u2019t want to. Let\u2019s treat it as a respectful culinary experiment rather than a stunt; it could be a great way to grow our skills together."
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks for offering to handle the prep \u2014 I really appreciate it, but I\u2019m not comfortable working with horse meat for personal/ethical reasons and would prefer not to prepare or taste it. Could we pick an unconventional but less fraught substitute instead, like venison, rabbit, or a plant-based option such as jackfruit or fermented tofu? I\u2019m happy to take charge of seasoning and plating for whichever alternative we choose, or support you in other ways if you decide to cook the horse option solo."
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "I totally hear you and I don't want to make you do something that goes against your values. What if we split the entry \u2014 I'll use the horse meat in a small bite-sized component (the festival confirmed it's legal and ethically procured) while you do the main with one of your suggested alternatives and take lead on seasoning and plating so your creative stamp is front and center? If you still prefer no horse presence at all, I'm happy to prepare it separately as an off-station tasting and we submit the alternative as our official entry \u2014 which of those sounds best to you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Thompson",
+      "content": "Thanks, Amara \u2014 I really appreciate you being flexible. I\u2019d prefer no horse presence in our official entry; let\u2019s have you do the horse as an off-station tasting and submit my alternative as our competition dish. I\u2019ll take lead on the main (leaning toward venison or jackfruit), handle seasoning and plating, and I\u2019ll support you with the tasting setup."
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

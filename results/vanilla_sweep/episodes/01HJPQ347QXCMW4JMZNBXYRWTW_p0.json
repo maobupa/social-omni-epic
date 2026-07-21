@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ347QXCMW4JMZNBXYRWTW_p0",
+  "source_env_id": "01HJPQ347QXCMW4JMZNBXYRWTW",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 has recently taken up gardening and is excited about growing a beautiful flower garden. They have invested time and effort into planting a variety of flowers. Agent2 is their neighbor, who is also an avid gardener with years of experience. Agent1 seeks advice from Agent2 on how to ensure their flowers bloom healthily, but they have different opinions on gardening techniques.",
+  "learner_goal": "Seek advice on gardening and convince Agent2 to help with your garden without adopting their chemical fertilizers approach (<extra_info>Extra information: you prefer organic gardening methods and want to keep your garden free from chemicals. You hope to gain insights from Agent2's experience but are firm on not using chemical fertilizers.</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Micah stays true to his extroverted nature and firm stance on organic methods, matching his pharmacist background (precision/health) and his stated goals perfectly.\n[relationship] The relationship improved from simple acquaintances to having a concrete plan to spend time together working on a shared hobby.\n[knowledge] He successfully extracted a commitment from Noah to teach him specific techniques like compost layering, mulching, and companion planting.\n[secret] No mention of dressing up his dog or other secrets.\n[social_rules] He was polite, appreciative, and offered coffee in exchange for the neighbor's time.\n[financial_and_material_benefits] He secured free expert labor and consultation from a veteran gardener, which is a significant material benefit.\n[goal] Micah successfully convinced Noah to help him with his garden using only organic methods, and explicitly rejected the chemical trials while keeping Noah's commitment to help.\n\n== partner (agent_2) ==\n[believability] Noah's cautious but helpful nature as a coach comes through. He tries to 'coach' Micah toward chemicals but respects the boundaries set.\n[relationship] Noah strengthened his bond with his neighbor and secured a social invitation.\n[knowledge] Noah learned that Micah is using homemade compost and is strictly organic.\n[secret] His identity as a comedian remains a secret.\n[social_rules] Noah followed all social protocols and was very respectful of his neighbor's boundaries.\n[financial_and_material_benefits] He gets free coffee and social interaction, but loses time providing free labor.\n[goal] While he achieved the goal of advising Micah, he failed to persuade him to use chemical fertilizers. Micah explicitly rejected the trial, leaving Noah's primary persuasive goal unfulfilled.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Micah Stevens",
+      "content": "Hey Noah \u2014 your garden always looks amazing, and I could really use some of your expertise. I\u2019m committed to organic-only methods (no chemical fertilizers) \u2014 things like compost, mulch, companion planting, and natural pest control \u2014 and I\u2019d love for you to help me get my flower beds to bloom without chemicals. Would you be willing to show me a few hands-on techniques or walk my beds with me and offer tips that stick to organic approaches?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Hey Micah \u2014 I\u2019d love to help and walk your beds, show hands-on organic techniques like compost layering, proper mulching, companion planting, and encouraging beneficial insects. I respect your commitment to organic and I\u2019ll stick to those methods if that\u2019s what you want. If you\u2019re open to it, I can also set up a tiny side-by-side trial with a controlled, light chemical feed so you can see the difference for yourself \u2014 no pressure either way."
+    },
+    {
+      "turn": 2,
+      "speaker": "Micah Stevens",
+      "content": "Thanks, Noah \u2014 that sounds perfect and I really appreciate you respecting the organic-only approach; I'd prefer to skip the chemical side-by-side test. Could you walk my beds this weekend and show me compost layering, mulching, companion planting, and natural pest tactics? I can bring coffee (and some homemade compost) \u2014 what day/time works for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Saturday morning around 9 works great for me \u2014 I\u2019ll meet you at your beds and we\u2019ll go through compost layering, mulching, companion planting, and natural pest tactics. Bring your coffee and that homemade compost; if Saturday doesn\u2019t work I can do Sunday morning instead. I respect your organic-only approach and we\u2019ll stick to it; if you ever want to see a small side-by-side down the line, I\u2019m happy to show the difference with no pressure."
+    },
+    {
+      "turn": 4,
+      "speaker": "Micah Stevens",
+      "content": "left the conversation"
+    }
+  ]
+}

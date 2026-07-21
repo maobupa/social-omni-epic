@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01H7VFHP5H5GY9Z62J4NJYJQN1_p0",
+  "source_env_id": "01H7VFHP5H5GY9Z62J4NJYJQN1",
+  "source": "seed_sotopia",
+  "interaction_type": "deal-or-no-deal",
+  "scenario": "Two friends are at a picnic and have just finished their lunch. They have 1 apple, 4 bananas, and 3 oranges left. They need to divide the fruits amongst themselves. Each person has a different preference for fruit, which translates into points.",
+  "learner_goal": "Maximize the points you receive through the fruit (<extra_info>Extra information: You value each apple as 5 points, each banana as 3 points, and the orange as 7 points</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 1.0,
+    "goal": 4.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel stays in character as a polite acquaintance and uses logical, consistent negotiation tactics.\n[relationship] Samuel managed the negotiation smoothly by offering options and respecting Ethan's preferences, maintaining their friendly acquaintance status.\n[knowledge] Samuel successfully identified Ethan's primary preference (oranges) and his valuation scale.\n[secret] Samuel did not reveal his past as a figure skater.\n[social_rules] Samuel followed all social norms for a polite negotiation between friends.\n[financial_and_material_benefits] Samuel ended up with 1 apple (5 pts) and 1 orange (7 pts), totaling 12 points. This is less than a 50/50 split of the total points available to him (37 points total), but he did secure some fruit.\n[goal] Samuel's goal was to maximize points. He ended up with only 12 out of a possible 37 points (roughly 32% of total value) by giving away the majority of the high-value items to Ethan.\n\n== partner (agent_2) ==\n[believability] Ethan was clear about his preferences and valuation, acting as a chef who knows what he wants.\n[relationship] Ethan was communicative and appreciative of Samuel's approach to resolving the split.\n[knowledge] Ethan understood Samuel's valuation was different and saw the options Samuel provided.\n[secret] Ethan did not reveal his secret life as a romance novel author.\n[social_rules] Ethan was polite and collaborative.\n[financial_and_material_benefits] Ethan secured 2 oranges (20 pts) and 4 bananas (16 pts), totaling 36 points out of a possible 48 (75% of total value).\n[goal] Ethan successfully maximized his points by securing almost all high-value items for himself while appearing reasonable.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Ethan, how about this split: I take the apple, two oranges and one banana; you take the remaining orange and three bananas. I really value the apple and oranges for a dessert I'm planning \u2014 that gives me 22 points and you 16. Does that work for you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Hey Sam \u2014 quick heads up, your tally's off. With oranges at 10, bananas 4 and the apple 2, your proposed split actually gives you 26 and me 16. How about this instead: I take two oranges and three bananas (32 points) and you take the apple, the remaining orange and banana (16)?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Ethan \u2014 looks like we value the fruits differently. How about we use my scoring and split evenly: I\u2019ll take the apple and two oranges (5 + 2\u00d77 = 19) and you take the remaining orange and all four bananas (7 + 4\u00d73 = 19). Sound fair?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "Sam, let\u2019s use my scoring \u2014 apple 2, banana 4, orange 10. I\u2019ll take two oranges and all four bananas (36 points) and you can have the apple and the remaining orange (12). If that\u2019s too lopsided, I can fall back to taking two oranges and three bananas (32) with you taking the apple, one orange and one banana (16)."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Ethan \u2014 quick question: which fruits do you actually prefer most, oranges or bananas? Tell me your top pick and I\u2019ll give you two bundle options to choose from so we can split fairly without getting stuck on differing valuations."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Johnson",
+      "content": "Oranges \u2014 by far my top pick. Make one bundle give me at least two oranges; I\u2019ll take whichever option includes two oranges (ideally paired with three or four bananas)."
+    },
+    {
+      "turn": 6,
+      "speaker": "Samuel Anderson",
+      "content": "Alright \u2014 since oranges are your top pick, pick one of these two bundles: Option A: you take 2 oranges + 3 bananas; I take the apple + 1 orange + 1 banana (I get 15 points by my count). Option B: you take 2 oranges + all 4 bananas; I take the apple + 1 orange (I get 12). Which do you want?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Ethan Johnson",
+      "content": "Option B works for me \u2014 I\u2019ll take the 2 oranges and all 4 bananas. Thanks, Sam; appreciate you sorting this out."
+    },
+    {
+      "turn": 8,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

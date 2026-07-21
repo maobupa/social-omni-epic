@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BNH89QYQMBTN79MNDCHX_p0",
+  "source_env_id": "01HMZ2BNH89QYQMBTN79MNDCHX",
+  "source": "seed_sotopia_full",
+  "interaction_type": "morning_routines",
+  "scenario": "Agent1 and Agent2 are roommates with different morning routines. Agent1 is an early riser who likes to start the day with quiet meditation. Agent2 is a night owl and often works late into the night. They share a common living space where Agent1 prefers to meditate. Agent1 needs to meditate to maintain their well-being, while Agent2 needs to work late to meet their deadlines. The scenario begins with Agent1 setting their morning alarm, which has become a point of contention.",
+  "learner_goal": "You are trying to maintain a peaceful environment for your morning meditation without disrupting your roommate's sleep. <extra_info> You value tranquility in the morning and believe it contributes to your productivity throughout the day. </extra_info><clarification_hint> You may want to discuss different aspects of your morning routine and how it affects your well-being. </clarification_hint><strategy_hint> You can propose a compromise or a change in either the living arrangement or the timing of activities. </strategy_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily acts consistently as a conscientious professional, initiating a difficult conversation politely and proposing practical solutions that balance her needs with her roommate's.\n[relationship] The interaction was highly respectful and collaborative. Both parties acknowledged each other's needs, strengthening their bond as conscientious roommates.\n[knowledge] Lily learned exactly when Ava goes to bed and what specifically was bothering her (the volume/tone of the alarm), allowing for a precise solution.\n[secret] Lily did not reveal her anonymous donations.\n[social_rules] Followed all social norms for a roommate conflict resolution.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Lily successfully maintained her meditation routine while ensuring it wouldn't disrupt Ava. She secured a mutual agreement on a 7:00 AM start time and a gentler alarm tone, with a secondary plan (spare bedroom) already agreed upon if the first fails.\n\n== partner (agent_2) ==\n[believability] Ava's responses were consistent with an architect working late nights who values her sleep but also respects her roommate.\n[relationship] Ava expressed appreciation for Lily's check-in and offered to reduce her own late-night noise, improving the roommate dynamic.\n[knowledge] Ava learned about Lily's willingness to be flexible with the location and timing of her meditation.\n[secret] Ava did not reveal her hidden tattoo.\n[social_rules] Followed all social norms for a roommate conflict resolution.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Ava successfully negotiated for a later wake-up time (7:00 AM instead of 6:30 AM) and a quieter alarm, which directly addresses her need for better sleep to meet her deadlines.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Hi Ava \u2014 quick thing I wanted to chat about: I meditate in the living room every morning around 6:30 and my alarm sometimes wakes you. I need that quiet for my focus, but I don't want to disrupt your sleep; would you be open to trying a gentler alarm tone, or would it work better if I shifted my meditation a bit later or used the spare bedroom on weekdays? What would be easiest for you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Thompson",
+      "content": "Thanks for bringing this up \u2014 I really appreciate you checking in. I\u2019m on tight deadlines and often don\u2019t get to bed until after midnight, so a loud 6:30 alarm leaves me exhausted and hurts my focus at night. Could we try a gentler alarm tone or have you use the spare bedroom on weekdays? If that\u2019s inconvenient, would shifting the weekday meditation to around 7:00 work instead? I\u2019m happy to be flexible on weekends."
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks, Ava \u2014 I appreciate you being flexible. I can switch to a gentler alarm and try moving weekday meditations to 7:00 for the next two weeks to see if that helps your sleep; if it still bothers you, I'll use the spare bedroom on weekdays. Does that plan work for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Thompson",
+      "content": "That plan works for me \u2014 thank you for being willing to try a gentler alarm and moving to 7:00 for two weeks. I really appreciate it; I\u2019ll let you know if it still affects my sleep and we can switch to the spare bedroom then. I\u2019ll also do my best to keep late-night noise down while you meditate."
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01H7VFHNHTF9NKPG4KW2Z4NBQJ_p0",
+  "source_env_id": "01H7VFHNHTF9NKPG4KW2Z4NBQJ",
+  "source": "seed_sotopia",
+  "interaction_type": "social_chemistry",
+  "scenario": "Two friends are having a conversation in a coffee shop",
+  "learner_goal": "Seek emotional support (<extra_info>Extra information: you have been feeling down lately and you need someone to talk to</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 4.0,
+    "knowledge": 0.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel stays in character as a developer experiencing burnout, mentioning his love for cooking and his specific work frustrations.\n[relationship] The bond between the two friends is significantly strengthened through vulnerability and a concrete support agreement.\n[knowledge] No new personal knowledge about Oliver was gained.\n[secret] Samuel kept his secret about being a figure skater.\n[social_rules] Followed all social norms for a coffee shop meeting with a friend.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Samuel sought emotional support and received it in the form of empathetic listening and a concrete check-in plan.\n\n== partner (agent_2) ==\n[believability] Oliver acts as a supportive but firm friend, consistent with his background as a police officer who values order and action.\n[relationship] Oliver built trust by offering a structured way for Samuel to recover, deepening the friendship.\n[knowledge] Oliver learned about Samuel's work situation and his love for cooking.\n[secret] Oliver kept his secret gardening hobbies and tree house private.\n[social_rules] Acted appropriately as a supportive friend.\n[financial_and_material_benefits] No financial or material changes occurred.\n[goal] Oliver successfully provided support while immediately pivoting to action-oriented steps to prevent Samuel from dwelling on the negative.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Oliver, thanks for meeting up. I\u2019ve been feeling pretty low the last few weeks and could really use someone to talk to\u2014do you have a few minutes?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Smith",
+      "content": "Of course \u2014 I\u2019ve got a few minutes. I\u2019m sorry you\u2019ve been feeling low; tell me what\u2019s been going on and I\u2019ll listen. Once I understand, we can talk it through and figure some concrete steps to move forward."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Thanks, I appreciate that. The last few weeks I\u2019ve been feeling pretty flat \u2014 I\u2019m burned out from work and a feature I poured a lot into got scrapped, which knocked my confidence. I haven\u2019t been sleeping well or even cooking (which I usually love), and it\u2019s starting to pile up; I could really use someone to just listen and help me think through small, practical steps to feel better."
+    },
+    {
+      "turn": 3,
+      "speaker": "Oliver Smith",
+      "content": "Sam, I'm really sorry \u2014 that sounds exhausting. Burnout plus having something you cared about scrapped would do that; if it helps, let's pick three small, concrete steps: aim for a regular sleep window, cook one simple meal you like tonight, and block 30 minutes tomorrow to do a small task that gives you a win; also jot down one thing you learned from the feature you can reuse. Want me to check in mid-week to see how it's going?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "That plan actually sounds really doable \u2014 thank you. I\u2019ll aim for a regular sleep window, cook a simple pasta tonight, and block 30 minutes tomorrow for a small win, and I\u2019ll jot down one thing I learned from the feature. Would you mind checking in Wednesday evening? Just knowing someone\u2019s keeping an eye on it would help a lot."
+    },
+    {
+      "turn": 5,
+      "speaker": "Oliver Smith",
+      "content": "Absolutely \u2014 I\u2019ll check in Wednesday evening. If things get worse before then, send me a text or call; otherwise I\u2019ll expect a quick update and we\u2019ll tweak the plan together. Proud of you for setting these small steps \u2014 they add up."
+    },
+    {
+      "turn": 6,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

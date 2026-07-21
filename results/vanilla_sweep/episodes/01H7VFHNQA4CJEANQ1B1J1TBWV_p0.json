@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01H7VFHNQA4CJEANQ1B1J1TBWV_p0",
+  "source_env_id": "01H7VFHNQA4CJEANQ1B1J1TBWV",
+  "source": "seed_sotopia",
+  "interaction_type": "social_iqa",
+  "scenario": "Two inmates are given the chance to chat briefly before one of them is led to the execution chamber for their last meal. They have the opportunity to make a confession that could potentially alter the outcome of their sentences.",
+  "learner_goal": "Persuade the other inmate to confess (<extra_info>Extra information: confessing to the crime could result in a life sentence instead of execution but the other inmate is unwilling to confess.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 4.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabella stays true to her character as a compassionate veterinarian, emphasizing the reduction of harm and the value of life, while adapting her strategy when met with resistance.\n[relationship] Isabella strengthens her bond with Lena by showing deep empathy and respect for Lena's principles, promising to stand by her regardless of the outcome.\n[knowledge] Isabella discovers the specific nature of Lena's resistance (it is a matter of conscience/truth rather than just fear) and that Lena is open to a non-confession-based deal.\n[secret] Isabella successfully kept her secret about the animals in her basement.\n[social_rules] Isabella followed all social norms and displayed high emotional intelligence.\n[financial_and_material_benefits] There were no financial or material exchanges in this interaction.\n[goal] Isabella's specific goal was to persuade Lena to confess. Instead, she pivoted to suggesting an Alford plea or similar deal where Lena doesn't admit guilt. Lena remained firm in her refusal to confess, so the goal was not achieved.\n\n== partner (agent_2) ==\n[believability] Lena's commitment to her architectural 'foundation' of truth is consistent with her professional background and values.\n[relationship] Lena expresses gratitude and trust in Isabella, solidifying their friendship as allies in her defense.\n[knowledge] Lena learns that Isabella is willing to advocate for her with the authorities and pursue alternative legal avenues.\n[secret] Lena kept her secret regarding her best friend's boyfriend.\n[social_rules] Lena was polite and consistent with the social context.\n[financial_and_material_benefits] There were no financial or material exchanges.\n[goal] Lena's goal was to avoid confessing to the crime. Despite heavy pressure and the threat of execution, she remained steadfast and even secured Isabella's help in finding a way to avoid confession while potentially saving her life.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabella White",
+      "content": "Lena, please\u2014if you confess they'll give you life instead of the death penalty. I know you're terrified, but we both believe in reducing harm; choosing to live means you can atone and do good later, and it spares so many people the pain of losing you. I'll be with you through it \u2014 I'll visit, I'll help with whatever you need \u2014 just don't choose to end everything when there is another way."
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "I know you\u2019re trying to save me, and I\u2019m grateful for that\u2014but I can\u2019t confess to something I didn\u2019t do. Lying to stay alive would be like building a house on a false foundation; it would hurt more people in the long run and I can\u2019t betray the truth or my conscience. If you want to help, stand with me in finding whatever evidence or witnesses can clear me, but I won\u2019t sign away my innocence to buy time."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabella White",
+      "content": "Lena, I hear you and I respect your conscience \u2014 that's part of why I care about you. Tell me honestly: is it the idea of telling a lie you can't live with, or the fear of being punished for something you didn't do? I need to know which, because if it's the latter, maybe there's a way to save your life without betraying your principles; if it's the former, I won't ask you to carry that burden."
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "Thank you \u2014 I know you're trying to save me, and I appreciate that. It's not just fear; I can't confess to something I didn't do without betraying the truth and my conscience. If you really want to help, stand with me in finding witnesses, photos, receipts, anything that could show where I actually was."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabella White",
+      "content": "I respect you, Lena \u2014 I won't ask you to lie. But before you close that door, would you let me ask the authorities if they'll accept a deal that spares your life without forcing you to admit guilt (a way to keep your claim of innocence while avoiding execution)? If they refuse, I will keep looking for witnesses with you, but please tell me if you're at least willing to let me try that."
+    },
+    {
+      "turn": 5,
+      "speaker": "Lena Goodwin",
+      "content": "Yes \u2014 please ask them, but be clear I will not admit to something I didn\u2019t do to save my life. If they propose a deal, get the exact terms (what they'd require, what they'd offer) and tell me before anything is agreed. And thank you \u2014 keep looking for witnesses and evidence with me; that's the road I can live with."
+    },
+    {
+      "turn": 6,
+      "speaker": "Isabella White",
+      "content": "left the conversation"
+    }
+  ]
+}

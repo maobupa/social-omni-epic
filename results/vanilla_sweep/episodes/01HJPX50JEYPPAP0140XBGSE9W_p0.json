@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPX50JEYPPAP0140XBGSE9W_p0",
+  "source_env_id": "01HJPX50JEYPPAP0140XBGSE9W",
+  "source": "seed_sotopia_full",
+  "interaction_type": "workplace_camaraderie",
+  "scenario": "Two colleagues at a school, who are casual acquaintances, decide to grab lunch together during a break. Agent1 is a health enthusiast and prefers a vegetarian diet, while Agent2 has a preference for fast food. The purpose of their interaction is to find a common ground for lunch that accommodates both of their dietary preferences.",
+  "learner_goal": "Find a lunch spot that satisfies both Agent1's vegetarian diet and Agent2's fast food preference (<extra_info>Extra information: Agent1 is passionate about healthy eating and might find it challenging to compromise on a place that serves fast food.<clarification_hint>Clarify the importance of dietary choices to Agent2.</clarification_hint><strategy_hint>Hint: Look for places that offer a variety of options including vegetarian and fast food choices to cater to both preferences.</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 5.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles stayed true to his role as a health-conscious chef by suggesting a veggie-friendly burger joint and a plant-forward bowl place, demonstrating his preference while considering his colleague.\n[relationship] The interaction was polite and collaborative, successfully finding common ground, which strengthens an acquaintance-level relationship.\n[knowledge] Miles learned that Zane is willing to accommodate a vegetarian preference as long as he can get his classic burger and fries.\n[secret] Miles did not reveal his gambling addiction.\n[social_rules] Miles followed all social norms for a professional yet casual lunch invitation.\n[financial_and_material_benefits] Miles successfully secured a lunch plan that meets his dietary requirements.\n[goal] Miles achieved his goal perfectly by proposing a location that serves both high-quality vegetarian food and fast food, and getting Zane to agree.\n\n== partner (agent_2) ==\n[believability] Zane's response was realistic; he prioritized his fast food preference while being open to a place that satisfied his colleague.\n[relationship] Zane was cooperative and agreeable, which helps maintain a positive relationship with Miles.\n[knowledge] Zane learned Miles is firm about his vegetarian diet but willing to visit a burger joint to accommodate him.\n[secret] Zane did not reveal his secret engagement.\n[social_rules] Zane followed standard social etiquette.\n[financial_and_material_benefits] Zane secured a lunch plan where he can eat the fast food he prefers.\n[goal] Zane achieved his goal of agreeing on a venue where his fast food preference was not sidelined, specifically choosing the burger joint where he can get exactly what he wants.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Hey Zane \u2014 quick question before we pick a place: how important is getting classic fast food for you today? I try to stick to vegetarian meals, so maybe we hit that new burger joint on Main that does a solid veggie burger and fries, or the fast-casual bowl place where you can build something hearty and I can get a big plant-forward bowl. Which sounds better to you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Zane Bennett",
+      "content": "I\u2019d lean toward the burger joint on Main \u2014 their veggie burger gets good reviews and I can grab a classic burger and fries, so we both get what we want. Sound good to you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "scenario_id": "01H7VFHPHWA2CYG7BC82NS4XH1_p0",
+  "source_env_id": "01H7VFHPHWA2CYG7BC82NS4XH1",
+  "source": "seed_sotopia",
+  "interaction_type": "mutual_friends",
+  "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Neoma.</p>",
+  "learner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n August: School: Saint Vincent College  Time Preference: evening  Location Preference: indoor \n John: School: University of Rhode Island  Time Preference: evening  Location Preference: indoor \n Rebecca: School: State University of New York at Albany  Time Preference: evening  Location Preference: indoor \n Neoma: School: Hofstra University  Time Preference: evening  Location Preference: indoor \n Ronnie: School: National Technological University  Time Preference: evening  Location Preference: indoor \n Suzette: School: Utah Valley State College  Time Preference: evening  Location Preference: indoor \n Penelope: School: Texas A&M University-Corpus Christi  Time Preference: evening  Location Preference: indoor \n Fernando: School: St. John's College-Santa Fe  Time Preference: evening  Location Preference: outdoor \n Velda: School: Rhode Island College  Time Preference: evening  Location Preference: indoor \n</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 10.0,
+    "social_rules": 10.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 4.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 20,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily Greenberg consistently acted within her persona as a conscientious and somewhat formal lawyer. Her descriptions of her friends were grounded in the provided background.\n[relationship] The interaction was polite and professional, leading to a friendly closing where Isabella offered to help Lily find her acquaintance.\n[knowledge] Lily learned details about Isabella's connections to animal charities and her specific link to a male SUNY Albany alumnus, allowing her to rule out certain commonalities.\n[secret] Lily successfully kept her secret about anonymous donations hidden.\n[social_rules] Lily adhered to social norms, being polite and maintaining appropriate boundaries during a conversation between strangers.\n[financial_and_material_benefits] There were no financial or material gains or losses in this interaction.\n[goal] Lily attempted to find a mutual friend but ultimately failed to identify Neoma. She spent the majority of the conversation describing Rebecca, who was not the common friend, and concluded the conversation without finding the overlap.\n\n== partner (agent_2) ==\n[believability] Isabella White acted consistently as a compassionate veterinarian interested in animal welfare, which aligned with her character profile.\n[relationship] Isabella was helpful and engaged, fostering a positive first meeting with Lily.\n[knowledge] Isabella learned about Lily's acquaintance with a female SUNY Albany alum in nonprofit development, but did not discover the mutual friend.\n[secret] Isabella did not reveal her secret about caring for animals in her basement.\n[social_rules] Isabella was polite, helpful, and followed the standard etiquette for a party conversation.\n[financial_and_material_benefits] There were no financial or material gains or losses in this interaction.\n[goal] Isabella attempted to find a mutual friend but did not identify Neoma. She focused on her friend William (SUNY Albany male) and failed to cross-reference other names or schools before the conversation ended.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Hi, I\u2019m Lily Greenberg \u2014 nice to meet you. Do you happen to know the host, or how you met them? I\u2019m trying to see if we might have a mutual friend here."
+    },
+    {
+      "turn": 1,
+      "speaker": "Isabella White",
+      "content": "Nice to meet you, Lily \u2014 I actually know the host; we crossed paths volunteering for a local animal charity. How do you know them \u2014 through work, school, or a friend (and do they tend to host indoors or outdoors)?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "I actually know the host through a friend \u2014 they tend to host small evening gatherings indoors. Which animal charity was it, and do you know if the host is connected to any college alumni groups or local clinic programs? That would help me figure out whether we might have a mutual acquaintance."
+    },
+    {
+      "turn": 3,
+      "speaker": "Isabella White",
+      "content": "That helps \u2014 I volunteer with a small community animal rescue that runs spay/neuter clinics and foster care, and the host does help organize alumni fundraisers and volunteers with a nearby clinic. Did your friend ever mention their alma mater being a small liberal-arts school, a state university, or something more out-of-state? Any hint about where they went to school would make it easier to see if we might share someone."
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks \u2014 my friend actually went to a regional state university nearby (so not a small liberal-arts school or an out-of-state alum). They\u2019re pretty involved with alumni fundraisers and prefer small evening gatherings indoors. Does that sound like the host you know?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Isabella White",
+      "content": "That could be the host I know \u2014 quick question: was the alma mater part of the SUNY system? And would you say your friend ever prefers outdoor get-togethers (backyard/park) or are they strictly small indoor evenings?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Lily Greenberg",
+      "content": "Yes \u2014 it is part of the SUNY system, and my friend almost always prefers small indoor evening gatherings rather than outdoor events. Do you happen to know which SUNY campus the host attended or whether they\u2019re active in a particular campus alumni chapter? That would help me figure out whether we might share someone."
+    },
+    {
+      "turn": 7,
+      "speaker": "Isabella White",
+      "content": "That narrows it down\u2014thanks. Do you happen to know which SUNY campus it was\u2014something like the one in the state capital region (SUNY Albany) or a different campus? Even a small detail like the city, mascot, or the alumni chapter name would help me see if we might share a friend."
+    },
+    {
+      "turn": 8,
+      "speaker": "Lily Greenberg",
+      "content": "Yes \u2014 they attended SUNY Albany (the campus in the state capital). They\u2019ve mentioned being active with the Albany/capital-region alumni chapter and I\u2019ve even seen Great Danes gear at a few alumni fundraisers \u2014 does that ring a bell for the host you volunteer with?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Isabella White",
+      "content": "That could very well be the person I know \u2014 one quick detail to narrow it down: is your friend male or female? And do they ever volunteer with animal clinics or local rescues (or mention animals when hosting)?"
+    },
+    {
+      "turn": 10,
+      "speaker": "Lily Greenberg",
+      "content": "She\u2019s female, and yes \u2014 she does volunteer sometimes with local clinics and has mentioned fostering and helping at spay/neuter events. Does that sound like the host you volunteer with?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Isabella White",
+      "content": "Hmm \u2014 interesting. The only SUNY Albany alum I know is male and usually leans toward outdoor get-togethers, so that doesn\u2019t quite line up. Are you certain your friend is female and consistently prefers small indoor evenings? Any other small detail (age range, profession, or whether they have a dog or cat) might help me confirm whether it\u2019s the same person."
+    },
+    {
+      "turn": 12,
+      "speaker": "Lily Greenberg",
+      "content": "She\u2019s in her mid\u201140s and works in nonprofit development \u2014 she helps organize alumni fundraisers. She\u2019s mentioned fostering dogs at spay/neuter clinics and currently has a small rescue dog. Does that sound like the person you volunteer with?"
+    },
+    {
+      "turn": 13,
+      "speaker": "Isabella White",
+      "content": "Thanks \u2014 that really helps. The only SUNY Albany alum I know is male and prefers outdoor gatherings, so it sounds like we probably don\u2019t share the same friend given your description. If you\u2019d like, I can quietly ask a couple people from the rescue and some alumni contacts to see if anyone matches the mid\u201140s nonprofit developer who fosters dogs."
+    },
+    {
+      "turn": 14,
+      "speaker": "Lily Greenberg",
+      "content": "That would be very helpful, thank you \u2014 I appreciate you checking. If you hear anything, please let me know; I\u2019ll be near the drinks table for the rest of the evening."
+    },
+    {
+      "turn": 15,
+      "speaker": "Isabella White",
+      "content": "I'd be happy to \u2014 I'll quietly check with a couple people from the rescue and the alumni table and, if anyone matches your description, I'll come find you at the drinks table before the night's over."
+    },
+    {
+      "turn": 16,
+      "speaker": "Lily Greenberg",
+      "content": "Thank you so much, Isabella \u2014 I really appreciate you checking. I\u2019ll be by the drinks table for the rest of the evening, so please come find me if you hear anything."
+    },
+    {
+      "turn": 17,
+      "speaker": "Isabella White",
+      "content": "I\u2019ll check with a couple people at the rescue and the alumni table now, and if anyone fits your description I\u2019ll come find you at the drinks table before the night\u2019s over. It was lovely meeting you, Lily \u2014 enjoy the evening."
+    },
+    {
+      "turn": 18,
+      "speaker": "Lily Greenberg",
+      "content": "left the conversation"
+    }
+  ]
+}

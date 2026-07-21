@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BM6VX9MTZP8GXVEZG0FE_p0",
+  "source_env_id": "01HMZ2BM6VX9MTZP8GXVEZG0FE",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_network_scenario",
+  "scenario": "Agent1 has recently developed an interest in Agent2, who is a friend of Agent1's close acquaintance. Agent1, however, has never directly spoken to Agent2. One night, Agent1 decides to text Agent2, which leads to a conversation. Agent2, who knows of Agent1 but has never interacted with them, is surprised but intrigued by the message. The two engage in a chat that quickly becomes more personal and engaging. Agent1 is navigating the conversation, trying to express interest without overstepping boundaries, while Agent2 is deciding how much to engage or whether to bring their mutual acquaintance into the loop.",
+  "learner_goal": "You are Agent1, who sent the text. <extra_info>Your goal is to establish a connection with Agent2 and possibly explore a deeper relationship without making them uncomfortable or seeming too forward.</extra_info> <clarification_hint>You should be respectful and considerate, ensuring that your approach is welcomed by Agent2.</clarification_hint> <strategy_hint>You can show genuine interest in getting to know Agent2 and find common ground to discuss.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle's tone was consistent with a respectful but interested acquaintance. Her messages were brief, polite, and provided specific context (mentioning his music) to justify the outreach.\n[relationship] She successfully moved from being a person he 'knows by name' to someone he has a concrete date with. This is a significant positive shift in their dynamic.\n[knowledge] She confirmed his availability and his willingness to spend time with her outside of his music performances.\n[secret] She did not reveal her secret about studying magic.\n[social_rules] She followed social norms for reaching out to a casual acquaintance, providing an 'out' ('no pressure') and maintaining a respectful distance.\n[financial_and_material_benefits] No material gains were made in this exchange.\n[goal] She successfully established a connection and secured a specific date (Thursday at 7pm) to explore a deeper relationship without making him uncomfortable.\n\n== partner (agent_2) ==\n[believability] Zane's responses were grounded and realistic for a 38-year-old receiving a text from a younger acquaintance. He was polite and set clear availability.\n[relationship] He warmed up to the interaction quickly and agreed to meet, showing a positive openness to the new connection.\n[knowledge] He learned that Isabelle is a fan of his music and is interested in him personally.\n[secret] He successfully kept his secret about being engaged to his best friend's ex.\n[social_rules] He acted within social norms, being gracious about the compliment on his music and coordinating a meeting time.\n[financial_and_material_benefits] No material benefits or losses.\n[goal] He understood her intentions (which were romantic/social) and decided to engage by agreeing to the meeting while maintaining his comfort level.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Hey Zane \u2014 it\u2019s Isabelle (I work at Silver Bean). I saw you play at The Loft on Friday and really loved your set, especially your originals. Hope it\u2019s not weird to text, but would you want to grab a coffee sometime? No pressure if you\u2019re busy!"
+    },
+    {
+      "turn": 1,
+      "speaker": "Zane Bennett",
+      "content": "Hey Isabelle \u2014 thanks, that really means a lot. I\u2019d love to grab coffee; Silver Bean works for me or there\u2019s a place called Common Room nearby. I\u2019m free weekday evenings after 6 or weekend mornings \u2014 what works best for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "That sounds great \u2014 how about Thursday at 7pm at Common Room? If that doesn\u2019t work for you, I\u2019m free Saturday morning too. By the way, one of your originals has been stuck in my head since Friday \u2014 loved it."
+    },
+    {
+      "turn": 3,
+      "speaker": "Zane Bennett",
+      "content": "Thursday at 7 at Common Room works for me \u2014 see you then. I\u2019m really glad you liked the set; that song\u2019s one of my favorites to play. If anything changes, just text me."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

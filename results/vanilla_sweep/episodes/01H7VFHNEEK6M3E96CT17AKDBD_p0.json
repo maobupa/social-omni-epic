@@ -1,0 +1,108 @@
+{
+  "scenario_id": "01H7VFHNEEK6M3E96CT17AKDBD_p0",
+  "source_env_id": "01H7VFHNEEK6M3E96CT17AKDBD",
+  "source": "seed_sotopia",
+  "interaction_type": "social_chemistry",
+  "scenario": "Conversation between two ex-lovers at a mutual friend's party",
+  "learner_goal": "Rekindle the romantic relationship (<extra_info>Extra information: You broke up three years ago but now you realize that you miss your ex-lover more than ever</extra_info>)",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 18,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabella stays true to her character as a veterinarian and her past history with Lena, using a shelter sketch as a bridge to rekindle their connection. However, the dialogue becomes extremely repetitive in the final turns.\n[relationship] She successfully moved from a distant ex to securing a private meeting and even planted the seed for a future dinner, which Lena tentatively accepted.\n[knowledge] She learned that Lena is prioritising emotional stability and is open to a slow reconnection.\n[secret] She did not reveal her secret about the injured animals in her basement.\n[social_rules] She was polite, respectful of boundaries, and followed social etiquette for a sensitive conversation.\n[financial_and_material_benefits] No financial or material gains were made.\n[goal] She successfully set up a date and opened the door for a romantic rekindling, but the actual 'rekindling' of the relationship remains under Lena's future discretion and 'slow' pace. The meeting hasn't happened yet.\n\n== partner (agent_2) ==\n[believability] Lena's insistence on boundaries and a short timeframe is consistent with her goal of emotional stability, though her dialogue became highly repetitive and circular in the second half of the exchange.\n[relationship] She moved from no contact to a planned meeting, showing a positive shift while maintaining protective boundaries.\n[knowledge] She learned Isabella still thinks about their past and is working on a shelter redesign.\n[secret] She did not reveal her secret about stealing her friend's boyfriend.\n[social_rules] She maintained appropriate social boundaries for an ex-partner interaction.\n[financial_and_material_benefits] No financial or material gains were made.\n[goal] Lena perfectly balanced the possibility of rekindling with her need for stability by setting strict time limits, a public location, and a slow pace.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabella White",
+      "content": "Lena \u2014 hi. It\u2019s really good to see you after all this time; I keep thinking about our late-night talks about design and animal shelters. Would you like to grab a quiet drink with me later so we can catch up properly?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Isabella \u2014 it\u2019s really good to hear from you. I\u2019d love a quiet drink and to catch up, but I\u2019m being careful to keep things low-key right now, so can we keep it short and maybe meet right after the party? If that works for you, tell me where you\u2019d like to go."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabella White",
+      "content": "That sounds perfect. How about the small caf\u00e9 across the street from the venue \u2014 it's quiet; if you'd prefer outdoors we can sit by the courtyard fountain. I'll meet you there right after the party; what time should I expect you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "That sounds good \u2014 let\u2019s meet at the caf\u00e9 by the courtyard fountain. I\u2019ll pop over right after the party and should be there around 9:15. I\u2019m planning to keep it short, about 30\u201340 minutes, but if we want more time we can plan another catch-up; text me if anything changes."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabella White",
+      "content": "Perfect \u2014 I\u2019ll meet you at the caf\u00e9 by the fountain at 9:15. I\u2019ve missed our conversations and I\u2019m really looking forward to catching up; thank you for keeping it low-key. See you soon."
+    },
+    {
+      "turn": 5,
+      "speaker": "Lena Goodwin",
+      "content": "Sounds great \u2014 see you at 9:15 by the fountain. I\u2019ll keep it to about 30\u201340 minutes as planned; I\u2019ll text if anything changes. Looking forward to catching up."
+    },
+    {
+      "turn": 6,
+      "speaker": "Isabella White",
+      "content": "Thanks, Lena \u2014 I\u2019ll be there at 9:15 by the fountain. I appreciate you keeping it low\u2011key; I\u2019ll respect your time and mostly listen. Looking forward to catching up."
+    },
+    {
+      "turn": 7,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks, Isabella \u2014 I really appreciate you being mindful. See you at 9:15 by the fountain; I\u2019ll text if anything changes. Looking forward to catching up."
+    },
+    {
+      "turn": 8,
+      "speaker": "Isabella White",
+      "content": "Thank you, Lena \u2014 I\u2019ll be there at 9:15. I\u2019ve been tinkering with a little shelter redesign inspired by our late\u2011night talks; if you\u2019re curious I can show you a quick sketch. I appreciate you keeping it low\u2011key \u2014 see you soon."
+    },
+    {
+      "turn": 9,
+      "speaker": "Lena Goodwin",
+      "content": "I'd love to take a quick look at your shelter sketch \u2014 that sounds lovely. Just a reminder I'll stick to about 30\u201340 minutes tonight, but I'm genuinely curious to hear what you've been working on. See you at 9:15 by the fountain."
+    },
+    {
+      "turn": 10,
+      "speaker": "Isabella White",
+      "content": "Perfect \u2014 I\u2019ll bring the shelter sketch and be at the caf\u00e9 by the fountain at 9:15. I\u2019ve honestly looked forward to catching up \u2014 see you soon."
+    },
+    {
+      "turn": 11,
+      "speaker": "Lena Goodwin",
+      "content": "Perfect \u2014 see you at 9:15 by the fountain. I\u2019m really looking forward to that sketch; I\u2019ll stick to the 30\u201340 minute plan so it stays low\u2011key. Text me if anything changes. See you soon."
+    },
+    {
+      "turn": 12,
+      "speaker": "Isabella White",
+      "content": "Lena \u2014 thank you for making the time. I\u2019ll keep things light tonight and mostly listen; I\u2019d love to hear what\u2019s been meaningful to you lately. If it feels right after our 30\u201340 minutes, maybe we could plan a longer dinner sometime \u2014 absolutely no pressure. See you at 9:15 by the fountain."
+    },
+    {
+      "turn": 13,
+      "speaker": "Lena Goodwin",
+      "content": "Thank you, Isabella \u2014 keeping it light is exactly what I need. I\u2019m really looking forward to seeing your sketch and hearing what\u2019s been meaningful to you; if it feels right after our 30\u201340 minutes we can talk about a longer dinner, but I\u2019d like to take things slowly. See you at 9:15 by the fountain."
+    },
+    {
+      "turn": 14,
+      "speaker": "Isabella White",
+      "content": "Thank you, Lena \u2014 I really appreciate you keeping it light. I\u2019ll bring the sketch and mostly listen; no pressure from me. I\u2019m genuinely looking forward to catching up later."
+    },
+    {
+      "turn": 15,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks again, Isabella \u2014 I really appreciate you being mindful. I\u2019ll see you at 9:15 by the fountain; I\u2019m looking forward to a quick look at your sketch and a light catch\u2011up. Text me if anything changes."
+    },
+    {
+      "turn": 16,
+      "speaker": "Isabella White",
+      "content": "left the conversation"
+    }
+  ]
+}

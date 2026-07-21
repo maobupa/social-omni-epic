@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPTHM4CBFXEDJNZBJJXZ6Z9_p0",
+  "source_env_id": "01HJPTHM4CBFXEDJNZBJJXZ6Z9",
+  "source": "seed_sotopia_full",
+  "interaction_type": "elbow_room_dilemma",
+  "scenario": "In a small, local coffee shop, agent1 notices that there is only one spot left at the counter with an electrical outlet needed to charge their laptop. Agent2 is already seated at this spot, casually sipping their coffee with both elbows resting on the counter, inadvertently taking up more space than necessary. Agent1 needs to charge their laptop to work on an urgent project due in a few hours, while agent2 seems to be in no particular hurry but is enjoying the comfort of the space.",
+  "learner_goal": "You are agent1, and your goal is to convince agent2 to make room so you can plug in your laptop and work. <extra_info>You have a power strip in your bag, which could be offered as a shared resource.</extra_info> <clarification_hint>Express the urgency of your situation without coming across as demanding.</clarification_hint> <strategy_hint>Seek common ground and propose a mutually beneficial arrangement.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Micah is polite, direct, and acts in accordance with his goal of sharing a resource. His abrupt exit at the end is a bit unusual for a 'social butterfly' but the dialogue itself was solid.\n[relationship] Micah successfully engaged a loose acquaintance and established a cooperative dynamic, which improves their rapport slightly.\n[knowledge] He learned that Jaxon is willing to share space and isn't interested in a bribe/refill.\n[secret] No secrets were revealed.\n[social_rules] Followed social etiquette by asking politely and offering a reward for the inconvenience.\n[financial_and_material_benefits] He successfully gained access to the essential electrical outlet needed for his work.\n[goal] Micah perfectly achieved his goal: Jaxon agreed to move and share the outlet, and Micah used the power strip strategy and the refill offer as planned.\n\n== partner (agent_2) ==\n[believability] Jaxon's response was helpful yet maintained his own boundaries by declining the refill and keeping his own space clear.\n[relationship] He responded positively to a request, maintaining a pleasant atmosphere in the shop.\n[knowledge] He learned Micah has an urgent project and possesses a power strip.\n[secret] No secrets were revealed.\n[social_rules] Followed social etiquette for public spaces by being accommodating.\n[financial_and_material_benefits] He maintained his spot and access to the outlet while declining a free coffee.\n[goal] Jaxon's goal was to maintain a pleasant atmosphere and be open to negotiation while respecting his personal space. He achieved this perfectly.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Micah Stevens",
+      "content": "Hey Jaxon \u2014 sorry to bother, but I\u2019ve got an urgent project due in a few hours and I really need that outlet. I\u2019ve got a power strip in my bag so we can share the spot; would you mind scooting over a bit so I can plug in? I\u2019ll happily grab you a refill in thanks."
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "Sure \u2014 I can scoot over a bit and share the outlet. How much room do you need for the power strip? Thanks for the offer on the refill, but no pressure \u2014 I\u2019ll keep my stuff close so we both have space."
+    },
+    {
+      "turn": 2,
+      "speaker": "Micah Stevens",
+      "content": "left the conversation"
+    }
+  ]
+}

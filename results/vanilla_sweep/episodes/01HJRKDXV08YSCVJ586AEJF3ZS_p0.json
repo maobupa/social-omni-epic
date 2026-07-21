@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJRKDXV08YSCVJ586AEJF3ZS_p0",
+  "source_env_id": "01HJRKDXV08YSCVJ586AEJF3ZS",
+  "source": "seed_sotopia_full",
+  "interaction_type": "maze_event",
+  "scenario": "Agent1 and Agent2 are participating in a life-sized maze event. The maze is designed to be completed by pairs, with numerous paths that twist and turn, encouraging participants to move around erratically to find the exit. Agent1 is competitive and wants to solve the maze as quickly as possible, while Agent2 is more leisurely and wants to enjoy the experience without rushing. They need to navigate the maze together and must decide on a strategy that satisfies both of their desires.",
+  "learner_goal": "Work with Agent2 to find a balance between speed and enjoyment in navigating the maze (<extra_info>Extra information: You are naturally competitive and enjoy the thrill of solving puzzles quickly, but you recognize the importance of your partner's enjoyment.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel's opening offer perfectly reflected his competitive nature while acknowledging the need to accommodate Noah. His sudden departure at the end is a bit abrupt for a cooperative simulation, but his initial dialogue was very consistent with the prompt.\n[relationship] Samuel made a proactive and fair opening offer, showing respect for Noah's preferences, which would likely strengthen their mutual respect.\n[knowledge] Learned that Noah was willing to compromise on speed if specific pauses were built in.\n[secret] Did not reveal any secrets.\n[social_rules] Leaving the conversation immediately after the partner's counter-offer without responding is a breach of social norms and conversation flow.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Samuel initiated a balance between speed and enjoyment, but he left the conversation before formally agreeing to Noah's counter-proposal, leaving the final strategy unconfirmed.\n\n== partner (agent_2) ==\n[believability] Noah's response was extremely characteristic of his goal to savor the experience, suggesting a compromise that integrated his need for breaks with Samuel's need for speed.\n[relationship] Noah responded collaboratively to Samuel's proposal, seeking a middle ground.\n[knowledge] Learned Samuel's specific strategy (left-hand rule) and his desired timeframe for speed.\n[secret] Did not reveal any secrets.\n[social_rules] Followed social norms perfectly.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Noah successfully proposed a compromise that included breaks and appreciation of the design, but because Agent 1 left the conversation, a firm mutual commitment was never established.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Alright Noah\u2014I'm itching to race through this, but I don't want to rush you. How about we try this: give me six minutes to push for speed using a simple left-hand rule, and if we haven't found the exit by then we slow down and enjoy exploring for a bit? Sound good to you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "I\u2019m game for six minutes, but can we build in short checkpoints? After every two minutes let\u2019s pause 20\u201330 seconds to scan the area and pick the next run\u2014gives you the sprint and lets me appreciate the twists. If we still haven\u2019t found it at six, we slow down and explore properly. Sound good?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

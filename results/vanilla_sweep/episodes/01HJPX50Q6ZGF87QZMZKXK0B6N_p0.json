@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01HJPX50Q6ZGF87QZMZKXK0B6N_p0",
+  "source_env_id": "01HJPX50Q6ZGF87QZMZKXK0B6N",
+  "source": "seed_sotopia_full",
+  "interaction_type": "wedding_preparation",
+  "scenario": "Agent1 and Agent2 are friends who are attending a wedding. Agent1 realized that their outfit is at the dry cleaner, which was supposed to be picked up by Agent2. Agent1 is concerned about making a good impression with a proper attire, while Agent2 forgot to pick up the clothes and is now trying to find a quick solution.",
+  "learner_goal": "Convince Agent2 to retrieve the outfit from the dry cleaner before the wedding (<extra_info>Extra information: Agent1 believes wearing the specific outfit is essential for maintaining their social image at the event</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -1.0,
+    "goal": 7.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel stays consistent and focused on the practicalities of the situation, maintaining a polite but firm tone regarding his needs for the wedding.\n[relationship] Despite the tension over the forgotten outfit, they manage to collaborate on a plan, and Samuel offers extra money for the trouble, which maintains the goodwill of the relationship.\n[knowledge] He learns that the dry cleaner hasn't been visited yet and that Noah is willing to cover the cleaning fee.\n[secret] The competitive figure skater secret was never mentioned.\n[social_rules] Samuel followed social norms, balancing his frustration with politeness.\n[financial_and_material_benefits] Samuel is out $20 extra for the 'trouble' tip, though Noah offered to pay the cleaning fee.\n[goal] Samuel successfully convinced Noah to go to the dry cleaner to retrieve the outfit. While the actual retrieval is in the future, Noah gave a firm commitment to go and try to get it immediately.\n\n== partner (agent_2) ==\n[believability] Noah's dialogue becomes somewhat repetitive toward the end, continuously promising to call and head over without confirming he has arrived, but his apologies feel authentic.\n[relationship] Noah takes accountability for his mistake and offers to pay the fee, which helps maintain the friendship.\n[knowledge] He gains specific information about Samuel's alternate outfits, shoe styles, and authorization details.\n[secret] The stand-up comedian secret was never mentioned.\n[social_rules] Noah handles his mistake by apologizing and offering solutions.\n[financial_and_material_benefits] Noah commits to paying the cleaning fee out of pocket.\n[goal] Noah successfully got Samuel to prepare and detail alternative outfits, but the primary plan remains the dry cleaner pickup that he was trying to avoid/pivot from.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Noah \u2014 I just realized my outfit is still at the dry cleaner and I was counting on you to pick it up. It's really important I wear that one to make the right impression at the wedding; could you swing by and grab it before the ceremony? I can Venmo the cleaning fee and meet you there in 20\u201330 minutes if that makes it easier."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Sam, I'm really sorry\u2014I totally spaced on picking it up. I can try to swing by now but I can't promise it'll be back before the ceremony, so could you consider an alternate outfit from what you already have? Tell me the options you've got at home (suit, blazer, shirt/tie combos) and I'll help you pick and style one fast\u2014I'll cover the cleaning fee and make this right."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Noah \u2014 I really need that outfit for the wedding; could you please try to grab it now? It's under my name at the dry cleaner (call them and tell them Samuel Anderson is authorizing pickup) \u2014 I'll Venmo the cleaning fee plus $20 for the trouble and can meet you there in 15 minutes to take it off your hands. If for some reason it's impossible, tell me now and we'll pick an alternate, but please try."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Sam, I\u2019m really sorry \u2014 I\u2019ll call the dry cleaner right now and head over, but I can\u2019t promise it\u2019ll be back before the ceremony. Do me a quick favor: text me what other options you\u2019ve got at home (navy suit, blazer, shirt/tie combos) so I can style a sharp backup fast if pickup\u2019s impossible. I\u2019ll cover the cleaning fee \u2014 let\u2019s plan for the backup just in case."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "Thanks \u2014 I really appreciate you calling and heading over. The pickup is under my name, \"Samuel Anderson\" \u2014 just tell them you\u2019re authorized to collect it and grab it if they say it\u2019s ready; I\u2019ll Venmo the cleaning fee plus $20 when we meet. If it\u2019s not back in time, go with the navy suit as plan A; otherwise my grey blazer + black trousers + white shirt + burgundy tie is a sharp backup \u2014 text me ASAP either way and I\u2019ll be there in 10\u201315 minutes to take it off your hands."
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "On it \u2014 I\u2019m calling the cleaner now and heading over. Do me a favor and text quick photos of the navy suit and the grey-blazer outfit so I can style whichever we end up with and you can have shoes/belt ready when you get here; treat the navy suit as Plan A. I\u2019ll cover the cleaning fee and be there ASAP \u2014 sorry again, I\u2019ll sort this."
+    },
+    {
+      "turn": 6,
+      "speaker": "Samuel Anderson",
+      "content": "I'll text photos of both outfits in a sec. Navy suit (Plan A): full suit photo \u2014 wear with black oxfords and black belt. Grey blazer outfit: grey blazer + black trousers + white shirt + burgundy tie \u2014 photo coming. If the cleaner says it's ready, tell them 'Samuel Anderson' is authorized to pick it up, grab it, and I'll Venmo the cleaning + $20 when I meet you \u2014 see you in ~10 minutes."
+    },
+    {
+      "turn": 7,
+      "speaker": "Noah Davis",
+      "content": "Heading to the cleaner now \u2014 I\u2019m on the line with them and will grab it if it\u2019s ready. If it\u2019s not, trust the navy suit as Plan A; text me quick photos of both outfits and I\u2019ll style whichever we need so you still look sharp. I\u2019ve got the cleaning fee covered \u2014 see you in ~10\u201315."
+    },
+    {
+      "turn": 8,
+      "speaker": "Samuel Anderson",
+      "content": "Sent photos. Navy suit (Plan A): slim, single-breasted navy suit \u2014 wear with black oxfords and a black belt. Grey blazer outfit: light grey blazer + black trousers + white shirt + burgundy tie \u2014 same shoes. Tell them \u201cSamuel Anderson\u201d is authorized to pick it up; I\u2019ll Venmo the cleaning fee + $20 when we meet. Thanks \u2014 see you in ~10 minutes."
+    },
+    {
+      "turn": 9,
+      "speaker": "Noah Davis",
+      "content": "Sam \u2014 quick update: I\u2019m on my way and on the phone with the cleaner; I\u2019ll grab your outfit if they say it\u2019s ready, but I can\u2019t promise it\u2019ll be back before the ceremony. Please treat the navy suit as Plan A \u2014 it\u2019s quicker and will look sharp; text one last photo of your shoes/belt so I can match everything, and I\u2019ll style the grey-blazer combo as the backup if pickup fails. I\u2019ve got the cleaning fee covered \u2014 meet me in ~10\u201315."
+    },
+    {
+      "turn": 10,
+      "speaker": "Samuel Anderson",
+      "content": "Quick description of the shoes/belt: black cap\u2011toe oxfords and a plain black leather belt with a simple silver buckle. If the cleaner says it\u2019s ready, please pick it up and tell them \u2018Samuel Anderson\u2019 is authorized; if not, go with the navy suit. I really appreciate you doing this\u2014see you in ~10 minutes."
+    },
+    {
+      "turn": 11,
+      "speaker": "Noah Davis",
+      "content": "Sam \u2014 I\u2019m on my way to the cleaner now and I\u2019ll grab your outfit if they say it\u2019s ready. If it\u2019s not back in time, treat the navy suit as Plan A \u2014 it\u2019s sharp and quick; I\u2019ll match the black oxfords and belt and style it so you look top-tier. Text me if they call you or send one last pic of the shoes/belt if you can."
+    },
+    {
+      "turn": 12,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

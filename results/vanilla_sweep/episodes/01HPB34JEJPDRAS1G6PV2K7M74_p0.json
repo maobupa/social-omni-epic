@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB34JEJPDRAS1G6PV2K7M74_p0",
+  "source_env_id": "01HPB34JEJPDRAS1G6PV2K7M74",
+  "source": "seed_sotopia_full",
+  "interaction_type": "community_kitchen",
+  "scenario": "Agent1 and Agent2 are at a community kitchen where locals gather to cook and share meals. Agent1, a regular at the kitchen, is preparing a fish dish that requires a delicate balance of spices. Agent2, new to the kitchen, is eager to learn new recipes and integrate into the community. Both agents find themselves working side by side. Agent1 is proud of their culinary skills and is known for their signature fish dish, while Agent2 is experimenting with a similar recipe. They realize they have different approaches to seasoning the fish, leading to a debate on the best method that respects traditional flavors while allowing for personal flair.",
+  "learner_goal": "Convince Agent2 to try out their unique spice blend for the fish, believing it enhances the traditional recipe (<extra_info>Extra information: Agent1 is passionate about their cooking style and wants to share it.</extra_info><clarification_hint>Clarification: Agent1 should highlight the benefits of their spice blend without dismissing Agent2's approach.</clarification_hint><strategy_hint>Hint: Emphasize the community's positive reception of the dish.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle maintained a consistent persona as a passionate local cook. She followed the prompt's instructions to be encouraging and to highlight the community's positive reception of her spice blend.\n[relationship] The interaction was collaborative and respectful, moving from acquaintances toward a more functional, cooperative relationship.\n[knowledge] She learned about Donovan's willingness to experiment and his specific idea for a flavor profile (smoke/citrus on top, his seasoning for the backbone).\n[secret] She did not reveal her secret about studying magic.\n[social_rules] She followed social norms for a community kitchen setting, being welcoming and respectful.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Isabelle's goal was to convince Donovan to try out her unique spice blend. Donovan explicitly agreed to try it and even suggested a side-by-side taste test and a potential hybrid dish.\n\n== partner (agent_2) ==\n[believability] Donovan's behavior was consistent with a software developer's analytical approach (taste swap, comparison, hybrid testing) and his low extroversion/agreeableness, though he was quite cooperative here.\n[relationship] He established a working rapport with Isabelle, bridging the gap from being a distant acquaintance.\n[knowledge] He learned the exact components of Isabelle's signature blend and her method of application.\n[secret] He did not reveal his secret about releasing classified information.\n[social_rules] He followed social norms and engaged in polite negotiation.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Donovan successfully negotiated to learn Isabelle's technique while maintaining his own identity through the 'taste swap' and 'hybrid' proposal. He secured a commitment to integrate his style with hers.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "That looks great \u2014 I love that you\u2019re experimenting. I have a spice blend I use for my signature fish that brightens the traditional flavors (a touch of smoked paprika, citrus zest, and a little cumin) and the community always asks for seconds. Want to try a pinch on a test piece? No pressure \u2014 if you don\u2019t like it we can stick with your approach."
+    },
+    {
+      "turn": 1,
+      "speaker": "Donovan Reeves",
+      "content": "Sounds good \u2014 I\u2019m curious what the smoked paprika and citrus do. Let\u2019s do a quick taste swap: you put your blend on one test piece, I\u2019ll season another my way, then we compare and combine the best bits for a version the community might like."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "Perfect \u2014 I\u2019ll season this small test fillet with my blend: a light dusting of smoked paprika, a touch of citrus zest, and a whisper of cumin. I\u2019ll plate it next to yours so we can taste side-by-side; try a bite and tell me what you think \u2014 the citrus lift usually wins the crowd, but if you prefer your seasoning we can combine the best bits."
+    },
+    {
+      "turn": 3,
+      "speaker": "Donovan Reeves",
+      "content": "Nice \u2014 I\u2019ll try yours now. After I taste both, let\u2019s pick the best elements: I\u2019m thinking your citrus-smoke for the top note and my seasoning for the backbone. If you\u2019re up for it, we can mix proportions and present the hybrid to the community to see which they prefer."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

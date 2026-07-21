@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPX51KMNFG1Y7E96YSY3SFQ_p0",
+  "source_env_id": "01HJPX51KMNFG1Y7E96YSY3SFQ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "relationship_management",
+  "scenario": "Agent1 wishes to spend more time with their significant other, Agent2, who has a busy schedule and often brings work home. Agent1 feels that the relationship is being neglected, while Agent2 believes that they are managing their time efficiently. The interaction involves Agent1 initiating a conversation with Agent2 to discuss the importance of spending quality time together and to find a balance between work and their relationship.",
+  "learner_goal": "You are Agent1, who values the relationship and wants to spend more quality time with Agent2. Your goal is to express your feelings of neglect and to persuade Agent2 to make time for the relationship. <extra_info>It's important to convey that while you respect their work, the relationship also needs attention.</extra_info> <clarification_hint>Ensure that Agent2 understands that this is about the health of the relationship and not just your personal desire.</clarification_hint> <strategy_hint>Propose flexible solutions that can integrate into Agent2's busy schedule, such as planning regular date nights or short daily activities together.</strategy_hint>",
+  "scores": {
+    "believability": 5.0,
+    "relationship": 1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": -3.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's opening dialogue is consistent with his character and goal, but leaving the conversation immediately after Noah's positive response and compromise is out of character and abrupt, failing to conclude the agreement.\n[relationship] He successfully communicated his needs and received a warm, receptive response from Noah.\n[knowledge] Learned that Noah is willing to compromise and prefers specific days (Monday, Wednesday, Friday).\n[secret] Did not reveal his secret about the criminal.\n[social_rules] Abruptly left the conversation without responding to a direct question and a generous offer, which is socially awkward.\n[financial_and_material_benefits] No material exchange occurred.\n[goal] Liam expressed his feelings of neglect and proposed flexible solutions as instructed. However, by leaving before confirming Noah's specific proposed schedule, the agreement was not finalized and remains under the other party's discretion or requires further follow-up.\n\n== partner (agent_2) ==\n[believability] Noah responded in a way that balanced his busy coaching schedule with an empathetic acknowledgement of the relationship's needs.\n[relationship] Showed high levels of empathy and a willingness to change his habits to prioritize his partner.\n[knowledge] Understood the depth of Liam's feelings and specific ideas for resolution.\n[secret] Did not reveal his secret identity as a stand-up comedian.\n[social_rules] Followed all social norms and was polite.\n[financial_and_material_benefits] No material exchange occurred.\n[goal] Noah acknowledged Liam's feelings and proposed a specific compromise. However, the interaction ended before the compromise was accepted or finalized by Liam.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Noah, can we talk for a minute? Lately I feel like we're mostly passing each other \u2014 I know work's demanding and I respect that, but I'm worried the relationship's getting neglected. This isn't just me wanting more time; it's about the health of us \u2014 could we try a weekly date night and a short 20-minute walk or coffee a few evenings, or something else that fits your schedule? What would work for you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Liam, I hear you and I\u2019m sorry you\u2019ve been feeling that way \u2014 I don\u2019t want us drifting apart. Work\u2019s been heavy but I can commit to a weekly date night (would Friday evenings work?) and a few 20-minute walks or coffee evenings a week with no work interruptions; if a week gets crazy we swap but keep the plan. Does Friday plus, say, Monday and Wednesday short walks sound reasonable, or would you prefer a different schedule?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

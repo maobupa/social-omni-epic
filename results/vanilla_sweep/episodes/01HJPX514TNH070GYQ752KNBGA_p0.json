@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPX514TNH070GYQ752KNBGA_p0",
+  "source_env_id": "01HJPX514TNH070GYQ752KNBGA",
+  "source": "seed_sotopia_full",
+  "interaction_type": "personal_growth",
+  "scenario": "Agent1 has been going through a major life transition and is focused on moving on with their life. Agent2, a close friend, has been supportive but is struggling with the changes as they miss the old routines and shared activities. Agent1 has invited Agent2 for a conversation to discuss their evolving lives and how they can adapt their friendship to fit their new circumstances.",
+  "learner_goal": "You want to communicate to Agent2 that your life is moving in a new direction and you hope they can understand and support your journey. <extra_info> Consider the impact of your changes on Agent2 and how you can be supportive of their feelings as well. </extra_info><clarification_hint> Acknowledge the value of your shared past while expressing excitement for the future. </clarification_hint><strategy_hint> You can discuss new activities or interests that you both might enjoy together. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia maintains her professional yet empathetic persona, balancing her new responsibilities with a clear commitment to the friendship.\n[relationship] Mia successfully navigated a difficult transition period, strengthening the friendship by creating a new structure that validates the other person's feelings.\n[knowledge] She learned exactly what Benjamin needs to feel secure in the friendship (calls and rituals).\n[secret] She alluded to 'punk shows' which aligns with her secret, but did not formally reveal her past as a band member.\n[social_rules] She was polite, proactive, and respectful of social norms throughout the interaction.\n[financial_and_material_benefits] No financial or material gains or losses occurred.\n[goal] Mia successfully communicated her life change, secured Benjamin's support, acknowledged their history, and established a concrete schedule of new shared activities.\n\n== partner (agent_2) ==\n[believability] Benjamin's responses are consistent with his character as an activist who values connection but feels the weight of change.\n[relationship] Benjamin expressed his needs clearly and reached a mutual agreement that preserved the bond despite his initial sense of loss.\n[knowledge] He gained a clear understanding of Mia's new boundaries and schedule.\n[secret] His secret regarding his family wealth was not mentioned or compromised.\n[social_rules] He was supportive and communicative, adhering to social expectations for a close friend.\n[financial_and_material_benefits] No financial or material gains or losses occurred.\n[goal] Benjamin successfully expressed his sense of loss, secured a regular check-in schedule for continuity, and established a new tradition to preserve the connection.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Benjamin, I wanted to be honest \u2014 my life is moving in a new direction with extra responsibilities at the school and a couple of personal projects, so I won\u2019t be able to keep up our old routines as often. I know that\u2019s hard and I really appreciate how supportive you\u2019ve been; our shared history matters to me. I still want us in each other\u2019s lives, so maybe we trade weekly get-togethers for a monthly climate workshop or a weekend at the community garden, and I\u2019ll save one evening a month for something fun like an old-school punk show or a long catch-up. How does that sound to you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks for being honest, Mia \u2014 I\u2019m really proud of you for taking on those responsibilities, and I support you. I\u2019ll admit I\u2019m going to miss our old routines, but I like your plan: monthly climate workshop and a community garden weekend sounds great, and keeping one evening a month for a punk show or a long catch-up feels perfect. Could we also add a brief 10\u201315 minute check-in call every other week so we don\u2019t lose the little things between meetups?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "I love the check-in idea \u2014 let\u2019s do a 10\u201315 minute call every other Wednesday evening and we can swap times when needed. I\u2019m really grateful for your support, and I\u2019m excited about the monthly climate workshop, the community garden weekend, and keeping one punk-show/catch-up night each month. Our shared history means a lot to me, and I want these new rhythms to feel good for both of us."
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "I love this plan \u2014 I\u2019ll miss our old routines, but having those anchors makes the change feel doable. Biweekly 10\u201315 minute calls every other Wednesday work for me; I\u2019ll put them on my calendar. One small request: can we start a tiny tradition at each meet-up \u2014 a quick two-minute \u2018one thing that mattered this week\u2019 check-in or bring something that reminds us of the old days?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "I love that \u2014 let\u2019s make the two-minute \u2018one thing that mattered\u2019 a quick ritual at every meet-up, and for our bigger monthly catch-ups we can take turns bringing something that reminds us of the old days. Thank you for suggesting it; that little anchor makes these new rhythms feel much sweeter to me."
+    },
+    {
+      "turn": 5,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 that means a lot. I\u2019ll put the biweekly calls on my calendar and I\u2019m happy to be the first to bring something for our monthly catch-up \u2014 I\u2019ll bring that faded protest button from the seminar to kick off the tradition. I\u2019ll miss the old routines, but having these anchors makes the change feel manageable and I\u2019m proud of you."
+    },
+    {
+      "turn": 6,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

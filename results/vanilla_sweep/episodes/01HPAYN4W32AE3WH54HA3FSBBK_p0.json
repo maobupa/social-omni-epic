@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPAYN4W32AE3WH54HA3FSBBK_p0",
+  "source_env_id": "01HPAYN4W32AE3WH54HA3FSBBK",
+  "source": "seed_sotopia_full",
+  "interaction_type": "community_event",
+  "scenario": "Agent1 is the organizer of a local community event that is expected to attract a large audience. Agent2 is a key speaker at the event with a reputation for delivering powerful messages. The event's schedule is tight, and Agent1 has to ensure everything runs on time. Agent2, known for their impactful but lengthy speeches, is scheduled to speak during a slot that cannot afford overrun. Agent1 must approach Agent2 to discuss the importance of adhering to the allotted time without undermining Agent2's ability to deliver a compelling speech.",
+  "learner_goal": "Convince the key speaker to adjust their speech to fit within the designated time slot without compromising the quality and impact of their message (<extra_info>Extra information: The success of the event hinges on punctuality, and you are responsible for keeping the schedule.</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Liam's tone was consistent with a retired police officer\u2014direct, organized, and focused on logistical success while remaining respectful of his neighbor.\n[relationship] The interaction was professional and collaborative, reinforcing their neighborhood acquaintance through a successful professional coordination.\n[knowledge] Liam successfully identified exactly how Jaxon plans to cut the speech, his preferred cue method, and his availability for a rehearsal.\n[secret] Liam did not reveal his past secret regarding the criminal.\n[social_rules] Liam followed all social norms of polite request and logistical planning.\n[financial_and_material_benefits] There were no direct financial gains or losses involved.\n[goal] Liam secured a firm commitment from the speaker to trim the content, a specific time limit agreement, a plan for cues, and a scheduled run-through to ensure punctuality.\n\n== partner (agent_2) ==\n[believability] Jaxon's responses were professional and aligned with his background as a journalist who understands the importance of deadlines and word counts.\n[relationship] Jaxon responded positively to Liam's proactive management, strengthening their mutual respect.\n[knowledge] Jaxon obtained the exact time limit, the cue system details, and the rehearsal schedule.\n[secret] Jaxon did not reveal his secret regarding fabricated evidence.\n[social_rules] Jaxon was cooperative and followed professional social norms.\n[financial_and_material_benefits] There were no direct financial gains or losses involved.\n[goal] Jaxon managed to maintain his impactful message by selecting his three strongest points while fully complying with the organizer's time constraints.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Liam Johnson",
+      "content": "Morning, Jaxon \u2014 it\u2019s Liam from our walks. Quick thing about the community event: the schedule\u2019s tight and your slot needs to finish on time so everything else can run smoothly; I know your talks are powerful and I don\u2019t want to clip you, but could we aim to keep it within the allotted time by focusing on your three strongest points or trimming one of the longer stories? I can arrange a visible stage timer, give you a discreet cue from the wings, or run a short outline with you \u2014 what would work best for you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "Thanks, Liam \u2014 appreciate the heads-up. I\u2019ll tighten it to the three strongest points and drop one of the longer anecdotes so it stays punchy and on time; a discreet cue from the wings works best for me, and I\u2019d like a quick run-through of the outline beforehand. What\u2019s the exact time limit so I can plan the pacing?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Liam Johnson",
+      "content": "The exact limit is 15 minutes on stage \u2014 we need a hard stop at that mark so the schedule stays on track. I can have someone give you a discreet cue from the wings (at, say, 12 minutes and again at 14), and we can do a quick 10-minute run\u2011through either the evening before or about 30 minutes prior to your slot \u2014 which do you prefer?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Jaxon Prentice",
+      "content": "Got it \u2014 15 minutes is clear. I\u2019ll tighten to the three strongest points and drop the longer anecdote. Cues at 12 and 14 minutes work for me; I\u2019d prefer the 10-minute run-through the evening before \u2014 what time that evening should we meet?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Liam Johnson",
+      "content": "Evening works \u2014 how about 7:00 PM at the community center stage for the 10-minute run\u2011through? I\u2019ll have the stage set and our tech will be your wing cue at 12 and 14 minutes during the event. If 7 doesn\u2019t suit, pick a time between 6 and 8 and we\u2019ll make it work. Appreciate you tightening it \u2014 we\u2019ll keep the timer and cues ready."
+    },
+    {
+      "turn": 5,
+      "speaker": "Jaxon Prentice",
+      "content": "7:00 PM works \u2014 I\u2019ll be there around 6:50 to check the stage and run the 10-minute outline. I\u2019ll bring the tightened notes and appreciate the 12/14-minute wing cues. See you then."
+    },
+    {
+      "turn": 6,
+      "speaker": "Liam Johnson",
+      "content": "left the conversation"
+    }
+  ]
+}

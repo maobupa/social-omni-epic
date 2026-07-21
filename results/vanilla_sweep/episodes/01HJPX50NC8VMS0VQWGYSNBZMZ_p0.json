@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HJPX50NC8VMS0VQWGYSNBZMZ_p0",
+  "source_env_id": "01HJPX50NC8VMS0VQWGYSNBZMZ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_iqa",
+  "scenario": "In an effort to spread the word about their new startup, agent1 organized a casual meetup with friends and acquaintances. Among the attendees was agent2, a friend who is known for their keen business insight. Agent1 wanted to share the innovative aspects of their business and gain support, while agent2, although supportive, had some reservations about the feasibility of certain aspects of the business plan.",
+  "learner_goal": "Convince agent2 of the potential success of your business (<extra_info>Extra information: You are agent1 and you are passionate about your startup. You believe in its potential and want your friends to support you.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo maintained a highly professional and consistent persona as a dentist-turned-entrepreneur, providing realistic metrics and responding to technical business queries with appropriate detail.\n[relationship] The relationship improved as they transitioned from casual acquaintances to a mentor-mentee dynamic, with Hendrick investing significant time and effort into Leo's success.\n[knowledge] Leo gained substantial knowledge regarding the specific financial metrics and stress tests required to evaluate a startup's viability.\n[secret] The secret about the child from a previous relationship was not mentioned.\n[social_rules] Leo was polite, appreciative, and followed professional social norms throughout the interaction.\n[financial_and_material_benefits] No material or financial benefits were actually exchanged during this meeting.\n[goal] While Leo successfully engaged Hendrick and secured his expert time, the conversation ended with Hendrick identifying 'red flags' and 'noisy data.' Hendrick has not yet been 'convinced' of the success, but rather is in the process of auditing the plan.\n\n== partner (agent_2) ==\n[believability] Hendrick's persona as a chef is slightly incongruent with his extremely high-level VC/private equity level financial jargon (LTV, CAC, sensitivity worksheets), though his personality as a 'keen business insight' friend was consistent.\n[relationship] Hendrick deepened the bond by offering his expertise and spending time helping a friend's acquaintance.\n[knowledge] Hendrick gained full access to the startup's internal metrics, pilot results, and specific operational challenges.\n[secret] The secret about faking culinary credentials was not revealed.\n[social_rules] Hendrick was helpful and constructive as requested by his prompt.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Hendrick perfectly executed his goal of expressing concerns in a constructive manner, asking critical questions, and helping the agent refine their plan through rigorous data analysis.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hendrick, I appreciate your candor earlier \u2014 I\u2019ve built this startup to partner directly with clinics (my experience as a dentist helped open doors), and a small pilot with three clinics showed ~30% patient uptake and unit economics that look scalable. I\u2019d really value your take on the biggest feasibility risks \u2014 can I grab five minutes after the meetup to run the numbers by you and hear where you\u2019d invest or what you\u2019d change?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Happy to \u2014 five minutes after the meetup works for me. Bring the pilot metrics (conversion by clinic, CAC, avg revenue per patient, gross margin and your scaling assumptions) \u2014 my main concerns are pilot selection bias, clinic-to-clinic variability, and whether CAC vs LTV actually scales. We\u2019ll run a quick sensitivity check and I\u2019ll flag where I\u2019d tighten assumptions or redirect investment."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "Great \u2014 thanks, Hendrick. I\u2019ll bring conversion by clinic, CAC, avg revenue per patient, gross margin and our scaling assumptions. Meet you by the patio in five minutes after the meetup?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "Perfect \u2014 see you by the patio in five. I\u2019ll review conversion by clinic, CAC, avg revenue per patient and gross margin. If you can also bring a breakdown of acquisition channels and how the pilot clinics were chosen, that\u2019ll help me spot selection bias and clinic-to-clinic variability quickly."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "Perfect \u2014 I\u2019ll bring conversion by clinic, CAC, avg revenue per patient, gross margin, acquisition-channel breakdown, and a short note on how we chose the pilot clinics plus the scaling assumptions. Thanks \u2014 see you by the patio in five."
+    },
+    {
+      "turn": 5,
+      "speaker": "Hendrick Heinz",
+      "content": "See you on the patio in five. One more ask before we meet \u2014 bring retention/churn (or avg visits per patient) and a breakdown of fixed vs. variable costs plus sample sizes per clinic so we can sanity\u2011check LTV and CAC sensitivity. If you're running late, shoot me a text."
+    },
+    {
+      "turn": 6,
+      "speaker": "Leo Williams",
+      "content": "Got it \u2014 I\u2019ll add retention/churn (avg visits per patient), fixed vs. variable cost breakdown, and sample sizes per clinic. See you by the patio in five; I\u2019ll text if I\u2019m running late. Appreciate you carving out the time \u2014 looking forward to a quick sensitivity check."
+    },
+    {
+      "turn": 7,
+      "speaker": "Hendrick Heinz",
+      "content": "Sounds good \u2014 I\u2019ll bring a quick sensitivity worksheet and a pen so we can run the numbers on the spot. If you can flag any assumptions about referral rates, provider incentives, or one-off pilot supports, that\u2019ll help me judge scalability. See you by the patio in five; text me if you run late."
+    },
+    {
+      "turn": 8,
+      "speaker": "Leo Williams",
+      "content": "Perfect \u2014 I\u2019ll bring conversion by clinic, CAC, avg revenue per patient, gross margin, acquisition\u2011channel breakdown, retention/churn, fixed vs. variable costs, sample sizes, and an explicit note on referral rates, provider incentives, and any one\u2011off pilot supports. Appreciate you bringing the sensitivity worksheet and pen \u2014 I\u2019ll see you on the patio in five and will text if I\u2019m running late."
+    },
+    {
+      "turn": 9,
+      "speaker": "Hendrick Heinz",
+      "content": "Perfect \u2014 I\u2019ll be there. One more quick ask: bring the hiring/ops plan and timeline for scaling plus a best/likely/worst economics scenario (and payback period by channel) so we can test runway needs. Also flag any regulatory/insurance assumptions that could affect reimbursements. See you on the patio in five."
+    },
+    {
+      "turn": 10,
+      "speaker": "Leo Williams",
+      "content": "Thanks \u2014 I\u2019ll add the hiring/ops plan and scaling timeline, best/likely/worst economics with payback period by channel, and a short note on regulatory/insurance assumptions and runway needs. Do you want these as high\u2011level bullets or a 1\u2011page snapshot we can run through on your sensitivity sheet? See you on the patio in five; I\u2019ll text if I\u2019m delayed."
+    },
+    {
+      "turn": 11,
+      "speaker": "Hendrick Heinz",
+      "content": "A 1\u2011page snapshot is ideal \u2014 put the key metrics and best/likely/worst scenarios on it, and include high\u2011level bullets for any complex assumptions (regulatory, provider incentives, one\u2011offs). That lets us jump straight into the sensitivity worksheet. See you on the patio in five; text me if you\u2019re running late."
+    },
+    {
+      "turn": 12,
+      "speaker": "Leo Williams",
+      "content": "Great \u2014 I\u2019ll bring a 1\u2011page snapshot with the key metrics and best/likely/worst scenarios, plus high\u2011level bullets for regulatory, provider incentives and one\u2011offs. I\u2019ll meet you on the patio in five and will text if I\u2019m running late. Thanks again, Hendrick \u2014 really appreciate you carving out the time."
+    },
+    {
+      "turn": 13,
+      "speaker": "Hendrick Heinz",
+      "content": "Perfect \u2014 see you on the patio in five. I\u2019ll have the sensitivity worksheet ready; if anything changes, text me. Looking forward to digging into your 1\u2011pager."
+    },
+    {
+      "turn": 14,
+      "speaker": "Leo Williams",
+      "content": "Thanks, Hendrick \u2014 I\u2019ll be on the patio in five with the 1\u2011pager and the numbers formatted for your sensitivity sheet. Really appreciate you taking a look; I\u2019ll text if I\u2019m a minute late."
+    },
+    {
+      "turn": 15,
+      "speaker": "Hendrick Heinz",
+      "content": "See you on the patio in five. I\u2019ll bring the sensitivity sheet, a pen, and a quick checklist \u2014 if you can have the raw spreadsheet on your phone in case we need to deep\u2011dive, that\u2019ll save time. Text me if you\u2019re running late."
+    },
+    {
+      "turn": 16,
+      "speaker": "Leo Williams",
+      "content": "I\u2019m on the patio now with the 1\u2011pager and the raw spreadsheet ready. Ready to run through the sensitivity worksheet whenever you are."
+    },
+    {
+      "turn": 17,
+      "speaker": "Hendrick Heinz",
+      "content": "Perfect \u2014 glad you made it. Let\u2019s sit and run the 1\u2011pager through the sensitivity sheet: start by talking me through conversion by clinic and CAC by channel (flag any one\u2011offs or pilot supports), then we\u2019ll test CAC vs LTV, payback by channel, and stress the model for clinic-to-clinic variability and retention. Ready when you are."
+    },
+    {
+      "turn": 18,
+      "speaker": "Leo Williams",
+      "content": "Okay \u2014 quick walkthrough: pilot ran in three clinics (A/B/C) with eligible patient counts 120 / 95 / 60; conversion rates were 35% / 28% / 26% (overall \u224830%). CAC by channel: in\u2011clinic provider referral \u2248 $12/acquisition, targeted Facebook \u2248 $45, Google search \u2248 $60; blended CAC \u2248 $22. Flags: Clinic C benefited from a $4k one\u2011time provider sign\u2011on bonus and concierge scheduling support in month one, and our paid\u2011ad runs used initial promo credits \u2014 both lowered apparent CAC and boosted conversion; I\u2019ll pull the raw sheet into your sensitivity worksheet now."
+    },
+    {
+      "turn": 19,
+      "speaker": "Hendrick Heinz",
+      "content": "Good \u2014 those one\u2011offs are big red flags for scaling. Can you show CAC net of promo credits and give a version of Clinic C\u2019s conversion with the $4k sign\u2011on bonus and concierge stripped (or excluded) so we can see the baseline? With only 60 eligibles in C that conversion is noisy, so I\u2019ll reweight or run confidence intervals. Also hand me retention (avg visits per patient) and gross margin and I\u2019ll stress the model with CAC +20% and +50% and payback by channel, then recommend whether to reallocate spend or expand to more representative clinics."
+    }
+  ]
+}

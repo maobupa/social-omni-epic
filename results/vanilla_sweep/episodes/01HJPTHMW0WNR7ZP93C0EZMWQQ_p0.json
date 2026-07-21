@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHMW0WNR7ZP93C0EZMWQQ_p0",
+  "source_env_id": "01HJPTHMW0WNR7ZP93C0EZMWQQ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_prompt",
+  "scenario": "At a shared office space, Agent1 notices that Agent2's clothes are frequently clinging due to static. Agent1 has recently discovered the benefits of using static cling sheets in the laundry and is considering suggesting this to Agent2. However, Agent1 is aware that Agent2 prefers natural and eco-friendly solutions and might be skeptical about using such products. Both agents are environmentally conscious and aim for a sustainable lifestyle.",
+  "learner_goal": "Agent1 wants to help Agent2 with the static issue by suggesting the use of static cling sheets, while also being open to discussing and considering eco-friendly alternatives (<extra_info>Extra information: Agent1 is willing to research and share information about biodegradable and eco-friendly static cling sheet options.</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -1.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's communication is consistent with her professional and helpful character, demonstrating her software developer precision in her offer of research and samples.\n[relationship] Naomi moved from being a casual acquaintance to a helpful peer by offering specific assistance and resources, strengthening their rapport.\n[knowledge] Naomi learned Donovan's specific preferences for eco-friendly solutions, including his requirement for fragrance-free and zero-plastic packaging.\n[secret] Naomi successfully kept her secret online alter ego hidden.\n[social_rules] Naomi followed social norms, being polite and helpful without overstepping.\n[financial_and_material_benefits] Naomi committed to spending her own time on research and providing physical samples for free.\n[goal] Naomi successfully suggested static cling sheets, pivots to eco-friendly alternatives as planned, and established a firm agreement to provide research and samples that Donovan accepted.\n\n== partner (agent_2) ==\n[believability] Donovan's responses are logical for someone who is environmentally conscious and values practical, low-impact solutions.\n[relationship] Donovan's acceptance of Naomi's help and agreement to report back creates a collaborative bond between them.\n[knowledge] Donovan learned that Naomi is knowledgeable about various laundry solutions and is willing to help him.\n[secret] Donovan successfully kept his hacking activities and government information leaks secret.\n[social_rules] Donovan was appreciative and respectful throughout the interaction.\n[financial_and_material_benefits] Donovan is set to receive free research and free product samples.\n[goal] Donovan secured a source for natural, eco-friendly solutions that align with his values and integrated them with his existing methods.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Donovan \u2014 I noticed your clothes have been clinging a bit lately. I recently tried static-cling sheets and they helped, but I know you prefer natural options \u2014 there are biodegradable/eco-friendly sheets and alternatives like wool dryer balls or a splash of white vinegar in the rinse. If you want, I can look up good biodegradable brands or simple DIY options and share what I find."
+    },
+    {
+      "turn": 1,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Naomi \u2014 I appreciate you noticing. I prefer low-impact fixes like wool dryer balls and a splash of white vinegar in the rinse; they\u2019re simple and tend to be pretty eco-friendly. If you don\u2019t mind, could you share any biodegradable brands or DIY recipes you find? I\u2019m happy to try a combo and report back."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Great \u2014 I\u2019ll pull together a short list of biodegradable/compostable static-cling sheet brands plus two simple DIY options (vinegar rinse and a low-impact anti-static spray) and send them later today. Do you prefer fragrance-free or scented options, and should I prioritize zero\u2011plastic packaging? If you want, I can also bring a couple of small samples when I\u2019m in the office."
+    },
+    {
+      "turn": 3,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Naomi \u2014 fragrance\u2011free and zero\u2011plastic packaging would be ideal. I\u2019d appreciate any biodegradable brand recs and the two DIY options; samples sound great to try alongside my wool dryer balls and a small vinegar rinse. I\u2019ll test a combo and report back."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HMZ2BM0H56ACQ051VDJQ7KF1_p0",
+  "source_env_id": "01HMZ2BM0H56ACQ051VDJQ7KF1",
+  "source": "seed_sotopia_full",
+  "interaction_type": "creativitybank",
+  "scenario": "In a photography class, two students are assigned to work together in a darkroom. The process requires precise timing and care to develop photos properly. Agent1 is concerned about the quality of the photographs, while Agent2 is eager to finish the task quickly.",
+  "learner_goal": "Ensure the photographs are developed with the highest quality possible (<extra_info>Extra information: Agent1 has a reputation for meticulous work and believes this project could win a school contest.</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sasha acts with the meticulous precision expected of a police officer and someone aiming for a contest win. Her detailed technical instructions regarding the development process are highly consistent with her background and goal.\n[relationship] The two collaborators established a clear, respectful division of labor that respected each other's constraints, reinforcing their mutual professional respect.\n[knowledge] Sasha confirmed the paper type (resin-coated) and the current lab temperature, which are critical variables for her work.\n[secret] Sasha's secret regarding her brother was not mentioned.\n[social_rules] Sasha followed all social norms, being polite but firm about quality.\n[financial_and_material_benefits] No material assets were exchanged.\n[goal] Sasha successfully established a rigorous, step-by-step protocol for the development process, including temperature adjustments and specific timing warnings, ensuring the highest possible quality for the contest.\n\n== partner (agent_2) ==\n[believability] Emily's focus on efficiency and her request for exact times to manage her other project align perfectly with her persona and goals.\n[relationship] Emily cooperated effectively and showed trust in Sasha's technical leadership while communicating her own needs.\n[knowledge] Emily learned the specific timing sequence Sasha intended to use, allowing her to plan her other work.\n[secret] Emily's secret pseudonym was not revealed.\n[social_rules] Emily was professional and cooperative throughout the interaction.\n[financial_and_material_benefits] No material assets were exchanged.\n[goal] Emily secured a specific schedule from Sasha, allowing her to multi-task and work on her other deadline during the longer fixer and wash cycles, satisfying her need for efficiency.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "Hey Emily \u2014 I know you\u2019re ready to wrap up, but these need precise timing if we want contest-quality prints. Let me handle the developer and timing; you can help with changing the paper and labeling the sheets. I\u2019ll set the timer and call each step so we don\u2019t rush anything \u2014 sound good?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Emily Harrison",
+      "content": "Sounds good \u2014 thanks. I\u2019ll handle changing the paper and labeling each sheet. Can we agree on the exact times you\u2019ll call out so I can pace my other project between steps? I\u2019ll also keep an eye on tray temps to avoid any surprises."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "Perfect \u2014 here\u2019s what I\u2019ll call: developer 60 seconds (I\u2019ll give 10\u2011 and 5\u2011second warnings), stop bath 10 seconds, fixer 2 minutes (call at 60s and 15s), then a 3\u2011minute final wash. If the tray temps are above ~20\u00b0C we\u2019ll shorten developer by 10\u201315s, and if we\u2019re using fiber paper we may need to add time \u2014 tell me which paper before we start. Sound good?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Emily Harrison",
+      "content": "Great \u2014 we\u2019re using resin-coated paper, so no extra time needed. Lab temp\u2019s been around 20\u00b0C, so your proposed times work; please call the 10s/5s warnings and the fixer calls as planned. I\u2019ll keep an eye on tray temps and shorten developer by 10\u201315s if it creeps over 20\u00b0C, and I\u2019ll use the between-step intervals to make quick progress on my other deadline."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sasha Ramirez",
+      "content": "left the conversation"
+    }
+  ]
+}

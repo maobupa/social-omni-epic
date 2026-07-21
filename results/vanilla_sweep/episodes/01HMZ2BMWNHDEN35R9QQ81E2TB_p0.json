@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01HMZ2BMWNHDEN35R9QQ81E2TB_p0",
+  "source_env_id": "01HMZ2BMWNHDEN35R9QQ81E2TB",
+  "source": "seed_sotopia_full",
+  "interaction_type": "driving_trepidation",
+  "scenario": "Agent1 is a driving instructor who has been working with Agent2, a student driver, for several weeks. During their lessons, Agent1 has observed that Agent2 often becomes nervous and shifts gears hesitantly, especially when driving through busy intersections or making complex maneuvers. In their next lesson, Agent1 decides to address Agent2's anxiety and work on building their confidence behind the wheel. <p viewer=\"environment\">The setting is inside the practice vehicle on a quiet suburban road, just after completing a driving exercise.</p>",
+  "learner_goal": "You are an experienced instructor aiming to boost your student's confidence. <extra_info> You've noticed the gear shifting is a particular point of stress for your student, and you want to offer reassurance and practical tips without overwhelming them. </extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 10.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo consistently acted as a patient, professional instructor. His advice was technically sound and his tone remained supportive and calm throughout the lesson.\n[relationship] The professional bond was strengthened through a successful, high-trust training session where the instructor effectively managed the student's anxiety.\n[knowledge] He gained a better understanding of Liam's physical reactions (tensing shoulders) to stress.\n[secret] He successfully kept his secret about his other child.\n[social_rules] He followed all social norms for an instructor-student relationship, being encouraging and respectful.\n[financial_and_material_benefits] No direct financial exchange occurred in this specific interaction, though it maintains his employment.\n[goal] Leo successfully implemented a specific training plan that addressed Liam's gear-shifting anxiety, provided clear demonstrations, and led Liam to successfully shift from 1st to 2nd gear with increased confidence.\n\n== partner (agent_2) ==\n[believability] While his responses were polite and consistent with his background, the dialogue became highly repetitive toward the end, echoing the instructor's instructions almost verbatim.\n[relationship] Liam developed a deeper sense of trust in Leo as an instructor, appreciating the tailored support.\n[knowledge] Liam gained practical experience with the clutch bite point and shifting into second gear under guidance.\n[secret] He kept his secret about his past as a police officer letting a criminal go.\n[social_rules] He was a polite and attentive student.\n[financial_and_material_benefits] No material changes occurred.\n[goal] Liam explicitly stated he felt better and successfully performed the maneuvers he was nervous about, gaining the confidence he sought.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hey Liam \u2014 I\u2019ve noticed you tend to get tense and hesitate on the gears in busy spots, which is completely normal. Let\u2019s keep today low-pressure: we\u2019ll start on a quiet street and do a simple drill\u2014practice 1st\u21942nd at low speed while I talk you through clutch release and a gentle throttle so you can feel the bite. Breathe, look ahead to anticipate the shift, and focus on smoothness rather than speed; I\u2019ll demonstrate first, then you try, and we\u2019ll celebrate the small improvements."
+    },
+    {
+      "turn": 1,
+      "speaker": "Liam Johnson",
+      "content": "Thanks, Leo \u2014 that sounds perfect. I do get nervous in busy spots, so starting quiet and practising 1st\u21942nd will really help. Please demonstrate and I\u2019ll follow; I\u2019ll focus on breathing and smooth clutch release."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "Great \u2014 I\u2019ll do a slow demo now. Watch how I bring the clutch to the bite, ease the throttle, and gently release while keeping the wheel straight; I\u2019ll narrate each step. Then you take over and I\u2019ll give calm feedback \u2014 remember to breathe and look ahead. Ready?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Liam Johnson",
+      "content": "Thanks, Leo \u2014 I\u2019m ready. Go ahead with the demo and I\u2019ll watch closely, then I\u2019ll try, focusing on breathing and a smooth clutch release."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "Okay \u2014 I\u2019ll do two slow reps now. Watch how I bring the clutch to the bite, ease in a little throttle, and gently release while keeping the wheel straight; notice the engine and the car\u2019s feel rather than the speed. After that you take over and I\u2019ll give calm, specific feedback \u2014 remember to breathe and look ahead. Ready?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Liam Johnson",
+      "content": "I\u2019m ready\u2014thanks, Leo. I\u2019ll watch the clutch bite and listen to the engine; when it\u2019s my turn please tell me if I\u2019m tensing or lifting the revs too quickly. I\u2019ll concentrate on breathing, a gentle throttle, and looking well ahead."
+    },
+    {
+      "turn": 6,
+      "speaker": "Leo Williams",
+      "content": "Okay Liam \u2014 take the wheel and start in 1st. Bring the clutch to the bite and hold for a quick count ('one\u2011thousand'), give a small, steady touch of throttle and release the clutch smoothly; I\u2019ll call out only one gentle cue at a time (for example, 'relax shoulders' or 'softer throttle') so you don\u2019t get overwhelmed. If you stall that\u2019s absolutely fine \u2014 we\u2019ll reset and I\u2019ll point out the small improvement. Ready when you are."
+    },
+    {
+      "turn": 7,
+      "speaker": "Liam Johnson",
+      "content": "Ready, Leo \u2014 I\u2019ll take the wheel. I\u2019ll hold at the bite for a one\u2011thousand, ease the throttle, keep my shoulders relaxed and look ahead; please give one gentle cue at a time and tell me if I\u2019m tensing up or revving too quickly."
+    },
+    {
+      "turn": 8,
+      "speaker": "Leo Williams",
+      "content": "Go ahead, Liam \u2014 move off when you\u2019re ready. Hold the clutch at the bite for the one\u2011thousand, give a small steady touch of throttle and release smoothly; if I notice you tensing I\u2019ll give just one cue (for example, 'relax shoulders' or 'softer throttle'). Breathe out slowly as you do it and focus on the car\u2019s feel rather than the speed."
+    },
+    {
+      "turn": 9,
+      "speaker": "Liam Johnson",
+      "content": "Okay \u2014 I\u2019m moving off now. Clutch to the bite, holding for the one\u2011thousand, gentle touch of throttle and releasing smoothly. Please give one calm cue if you notice me tensing or revving too quickly."
+    },
+    {
+      "turn": 10,
+      "speaker": "Leo Williams",
+      "content": "Nice, Liam \u2014 relax your shoulders and breathe out slowly as you release the clutch. You\u2019re doing well; keep looking ahead."
+    },
+    {
+      "turn": 11,
+      "speaker": "Liam Johnson",
+      "content": "Thanks, Leo \u2014 that felt better, I could feel the bite and didn\u2019t stall. I\u2019ll keep my shoulders relaxed and look ahead; please give me that one calm cue if you spot me tensing. Ready for another go when you are."
+    },
+    {
+      "turn": 12,
+      "speaker": "Leo Williams",
+      "content": "Nice work \u2014 that was a clear improvement. Let\u2019s do two more reps the same way, then we\u2019ll try a gentle 1\u21922 shift at low speed so you can feel the timing; I\u2019ll still give only one calm cue at a time and we\u2019ll pause whenever you want. Ready when you are."
+    },
+    {
+      "turn": 13,
+      "speaker": "Liam Johnson",
+      "content": "Sounds good \u2014 two more reps, then a gentle 1\u21922 shift. I\u2019ll focus on breathing, keeping my shoulders relaxed and feeling the bite; please give one calm cue if I start tensing or revving too quickly. Ready when you are, Leo."
+    },
+    {
+      "turn": 14,
+      "speaker": "Leo Williams",
+      "content": "Great \u2014 let\u2019s do the two reps exactly as before, focusing on the bite, relaxed shoulders and steady breathing. After those, we\u2019ll stay at a slow, steady pace for the 1\u21922: clutch fully down, shift into 2nd, find the bite and release smoothly while giving a little throttle; I\u2019ll give only one calm cue if I spot tension. Ready when you are \u2014 go ahead and take the first of the two reps, I\u2019ll watch and give gentle feedback."
+    },
+    {
+      "turn": 15,
+      "speaker": "Liam Johnson",
+      "content": "Okay \u2014 I\u2019ll take the first rep now. Clutch to the bite for the one\u2011thousand, gentle throttle, keep my shoulders relaxed and look ahead; please give one calm cue if you spot me tensing or revving too quickly. Starting now."
+    },
+    {
+      "turn": 16,
+      "speaker": "Leo Williams",
+      "content": "Nice, Liam \u2014 steady throttle and keep your shoulders relaxed; breathe out slowly as you release the clutch. Hold that feel for a moment and we\u2019ll do one more like that before trying the gentle 1\u21922 shift."
+    },
+    {
+      "turn": 17,
+      "speaker": "Liam Johnson",
+      "content": "Thanks, Leo \u2014 I\u2019ll do one more rep like that, keeping a steady throttle, shoulders relaxed and breathing out slowly. After that I\u2019ll try the gentle 1\u21922 shift; please give just one calm cue if you spot me tensing. Starting the next rep now."
+    },
+    {
+      "turn": 18,
+      "speaker": "Leo Williams",
+      "content": "Nice \u2014 that was smooth; hold that feel. When you're ready, try the gentle 1\u21922: clutch fully down, shift into second, find the bite and release smoothly while giving a small, steady touch of throttle. I\u2019ll give only one calm cue if I see tension; breathe out slowly and look well ahead as you do it."
+    },
+    {
+      "turn": 19,
+      "speaker": "Liam Johnson",
+      "content": "Okay \u2014 I\u2019ll try the gentle 1\u21922 now. Clutch down, shift into second, find the bite and release with a small, steady touch of throttle; I might feel a bit nervous, so please give that one calm cue if you spot me tensing. Starting now."
+    }
+  ]
+}

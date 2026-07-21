@@ -1,0 +1,118 @@
+{
+  "scenario_id": "01H7VFHNZQ3PQ3DHQ7H2W9ES97_p0",
+  "source_env_id": "01H7VFHNZQ3PQ3DHQ7H2W9ES97",
+  "source": "seed_sotopia",
+  "interaction_type": "normbank",
+  "scenario": "Two friends who are about to go on their first romantic date",
+  "learner_goal": "Make the date special and memorable (<extra_info> Extra information: You have been secretly in love with your friend for a long time and you want to take this chance to express your feelings</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 6.0,
+    "secret": -3.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 20,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia\u2019s dialogue is consistent with her character as a principal and her background. She successfully incorporated the 'punk rock' secret as a way to explain her boldness, making the interaction feel authentic and grounded.\n[relationship] The relationship shifted from friendship to a mutual romantic interest with clear plans for a second date, which is a significant positive advancement.\n[knowledge] She learned that William reciprocates her feelings and values the friendship enough to want to move slowly.\n[secret] She revealed her secret about her punk-rock past to William, though she used it to facilitate her goal.\n[social_rules] She followed all social norms for a first date and handled the confession gracefully.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Mia successfully expressed her feelings, received a positive response, and set up a concrete second date, making the evening both special and memorable.\n\n== partner (agent_2) ==\n[believability] William\u2019s responses are consistent with a chef who values friendship. His dialogue is supportive and careful, reflecting his stated personality traits.\n[relationship] The relationship improved as they established a mutual romantic connection while explicitly agreeing to protect the friendship by taking things slow.\n[knowledge] He learned about Mia's deep feelings for him and her rebellious past.\n[secret] He did not reveal his secret about sabotaging a competitor.\n[social_rules] He adhered to social norms and was respectful of Mia's confession.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] William successfully entered a romantic exploration with Mia while establishing the boundary that the friendship must be preserved and they should move slowly.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "said: \"Hi William \u2014 you look great. I\u2019m really glad we\u2019re finally doing this; I picked a cozy spot so we can actually talk without the usual fundraiser chaos. I\u2019ve been looking forward to tonight \u2014 there\u2019s something I want to share with you later, but for now, shall we grab a table?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "You look great too, Mia \u2014 and this spot is perfect. Let\u2019s grab that table; I\u2019ll slip us into the corner by the window. I\u2019m curious about what you want to share, but no rush \u2014 tonight\u2019s about good food and good company."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "said: \"Corner by the window sounds perfect \u2014 lead the way. I\u2019m glad you\u2019re curious; I promise it\u2019s not a PTA complaint, more like a small confession I\u2019d rather say after we order. Speaking of \u2014 anything you\u2019re craving to start with?\""
+    },
+    {
+      "turn": 3,
+      "speaker": "William Brown",
+      "content": "How about we start with something to share \u2014 a couple of small plates? I\u2019m tempted by the burrata and the crispy Brussels with chili-honey, but I\u2019m happy to follow your pick. No pressure about your confession \u2014 we can ease into that over the snacks."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "Let\u2019s get the burrata and the crispy Brussels \u2014 and a bottle of that pinot to share. I might need a sip before I deliver my small confession, but I promise it\u2019s worth it."
+    },
+    {
+      "turn": 5,
+      "speaker": "William Brown",
+      "content": "Perfect \u2014 burrata, crispy Brussels, and that pinot it is. I\u2019ll flag the server. Take your time with the confession; I like a little suspense but only if you\u2019re comfortable, and if you need a sip to steady you, I\u2019m happy to be your designated toast partner."
+    },
+    {
+      "turn": 6,
+      "speaker": "Mia Davis",
+      "content": "Thanks \u2014 go ahead and flag the server. When the wine arrives, let\u2019s do a quick toast to good company, and after the first glass I\u2019ll tell you the little confession I promised. Fair warning: it might make me a bit bolder than usual."
+    },
+    {
+      "turn": 7,
+      "speaker": "William Brown",
+      "content": "Sounds perfect \u2014 I love the corner by the window. Toast to good company and brave confessions; when the wine arrives I\u2019ll raise my glass, and whatever you tell me I\u2019m listening \u2014 no pressure."
+    },
+    {
+      "turn": 8,
+      "speaker": "Mia Davis",
+      "content": "Perfect \u2014 I\u2019ll flag the server when they pass. When the wine arrives, let\u2019s toast to good company \u2014 and after the first sip I\u2019ll tell you the little confession I promised. Fair warning: my younger punk-rock self might make an appearance and make me bolder than usual."
+    },
+    {
+      "turn": 9,
+      "speaker": "William Brown",
+      "content": "Sounds perfect \u2014 I\u2019ll keep an eye out for the server. I\u2019m excited to meet your younger punk-rock self; after our toast, spill away. Whatever it is, I\u2019m listening, and I\u2019m really enjoying tonight."
+    },
+    {
+      "turn": 10,
+      "speaker": "Mia Davis",
+      "content": "There \u2014 I see our server passing. I\u2019ll flag them for the wine. Ready for our toast to good company and brave confessions?"
+    },
+    {
+      "turn": 11,
+      "speaker": "William Brown",
+      "content": "Absolutely \u2014 I\u2019m ready. To good company, brave confessions, and seeing where the night takes us."
+    },
+    {
+      "turn": 12,
+      "speaker": "Mia Davis",
+      "content": "(She raises her glass, smiles, and takes a small sip.) Cheers. William, I need to be honest \u2014 I\u2019ve liked you for a long time, more than a friend. I couldn\u2019t let tonight pass without saying it: I\u2019d love to see if we could be more than friends, if you feel the same."
+    },
+    {
+      "turn": 13,
+      "speaker": "William Brown",
+      "content": "Mia, thank you \u2014 that means a lot. I\u2019ve liked you too, and I\u2019d really like to see where this could go, but our friendship matters a lot to me, so can we take it slow and feel it out? For now let\u2019s enjoy tonight and talk more after we\u2019ve had a few bites and a little more wine."
+    },
+    {
+      "turn": 14,
+      "speaker": "Mia Davis",
+      "content": "That sounds wonderful, William \u2014 thank you. Taking it slow feels right; I\u2019m relieved and quietly excited. For now let\u2019s enjoy the food, the wine, and the company, and we\u2019ll see where this goes when the time feels right."
+    },
+    {
+      "turn": 15,
+      "speaker": "William Brown",
+      "content": "I'm really glad you said that \u2014 the relief is mutual. Let's savor tonight, the food, and this new step; no rush, just honest moments. If you're up for it sometime, I'd love a low-key follow-up \u2014 maybe a weekend visit to the farmers' market or a casual cook-together \u2014 but only when it feels right."
+    },
+    {
+      "turn": 16,
+      "speaker": "Mia Davis",
+      "content": "I\u2019d love that \u2014 a farmers\u2019 market sounds perfect. How about this Saturday morning? We could grab coffee, wander the stalls, pick up something fresh, and then try cooking a simple dinner together later. I\u2019m really looking forward to more of these honest, low-key moments with you."
+    },
+    {
+      "turn": 17,
+      "speaker": "William Brown",
+      "content": "That sounds perfect \u2014 Saturday morning is great. How about we meet at 9 AM by the main coffee stall? We can wander, pick something seasonal, and plan a simple dinner around it; I\u2019ll bring a couple of recipe ideas and some enthusiasm. Can\u2019t wait."
+    },
+    {
+      "turn": 18,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

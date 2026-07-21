@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPAYNPKAKPRF76C1CSY96FY0_p0",
+  "source_env_id": "01HPAYNPKAKPRF76C1CSY96FY0",
+  "source": "seed_sotopia_full",
+  "interaction_type": "personal_preference",
+  "scenario": "Agent1 and Agent2, who are part of the same social circle, find themselves at a mutual friend's party. Agent1 enjoys their social life but has been feeling the need for more alone time to recharge. Agent2 notices Agent1's withdrawal from the group and approaches them to understand if everything is alright. Agent1 wants to explain their preference for solitude without offending Agent2 or giving the impression of disinterest in their friendship.",
+  "learner_goal": "Express the need for alone time to Agent2 without undermining the value of their friendship (<extra_info>Agent1 values their friendship with Agent2 but wants to convey the importance of personal space and time for self-care</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 1.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Oliver's communication is polite, direct, and consistent with his character as a somewhat reserved architect. He manages his desire for solitude without breaking character.\n[relationship] He successfully communicated his boundaries without causing offense, which maintains and slightly strengthens the mutual understanding between the neighbors.\n[knowledge] He learned that Esmeralda is understanding and supportive of his needs for personal space.\n[secret] He successfully kept his feelings for Esmeralda hidden.\n[social_rules] He followed social etiquette for excusing oneself from a conversation at a party.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Oliver explicitly stated his need for alone time and received a positive, affirming response from Esmeralda that confirmed the friendship was not undermined.\n\n== partner (agent_2) ==\n[believability] Esmeralda's response was professional yet warm, fitting for a District Attorney who is used to navigating social dynamics.\n[relationship] She reinforced the bond by being supportive and non-judgmental about his need for space.\n[knowledge] She learned that Oliver is currently feeling drained and requires solitude to recharge.\n[secret] She did not reveal her romantic associations with criminals.\n[social_rules] She responded with appropriate empathy and social grace.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Esmeralda successfully validated Oliver's feelings, ensured he didn't feel guilty, and reaffirmed the friendship.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Oliver Thompson",
+      "content": "Hey Esmeralda, thanks for checking in \u2014 I'm okay, just a bit wiped and need some quiet time to recharge. It's nothing personal; I really enjoy hanging out with you. I think I'll step away for a little while, but I'd love to catch up later if you're around."
+    },
+    {
+      "turn": 1,
+      "speaker": "Esmeralda Solis",
+      "content": "Totally understand, Oliver \u2014 take the quiet time you need. No hard feelings; I appreciate you letting me know and I value our friendship. I\u2019ll be around later if you want to catch up \u2014 recharge and enjoy the rest of the evening."
+    },
+    {
+      "turn": 2,
+      "speaker": "Oliver Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

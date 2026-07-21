@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01H7VFHN7WJK7VWVRZZTQ6DX9T_p0",
+  "source_env_id": "01H7VFHN7WJK7VWVRZZTQ6DX9T",
+  "source": "seed_sotopia",
+  "interaction_type": "social_chemistry",
+  "scenario": "Two friends are discussing their plans to go on a weekend trip",
+  "learner_goal": "Convince the friend to join the trip (<extra_info>Extra information: the trip will be more fun with more people, and you can share the expenses. <strategy_hint>Hint: you can provide some material benefits to persuade your friend to join.</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 2.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel's persistence was consistent with his goal, and he naturally incorporated his cooking talent and Noah's comedy hobby into the pitch.\n[relationship] The relationship remains positive as they successfully coordinated a different social event for the following weekend, though the constant pushing for the trip became a bit repetitive.\n[knowledge] Samuel learned about Noah's busy schedule, his inflexibility for the upcoming weekend, and his willingness to host at his own pool.\n[secret] Samuel did not reveal his past as a competitive figure skater.\n[social_rules] Samuel followed social norms, though he bordered on being overly pushy after multiple rejections.\n[financial_and_material_benefits] No material gains were made as the trip was not agreed upon.\n[goal] Samuel failed to convince Noah to join the trip, despite offering to cover costs and handle logistics. He pivot to a future pool night but did not achieve the stated objective.\n\n== partner (agent_2) ==\n[believability] Noah's responses were very realistic for someone trying to politely decline a persistent invite while maintaining a friendship.\n[relationship] Noah managed to stay friendly and offer a counter-proposal to maintain the bond without committing to something he didn't want to do.\n[knowledge] Noah learned how much Samuel values his presence and how willing Samuel is to accommodate his needs.\n[secret] Noah's secret identity as a comedian was already known to Samuel (based on the background and conversation), so no new secrets were leaked.\n[social_rules] Noah was polite and gracious throughout the interaction.\n[financial_and_material_benefits] No material benefits were gained or lost.\n[goal] Noah successfully declined the trip across multiple attempts by the other agent, and did so without upsetting Samuel, even securing an alternative plan.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Noah \u2014 I'm planning the weekend trip and it\u2019d be way more fun if you came. We can split gas and the Airbnb so it\u2019s cheap, I\u2019ll handle all the meals (you know I cook), and I can pick you up so you don\u2019t have to worry about driving. Plus your comedy would make the evenings way better \u2014 want me to book it if you\u2019re in?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Hey Sam \u2014 that sounds like a blast and your cooking would definitely be the draw, but I already committed to something else this weekend so I can\u2019t make the trip. Really appreciate the invite though; let\u2019s plan a chill night at my place next weekend (pool and I\u2019ll grill), and I\u2019ll bring a little comedy for the evening if you\u2019re up for it."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Totally get it \u2014 no worries. If your other plan wraps early, would you be up for joining just Saturday night? I can cover your share for that part and promise an amazing dessert; if not, I\u2019m definitely in for your grill-and-pool night next weekend and we can pick another weekend for the full trip."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Thanks, Sam \u2014 really appreciate you offering to cover Saturday, but my other commitment's not flexible so I can't make Saturday night either. I'm definitely in for the grill-and-pool next weekend though; lock me in and I'll bring a few new comedy bits (and something for the grill)."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "Totally get it \u2014 no worries. Locking you in for next weekend; I\u2019ll bring something to complement the grill and you bring the comedy. For the trip, want to throw me 2\u20133 other weekends that could work for you and I\u2019ll scout affordable Airbnbs and coordinate dates so we can actually make it happen?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "Hey Sam \u2014 I really appreciate you doing the legwork, but I can\u2019t commit to the trip on any weekends right now; my schedule\u2019s pretty packed for the foreseeable future. I\u2019m happy to help scout Airbnbs or give feedback on dates if that helps, and I\u2019m definitely locked in for next weekend\u2019s grill-and-pool."
+    },
+    {
+      "turn": 6,
+      "speaker": "Samuel Anderson",
+      "content": "No worries \u2014 locked you in for next weekend. If you want, I can put you on a short \u2018standby\u2019 list \u2014 if a cancellation or a cheap last\u2011minute window opens I\u2019ll ping you and you can decide then. Also, if a full weekend never works, would you be up for a low\u2011commitment day trip (easy hike, I\u2019ll pack food, and you can bring a few bits for the car ride)? No pressure either way."
+    },
+    {
+      "turn": 7,
+      "speaker": "Noah Davis",
+      "content": "Thanks, Sam \u2014 I really appreciate you offering the standby, but I should pass on that; my schedule\u2019s too unpredictable and I don\u2019t want to leave you hanging. I also can\u2019t swing the day trip right now, but I\u2019m happy to keep helping with dates/Airbnb picks. Still locked in for next weekend\u2019s grill-and-pool \u2014 really looking forward to it."
+    },
+    {
+      "turn": 8,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

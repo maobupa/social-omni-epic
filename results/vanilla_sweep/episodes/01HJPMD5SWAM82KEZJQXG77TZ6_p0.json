@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPMD5SWAM82KEZJQXG77TZ6_p0",
+  "source_env_id": "01HJPMD5SWAM82KEZJQXG77TZ6",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_interaction",
+  "scenario": "Agent1 and Agent2 are colleagues who recently worked together on a project. During a team meeting, Agent1 made a joke about attention to detail that seemed to make Agent2 self-conscious about their work. Now, at a company social event, Agent1 wants to clear the air.",
+  "learner_goal": "You want to apologize to Agent2 without making them feel more self-conscious or uncomfortable. You aim to restore a positive working relationship. <extra_info> Consider acknowledging the value of Agent2's contributions and your respect for their skills. </extra_info><clarification_hint> Avoid bringing up the specific incident directly, as it may cause further embarrassment. </clarification_hint><strategy_hint> You can express appreciation for their overall work and subtly assure them that your previous comment was not a serious critique. </strategy_hint>",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia's apology was professional and aligned with her character as someone who maintains amicable relationships. However, she did slightly violate the instruction to avoid bringing up the incident directly by mentioning 'If my joke came off the wrong way,' though she handled it with tact.\n[relationship] The relationship was restored after a moment of tension. Eli expressed that the apology meant a lot, stabilizing their working dynamic.\n[knowledge] Sophia learned specifically how Eli reacts to comments about his competence and established a clear boundary for future interactions.\n[secret] Her secret remains safe.\n[social_rules] She followed social norms for an apology and professional reconciliation.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Sophia successfully apologized and restored the relationship. She acknowledged Eli's value and skills. While she did mention the 'joke' (approaching the direct incident), it was done in a way that didn't increase embarrassment.\n\n== partner (agent_2) ==\n[believability] Eli's response was very consistent with his background as a forensic psychiatrist\u2014calm, honest about his feelings, and setting clear boundaries.\n[relationship] The relationship improved from a state of silent tension to mutual understanding.\n[knowledge] Eli learned that Sophia respects his work and that the joke was not a serious critique of his competence.\n[secret] His secret remains safe.\n[social_rules] He communicated his feelings honestly and accepted the apology gracefully.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Eli communicated that the joke was hurtful, explained why, and established a boundary for future behavior, all while avoiding unnecessary tension.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Eli \u2014 I just wanted to say I really value how thorough and reliable you are on our projects; your attention to detail genuinely makes a big difference. If my joke came off the wrong way, I'm sorry \u2014 I respect your skills and enjoy working with you, and I want us to keep things positive."
+    },
+    {
+      "turn": 1,
+      "speaker": "Eli Dawson",
+      "content": "Thanks, Sophia \u2014 I appreciate you saying that. To be honest, the joke did sting; comments about work quality hit a bit close to home for me. Your apology and that reassurance mean a lot \u2014 I enjoy working with you and would prefer we keep jokes away from people\u2019s competence going forward."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

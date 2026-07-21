@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJRKDY2J5C01KZ3RQWQP2QQV_p0",
+  "source_env_id": "01HJRKDY2J5C01KZ3RQWQP2QQV",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_prompt",
+  "scenario": "Agent1 and Agent2 are roommates who share a kitchen. Agent1 is in the mood for something sweet and decides to bake a cake. Agent2 is on a strict diet and avoids sugary foods, which makes the presence of cake in the house a temptation.",
+  "learner_goal": "Convince Agent2 to allow the baking of the cake by suggesting a compromise (<extra_info>Extra information: You have been craving something sweet and baking is a therapeutic activity for you.</extra_info>, <clarification_hint>You can discuss the importance of occasional treats and your willingness to respect their diet.</clarification_hint>, <strategy_hint>You can propose to keep the cake in a separate container or to share it with friends outside the house.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia remains consistent with her professional background as a high school principal by being polite, organized, and proposing structured solutions to the conflict.\n[relationship] The agents maintained a polite tone and reached a compromise that respected both parties' boundaries, likely strengthening their roommate dynamic.\n[knowledge] Mia learned specifically what types of alternatives Isabella considers acceptable (banana-oat, fruit-sweetened) and that Isabella has recipes to share.\n[secret] Mia did not reveal her punk rock past.\n[social_rules] Mia followed social norms of roommate negotiation and politeness.\n[financial_and_material_benefits] Mia secured the ability to perform her therapeutic activity (baking) in her own home, though she had to modify the ingredients.\n[goal] Mia successfully convinced Isabella to allow her to bake. Although she pivoted to a low-sugar version, she achieved her core goals of being allowed to bake, utilizing her proposed containment strategies (freezing/labeling), and performing the activity for its therapeutic value.\n\n== partner (agent_2) ==\n[believability] Isabella's responses align perfectly with her character as a kind veterinarian who is struggling with a diet; her openness about temptation is realistic.\n[relationship] Isabella appreciated Mia's consideration and offered to help by providing recipes, indicating a positive social interaction.\n[knowledge] Isabella learned that Mia values baking as a therapeutic outlet.\n[secret] Isabella did not reveal her secret about the injured animals in the basement.\n[social_rules] Isabella was communicative and respectful of her roommate's desires while maintaining her own boundaries.\n[financial_and_material_benefits] There was no material gain or loss.\n[goal] Isabella successfully protected her dietary goals by steering Mia toward healthier alternatives and ensuring the timing of the baking wouldn't tempt her, while still being a kind roommate.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Hey Isabella \u2014 I\u2019m really craving to bake a cake today; baking\u2019s kind of therapeutic for me. I totally respect your diet, so I\u2019ll keep it sealed in an airtight container on the top shelf (no slices left out), or freeze most of it and/or take portions to share with friends outside the house. Would that be okay with you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Isabella White",
+      "content": "Thanks for checking, Mia \u2014 I really appreciate you being considerate. I have to be honest: having cake in the house, even sealed, is a big temptation for me and could derail my strict diet. Would you mind holding off on baking sugary treats here? If baking is therapeutic, could you try a lower-sugar alternative \u2014 like a fruit-based loaf, sugar-free muffins, or banana\u2011oat cookies \u2014 that I\u2019d feel comfortable around?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "Thanks, I totally understand and don\u2019t want to derail your progress. How about this: I\u2019ll make a small low\u2011sugar cake (or sugar\u2011free muffins) using a sugar substitute or fruit\u2011sweetened recipe, freeze most of it and keep whatever\u2019s left sealed and clearly labeled up on the top shelf, and I can bake it while you\u2019re at work so it\u2019s not sitting out. If you\u2019d still prefer no sweet treats here, I\u2019ll happily take the whole batch to a friend \u2014 does that sound fair to you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Isabella White",
+      "content": "Thanks so much, Mia \u2014 I really appreciate you being flexible. If you\u2019d be willing to make a genuinely low\u2011sugar option (banana\u2011oat cookies, a fruit\u2011sweetened loaf, or sugar\u2011free muffins) and freeze/label most of it or take the batch to a friend, that would work for me; baking while I\u2019m out is great too. If you want, I can send a couple of recipes I use that are tasty but low in sugar."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

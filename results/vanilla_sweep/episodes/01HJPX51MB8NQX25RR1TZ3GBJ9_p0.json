@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPX51MB8NQX25RR1TZ3GBJ9_p0",
+  "source_env_id": "01HJPX51MB8NQX25RR1TZ3GBJ9",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_gathering",
+  "scenario": "During a social gathering, Agent1 casually refers to themselves as 'fat' in a conversation, not realizing that Agent2, who is larger in size, is part of the group listening. Agent2 feels uncomfortable and somewhat offended by the comment, as it indirectly reflects on them. Agent1, noticing the change in Agent2's demeanor, seeks to address the situation without escalating any discomfort.",
+  "learner_goal": "Apologize to Agent2 for the insensitive comment and ensure that they do not feel targeted or insulted by the remark (<extra_info>Extra information: you realize your comment might have been hurtful and want to mend the situation<strategy_hint>Hint: you can acknowledge the impact of your words and offer a genuine apology, showing understanding and empathy</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's response was thoughtful and stayed true to his introverted and detailed personality. He identified the issue and addressed it directly.\n[relationship] He successfully mended a potential rift by acknowledging his mistake, which strengthened the trust between them.\n[knowledge] He gained a clear understanding of Sophia's sensitivities regarding body-image language.\n[secret] No secrets were revealed.\n[social_rules] He followed social norms by apologizing and taking responsibility for his comment.\n[financial_and_material_benefits] Not applicable to this scenario.\n[goal] Finnegan explicitly apologized, acknowledged the impact of his words, and received confirmation from Sophia that she was 'okay now' and understood the remark wasn't aimed at her.\n\n== partner (agent_2) ==\n[believability] Sophia's reaction as a personal trainer who values health and confidence was very realistic. Her feedback was firm but polite.\n[relationship] By being honest about her feelings, she allowed the relationship to recover and move forward with better understanding.\n[knowledge] She learned that Finnegan is receptive to feedback and values her comfort.\n[secret] She kept her secret regarding her best friend's husband.\n[social_rules] She maintained social harmony by keeping the conversation private and non-confrontational.\n[financial_and_material_benefits] Not applicable to this scenario.\n[goal] Sophia successfully expressed her feelings, explained the impact on her self-esteem, and suggested a change in future behavior, all while maintaining harmony.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "Sophia, I'm sorry \u2014 that was a thoughtless thing to say. I didn't mean it to reflect on you, and I can see it made you uncomfortable. Are you okay?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Sophia James",
+      "content": "Thanks, Finnegan \u2014 I appreciate you saying that. I was a bit hurt; when people casually call themselves 'fat' it lands on me and chips away at my confidence even if it wasn\u2019t aimed at me. I\u2019m okay now, but could you try to avoid that kind of self-description in future?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

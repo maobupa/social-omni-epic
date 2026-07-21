@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB347MGA5FRHCKW3E2NWA7D_p0",
+  "source_env_id": "01HPB347MGA5FRHCKW3E2NWA7D",
+  "source": "seed_sotopia_full",
+  "interaction_type": "dinner_party",
+  "scenario": "Agent1 and Agent2 are at a dinner party among mutual friends. Agent1, known for their culinary skills, has brought a homemade dessert that is the talk of the evening. Agent2, wanting to impress a romantic interest at the party, decides to taste the dessert in an exaggerated, sensual manner to draw attention. Agent1, who takes pride in their cooking, finds this behavior to be disrespectful to the culinary art and would prefer if Agent2 appreciated the dessert in a more conventional way. Both agents need to navigate this social situation without causing a scene at the party.",
+  "learner_goal": "To address Agent2's behavior in a way that communicates the importance of respecting the culinary arts and the effort put into the dessert (<extra_info>Highlight the dedication and passion behind the creation of the dessert</extra_info>, <clarification_hint>Point out the inappropriateness of the behavior in a social setting</clarification_hint>, <strategy_hint>Engage in a conversation about the dessert's flavor profile and preparation to shift the focus</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia's dialogue is consistent with her background as a fitness enthusiast who values nutrition and discipline, and she executes her objective with a firm but polite tone suitable for a social setting.\n[relationship] She successfully corrected Miles's behavior without causing a scene, and they shared a technical conversation about food, strengthening their bond over culinary interests.\n[knowledge] She confirmed Miles's ability to discern complex flavor profiles once he focused, which validates her perception of him as a knowledgeable chef.\n[secret] She did not reveal her secret feelings for her best friend's husband.\n[social_rules] She handled a potentially awkward situation with grace and redirected a guest's behavior toward etiquette.\n[financial_and_material_benefits] There were no financial or material gains in this interaction.\n[goal] Sophia perfectly executed all parts of her goal: she pointed out the inappropriateness, highlighted the dedication required for the dessert, and successfully shifted the focus to the flavor profile.\n\n== partner (agent_2) ==\n[believability] Miles's pivot from performance to technical chef-talk is very believable given his background as a professional chef.\n[relationship] He accepted feedback well and maintained a positive rapport with Sophia.\n[knowledge] He gained insight into how others (specifically Sophia) perceived his 'bold' behavior.\n[secret] He did not reveal his past gambling addiction.\n[social_rules] He initially violated social norms with his 'sensual' tasting, though he corrected it.\n[financial_and_material_benefits] There were no financial or material gains.\n[goal] Miles successfully balanced being noticed (initially) with social etiquette (after being corrected) and found a more acceptable way to express his personality by using his professional expertise.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "said: \"Hey Miles, could you ease up on the theatrics? The person who made this put a lot of time and care into it, and that exaggerated tasting comes off a bit disrespectful. If you really want to show appreciation, take a thoughtful bite and tell them what you notice \u2014 like the balance between the caramel and the sea salt or the texture of the filling. What do you pick up on?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Miles Hawkins",
+      "content": "said: \"You're right, Sophia \u2014 that was theatrical and unfair to the baker. Let me actually taste it: the caramel is deep and slightly smoky, the sea salt lifts the sweetness, the filling is silky with a clean vanilla note, and the crust has a lovely butter snap \u2014 really well balanced. Thanks for calling me out; hope that comes off as appreciation rather than a performance.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "said: \"That's exactly the kind of appreciation that honors the baker \u2014 thank you. If you're curious, ask them whether they used browned sugar or a smoked salt; they'd love that you noticed the balance. Go tell them what you picked up.\""
+    },
+    {
+      "turn": 3,
+      "speaker": "Miles Hawkins",
+      "content": "said: \"Thanks, Sophia \u2014 I\u2019ll go ask. Excuse me, this was wonderful: did you brown the sugar for that caramel or use a smoked salt? Either way, truly excellent work \u2014 I appreciate the balance.\""
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

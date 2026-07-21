@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HMZ2BNB2XKVK6H6Q6QCDMKRF_p0",
+  "source_env_id": "01HMZ2BNB2XKVK6H6Q6QCDMKRF",
+  "source": "seed_sotopia_full",
+  "interaction_type": "marriage_aversion",
+  "scenario": "Agent1 and Agent2 have been in a romantic relationship for some time. Lately, their friends have been getting engaged, which has sparked conversations about marriage. During a quiet evening at home, Agent1 decides to gently bring up the topic of their future together, noticing that Agent2 becomes visibly uncomfortable whenever the subject of marriage is mentioned. <p viewer=\"environment\">The setting is their cozy shared apartment, specifically the living room with mementos of their time together.</p>",
+  "learner_goal": "You want to understand your partner's hesitation about marriage without pressuring them. <extra_info> You are looking for a way to communicate that you're thinking about the future and want to know if your partner sees marriage in theirs. </extra_info>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 5.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel stays perfectly in character as a supportive, empathetic partner. His dialogue is grounded in his identity as a software developer (structured, process-oriented) and his skill as a cook.\n[relationship] The relationship is significantly strengthened through deep emotional intimacy, active listening, and a successful navigation of a potentially volatile conflict without pressure.\n[knowledge] Samuel successfully identifies the specific root causes of Emily's anxiety: fear of finality, external expectations, legal/financial irreversibility, and her childhood background with divorce.\n[secret] Samuel did not reveal his past as a figure skater.\n[social_rules] Samuel followed all social norms for a healthy, respectful relationship discussion.\n[financial_and_material_benefits] The financial changes are neutral as they are shifting to a proportional split of shared expenses.\n[goal] Samuel fully achieved his goal: he understood her hesitation without pressuring her, communicated his thoughts on the future, and confirmed she sees a long-term future (though not marriage) with him.\n\n== partner (agent_2) ==\n[believability] Emily's responses are thoughtful and consistent with a writer/librarian's personality\u2014articulate and introspective.\n[relationship] Emily was able to voice deep fears and felt heard and supported, which deepened the bond and safety within the relationship.\n[knowledge] Emily learned that Samuel is willing to prioritize their relationship over traditional labels and is willing to compromise on timelines and structure.\n[secret] Emily did not reveal her secret life as a romance novelist.\n[social_rules] Emily communicated her boundaries and feelings effectively and respectfully.\n[financial_and_material_benefits] The agreement to split expenses by income percentage is a fair arrangement that doesn't significantly benefit or harm her material status.\n[goal] Emily successfully expressed her discomfort with marriage, explained why (anxiety/divorce history), and secured a commitment to a long-term life together without the pressure of a marriage label.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Emily, can we talk for a minute? I\u2019ve been thinking about our future and I\u2019ve noticed you seem uncomfortable when marriage comes up \u2014 I don\u2019t want to pressure you, I just want to understand how you feel about marriage or long-term commitment when you think about us."
+    },
+    {
+      "turn": 1,
+      "speaker": "Emily Harrison",
+      "content": "Thank you for asking \u2014 I appreciate you bringing it up gently. I love you and I want a future with you, but the idea of marriage makes me anxious; it feels very final and full of expectations that I\u2019m not sure I can meet right now. That doesn\u2019t mean I\u2019m not committed to us \u2014 I\u2019d like us to talk about what a long-term life together looks like and find a way forward that doesn\u2019t make me feel pressured."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "I love you, and I really appreciate you telling me how you feel. Can you help me understand which parts of marriage make you anxious \u2014 the legal/financial side, the idea of expectations, or something else? I\u2019d like us to focus on what a long-term life together looks like and take steps that feel comfortable for both of us instead of rushing to a label; would you be open to talking about what that life includes?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Emily Harrison",
+      "content": "I love you, and I want to be honest: it\u2019s the sense of finality and the weight of expectations that make me anxious\u2014I worry about not meeting those expectations and about how marriage might change how people see us. I also have practical worries about the legal and financial ties feeling big and irreversible, and growing up around divorce makes the idea feel heavier for me. I am committed to you and want a future together, though, so I\u2019d like us to talk about concrete steps (finances, living situation, timelines) we both feel comfortable with rather than rushing toward a label."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "I love you, and thank you for being honest \u2014 that helps a lot. I like the idea of focusing on concrete steps instead of a label; would you be comfortable starting with one area, like finances or our living situation, and working out small, reversible decisions together? For example, we could outline how we'd split shared expenses and set a check-in in six months, then revisit \u2014 which would you prefer to start with, or is there another concrete first step that feels safer to you?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Emily Harrison",
+      "content": "I think starting with finances feels safer \u2014 could we outline how we'd split shared expenses, maybe set up a small joint savings for shared goals while keeping our own accounts, and plan a check-in in six months to see how it\u2019s going? That feels like a small, reversible step and would help me feel like we\u2019re building a future without rushing a label. I love you and want to keep figuring this out together."
+    },
+    {
+      "turn": 6,
+      "speaker": "Samuel Anderson",
+      "content": "I love you \u2014 I\u2019m really glad that feels like a safe first step, and I\u2019m on board. How about we list our shared expenses (rent, groceries, utilities), decide whether to split them by percentage of income or a fixed share, and open a small joint savings for a shared goal while keeping our individual accounts? I can draft a simple plan and we can go over it over dinner this Saturday (I\u2019ll cook) \u2014 does that work, and do you have a preference for percent vs fixed split?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Emily Harrison",
+      "content": "I love you \u2014 that sounds perfect. I\u2019d prefer splitting by percentage of income; it feels fair and keeps things proportional and reversible. I\u2019m happy to open a small joint savings for a shared goal while keeping our own accounts. Dinner Saturday works \u2014 thank you for cooking; we can go over your draft then."
+    },
+    {
+      "turn": 8,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

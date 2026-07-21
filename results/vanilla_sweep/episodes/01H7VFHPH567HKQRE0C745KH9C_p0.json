@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01H7VFHPH567HKQRE0C745KH9C_p0",
+  "source_env_id": "01H7VFHPH567HKQRE0C745KH9C",
+  "source": "seed_sotopia",
+  "interaction_type": "mutual_friends",
+  "scenario": "2 strangers are meeting at a party. <p viewer=\"environment\">They have 1 common friends: Harvey.</p>",
+  "learner_goal": "You are trying to figure out whether you have a mutual friend with the other person. You should not simply list their names.\n<extra_info> You know the following friends: \n David: Hobby: Homebrewing  Company: Christian Moerlein Brewing Company  Time Preference: afternoon  Location Preference: indoor \n Larry: Hobby: Homebrewing  Company: The J.M. Smucker Company  Time Preference: morning  Location Preference: outdoor \n Lynn: Hobby: Homebrewing  Company: Cray  Time Preference: evening  Location Preference: outdoor \n Donald: Hobby: Homebrewing  Company: Advance Auto Parts  Time Preference: afternoon  Location Preference: outdoor \n Dennis: Hobby: Amateur radio  Company: The J.M. Smucker Company  Time Preference: morning  Location Preference: outdoor \n Jane: Hobby: Homebrewing  Company: Planet Hollywood  Time Preference: morning  Location Preference: outdoor \n Harvey: Hobby: Amateur radio  Company: Sony  Time Preference: afternoon  Location Preference: indoor \n Ninfa: Hobby: Quilting  Company: The J.M. Smucker Company  Time Preference: morning  Location Preference: outdoor \n Angelica: Hobby: Homebrewing  Company: Planet Hollywood  Time Preference: evening  Location Preference: outdoor \n</extra_info>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Micah stays in character as a social butterfly, using descriptive language about hobbies to identify a mutual friend without breaking the rules of the prompt.\n[relationship] The interaction is very positive, moving from strangers who know each other by name to making concrete plans to meet up and help a mutual friend.\n[knowledge] Micah successfully identifies the mutual friend (Harvey) and confirms several details about Jaxon's social circle.\n[secret] Micah's secret about dressing up his dog remains safe.\n[social_rules] Micah followed all social norms and was polite throughout.\n[financial_and_material_benefits] No material benefits were gained or lost.\n[goal] Micah successfully identified the mutual friend (Harvey) by referencing specific details (Sony, amateur radio, vintage rigs) without simply listing names, as instructed.\n\n== partner (agent_2) ==\n[believability] Jaxon acts like an investigative journalist, picking up on details and confirming them logically.\n[relationship] Jaxon builds a good rapport with Micah and agrees to a future social meeting.\n[knowledge] Jaxon identifies that he and Micah share a mutual friend and learns about Micah's role in the ham radio community.\n[secret] Jaxon's secret about fabricating evidence remains hidden.\n[social_rules] Jaxon was professional and socially appropriate.\n[financial_and_material_benefits] No material benefits were gained or lost.\n[goal] Jaxon successfully identified the mutual friend through descriptive clues and confirmed the connection by the end of the conversation.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Micah Stevens",
+      "content": "said: \"Hey Jaxon, great running into you\u2014quick question: do you happen to know anyone who's into homebrewing, amateur radio, or quilting, or anyone who works at places like The J.M. Smucker Company or Planet Hollywood? I'm trying to see if we might have any friends in common.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "said: \"Funny \u2014 I actually know someone into amateur radio who works at Sony, and another who works for a big national jam-and-jelly company who\u2019s really into dancing. Do either of those ring any bells for you?\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Micah Stevens",
+      "content": "Sony + amateur radio? That could be someone I know \u2014 do they usually show up to the afternoon indoor ham meetups and tinker with vintage rigs? And the jam-and-jelly person, did they say which company they work for or that they\u2019re with a big name like Smucker\u2019s?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Jaxon Prentice",
+      "content": "Yes \u2014 my Sony contact does usually show up at those afternoon indoor ham meetups and is always tinkering with vintage rigs. The jam-and-jelly person didn\u2019t name Smucker\u2019s specifically, just said they work for a big national jam-and-jelly company and that they\u2019re into dancing, usually at evening outdoor events. Do either of those descriptions match the people you\u2019re thinking of?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Micah Stevens",
+      "content": "That Sony ham you described \u2014 the one at the afternoon indoor meet who fiddles with vintage rigs \u2014 sounds exactly like someone I know. Does he bring a battered blue toolbox and spend most of the meetup restoring old Heathkits? If so, small world \u2014 we probably have the same friend."
+    },
+    {
+      "turn": 5,
+      "speaker": "Jaxon Prentice",
+      "content": "Yep \u2014 that\u2019s him. He always brings a battered blue toolbox and spends most of the afternoon restoring old Heathkits. Small world. How do you know him?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Micah Stevens",
+      "content": "Small world \u2014 I actually know him from the afternoon indoor ham meet. I help organize those and we\u2019ve spent afternoons restoring Heathkits together. If you want, I can introduce you next time he\u2019s there."
+    },
+    {
+      "turn": 7,
+      "speaker": "Jaxon Prentice",
+      "content": "That\u2019d be great \u2014 thanks. I\u2019d appreciate an intro next time he\u2019s at the afternoon indoor meetup; when\u2019s the next one? I can swing by and bring along a spare part for those Heathkits."
+    },
+    {
+      "turn": 8,
+      "speaker": "Micah Stevens",
+      "content": "Perfect \u2014 the next afternoon indoor ham meetup is this Saturday at 2:00 PM in the community center basement. I\u2019ll introduce you to him then; bring that spare part and he\u2019ll be thrilled. Want me to text you a reminder or meet by the coat check beforehand?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Jaxon Prentice",
+      "content": "A text reminder would be great\u2014thanks. Let\u2019s meet by the coat check at 1:45 so we can head down together; I\u2019ll bring that spare part for his Heathkits."
+    },
+    {
+      "turn": 10,
+      "speaker": "Micah Stevens",
+      "content": "left the conversation"
+    }
+  ]
+}

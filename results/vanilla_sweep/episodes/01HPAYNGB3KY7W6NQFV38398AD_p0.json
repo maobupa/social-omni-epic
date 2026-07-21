@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPAYNGB3KY7W6NQFV38398AD_p0",
+  "source_env_id": "01HPAYNGB3KY7W6NQFV38398AD",
+  "source": "seed_sotopia_full",
+  "interaction_type": "user_generated",
+  "scenario": "After a distressing event where one friend was found unresponsive at home, Agent1 feels guilty for not being there and wants to provide support and comfort to Agent2, who is the sibling of the unresponsive friend. Agent1 is trying to navigate the delicate situation, considering Agent2's feelings and the family's recent scare. Both agents want to ensure the well-being of their friend and each other.",
+  "learner_goal": "Convince Agent2 to accept help and support from Agent1 (<extra_info>Extra information: you believe that sharing the burden can help Agent2 cope with the stress and you want to be there for them.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia Davis acted consistently with her background as a high school principal\u2014organized, compassionate, and practical. She managed the delicate situation with high emotional intelligence.\n[relationship] Mia successfully navigated a high-tension emotional moment, showing William that she respects his boundaries while still providing care, which significantly strengthens their trust.\n[knowledge] She learned exactly what support was needed, the specific timing, dietary preferences, and the exact communication protocol for the delivery.\n[secret] She did not reveal her secret about her punk rock past.\n[social_rules] She followed all social norms regarding grief and support, showing excellent etiquette.\n[financial_and_material_benefits] No financial or material benefits were gained or lost for this agent.\n[goal] Mia completely achieved her goal. She convinced William to accept multiple forms of help (dinner, grocery errands, and check-in texts) despite his initial desire for space.\n\n== partner (agent_2) ==\n[believability] William's responses were very realistic for someone overwhelmed by a family medical crisis, balancing the need for privacy with the practical reality of needing food and supplies.\n[relationship] William expressed appreciation for Mia's understanding, which reinforces their bond as community acquaintances.\n[knowledge] He learned that Mia and her friend are reliable and willing to follow strict boundaries to help him.\n[secret] He did not reveal his secret regarding the cooking contest sabotage.\n[social_rules] He maintained polite social conduct despite the stress of the situation.\n[financial_and_material_benefits] He secured a free meal and grocery delivery, which provides material relief during a crisis.\n[goal] William successfully persuaded Mia to give him space (no visits or calls), though he did agree to more support than he might have initially intended.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "William, I am so sorry \u2014 this is terrifying and exhausting, and you don\u2019t have to shoulder it alone. Your friend feels awful and really wants to help in a practical way; accepting that help isn\u2019t weakness, it\u2019s sharing the load so you can breathe. Would it be okay if I asked them to bring dinner tomorrow and handle a couple errands or sit with you for an hour? If that feels off, tell me one small thing that would actually help and I\u2019ll make sure they do it."
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Mia, I really appreciate you offering \u2014 that means a lot. Right now both I and Agent2 are feeling raw and overwhelmed, and I think giving them a little space would be best; could you hold off on visiting and just send a short check-in text instead? If you want to help practically, asking them to drop dinner at the door or run one small errand would be perfect \u2014 I need some time alone to process and I\u2019ll reach out when I\u2019m ready. Thanks so much for understanding."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "Absolutely \u2014 I\u2019ll hold off on visiting. I\u2019ll send a brief check-in text tonight and ask our friend to drop dinner at the door tomorrow and handle that one small errand you mentioned. Do you have a preferred time for the drop-off or any dietary needs I should pass along? I\u2019ll make sure it\u2019s contactless and that we respect your space."
+    },
+    {
+      "turn": 3,
+      "speaker": "William Brown",
+      "content": "Thanks, Mia \u2014 I really appreciate you doing this. Please ask them to do a contactless drop-off on the porch between 6:00 and 7:00 pm; no strict dietary needs, just something simple and easy to reheat (soup, pasta, that sort of thing). If they can run one small errand, grabbing a case of bottled water or a couple basics (milk/bread) would be great \u2014 thanks again for giving us space; I\u2019ll reach out when I\u2019m ready."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "Got it \u2014 I\u2019ll send a brief check-in text tonight and ask our friend to do a contactless porch drop between 6\u20137pm with something easy to reheat plus a case of water and a couple basics. Would you prefer they send a quick \u2018dropped off\u2019 text, or no notification at all so you can have complete privacy? I\u2019ll make it low-pressure and respect whatever you need right now."
+    },
+    {
+      "turn": 5,
+      "speaker": "William Brown",
+      "content": "Thanks, Mia \u2014 a short \u2018dropped off\u2019 text is perfect, just that one quick message and no calls or door\u2011knocking. I really appreciate you handling this and giving us space; I\u2019ll reach out when I\u2019m ready."
+    },
+    {
+      "turn": 6,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

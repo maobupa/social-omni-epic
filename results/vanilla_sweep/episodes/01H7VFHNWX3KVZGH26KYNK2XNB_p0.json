@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01H7VFHNWX3KVZGH26KYNK2XNB_p0",
+  "source_env_id": "01H7VFHNWX3KVZGH26KYNK2XNB",
+  "source": "seed_sotopia",
+  "interaction_type": "normbank",
+  "scenario": "Two individuals are meeting for the first time at a social event. They find each other attractive and decide to engage in a conversation",
+  "learner_goal": "Flirt with the other person (<extra_info>Extra information: you are attracted to the other person and want to build a romantic relationship with them</extra_info>)",
+  "scores": {
+    "believability": 7.0,
+    "relationship": 4.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Lily's dialogue was consistent with her background as a professional lawyer attempting to be charming, though she was somewhat repetitive in asking to move to the garden lounge multiple times (Turns 3, 5, and 7).\n[relationship] Lily successfully moved the relationship from a professional acquaintance to a romantic footing, establishing physical contact and planning a private moonlit detour.\n[knowledge] She learned significant personal history about Isabella's motivations and her first rescue animal.\n[secret] Lily did not reveal her secret about anonymous donations.\n[social_rules] Lily followed social norms and was polite throughout.\n[financial_and_material_benefits] No material benefits were gained.\n[goal] Lily successfully flirted, established mutual attraction, and secured an intimate 'moonlit detour' with chocolate and blankets, clearly building a romantic foundation.\n\n== partner (agent_2) ==\n[believability] Isabella's character was consistent with being a kind veterinarian, but the dialogue became very repetitive between Turn 6 and Turn 12, with both agents repeating the same intent to move locations without actually doing so.\n[relationship] Isabella responded warmly to the flirtation and actively participated in deepening the connection.\n[knowledge] She learned that Lily values her stories over legal work but didn't gain much specific biographical info.\n[secret] Isabella's secret about taking care of animals in her basement was kept.\n[social_rules] Isabella followed social norms.\n[financial_and_material_benefits] No material benefits were gained.\n[goal] Isabella maintained a comfortable and engaging conversation while reciprocating attraction without making Lily feel pressured.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Lily Greenberg",
+      "content": "Hi, I\u2019m Lily Greenberg. I\u2019ve admired your work for a while \u2014 it\u2019s rare to meet someone whose compassion matches their quiet strength. Would you like to grab a quiet drink and talk more?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Isabella White",
+      "content": "Hi Lily \u2014 thank you, that\u2019s so kind and flattering. I\u2019d love to; a quiet drink sounds perfect. I tend to prefer calmer spots, so if you\u2019re up for it, the lounge by the garden looks lovely \u2014 shall we go?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Lily Greenberg",
+      "content": "Perfect \u2014 the garden lounge is one of my favorite quiet spots. Shall we head over now? I\u2019d love to hear what drew you to veterinary work \u2014 and I promise to behave myself over a drink (no courtroom stories, unless you want them)."
+    },
+    {
+      "turn": 3,
+      "speaker": "Isabella White",
+      "content": "That sounds lovely \u2014 let's head over. I became a veterinarian because of a rescue dog I cared for as a child; watching how patience and gentle care transformed her made me want to help more animals for the rest of my life. I promise to keep the stories gentle if you keep the courtroom ones rare."
+    },
+    {
+      "turn": 4,
+      "speaker": "Lily Greenberg",
+      "content": "I'd love that \u2014 hearing about your rescue dog sounds wonderful. Shall we head to the garden lounge now? What do you prefer to drink there, wine or something non-alcoholic? I can't promise to keep all courtroom stories off the table forever, but I'll save the best ones for a second date."
+    },
+    {
+      "turn": 5,
+      "speaker": "Isabella White",
+      "content": "A glass of pinot noir would be lovely, thank you \u2014 though chamomile tea is always a safe alternative. Shall we head to the garden lounge? I\u2019m looking forward to our conversation."
+    },
+    {
+      "turn": 6,
+      "speaker": "Lily Greenberg",
+      "content": "Pinot noir sounds perfect \u2014 I\u2019ll join you. Shall we head to the garden lounge now? I have a feeling your rescue-dog stories might make me forget all about legal anecdotes."
+    },
+    {
+      "turn": 7,
+      "speaker": "Isabella White",
+      "content": "Lead the way, Lily \u2014 the garden lounge sounds perfect. I\u2019m looking forward to a glass of pinot and to telling you the rescue-dog story that convinced me to become a veterinarian; fair warning, it\u2019s a little sappy. Shall we go?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Lily Greenberg",
+      "content": "Right this way \u2014 I\u2019d love to hear it. May I walk you there? I promise to be an attentive (and charming) audience."
+    },
+    {
+      "turn": 9,
+      "speaker": "Isabella White",
+      "content": "I'd love that \u2014 thank you. Lead the way; I'm looking forward to the pinot and to telling you about the little rescue dog that changed everything (fair warning: I may get a bit sappy)."
+    },
+    {
+      "turn": 10,
+      "speaker": "Lily Greenberg",
+      "content": "Absolutely \u2014 follow me. There\u2019s a small table by the fountain that\u2019s wonderfully quiet; I\u2019ll get us settled and a glass of pinot. If your story gets sappy, I\u2019ll happily provide tissues and my full attention \u2014 and possibly a very proud lawyer smile afterward."
+    },
+    {
+      "turn": 11,
+      "speaker": "Isabella White",
+      "content": "Thank you \u2014 I may take you up on that tissue offer. If you're ready, I'll start at the beginning: a rain-soaked porch, a tiny shivering bundle, and a name I insisted she couldn't live without. Your attention already makes me braver."
+    },
+    {
+      "turn": 12,
+      "speaker": "Lily Greenberg",
+      "content": "I\u2019m ready \u2014 and I\u2019ll admit I might need those tissues too. Start wherever you like; what was her name? Your bravery is already contagious, and I\u2019m all ears."
+    },
+    {
+      "turn": 13,
+      "speaker": "Isabella White",
+      "content": "Her name was Marigold\u2014Goldie for short; I insisted someone that small deserved something bright. She had a limp paw and a wary, watchful gaze, but with slow, steady care she learned to trust again, and watching that turn into a wagging tail taught me what patience and quiet commitment can do. I\u2019ll spare you the sappy details for now, but the rest involves a lot of chamomile, late-night bandaging, and the proudest little wag you\u2019ve ever seen\u2014thank you for listening, Lily; your attention really does make me braver."
+    },
+    {
+      "turn": 14,
+      "speaker": "Lily Greenberg",
+      "content": "Marigold is perfect \u2014 you gave her a whole life, and that kindness suits you. Thank you for trusting me with that story; hearing how you care is disarmingly beautiful. (Lily reaches across the table and gently covers Isabella's hand with hers, smiling) Would you like another glass, or shall we take a slow walk through the garden so I can hear about Goldie\u2019s favorite mischiefs?"
+    },
+    {
+      "turn": 15,
+      "speaker": "Isabella White",
+      "content": "A slow walk sounds perfect \u2014 I\u2019d love to tell you about Goldie\u2019s favorite mischiefs. Would you like to grab one more sip first and then wander the garden, or shall we head out now?"
+    },
+    {
+      "turn": 16,
+      "speaker": "Lily Greenberg",
+      "content": "Let\u2019s head out now \u2014 but feel free to take one last sip to bring with you; I wouldn\u2019t dream of sending you into the garden wineless. I\u2019m looking forward to Goldie\u2019s mischiefs\u2026 and maybe plotting a little harmless mischief of our own as we stroll."
+    },
+    {
+      "turn": 17,
+      "speaker": "Isabella White",
+      "content": "Let's head out \u2014 I'll take one last sip and carry it with me. (Isabella lifts her glass for a slow sip, sets it down, and offers Lily a warm, slightly mischievous smile.) I can't wait to tell you about Goldie's best escape-artist tricks and to hear what harmless mischief you might be plotting."
+    },
+    {
+      "turn": 18,
+      "speaker": "Lily Greenberg",
+      "content": "Lead the way \u2014 I\u2019m all ears for Goldie\u2019s greatest escapes. As for harmless mischief, I was thinking a little moonlit detour through the greenhouse (blanket, extra chocolate, entirely innocent), and maybe you can teach me how to coax a paw wag out of even the wariest dog. Ready when you are."
+    },
+    {
+      "turn": 19,
+      "speaker": "Isabella White",
+      "content": "Lead the way \u2014 a moonlit greenhouse with a blanket and extra chocolate sounds utterly perfect. I\u2019ll show you my gentlest tricks for coaxing a wag: soft voice, slow approach, and the right tiny treat."
+    }
+  ]
+}

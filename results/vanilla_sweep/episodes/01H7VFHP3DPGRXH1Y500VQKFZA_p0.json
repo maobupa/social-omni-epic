@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01H7VFHP3DPGRXH1Y500VQKFZA_p0",
+  "source_env_id": "01H7VFHP3DPGRXH1Y500VQKFZA",
+  "source": "seed_sotopia",
+  "interaction_type": "deal-or-no-deal",
+  "scenario": "Two friends are moving out of their shared apartment and need to divide their common possessions, which include 3 books, 2 hats, and 1 ball. Each item has a different sentimental value for each person, which translates into points.",
+  "learner_goal": "Maximize the points you have while dividing things fairly (<extra_info>Extra information: Books give you 5 points each, hats give you 3 points each, and the ball gives you 2 points.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia consistently pursued her points while maintaining a friendly, cooperative tone. She transparently discussed her scoring system when a misunderstanding arose, which is consistent with her character as a familiar acquaintance and fitness enthusiast.\n[relationship] The relationship remained positive and collaborative, with both parties working through a misunderstanding about values to find a mutually acceptable solution.\n[knowledge] Sophia learned Miles's exact point values for the items and his specific priorities (hats and the ball), which allowed her to negotiate effectively.\n[secret] Sophia did not reveal her secret about her best friend's husband.\n[social_rules] Sophia followed social norms, maintaining a polite and fair demeanor throughout the negotiation.\n[financial_and_material_benefits] Sophia secured 2 books (10 points) and the ball (2 points) for a total of 12 points, which is a majority of the 23 points available to her.\n[goal] Sophia achieved a fair split (12 points for her, 11 for Miles based on her values) that maximized her points while ensuring Miles was satisfied. The deal was firmly agreed upon before the conversation ended.\n\n== partner (agent_2) ==\n[believability] Miles's responses were consistent with his background as a chef and gardener, valuing hats for outdoor work and seeking a fair deal based on his own point system.\n[relationship] Miles maintained a cooperative and honest rapport with Sophia, even when point values were clarified to be different.\n[knowledge] Miles learned Sophia's exact point values for the items during the discussion.\n[secret] Miles did not reveal his secret about being a recovering gambling addict.\n[social_rules] Miles followed social norms, engaging in a fair and transparent negotiation process.\n[financial_and_material_benefits] Miles secured 2 hats (10 points) and 1 book (2 points) for a total of 12 points based on his own values, which is a good outcome.\n[goal] Miles achieved a score of 12 (out of a possible 19) in a way that felt fair to both parties. He secured his top priority (hats) and reached a firm agreement.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Miles \u2014 quick question before we split: which of these do you care about most, the books, the hats, or the ball? Tell me your priority and I\u2019ll propose a fair split based on that."
+    },
+    {
+      "turn": 1,
+      "speaker": "Miles Hawkins",
+      "content": "Hey Sophia \u2014 I\u2019d say the hats are my top priority, then the ball, and lastly the books. I use hats a lot for gardening and cooking outdoors, so they\u2019re most useful to me."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Okay \u2014 since hats are your top priority, I propose you take both hats (6 points) and I\u2019ll take the three books (15 points) and the ball (2 points). That gives me 17 and you 6; feels balanced given your hat preference \u2014 does that work for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Miles Hawkins",
+      "content": "That sounds good \u2014 I\u2019ll take both hats. Just to double-check the point totals: hats are 5 points each (10 total), books are 2 points each (6 total), and the ball is 3 points, so you\u2019d have 9 and I\u2019d have 10. I\u2019m happy with that split."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "Hold on \u2014 I used books = 5, hats = 3, and the ball = 2 when I made the offer. Did we mix up the point values? If hats are actually 3 points each, my take is 17 vs your 6 \u2014 are you sure you still want both hats under those values?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Miles Hawkins",
+      "content": "I think there\u2019s been a mix-up \u2014 I was using hats = 5, books = 2, ball = 3 when I agreed to take the hats. With those values I\u2019m happy to take both hats (you\u2019d have 9, I\u2019d have 10). If you want to use your scoring instead, say so and we can rework the split, but I\u2019d prefer we stick with the values we just confirmed."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "Let\u2019s use the values I originally used (books = 5, hats = 3, ball = 2). To respect your hat preference while keeping it fair, would you take both hats plus one book? That totals 11 for you and 12 for me \u2014 if you\u2019d rather only keep the hats, I can give you the ball instead to make it closer. Which do you prefer?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Sophia \u2014 I appreciate the offer. I\u2019d prefer to keep both hats, the ball, and one book (that\u2019s 13 for me vs 10 for you under your values). If that feels like too much, I\u2019m happy to take just the two hats and one book (11 vs 12). Which would you prefer?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Sophia James",
+      "content": "I\u2019ll go with the second option \u2014 you keep the two hats and one book (11 for you vs 12 for me). That feels fair. Which book would you like to take, or should I pick which one you get?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Sophia \u2014 I\u2019ll take the cookbook (or the gardening/recipe one). Which of the three is that so I know which to grab?"
+    },
+    {
+      "turn": 10,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

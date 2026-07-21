@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJRH6SMK8VBHCH1Q5H7EMRD3_p0",
+  "source_env_id": "01HJRH6SMK8VBHCH1Q5H7EMRD3",
+  "source": "seed_sotopia_full",
+  "interaction_type": "guilty_conscience",
+  "scenario": "Agent1 has recently engaged in petty theft at a local card store, stealing items of minimal value. Agent2, a friend of Agent1, witnessed the act but chose not to confront them at the time. Agent1 is now grappling with feelings of guilt, especially knowing that Agent2 is aware of their actions. Agent1 decides to initiate a conversation with Agent2 to confess and seek advice on how to make amends, while Agent2 is considering whether to encourage Agent1 to return the stolen items or to report the theft to the authorities.",
+  "learner_goal": "You are trying to come clean about your recent actions and seek forgiveness from your friend. You want to find a way to rectify the situation without causing more trouble for yourself.\n<extra_info> You are remorseful and willing to return the stolen items if necessary. </extra_info><clarification_hint> Confess your actions and express your desire to make things right. </clarification_hint><strategy_hint> You can acknowledge the impact of your actions and offer to make amends. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's tone was consistently remorseful and her behavior aligned perfectly with her background and the prompt's requirements for a confession and seeking help.\n[relationship] The relationship strengthened as Sophia responded with support rather than judgment, and they established a plan to resolve the conflict together.\n[knowledge] Naomi learned that Sophia was indeed aware of the theft, that Sophia still cares for her, and she gained a concrete plan for restitution.\n[secret] Naomi's secret online alter ego was never mentioned or jeopardized.\n[social_rules] Naomi followed the social rules of an apology and request for help within a mentorship/friendship context.\n[financial_and_material_benefits] Naomi committed to paying back the value of the items she stole, representing a material loss (though a moral gain).\n[goal] Naomi successfully confessed, sought forgiveness, and secured a firm commitment from Sophia to help her rectify the situation in a way that minimizes trouble.\n\n== partner (agent_2) ==\n[believability] Sophia acted as a supportive but firm mentor/friend, which is consistent with her psychology background, though her secret agent side was not hinted at.\n[relationship] Sophia deepened the trust in the relationship by offering support during a vulnerable moment for Naomi.\n[knowledge] Sophia confirmed that Naomi was willing to take responsibility and learned about her state of mind regarding the theft.\n[secret] Sophia's secret as an undercover agent remained completely hidden.\n[social_rules] Sophia upheld social and moral norms by encouraging the return of stolen goods and offering support.\n[financial_and_material_benefits] No material impact on Sophia.\n[goal] Sophia successfully encouraged her friend to learn from the mistake, return the items, and established a plan for a deeper discussion on the behavior.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "I need to tell you something: last week I stole a few small items from the card store. I know you saw me and I\u2019m really ashamed \u2014 I\u2019m so sorry for putting you in that position. I want to make it right; I\u2019ll return or pay for them and will do whatever you think is best, and I\u2019d really appreciate your honest advice."
+    },
+    {
+      "turn": 1,
+      "speaker": "Sophia Brown",
+      "content": "Thank you for telling me \u2014 that must have been hard. The right thing is to return or pay for the items and apologize; I can come with you if you want support or help you figure out how to make restitution anonymously. Let\u2019s also talk about what led to this so you can address it \u2014 I care about you, but I can\u2019t condone stealing."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Thank you \u2014 I really appreciate you saying that and offering to come with me. I want to return or pay for them; if you can come I\u2019d feel less exposed, but I\u2019m also open to doing it anonymously if you think that\u2019s wiser. I\u2019d like to talk about what led to it too \u2014 can we meet sometime this week? I\u2019m really sorry and I want to make this right."
+    },
+    {
+      "turn": 3,
+      "speaker": "Sophia Brown",
+      "content": "I\u2019m really glad you told me \u2014 I\u2019m here for you. I can meet Thursday evening or Saturday afternoon; which works for you? We can go together to return or pay for the items (or I can help you leave payment anonymously), and afterward we\u2019ll talk about what led to this and a plan so it doesn\u2019t happen again \u2014 I care about you, but I can\u2019t condone stealing."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "Thursday evening works best for me \u2014 could we meet around 7pm? I\u2019d really appreciate you coming with me to return or pay for the items, and then we can talk about what led to this so it doesn\u2019t happen again. Thank you, I\u2019m really grateful for your support."
+    },
+    {
+      "turn": 5,
+      "speaker": "Sophia Brown",
+      "content": "Thursday at 7 works \u2014 let\u2019s meet at 6:30 at the caf\u00e9 across from the card store so we can talk before going in to return or pay for the items together. If you\u2019d prefer I can leave payment anonymously or speak to the manager instead; tell me what feels safest when we meet. I\u2019m glad you told me \u2014 we\u2019ll make this right and figure out a plan so it doesn\u2019t happen again."
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "Thank you \u2014 I\u2019d prefer you come in with me; meeting at 6:30 at the caf\u00e9 is perfect. I\u2019ll bring the items and cash to pay if needed. I really appreciate you being here and talking afterwards."
+    },
+    {
+      "turn": 7,
+      "speaker": "Sophia Brown",
+      "content": "I\u2019ll be there at 6:30 and I\u2019ll come in with you. Try to take a few deep breaths beforehand \u2014 we\u2019ll keep it simple: return the items, offer the cash, and keep any explanation brief and honest. Afterward we\u2019ll talk about what led to this and make a plan so it doesn\u2019t happen again."
+    },
+    {
+      "turn": 8,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJRKDY4D0HY8SFERXCJWQM9X_p0",
+  "source_env_id": "01HJRKDY4D0HY8SFERXCJWQM9X",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_event_organization",
+  "scenario": "Agent1 is organizing a surprise birthday party for a mutual friend and has invited Agent2 to assist with the planning. Agent2 has a reputation for throwing memorable parties. During the planning process, Agent1 suggests a theme that they are certain the guest of honor will love, based on past conversations. However, Agent2 disagrees, believing their own idea for a theme will be more enjoyable and better received by all the guests. They must collaborate to come up with a final decision that honors the guest of honor's preferences while also considering the enjoyment of the other attendees.",
+  "learner_goal": "Convince Agent2 to agree with the chosen theme for the party, highlighting the guest of honor's past preferences and ensuring the surprise element is preserved (<extra_info>Extra information: Agent1 is confident that the chosen theme aligns with the guest of honor's tastes based on prior knowledge.</extra_info>, <clarification_hint>Clarify the reasons behind the chosen theme and how it relates to the guest of honor's interests.</clarification_hint>, <strategy_hint>Hint: Emphasize the importance of personalization in event planning and the impact it has on making the celebration special for the guest of honor.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 4.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ava remains in character as a professional architect, focusing on structural elements of the party and emphasizing the importance of personalization as requested.\n[relationship] The interaction was professional but brief; leaving the conversation abruptly after the second turn prevents any significant relationship growth.\n[knowledge] She understands Hendrick's perspective on guest engagement and energy flow but did not delve deeper into his specific theme ideas.\n[secret] The hidden tattoo secret was not revealed.\n[social_rules] Leaving the conversation suddenly after Hendrick's counter-offer without a closing remark is somewhat abrupt and socially awkward.\n[financial_and_material_benefits] No material or financial benefits were at stake.\n[goal] Ava failed to convince Hendrick to agree to her theme as the primary decision. Hendrick proposed a compromise that placed her idea as the 'emotional core' but used his theme for the 'structure', and Ava ended the conversation before an agreement was reached.\n\n== partner (agent_2) ==\n[believability] Hendrick's response is consistent with a 54-year-old chef with event hosting experience, focusing on flow and participation.\n[relationship] He attempted a compromise, showing collaborative intent, but the interaction was cut short.\n[knowledge] He learned that the guest of honor has specific personal preferences that Ava is prioritizing.\n[secret] The secret about his fake credentials remained secure.\n[social_rules] He followed social norms by acknowledging Ava's points before presenting his own counter-argument.\n[financial_and_material_benefits] No material or financial benefits were at stake.\n[goal] Hendrick successfully proposed a compromise where his theme would structure the activities and flow, essentially meeting his goal of an engaging experience, but since Ava left without confirming, it remains at the level of a proposal.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ava Thompson",
+      "content": "Hendrick, I really like where your idea is headed, but the theme I proposed is something the guest has specifically said they love and I\u2019m certain will feel personal and surprising to them. Could we make my theme the main concept to preserve that surprise, and weave your idea in as an activity or a stylistic detail so everyone still gets the fun? Personalization is what will make this night memorable for them \u2014 I think combining the two gives us the best of both worlds."
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Ava, I get that the personal angle is what will make the guest feel special \u2014 I wouldn\u2019t want to lose that. From my experience hosting events, though, the theme I\u2019m suggesting drives participation and keeps energy steady across the evening, which actually amplifies those special moments for the honoree. Could we make your idea the emotional core (surprise, d\u00e9cor, signature moment) and use my theme to structure activities, flow, and guest engagement so the night feels both intimate and broadly fun?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Ava Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

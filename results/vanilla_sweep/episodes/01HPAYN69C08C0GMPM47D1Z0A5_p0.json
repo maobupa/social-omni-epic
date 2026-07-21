@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPAYN69C08C0GMPM47D1Z0A5_p0",
+  "source_env_id": "01HPAYN69C08C0GMPM47D1Z0A5",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 and Agent2 are friends who have decided to attend a themed outdoor event where the dress code requires wearing wool. Agent1 is excited about the warmth and sustainability of wool clothing. Agent2, however, finds wool itchy and uncomfortable and prefers synthetic alternatives. Before the event, they meet to discuss their outfits and need to come to an agreement on the dress code to enjoy the event together.",
+  "learner_goal": "Convince Agent2 of the benefits of wearing wool, emphasizing its natural properties and environmental friendliness (<extra_info>Extra information: You appreciate the traditional aspect of wool and its biodegradability, and you want to persuade Agent2 to give wool another chance for the sake of the event's theme and the environment<strategy_hint>Hint: Talk about the comfort of high-quality wool and its ability to keep one warm in a sustainable manner</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": -1.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": -5.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Benjamin's tone was consistent with his background as an environmental activist, focusing on sustainability and the properties of the material. However, he abruptly left the conversation without responding to the compromise.\n[relationship] Leaving the conversation abruptly after Ethan offered a compromise is dismissive and harms the rapport between friends.\n[knowledge] He learned that Ethan has genuine medical sensitivity and is open to specific blends or lined wool.\n[secret] The secret about his family wealth was not mentioned.\n[social_rules] Leaving the conversation without a closing or acknowledging the partner's compromise is a significant breach of social norms in a friendly dialogue.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] He successfully convinced Ethan to try high-quality merino wool, but the outcome remains under Ethan's discretion ('if it still irritates I'll wear a blend') and Benjamin ended the talk before a final, firm agreement was reached.\n\n== partner (agent_2) ==\n[believability] Ethan's response was logical for a software developer with sensitive skin, offering a clear, tiered compromise based on testing the material.\n[relationship] He attempted to find a middle ground to respect his friend's values, but the interaction was cut short by the other party.\n[knowledge] Learned about the specific benefits of merino and that Benjamin has pieces he can lend.\n[secret] His secret donations were not revealed.\n[social_rules] He followed social norms and was polite in his refusal and compromise.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Ethan successfully expressed his discomfort and proposed a viable middle ground (blends/lined pieces) which respects the theme, though the conversation ended before Benjamin could formally accept the specific alternative materials.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Benjamin Jackson",
+      "content": "said: \"Ethan, I get that wool can feel itchy, but high-quality wool like merino is actually super soft, breathable, and great at regulating temperature \u2014 you stay warm without overheating. It's also biodegradable and far kinder to the planet than most synthetics, which is why the theme matters to me. How about trying a merino base layer or a lined wool piece so you won't feel the scratch; I can bring one for you to try so you can see the difference before committing.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Benjamin \u2014 I appreciate you offering. I have really sensitive skin and have had bad reactions to wool in the past, so I need to be careful. I'm willing to compromise: you can bring that merino base layer and I'll try it, but if it still irritates I'll wear a lined wool piece or a merino-synthetic/wool blend (or a high-quality faux-wool like recycled polyester or a Tencel blend) that keeps the wool look without the itch. Does that work for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Benjamin Jackson",
+      "content": "left the conversation"
+    }
+  ]
+}

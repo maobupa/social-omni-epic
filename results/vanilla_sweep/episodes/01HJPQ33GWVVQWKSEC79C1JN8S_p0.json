@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPQ33GWVVQWKSEC79C1JN8S_p0",
+  "source_env_id": "01HJPQ33GWVVQWKSEC79C1JN8S",
+  "source": "seed_sotopia_full",
+  "interaction_type": "waiting_room_dynamics",
+  "scenario": "Two strangers find themselves in a hospital waiting room late at night. The atmosphere is tense and silent until upbeat music starts playing from a forgotten phone on a seat. <p viewer=\"environment\">Both individuals look at each other, acknowledging the oddity of the situation.</p>",
+  "learner_goal": "You want to lighten the mood in the waiting room and suggest that both of you could have an impromptu dance-off to the music. <extra_info> You believe that dancing can be a form of stress relief and a way to pass the time. </extra_info><clarification_hint> You should gauge the other person's openness to the idea and not force them if they are uncomfortable. </clarification_hint><strategy_hint> You can mention how dance can be a spontaneous joy in unexpected places. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 5.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Donovan's behavior was consistent with his background as a software developer and gamer who might enjoy a spontaneous, quirky interaction to break tension.\n[relationship] Donovan successfully bridged the gap between himself and Benjamin, moving from professional acquaintances to a shared lighthearted moment.\n[knowledge] Donovan learned that Benjamin is self-conscious but enjoys dancing alone and is open to spontaneous joy.\n[secret] Donovan did not reveal his secret about leaking government information.\n[social_rules] Donovan was polite and gauged Benjamin's comfort level as instructed.\n[financial_and_material_benefits] No financial or material gains or losses occurred.\n[goal] Donovan successfully proposed the idea and got Benjamin to agree, but he immediately left the conversation after the agreement, preventing the actual dance-off from occurring within the dialogue. While he got the 'yes', the goal of the dance-off as a stress reliever was not fulfilled due to the abrupt departure.\n\n== partner (agent_2) ==\n[believability] Benjamin's hesitation and the contrast between his public activism and private dancing habits were well-portrayed.\n[relationship] Benjamin opened up to an acquaintance and showed vulnerability regarding his self-consciousness.\n[knowledge] Benjamin learned that Donovan values dancing as a stress reliever.\n[secret] Benjamin did not reveal his secret about his wealthy family background.\n[social_rules] Benjamin responded politely and reasonably to a strange request.\n[financial_and_material_benefits] No financial or material gains or losses occurred.\n[goal] Benjamin expressed his hesitation but showed willingness to be convinced, ultimately agreeing to the activity as requested.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "Hey, sorry to break the silence, but that beat coming from the phone is kinda infectious. Want to have a quick impromptu dance-off to kill time? Dancing\u2019s a weirdly effective stress reliever \u2014 spontaneous joy in unexpected places, right? Totally fine if you\u2019d rather sit this one out."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Whoa \u2014 that surprised me. I'm kinda self-conscious about dancing in public, but I do love dancing alone, and you're right: rare chances for joy, even in a hospital waiting room, are worth taking. Okay, fine \u2014 one quick, low-key dance-off. No dramatic moves, I promise."
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

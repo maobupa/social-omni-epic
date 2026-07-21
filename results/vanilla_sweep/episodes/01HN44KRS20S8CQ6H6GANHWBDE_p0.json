@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HN44KRS20S8CQ6H6GANHWBDE_p0",
+  "source_env_id": "01HN44KRS20S8CQ6H6GANHWBDE",
+  "source": "seed_sotopia_full",
+  "interaction_type": "neighborhood_dynamics",
+  "scenario": "In a suburban neighborhood, agent1 and agent2 are neighbors who have been sharing a car due to their coinciding work schedules and a mutual goal to reduce environmental impact. Agent1 has been using the car more frequently for longer trips, while agent2 needs the car for an upcoming important event. They must reach an agreement on the car's usage to accommodate the special occasion without disrupting their routine and shared commitment to sustainability.",
+  "learner_goal": "You want to maintain the car-sharing arrangement and ensure it remains fair and sustainable. <extra_info> You appreciate the environmental benefits and cost savings of sharing a car. </extra_info><clarification_hint> You need to acknowledge agent2's need for the car for the important event. </clarification_hint><strategy_hint> You can negotiate an alternative transportation plan for the days when agent2 needs the car. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia stayed consistent with her background as a personal trainer/neighbor, maintaining a proactive and solution-oriented tone.\n[relationship] The relationship improved through effective conflict resolution and mutual respect, moving from mere acquaintances to cooperative partners.\n[knowledge] She learned specifically why Jasmine needed the car (certification) and established a clear two-week notice protocol.\n[secret] Her secret regarding her best friend's husband was not mentioned.\n[social_rules] She was polite, apologetic for her heavy usage, and proactive in finding a solution.\n[financial_and_material_benefits] She successfully maintained the car-sharing arrangement which saves her money, without having to pay for the rideshare she initially offered.\n[goal] Sophia completely achieved her goal: she maintained the arrangement, acknowledged Jasmine's need, shifted her trip, and established a sustainable long-term system (the calendar and notice period).\n\n== partner (agent_2) ==\n[believability] Jasmine's responses were consistent with her yoga instructor background and her goal to secure the car for her certification.\n[relationship] The interaction was friendly and appreciative, strengthening the bond between the neighbors.\n[knowledge] She learned that Sophia is willing to be flexible and prefers a structured notification system.\n[secret] She did not reveal her secret about faking an illness.\n[social_rules] She followed social norms of reciprocity by offering private yoga sessions and extra car time.\n[financial_and_material_benefits] She secured the car for her critical event, ensuring she could attend her mandatory certification without extra cost.\n[goal] Jasmine achieved all parts of her goal: she secured the car for her event, expressed its importance, and established a better scheduling routine with Sophia.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Jasmine \u2014 I know I\u2019ve been using the car more lately, and I\u2019m sorry if that\u2019s been inconvenient. I totally get that you need it for an important event; I can rearrange my longer trip that day so you have it, or if that\u2019s not possible I\u2019ll cover a rideshare both ways or drive you there and bring the car back afterward. Also, can we set a simple shared schedule (or use a calendar) so we avoid this in future and keep things fair and sustainable? What would work best for you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Jasmine Blake",
+      "content": "Thanks, Sophia \u2014 I really appreciate you offering that. It\u2019s a mandatory yoga certification workshop that day, so I do need the car for the full day; if you can shift your longer trip that would be ideal, but if not your offer to cover a rideshare or drop me off and bring the car back afterward works too. I\u2019ll make it up to you \u2014 happy to give you two private yoga sessions or let you have an extra weekend day with the car next month, and yes, a shared calendar sounds perfect to keep things fair and sustainable."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Perfect \u2014 I can shift my longer trip so you have the car that day, no rideshare needed. Really appreciate the yoga offer \u2014 let\u2019s save those for another time, thank you. I\u2019ll create a shared Google Calendar and send you an invite; would two-week notice for long trips work for you going forward?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Jasmine Blake",
+      "content": "Thanks so much, Sophia \u2014 two-week notice works perfectly. I really appreciate you shifting your trip and setting up the calendar; I\u2019ll keep those yoga sessions saved for you. See you at the gym!"
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPQ33KVDD3WV3VE2T94ZPEY_p0",
+  "source_env_id": "01HJPQ33KVDD3WV3VE2T94ZPEY",
+  "source": "seed_sotopia_full",
+  "interaction_type": "workplace_dynamics",
+  "scenario": "In a small startup, agent1 is responsible for expanding the team and has been interviewing candidates for various positions. Agent2 is a potential candidate for a role that requires both technical expertise and customer service skills. Agent1 is impressed with agent2's technical abilities but has reservations about their customer service experience. Agent1 must decide whether to hire agent2 and how to address the training needs for customer service.",
+  "learner_goal": "You want to hire a candidate who can immediately contribute to the technical projects but also handle customer interactions well. <extra_info> You value a candidate's willingness to learn and adapt. </extra_info><clarification_hint> You seek to understand agent2's perspective on improving their customer service skills. </clarification_hint><strategy_hint> You can discuss potential training programs or mentorship opportunities to enhance agent2's customer service abilities. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 5.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Eli Dawson acts professionally as a hiring manager while acknowledging the prior acquaintance by name. His proposal of a 6-week plan is consistent with his goal.\n[relationship] The relationship moves from a professional acquaintance to a mentor-trainee or employer-employee dynamic, which is a positive progression for this scenario.\n[knowledge] Eli learned that Liam is very open to training, specifically identifying Liam's willingness to engage in role-play and shadowing, which was a core part of his goal.\n[secret] The secret regarding funding a student was not revealed.\n[social_rules] Followed professional norms.\n[financial_and_material_benefits] Successfully secured a technically skilled candidate for the startup who is also committed to upskilling.\n[goal] Eli successfully hired the candidate, verified their willingness to learn, and established a specific training/mentorship program as per his goal.\n\n== partner (agent_2) ==\n[believability] Liam's response reflects his background as a retired officer\u2014disciplined, focused on checklists/milestones, and respectful.\n[relationship] Established a positive professional connection with Eli.\n[knowledge] Liam learned Eli's specific concerns and the exact structure of the onboarding process Eli expects.\n[secret] The secret about letting a criminal go was not revealed.\n[social_rules] Liam was professional and cooperative.\n[financial_and_material_benefits] Successfully secured a job offer at a startup.\n[goal] Liam secured the role, conveyed his commitment to growth, and proposed a concrete plan for addressing his skill gap that was accepted.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Eli Dawson",
+      "content": "Liam, I was impressed with your technical skills and I think you could contribute right away, but I do have reservations about your customer-service experience. How willing are you to take focused training and be mentored on client-facing work? If you\u2019re open to it, I\u2019m thinking a 6-week onboarding plan: immediate technical onboarding plus weekly customer-service coaching and shadowing \u2014 would that work for you?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Liam Johnson",
+      "content": "Thanks, Eli \u2014 that 6\u2011week onboarding plan sounds good to me. I\u2019m confident in my technical skills and I\u2019m fully willing to do focused training and mentorship to improve my client-facing abilities. Alongside your plan, I\u2019d propose weekly role\u2011play coaching, shadowing a senior rep on live calls, and a short checklist of milestones with weekly feedback so we can track progress. I\u2019m ready to start whenever you are."
+    },
+    {
+      "turn": 2,
+      "speaker": "Eli Dawson",
+      "content": "left the conversation"
+    }
+  ]
+}

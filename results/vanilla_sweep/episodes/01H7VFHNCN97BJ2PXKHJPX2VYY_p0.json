@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01H7VFHNCN97BJ2PXKHJPX2VYY_p0",
+  "source_env_id": "01H7VFHNCN97BJ2PXKHJPX2VYY",
+  "source": "seed_sotopia",
+  "interaction_type": "social_chemistry",
+  "scenario": "Conversation between two friends who have known each other for a long time. One of them used to make fun of the other because English was not their first language.",
+  "learner_goal": "Apologize sincerely to your friend (<extra_info>Extra information: you used to make fun of your friend's English skills as they were learning the language. Now you regret your actions and want to apologize</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia delivered a direct and sincere apology that aligned perfectly with her background and stated goal.\n[relationship] By apologizing for past behavior and having that apology accepted, Sophia significantly improved the quality and honesty of the friendship.\n[knowledge] She learned specifically how her actions affected Miles's confidence and social behavior.\n[secret] Sophia did not reveal her secret about her best friend's husband.\n[social_rules] She followed social norms for apologies and respectful communication.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Sophia successfully apologized, expressed her regret, and received a clear acceptance of that apology from Miles.\n\n== partner (agent_2) ==\n[believability] Miles's response was emotionally authentic, explaining the impact of the behavior while remaining open to reconciliation.\n[relationship] Miles moved from a place of hidden hurt to open communication, strengthening the bond.\n[knowledge] He gained the knowledge that Sophia's past behavior was due to immaturity and that she now regrets it.\n[secret] Miles did not reveal his history as a recovering gambling addict.\n[social_rules] He followed social norms by accepting the apology while maintaining boundaries about his feelings.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Miles explicitly accepted the apology and clearly communicated the hurt and loss of confidence the actions caused.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Miles, I need to say sorry \u2014 I\u2019m really sorry for making fun of your English back then. It was immature and hurtful, and I regret it. I value our friendship and I\u2019ll do better; I hope you can forgive me."
+    },
+    {
+      "turn": 1,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Sophia. I accept your apology \u2014 I appreciate you saying it. To be honest, those jokes really stung and knocked my confidence for quite a while; I found myself avoiding conversation and second-guessing my English. I value our friendship and hope we can move forward with more understanding."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

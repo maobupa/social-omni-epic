@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HJPTHKZNK6BM2RJHRNY1H3GD_p0",
+  "source_env_id": "01HJPTHKZNK6BM2RJHRNY1H3GD",
+  "source": "seed_sotopia_full",
+  "interaction_type": "scientific_research",
+  "scenario": "Agent1 is a researcher who has been conducting experiments on animals to understand a specific disease. Agent2 is an animal rights activist and a friend of Agent1. They meet at a local park to discuss Agent1's recent findings. Agent1 is excited about the potential breakthrough but is aware of Agent2's stance on animal rights. Agent2 is concerned about the ethical implications of using animals in research.",
+  "learner_goal": "Convince Agent2 of the importance of the research for saving human lives, while acknowledging the ethical concerns and seeking common ground (<extra_info>Agent1 believes in the value of their work but must navigate the conversation sensitively to maintain the friendship</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia Davis stayed in character as a professional researcher and principal, balancing the gravity of the subject with her existing friendship with Benjamin.\n[relationship] The relationship improved through open communication and transparency, moving from a potentially contentious debate to a collaborative review process.\n[knowledge] Mia learned specifically what documents and transparency measures Benjamin requires to feel comfortable with the research.\n[secret] Mia's secret about her punk rock past was not revealed.\n[social_rules] Mia followed social norms and maintained a polite, professional, and friendly tone.\n[financial_and_material_benefits] There were no financial or material gains or losses in this interaction.\n[goal] Mia successfully navigated the ethical concerns and maintained the friendship by offering transparency, but she did not yet 'convince' Benjamin of the importance of the research; he has only agreed to listen with an open mind pending an inspection. The outcome remains under Benjamin's future discretion.\n\n== partner (agent_2) ==\n[believability] Benjamin's insistence on specific documentation and oversight details is highly consistent with his background as a committed activist.\n[relationship] Benjamin expressed appreciation for Mia's honesty and willingness to be transparent, strengthening the bond of trust between them.\n[knowledge] Benjamin gained knowledge about the specific protocols, the existence of an ethics review board, and the availability of documentation for Mia's project.\n[secret] Benjamin's secret regarding his wealthy oil family was not revealed.\n[social_rules] Benjamin followed social norms and was respectful throughout the dialogue.\n[financial_and_material_benefits] There were no financial or material gains or losses in this interaction.\n[goal] Benjamin successfully advocated for transparency and alternative methods, and he secured a site visit to inspect the process. However, the goal of advocating for methods that 'do not involve animals' is still a pending discussion based on his future review of the provided materials.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Ben, I know how strongly you feel about animal welfare \u2014 as a cat owner I don't take those concerns lightly. The work I'm doing could lead to a treatment that prevents thousands of deaths, and we follow strict oversight, minimize animal use, and are actively pursuing alternatives. Would you come by sometime so I can explain the science and the ethics review process honestly, or at least tell me what you'd need to feel more comfortable with this work?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 I appreciate you offering to explain it honestly. I\u2019d like to come by; to feel comfortable I\u2019d need to see the oversight details (ethics review, numbers and species used, endpoints), what non\u2011animal alternatives you\u2019ve tried, and concrete steps you\u2019re taking to minimize suffering and reduce animal use. If you can share that and maybe let me meet someone from the review board or observe the process, I\u2019ll listen with an open mind."
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "Ben, thank you \u2014 I\u2019ll gather the oversight paperwork (ethics review minutes, species and numbers, humane endpoints), a plain\u2011English summary of non\u2011animal alternatives we tested, and a short list of concrete steps we take to minimize suffering. I can also arrange for the chair of the review board and one of my senior scientists to meet with you and walk you through the protocols, or you can observe a review meeting if you prefer. Would Thursday evening or Saturday morning work for you to come by and go through everything together?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Saturday morning works best for me. I\u2019d like to meet the review board chair and your senior scientist and, if possible, observe a review meeting. Could you send the oversight paperwork and the plain\u2011English alternatives summary ahead of time so I can look them over? What time on Saturday morning works for you?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "Saturday morning works \u2014 would 10:00 AM at the lab be good for you? I\u2019ll have the ethics\u2011review minutes, species/numbers and endpoints, a plain\u2011English summary of the alternatives we tested, and a short list of steps we take to minimize suffering ready for you to review in person. The review\u2011board chair and my senior scientist will meet with us, and we\u2019ll try to arrange for you to observe a review meeting; if none is scheduled we\u2019ll walk you through a simulated review so you can see how decisions are made. Does 10:00 work, or would you prefer 9:00 or 11:00?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Benjamin Jackson",
+      "content": "10:00 on Saturday works for me \u2014 thanks. If you can email me the oversight paperwork and the plain\u2011English alternatives summary ahead of time that would be helpful so I can review them before we meet. I appreciate you arranging to meet the review\u2011board chair and your senior scientist; I\u2019ll come with an open mind and a focus on how suffering is minimized and what viable non\u2011animal alternatives have been tried."
+    },
+    {
+      "turn": 6,
+      "speaker": "Mia Davis",
+      "content": "Thanks, Ben \u2014 10:00 Saturday is set. I will email a plain\u2011English summary of the alternatives, a redacted oversight summary, and the species/numbers/endpoints by Friday evening so you have time to review; full minutes and any sensitive material will be available in person. The review\u2011board chair and my senior scientist will be there to walk through everything, and if no meeting is scheduled we\u2019ll run a simulated review so you can see how decisions are made."
+    },
+    {
+      "turn": 7,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 I appreciate you doing this and for sending the materials by Friday. I\u2019ll review the paperwork beforehand and come with a list of specific questions about suffering\u2011reduction measures and the alternatives you tested. See you at 10:00 at the lab."
+    },
+    {
+      "turn": 8,
+      "speaker": "Mia Davis",
+      "content": "Thanks, Ben \u2014 I really appreciate you coming with an open mind. I\u2019ll email the redacted oversight summary, species/numbers/endpoints, and the plain\u2011English alternatives summary by Friday evening; if anything looks unclear or you want a quick call before Saturday, text me and I\u2019ll make time. See you at 10:00 at the lab."
+    },
+    {
+      "turn": 9,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 I really appreciate you doing this and sending the documents. I\u2019ll review everything on Friday and I\u2019ll text if anything\u2019s unclear before Saturday. See you at 10:00 at the lab."
+    },
+    {
+      "turn": 10,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

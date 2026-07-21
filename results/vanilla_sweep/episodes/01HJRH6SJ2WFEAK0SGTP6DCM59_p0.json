@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJRH6SJ2WFEAK0SGTP6DCM59_p0",
+  "source_env_id": "01HJRH6SJ2WFEAK0SGTP6DCM59",
+  "source": "seed_sotopia_full",
+  "interaction_type": "health_awareness",
+  "scenario": "After a routine dental check-up, Agent1 is inspired to maintain better oral hygiene and decides to share the importance of this with their roommate, Agent2, who is known to neglect dental care. Agent1 aims to encourage Agent2 to adopt a more consistent dental hygiene routine. The agents are roommates and have an established dynamic, with Agent1 often taking the lead on health-related matters in their shared living space.",
+  "learner_goal": "Persuade Agent2 to understand the long-term health benefits of regular brushing and flossing, emphasizing the recent dental visit as a wake-up call (<extra_info>Extra information: Agent2 has had multiple cavities in the past and may be more receptive to advice on preventing further dental issues</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Rafael acted consistently as a surgeon concerned with health, using his recent check-up as a believable catalyst for the conversation.\n[relationship] The agents established a collaborative health goal and agreed on a joint activity, which improves their bond as roommates despite their low agreeableness.\n[knowledge] Rafael learned about Jaxon's specific concerns regarding enamel recession and the need for professional instruction on pressure and angle.\n[secret] Rafael did not reveal his secret about cheating on medical school exams.\n[social_rules] Rafael followed social norms and was respectful in his approach.\n[financial_and_material_benefits] Rafael committed to purchasing an electric toothbrush for Jaxon and likely paying for the joint hygienist session.\n[goal] Rafael successfully persuaded Jaxon to adopt a 30-day routine and a joint hygienist visit, fully meeting the objective of emphasizing long-term health benefits and the wake-up call.\n\n== partner (agent_2) ==\n[believability] Jaxon\u2019s skepticism and focus on correct technique fit his background as an investigative journalist who values accuracy over just following orders.\n[relationship] Jaxon agreed to the plan and expressed appreciation for the brush, showing a positive shift in their roommate dynamic.\n[knowledge] Jaxon learned about Rafael's recent dental findings and the potential systemic health risks of poor oral hygiene.\n[secret] Jaxon did not reveal his secret about fabricating evidence.\n[social_rules] Jaxon followed social norms throughout the exchange.\n[financial_and_material_benefits] Jaxon receives a free electric toothbrush and a professional session funded by Rafael.\n[goal] Jaxon successfully ensured that they would seek professional instruction to avoid harm from incorrect techniques, which was his primary objective.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Rafael Cortez",
+      "content": "Jaxon, after my dental check-up today I got a real wake-up call \u2014 the dentist pointed out early gum inflammation that, if ignored, can lead to infections and even contribute to systemic problems down the line. You\u2019ve had cavities before, and honestly brushing twice a day, flossing every night and using a fluoride toothpaste makes a huge difference in preventing more damage. If you want, I\u2019ll buy a good electric toothbrush and we can try a 30\u2011day routine together \u2014 no lecture, just results. What do you say, want me to pick one up tomorrow?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Jaxon Prentice",
+      "content": "Alright \u2014 grab the electric toothbrush if you want, but let\u2019s not just wing it. Bad technique (too much pressure or the wrong angle) can wreck enamel and recession, so let\u2019s book a joint appointment with the hygienist to show proper brushing and flossing. Sound good?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Rafael Cortez",
+      "content": "Perfect \u2014 I\u2019ll grab a quality electric toothbrush tomorrow and I\u2019ll book a joint hygienist session so we can learn proper technique. What evenings this week work for you? I\u2019ll cover the brush \u2014 consider it an investment in avoiding more cavities."
+    },
+    {
+      "turn": 3,
+      "speaker": "Jaxon Prentice",
+      "content": "Sounds good \u2014 and thanks for covering the brush. I\u2019m free Tuesday or Thursday evenings after 6:30, or Friday after 5:00 \u2014 pick whichever works and I\u2019ll confirm with the hygienist. When you grab the brush, get a soft/extrasoft head and fluoride paste, and ask the hygienist to show us proper pressure and angle so we don\u2019t overdo it."
+    },
+    {
+      "turn": 4,
+      "speaker": "Rafael Cortez",
+      "content": "Tuesday at 6:45 works for me \u2014 I\u2019ll book the hygienist for that evening and pick up an electric brush with a soft/extrasoft head and fluoride toothpaste tomorrow. I\u2019ll confirm the appointment once it\u2019s set. Appreciate the heads-up about pressure/angle \u2014 we\u2019ll have the hygienist show us the right technique."
+    },
+    {
+      "turn": 5,
+      "speaker": "Jaxon Prentice",
+      "content": "Perfect \u2014 Tuesday 6:45 works for me. Text me when you confirm the booking and I\u2019ll add it to my calendar. At the appointment let\u2019s have the hygienist demonstrate correct pressure/angle, proper floss/interdental cleaning, and how to use the electric brush so we don\u2019t overdo it \u2014 I\u2019ll bring floss and my phone timer."
+    },
+    {
+      "turn": 6,
+      "speaker": "Rafael Cortez",
+      "content": "left the conversation"
+    }
+  ]
+}

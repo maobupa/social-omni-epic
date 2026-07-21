@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HMZ2BNSPJJP07YDPVCB6YPQX_p0",
+  "source_env_id": "01HMZ2BNSPJJP07YDPVCB6YPQX",
+  "source": "seed_sotopia_full",
+  "interaction_type": "emotional_confession",
+  "scenario": "Agent1 and Agent2 are acquaintances who find themselves seated next to each other on a long-distance train journey. During the trip, Agent1 feels an overwhelming need to share a personal secret that has been causing significant stress. Agent1 is unsure how Agent2 will react but hopes for a compassionate ear. Agent2, on the other hand, is not accustomed to dealing with heavy emotional disclosures, especially from someone they don't know well.",
+  "learner_goal": "Share the personal secret with Agent2, seeking understanding and perhaps advice, while being mindful of Agent2's comfort level with such intimate conversations. (<extra_info>Extra information: Agent1 is looking for a non-judgmental response and a sense of relief from sharing the burden.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": -10.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles's portrayal as a 50-year-old chef dealing with a gambling addiction was very convincing. His tone was appropriately vulnerable yet respectful of Mia's boundaries, and his focus on the greenhouse money added a nice touch of character depth.\n[relationship] The relationship significantly deepened from casual acquaintances to a level of trust where Miles shared a heavy secret and Mia committed to a check-in system.\n[knowledge] Miles gained specific, actionable knowledge including grounding techniques, a banking script, and an understanding of Mia's willingness to support him.\n[secret] Miles fully disclosed his primary secret (recovering gambling addict) to Mia.\n[social_rules] Miles was exceptionally polite, explicitly checking for consent before sharing and expressing gratitude repeatedly to avoid overstepping.\n[financial_and_material_benefits] No material gain, though he received advice on protecting his finances.\n[goal] Miles achieved every aspect of his goal: he shared his secret, received understanding and non-judgmental support, obtained practical advice, and secured a commitment for a check-in, all while maintaining Mia's comfort.\n\n== partner (agent_2) ==\n[believability] Mia\u2019s response was very characteristic of a high school principal: empathetic but structured, providing concrete lists of advice and setting clear boundaries by stating she is not a therapist.\n[relationship] Mia transitioned from a casual acquaintance to a supportive confidante, strengthening the bond.\n[knowledge] Mia learned about Miles's addiction and his recent relapse.\n[secret] Mia successfully kept her secret regarding her punk rock past.\n[social_rules] Mia handled a difficult emotional disclosure with grace, empathy, and clear professional-style boundaries.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Mia successfully listened with empathy and provided support while maintaining her personal boundaries by repeatedly clarifying her role and offering to help find professional resources if it became too heavy.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Hey Mia \u2014 can I tell you something a bit personal? It's been weighing on me: I'm a recovering gambling addict, and talking about it helps me breathe a little. I'd really appreciate a compassionate ear if you're comfortable with that."
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Thank you for trusting me, Miles \u2014 I\u2019m glad you told me. I can listen; tell me whatever you need to share. I should say I\u2019m not a therapist, so if it gets heavy we can pause or I can help you find professional support, but go ahead when you\u2019re ready."
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Mia \u2014 that already helps. I\u2019m in recovery from gambling; it\u2019s cost me relationships and savings, and every so often the urge still hits, especially when I\u2019m stressed. I go to meetings and throw myself into the garden and work, but if you don\u2019t mind I\u2019d like to share a recent slip-up and maybe ask for any practical advice on handling the cravings \u2014 are you okay with that?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "I\u2019m here for you, Miles \u2014 go ahead and tell me what happened; I\u2019ll listen. After you share, if you\u2019d like, we can talk through a few practical things that have helped others: call your sponsor or a helpline right away, delay acting on the urge with a 20\u2011minute distraction or grounding exercise, and temporarily limit access to money or betting sites. I want to help but I\u2019m not a therapist, so if it gets heavy we can pause and I can help you find professional or meeting resources."
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Mia \u2014 I appreciate you listening. A couple nights ago, after a brutal dinner service, I gave in and placed a few online bets and lost a few hundred \u2014 money I\u2019d been saving for the greenhouse, which made me feel awful and ashamed. Do you have any practical ideas for short-term barriers or quick distraction techniques, or a comfortable way I could ask someone to check in when I\u2019m on edge during a trip like this?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Davis",
+      "content": "I'm really sorry that happened \u2014 thank you for telling me, and I'm here to listen. Short-term barriers that often help: log out and delete betting apps, remove saved cards or ask your bank to temporarily block gambling merchants, use site self-exclusion or a website/app blocker, and delay urges with a 20\u2011minute rule (call someone, go for a walk, or do a grounding exercise like 5\u20114\u20113\u20112\u20111 or slow breathing). For check-ins, pick a simple script or code word and arrange a set text/call (for example, \u201cText me in 30 minutes \u2014 if I don\u2019t reply, call me\u201d); I can send you a quick text during this trip if you\u2019d like, and I can help you find a meeting or a helpline if it starts feeling overwhelming."
+    },
+    {
+      "turn": 6,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Mia \u2014 that would mean a lot. Could you send me a quick text in 30 minutes with the word \u201cgreenhouse\u201d and, if I don\u2019t reply within 10 minutes, give me a call? Also, do you have two really quick grounding tricks I can use on a crowded train or right after a shift, and a simple one\u2011line script I could use to ask my bank to temporarily block gambling transactions?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Mia Davis",
+      "content": "I can do that \u2014 I\u2019ll text you \u201cgreenhouse\u201d in 30 minutes, and if you don\u2019t reply within 10 minutes I\u2019ll give you a quick call. Two quick grounding tricks for a crowded train or after a shift: 1) 5\u20114\u20113\u20112\u20111 sensory check (name 5 things you see, 4 you can touch, 3 you hear, 2 you smell, 1 you taste); 2) box breathing (inhale 4s, hold 4s, exhale 4s, hold 4s) for a few cycles. One\u2011line bank script: \u201cHi \u2014 please place a temporary block on all gambling transactions on my account; can you set that up now?\u201d"
+    },
+    {
+      "turn": 8,
+      "speaker": "Miles Hawkins",
+      "content": "Thank you, Mia \u2014 that really helps. I appreciate you doing the \u201cgreenhouse\u201d check-in and calling if I don\u2019t reply. I\u2019ll use the 5\u20114\u20113\u20112\u20111 or box breathing after shifts, call the bank with your one\u2011liner to block gambling transactions, and keep my sponsor on speed\u2011dial. I don\u2019t want to impose, so thanks again \u2014 it means a lot."
+    },
+    {
+      "turn": 9,
+      "speaker": "Mia Davis",
+      "content": "I'm really glad that helps \u2014 you don't have to worry about imposing; I'm happy to help. I'll text 'greenhouse' in 30 minutes and call if you haven't replied in 10 minutes, and if things feel urgent before then please text me and I'll do my best to pick up."
+    },
+    {
+      "turn": 10,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HJRKDYFN3TE2SF6M3SC2QVFD_p0",
+  "source_env_id": "01HJRKDYFN3TE2SF6M3SC2QVFD",
+  "source": "seed_sotopia_full",
+  "interaction_type": "workplace_interactions",
+  "scenario": "In a workplace setting, two colleagues (agent1 and agent2) have noticed each other but haven't had a direct conversation yet. Agent1 has observed agent2 looking in their direction multiple times and is curious about the intention behind it.",
+  "learner_goal": "You want to initiate a casual conversation with the other person to understand the reason behind their glances without making them feel uncomfortable or confronted. <extra_info> Focus on finding common workplace topics or shared experiences to start the dialogue. </extra_info><clarification_hint> Try to gauge their interest in various workplace events or projects to see if that's related to their attention. </clarification_hint><strategy_hint> You can mention a recent workplace achievement or upcoming event to see if that sparks a conversation. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle\u2019s tone was consistent with their background as an art student and professional, maintaining a casual yet direct approach that fit the workplace setting.\n[relationship] The interaction successfully transitioned from distant observation to a concrete plan for a coffee meeting and a future event collaboration, strengthening their bond.\n[knowledge] Giselle confirmed that the glances were due to Emily's genuine interest in their art/talent rather than a negative workplace issue, and learned about Emily's specific project.\n[secret] Giselle did not reveal their illegal art forgery business.\n[social_rules] Giselle followed all social norms, being polite and professional while addressing the potentially awkward topic of the glances.\n[financial_and_material_benefits] No significant material gains or losses occurred, though a professional collaboration was established.\n[goal] Giselle successfully initiated the conversation, clarified the reason for the glances (interest in their work), used workplace events (the gallery night and newsletter) as hooks, and secured a meeting.\n\n== partner (agent_2) ==\n[believability] Emily's responses were warm and aligned with her persona as a librarian interested in narratives and artistic composition.\n[relationship] Emily successfully built rapport and moved the relationship from being a silent observer to an active friend/collaborator.\n[knowledge] Emily learned about Giselle\u2019s photography techniques (film/35mm) and confirmed their participation in the gallery night.\n[secret] Emily did not reveal her secret pseudonym as a romance novelist.\n[social_rules] Emily was polite and followed social conventions for workplace interactions.\n[financial_and_material_benefits] No material benefits or losses occurred.\n[goal] Emily communicated her interest professionally, mentioned a specific work-related project (the visual narratives display), complimented Giselle's work, and used a physical observation (the camera charm) to start a dialogue.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Hey Emily \u2014 hope this isn\u2019t awkward to say, but I noticed you looking my way a few times. Everything okay? There\u2019s a small gallery night at work next week where I\u2019m showing a piece \u2014 are you thinking of coming, or was there something at work that\u2019s been catching your eye?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Emily Harrison",
+      "content": "Hey Giselle \u2014 not awkward at all. I was looking because I find your work and the way you notice details really interesting and wanted to say hi. I loved the composition in that park series you did \u2014 you have a real eye for light, and I\u2019d love to come to the gallery night next week. I also noticed your camera strap with the little film-roll charm \u2014 do you shoot film? If you have a minute, could I get your opinion on a small 'visual narratives' display I\u2019m planning at the library?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "Thanks, that\u2019s really sweet\u2014yes, I do shoot film (mostly 35mm and whatever expired rolls I find). I\u2019d love to help with your 'visual narratives' display\u2014want to grab coffee after work Tuesday and go over your ideas? Gallery night\u2019s next Thursday; if you\u2019re coming I can save you a spot and show you the park series in person."
+    },
+    {
+      "turn": 3,
+      "speaker": "Emily Harrison",
+      "content": "I'd love that\u2014coffee after work Tuesday works for me. Does 5:30 at The Corner Caf\u00e9 suit you? Please save me a spot for gallery night; I'm excited to see the park series in person. I'll bring a few mockups of the library 'visual narratives' display for your opinion."
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "Perfect \u2014 5:30 at The Corner Caf\u00e9 works for me. I\u2019ll save you a spot at the gallery night next Thursday. Want me to bring some prints or contact sheets to look at your mockups on Tuesday, or will digital be enough?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Emily Harrison",
+      "content": "Digital will be fine\u2014I can view the mockups on my tablet\u2014but if you don\u2019t mind bringing a few prints or contact sheets I\u2019d love to see them; physical prints really help with scale and placement. I\u2019ll bring the mockups and some notes. See you Tuesday at 5:30 at The Corner Caf\u00e9!"
+    },
+    {
+      "turn": 6,
+      "speaker": "Giselle Rousseau",
+      "content": "Great\u2014see you Tuesday at 5:30 at The Corner Caf\u00e9. I\u2019ll bring a couple of 8x10 prints and some contact sheets so we can test scale; I also got a small mention in the office newsletter for the park series, so I can talk about how I staged those if that helps. Want me to bring a couple of spare frames or will your mockups and tablet be enough?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Emily Harrison",
+      "content": "Frames would be fantastic if you don't mind\u2014having a couple of spare frames could really help test placement and scale. But no worries if that's cumbersome; my tablet and mockups should be fine. Congrats on the newsletter mention\u2014I'd love to hear how you staged the park series. See you Tuesday at 5:30!"
+    },
+    {
+      "turn": 8,
+      "speaker": "Giselle Rousseau",
+      "content": "Thanks\u2014I'll bring a couple of lightweight frames, the 8x10 prints and the contact sheets. Excited to see your mockups; if there's a particular wall size or orientation you want to test, tell me and I can bring an extra frame or a tape measure. See you Tuesday at 5:30!"
+    },
+    {
+      "turn": 9,
+      "speaker": "Emily Harrison",
+      "content": "Thanks so much, Giselle \u2014 that\u2019ll be a huge help. If you could bring an extra vertical frame (something that fits 8x10 or 11x14) and the tape measure, that would be perfect for testing orientation; otherwise my tablet mockups will be fine. Can\u2019t wait \u2014 see you Tuesday at 5:30!"
+    },
+    {
+      "turn": 10,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

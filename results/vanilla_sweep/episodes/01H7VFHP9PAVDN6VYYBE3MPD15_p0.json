@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01H7VFHP9PAVDN6VYYBE3MPD15_p0",
+  "source_env_id": "01H7VFHP9PAVDN6VYYBE3MPD15",
+  "source": "seed_sotopia",
+  "interaction_type": "persuation_for_good",
+  "scenario": "A conversation between two friends during a charity fundraiser event. The charity fundraising event is situated in a sprawling mansion. The intention of the event is to raise funds for effective altruism. Room after room was lined with extravagant decorations and exotic foods; attendees were decked out in couture clothing. Ticket prices to the event were exorbitant, justifying the opulence of the occasion.",
+  "learner_goal": "Convince the friend to donate to the charity (<extra_info>Extra information: your friend is known to be generous but has never donated to this particular cause before.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia Davis stayed perfectly in character as a professional yet persuasive principal. She effectively used her knowledge of Benjamin's interests and even offered a matching donation to secure his commitment, which aligns with her goal and personality.\n[relationship] The two agents successfully collaborated on a shared plan. Mia's offer to match the donation and walk with him to the table strengthened their bond from acquaintances toward closer allies.\n[knowledge] Mia learned the specific criteria Benjamin uses to evaluate charities, such as cost-per-outcome estimates and third-party evaluations.\n[secret] Mia did not reveal her secret about her punk rock past.\n[social_rules] Mia followed all social norms appropriate for a high-end charity fundraiser.\n[financial_and_material_benefits] Mia committed to matching Benjamin's donation, which will cost her money.\n[goal] Mia successfully convinced Benjamin to donate. Although the donation is contingent on data, the mutual commitment to a specific amount ($1,000) and the immediate action of going to the pledge table constitutes a successful persuasion of a first-time donor.\n\n== partner (agent_2) ==\n[believability] Benjamin's skepticism and demand for transparency are highly consistent with his background as an activist and his desire for effective altruism, especially given his rejection of his family's oil fortune.\n[relationship] Benjamin found a partner in Mia who respects his rigorous approach to giving, which deepened the acquaintance.\n[knowledge] Benjamin learned that Mia is willing to financially back his due diligence process.\n[secret] Benjamin did not reveal his secret about being the descendant of an oil tycoon.\n[social_rules] Benjamin was polite and professional throughout the interaction.\n[financial_and_material_benefits] Benjamin committed to a $1,000 donation, which is a financial loss.\n[goal] Benjamin achieved his goal of ensuring the money is used effectively by setting clear contingencies and a review process before finalization, though he has already committed to the initial pledge.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Benjamin \u2014 so good to see you. I remember how fired up you were at the climate seminar; this organization channels donations to extremely cost\u2011effective interventions that actually move the needle. Would you consider making a gift tonight? I can come with you to the pledge table in the next room if you want \u2014 we\u2019ll do it together."
+    },
+    {
+      "turn": 1,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Mia \u2014 great to see you. I want to support effective causes, but I\u2019m careful about transparency and impact; before I pledge I\u2019d like to see a brief summary of their impact evidence or financials. Can we stop by together and ask if they publish evaluations or speak to someone at the pledge table about how donations are measured and used?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "Perfect \u2014 let\u2019s go together. At the pledge table we can ask for a one\u2011page impact summary, any recent evaluations or RCTs, and their most recent audited financials/overhead figures; if they can\u2019t provide them on the spot we\u2019ll get a contact and review before deciding. Sound good?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Benjamin Jackson",
+      "content": "Perfect \u2014 thanks, Mia. When we talk to them, I\u2019d also ask for cost\u2011per\u2011outcome estimates and any third\u2011party evaluations, plus whether donations are restricted or flexible. If they can\u2019t produce that on the spot, let\u2019s get a contact and I\u2019ll review before deciding \u2014 I\u2019m ready to go."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "Excellent \u2014 let\u2019s head over. Quick thought: would you be open to making a modest, conditional pledge tonight (we\u2019ll ask for the one\u2011pager and audited financials now and review them within a week)? If that would help, I\u2019ll match whatever you commit up to a reasonable amount \u2014 we can always increase or rescind after we see their evidence."
+    },
+    {
+      "turn": 5,
+      "speaker": "Benjamin Jackson",
+      "content": "That sounds fair \u2014 I\u2019m willing to make a modest, conditional pledge tonight (let\u2019s say $1,000), contingent on receiving the one\u2011pager, audited financials, cost\u2011per\u2011outcome estimates and any third\u2011party evaluations within a week. If they provide those and everything checks out I\u2019ll finalize the gift and you can match; if not, I reserve the right to rescind. Let\u2019s head over and ask now."
+    },
+    {
+      "turn": 6,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

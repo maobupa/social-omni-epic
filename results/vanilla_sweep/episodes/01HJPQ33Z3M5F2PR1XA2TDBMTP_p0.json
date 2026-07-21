@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01HJPQ33Z3M5F2PR1XA2TDBMTP_p0",
+  "source_env_id": "01HJPQ33Z3M5F2PR1XA2TDBMTP",
+  "source": "seed_sotopia_full",
+  "interaction_type": "user_generated",
+  "scenario": "After a long day, two roommates are at home trying to decide how to spend the evening. One roommate wants to go out for dinner, while the other prefers to stay in and cook a meal together. They must come to an agreement that satisfies both.",
+  "learner_goal": "Convince the other to go out for dinner (<extra_info>Extra information: you feel too exhausted to cook and would rather have a change of scenery.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo consistently maintained his character as an exhausted professional seeking a change of scenery. His persistence in wanting to go out while remaining polite was realistic for the given scenario.\n[relationship] Leo maintained a respectful tone and reached a compromise that acknowledged Hendrick's desire to cook, potentially strengthening their rapport as roommates.\n[knowledge] Leo learned that Hendrick is very eager to cook for him and is flexible with timing and plans.\n[secret] Leo did not reveal his secret child.\n[social_rules] Leo followed all social norms, being polite and offering to pay for dinner.\n[financial_and_material_benefits] Leo committed to paying for the outing tonight and hinted at covering the wine next time.\n[goal] Leo achieved a partial victory by getting his 'change of scenery' for 10-20 minutes, but he ultimately agreed to come back and eat the meal Hendrick is cooking at home, which was the opposite of his main goal to 'go out for dinner' instead of cooking.\n\n== partner (agent_2) ==\n[believability] Hendrick was incredibly repetitive, using the exact same phrasing about roasted garlic pasta and the fifteen-minute trial period four times in a row, which felt robotic and unnatural.\n[relationship] Hendrick showed hospitality and a willingness to accommodate Leo's need for a break, fostering a friendly roommate dynamic.\n[knowledge] Hendrick learned about Leo's exhaustion and his need for a 'reset' walk after work.\n[secret] Hendrick did not reveal his faked credentials.\n[social_rules] Hendrick was polite, though his repetitive persuasion tactics were slightly social-norm-straining.\n[financial_and_material_benefits] Hendrick gets a free coffee/small item brought to him or covered by Leo, though he is providing the main meal and wine.\n[goal] Hendrick successfully convinced Leo to stay in for the main meal and let him cook, which was his primary objective, despite Leo taking a short walk first.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hey Hendrick \u2014 long day at the clinic and I\u2019m pretty wiped, so I\u2019d rather not cook tonight. How about we go out to grab something nearby, something low-key? I can pick a place and cover tonight, and I\u2019ll cook next time. Sound good?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Totally understand\u2014clinic days are brutal. Would you be open to staying in just tonight? I can make something quick and comforting (no fuss\u2014think roasted garlic pasta or a simple stew), open a decent bottle of wine, and you can just put your feet up while I handle everything. If you\u2019re set on going out, that\u2019s fine too, but give me fifteen minutes and I\u2019ll try to change your mind."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "I really appreciate that, Hendrick \u2014 that sounds lovely, but I\u2019m wiped after the clinic and would honestly prefer to get out for a bit tonight. Could we do a quick, low-key place nearby? I\u2019ll pick somewhere and cover tonight, and I promise I\u2019ll cook (and you pick the wine) next time."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "Totally get it \u2014 clinic days drain you. Tell you what: let me take tonight off your shoulders completely \u2014 I\u2019ll whip up something super quick and comforting (roasted garlic pasta or a one\u2011pot stew), open a nice bottle, and you can collapse on the couch. If after the first plate you still want to go out, we\u2019ll head out \u2014 but give me that fifteen minutes to try to change your mind."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "I really appreciate you offering, Hendrick \u2014 that sounds lovely, but I\u2019m honestly wiped and a short change of scene would actually help more tonight. Could we do a quick, low-key spot just down the street (ten minutes tops)? I\u2019ll cover tonight and promise your home\u2011cooked meal and wine pick next time \u2014 please?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Hendrick Heinz",
+      "content": "I hear you\u2014clinic days call for a change of scene. How about this: let me handle tonight completely; give me fifteen minutes to throw together something super quick and comforting (roasted garlic pasta or a one\u2011pot stew), I\u2019ll open a nice bottle and you can put your feet up. If after the first plate you still want that quick ten\u2011minute outing, we\u2019ll go, but I genuinely think staying in will feel easier and more relaxing tonight."
+    },
+    {
+      "turn": 6,
+      "speaker": "Leo Williams",
+      "content": "Thanks, Hendrick \u2014 I really appreciate you offering. I\u2019m just beat and a short change of scene would help more: how about a quick ten\u2011minute walk to the corner bistro for something small (I\u2019ll cover), 30 minutes tops, then back home? If you still want me to try your pasta next time I\u2019ll gladly be first in line."
+    },
+    {
+      "turn": 7,
+      "speaker": "Hendrick Heinz",
+      "content": "Totally get it \u2014 one last pitch: give me ten minutes and I\u2019ll have a simple roasted garlic pasta and a glass of wine ready; you can flop on the couch and not lift a finger. If after the first plate you still want that quick bistro walk, we go \u2014 but I honestly think staying in will feel easier. Sound fair?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Leo Williams",
+      "content": "Thanks, Hendrick \u2014 I really appreciate you offering. I don\u2019t want to derail your plan to cook, but I just need a short change of scene to reset after the clinic. Would you be okay if I pop out for 20 minutes to grab something small at the corner bistro while you get started on the pasta? I\u2019ll be right back and we can eat together \u2014 sound fair?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Hendrick Heinz",
+      "content": "I totally get needing a quick reset. If you can make it ten minutes, I\u2019ll rush the pasta and have wine ready so you can just flop when you get back; if you really need the full twenty, go ahead\u2014I\u2019ll get started now and everything will be ready when you return."
+    },
+    {
+      "turn": 10,
+      "speaker": "Leo Williams",
+      "content": "Ten minutes sounds fair. I\u2019ll pop to the corner bistro, grab something small and a coffee, and be back in ten \u2014 thanks for starting the pasta. I\u2019ll cover tonight and I owe you one (wine pick next time)."
+    },
+    {
+      "turn": 11,
+      "speaker": "Hendrick Heinz",
+      "content": "Perfect\u2014thanks, Leo. I\u2019ll get the roasted garlic pasta going and have a nice bottle chilling; you just relax and flop on the couch when you get back. See you in ten."
+    },
+    {
+      "turn": 12,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

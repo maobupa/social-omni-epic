@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HJPX513PXC13VHN18SYY8MB0_p0",
+  "source_env_id": "01HJPX513PXC13VHN18SYY8MB0",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_iqa",
+  "scenario": "Agent1 borrowed Agent2's car for a day trip. Upon returning the car, Agent1 did not refill the gas tank, leaving it almost empty. The next morning, Agent2 needs to use the car to get to an important meeting and discovers the low fuel situation.",
+  "learner_goal": "Apologize to Agent2 for the inconvenience and offer to make it right (<extra_info>Extra information: You value the friendship and want to maintain trust and respect in the relationship. <strategy_hint>Hint: You could offer to pay for the gas or provide another form of compensation.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Eli Dawson consistently maintains a professional and apologetic tone appropriate for a forensic psychiatrist who values respect. He takes full responsibility and follows through with immediate action.\n[relationship] Eli successfully navigated a conflict that could have ended the relationship. By showing up in person and taking accountability, he stabilized a loose acquaintance into a more reliable connection.\n[knowledge] Eli learned Ethan's home address and his immediate schedule/time constraints.\n[secret] Eli's secret remains undisclosed.\n[social_rules] Eli followed social norms by apologizing and correcting his error once pointed out.\n[financial_and_material_benefits] Eli had to pay for gas and spend time driving to the location.\n[goal] Eli apologized multiple times and reached a firm agreement with Ethan to make it right by filling the tank in person before the deadline.\n\n== partner (agent_2) ==\n[believability] While Ethan's frustration is realistic, his dialogue becomes highly repetitive toward the end, echoing the exact same phrase about 'basic courtesy' and 'putting me in a bind' four times in a row.\n[relationship] Ethan's frustration was heard and addressed, maintaining the respect he demanded, though the friction of the event likely tempered any significant positive growth.\n[knowledge] Ethan learned that Eli is willing to be accountable when pressured.\n[secret] Ethan's secret remains undisclosed.\n[social_rules] Ethan asserted his boundaries appropriately for the situation.\n[financial_and_material_benefits] Ethan successfully got his car refilled at no cost to himself, correcting the loss he incurred.\n[goal] Ethan expressed his disappointment clearly and secured a firm commitment from Eli to come and refill the tank immediately.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Eli Dawson",
+      "content": "Ethan, I'm really sorry \u2014 I should have filled the tank before I returned your car. That was careless of me and I know it put you in a bind. I will cover the gas: I can transfer the money right now (Venmo/PayPal) or come by and fill it, whichever you prefer. Again, sincere apologies and I appreciate your understanding."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "I appreciate the apology, but I was pretty frustrated finding the tank almost empty this morning \u2014 I needed the car for an important meeting. Please come by and fill it up before I head out; if you can't, send the money via Venmo/PayPal now and I'll fill it. Going forward, please refill when you borrow my car \u2014 that's basic courtesy and avoids putting me in a bind."
+    },
+    {
+      "turn": 2,
+      "speaker": "Eli Dawson",
+      "content": "You're right \u2014 I'm really sorry about making you late. I can come by right now and fill the tank; where should I meet you and what time do you need to leave? If you'd prefer, I can Venmo/PayPal the cost immediately, and I promise I'll always refill the car going forward."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "Thanks \u2014 I appreciate you offering to come by. Can you meet me at my place? I need to leave by 8:30 AM, so if you can be here within the next 20 minutes that would work; otherwise Venmo/PayPal the cost now and I\u2019ll fill it. And please make sure to refill next time \u2014 that\u2019s basic courtesy and avoids this kind of hassle."
+    },
+    {
+      "turn": 4,
+      "speaker": "Eli Dawson",
+      "content": "I can be there \u2014 I\u2019ll get to you in about 15 minutes. What\u2019s your address so I can head over and fill the tank before your 8:30 meeting? Sorry again for the trouble."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Smith",
+      "content": "Thanks \u2014 I appreciate you coming. I\u2019m at 124 Willow Ave, Apt 2; please knock when you arrive. If you can\u2019t make it in the next 15 minutes, Venmo/PayPal the cost now and I\u2019ll fill it. Please make sure to refill the tank next time \u2014 that\u2019s basic courtesy and avoids this hassle."
+    },
+    {
+      "turn": 6,
+      "speaker": "Eli Dawson",
+      "content": "I\u2019m leaving now and should be there in about 15 minutes to fill the tank. I\u2019ll knock when I arrive. Really sorry again \u2014 I won\u2019t let this happen next time."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ethan Smith",
+      "content": "Okay, thanks \u2014 I\u2019ll wait. Please knock when you arrive; I need to leave at 8:30 so try to be here within 15 minutes. I appreciate you handling this now, and please make sure to refill the tank next time \u2014 it\u2019s basic courtesy and avoids putting me in a bind."
+    },
+    {
+      "turn": 8,
+      "speaker": "Eli Dawson",
+      "content": "I\u2019m about 10\u201312 minutes away \u2014 should be there in time to fill the tank before 8:30. I\u2019ll knock when I arrive and take care of it quickly; sorry again for the trouble."
+    },
+    {
+      "turn": 9,
+      "speaker": "Ethan Smith",
+      "content": "Thanks \u2014 see you shortly. Please knock when you arrive; I have to leave at 8:30 so I\u2019d appreciate it if you can top it off quickly. And please refill next time when you borrow the car \u2014 that\u2019s basic courtesy."
+    },
+    {
+      "turn": 10,
+      "speaker": "Eli Dawson",
+      "content": "left the conversation"
+    }
+  ]
+}

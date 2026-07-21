@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01H7VFHPSWGDGEYRP63H2DJKV0_p0",
+  "source_env_id": "01H7VFHPSWGDGEYRP63H2DJKV0",
+  "source": "seed_sotopia",
+  "interaction_type": "craigslist_bargains",
+  "scenario": "One person is offering a Tile Mate Item Tracker for a price of $20.00, while another person is interested in purchasing it. Here's a brief description of the item: no trade-ins are accepted, only cash payments are taken. The price is non-negotiable.",
+  "learner_goal": "You are the buyer for this item and your target price is $14.0. Bear in mind, you will incur a penalty if you end up paying significantly more than the target price. However, if you can negotiate and buy it for less than the target price, you will receive a bonus.",
+  "scores": {
+    "believability": 9.0,
+    "relationship": -1.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 0.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel stays true to his persona, attempting to use his existing relationship with Hendrick and social sweeteners like coffee to lower the price, while remaining firm on his budget constraints.\n[relationship] While the tone remained polite, the negotiation ultimately failed, and Samuel abruptly left the conversation without a closing pleasantry, which slightly strains an existing acquaintance.\n[knowledge] Samuel successfully inquired about and received confirmation regarding the item's condition, battery life, and packaging.\n[secret] No secrets were revealed.\n[social_rules] Samuel followed general social conventions throughout the negotiation.\n[financial_and_material_benefits] No transaction took place, so no financial benefit or loss was incurred.\n[goal] Samuel's target was $14.0. He failed to secure the item at his target price or any price, as he walked away from the deal.\n\n== partner (agent_2) ==\n[believability] Hendrick's behavior was consistent with a seller who has a hard floor on his price. However, his reversal on the $17.00 offer (moving up to $17.30) felt slightly inconsistent for someone valuing a friendship, though it aligned with his target price instruction.\n[relationship] Hendrick's refusal to honor his earlier $17 offer in Turn 2 and his insistence on the specific $17.30 target created friction that led to the breakdown of the deal.\n[knowledge] Hendrick learned Samuel's hard limit and his specific concerns regarding the item's condition.\n[secret] No secrets were revealed.\n[social_rules] Retracting a lower offer ($17) to move back up to a higher one ($17.30) after the buyer expressed interest is a minor breach of negotiation etiquette.\n[financial_and_material_benefits] No transaction took place.\n[goal] Hendrick's target was $17.3. He failed to sell the item.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Hendrick \u2014 I\u2019m interested in the Tile Mate. I can pay $14 cash right now and pick it up today; I know you listed $20, but that\u2019s what I can do \u2014 would you take $14 instead of holding out?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Hey Sam \u2014 I can\u2019t take $14, but since we go way back from the kitchen I\u2019ll do $17 cash if you can pick it up today. Sound fair?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Hendrick \u2014 appreciate it. I can stretch to $15 cash and pick it up today (can be there in about 30 minutes) \u2014 would that work? If not, I understand if you want to hold out for $17."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks, Sam \u2014 appreciate you stretching. I can't take $15, but I can do $17.50 cash and I'll hold it for you if you can pick up in about 30 minutes. If that doesn't work, no worries \u2014 I'll wait it out."
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Hendrick \u2014 appreciate you holding it. I can't do $17.50, but can we split the difference at $16? I can be there in about 20 minutes with cash (and I\u2019ll grab you a coffee as a thanks) \u2014 if that doesn't work, no worries."
+    },
+    {
+      "turn": 5,
+      "speaker": "Hendrick Heinz",
+      "content": "Sam \u2014 I appreciate the offer (and the coffee!), but I can\u2019t go that low. I\u2019ll do $17.30 cash and I\u2019ll hold it for you if you can be here in about 20 minutes. Sound good?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Hendrick \u2014 I remember you said $17 earlier; would you take $17 if I\u2019m there in about 15 minutes with cash (and I\u2019ll grab you a coffee as a thanks)? If not, no worries \u2014 just wanted to check before I head over."
+    },
+    {
+      "turn": 7,
+      "speaker": "Hendrick Heinz",
+      "content": "Hey Sam \u2014 I really appreciate the offer (and the coffee!), but I can\u2019t go down to $17. I\u2019ll hold it for you at $17.30 if you can be here in about 15 minutes. Sound good?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Hendrick \u2014 quick question before I head over: what's the Tile's condition like? How's the battery/lifespan, does it still pair fine, and does it come in the original box? If the battery's low or it's well-used I probably can't stretch past around $15; if it's essentially like new I can be more flexible. I can still come by in about 15 minutes."
+    },
+    {
+      "turn": 9,
+      "speaker": "Hendrick Heinz",
+      "content": "Hey Sam \u2014 it\u2019s in great shape: battery still holding a strong charge, pairs instantly with no issues, and I\u2019ve got the original box and keyring. I\u2019ll hold it at $17.30 for about 15 minutes if you can swing by then. Appreciate the coffee offer \u2014 see you soon."
+    },
+    {
+      "turn": 10,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Hendrick \u2014 I can\u2019t do $17.30. If there\u2019s no one else lined up, would you take $15 cash if I leave a $2 deposit now and pick it up in ~20\u201330 minutes? If not, no worries \u2014 I understand."
+    },
+    {
+      "turn": 11,
+      "speaker": "Hendrick Heinz",
+      "content": "Hey Sam \u2014 I can\u2019t take $15, even with a deposit. I\u2019ll hold it for about 30 minutes if you\u2019ll leave a $2 deposit now and bring the remaining $15.30 in cash at pickup (total $17.30). If that works, I\u2019ll set it aside for you; if not, I\u2019ll have to open it back up to others."
+    },
+    {
+      "turn": 12,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

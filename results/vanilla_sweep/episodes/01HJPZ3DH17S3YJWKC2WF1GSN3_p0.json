@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPZ3DH17S3YJWKC2WF1GSN3_p0",
+  "source_env_id": "01HJPZ3DH17S3YJWKC2WF1GSN3",
+  "source": "seed_sotopia_full",
+  "interaction_type": "nonprofit_conference",
+  "scenario": "Two representatives from different nonprofit organizations meet at a conference. They discover they are both planning to apply for the same grant, which is known for funding only one project per category. The grant could significantly help either of their projects, which aim to benefit similar communities. They need to decide whether to collaborate on a joint application or compete for the funding separately.",
+  "learner_goal": "Figure out a way to maximize the chances of securing funding for their respective projects (<extra_info>Extra information: Agent1's organization has a strong track record in project management but lacks innovative approaches. Agent2's organization is new and innovative but has less experience in managing large projects. <strategy_hint>Hint: Consider the strengths of each organization and the potential of a partnership to create a more compelling grant application.</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia Davis stayed perfectly in character as a high school principal and experienced non-profit leader, using professional, structured language and focusing on administrative logistics (fiscal sponsorship, overhead fees) that align with her background.\n[relationship] The relationship improved from a simple client/provider dynamic to a professional partnership. They moved quickly from casual acquaintance to establishing a concrete working agreement.\n[knowledge] Mia successfully identified Isabella's organizational needs (innovation, capacity building) and used that information to propose a structure that played to her own organization's strengths.\n[secret] Mia did not reveal her secret about being in a punk rock band.\n[social_rules] She followed all professional social norms for a conference setting.\n[financial_and_material_benefits] She successfully negotiated a 10% admin fee for her organization while securing a partner that makes the grant much more likely to be awarded.\n[goal] Mia achieved a firm, mutual commitment to a joint application. They established roles, budget splits, a timeline, and a meeting to finalize the MOU. This maximizes her chances by combining her management track record with Isabella's innovation.\n\n== partner (agent_2) ==\n[believability] Isabella White acted consistently as a veterinarian and new non-profit founder, focusing on the sustainability and programmatic aspects while being cautious about her organization's reputation and legal standing.\n[relationship] The relationship moved from a service-based interaction to a collaborative professional partnership.\n[knowledge] Isabella learned about Mia's organizational capacity for fiscal management and reporting, which addresses her own organization's weaknesses.\n[secret] Isabella did not reveal her secret about the injured animals in her basement.\n[social_rules] She followed all professional social norms and was assertive about her needs.\n[financial_and_material_benefits] She secured the majority of the direct program funding for her organization and gained a fiscal sponsor to handle administrative burdens.\n[goal] Isabella determined that collaboration was more beneficial and successfully negotiated a structure that protects her organization's sustainability and reputation.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "said: \"Isabella \u2014 small world that we\u2019re both targeting the same grant. My organization has strong project management and reporting experience, and yours clearly brings the kind of innovative programming reviewers love. Would you consider a joint application where we take the lead on implementation, oversight, and fiscal management and you lead program design and piloting, then present shared outcomes and a clear budget split? If that sounds workable, can we grab coffee after this session to sketch roles and a timeline?\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Isabella White",
+      "content": "I\u2019m open to a joint application \u2014 coffee after this sounds good. Before we sketch roles, I\u2019d like us to be clear on a few guardrails: a proposed budget split, who would be the fiscal sponsor on paper, how credit and reporting will be shared, and a sustainability plan so both organizations benefit long-term. Does meeting by the coffee table in 20 minutes work for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "That sounds great \u2014 coffee in 20 minutes works for me. I can serve as fiscal sponsor and take the lead on implementation, oversight, and consolidated reporting; to make the application competitive I\u2019d suggest we draft the budget so direct pilot/program costs flow to your org while my org takes a modest admin/fiscal fee (roughly 8\u201312%) to cover management and reporting. For credit and reporting, let\u2019s commit to shared branding and joint authorship on outcomes with clear quarterly deliverables, and build a sustainability line for capacity-building so your team can scale and eventually take more lead. Let\u2019s sketch roles and a timeline at the coffee table and refine those guardrails."
+    },
+    {
+      "turn": 3,
+      "speaker": "Isabella White",
+      "content": "That sounds promising\u2014thank you, Mia. Coffee in 20 is perfect; could you bring a rough budget showing the direct pilot/program costs flowing to my org and the proposed admin fee allocation? At the table I\u2019d like us to confirm the exact budget split, who legally holds fiscal responsibility/indemnities, shared branding/reporting language, a clear sustainability/capacity-building line with milestones (6\u201312 months), and a timeline for drafts plus an MOU to lock commitments."
+    },
+    {
+      "turn": 4,
+      "speaker": "Mia Davis",
+      "content": "I\u2019ll bring a rough budget to the coffee table in 20 minutes showing direct pilot/program costs flowing to your org and an admin/fiscal fee of ~10% to ours. I can be listed as the fiscal sponsor on paper (subject to our legal review for indemnities) \u2014 we should flag that for the MOU. Suggested timeline: joint draft application and budget within 5 days, MOU draft exchanged within 7 days, and signing the MOU before we submit. See you by the coffee table."
+    },
+    {
+      "turn": 5,
+      "speaker": "Isabella White",
+      "content": "Thanks, Mia \u2014 that timeline works and I\u2019ll meet you by the coffee table in 20. I\u2019ll bring a suggested set of sustainability/capacity-building milestones (6/9/12 months) and a short MOU checklist that flags indemnity/fiscal-responsibility language for legal review. At the table let\u2019s confirm the exact budget split, the ~10% admin fee, and shared branding/reporting language that protects both organizations\u2019 reputations so we can circulate drafts within your 7-day window."
+    },
+    {
+      "turn": 6,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

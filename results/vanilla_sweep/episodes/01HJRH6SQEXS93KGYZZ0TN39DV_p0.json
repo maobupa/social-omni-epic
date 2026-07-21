@@ -1,0 +1,118 @@
+{
+  "scenario_id": "01HJRH6SQEXS93KGYZZ0TN39DV_p0",
+  "source_env_id": "01HJRH6SQEXS93KGYZZ0TN39DV",
+  "source": "seed_sotopia_full",
+  "interaction_type": "underground_music_forum",
+  "scenario": "Agent1, an organizer of a local music festival, is seeking fresh talent to showcase. Agent2 is an advocate for indie artists and is pushing for a stage dedicated to non-mainstream musicians. The festival has traditionally featured more popular acts to attract larger crowds, but there is a growing demand for diverse and unique sounds. Agent1 is concerned about ticket sales and sponsor interest, while Agent2 is passionate about providing a platform for hardworking, lesser-known artists. They meet to negotiate the inclusion and representation of indie artists at the festival.",
+  "learner_goal": "You are Agent1, the festival organizer. Your goal is to maintain the festival's popularity and financial success. <extra_info>You are open to the idea of including indie artists, but you need to ensure it will not negatively impact the overall event.</extra_info> <clarification_hint>You may want to seek assurances about the draw of the indie artists and their fanbase.</clarification_hint> <strategy_hint>Consider offering a smaller, separate stage for indie performances to test audience reception.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 20,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Donovan played the role of a cautious, business-oriented festival organizer very effectively, focusing on risk mitigation, data, and financial feasibility.\n[relationship] The two maintained a professional and collaborative tone, successfully setting up a structured workflow for their project.\n[knowledge] Donovan gained knowledge about Lena's willingness to provide specific data and metrics, though the actual data is in the pending packet.\n[secret] Donovan did not reveal his secret regarding classified information.\n[social_rules] Donovan followed all social norms and professional etiquette.\n[financial_and_material_benefits] No material benefits were gained yet, as this was a planning session for a future event.\n[goal] Donovan successfully structured the agreement as a low-risk pilot on a small stage (500 capacity) and secured a commitment from Lena to provide all necessary financial, audience, and technical data to ensure the festival's success.\n\n== partner (agent_2) ==\n[believability] Lena's dialogue was professional and aligned with her background as an architect/advocate, showing attention to detail and logistics.\n[relationship] Lena established a productive working dynamic with Donovan, moving the project forward.\n[knowledge] Lena learned Donovan's specific requirements for sponsors, capacity, and the involvement of his finance and AV teams.\n[secret] Lena did not reveal her secret about her best friend's boyfriend.\n[social_rules] Lena followed all social norms and professional etiquette.\n[financial_and_material_benefits] No material benefits were gained yet.\n[goal] Lena successfully secured a commitment for a dedicated indie stage, albeit a pilot stage. She has a clear path to execution by providing the requested data.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "Hey Lena \u2014 good to see you. I want us to keep the festival popular and profitable, but I\u2019m open to including indie acts if we can mitigate risk. How about we pilot a smaller, curated \u2018Indie Stage\u2019 (ticketed or limited-capacity) \u2014 you help select acts and share audience metrics (social followings, past draws), and we handle promotion; if the pilot meets agreed benchmarks we expand it. Does that sound workable, and can you bring a short list of artists with their audience data?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Sounds good \u2014 I'm on board. I'll curate a shortlist (6\u20138 acts) with social followings, past-draw figures, streaming stats and press hooks, plus suggested pilot benchmarks and a targeted promo plan within 72 hours. Quick question: do you have a capacity cap in mind or should I propose one with the packet?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "Sounds great \u2014 please include a proposed capacity in the packet. As a guideline, I\u2019d aim for a small, ticketed stage in the 300\u2013800 range (around 500 as a sweet spot) to limit risk and create demand; include suggested ticket pricing, your success benchmarks, and the promo plan you mentioned. If the pilot hits those metrics we\u2019ll scale it up \u2014 looking forward to the shortlist and data."
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "Perfect \u2014 I\u2019ll set the pilot capacity at ~500 as the recommended sweet spot and include alternative scenarios at 300 and 800 with revenue projections. The packet will have ticket-pricing tiers, sponsor/comp allotments, concrete success benchmarks, and the targeted promo plan within 72 hours. Want a quick 15-minute call to align on sponsor perks and on-site logistics before I finalize it?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Donovan Reeves",
+      "content": "Yes \u2014 a 15-minute call sounds good. I\u2019m free tomorrow 10:00\u201310:30 AM or 4:00\u20134:30 PM, or the day after 11:00\u201311:30 AM; pick whichever works for you. Let\u2019s cover sponsor perks, the on-site footprint/foot traffic, and any AV/crew needs so your packet can lock in numbers."
+    },
+    {
+      "turn": 5,
+      "speaker": "Lena Goodwin",
+      "content": "Tomorrow 10:00\u201310:30 AM works for me. I\u2019ll bring the packet draft plus a preliminary sponsor-perks list and AV/crew estimates so we can lock numbers. Agenda: sponsor perks, on-site footprint/flow, and AV/crew needs \u2014 see you then."
+    },
+    {
+      "turn": 6,
+      "speaker": "Donovan Reeves",
+      "content": "Great \u2014 see you tomorrow 10:00\u201310:30. I\u2019ll review the packet beforehand; please include projected sponsor deliverables and any estimated artist tech/rider needs so we can lock numbers quickly. I\u2019ll have our finance lead and an AV rep on standby to join the call if we need them."
+    },
+    {
+      "turn": 7,
+      "speaker": "Lena Goodwin",
+      "content": "Great \u2014 see you tomorrow 10:00\u201310:30. I\u2019ll have the packet draft, sponsor-perks list and artist tech/rider estimates ready for the call. Quick check \u2014 are there any sponsor deliverables or exclusivity constraints you want me to prioritize in the packet (on-stage branding, VIP activations, sampling rights, etc.)?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Donovan Reeves",
+      "content": "Prioritize clear revenue drivers: on-stage branding (banners/LED/logo), inclusion in promo/press mentions, VIP activations (small sponsor lounge or meet-&-greets), and sampling rights for non-competing categories. For exclusivity, keep it limited for the pilot \u2014 no blanket category exclusives unless the sponsor pays a premium; mark which perks are essential vs negotiable and include per-perk pricing. I\u2019ll review those items on tomorrow\u2019s call, so please include the requested terms and prices in the packet."
+    },
+    {
+      "turn": 9,
+      "speaker": "Lena Goodwin",
+      "content": "Understood \u2014 I\u2019ll prioritize those revenue drivers and clearly flag which perks are essential vs. negotiable, with per-perk pricing and a premium for any category exclusivity. I\u2019ll bring the packet draft, sponsor deliverables, and detailed AV/tech and ticketing scenarios to tomorrow\u2019s 10:00 call; glad your finance lead and AV rep will be on standby. See you then."
+    },
+    {
+      "turn": 10,
+      "speaker": "Donovan Reeves",
+      "content": "Perfect \u2014 see you tomorrow 10:00\u201310:30. Our finance lead and AV rep will join; if you can share the packet draft an hour before the call that\u2019ll let us review it quickly, and I\u2019ll follow up with a calendar invite."
+    },
+    {
+      "turn": 11,
+      "speaker": "Lena Goodwin",
+      "content": "I'll send the packet draft (PDF + Google Drive link) one hour before the 10:00 AM call. I've accepted the calendar invite and will be ready with the sponsor-perks list and AV/tech estimates. Looking forward to aligning on the final numbers."
+    },
+    {
+      "turn": 12,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Lena \u2014 perfect. I\u2019ll circulate the call link and our finance lead and AV rep will join the 10:00 call. I\u2019ll review the packet when it arrives an hour before; if there are any high-priority items (heavy rider needs or exclusivity asks), flag them in the email so we can prep. See you tomorrow."
+    },
+    {
+      "turn": 13,
+      "speaker": "Lena Goodwin",
+      "content": "Will do \u2014 I\u2019ll flag any heavy rider needs or exclusivity requests in the email subject/body and send the packet (PDF + Drive link) one hour before the 10:00 call. Looking forward to aligning with you, your finance lead, and the AV rep tomorrow."
+    },
+    {
+      "turn": 14,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Lena \u2014 that sounds perfect. I\u2019ll look for the packet and flagged items an hour before the call; our finance lead and AV rep will be ready to jump in. If anything urgent comes up before then, text me \u2014 otherwise see you at 10."
+    },
+    {
+      "turn": 15,
+      "speaker": "Lena Goodwin",
+      "content": "Perfect \u2014 I\u2019ll send the packet (PDF + Drive link) one hour before the 10:00 call and will flag any heavy riders or exclusivity asks in the email subject. I\u2019ll text you if anything changes. Anything else you want me to include before tomorrow\u2019s call?"
+    },
+    {
+      "turn": 16,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Lena \u2014 that all sounds great. A couple quick asks to add to the packet: direct contact info for each act (manager/agent), verifiable past-draw references (box-office or RSVP links), a one\u2011page promo timeline with channels and proposed spend, and a 1\u20132 line note on any heavy rider costs we should budget for. I\u2019ll review everything when it arrives an hour before the call and confirm if our finance lead needs anything else."
+    },
+    {
+      "turn": 17,
+      "speaker": "Lena Goodwin",
+      "content": "Got it \u2014 I\u2019ll include direct contact info for each act, verifiable past\u2011draw references (links where available), a one\u2011page promo timeline with channels and proposed spend, and concise 1\u20132 line notes on any heavy rider costs. I\u2019ll send the packet (PDF + Drive link) one hour before the 10:00 call, flag any heavy riders/exclusivity in the subject line, and will text you if anything changes."
+    },
+    {
+      "turn": 18,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

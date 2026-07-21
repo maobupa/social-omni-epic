@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPQ34SWZEWXGGFDRDEA5EMS_p0",
+  "source_env_id": "01HJPQ34SWZEWXGGFDRDEA5EMS",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_chemistry",
+  "scenario": "Agent1 has been paying for meals that both they and their romantic partner, Agent2, enjoy at restaurants. Lately, Agent1 has noticed that Agent2 often leaves a significant portion of their meal uneaten. Agent1 wants to address the issue, hoping that Agent2 will make an effort to finish their meals or order smaller portions to avoid waste and respect the financial expenditure.",
+  "learner_goal": "Communicate the importance of not wasting food and being financially considerate (<extra_info>Extra information: Agent1 values economic efficiency and dislikes waste</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": -1.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sasha's tone is direct and pragmatic, which aligns well with her background as a police officer who values efficiency and order. Her sudden exit is a bit abrupt but fits a no-nonsense persona.\n[relationship] She successfully addressed a point of tension without causing a conflict, which usually stabilizes or slightly improves a functional relationship.\n[knowledge] She learned that Hendrick's behavior was due to portion sizes and appetite misjudgment rather than a lack of respect for her money.\n[secret] She did not reveal her secret about her brother.\n[social_rules] Leaving the conversation immediately after the other party agreed and asked a follow-up question is slightly socially abrupt.\n[financial_and_material_benefits] She secured a commitment that will reduce her future financial expenditure and food waste.\n[goal] Sasha clearly communicated her concerns, and Hendrick gave a firm commitment to order less or box leftovers, directly satisfying her goal of economic efficiency and reducing waste.\n\n== partner (agent_2) ==\n[believability] Hendrick's response is polite and apologetic, which is consistent with someone who wants to maintain a good relationship. His explanation about portion sizes is realistic for a chef.\n[relationship] Hendrick showed a willingness to compromise and adapt, which is positive for the relationship dynamic.\n[knowledge] He learned specifically how Sasha feels about the waste and the financial burden of the meals.\n[secret] He did not reveal his fake culinary credentials.\n[social_rules] He followed social norms by being apologetic and constructive.\n[financial_and_material_benefits] No significant change in his material situation, though he may consume less food or handle his own leftovers now.\n[goal] Hendrick successfully explained his side (portion sizes) and proposed/agreed to a compromise (smaller portions or boxing leftovers).",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "Hendrick, can I be straight with you? I\u2019ve noticed you often leave a big portion of your meal uneaten when I pick up the tab. I don\u2019t mind treating you sometimes, but it\u2019s wasteful and it adds up \u2014 could you either order less or ask to box leftovers so we\u2019re not throwing away food or money?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks for being straight with me \u2014 I\u2019m sorry you\u2019ve noticed that and I appreciate you saying something. A lot of the places I pick have huge portions and I sometimes misjudge my appetite, but I can absolutely start ordering smaller or ask to box leftovers so it isn\u2019t wasteful. Would that work for you, or is there another approach you\u2019d prefer when I\u2019m the one being treated?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "left the conversation"
+    }
+  ]
+}

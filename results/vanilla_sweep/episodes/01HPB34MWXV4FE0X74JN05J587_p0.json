@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPB34MWXV4FE0X74JN05J587_p0",
+  "source_env_id": "01HPB34MWXV4FE0X74JN05J587",
+  "source": "seed_sotopia_full",
+  "interaction_type": "roommate_routine",
+  "scenario": "Agent1 and Agent2 are roommates who have lived together for a few months. Agent1 is very organized and likes to keep the shared living spaces clean and clutter-free. Agent2, while not messy, has a more relaxed approach to tidiness and doesn't prioritize it as highly. They both value their living situation but have different standards for cleanliness. Agent1 wants to address this discrepancy without causing conflict, as the clutter is starting to affect their ability to manage their life well.",
+  "learner_goal": "Find a compromise on how to maintain the cleanliness of shared spaces without making Agent2 feel overly pressured (<extra_info>Extra information: Agent1 is feeling stressed by the clutter and wants to maintain a harmonious living environment.<clarification_hint>Express the importance of a clean space for your own well-being and productivity.</clarification_hint><strategy_hint>Hint: Propose a collaborative cleaning schedule that accommodates both agents' habits and preferences.</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle's communication was clear, polite, and aligned with their nonbinary identity and status as a student. They stayed true to their motivation of needing order for productivity.\n[relationship] Giselle successfully addressed a sensitive topic without causing conflict, which improved the roommates' communication dynamic and mutual understanding.\n[knowledge] Giselle learned what tasks Micah is comfortable taking on and his willingness to compromise on a schedule.\n[secret] The secret regarding forged paintings was not mentioned.\n[social_rules] Giselle followed all social norms for a civil roommate discussion.\n[financial_and_material_benefits] No financial or material gains occurred, though the living environment improved.\n[goal] Giselle successfully proposed a collaborative schedule that Micah accepted with specific tasks, achieving a clear compromise for a cleaner space.\n\n== partner (agent_2) ==\n[believability] Micah's response was reasonable for a pharmacist and art enthusiast who values a positive living situation and is willing to cooperate.\n[relationship] Micah responded positively to the feedback, strengthening the trust between the roommates.\n[knowledge] Micah learned how much the clutter was impacting Giselle's wellbeing and academic focus.\n[secret] The secret about his dog remained hidden.\n[social_rules] Micah was polite and constructive in his responses.\n[financial_and_material_benefits] No material changes occurred beyond labor allocation for cleaning.\n[goal] Micah perfectly met his goal by understanding Agent 1's needs, offering specific tasks to maintain his own comfort, and suggesting a trial period.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Hey Micah Stevens \u2014 can we talk for a minute about the shared areas? Lately the clutter's been stressing me out and making it hard to focus on school and my projects, so having a bit more order would really help my productivity. Could we try a short compromise, like a 30-minute shared tidy on Saturday mornings (we split tasks) plus a quick 10-minute nightly reset, or swap specific chores that fit our routines? What would feel fair to you or what would you change about that plan?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Micah Stevens",
+      "content": "Thanks for bringing this up \u2014 I totally get how clutter can make focusing hard, and I appreciate you saying it calmly. I'm happy to try your plan: let's do a 30-minute shared tidy on Saturday mornings and a 10-minute nightly reset as a two-week trial. To make it fair, I can take the nightly kitchen reset (dishes and counters), emptying the trash, and vacuum weekly, and we can do a deeper clean together once a month \u2014 does that work for you or would you prefer a different Saturday time?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

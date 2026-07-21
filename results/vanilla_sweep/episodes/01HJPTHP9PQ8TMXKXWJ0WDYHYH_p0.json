@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPTHP9PQ8TMXKXWJ0WDYHYH_p0",
+  "source_env_id": "01HJPTHP9PQ8TMXKXWJ0WDYHYH",
+  "source": "seed_sotopia_full",
+  "interaction_type": "custom_iqa",
+  "scenario": "During a regular D&D game night, the group leader and another player are discussing the dynamics of the group. They've noticed that two members of the group have been consistently disruptive, causing tension and reducing the enjoyment for others. The group leader and the player must decide whether to ask the disruptive members to leave the group to preserve the harmony and fun for the remaining players.",
+  "learner_goal": "Convince the other player that removing the disruptive members is in the best interest of the group and will enhance the experience for everyone else (<extra_info>Extra information: The other player is concerned about the fairness of kicking members out and the potential of hurting their feelings.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 6.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara's tone was consistent with a focused, goal-oriented individual. Her suggestion of a probation period felt like a realistic compromise for her character.\n[relationship] The two characters reached a consensus on a difficult social issue, slightly strengthening their mutual respect as neighbors.\n[knowledge] She learned that Oliver is willing to take action if there's a clear process in place.\n[secret] Her secret regarding animal-rights extremism was not mentioned or hinted at.\n[social_rules] She followed social norms for a private discussion about group conflict.\n[financial_and_material_benefits] There were no financial or material benefits at stake.\n[goal] Amara successfully convinced Oliver to accept that removal is the eventual solution ('asking them to leave will be kinder for the group'). However, the agreement is contingent on a two-session probation period and a future check-in, keeping the final outcome under further review.\n\n== partner (agent_2) ==\n[believability] Oliver's response aligns perfectly with his character as an architect who values structure (clear written expectations, neutral third voice) and his goal of seeking communication first.\n[relationship] He found common ground with Amara and proposed a collaborative approach.\n[knowledge] He learned Amara is willing to participate in a communicative approach rather than just immediate expulsion.\n[secret] His hidden feelings for his neighbor were not revealed.\n[social_rules] He behaved politely and constructively.\n[financial_and_material_benefits] No financial or material benefits at stake.\n[goal] Oliver successfully advocated for a trial period and clearer rules before any members are kicked out, which was his primary objective.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "I get why kicking people feels harsh, but if two members are consistently ruining the night it's actually unfair to everyone else to let it continue. What if we try a private, calm conversation first \u2014 lay out the specific behaviors, set clear expectations, and give them a short probation (say two sessions) to change? If nothing improves, I think asking them to leave is the kinder choice for the larger group, and I'm happy to help lead the talk so it's respectful and clear."
+    },
+    {
+      "turn": 1,
+      "speaker": "Oliver Thompson",
+      "content": "I agree \u2014 start with a private, calm conversation using specific examples, clear written expectations, and the two-session probation you suggested. I\u2019m happy to help lead and can act as a neutral third voice; we should also decide who\u2019ll document the expectations and schedule a short check-in after the probation so it\u2019s objective. I believe people deserve a chance to correct their behavior, and if nothing changes then asking them to leave will be kinder for the group."
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

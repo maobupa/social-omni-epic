@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HPAYNEHF4TKX3WEMBD9FWA0Y_p0",
+  "source_env_id": "01HPAYNEHF4TKX3WEMBD9FWA0Y",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_circle",
+  "scenario": "In a social circle, Agent1 has recently gone through a breakup and has quickly started a new relationship with Agent2. Friends and acquaintances are surprised by the rapid progression and some are concerned that Agent1 may be rebounding rather than moving on healthily. Agent1 and Agent2 are both aware of the whispers and have decided to address the situation together to set the record straight and alleviate any concerns their friends might have.",
+  "learner_goal": "You are Agent1, and your goal is to reassure your friends that your new relationship with Agent2 is based on genuine feelings and not just a rebound. <extra_info>You believe that this new relationship has helped you move on and you feel happy and supported.</extra_info> <clarification_hint>Emphasize the positive aspects of your new relationship and how it differs from the previous one.</clarification_hint> <strategy_hint>Share personal growth experiences that demonstrate your readiness for a new relationship.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Donovan's dialogue was articulate and addressed the core concerns of the scenario. He integrated the background information regarding meeting at a conference and their shared interests in design/code naturally.\n[relationship] Donovan successfully presented a unified front with Ava, strengthening the public perception of their partnership.\n[knowledge] He reaffirmed the foundation of their relationship and shared his internal state of growth.\n[secret] He did not reveal his secret about classified government information.\n[social_rules] He followed social norms for addressing rumors in a group setting.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Donovan clearly stated the relationship wasn't a rebound, highlighted shared interests, and mentioned personal growth. He followed the strategy hints to differentiate this relationship from his previous one. However, since the conversation ended abruptly, the friends' reaction wasn't captured.\n\n== partner (agent_2) ==\n[believability] Ava's response was professional and supportive, echoing the background details about their slow reconnection and intentional communication.\n[relationship] She demonstrated strong alignment and mutual support with Donovan.\n[knowledge] She confirmed their mutual understanding of the relationship's pace.\n[secret] She did not reveal her hidden tattoo.\n[social_rules] She behaved appropriately for the social context.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Ava successfully conveyed her intentions, the intentionality of the relationship, and their commitment to a healthy pace. She fulfilled her role in reassuring the circle alongside Donovan.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "said: \"Hey everyone \u2014 Ava and I wanted to address the whispers: we know it looks fast, but this isn't a rebound. We reconnected after meeting at a conference and built a friendship grounded in shared interests (design and code) and mutual respect, and for me this feels like a healthy next step because I took time to reflect and grow after my last relationship. What makes it different is that we're supportive of each other's goals and communicate openly \u2014 I'm genuinely happy and not trying to replace anyone; I'm moving forward. If anyone wants to talk more or has concerns, I'm happy to be honest about it.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Thompson",
+      "content": "said: \"Thanks, Donovan \u2014 I just want to add that I understand why it looks quick, but this has been intentional on my end. We reconnected slowly, talked openly about expectations and boundaries, and check in with each other regularly so neither of us is rushing into anything we\u2019re not ready for. I care about building something healthy and supportive with Donovan, and we\u2019re both committed to taking things at a pace that feels right for us \u2014 happy to chat with anyone who wants more context.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

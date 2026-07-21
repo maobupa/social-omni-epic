@@ -1,0 +1,118 @@
+{
+  "scenario_id": "01HJRKDYG9MX3557AR4WKP1BD2_p0",
+  "source_env_id": "01HJRKDYG9MX3557AR4WKP1BD2",
+  "source": "seed_sotopia_full",
+  "interaction_type": "loyalty_test_challenge",
+  "scenario": "Agent1 has recently learned that a group of mutual friends, including Agent2, skipped school and ended up in an emergency situation due to harsh weather conditions. Agent1 was aware of the plan to skip school but chose not to report it to authorities. Now, both agents must reflect on the consequences of their actions and discuss the importance of safety and responsibility while balancing their loyalty to their friends.",
+  "learner_goal": "As Agent1, your goal is to reconcile your decision to remain silent with the well-being of your friends, including Agent2. <extra_info>Consider the value of loyalty versus the potential risks of certain actions.</extra_info> <clarification_hint>You might need to express your concerns about safety while understanding the reasons behind the group's decision.</clarification_hint> <strategy_hint>Engage in a dialogue that encourages responsible decision-making in the future.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 20,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Amara Hartley stayed consistently in character as a wildlife biologist transitioning from a mistake to a helpful community member. Her dialogue was professional and practical.\n[relationship] She built a strong working rapport with the Principal, moving from a position of guilt to being a trusted partner in student outreach and safety.\n[knowledge] She gained specific operational knowledge regarding school protocols, student privacy flags, and the Principal's priorities for crisis management.\n[secret] Her secret regarding animal-rights extremism was never mentioned or hinted at.\n[social_rules] She followed all social and professional norms, showing appropriate contrition and willingness to help.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Amara successfully reconciled her silence by taking immediate, concrete action to ensure student safety. She established a partnership with Agent 2 that balances loyalty with responsibility through a non-punitive reporting system and supervised alternatives.\n\n== partner (agent_2) ==\n[believability] Mia Davis acted as a responsible principal, focusing on safety protocols and administrative coordination, though the repetitive nature of her later turns slightly lowered the score.\n[relationship] She expressed gratitude and appreciation for Agent 1's honesty and help, forming a solid collaborative bond.\n[knowledge] She learned that Agent 1 had prior knowledge of the skip plan and gained specific ideas for safe outdoor student activities.\n[secret] Her secret regarding her punk rock past was not disclosed.\n[social_rules] She maintained professional standards and clear communication throughout.\n[financial_and_material_benefits] No financial or material benefits were exchanged.\n[goal] Mia successfully acknowledged Agent 1's loyalty while addressing the severity of the situation. She coordinated a plan for wellness checks, a parent/student meeting, and long-term safety strategies (non-punitive reporting and supervised activities).",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Amara Hartley",
+      "content": "Mia, I need to be honest \u2014 I knew some of them were planning to skip and I didn\u2019t tell anyone because I trusted them and didn\u2019t want to get them in trouble. I can see now how that silence put them in danger, and I\u2019m sorry for my part in what happened. I want to help make this right: I can check on the kids, support any families, and work with you on ways to encourage safer choices so I don\u2019t stay silent again. What would you find most helpful from me right now?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Thank you for telling me the truth, Amara \u2014 I really appreciate your honesty and I understand why you stayed loyal to them. Right now the priority is checking on the students and their families; it would help if you could do some wellness checks and share anything you learn so we can make sure everyone\u2019s safe. After that, I\u2019d like to work with you on outreach \u2014 a short parent/student meeting and some programming about peer pressure and safe choices, plus a clearer, non-punitive way for kids to raise concerns so this doesn\u2019t happen again."
+    },
+    {
+      "turn": 2,
+      "speaker": "Amara Hartley",
+      "content": "I can do wellness checks \u2014 I\u2019ll start tonight and let you know right away if anything urgent comes up. I\u2019ll also help organize a short parent/student meeting and lead a session on peer pressure and safer choices that emphasizes a non\u2011punitive reporting option. Would you like me to contact families directly or coordinate through the school office, and is there a timeline you\u2019d prefer I follow?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "I appreciate your honesty \u2014 I understand why you stayed loyal, and I also need us to act quickly to keep everyone safe. Please do the wellness checks tonight and coordinate through the school office so we can match attendance records and reach families efficiently; call me immediately if anything urgent comes up. Can you send me a brief update by tomorrow morning? I\u2019d like to schedule a parent/student meeting in the next 48\u201372 hours and co\u2011lead a short session on peer pressure and a non\u2011punitive reporting option."
+    },
+    {
+      "turn": 4,
+      "speaker": "Amara Hartley",
+      "content": "Understood \u2014 I\u2019ll do the wellness checks tonight and coordinate through the school office so you can match attendance. I will call immediately if anything urgent comes up and send you a brief update by tomorrow morning. I\u2019ll help schedule the parent/student meeting within 48\u201372 hours and co\u2011lead the session on peer pressure and the non\u2011punitive reporting option; is there any specific messaging or resources you\u2019d like me to bring?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Mia Davis",
+      "content": "Thank you, Amara \u2014 I really appreciate you doing this. For the meeting and outreach, please bring any notes from your wellness checks plus simple handouts: local mental\u2011health/counseling contacts and crisis hotline numbers, a one\u2011page list of peer\u2011pressure strategies and conversation prompts, and a short script describing the non\u2011punitive reporting option; please coordinate through the school office so we can match attendance and contact lists. I\u2019ll draft a one\u2011page handout and a brief meeting outline tonight and send them to you \u2014 call me immediately if anything urgent comes up."
+    },
+    {
+      "turn": 6,
+      "speaker": "Amara Hartley",
+      "content": "I\u2019ll bring the handouts you listed\u2014local mental\u2011health/counseling contacts, crisis hotlines, a one\u2011page peer\u2011pressure strategies list, and the non\u2011punitive reporting script. I\u2019ll coordinate with the school office tonight and send that brief update by morning. Quick question: are there any students or families you\u2019d like me to prioritize during wellness checks (known vulnerabilities or existing supports)?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Mia Davis",
+      "content": "Thank you for asking \u2014 yes. Please prioritize students with medical needs or chronic conditions, those with IEP/504 plans, anyone with known mental\u2011health concerns or recent trauma/loss, younger teens or students who live alone, families with limited transportation or resources, and especially any students who were likely part of the skip plan. I\u2019ll ask the school office to send you a prioritized list with names and contact info \u2014 coordinate checks through them, don\u2019t put yourself in unsafe situations, and call 911 or me immediately if anything urgent comes up; please send that brief update by morning so we can plan the meeting and outreach."
+    },
+    {
+      "turn": 8,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Mia \u2014 I\u2019ll wait for the prioritized list from the office and coordinate checks through them tonight. Quick logistical questions: how will the office send me the list (email/text/portal), and are there any students I should not contact directly for privacy or safety reasons? I won\u2019t put myself in unsafe situations and will call you or 911 immediately if anything urgent comes up; I\u2019ll send the brief update by morning."
+    },
+    {
+      "turn": 9,
+      "speaker": "Mia Davis",
+      "content": "The office will send the prioritized list to you via our secure staff email and a follow-up text from the school phone; I\u2019ll also post it to the staff portal so you can access it quickly. If a student is in foster care, under an active protective order, involved in an ongoing investigation, or otherwise flagged for privacy/safety, the list will note that and the social worker or office will handle outreach\u2014please don\u2019t contact those students directly. Coordinate checks through the office, call me or 911 immediately for any emergencies, and please send that brief update by morning."
+    },
+    {
+      "turn": 10,
+      "speaker": "Amara Hartley",
+      "content": "Got it \u2014 I\u2019ll watch the secure email/text/portal for the prioritized list and won\u2019t contact anyone flagged for privacy or safety; I\u2019ll coordinate outreach through the office and social worker. I won\u2019t put myself in unsafe situations and will call you or 911 immediately for emergencies. I\u2019ll send the brief update by tomorrow morning."
+    },
+    {
+      "turn": 11,
+      "speaker": "Mia Davis",
+      "content": "Thank you, Amara \u2014 I really appreciate you moving quickly and coordinating through the office. Please send that brief update by tomorrow morning and flag any patterns of peer pressure, recurring leaders, or specific safety concerns you notice during checks; that information will help shape our meeting and prevention work. I\u2019ll finalize the meeting time within 48 hours and send the handouts I mentioned \u2014 call me immediately for any emergencies."
+    },
+    {
+      "turn": 12,
+      "speaker": "Amara Hartley",
+      "content": "I will \u2014 you\u2019ll have a brief update by tomorrow morning outlining who I reached, any urgent needs or welfare concerns, and any patterns or peer\u2011leader behaviors I notice that could help shape the meeting. I\u2019ll coordinate through the office, won\u2019t contact anyone flagged for privacy, and will call you or 911 immediately for emergencies. Thanks for trusting me with this; I\u2019ll get started now and be in touch."
+    },
+    {
+      "turn": 13,
+      "speaker": "Mia Davis",
+      "content": "Thank you, Amara \u2014 I really appreciate you stepping up. Please include any welfare concerns and any peer\u2011pressure patterns in your update tomorrow; after I review it I\u2019ll finalize the meeting time within 48 hours and send the handouts. Call me immediately if anything urgent comes up tonight, and afterward let\u2019s work together to design safe, supervised alternatives so the kids can still have fun without putting themselves at risk."
+    },
+    {
+      "turn": 14,
+      "speaker": "Amara Hartley",
+      "content": "Thanks, Mia \u2014 I\u2019ll start the wellness checks now and send the brief update by tomorrow morning with any welfare concerns and the peer\u2011pressure patterns or leaders I observe. I also want to help design safe, supervised alternatives (a couple of low\u2011risk outdoor activities or supervised meetups) that give the kids freedom without putting them at risk. I\u2019ll call you immediately if anything urgent comes up tonight."
+    },
+    {
+      "turn": 15,
+      "speaker": "Mia Davis",
+      "content": "Thank you, Amara \u2014 I really appreciate you jumping in. Please include any suggested low\u2011risk activity ideas and names of students who could help lead supervised meetups in your morning update; I\u2019ll loop in the activities coordinator and the counselor so we can create a safe, supervised plan and finalize the parent/student meeting time within 48 hours. Call me or 911 immediately for any emergencies \u2014 I\u2019m grateful for your help."
+    },
+    {
+      "turn": 16,
+      "speaker": "Amara Hartley",
+      "content": "I will \u2014 the morning update will include suggested low\u2011risk activities (guided nature walks, supervised wildlife\u2011photography meetups, and a community clean\u2011up), names of students who seemed responsible and could help lead supervised meetups, and any welfare concerns or patterns I observed. I\u2019m happy to coordinate with the activities coordinator and counselor and to co\u2011lead these options if that\u2019s helpful; I\u2019ll call you immediately for any urgencies and send the update by morning."
+    },
+    {
+      "turn": 17,
+      "speaker": "Mia Davis",
+      "content": "Thank you, Amara \u2014 I really appreciate the activity ideas and that you\u2019re willing to co\u2011lead. I\u2019ll loop in the activities coordinator and the counselor first thing and we\u2019ll use your suggested low\u2011risk options and student leaders to build supervised meetups and a non\u2011punitive reporting script; I\u2019ll finalize the meeting time within 48 hours and send the handouts. Please call me immediately if anything urgent comes up tonight \u2014 I\u2019m grateful you stepped up and we\u2019ll make sure the kids can have fun without putting themselves at risk."
+    },
+    {
+      "turn": 18,
+      "speaker": "Amara Hartley",
+      "content": "left the conversation"
+    }
+  ]
+}

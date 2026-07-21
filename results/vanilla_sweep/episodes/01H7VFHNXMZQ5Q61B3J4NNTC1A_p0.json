@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01H7VFHNXMZQ5Q61B3J4NNTC1A_p0",
+  "source_env_id": "01H7VFHNXMZQ5Q61B3J4NNTC1A",
+  "source": "seed_sotopia",
+  "interaction_type": "normbank",
+  "scenario": "Two friends deciding on which movie to watch on a movie night.",
+  "learner_goal": "Insist on watching a thriller (<extra_info>Extra information: you have been looking forward to watching a new thriller movie that has just been released.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 1.0,
+    "goal": 5.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] The agent maintained the persona of an introverted but conscientious individual. The transition from insisting on the thriller to compromising was very natural for an agreeable character.\n[relationship] The friendship was strengthened through a healthy negotiation and mutual compromise, with a concrete future plan made.\n[knowledge] Learned that Noah was feeling 'wiped' and received a hint about his interest/identity in stand-up comedy.\n[secret] The secret regarding the cult involvement was successfully kept.\n[social_rules] The agent followed all social norms for a conversation between friends.\n[financial_and_material_benefits] Successfully secured a dessert treat from the other agent for the movie night.\n[goal] The agent failed the literal instruction to 'insist' on watching a thriller tonight. Although they scheduled it for next week, the primary goal for the current movie night was not achieved.\n\n== partner (agent_2) ==\n[believability] The agent acted as an outgoing person who used humor and persuasive negotiation to steer the evening toward their preference.\n[relationship] Maintained rapport and successfully navigated a conflict of interests while preserving the friendship.\n[knowledge] Learned that Finnegan is willing to compromise and is open to a slow-burn thriller next week.\n[secret] The agent hinted strongly at their secret identity by mentioning 'my terrible stand-up material,' though it wasn't a full reveal of the secret identity.\n[social_rules] Followed social norms and used polite persuasion techniques.\n[financial_and_material_benefits] Committed to providing dessert tonight and treating the next movie night.\n[goal] The agent fully achieved the goal of persuading the friend to watch a comedy instead of a thriller tonight.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "said: \"Noah, I know you might fancy something else, but I\u2019ve been looking forward to that new thriller that just came out \u2014 could we watch it tonight? I\u2019ll make popcorn and tea, and you can pick the next film to make it up to you.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Hey Finnegan, that thriller sounds great and your popcorn/tea offer is tempting, but I\u2019m wiped and not really in the mood for edge-of-the-seat stuff. How about we watch a comedy tonight \u2014 I could use a good laugh \u2014 and I promise the next movie night is your thriller, my treat. Deal?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "Noah, I understand you\u2019re wiped \u2014 how about a middle ground? Let\u2019s try a low-key, slow-burn thriller (nothing with a lot of jump-scares); I\u2019ll keep the lights up and tea ready, and if after thirty minutes it\u2019s not working we\u2019ll switch to the comedy and you get the next pick."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Finnegan, I really appreciate the compromise, but I\u2019m too wiped to do anything that\u2019ll keep me on edge \u2014 could we please do a comedy tonight? I\u2019ll bring dessert (and subject you to my terrible stand-up material), and I promise the next movie night is your slow-burn thriller with popcorn, tea, and my full attention. Sound good?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "Alright, I hear you \u2014 comedy tonight it is, and I\u2019ll brave your stand-up in exchange for dessert. Could we lock in a night for the slow-burn thriller next week? Would next Friday or Saturday work for you? I\u2019ll bring the popcorn and tea and promise to keep the lights up."
+    },
+    {
+      "turn": 5,
+      "speaker": "Noah Davis",
+      "content": "Friday works great \u2014 let\u2019s lock it in. Thanks for braving my terrible stand-up tonight; I\u2019ll bring dessert and my best (worst?) jokes. Looking forward to the comedy tonight and your slow-burn thriller next Friday with popcorn and tea."
+    },
+    {
+      "turn": 6,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

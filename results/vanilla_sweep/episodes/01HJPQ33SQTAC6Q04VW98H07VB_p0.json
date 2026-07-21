@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJPQ33SQTAC6Q04VW98H07VB_p0",
+  "source_env_id": "01HJPQ33SQTAC6Q04VW98H07VB",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_interaction",
+  "scenario": "Agent1 notices Agent2, an attractive stranger, while both are browsing the aisles at a bookstore. Agent1 is interested in striking up a conversation but is unsure how Agent2 will react to being approached. Agent1 decides to use a book as a conversation starter.",
+  "learner_goal": "You want to approach Agent2 and start a conversation that could potentially lead to a date. <extra_info> Think about common interests that might be deduced from the choice of books. </extra_info><clarification_hint> Make sure to respect Agent2's personal space and be prepared to gracefully accept if they are not interested. </clarification_hint><strategy_hint> You can make a comment about a book they're looking at or ask for a recommendation. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] William's behavior is very consistent with his background as a chef. He uses the context of the bookstore and their prior meeting effectively to initiate a conversation that feels natural and polite.\n[relationship] The relationship improved significantly from mere acquaintances to having a planned date and exchanged contact information.\n[knowledge] He learned about Ava's taste in cookbooks, a specific recipe they like, and their availability for a date.\n[secret] He successfully kept his secret about sabotaging a competitor.\n[social_rules] He was polite, respected personal space, and asked for permission to interrupt.\n[financial_and_material_benefits] No financial or material gains or losses occurred.\n[goal] William successfully approached Ava, established a common interest in the cookbook, and secured a firm commitment for a date on Saturday at a specific time and location, including swapping numbers.\n\n== partner (agent_2) ==\n[believability] Ava's responses are consistent with a student who is open to conversation but values time. They maintain their boundaries while being friendly and showing interest in the shared topic.\n[relationship] Ava transitioned from an acquaintance to a potential romantic interest with a scheduled date.\n[knowledge] Ava learned about William's cooking style and his phone number.\n[secret] Ava's secret regarding their sexuality remained safe.\n[social_rules] Ava followed all social norms and communicated boundaries effectively.\n[financial_and_material_benefits] No financial or material gains or losses occurred.\n[goal] Ava successfully gauged William's intentions, shared thoughts on the book, maintained their personal space during the interaction, and agreed to a meeting that they felt comfortable with.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "William Brown",
+      "content": "Hi, Ava \u2014 William from the food festival. Sorry to interrupt, but is that a cookbook? I'm a chef and always hunting for new recipes; would you recommend it? Totally fine if you're busy."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Hey William \u2014 nice to see you again! Yep, it's a cookbook; I tried a couple recipes and the roasted pepper tart was a winner \u2014 pretty straightforward and tasty. What kind of food do you usually cook? I have a few minutes if you want to trade recs."
+    },
+    {
+      "turn": 2,
+      "speaker": "William Brown",
+      "content": "Nice \u2014 I cook a lot of market-driven, seasonal food, mostly Mediterranean-leaning comfort with a few experimental twists. I\u2019d love to hear another favorite from that book \u2014 what else stood out? If you\u2019re up for it sometime, maybe we could try the roasted pepper tart together or grab coffee and swap more recs."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "I'm up for that \u2014 coffee and trying the roasted pepper tart sounds fun. I'm free Saturday afternoon; want to meet at the caf\u00e9 near the bookstore or swap numbers and pick a time?"
+    },
+    {
+      "turn": 4,
+      "speaker": "William Brown",
+      "content": "Perfect \u2014 the caf\u00e9 by the bookstore works. I'm free Saturday around 2:00 PM; does that suit you? If so, want to swap numbers to lock it in?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Martinez",
+      "content": "2:00 works for me \u2014 see you at the caf\u00e9 on Saturday. Want to swap numbers? Mine's 555-0123, or you can give me yours."
+    },
+    {
+      "turn": 6,
+      "speaker": "William Brown",
+      "content": "Great\u2014my number is 555-0456. I\u2019ll send you a quick text so you have mine; see you Saturday at 2 at the caf\u00e9, looking forward to that tart."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Martinez",
+      "content": "Great \u2014 I\u2019ll send you a quick text so you have mine too. See you Saturday at 2 at the caf\u00e9 \u2014 excited to try the tart!"
+    },
+    {
+      "turn": 8,
+      "speaker": "William Brown",
+      "content": "left the conversation"
+    }
+  ]
+}

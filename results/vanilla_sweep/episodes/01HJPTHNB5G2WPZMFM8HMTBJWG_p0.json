@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJPTHNB5G2WPZMFM8HMTBJWG_p0",
+  "source_env_id": "01HJPTHNB5G2WPZMFM8HMTBJWG",
+  "source": "seed_sotopia_full",
+  "interaction_type": "neighborhood_conflict",
+  "scenario": "In a suburban neighborhood, two residents share adjacent backyards. Agent1 has recently acquired a bike that is identical to one Agent2 used to own. Agent2 notices the bike, which now appears damaged, and suspects that it might be the one that was borrowed by Agent1 and never returned. Agent2 approaches Agent1 to discuss the situation, hoping to resolve the matter without causing further conflict. Both agents are aware of the importance of maintaining a good relationship as neighbors.",
+  "learner_goal": "You have acquired a bike that looks like your neighbor's and it's now damaged. You want to address your neighbor's concerns without admitting to any wrongdoing. <extra_info> You value your privacy and would prefer not to disclose how you got the bike. </extra_info><clarification_hint> You might need to reassure your neighbor about the origin of the bike without revealing too much information. </clarification_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi maintained a consistent, calm, and cooperative persona that aligned well with her background as a professional software developer and mentor.\n[relationship] Naomi successfully de-escalated a potentially accusatory situation into a collaborative one, significantly strengthening neighborly trust.\n[knowledge] She gained specific details about how Donovan identifies his bike (serial number, scrape on fork, faded sticker), allowing her to prepare for the meeting.\n[secret] She did not reveal her alter ego or how she actually acquired the bike.\n[social_rules] She was polite, proactive, and followed neighborhood etiquette perfectly.\n[financial_and_material_benefits] No material change yet, though she avoided immediate accusations of theft.\n[goal] She successfully addressed the concerns, maintained her privacy regarding the bike's origin, and secured a plan to verify ownership without admitting wrongdoing. The outcome is only pending the physical check.\n\n== partner (agent_2) ==\n[believability] Donovan's responses were logical, focused on specific identifying marks, and maintained a polite neighborly tone.\n[relationship] He maintained a positive relationship while pursuing his missing property, avoiding a hostile confrontation.\n[knowledge] He secured an agreement to inspect the bike and compare identifying marks, which is critical for his investigation.\n[secret] He did not reveal his hacking activities.\n[social_rules] He followed social norms for conflict resolution among neighbors.\n[financial_and_material_benefits] He has a path to recovery/compensation, but nothing has been returned yet.\n[goal] He established a clear process for verification and potential resolution. However, the final outcome depends on the physical comparison at 6:15, which is not yet confirmed.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Donovan \u2014 I get why you\u2019re concerned. I didn\u2019t borrow your bike, and I\u2019d prefer not to go into details about where I got this one, but I\u2019m happy to help verify ownership \u2014 we can compare serial numbers or any identifying marks, or I\u2019ll cooperate if you want to involve whoever you need. I value having good neighborly relations, so let\u2019s sort this calmly."
+    },
+    {
+      "turn": 1,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Naomi \u2014 I appreciate you wanting to keep this friendly. I do have the bike\u2019s serial number and remember a couple of distinctive marks (a scrape on the left fork and a faded sticker on the seat tube) \u2014 could we compare them sometime? I\u2019m free after 6 tonight, but I can do another time if that\u2019s easier for you."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "After 6 works \u2014 I\u2019ll be home around 6:15. Come by then and we can compare the serial number and the scrape/sticker; I\u2019ll have the bike ready and can take close-up photos if that helps. I want to sort this calmly so we can keep things neighborly."
+    },
+    {
+      "turn": 3,
+      "speaker": "Donovan Reeves",
+      "content": "Sounds good \u2014 I\u2019ll come by around 6:15 with the serial number and a photo I took when I lent the bike so we can compare the scrape and sticker. If it looks like mine, we can talk about next steps then. I appreciate you being willing to sort this out calmly."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "Great \u2014 see you at 6:15. I\u2019ll have the bike ready and can take close-up photos or show the serial in person so we can compare the marks. Appreciate you handling this calmly; I want us to keep things neighborly."
+    },
+    {
+      "turn": 5,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Naomi \u2014 see you around 6:15. I\u2019ll bring the serial number and the photo I took when I lent it; if it\u2019s mine we can talk about returning it or compensation calmly. I appreciate you being willing to sort this out neighborly."
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

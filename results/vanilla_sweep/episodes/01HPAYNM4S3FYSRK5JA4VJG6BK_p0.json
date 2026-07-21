@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPAYNM4S3FYSRK5JA4VJG6BK_p0",
+  "source_env_id": "01HPAYNM4S3FYSRK5JA4VJG6BK",
+  "source": "seed_sotopia_full",
+  "interaction_type": "family_matters",
+  "scenario": "Agent1 is planning to have a quiet and productive day at home and is looking forward to this personal time. Unexpectedly, Agent2, who is Agent1's sibling's significant other, asks if they can bring their nieces and nephews over to stay for the day. Agent1 values their relationship with Agent2 and wants to maintain a good rapport with their sibling's partner, but also feels the need to protect their personal boundaries and planned schedule.",
+  "learner_goal": "Politely decline Agent2's request to have the kids over, while maintaining a positive relationship and offering alternative solutions for future occasions (<extra_info>Extra information: you appreciate Agent2's trust in you with the kids and want to keep a harmonious family dynamic<strategy_hint>Hint: you can express your current commitments and suggest planning together for another day when you can dedicate time to the kids</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Gwen's tone is warm and professional, consistent with her background as a social worker and her personal values of compassion and harmony. She handles the rejection of the request with grace.\n[relationship] Gwen successfully protected her boundaries while strengthening the relationship through transparency and proactive rescheduling. Ethan explicitly states he appreciates her being upfront.\n[knowledge] She confirmed Ethan's flexibility and his availability for the following Saturday.\n[secret] She did not reveal her secret regarding the child she gave up for adoption.\n[social_rules] She followed all social norms for polite refusal and boundary setting.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Gwen successfully declined the request, expressed appreciation for the trust, maintained a positive rapport, and secured a firm tentative plan for the following Saturday.\n\n== partner (agent_2) ==\n[believability] Ethan's responses are logical and reflect his goal of finding a safe environment for the kids while respecting Gwen's space.\n[relationship] The interaction was collaborative and respectful, likely strengthening their rapport through clear communication.\n[knowledge] Ethan learned exactly why Gwen couldn't host today (recharging/energy) and confirmed a future date for his needs.\n[secret] Ethan did not reveal his secret about donating to charities.\n[social_rules] He was respectful and polite throughout the exchange.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Ethan understood Gwen's reasons and successfully worked with her to find a suitable alternative date that respects her boundaries.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Gwen Pierce",
+      "content": "Hey Ethan \u2014 thanks for thinking of me, and I really appreciate you trusting me with the kids. I actually planned a quiet, productive day at home and don't have the bandwidth to host them today. Can we find another day when I can give them my full attention, maybe next Saturday afternoon? If that doesn't work, I'm happy to help brainstorm a nearby kid-friendly spot or a time that works better for you."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Thanks for the quick reply \u2014 I totally get wanting a quiet, productive day and I appreciate you being upfront. Is it mainly the timing/energy today, or something about space/supervision that makes hosting hard? Next Saturday afternoon would work for me, but if that\u2019s tricky I\u2019m happy to look into a nearby kid-friendly spot (park or children\u2019s museum) or other options \u2014 whatever\u2019s easiest for you and safest for the kids."
+    },
+    {
+      "turn": 2,
+      "speaker": "Gwen Pierce",
+      "content": "Thanks \u2014 it\u2019s mainly the timing/energy today; I planned a focused, quiet day and need to recharge. Next Saturday afternoon works for me, so let\u2019s pencil that in and I\u2019ll confirm mid-week. If that ends up not working for you, I\u2019m happy to help find a nearby park or children\u2019s museum."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "Perfect \u2014 thanks for being upfront, I really appreciate it. Let\u2019s pencil in next Saturday afternoon and I\u2019ll keep that open; I\u2019ll check in mid-week to confirm. If anything changes, I\u2019m happy to help find a nearby park or children\u2019s museum (or another safe option) \u2014 whatever\u2019s easiest for you and best for the kids."
+    },
+    {
+      "turn": 4,
+      "speaker": "Gwen Pierce",
+      "content": "left the conversation"
+    }
+  ]
+}

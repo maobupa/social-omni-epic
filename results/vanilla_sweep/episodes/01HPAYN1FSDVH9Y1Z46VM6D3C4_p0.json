@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPAYN1FSDVH9Y1Z46VM6D3C4_p0",
+  "source_env_id": "01HPAYN1FSDVH9Y1Z46VM6D3C4",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_creation",
+  "scenario": "Agent1 and Agent2 are both members of a local theater group. During a rehearsal, Agent1 accidentally sets fire to the curtains, causing a small blaze that Agent2 quickly extinguishes. After the incident, Agent1 approaches Agent2 to discuss the importance of fire safety measures and protocols in the theater to prevent such accidents from happening again.",
+  "learner_goal": "Apologize to Agent2 for the mishap and seek to collaborate on enhancing fire safety protocols, while considering the group's limited budget for improvements (<extra_info>Extra information: You feel guilty for the accident and want to ensure everyone's safety without incurring significant expenses. <strategy_hint>Hint: You can propose cost-effective fire safety solutions and volunteer to lead a safety training session.</strategy_hint>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 4.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle Martinez stayed perfectly in character, expressing genuine guilt for the accident while proactively offering solutions that align with her coffee-shop-worker/student background and high agreeableness.\n[relationship] The relationship improved significantly as they moved from simple acquaintances to active collaborators on a project of mutual interest, with Amara offering strong support.\n[knowledge] She gained knowledge of Amara's willingness to help with leadership and fundraising, and established a specific meeting time for the walkthrough.\n[secret] Her secret about studying magic was never mentioned.\n[social_rules] She followed all social norms, including appropriate apologies and professional coordination.\n[financial_and_material_benefits] No personal financial gain, though the plan aims to save the theater money.\n[goal] Isabelle completely achieved her goal: she apologized, proposed a specific list of cost-effective measures, volunteered for training, and secured a firm commitment from Amara to collaborate and present it to leadership.\n\n== partner (agent_2) ==\n[believability] Amara Hartley acted consistently with her pragmatic nature as a biologist and her high openness, moving quickly from the crisis to a structured solution.\n[relationship] The bond strengthened through a shared mission and mutual respect for safety protocols.\n[knowledge] She learned about Isabelle's specific safety suggestions and her willingness to lead training.\n[secret] Her involvement in animal-rights extremism remained hidden.\n[social_rules] She was polite, forgiving, and professional.\n[financial_and_material_benefits] No personal financial impact.\n[goal] Amara fully achieved her goal: she accepted the apology, helped develop the plan, integrated budget-friendly and fundraising ideas, and committed to addressing leadership's cost concerns.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Amara, I am so sorry about the curtains \u2014 I feel awful and I really appreciate you putting the fire out so quickly. I want to help make sure this never happens again: with our limited budget I can organize low-cost steps like checking and tagging existing extinguishers and alarms, treating or replacing flammable props with inexpensive flame-retardant spray, posting a simple exit/checklist, and running a short volunteer-led training on extinguisher use and evacuation (PASS technique). I\u2019ll happily lead the training and coordinate the checklist and supplies if you\u2019re on board."
+    },
+    {
+      "turn": 1,
+      "speaker": "Amara Hartley",
+      "content": "Thank you \u2014 I know you feel awful, but I\u2019m just glad everyone\u2019s okay and you acted fast. I\u2019m on board with your low-cost plan: extinguisher/alarm checks and tagging, treating or replacing flammable props, a simple exit/checklist, and your short PASS training. I\u2019ll help present it to leadership stressing safety over cost while highlighting budget-friendly steps, volunteer labor, and small fundraising options, and I can help draft the checklist and get quotes for retardant spray. Let\u2019s walk the space this week and make a prioritized action list."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "Thank you so much, Amara \u2014 I really appreciate you backing this and I\u2019m relieved everyone\u2019s okay. Let\u2019s walk the space this week: would Wednesday at 6 PM or Saturday at 10 AM work for you? I\u2019ll bring a clipboard, a draft checklist, a sample quote for flame\u2011retardant spray, and I\u2019ll start organizing the short volunteer PASS training and extinguisher\u2011tagging plan to present to leadership. I\u2019ll lead the training and help coordinate any small fundraising ideas if that\u2019s helpful."
+    },
+    {
+      "turn": 3,
+      "speaker": "Amara Hartley",
+      "content": "Wednesday at 6 PM works for me \u2014 let\u2019s meet in the theater lobby and walk the stage afterward. I\u2019ll bring a prioritized action list and a couple of vendor quotes for flame\u2011retardant spray, plus a short outline to present budget\u2011friendly steps and small fundraising ideas to leadership. Thanks for leading the PASS training \u2014 I\u2019ll back you up when we talk to leadership."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

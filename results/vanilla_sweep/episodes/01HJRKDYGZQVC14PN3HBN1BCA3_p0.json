@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HJRKDYGZQVC14PN3HBN1BCA3_p0",
+  "source_env_id": "01HJRKDYGZQVC14PN3HBN1BCA3",
+  "source": "seed_sotopia_full",
+  "interaction_type": "suburban_neighborhood",
+  "scenario": "In a suburban neighborhood, Agent1 and Agent2 are neighbors who have had a long-standing feud over the property line between their houses. Agent1 has recently decided to change their behavior, seeking to mend the relationship after realizing the conflict is causing distress within the community. Agent2, however, remains skeptical and is not easily convinced by Agent1's change of heart. They both happen to be at a local community event where they have the opportunity to discuss the property line issue.",
+  "learner_goal": "You are Agent1, and your goal is to reconcile with Agent2 and find a peaceful resolution to the property line conflict. <extra_info>You have realized the negative impact of the feud and want to be loved and respected in the community again.</extra_info> <clarification_hint>Explain to Agent2 the reasons behind your change in behavior and your sincere wish to resolve the conflict.</clarification_hint> <strategy_hint>You can suggest a compromise on the property line or offer to involve a neutral third party to mediate the dispute.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles is consistent and sincere, acknowledging his own personal growth and the impact of the feud on the community, which aligns with his persona as a chef and gardener seeking to regain respect.\n[relationship] The relationship improved significantly from a long-standing feud to a formal agreement to resolve the issue, with a scheduled meeting to finalize the details.\n[knowledge] Miles learned Zane's specific requirements for resolution, including the need for a 50/50 cost split and a formal 30-day timeline.\n[secret] Miles did not reveal his secret about his gambling addiction.\n[social_rules] Miles followed social norms for apology and conflict resolution.\n[financial_and_material_benefits] Miles agreed to pay 50% of the survey and mediation costs, which is a financial expenditure, though it protects his property long-term.\n[goal] Miles successfully reached a concrete agreement for a peaceful resolution, including the involvement of a neutral third party and a specific timeline, fulfilling all parts of his objective.\n\n== partner (agent_2) ==\n[believability] Zane\u2019s skepticism is well-articulated and realistic given the history of the feud, and his demands for formal documentation are consistent with his character.\n[relationship] Zane moved from active conflict to a cooperative path with Miles, establishing a clear way forward for a cordial relationship.\n[knowledge] Zane gained confirmation that Miles is willing to back his words with financial action (the deposit).\n[secret] Zane did not reveal his secret engagement.\n[social_rules] Zane maintained professional and firm boundaries during the interaction.\n[financial_and_material_benefits] Zane also agreed to a 50/50 split of the costs, which involves personal expenditure.\n[goal] Zane protected his property rights by securing a formal process (licensed surveyor and mediator) and required actions that demonstrate Miles's commitment.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Hey Zane\u2014it's Miles. I want to apologize for how the property dispute has dragged on; I've been doing some work on myself and I realize it's been bad for you, me, and the neighborhood. I'm serious about making this right: I'm willing to split costs for a proper survey and adjust the line if needed, or bring in a neutral mediator\u2014what would you be comfortable with?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Zane Bennett",
+      "content": "I appreciate the apology and the offer, Miles, but after years of back-and-forth I\u2019m cautious \u2014 words alone won\u2019t do it. I\u2019m willing to move forward if we hire a licensed land surveyor and a neutral mediator, split costs 50/50, agree in writing to accept the survey results (and not alter boundary markers or landscaping until it\u2019s settled), and set a clear timeline (survey done within 30 days). If you\u2019re serious, put down a deposit for the survey or sign a short commitment to those steps and I\u2019ll meet you to pick a surveyor and mediator \u2014 can you agree to that and when can we start?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "I agree to those terms, Zane \u2014 licensed surveyor and neutral mediator, 50/50 split, written acceptance of the survey, no moving markers or landscaping until it\u2019s settled, and the survey done within 30 days. I\u2019m serious about making this right and I\u2019ll put down a deposit or sign a short commitment to show it; I can arrange that by Friday. Can we meet Saturday morning to pick a surveyor and mediator and sign the commitment?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Zane Bennett",
+      "content": "That works. Let\u2019s meet Saturday morning \u2014 9:00 AM at the community center caf\u00e9 to pick a surveyor and mediator and sign the short commitment. Please either put down the deposit for the survey or send me a signed copy of the commitment by Friday so I know this is serious; text me when you\u2019ve done it and I\u2019ll bring a list of licensed surveyors I\u2019ve contacted."
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks, Zane. I\u2019ll put down the deposit by Friday and will text you as soon as it\u2019s done. See you Saturday at 9:00 AM at the community center caf\u00e9 \u2014 I appreciate you giving this a chance."
+    },
+    {
+      "turn": 5,
+      "speaker": "Zane Bennett",
+      "content": "Thanks, Miles. I appreciate it \u2014 I'll expect your text confirming the deposit by Friday; I'll bring the list of licensed surveyors and neutral mediators Saturday at 9:00 at the community center caf\u00e9. If I don't get confirmation by Friday, I'll need to reconsider meeting. See you then."
+    },
+    {
+      "turn": 6,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

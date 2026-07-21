@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ33B34Y6CZJC53AXYF1GN_p0",
+  "source_env_id": "01HJPQ33B34Y6CZJC53AXYF1GN",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_iqa",
+  "scenario": "Agent1 and Agent2 are roommates who share an apartment. Agent1 has decided to mount a new television on the wall and is using a power drill to install the bracket. Agent2 is concerned about the noise and the potential damage to the wall, which might affect their security deposit.",
+  "learner_goal": "Convince Agent2 to allow the use of the power drill to mount the television (<extra_info>Extra information: You believe that the television will be a great addition to the apartment and have taken precautions to minimize damage.<strategy_hint>Hint: You could offer to take full responsibility for any potential damages or compromise on a time to do the drilling when it's least disruptive.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": -2.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Eli's tone was professional and consistent with his background as a forensic psychiatrist. He was detail-oriented and offered specific technical precautions.\n[relationship] The interaction was highly collaborative and polite. Both parties reached a mutual understanding that respected each other's boundaries, strengthening their roommate dynamic.\n[knowledge] Eli learned Ethan's specific schedule preferences and his anxiety regarding apartment maintenance.\n[secret] Eli did not reveal any secrets.\n[social_rules] Eli followed all social norms for a roommate negotiation.\n[financial_and_material_benefits] While he gets his TV mounted, he committed to bearing the full financial burden of repairs or professional installation costs.\n[goal] Eli successfully secured permission to mount the television using a drill on Saturday afternoon, provided he follows the agreed-upon precautions.\n\n== partner (agent_2) ==\n[believability] Ethan's concerns about the security deposit and noise are very realistic for a 29-year-old roommate.\n[relationship] The relationship benefited from a clear, respectful resolution to a potential conflict.\n[knowledge] Ethan learned that Eli is willing to take full financial responsibility and is competent with home repairs.\n[secret] Ethan did not reveal any secrets.\n[social_rules] Ethan followed social norms throughout the negotiation.\n[financial_and_material_benefits] Ethan secured a commitment from Eli to pay for all repairs or professional services, protecting Ethan's share of the security deposit.\n[goal] While Ethan didn't stop the drilling entirely, he negotiated specific terms, timing, and professional oversight that mitigated his concerns.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Eli Dawson",
+      "content": "Hey Ethan \u2014 I need to mount a TV and will have to use a power drill. I\u2019ve taken precautions: I\u2019ll locate studs, use the right anchors, put down dust sheets, and I\u2019ll patch/paint or pay for any repairs, so I\u2019ll take full responsibility for any impact on the deposit. It should only take about 30\u201345 minutes; I can do it at whatever time is least disruptive to you \u2014 when would be best, or would you prefer I wait?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Hey Eli \u2014 thanks for the heads-up. I appreciate you taking responsibility, but I\u2019m worried about the noise for neighbors and the risk to the wall. Could we try a less invasive option first (a low-profile TV stand/console, heavy-duty adhesive mounts, or hiring a pro who can do it quickly and quietly)? If drilling is required, can you wait until a time I\u2019m out (Saturday afternoon works for me) or agree to have me inspect the patch/paint after and split the cost of a professional install if needed?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Eli Dawson",
+      "content": "Thanks, Ethan \u2014 that sounds reasonable. I\u2019ll do it Saturday afternoon while you\u2019re out, I\u2019ll text before I start, use a stud finder and pilot holes, lay down dust sheets and keep it under 45 minutes, and I\u2019ll cover any repair or professional re-install costs in full (you won\u2019t have to split anything); if you\u2019d rather I hire a pro instead, say the word and I\u2019ll arrange it."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Eli \u2014 Saturday afternoon while I\u2019m out works for me. If it\u2019s doable, I\u2019d really prefer you hire a pro to avoid the noise and lower the risk of wall damage; if that\u2019s not feasible, please follow the precautions you listed, text me right before you start, and send a photo of the finished patch so I can feel comfortable. I appreciate you taking responsibility for repairs."
+    },
+    {
+      "turn": 4,
+      "speaker": "Eli Dawson",
+      "content": "left the conversation"
+    }
+  ]
+}

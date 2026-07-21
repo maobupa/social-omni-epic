@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HPB34V7ED7F5THFENDQS29WY_p0",
+  "source_env_id": "01HPB34V7ED7F5THFENDQS29WY",
+  "source": "seed_sotopia_full",
+  "interaction_type": "unrequited_attraction",
+  "scenario": "Agent1 has developed a crush on Agent2, who they see every day at a local coffee shop. Despite Agent1's frequent visits and attempts at small talk, Agent2 seems oblivious to Agent1's growing affection. Agent1 decides to finally express their feelings in a more direct manner, hoping to catch Agent2's attention and explore the possibility of a romantic relationship.",
+  "learner_goal": "Convey Agent1's feelings to Agent2 in a respectful and clear manner, while being prepared for any outcome (<extra_info>Extra information: Agent1 should be honest about their emotions but also maintain a level of composure to handle potential rejection.</extra_info> <clarification_hint>Clarification hint: Agent1 needs to communicate in a way that does not put undue pressure on Agent2.</clarification_hint> <strategy_hint>Hint: you can focus on expressing your own feelings rather than expecting a specific response.</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": -2.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ava's dialogue was consistent with their background as a social justice advocate\u2014using respectful, clear language and prioritizing consent and comfort. The tone matched the character's age and personality.\n[relationship] The relationship shifted from friendship to a mutual agreement to explore romantic feelings, which is a significant positive development.\n[knowledge] Ava learned that Sophia is open to a romantic relationship and feels comfortable exploring it slowly.\n[secret] Ava partially revealed their secret by admitting feelings for another woman/nonbinary person (their bisexuality), though they didn't explicitly label it to their family.\n[social_rules] Ava followed social norms perfectly, being exceptionally respectful and checking in on boundaries.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Ava successfully conveyed their feelings in a respectful manner, maintained composure, avoided putting pressure on Sophia, and reached a concrete plan for future interaction.\n\n== partner (agent_2) ==\n[believability] Sophia's responses reflected her background as a psychologist, using therapeutic-style language and focusing on safety and emotional processing.\n[relationship] The relationship improved through increased intimacy and a shared agreement on the path forward.\n[knowledge] Sophia gained deep insight into Ava's feelings and their desire for a slow-paced romantic exploration.\n[secret] Sophia's secret work as an undercover agent remained completely hidden.\n[social_rules] Sophia maintained a supportive and safe social environment throughout the interaction.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Sophia successfully created a safe, neutral, and low-pressure environment, allowing for an honest response and a mutually agreed-upon plan.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ava Martinez",
+      "content": "Hey Sophia \u2014 can I be honest about something? I really value our friendship, and over time I've realized I have feelings for you that go beyond friendship. I don't want to pressure you or make things awkward; I just wanted to be honest, and I'm okay with whatever you need \u2014 I just needed you to know."
+    },
+    {
+      "turn": 1,
+      "speaker": "Sophia Brown",
+      "content": "Thank you for telling me \u2014 that means a lot. I really value our friendship and I appreciate your honesty. I might need a little time to gather my thoughts; would you like to sit somewhere quiet and talk about this now, or would you prefer we give it a bit of space and revisit it later? Either way, I don\u2019t want you to feel pressured or awkward."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ava Martinez",
+      "content": "Thanks \u2014 I really appreciate you saying that. If you're up for it, I'd like to sit somewhere quiet and talk now; I don't expect an answer, I just wanted to be honest and hear how you feel. If you'd rather take space and revisit this later, that's completely okay too."
+    },
+    {
+      "turn": 3,
+      "speaker": "Sophia Brown",
+      "content": "I\u2019d like that. There\u2019s a quiet table in the back of the caf\u00e9 or, if you prefer more privacy, we can step outside to the little park bench \u2014 whichever feels better to you. I may need a few minutes to gather my thoughts, but I\u2019m here to listen and be honest with you."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ava Martinez",
+      "content": "The park bench sounds good \u2014 I\u2019d prefer the privacy. Take as long as you need; I don\u2019t need an answer right now, I just wanted to be honest and hear how you\u2019re feeling when you\u2019re ready."
+    },
+    {
+      "turn": 5,
+      "speaker": "Sophia Brown",
+      "content": "Thank you, Ava \u2014 that means a lot. I care about you and our friendship, and I may need a few minutes to gather my thoughts, but I\u2019m here to listen. If you want, tell me what you were feeling when you realized this or what you might hope for \u2014 we can take this very slowly, and there\u2019s absolutely no pressure for an answer right now."
+    },
+    {
+      "turn": 6,
+      "speaker": "Ava Martinez",
+      "content": "Thank you for being willing to listen. It kind of crept up on me \u2014 after the rally and all our conversations I started feeling really seen by you, and over time that turned into something more than friendship. If you\u2019re open to it, I\u2019d hope we could explore it slowly and gently, without rushing or changing what we already have. I don\u2019t expect an answer now, and I value our friendship above all, so I\u2019m okay with whatever you need."
+    },
+    {
+      "turn": 7,
+      "speaker": "Sophia Brown",
+      "content": "I\u2019m really touched, Ava \u2014 thank you for trusting me with this. I care about you and our friendship, and I don\u2019t have a clear answer right this second, but I\u2019m open to exploring this slowly and gently without rushing or changing what we already have. Would you be comfortable if we tried small steps \u2014 more one-on-one time, agreed boundaries, and regular check-ins \u2014 and promised we can pause or step back anytime so neither of us feels pressured?"
+    },
+    {
+      "turn": 8,
+      "speaker": "Ava Martinez",
+      "content": "Thanks \u2014 that feels really reassuring. I\u2019d love to try small, low-pressure steps: maybe a weekly coffee or a walk together and a brief check-in after a couple of weeks to see how we\u2019re both feeling. For boundaries, we could agree to pause anytime if either of us feels uncomfortable and check in honestly when we do. I care about you and our friendship, and I\u2019m glad we can take this slowly."
+    },
+    {
+      "turn": 9,
+      "speaker": "Sophia Brown",
+      "content": "I love that plan \u2014 simple, gentle, and flexible. How about we meet for coffee next Wednesday and then do a two-week check-in after that? I appreciate you being so patient; I care about you and promise we\u2019ll keep each other\u2019s comfort the top priority."
+    },
+    {
+      "turn": 10,
+      "speaker": "Ava Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

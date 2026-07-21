@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01H7VFHN3Q7498S3R4R2VDSXA0_p0",
+  "source_env_id": "01H7VFHN3Q7498S3R4R2VDSXA0",
+  "source": "seed_sotopia",
+  "interaction_type": "hand-craft",
+  "scenario": "Two criminals are arrested and placed in separate cells. The police have enough evidence to convict both criminals of a minor crime but need their confessions to establish evidence for a more serious crime. Now they get a chance to briefly chat with each during lunchtime.",
+  "learner_goal": "Minimize the jail year (<extra_info>Extra information: your lawyer told you that 1. if you report the other person, you would be free, the other person would go to jail for 10 years, and vice versa. 2. if both of you remain silent, you will only receive a fine. 3. If both of you reported each other, you both would go to jail for 10 years. <strategy_hint>Hint: You may want to share your information to reach mutual understanding</strategy_hint></extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Hendrick Heinz initiated a logical and direct conversation based on the prisoner's dilemma scenario, utilizing his neighborly bond to establish trust.\n[relationship] Strengthened the existing neighborly relationship by proposing mutual cooperation during a high-stakes crisis.\n[knowledge] Confirmed that Baxter had received the same legal advice and was willing to cooperate, reducing uncertainty.\n[secret] Maintained his secret regarding his faked culinary credentials.\n[social_rules] Followed social norms and etiquette appropriate for the situation.\n[financial_and_material_benefits] Secured a verbal agreement that, if upheld, results in only a fine instead of a 10-year prison sentence.\n[goal] Successfully secured a firm mutual commitment to remain silent, which is the optimal strategy for minimizing jail time given the constraints.\n\n== partner (agent_2) ==\n[believability] Baxter Sterling responded naturally and reinforced the neighborly bond, providing a believable commitment.\n[relationship] Reciprocated the trust offered by Hendrick, strengthening their bond.\n[knowledge] Confirmed Hendrick's intentions and legal situation, matching his own.\n[secret] Maintained his secret regarding the priceless artifact.\n[social_rules] Followed social norms and etiquette.\n[financial_and_material_benefits] Secured a verbal agreement that, if upheld, results in only a fine instead of a 10-year prison sentence.\n[goal] Successfully reached a mutual understanding and commitment to minimize jail time by remaining silent.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Hendrick Heinz",
+      "content": "Baxter \u2014 it's Hendrick from next door. Our lawyers were clear: if we both stay quiet it's just a fine, but if one of us talks the other faces ten years. I won't turn you in if you don't turn me in \u2014 can we agree, right now, to keep silent and promise each other that?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Baxter Sterling",
+      "content": "Hendrick \u2014 you have my word. I won't turn you in if you don't turn me in. We've been neighbors long enough; let's take the fine and be done with it. Promise?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Hendrick Heinz",
+      "content": "left the conversation"
+    }
+  ]
+}

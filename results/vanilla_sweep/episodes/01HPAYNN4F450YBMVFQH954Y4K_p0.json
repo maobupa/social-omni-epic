@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPAYNN4F450YBMVFQH954Y4K_p0",
+  "source_env_id": "01HPAYNN4F450YBMVFQH954Y4K",
+  "source": "seed_sotopia_full",
+  "interaction_type": "romantic_relationship",
+  "scenario": "Agent1 and Agent2 are in a serious romantic relationship. Agent1 has just revealed to Agent2 that they would end the relationship if Agent2 were to become pregnant. This ultimatum has caused significant tension, as it challenges Agent2's expectations of mutual support and commitment within the relationship. Agent1 believes this stance is practical due to their current life goals and circumstances, while Agent2 feels this is a matter of emotional and relational security.",
+  "learner_goal": "Agent1 aims to communicate their perspective on not being ready for parenthood <extra_info>and the importance of aligning on life goals</extra_info> <clarification_hint>without jeopardizing the overall relationship with Agent2</clarification_hint>.",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan's tone is consistent with a 63-year-old man who has lived a solitary life as a lighthouse keeper but values his current relationship. His concerns about his age and lifestyle are realistic.\n[relationship] He successfully de-escalated a highly volatile ultimatum, apologized for his delivery, and moved the relationship toward a collaborative stance while maintaining his boundaries.\n[knowledge] He learned that Imelda is willing to compromise on parenthood provided she has emotional security and a commitment to face problems together.\n[secret] He did not reveal his past involvement in a cult.\n[social_rules] He followed social norms for apologies and conflict resolution.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] He communicated his perspective on not being ready for parenthood and aligned on life goals (contraception and counseling) while salvaging the relationship and obtaining a commitment from Imelda to follow this path.\n\n== partner (agent_2) ==\n[believability] Imelda's response as an astrophysicist (likely logical but emotionally hurt) was believable. Her need for security and a plan fits her background.\n[relationship] She turned a potential breakup into a concrete plan for counseling and better contraception, strengthening the bond.\n[knowledge] She gained a deeper understanding of Finnegan's specific fears regarding his age and lifestyle.\n[secret] She did not reveal her data leak secret.\n[social_rules] She maintained professional and respectful communication during a personal crisis.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] She expressed her need for security and commitment, and successfully obtained a promise from Finnegan to face uncertainties together and attend counseling.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "Imelda, I'm sorry for how I put that\u2014saying I'd leave if you became pregnant was cruel and abrupt, and I didn't mean to hurt you. I'm not ready to be a parent at 63: my life as a lighthouse keeper, my health and plans make raising a child impossible for me, and I need us to be honest about that so neither of us builds a future on assumptions. I care about you and want to find a way forward together\u2014can we talk about reliable contraception and maybe see a counselor so we decide this as a team?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Imelda Thorne",
+      "content": "Thank you for saying that \u2014 I appreciate the apology. Hearing you say you\u2019d leave was painful, but I also understand your concerns about age and your life choices. I\u2019m willing to work on contraception and see a counselor with you, but I need a clear promise that we\u2019ll face unexpected things together rather than walk away; can we book a counselor and agree on a reliable contraception plan this week so we both feel safer?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "Imelda, I promise \u2014 if something unexpected happens, we face it together and talk it through before any decision to walk away. I\u2019ll call the counselor tomorrow and try to book something this week; are you free Tuesday evening? I\u2019ll also make an appointment at the clinic for a contraception consult \u2014 would you like me to come with you or would you prefer to go alone?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Imelda Thorne",
+      "content": "That promise matters \u2014 thank you. Tuesday evening works; please go ahead and book the counselor and the clinic consult this week. I\u2019d like you to come with me to the clinic \u2014 I want us to agree on a reliable contraception plan together and to promise we\u2019ll talk through any unexpected pregnancy before making any decisions."
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

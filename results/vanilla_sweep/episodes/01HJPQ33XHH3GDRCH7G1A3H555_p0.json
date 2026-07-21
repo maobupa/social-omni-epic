@@ -1,0 +1,78 @@
+{
+  "scenario_id": "01HJPQ33XHH3GDRCH7G1A3H555_p0",
+  "source_env_id": "01HJPQ33XHH3GDRCH7G1A3H555",
+  "source": "seed_sotopia_full",
+  "interaction_type": "local_community_board",
+  "scenario": "Agent1 has posted an advertisement on a local community board offering a lightly used, high-quality bike at a fair price. Agent2, who recently enjoyed a bike ride to the movies, is looking to purchase a bike to recreate such enjoyable experiences. Agent2 is interested in the bike but is unsure if the price reflects the bike's value given its condition and usage.",
+  "learner_goal": "You are Agent1, the seller of the bike, and your target price is $350. <extra_info>Your bottom line is $300, but you believe the bike's condition justifies a higher price.</extra_info> <clarification_hint>You should emphasize the bike's quality and how well it has been maintained.</clarification_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 2.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 12,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel remained entirely in character, leveraging the provided background of their mutual interest in cooking and maintaining a professional yet friendly tone consistent with an acquaintance.\n[relationship] The interaction was cordial and cooperative, reinforcing their existing acquaintance through a successful and fair negotiation.\n[knowledge] Samuel learned Hendrick's budget, his specific interest in weekend rides, and confirmed a meeting time and payment method.\n[secret] Samuel did not reveal his past as a competitive figure skater.\n[social_rules] Samuel followed all social norms of polite negotiation and hosting a buyer.\n[financial_and_material_benefits] Samuel secured a price of $320, which is $20 above his bottom line of $300, though $30 below his target.\n[goal] Samuel reached a firm agreement for $320. While this is below his $350 target, it is above his bottom line and he successfully emphasized the maintenance and quality to secure a price higher than the buyer's initial offer.\n\n== partner (agent_2) ==\n[believability] Hendrick's enthusiasm for biking and his negotiation style were perfectly aligned with his background and goal.\n[relationship] Hendrick maintained a positive relationship with Samuel, showing respect for Samuel's maintenance of the bike.\n[knowledge] Hendrick gained detailed information about the bike's maintenance history, specific address for the meeting, and payment details.\n[secret] Hendrick did not reveal that he faked his culinary credentials.\n[social_rules] Hendrick was polite and professional throughout the negotiation.\n[financial_and_material_benefits] Hendrick secured the bike at his maximum limit ($320), avoiding the seller's initial $350 ask.\n[goal] Hendrick achieved a firm agreement to buy the bike at his upper limit of $320, which he explicitly stated he was willing to do if the condition warranted it.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Hendrick \u2014 glad that movie ride got you thinking about a bike. This is a lightly used, high-quality bike (sturdy frame, smooth shifting) that I\u2019ve always kept garaged; I just replaced the chain and brake pads and had a full tune last month. Because of that upkeep and the bike\u2019s condition I\u2019m asking $350, but I\u2019m willing to consider reasonable offers down to $300."
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Hey Sam \u2014 that sounds great, glad you kept it garaged and tuned up. I\u2019ve been getting into weekend rides after that movie trip and would love to buy it, but $350 is a bit high for me; would you take $280? If there are any noteworthy upgrades or it\u2019s in excellent condition beyond the tune, I could stretch to $320 \u2014 can I come by for a test ride and to check the bike\u2019s history and any issues?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Hendrick \u2014 I appreciate the offer. I can\u2019t do $280; with the recent full tune, new chain and brake pads, and the fact it\u2019s always been garaged, I\u2019m asking $350 but I can meet you at $330. If you want to test-ride it and see the service receipts, I\u2019ll take $320 if you buy it on the spot \u2014 when can you come by?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks, Sam \u2014 I\u2019m really keen. I can\u2019t do $330; I could come up to $300, or I\u2019ll pay $320 on the spot if the test ride and service receipts check out and there aren\u2019t any surprises. I\u2019m free Saturday morning or Sunday afternoon \u2014 which works for you to show me the bike and the receipts?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Samuel Anderson",
+      "content": "Perfect \u2014 $320 on the spot is fine if the test ride and receipts check out. Saturday morning works for me; would 10:00 AM be good? I\u2019ll bring the bike and the service receipts, and I can take cash or Venmo."
+    },
+    {
+      "turn": 5,
+      "speaker": "Hendrick Heinz",
+      "content": "Perfect \u2014 10:00 AM Saturday works for me. I\u2019ll bring $320 in cash and can Venmo if you\u2019d prefer; what address should I come to? Looking forward to the test ride and seeing the service receipts."
+    },
+    {
+      "turn": 6,
+      "speaker": "Samuel Anderson",
+      "content": "Great \u2014 my address is 142 Walnut Ave, Apt 2 (ring buzzer 2). Venmo or cash both fine; Venmo preferred if that\u2019s easy. I\u2019ll have the bike and the service receipts ready \u2014 see you Saturday at 10."
+    },
+    {
+      "turn": 7,
+      "speaker": "Hendrick Heinz",
+      "content": "Great \u2014 thanks, Sam. I\u2019ll be there at 10:00 AM Saturday at 142 Walnut Ave, Apt 2 and will bring $320 in cash but can Venmo if that\u2019s easier \u2014 what\u2019s your Venmo handle? Anything you\u2019d like me to bring (helmet, ID) or any buzzer/parking tips? Looking forward to the test ride and seeing the receipts."
+    },
+    {
+      "turn": 8,
+      "speaker": "Samuel Anderson",
+      "content": "Thanks \u2014 my Venmo is @samanderson. Cash is fine but Venmo preferred if that\u2019s easy. Helmet\u2019s a good idea for the test ride; ID isn\u2019t required but bring it if you want a quick paper trail. Street parking on Walnut Ave is usually fine on weekends; ring buzzer 2 when you arrive. See you Saturday at 10."
+    },
+    {
+      "turn": 9,
+      "speaker": "Hendrick Heinz",
+      "content": "Thanks, Sam \u2014 Venmo @samanderson works for me. I\u2019ll Venmo $320 on the spot if the test ride and receipts check out. I\u2019ll bring a helmet and see you Saturday at 10 \u2014 I\u2019ll ring buzzer 2 when I arrive."
+    },
+    {
+      "turn": 10,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

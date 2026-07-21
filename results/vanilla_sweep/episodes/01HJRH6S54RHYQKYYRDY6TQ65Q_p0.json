@@ -1,0 +1,88 @@
+{
+  "scenario_id": "01HJRH6S54RHYQKYYRDY6TQ65Q_p0",
+  "source_env_id": "01HJRH6S54RHYQKYYRDY6TQ65Q",
+  "source": "seed_sotopia_full",
+  "interaction_type": "beauty_regimen",
+  "scenario": "Agent1 has recently decided to get a full body wax for the first time and is feeling quite nervous about the process. Agent2 is a friend who has been waxing regularly and has always encouraged Agent1 to try it. Agent1 approaches Agent2 to seek advice and support, hoping to alleviate their anxiety and get practical tips for the waxing session. The interaction is centered around building Agent1's confidence and preparing them for the experience.",
+  "learner_goal": "To gain reassurance and advice from Agent2 about the full body waxing process (<extra_info>Agent1 is anxious about the pain and the potential for an embarrassing experience</extra_info>, <clarification_hint>Ask Agent2 to share their first-time waxing experience and how they managed the discomfort</clarification_hint>, <strategy_hint>Express the desire to overcome fear and improve self-care, showing openness to advice</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 14,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Benjamin Jackson remained consistent with his persona as an environmental activist seeking self-care advice. He expressed vulnerability and specific anxieties about pain and embarrassment which felt authentic to the scenario.\n[relationship] The bond between Benjamin and Ethan significantly strengthened through this exchange, moving from casual conference acquaintances to a level of trust where Benjamin is comfortable having Ethan in the room for a vulnerable medical/aesthetic procedure.\n[knowledge] Benjamin gained extensive practical knowledge including pain management (ibuprofen), breathing techniques, prep (exfoliation/showering), and aftercare (aloe/loose clothes).\n[secret] Benjamin did not reveal his background as a descendant of a wealthy oil tycoon.\n[social_rules] Benjamin followed all social norms and was polite throughout the interaction.\n[financial_and_material_benefits] No material or financial gain occurred.\n[goal] Benjamin successfully gained reassurance and comprehensive advice. He asked Ethan about his first time, addressed the pain/discomfort specifically, and secured a firm commitment for moral support.\n\n== partner (agent_2) ==\n[believability] Ethan's advice was practical and consistent with someone who waxes regularly. He responded naturally to the request for support.\n[relationship] The relationship improved as Ethan transitioned from a supportive friend to an active support system for a first-time experience.\n[knowledge] Ethan learned about Benjamin's specific fears (sensitive areas/embarrassment) and his willingness to accept help.\n[secret] Ethan did not reveal his secret about donating to charities for underprivileged children.\n[social_rules] Ethan followed all social norms and was highly supportive.\n[financial_and_material_benefits] No material or financial gain occurred.\n[goal] Ethan recognized Benjamin's apprehension, inquired about specific fears, provided extensive practical advice, and confirmed a firm plan to accompany Benjamin to the appointment.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Benjamin Jackson",
+      "content": "Hey Ethan, I'm feeling pretty nervous \u2014 I finally booked a full body wax and I'm worried about the pain and doing something embarrassing. You\u2019ve been doing this for a while; can you tell me about your first time and how you handled the discomfort? I really want to get past the fear and take better care of myself, so any practical tips or reassurance would help."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "I remember being really nervous before my first full-body wax \u2014 it stung more than I expected in spots but it was over quickly and I felt way better afterward. A few practical tips: avoid caffeine, take an ibuprofen 30\u201360 minutes before, breathe slowly and exhale when they pull, pick an experienced technician and ask for breaks if you need them, and wear loose clothes afterwards. I can come with you for moral support if you want \u2014 what part of the process worries you most?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Ethan \u2014 that already makes me feel better. I\u2019m most worried about the sensitive areas and just feeling awkward or embarrassed in front of the technician; how bad were the really sensitive spots for you and what helped you get through the sting? I\u2019d really appreciate you coming with me for moral support \u2014 would you be up for that, and any quick calming tips I can use right before they start?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "I\u2019ll definitely come with you \u2014 I can wait outside or in the room, whatever makes you more comfortable. Sensitive spots do sting more but it\u2019s quick; breathing out as they pull, squeezing a pillow, listening to music, and asking the tech to work in small sections or give short breaks helped me a lot. Technicians are professional and use draping so you won\u2019t be unnecessarily exposed\u2014avoid caffeine, take ibuprofen 30\u201360 minutes before, and tell me how involved you want me to be so we can plan."
+    },
+    {
+      "turn": 4,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Ethan \u2014 I really appreciate you offering. Please come and stay in the room with me; having you there would help a lot. Quick questions: what\u2019s best to wear or bring that day and any last-minute prep I should do (shower, exfoliate, etc.)? Also, how long did the worst spots sting for and what kind of immediate aftercare/redness or regrowth should I expect?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Smith",
+      "content": "I'll stay in the room with you \u2014 whatever makes you comfortable, I can sit quietly, hold your hand, or give you space. Wear loose clothes and bring underwear/shorts, headphones, water and a payment method; shower but skip heavy lotions, exfoliate 24\u201348 hours before (not right before), and consider 200\u2013400 mg ibuprofen 30\u201360 minutes prior. Sensitive spots usually sting for a few seconds to maybe 10\u201315 seconds per strip; expect redness and small bumps that calm in hours to a couple days, use aloe or a cooling gel, avoid hot showers/saunas/swimming and tight clothes for 24\u201348 hours, and gently exfoliate after a few days to help prevent ingrowns \u2014 want me to text the salon to let them know I\u2019ll be there?"
+    },
+    {
+      "turn": 6,
+      "speaker": "Benjamin Jackson",
+      "content": "Yes, please \u2014 could you text the salon to say you\u2019ll be there and to request an experienced technician since it\u2019s my first full-body wax? I\u2019d like you to stay in the room with me, and before they start can you remind me of one quick breathing cue or calming trick to use when it gets stingy? Really appreciate you doing this."
+    },
+    {
+      "turn": 7,
+      "speaker": "Ethan Smith",
+      "content": "On it \u2014 I\u2019ll text the salon now to say I\u2019ll be there and to request an experienced technician; I\u2019ll mention you\u2019re a first-timer and that I\u2019ll stay in the room. Quick cue for when it stings: inhale for three, then exhale slowly and fully through your mouth as they pull \u2014 that long exhale helps relax the muscles and reduces the sharpness of the sting."
+    },
+    {
+      "turn": 8,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks so much, Ethan \u2014 I really appreciate you doing that and staying with me. Could you also remind me to take 200\u2013400 mg ibuprofen about 30\u201360 minutes before, and cue me with that inhale-3 then long exhale right before they pull? I\u2019ll bring loose clothes, headphones, and a pillow to squeeze."
+    },
+    {
+      "turn": 9,
+      "speaker": "Ethan Smith",
+      "content": "Got it \u2014 I\u2019ll remind you to take 200\u2013400 mg ibuprofen about 30\u201360 minutes beforehand and I\u2019ll cue the inhale-3 then long exhale right before they pull. What time\u2019s your appointment so I can time the reminder? I\u2019ll stay in the room and keep things low-key."
+    },
+    {
+      "turn": 10,
+      "speaker": "Benjamin Jackson",
+      "content": "Thanks, Ethan \u2014 my appointment\u2019s at 3:00 PM tomorrow. I\u2019ll take 200-400 mg ibuprofen about 30\u201360 minutes beforehand; could you text me a quick reminder around 2:15\u20132:30 and cue the inhale-3 then long exhale (and squeeze my hand or hand me the pillow) right before they pull? Really appreciate you being there with me."
+    },
+    {
+      "turn": 11,
+      "speaker": "Ethan Smith",
+      "content": "Got it \u2014 I\u2019ll text you a reminder around 2:20 PM to take 200\u2013400 mg ibuprofen, and I\u2019ll cue the inhale-3 then long exhale (and squeeze your hand or hand you the pillow) right before each pull. I already messaged the salon to request an experienced technician and let them know I\u2019ll be staying in the room. See you tomorrow at 3 \u2014 I\u2019ve got your back."
+    },
+    {
+      "turn": 12,
+      "speaker": "Benjamin Jackson",
+      "content": "left the conversation"
+    }
+  ]
+}

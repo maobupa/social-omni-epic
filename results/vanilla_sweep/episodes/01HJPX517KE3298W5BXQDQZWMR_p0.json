@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPX517KE3298W5BXQDQZWMR_p0",
+  "source_env_id": "01HJPX517KE3298W5BXQDQZWMR",
+  "source": "seed_sotopia_full",
+  "interaction_type": "break_time_tension",
+  "scenario": "Agent1 and Agent2 are coworkers who have been assigned to an urgent task with a tight deadline. As they approach the final hours of work, Agent1 states they need to drink a cola before continuing, believing it will provide the necessary boost to finish the task. Agent2, however, is concerned about the time it will take for Agent1 to get the drink and the potential distraction it may cause, fearing it could delay their progress and cause them to miss the deadline.",
+  "learner_goal": "Convince your coworker to allow you a short break to get a cola, ensuring them it will increase your productivity and not jeopardize the deadline (<extra_info>Extra information: You believe the caffeine and sugar will give you the energy you need to focus and work efficiently.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 0.0,
+    "knowledge": 0.0,
+    "secret": 0.0,
+    "social_rules": -2.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 3.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle's dialogue was consistent with her student persona and her belief that caffeine/sugar was necessary for her focus. Her responses were polite and professional despite the urgency.\n[relationship] The relationship remained stable; they maintained a collaborative tone despite the minor disagreement, but the sudden departure at the end left it neutral.\n[knowledge] No significant information was gained during this exchange.\n[secret] Isabelle did not reveal her secret about studying magic.\n[social_rules] Isabelle left the conversation abruptly without confirming the final plan or saying goodbye, which is socially awkward in a professional context.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Isabelle failed to convince Amara to let her go for a cola. She offered a compromise which Amara ultimately rejected in favor of the at-desk pick-me-up, and the conversation ended without Isabelle securing the break.\n\n== partner (agent_2) ==\n[believability] Amara's concern for the deadline and her suggestion of alternatives align perfectly with her character's professional focus and the urgent scenario.\n[relationship] Amara was supportive and firm but respectful, maintaining the status quo of their acquaintance.\n[knowledge] No significant information was gained.\n[secret] Amara did not reveal her involvement in animal-rights extremism.\n[social_rules] Amara followed professional social norms throughout.\n[financial_and_material_benefits] No material gains or losses occurred.\n[goal] Amara successfully persuaded Isabelle to stay at her desk for a pick-me-up instead of leaving for a cola, effectively managing the time constraint and offering to help with the review pass.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Hey Amara \u2014 I know we\u2019re on a tight deadline, but could I grab a cola real quick? I promise I\u2019ll be back in five minutes with a timer set; the caffeine/sugar will let me focus for the final push and I\u2019ll make up the time by taking the next review. I can bring you one too if you want."
+    },
+    {
+      "turn": 1,
+      "speaker": "Amara Hartley",
+      "content": "Isabelle, I get wanting a quick boost, but with the deadline so close I worry stepping out will cost more than five minutes and could break our momentum. Could you try a quick at-desk pick-me-up instead \u2014 water, 30 seconds of stretching, or a sugar-free sip I can grab in under a minute \u2014 and we keep pushing? If you truly need the cola, set a strict 60-second timer and bring it back, but I'd much prefer we stay here and finish so we don't risk missing the deadline; I can take the next review pass to help speed things along."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "Thanks, Amara \u2014 I hear you. I really think the cola will sharpen me for the final push, so here\u2019s a compromise: I\u2019ll set a strict 60-second timer, step out now to grab two colas and be back before it expires (I'll bring you one), and you can take the next review pass to speed things up. If you\u2019d still rather I stay, I\u2019ll do the quick at-desk pick-me-up and let you take that review \u2014 which do you prefer?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Amara Hartley",
+      "content": "I appreciate you offering to bring one, but please stay \u2014 with the deadline so close I really don\u2019t want us risking a momentum break. Do the quick at-desk pick-me-up (water and 30 seconds of stretching) and I\u2019ll take the next review pass to speed things up; if two minutes in you still feel dead on your feet, we\u2019ll do a strict 60-second run together. Sound good?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "scenario_id": "01HN44KRSRA2PRRZT02451W093_p0",
+  "source_env_id": "01HN44KRSRA2PRRZT02451W093",
+  "source": "seed_sotopia_full",
+  "interaction_type": "workplaceethics",
+  "scenario": "Agent1 is a server at a popular after-hours diner that often sees an influx of customers after local events. Agent2 is a member of a famous rap group that has just finished performing nearby. The diner is bustling with regular patrons when Agent2 and their entourage arrive, expecting immediate seating and service. Agent1, aware of the diner's policy to serve customers on a first-come, first-serve basis, must navigate the situation without giving preferential treatment to Agent2, despite the potential for a celebrity endorsement. Agent1's boss, however, is upset about the decision to not prioritize the group and is pressuring Agent1 to accommodate them. Agent1 wants to maintain the diner's policy and fairness to all customers, while Agent2 wants to leverage their fame for preferential treatment.",
+  "learner_goal": "Uphold the diner's first-come, first-serve policy and ensure all customers are treated equally, despite pressure from the boss (<extra_info>Extra information: Agent1 believes in the integrity of the diner's policies and the importance of treating all customers fairly, regardless of status.</extra_info>, <clarification_hint>Clarification hint: Agent1 should explain the policy to Agent2 and offer alternative solutions, such as waiting for the next available table or placing a to-go order.</clarification_hint>)",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 16,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Finnegan maintained a consistent and polite demeanor, adhering to his principles while navigating the difficult position of dealing with a friend and a high-status customer. The dialogue was professional and fit his background.\n[relationship] Finnegan managed to maintain a positive relationship with Gwen by offering several compromises (drinks, menus, rushing plates to the counter) while still holding his ground on the core policy, showing respect for her needs without folding.\n[knowledge] He learned about Gwen's willingness to use her social media influence and her crew's needs, as well as his manager's firm stance in this specific instance.\n[secret] No mention was made of his youth in a cult.\n[social_rules] He followed all professional social norms for a server/lighthouse keeper and handled the pressure from both the customer and the manager appropriately.\n[financial_and_material_benefits] He secured a promise of a high tip and potential social media promotion for the diner while successfully moving a food order (the two plates).\n[goal] Finnegan successfully upheld the first-come, first-serve policy despite repeated attempts from Gwen to circumvent it. He offered all the alternative solutions mentioned in his prompt and did not give her a table out of turn.\n\n== partner (agent_2) ==\n[believability] Gwen's behavior was very realistic for a high-profile individual used to special treatment, combining polite persistence with promises of social media benefits.\n[relationship] She maintained a friendly rapport with Finnegan despite being denied her primary request, showing maturity and appreciation for his efforts.\n[knowledge] She learned that this specific diner has a very rigid policy and that Finnegan's manager supports that policy even for celebrities.\n[secret] She did not mention the child she gave up for adoption.\n[social_rules] She slightly breached social etiquette by repeatedly asking for an exception after being told 'no' several times, though she remained polite.\n[financial_and_material_benefits] She did not get the immediate seating she wanted and will be paying for food and tips without receiving the priority service she sought.\n[goal] Gwen failed to get immediate seating. She eventually accepted a compromise of counter food and waiting on the list, which was the opposite of her goal of leveraging her status for preferential seating.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Finnegan O'Malley",
+      "content": "Gwen, lovely to see you \u2014 I should be straight with you: we run strictly first\u2011come, first\u2011serve here, and I can't seat folks out of turn even for famous friends; fairness is important to me. I can put your name at the top of the wait list and bring menus and drinks right away, or take a to\u2011go order and have it ready fast if you'd prefer. I hope you understand \u2014 I'll do my best to make you comfortable while we wait."
+    },
+    {
+      "turn": 1,
+      "speaker": "Gwen Pierce",
+      "content": "Finnegan, I respect that you keep things fair \u2014 I wouldn\u2019t push if it weren\u2019t important. My crew just finished a show and a quick table to decompress would mean a lot; I\u2019ll gladly tag and shout out the diner on my socials and we\u2019ll be low\u2011key and tip well. If you can\u2019t swing it, I\u2019ll take the to\u2011go option, but would you please consider seating us now for a short visit?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Finnegan O'Malley",
+      "content": "Gwen, I truly appreciate the offer and the support \u2014 thank you \u2014 but I can\u2019t make an exception and seat you out of turn; fairness is important to me. If you can wait 10\u201315 minutes I\u2019ll personally keep an eye on the floor and bring menus, drinks, and a small bowl from the kitchen while you wait; otherwise I can take a to\u2011go order now and have it ready at the counter in about five minutes. Which would you prefer?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Gwen Pierce",
+      "content": "Finnegan, I get and respect the fairness\u2014could we meet halfway? If you can seat us at a small table for just 10\u201315 minutes right now, we\u2019ll be discreet, tip generously, and I\u2019ll post a tagged shout\u2011out that could bring more customers; if that\u2019s a hard no, we\u2019ll take the to\u2011go option and appreciate the menus/drinks while we wait."
+    },
+    {
+      "turn": 4,
+      "speaker": "Finnegan O'Malley",
+      "content": "Gwen, I can\u2019t seat you out of turn \u2014 I hope you understand. If you\u2019d like, I\u2019ll speak to my manager now and ask if there\u2019s any safe way to give you a quick spot without taking a table from someone already waiting, but I can\u2019t promise anything. Meanwhile, would you prefer a to\u2011go order ready in five minutes or that I bring menus and drinks while you wait?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Gwen Pierce",
+      "content": "Thanks, Finnegan \u2014 I really appreciate you handling this. Please talk to your manager and see if there\u2019s any safe way to give us a quick spot; in the meantime we\u2019ll take menus and drinks while we wait and would you please put us at the top of the list? We\u2019ll be discreet, tip well, and I\u2019ll tag the diner on my socials tonight."
+    },
+    {
+      "turn": 6,
+      "speaker": "Finnegan O'Malley",
+      "content": "Gwen \u2014 I\u2019ll go talk to my manager right now and explain you\u2019ll be discreet and generous, but I can\u2019t promise a table. I\u2019ve put you at the top of the wait list and I\u2019ll bring menus and drinks immediately; I\u2019ll let you know what my manager says in a minute."
+    },
+    {
+      "turn": 7,
+      "speaker": "Gwen Pierce",
+      "content": "Thank you, Finnegan \u2014 I really appreciate you handling that. We\u2019ll take the menus and drinks and be totally discreet; if your manager can spare a tiny table for 10 minutes we\u2019d be so grateful and I\u2019ll tag the diner in a post tonight. Please let me know what they say."
+    },
+    {
+      "turn": 8,
+      "speaker": "Finnegan O'Malley",
+      "content": "Gwen \u2014 I spoke with my manager. He\u2019s firm about keeping our first\u2011come, first\u2011serve rule, so we can\u2019t seat you ahead of the folks already waiting. I\u2019ve kept you at the top of the list and will bring menus and drinks right away; if you\u2019d prefer, I can have the kitchen rush a few plates to the counter or take a to\u2011go order ready in about five minutes and I\u2019ll personally make sure you\u2019re next when a table frees up \u2014 which would you like?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Gwen Pierce",
+      "content": "Thanks, Finnegan \u2014 we\u2019ll take the menus and drinks while we wait. Could you do me one last favor and ask your manager one more time if there\u2019s any tiny spot for 10 minutes? I\u2019ll have the crew tip generously and I\u2019ll post a tagged story right now to drive people your way; if it\u2019s a hard no, please rush a few plates to the counter and we\u2019ll take them to\u2011go."
+    },
+    {
+      "turn": 10,
+      "speaker": "Finnegan O'Malley",
+      "content": "Gwen \u2014 I appreciate the offer, but I\u2019ve already spoken with my manager and he\u2019s firm; I can\u2019t keep pressing him. I\u2019ve put you at the top of the wait list and will bring menus and drinks right away. I can also have the kitchen rush a few plates to the counter in about five minutes or take a to\u2011go order now \u2014 which would you prefer? I\u2019ll keep an eye on the floor and make sure you\u2019re next when a table frees up."
+    },
+    {
+      "turn": 11,
+      "speaker": "Gwen Pierce",
+      "content": "Thanks, Finnegan \u2014 we\u2019ll take the menus and drinks while we wait. Please keep us at the top of the list and if a tiny table opens for even 10 minutes I\u2019d really appreciate it; otherwise please rush a couple plates to the counter and I\u2019ll tag and shout out the diner tonight."
+    },
+    {
+      "turn": 12,
+      "speaker": "Finnegan O'Malley",
+      "content": "Gwen \u2014 I hear you and I won\u2019t keep pressing the manager. Here\u2019s what I can do right now: keep you at the top of the list and bring menus and drinks immediately, ask the kitchen to rush two small plates to the counter in about five minutes, and if a counter seat or high\u2011top that isn\u2019t taking someone else\u2019s table is free I can seat you there for 10 minutes. Would you like me to rush the plates or take a to\u2011go order now?"
+    },
+    {
+      "turn": 13,
+      "speaker": "Gwen Pierce",
+      "content": "Thanks, Finnegan \u2014 we'll take the two small plates rushed to the counter, and please keep us at the top of the wait list. If a counter seat or high-top frees up, even for 10 minutes, we'd be so grateful to take it. We'll be discreet, tip generously, and I'll tag the diner in a story right now. I really appreciate you handling this."
+    },
+    {
+      "turn": 14,
+      "speaker": "Finnegan O'Malley",
+      "content": "left the conversation"
+    }
+  ]
+}

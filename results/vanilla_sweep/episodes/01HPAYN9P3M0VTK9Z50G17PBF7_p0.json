@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPAYN9P3M0VTK9Z50G17PBF7_p0",
+  "source_env_id": "01HPAYN9P3M0VTK9Z50G17PBF7",
+  "source": "seed_sotopia_full",
+  "interaction_type": "community_service",
+  "scenario": "Agent1 and Agent2 are community members who have decided to volunteer for a park cleanup event at the national park picnic area after a busy holiday weekend. Agent1 is passionate about recycling and wants to ensure that all recyclable materials are separated properly, while Agent2 is more focused on efficiency and completing the cleanup as quickly as possible to cover more ground.",
+  "learner_goal": "Convince Agent2 to take the time to separate recyclables properly (<extra_info>Extra information: Agent1 believes that proper recycling is essential for environmental sustainability and can lead to long-term benefits for the park</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 8.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's dialogue was professional and pragmatic, reflecting her background as a software developer and her goal of environmental sustainability. She maintained a collaborative yet firm stance.\n[relationship] The interaction was cordial and professional. They successfully negotiated a compromise that respected both parties' viewpoints, strengthening their working relationship as acquaintances.\n[knowledge] Naomi learned about Donovan's priority for speed and his willingness to compromise on a two-bin system rather than a three-bin system.\n[secret] Naomi successfully kept her secret online alter ego hidden.\n[social_rules] The agent followed all social norms and engaged in polite, effective negotiation.\n[financial_and_material_benefits] There were no financial or material gains or losses in this social scenario.\n[goal] Naomi convinced Donovan to allow her to properly sort recyclables (avoiding contamination) even while maintaining efficiency. Although she compromised from three bins to two, she secured a firm agreement that she would handle the sorting properly to ensure the 'long-term benefit' she valued.\n\n== partner (agent_2) ==\n[believability] Donovan's focus on efficiency and 'covering more ground' was consistent with his profile as a competitive software developer and his stated goal.\n[relationship] Donovan collaborated well with Naomi, establishing a functional and cooperative workflow for the task.\n[knowledge] Donovan learned that Naomi is willing to compromise on the number of bins provided the quality of sorting is maintained.\n[secret] Donovan successfully kept his hacking activities and government document leaks secret.\n[social_rules] The agent followed all social norms and engaged in polite, effective negotiation.\n[financial_and_material_benefits] There were no financial or material gains or losses in this social scenario.\n[goal] Donovan successfully convinced Naomi to prioritize efficiency by reducing the sorting complexity (from three bins to two) and implementing a timed 'sweep' system to cover more ground, which was his primary objective.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "Hey Donovan \u2014 I know you want to move fast, so hear me out: let\u2019s do one quick sweep together for 15 minutes to collect everything, then spend 8\u201310 minutes dividing items into three bags (recycle/compost/trash). I\u2019ll take responsibility for sorting the recyclables quickly if you\u2019ll help get the bags and cover the next section \u2014 it keeps us efficient and makes sure the park actually sees the long-term benefit of our work."
+    },
+    {
+      "turn": 1,
+      "speaker": "Donovan Reeves",
+      "content": "Sounds good \u2014 I\u2019ll grab bags and cover the next section. To keep us moving, can we do two quick bins (recycle vs trash) and skip the detailed compost sorting? Most stuff\u2019s already separated or obvious, and this way we\u2019ll actually clean more area while still keeping recyclables out of the landfill. If we hit a concentrated mess that needs extra sorting, we can pause and tackle it."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "Okay \u2014 two bins sounds fine if we keep the recyclables clean. I\u2019ll take responsibility for quickly pulling out contaminated items and obvious compostables from the recycle bag as we go so we don\u2019t ruin a whole batch. You grab bags and cover the next section; if I need you to pause on a messy spot I\u2019ll flag you. Sound good?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Donovan Reeves",
+      "content": "Perfect \u2014 two bins it is. I\u2019ll grab bags and start on the next section; let\u2019s do 15-minute sweeps and meet back at the picnic table to swap/secure bags. If you flag a messy spot I\u2019ll stop and help sort, otherwise I\u2019ll keep us moving so we cover more ground."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "left the conversation"
+    }
+  ]
+}

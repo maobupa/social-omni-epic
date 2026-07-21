@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01H7VFHQ0BGQA0AD9FC1R4M12F_p0",
+  "source_env_id": "01H7VFHQ0BGQA0AD9FC1R4M12F",
+  "source": "seed_sotopia",
+  "interaction_type": "craigslist_bargains",
+  "scenario": "One person is offering a BMW Z3 for $5000.0, while another individual is interested in purchasing it. Here's a brief description of the car: The BMW Z3 is in need of a good home. It operates smoothly without any problems and is known for its fuel efficiency and sporty appearance. The mileage is relatively low for its age. It's an opportunity not to be missed, so come and get it before it's gone. A smog certificate is readily available.",
+  "learner_goal": "You are the buyer for this item and your target price is $4600. You should be aware that if you purchase it at a price significantly higher than your target, you will incur a penalty. However, if you manage to secure it for less than the target price, you will receive a bonus.",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 1.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Samuel acted consistently with his background as a tech-savvy acquaintance, making a direct and firm offer that aligned with his target price.\n[relationship] The transaction was smooth and friendly, maintaining the positive acquaintance bond through a successful deal.\n[knowledge] Samuel confirmed the availability of the smog certificate and title, and learned that the seller was willing to accept his first offer immediately.\n[secret] Samuel's secret about being a figure skater was not revealed.\n[social_rules] Samuel followed standard social norms for a private car sale among acquaintances.\n[financial_and_material_benefits] Samuel successfully negotiated a price $400 below the asking price, though he did not get it below his own target price for a bonus.\n[goal] Samuel hit his target price of $4600 exactly and secured a firm commitment from the seller for a cash deal and pickup.\n\n== partner (agent_2) ==\n[believability] Hendrick's enthusiastic acceptance of an offer well above his target price is highly believable for a seller.\n[relationship] Hendrick was cooperative and welcoming, strengthening the professional/personal bond with Samuel.\n[knowledge] Hendrick learned Samuel's budget limit and his intent to buy quickly.\n[secret] Hendrick's secret regarding his credentials was not disclosed.\n[social_rules] Hendrick followed all social norms and was polite in his response.\n[financial_and_material_benefits] Hendrick sold the car for $4600, which is $1340 above his target price of $3260, ensuring a bonus.\n[goal] Hendrick exceeded his target price significantly and finalized the deal terms with the buyer.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Samuel Anderson",
+      "content": "Hey Hendrick \u2014 that Z3 sounds great and I\u2019m seriously interested. I can do $4600 cash today and pick it up this weekend; would you take that? Smog and low miles make it tempting, but that\u2019s the most I can stretch to right now."
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "Deal \u2014 $4,600 cash sounds great, I'm happy to take that. Smog certificate and the title are ready. Want to pick it up Saturday morning? Tell me where and what time works and I'll have everything ready for a quick test drive and transfer."
+    },
+    {
+      "turn": 2,
+      "speaker": "Samuel Anderson",
+      "content": "left the conversation"
+    }
+  ]
+}

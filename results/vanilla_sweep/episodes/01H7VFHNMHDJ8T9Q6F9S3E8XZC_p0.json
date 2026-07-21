@@ -1,0 +1,123 @@
+{
+  "scenario_id": "01H7VFHNMHDJ8T9Q6F9S3E8XZC_p0",
+  "source_env_id": "01H7VFHNMHDJ8T9Q6F9S3E8XZC",
+  "source": "seed_sotopia",
+  "interaction_type": "social_iqa",
+  "scenario": "Two friends hanging out, one of them just got a new sports car and is excited to show it off.",
+  "learner_goal": "Drive the sports car and show off to friend (<extra_info>Extra information: you are very excited about your new car and can't wait for your friend to see it.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 21,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Naomi's enthusiasm and technical descriptions of the car's handling and features were highly consistent with her background as a software developer and the scenario's requirements.\n[relationship] The interaction fostered a sense of trust and shared excitement, moving the relationship from strictly professional acquaintances toward a more genuine friendship through a shared hobby.\n[knowledge] She gained knowledge about Lena's driving style and interest in cars, confirming Lena's enthusiast status.\n[secret] The agent did not reveal her secret online alter ego.\n[social_rules] Followed all social norms of sharing a new purchase and safety while driving.\n[financial_and_material_benefits] No material gain or loss occurred beyond the ownership of the car she already had.\n[goal] Naomi successfully showed off the car, drove it first to demonstrate its capabilities, and maintained control over the experience while sharing it with her friend.\n\n== partner (agent_2) ==\n[believability] Lena's behavior was consistent with a car enthusiast who is also respectful of a friend's boundaries. However, her repetition in later turns was a bit mechanical.\n[relationship] She built rapport with Naomi by showing genuine appreciation for her new car and following her instructions carefully.\n[knowledge] She learned specific technical details about the car's handling, torque, and drive modes.\n[secret] She did not reveal her secret about her best friend's boyfriend.\n[social_rules] She was very polite and respectful of the owner's rules for the vehicle.\n[financial_and_material_benefits] No material gain or loss occurred.\n[goal] Lena successfully negotiated driving the car, actually got behind the wheel, and maintained the friendship throughout.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Naomi Fletcher",
+      "content": "You have to see this \u2014 I can't stop grinning. Come on, hop in; I want to take you for a quick spin so you can hear it and see the interior. Keys are right here!"
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Oh wow, Naomi \u2014 this is gorgeous, congratulations! Mind if I take the wheel for a quick minute? Totally fine if you'd rather drive \u2014 I won't be offended, but I've been dying to hear how it feels behind the wheel."
+    },
+    {
+      "turn": 2,
+      "speaker": "Naomi Fletcher",
+      "content": "I\u2019m dying to drive it \u2014 let me take the first spin so I can show you the sound and how it handles. Hop in passenger, adjust the seat, and after a quick loop I\u2019ll swap and you can take the wheel."
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "Perfect \u2014 I\u2019ll hop in and get comfortable. Take the first lap and show me everything; I\u2019ll be ready to swap when you give the signal."
+    },
+    {
+      "turn": 4,
+      "speaker": "Naomi Fletcher",
+      "content": "Okay, buckle up \u2014 I\u2019m starting it. Wait \u2019til you hear the exhaust; I\u2019ll take a quick loop around the waterfront so you can feel how she handles. I\u2019ll signal when it\u2019s a good spot to swap, sound good?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Lena Goodwin",
+      "content": "Perfect \u2014 I\u2019m buckled and ready. Take the first lap and I\u2019ll watch for your signal; can\u2019t wait to hear it and feel how she handles."
+    },
+    {
+      "turn": 6,
+      "speaker": "Naomi Fletcher",
+      "content": "[action] Fires up the engine, eases out, and takes a quick loop along the waterfront \u2014 I\u2019ll signal at a safe spot when it\u2019s time to swap."
+    },
+    {
+      "turn": 7,
+      "speaker": "Lena Goodwin",
+      "content": "Sounds perfect \u2014 I\u2019ll keep an eye out for your signal. Take your time; I\u2019ll be ready to swap when you find a safe spot."
+    },
+    {
+      "turn": 8,
+      "speaker": "Naomi Fletcher",
+      "content": "Okay, pulling into this turnout now \u2014 perfect and safe. You're up: swap in whenever you're ready and I'll show you how to adjust the seat and mirrors, then hand over the keys. Can't wait to hear you give it some gas!"
+    },
+    {
+      "turn": 9,
+      "speaker": "Lena Goodwin",
+      "content": "Perfect \u2014 thanks! I\u2019ll hop out so you can show me how you like the seat and mirrors, then hand over the keys. I\u2019ll be gentle at first, but I\u2019m so excited to hear it \u2014 ready when you are."
+    },
+    {
+      "turn": 10,
+      "speaker": "Naomi Fletcher",
+      "content": "Great \u2014 I\u2019ll hop out and show you how I like the seat and mirrors (lumbar here, tilt here), then I\u2019ll hand you the keys. When you pull away, easy on the throttle and hold the clutch a beat \u2014 I\u2019ll follow close behind for the first block; ready?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Lena Goodwin",
+      "content": "Ready \u2014 thanks for the tips. I\u2019ll be gentle on the throttle and give the clutch a beat like you said; I\u2019ll follow your lead for the first block. Go ahead and hand me the keys when you\u2019re set."
+    },
+    {
+      "turn": 12,
+      "speaker": "Naomi Fletcher",
+      "content": "[action] Hands you the keys with a big grin. \"Here \u2014 gentle on the throttle. I'll follow right behind for the first block; holler if you want me to take back over,\" then hops in to follow."
+    },
+    {
+      "turn": 13,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks so much, Naomi \u2014 I really appreciate it. I\u2019ll ease out and keep it smooth; stick close and holler if you want me to swap back. Can\u2019t wait to hear her purr from the driver\u2019s seat."
+    },
+    {
+      "turn": 14,
+      "speaker": "Naomi Fletcher",
+      "content": "All set \u2014 ease out and take your time; I\u2019ll follow right behind. Give it a little rev when you\u2019re comfortable; can\u2019t wait to hear you drive her. Holler if you want me to take back over."
+    },
+    {
+      "turn": 15,
+      "speaker": "Lena Goodwin",
+      "content": "Okay, easing out now \u2014 I\u2019ll be smooth and give a gentle rev once I\u2019m comfortable. Thanks for following close; I\u2019ll holler if I want you to take it back."
+    },
+    {
+      "turn": 16,
+      "speaker": "Naomi Fletcher",
+      "content": "Perfect \u2014 you\u2019re doing great. I\u2019m right behind you; when you\u2019re settled, give it a little rev and feel that mid\u2011range torque. The steering tightens around 40 mph \u2014 try a gentle sweep at the next curve if you want, and I\u2019ll take it back whenever you say so."
+    },
+    {
+      "turn": 17,
+      "speaker": "Lena Goodwin",
+      "content": "Alright \u2014 settling in now. I\u2019ll give a gentle rev and do a slow, smooth sweep through the next curve; thanks for following close, shout if you want me to hand it back."
+    },
+    {
+      "turn": 18,
+      "speaker": "Naomi Fletcher",
+      "content": "Sounds awesome \u2014 nail that gentle sweep, and when you\u2019re settled give me a thumbs and I\u2019ll pull up and take the wheel. I want to show you the drive modes and let you hear it really open up."
+    },
+    {
+      "turn": 19,
+      "speaker": "Lena Goodwin",
+      "content": "Doing the sweep now \u2014 settling into the line. I\u2019ll give you a thumbs in a sec so you can pull up. Really excited to try those drive modes after this."
+    }
+  ]
+}

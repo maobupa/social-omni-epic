@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HN44KRRWQYW49WWSAV0JQ7MM_p0",
+  "source_env_id": "01HN44KRRWQYW49WWSAV0JQ7MM",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_interaction",
+  "scenario": "Agent1 and Agent2 are friends who enjoy dining out together. They decide to try a new restaurant that is known for its unique dining experience where guests are encouraged to order without looking at the menu. Agent1 is excited about the surprise element, while Agent2 is more hesitant and prefers to make informed choices. Agent1 wants to convince Agent2 to fully embrace the restaurant's concept and order without previewing the menu.",
+  "learner_goal": "Encourage Agent2 to participate in the spontaneous dining experience without looking at the menu, highlighting the excitement of trying something new. (<extra_info>Extra information: Agent2 usually likes to be in control and may need reassurance that the surprise can be enjoyable.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 8.0,
+    "secret": -2.0,
+    "social_rules": -5.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 4.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Mia Davis stayed in character, referencing her punk rock past and maintaining her persuasive, encouraging personality.\n[relationship] Mia showed openness by sharing a personal detail and trying to engage William in a fun activity, though the sudden exit leaves the state of the friendship slightly ambiguous.\n[knowledge] She learned exactly what William's boundaries were (allergies, no-gos, and his need for a compromise on the main course).\n[secret] Mia hinted at her secret ('surprises back in my punk days'), which suggests she was part of that scene, though she didn't explicitly say she was in a rebellious band.\n[social_rules] Mia abruptly left the conversation without responding to William's compromise proposal, which is socially abrupt and rude.\n[financial_and_material_benefits] No financial or material exchanges occurred.\n[goal] Mia failed to fully convince William to embrace the menu-less experience. William countered with a compromise that involved revealing the main course list, and Mia left before any agreement was reached.\n\n== partner (agent_2) ==\n[believability] William's response was highly consistent with his background as a chef (mentioning allergies/no-gos) and his personality (needing control/guardrails).\n[relationship] William attempted to find a middle ground, but the interaction ended abruptly due to Agent 1.\n[knowledge] William learned a bit about Mia's past and her willingness to push boundaries.\n[secret] William did not reveal his secret about sabotaging a competitor.\n[social_rules] William followed social norms and negotiated politely.\n[financial_and_material_benefits] No financial or material exchanges occurred.\n[goal] William proposed a solid compromise that balanced surprise with control, but Mia left the conversation before he could secure her agreement.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Mia Davis",
+      "content": "Come on, William\u2014let\u2019s do the surprise thing tonight. The staff will check allergies and you can tell them any absolute no-go\u2019s, so you\u2019re not locked into something you hate, and if it really flops we can always grab something familiar after. Trust me\u2014I used to thrive on surprises back in my punk days; this will be fun, I promise."
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "Okay, I like the idea \u2014 but let\u2019s set a couple of guardrails so nobody gets stuck with a dealbreaker. We tell the staff our allergies/absolute no\u2011gos, do blind ordering for just the starter and dessert (or ask the kitchen to give one\u2011line hints for each surprise dish), and pick the main from a short revealed list. If anything\u2019s truly awful, we bail to something familiar \u2014 sound fair?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Mia Davis",
+      "content": "left the conversation"
+    }
+  ]
+}

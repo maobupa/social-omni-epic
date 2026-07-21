@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJRH6S4GJCZVWWKYJB6AH655_p0",
+  "source_env_id": "01HJRH6S4GJCZVWWKYJB6AH655",
+  "source": "seed_sotopia_full",
+  "interaction_type": "daily_life_challenge",
+  "scenario": "Agent1 has just moved into a new apartment and is overwhelmed with the process of unpacking. Clothes are scattered all over the living room from opened boxes. Agent2, a friend who takes pride in their neatness and organization, has come over to help. While Agent1 is eager to hang up the clothes quickly and haphazardly just to get it out of the way, Agent2 insists on organizing the clothes by type and color to ensure a system that will be beneficial in the long run. They need to collaborate to find a method that satisfies both Agent1's desire for speed and Agent2's penchant for order.",
+  "learner_goal": "Get Agent2 to help hang up your clothes quickly (<extra_info>Extra information: You want to finish the task hastily and are less concerned about the organization</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 4.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo acted consistently with his background as a father, prioritizing his daughter and time efficiency, while maintaining a polite tone with an acquaintance.\n[relationship] Leo established a positive rapport with Hendrick, offering coffee as a gesture of gratitude and trusting him with his apartment keys/entry while he was out.\n[knowledge] Leo learned that Hendrick is willing to do favors and is quite meticulous about organization.\n[secret] Leo did not reveal his secret about a child from a previous relationship; he only mentioned the daughter he currently cares for.\n[social_rules] Leo followed all social norms, being appreciative of the help offered.\n[financial_and_material_benefits] Leo successfully offloaded the entire labor of unpacking and organizing his clothes to Hendrick, freeing up his own time.\n[goal] Leo achieved his primary objective of finishing the task hastily by having Hendrick agree to finish the entire job for him while he left to pick up his daughter.\n\n== partner (agent_2) ==\n[believability] Hendrick's insistence on order and his offer to stay late to do it 'right' aligns perfectly with his chef background and organized personality.\n[relationship] Hendrick built goodwill with Leo by taking on a chore for him, potentially strengthening the friendship through the mutual friend.\n[knowledge] Hendrick learned about Leo's schedule and his daughter.\n[secret] Hendrick did not reveal his secret regarding his faked credentials.\n[social_rules] Hendrick was helpful and polite, adhering to social expectations of a friend helping a friend move.\n[financial_and_material_benefits] Hendrick committed extra time and labor to a task that doesn't benefit him materially, though he did secure a future coffee.\n[goal] Hendrick convinced Leo to let him organize the clothes methodically by type and color, even volunteering his own time to ensure it was done to his standards.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hey Hendrick \u2014 thanks for coming over. I'm racing to pick my daughter up soon, so can we do a quick hang-up? I'll sort into rough piles (shirts, pants, jackets) and you just throw them on hangers and into the closet; we can tidy colors later. Sound good?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Hendrick Heinz",
+      "content": "said: \"Totally get the rush \u2014 how about a compromise? I\u2019ll do a quick, smart hang: group by type and roughly by color as I put them on hangers; it\u2019ll only add about 10 minutes and will save you a lot of time later. If you really need to run, go pick up your daughter and I\u2019ll finish it while you\u2019re out so it\u2019s done right.\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "I really appreciate it, Hendrick \u2014 I'm on a tight schedule. Could you do the quick hang by type (no color sorting) so I can run grab my daughter? Coffee's on me afterwards, or if you'd rather take the 10 minutes to do it properly I can hang back \u2014 your call."
+    },
+    {
+      "turn": 3,
+      "speaker": "Hendrick Heinz",
+      "content": "I'll take the 10 minutes and do it properly \u2014 group by type and roughly by color so it'll stay tidy and save you headaches later. Go pick up your daughter; I\u2019ll finish while you\u2019re out and leave a quick photo. Coffee later sounds great."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}

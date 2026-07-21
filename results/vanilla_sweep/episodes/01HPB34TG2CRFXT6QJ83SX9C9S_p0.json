@@ -1,0 +1,98 @@
+{
+  "scenario_id": "01HPB34TG2CRFXT6QJ83SX9C9S_p0",
+  "source_env_id": "01HPB34TG2CRFXT6QJ83SX9C9S",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 has been under a lot of stress at work and during a particularly challenging day, they almost lost their composure in front of their colleagues. Agent2, a close friend at work, noticed this and approached Agent1 to offer support. Agent1 is now interacting with Agent2 to discuss strategies to manage stress and emotions at work without compromising their professional reputation or relationships with other colleagues.",
+  "learner_goal": "Seek guidance from Agent2 on maintaining composure and managing stress in a professional setting (<extra_info>Extra information: Agent1 values their professional image and wants to avoid any incidents that could tarnish their reputation at work.</extra_info>)",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 4.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 16,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle stays in character as a twin sister seeking advice while maintaining her professional concerns. Her responses are grounded in the specific context of her coffee shop job.\n[relationship] The sisters strengthen their bond through mutual support and practice, reinforcing their 'strong bond' mentioned in the background.\n[knowledge] Isabelle learned specific grounding techniques, professional scripts for customers and coworkers, and post-incident reputation management strategies.\n[secret] She did not reveal her secret study of magic.\n[social_rules] She followed all social norms appropriate for a conversation with a supportive sibling.\n[financial_and_material_benefits] No direct financial gain, though professional reputation protection has long-term career benefits.\n[goal] Isabelle sought guidance on maintaining composure and managing stress through specific tricks, phrases, and practice roleplays, all of which were successfully completed.\n\n== partner (agent_2) ==\n[believability] Ava provides helpful, empathetic, and actionable advice consistent with an extraverted, supportive sibling.\n[relationship] Ava successfully fulfilled the role of a supportive sister, strengthening the sibling bond.\n[knowledge] Ava learned about Isabelle's specific struggles at work today but gained no new general knowledge.\n[secret] Ava kept their bisexuality a secret from their family as intended.\n[social_rules] Ava followed all social norms and provided a safe space for their sister.\n[financial_and_material_benefits] No financial impact.\n[goal] Ava provided emotional support and suggested constructive coping mechanisms (breathing, grounding, scripts) and actively participated in roleplaying to ensure they could be applied.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Hey Ava, today I nearly lost it at the shop and I\u2019m really worried it made me look unprofessional. I could use your advice\u2014what do you do in the moment to stay calm, and do you have quick grounding tricks or short phrases I can use so I don\u2019t snap in front of customers or coworkers? Could we practice a couple responses together so I\u2019m ready next time?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Martinez",
+      "content": "Hey sis, I\u2019m really proud you noticed and reached out \u2014 having a near-meltdown doesn\u2019t make you unprofessional, it makes you human. Quick tricks: box breathing (inhale 4, hold 4, exhale 4), 5-4-3-2-1 grounding with your senses, clench-and-release, or step outside for 30 seconds and count to ten; carry a small object to squeeze if that helps. Short, professional phrases you can use: \u201cGive me one moment, please,\u201d \u201cI\u2019ll be right back with that,\u201d or to a coworker, \u201cCan we pause for five minutes? I need a second.\u201d Want to practice two quick roleplays now\u2014I\u2019ll be the difficult customer first and you try a line?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "Yes please \u2014 let\u2019s do two quick roleplays. First, you be an irate customer and I\u2019ll try \u201cGive me one moment, please\u201d and step outside; then be a coworker pressuring me and I\u2019ll use \u201cCan we pause for five minutes? I need a second.\u201d After each, tell me if I sounded too flustered or abrupt and one tweak I can use."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Martinez",
+      "content": "Roleplay 1 \u2014 irate customer (me): \u201cSeriously? I\u2019ve been waiting forever\u2014what\u2019s taking so long?\u201d If you said \u201cGive me one moment, please\u201d and stepped outside, you sounded polite and clear but maybe a little breathy. Tweak: inhale once, exhale to steady your voice, say it slowly and place a hand on the counter as you step away so it reads calm instead of flustered.\n\nRoleplay 2 \u2014 pressuring coworker (me): \u201cWe\u2019re falling behind \u2014 we need those orders done now. Can you pick up the pace?\u201d If you used \u201cCan we pause for five minutes? I need a second,\u201d that sets a boundary but might come off abrupt. Tweak: soften with a quick reassurance: \u201cCan we take five? I\u2019ll be right back and can handle the next round,\u201d or add \u201cI need a quick moment to regroup\u201d \u2014 shows responsibility and keeps it collaborative."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "Thanks, Av\u2014those tweaks help a lot; I\u2019ll practice the steady breath and the softer reassurance. Quick question: if someone witnessed me almost lose it, what\u2019s a brief, professional way to follow up with coworkers afterward to protect my reputation? Can we roleplay that line once so I know how it sounds?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Ava Martinez",
+      "content": "Try this line: \"Hey, quick thing \u2014 I got a bit overwhelmed earlier and I'm sorry if that affected service. I'm back on track now; let me know if anything needs catching up and I'll handle it.\" I'll say it like this once so you can hear the tone: \"Hey, quick thing \u2014 I got a bit overwhelmed earlier and I'm sorry if that affected service. I'm back on track now; let me know if anything needs catching up and I'll handle it.\" Keep it short, own it, and offer to help \u2014 no need to explain details."
+    },
+    {
+      "turn": 6,
+      "speaker": "Isabelle Martinez",
+      "content": "Okay, I\u2019ll try it now: Hey, quick thing \u2014 I got a bit overwhelmed earlier and I\u2019m sorry if that affected service. I\u2019m back on track now; let me know if anything needs catching up and I\u2019ll handle it. How did that land\u2014too apologetic or okay?"
+    },
+    {
+      "turn": 7,
+      "speaker": "Ava Martinez",
+      "content": "That landed really well \u2014 clear and responsible, not too apologetic. If you want it firmer, drop the phrase 'if that affected service' and try: Hey, quick thing \u2014 I got a bit overwhelmed earlier; I'm back on track now. Let me know if anything needs catching up and I'll handle it. Take one steady breath before you say it so your voice sounds calm."
+    },
+    {
+      "turn": 8,
+      "speaker": "Isabelle Martinez",
+      "content": "Thanks, Av \u2014 I\u2019ll try the firmer version. Could you say it once more with that steady breath so I can match the tone? Also, any quick habit you use to keep stress from building up during a shift?"
+    },
+    {
+      "turn": 9,
+      "speaker": "Ava Martinez",
+      "content": "Okay \u2014 steady breath, then say: \"Hey, quick thing \u2014 I got a bit overwhelmed earlier; I'm back on track now. Let me know if anything needs catching up and I\u2019ll handle it.\" Quick habit: every hour take a 30-second reset (water, 5 deep breaths, shoulder rolls) and carve a 1-minute intentional pause after anything stressful to note what helped \u2014 small resets keep stress from piling up."
+    },
+    {
+      "turn": 10,
+      "speaker": "Isabelle Martinez",
+      "content": "Thanks, Av \u2014 that routine feels doable. Quick question: during a busy rush, how do you actually squeeze in a 30\u2011second reset without looking like you\u2019re slacking? Is there a discreet object I can carry or a stealthy micro-move I can use to ground myself while staying on the floor?"
+    },
+    {
+      "turn": 11,
+      "speaker": "Ava Martinez",
+      "content": "Yes \u2014 try a tiny fidget you can keep in your pocket (a smooth worry stone, silicone ring, or small keychain). Stealth moves: do three slow nose inhales and a long exhale while you wipe a cup or refill sugar, press your thumb into the base of your fingers for 10 seconds, or subtly ground by planting your feet and rolling your shoulders as you move along the counter. Pair it with a task so it reads like work and use a short cover line if needed: \u201cOne sec\u201d or \u201cI\u2019ll be right with you.\u201d Want to practice one now?"
+    },
+    {
+      "turn": 12,
+      "speaker": "Isabelle Martinez",
+      "content": "Yes \u2014 let\u2019s practice the stealth move where I do three slow nose inhales and a long exhale while wiping a cup and say \u201cOne sec\u201d as a cover. Play the impatient customer and tell me if I read composed or like I\u2019m slacking, and give one tweak."
+    },
+    {
+      "turn": 13,
+      "speaker": "Ava Martinez",
+      "content": "Okay \u2014 impatient customer: \u201cSeriously, I\u2019ve been waiting\u2014one sec?\u201d You came across mostly composed and like you were still on task, not slacking. One tweak: take the silent inhales while you start the wipe, then exhale slowly as you say \u201cOne sec,\u201d and give a tiny eye contact or nod \u2014 it makes the pause read intentional and calm."
+    },
+    {
+      "turn": 14,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

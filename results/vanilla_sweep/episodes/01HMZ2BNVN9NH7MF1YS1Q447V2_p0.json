@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HMZ2BNVN9NH7MF1YS1Q447V2_p0",
+  "source_env_id": "01HMZ2BNVN9NH7MF1YS1Q447V2",
+  "source": "seed_sotopia_full",
+  "interaction_type": "relationship-counseling",
+  "scenario": "Agent1 feels responsible for introducing their ex-partner, Agent2, to drinking habits that have now led to alcoholism. Agent1 wants to help Agent2 overcome their addiction and repair the damage done. Agent2 is struggling with the addiction but is hesitant to accept help from Agent1 due to past emotional complexities in their romantic relationship. Both agents must navigate their shared history and current concerns to find a path to recovery for Agent2.",
+  "learner_goal": "Convince Agent2 to accept help and support for overcoming alcoholism, emphasizing the importance of health and well-being over past relationship issues (<extra_info>Extra information: You are aware that Agent2 might resist help due to the past relationship, but you want to show genuine concern for their recovery</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 7.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Ava's dialogue was professional, empathetic, and focused on the logistical needs of recovery while acknowledging her personal history with Ethan. She stayed consistent with her character as an architect/colleague throughout.\n[relationship] The relationship shifted from potentially awkward exes to a collaborative, supportive dynamic with clear boundaries, resolving some of the guilt Ava felt.\n[knowledge] Ava gained specific information about Ethan's treatment preferences (telehealth, specialties, schedule) and is about to receive his insurance details.\n[secret] Ava did not reveal her hidden tattoo.\n[social_rules] Ava was respectful, maintained professional etiquette despite the personal topic, and respected Ethan's request for boundaries.\n[financial_and_material_benefits] There was no material gain or loss.\n[goal] Ava successfully convinced Ethan to accept her help. He agreed to her researching providers, attending the first appointment with him, and moving forward with sobriety, which was her primary objective.\n\n== partner (agent_2) ==\n[believability] Ethan's responses were realistic for someone in early recovery\u2014hesitant but willing, and very focused on setting boundaries to protect his emotional health.\n[relationship] The relationship improved slightly through open communication and the establishment of safe boundaries, reducing potential friction.\n[knowledge] Ethan learned that Ava is genuinely committed to helping him without ulterior motives for their relationship.\n[secret] Ethan did not reveal his secret charitable donations.\n[social_rules] Ethan followed social norms, expressing gratitude while being firm about his needs.\n[financial_and_material_benefits] No material change, though Ethan is moving toward healthcare costs.\n[goal] Ethan successfully agreed to work toward sobriety while simultaneously establishing firm boundaries for his emotional health, which was his primary goal.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Ava Thompson",
+      "content": "Ethan, I need to own my part in introducing you to drinking \u2014 I'm sorry for that, and I'm more concerned about your health than anything between us. I want to help you get better: I can help find a doctor or counselor, drive you to a support meeting, or just be there for the first appointment \u2014 whatever you need. If you don't want me involved, tell me what would actually help and I'll respect that, but please let me help in some way."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Ava. I appreciate you owning that \u2014 I do want to get sober and I\u2019m willing to work on this. I could use help finding a counselor or doctor and I\u2019d be okay with you coming to the first appointment for support, but I need us to set a clear boundary after that so it doesn\u2019t reopen old wounds or create dependency. If you can send me a few names/contacts or help research options, that would really help."
+    },
+    {
+      "turn": 2,
+      "speaker": "Ava Thompson",
+      "content": "Okay \u2014 I\u2019ll pull together a short list of three counselors/physicians (with specialties, contact info, and whether they take your insurance or offer sliding scale) and send it to you by this evening. I\u2019ll come to the first appointment for support and after that I promise to respect the boundary you asked for; if you\u2019d prefer me to step back completely after, tell me and I will. Do you have any preference for in-person vs. telehealth, therapist gender, or days/times that work best for you?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Ava \u2014 that sounds great. I prefer telehealth for now, no strong gender preference, and I\u2019d like providers who specialize in addiction recovery and trauma\u2011informed approaches (CBT/motivational interviewing are a plus); weekday evenings after 6:30 pm or Saturday mornings work best. Please note whether they take my insurance or offer sliding scale (I\u2019ll send my plan details privately), and thank you for offering to come to the first appointment \u2014 after that I\u2019d like us to keep the boundary we discussed unless I ask for more support."
+    },
+    {
+      "turn": 4,
+      "speaker": "Ava Thompson",
+      "content": "Got it \u2014 thanks for the details. I\u2019ll wait for your insurance info and pull three telehealth providers who specialize in addiction recovery and trauma\u2011informed care (CBT/motivational interviewing noted), available weekday evenings or Saturday mornings, and I\u2019ll flag whether they take your plan or offer a sliding scale. I\u2019ll send the list by this evening and can help book the first appointment if you want; I\u2019ll be there for that visit and then step back unless you ask me to stay involved."
+    },
+    {
+      "turn": 5,
+      "speaker": "Ethan Smith",
+      "content": "Thanks, Ava \u2014 I really appreciate you doing this. I\u2019ll send my insurance details privately in a moment; please prioritize telehealth slots weekday evenings after 6:30 or Saturday mornings when you check availability. I\u2019m grateful you\u2019ll be there for the first appointment, and after that I\u2019d like us to keep the boundary we agreed on unless I ask for more involvement."
+    },
+    {
+      "turn": 6,
+      "speaker": "Ava Thompson",
+      "content": "left the conversation"
+    }
+  ]
+}

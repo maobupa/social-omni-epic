@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HPB34N404YA3KP671WWT3CBR_p0",
+  "source_env_id": "01HPB34N404YA3KP671WWT3CBR",
+  "source": "seed_sotopia_full",
+  "interaction_type": "social_navigations",
+  "scenario": "Agent1 and Agent2 are coworkers who just exited a building and are walking towards a nearby park for lunch. Suddenly, Agent1 slips on a banana peel and falls to the ground. <p viewer=\"environment\">The sidewalk is busy with pedestrians, and Agent1 is slightly embarrassed by the fall. Agent1 is not seriously hurt but feels clumsy. Agent2 witnessed the incident and is concerned about Agent1's well-being, but also finds the situation a bit humorous.</p>",
+  "learner_goal": "You want to quickly recover from the embarrassment of the fall and assure Agent2 that you are okay. <extra_info> You are also looking for a subtle way to lighten the mood and perhaps share a laugh about the incident to ease the embarrassment. </extra_info> <strategy_hint> You can acknowledge the humor in the situation while also expressing that you are unharmed. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia's reaction is very natural for a personal trainer who is physically capable but embarrassed by a clumsy mishap. She maintains her character's tone throughout.\n[relationship] The interaction strengthened their camaraderie; they shared a laugh and Eli offered to buy her lunch, showing a warm, supportive dynamic.\n[knowledge] She confirmed Eli was not judging her and was willing to treat her to lunch.\n[secret] She did not reveal her secret about her best friend's husband.\n[social_rules] She followed all social norms, including expressing gratitude for the help.\n[financial_and_material_benefits] She secured a free lunch as Eli offered to pay.\n[goal] Sophia successfully recovered from the embarrassment, assured Eli she was okay multiple times, and used humor to lighten the mood as intended.\n\n== partner (agent_2) ==\n[believability] Eli's response reflects his background as an older, supportive figure with a touch of wit, consistent with his profession and personality.\n[relationship] Eli successfully navigated a potentially awkward situation to bond with Sophia.\n[knowledge] He confirmed Sophia was physically unhurt.\n[secret] He did not reveal his secret about funding a student.\n[social_rules] He followed social norms by helping her up and showing concern before joking.\n[financial_and_material_benefits] He offered to pay for lunch, which is a minor financial cost.\n[goal] Eli ensured Sophia was safe, used gentle teasing to bond, and established a plan for lunch.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "I'm okay, Eli\u2014only my ego took the hit, not my knees. Classic banana-peel move; feel free to laugh, I will too. Could you give me a hand up?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Eli Dawson",
+      "content": "[action] Reach down and offer my hand to help her up, steadying her as she stands. Say with a small grin, \"Alright, dramatic exit \u2014 are you sure it\u2019s only the ego? Any pain in your knees or wrist?\""
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Thanks, Eli \u2014 I'm okay. Knees and wrist feel fine, only my ego's bruised. Let's laugh it off and get lunch?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Eli Dawson",
+      "content": "Glad it's only your ego\u2014I'd have been more worried if you hadn't made it theatrical. Laugh it off; lunch sounds perfect. Park bench or the caf\u00e9 around the corner?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "Park bench \u2014 fresh air and sunshine sounds perfect. My ego survived the fall; knees and wrist are totally fine. Lead the way, but keep an eye out for any rogue banana peels, will you?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Eli Dawson",
+      "content": "Park bench it is \u2014 I'll scout for any rogue banana peels and find us a clear, sunny spot. Come on, I'll help you settle in, and if your ego still needs nursing, lunch's on me."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

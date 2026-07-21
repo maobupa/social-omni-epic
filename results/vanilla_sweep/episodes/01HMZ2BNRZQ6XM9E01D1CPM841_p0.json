@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HMZ2BNRZQ6XM9E01D1CPM841_p0",
+  "source_env_id": "01HMZ2BNRZQ6XM9E01D1CPM841",
+  "source": "seed_sotopia_full",
+  "interaction_type": "user_generated",
+  "scenario": "Agent1 and Agent2 are regulars at the same gym and recognize each other by sight but have never spoken. Recently, Agent1 realized they have been unintentionally ignoring Agent2's attempts at greeting due to wearing headphones during workouts. Agent1 wants to address the situation without making it awkward, while Agent2 has felt slighted and is considering whether to confront Agent1 or let it go.",
+  "learner_goal": "Apologize to Agent2 for unintentionally ignoring them and explain the reason (<extra_info>Extra information: you want to maintain a friendly atmosphere at the gym.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sasha's tone is professional yet apologetic, fitting her character as a police officer who values courtesy and professional acquaintance. She directly addresses the awkwardness of the situation.\n[relationship] The relationship improved from a state of slight tension/slighted feelings to one of mutual understanding and friendliness.\n[knowledge] Sasha learned that Lily did indeed feel overlooked and that her apology was well-received.\n[secret] No secrets were revealed.\n[social_rules] Sasha followed social norms for apologizing and repairing a minor social slight.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Sasha successfully apologized, explained the reason (headphones), and established a friendly atmosphere for future gym interactions.\n\n== partner (agent_2) ==\n[believability] Lily's response is consistent with her character as a lawyer\u2014direct, honest about her feelings, but professional and reasonable in accepting the explanation.\n[relationship] Lily's negative feelings were resolved, and she returned the gesture of friendliness.\n[knowledge] Lily learned that Sasha's behavior was unintentional rather than a personal slight.\n[secret] No secrets were revealed.\n[social_rules] Lily followed social norms for accepting an apology.\n[financial_and_material_benefits] No financial or material benefits were involved.\n[goal] Lily expressed her feelings about being ignored and clearly accepted the apology, fulfilling her goal.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "Hey Lily \u2014 I'm really sorry. I've realized I've had my headphones in during most workouts and must've missed you; I didn't mean to be rude. I like seeing you here, so next time give me a tap and I'll definitely say hi."
+    },
+    {
+      "turn": 1,
+      "speaker": "Lily Greenberg",
+      "content": "Thanks, Sasha \u2014 I appreciate you saying that. I\u2019ll be honest, it did feel a bit odd being overlooked, but I understand headphones happen. I accept your apology; next time give me a tap and we\u2019ll say hi."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "left the conversation"
+    }
+  ]
+}

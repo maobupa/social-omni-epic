@@ -1,0 +1,38 @@
+{
+  "scenario_id": "01HJPX518AED3Q41CY048WF1WN_p0",
+  "source_env_id": "01HJPX518AED3Q41CY048WF1WN",
+  "source": "seed_sotopia_full",
+  "interaction_type": "normbank",
+  "scenario": "Agent1 has been invited by a colleague, Agent2, to grab lunch together at a new restaurant. Agent1 is a vegetarian for ethical reasons and is quite vocal about their food choices, while Agent2 is not particularly concerned about dietary restrictions and enjoys a variety of foods. Agent1 sees this lunch as an opportunity to bond with Agent2 but is also wary of potential discomfort discussing their dietary preferences.",
+  "learner_goal": "Politely explain one's vegetarian lifestyle to Agent2 and suggest a restaurant that accommodates both diets without coming off as preachy or judgmental (<extra_info>Extra information: Agent1 believes that sharing their views on vegetarianism can be done in a friendly, non-confrontational way</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 1.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 4,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia's communication is direct and professional, fitting her role as a fitness instructor speaking to a principal while maintaining her personal values.\n[relationship] By communicating her needs clearly and politely, Sophia builds trust and ensures a positive social interaction.\n[knowledge] She learned that Mia is receptive to her suggestions and respectful of her dietary choices.\n[secret] No secrets were disclosed.\n[social_rules] She followed social norms for setting up a lunch date.\n[financial_and_material_benefits] No material benefits gained or lost.\n[goal] Sophia successfully explained her vegetarianism politely, suggested a mutually beneficial restaurant, and secured a firm commitment from Mia without being preachy.\n\n== partner (agent_2) ==\n[believability] Mia's response is polite and authoritative yet accommodating, consistent with her role as a school principal.\n[relationship] She established a respectful middle ground with her colleague/contractor.\n[knowledge] She learned about Sophia's dietary restrictions and a new restaurant option.\n[secret] No secrets were disclosed.\n[social_rules] She followed standard social etiquette.\n[financial_and_material_benefits] No material benefits gained or lost.\n[goal] Mia acknowledged Sophia's choice and agreed to a restaurant that satisfies her requirement for a middle ground where she can still eat meat if she chooses.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Mia \u2014 just so you know, I'm vegetarian for ethical reasons. I'm not trying to make a big deal of it, but I wanted to mention it so we pick a place we'll both enjoy. How about that new spot, The Green Fork on Main? They have great plant-based entrees and plenty of options if you want meat \u2014 would you like to try it?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "Thanks for the heads-up, Sophia \u2014 I really appreciate you letting me know. The Green Fork sounds lovely; I\u2019m happy to try it and I\u2019m glad we can pick a place where we\u2019ll both be comfortable. See you at lunch!"
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

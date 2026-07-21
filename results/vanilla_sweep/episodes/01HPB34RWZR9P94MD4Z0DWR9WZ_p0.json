@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB34RWZR9P94MD4Z0DWR9WZ_p0",
+  "source_env_id": "01HPB34RWZR9P94MD4Z0DWR9WZ",
+  "source": "seed_sotopia_full",
+  "interaction_type": "original_content",
+  "scenario": "Agent1 and Agent2 are in a romantic relationship and have been living together for the past year. One evening, Agent1 decides to cook a surprise dinner for Agent2. However, Agent2, unaware of the plan, comes home with takeout from their favorite restaurant. Both agents are looking forward to a pleasant evening, but now they face a dilemma of which meal to choose without disappointing the other.",
+  "learner_goal": "Express your appreciation for the gesture and find a compromise to enjoy the meal together without letting your efforts go to waste (<extra_info>Extra information: You are Agent1, you have spent considerable time and effort preparing a special meal, and you want to resolve the situation without diminishing your partner's enthusiasm.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 4.0,
+    "knowledge": 6.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 2.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sasha's responses were polite and balanced, reflecting the character's maturity and desire for harmony in the relationship.\n[relationship] The interaction was highly supportive and communicative, strengthening their romantic bond through effective conflict resolution.\n[knowledge] Sasha learned what Ava brought (appetizer and dessert) and how Ava felt about the situation.\n[secret] No secrets were revealed.\n[social_rules] Sasha followed all social norms and displayed excellent etiquette for a domestic partner.\n[financial_and_material_benefits] Both meals were preserved and planned for consumption, avoiding food waste.\n[goal] Sasha expressed appreciation, found a clear compromise that involved eating her prepared meal tonight while incorporating a piece of the takeout, and ensured no effort went to waste.\n\n== partner (agent_2) ==\n[believability] Ava's responses were consistent with the architectural background and the character's open, collaborative personality.\n[relationship] The mutual respect and quick resolution to the potential conflict improved the relationship's stability.\n[knowledge] Ava learned Sasha had spent the afternoon preparing a special surprise dinner.\n[secret] No secrets were revealed.\n[social_rules] Ava followed social norms and was highly cooperative.\n[financial_and_material_benefits] The takeout was not wasted and the couple had a plan for the next day's meal.\n[goal] Ava successfully communicated her intentions, worked together with Sasha, and reached a decision that respected both contributions.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sasha Ramirez",
+      "content": "Hey \u2014 thank you, that was so thoughtful. I actually spent the afternoon making a special dinner as a surprise; would you want to eat what I made tonight and save the takeout for tomorrow, or we can split and have one course from each so neither goes to waste? I don't want to take away from your gesture \u2014 pick what sounds best to you."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ava Thompson",
+      "content": "Oh, that\u2019s so sweet \u2014 I actually grabbed the takeout as a little treat for us, I didn\u2019t know you were cooking! I don\u2019t want to steal your moment, so we can definitely eat what you made tonight and save the takeout for tomorrow, or if you prefer we could have one course from each \u2014 maybe your main and a small appetizer or dessert from the takeout. I\u2019m happy with whatever feels best to you."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sasha Ramirez",
+      "content": "Thank you \u2014 that means a lot. How about we have the dinner I made as the main and share a small appetizer or dessert from your takeout afterward, so neither effort goes to waste? I\u2019ll plate everything and we can dig in."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ava Thompson",
+      "content": "That sounds perfect \u2014 thank you. I grabbed a little appetizer and a dessert from our favorite place; let's have the appetizer with your dinner and save the dessert for tomorrow. Want me to help plate or set the table?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Sasha Ramirez",
+      "content": "left the conversation"
+    }
+  ]
+}

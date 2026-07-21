@@ -1,0 +1,58 @@
+{
+  "scenario_id": "01HMZ2BMSN507NY391B0YRSWK5_p0",
+  "source_env_id": "01HMZ2BMSN507NY391B0YRSWK5",
+  "source": "seed_sotopia_full",
+  "interaction_type": "unexpected_pickup_scenario",
+  "scenario": "Agent1 has been informed by the school that Agent2, a fellow parent, has had an emergency and cannot pick up their child. Agent1, knowing Agent2 only by name, decides to call Agent2's emergency contact to assist. The emergency contact happens to be Agent2's parent. Agent1 is interacting with Agent2's parent to ensure that Agent2's child is safely picked up from school.",
+  "learner_goal": "You are Agent1, and your goal is to coordinate with Agent2's parent to arrange the child's pickup. <extra_info>Your approach should be considerate of the emergency situation and the potential stress it may cause.</extra_info> <clarification_hint>Ensure clear communication about the urgency and the logistics of the pickup.</clarification_hint> <strategy_hint>Offer to assist in the transition by waiting with the child until the parent arrives or providing necessary information about the school's pickup protocol.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 3.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 8,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Isabelle acted in a responsible and urgent manner appropriate for a student/acquaintance helping in an emergency.\n[relationship] Helping with a family emergency significantly strengthens the bond between acquaintances.\n[knowledge] Learned the identity of Zane's parent and their ETA.\n[secret] Did not reveal her secret about studying magic.\n[social_rules] Followed social norms perfectly, being helpful and polite.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Successfully coordinated the pickup, provided logistics (entrance, ID requirements, teacher/grade info), and offered to stay with the child.\n\n== partner (agent_2) ==\n[believability] Agent 2 acted consistently as a concerned parent/grandparent, though the prompt implies Zane is Agent 2, while the dialogue text treats the persona as Zane's parent. The behavior was consistent with the goal.\n[relationship] Expressed high levels of gratitude for the assistance provided.\n[knowledge] Obtained the child's name, teacher, grade, entrance location, and ID requirements.\n[secret] Did not reveal the secret regarding the engagement to the best friend's ex.\n[social_rules] Polite and cooperative throughout the interaction.\n[financial_and_material_benefits] No material gain or loss.\n[goal] Successfully coordinated the pickup and obtained all necessary information, though Agent 1 left before answering the final question about specific parking/forms.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Isabelle Martinez",
+      "content": "Hi \u2014 I\u2019m Isabelle Martinez. The school called saying Zane had an emergency and can\u2019t pick up his child; you\u2019re listed as the emergency contact. Could you come pick them up now? I can stay with the child in the front office until you arrive \u2014 the school will ask for photo ID at pickup; what\u2019s your ETA?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Zane Bennett",
+      "content": "Thanks so much, Isabelle \u2014 I really appreciate you staying with them. I\u2019m heading over now; can you confirm which entrance/front office I should use and whether a driver\u2019s license will be fine for ID? I should be there in about 20 minutes."
+    },
+    {
+      "turn": 2,
+      "speaker": "Isabelle Martinez",
+      "content": "Please use the school's main entrance \u2014 the front office is right inside the main doors by the parking lot. A photo driver's license will be fine for pickup. I\u2019ll wait with the child in the front office and have them ready; call or text if you need more time. See you in about 20 minutes."
+    },
+    {
+      "turn": 3,
+      "speaker": "Zane Bennett",
+      "content": "Thanks so much \u2014 I really appreciate you staying with them. I\u2019ll be there in about 20 minutes and will come in through the main entrance; a photo driver\u2019s license is fine. Could you tell me the child\u2019s name and teacher/grade so I can go straight to the right desk? Please call or text if anything changes."
+    },
+    {
+      "turn": 4,
+      "speaker": "Isabelle Martinez",
+      "content": "Her name is Lily Bennett \u2014 she\u2019s in Ms. Carter\u2019s 1st-grade class. I\u2019ll have her waiting in the front office ready to go. Please call or text if you\u2019re delayed; drive safe."
+    },
+    {
+      "turn": 5,
+      "speaker": "Zane Bennett",
+      "content": "Got it \u2014 thanks again, Isabelle. I\u2019ll be there in about 20 minutes through the main entrance and will have my driver\u2019s license ready. Is there a preferred place to park or anything else I should bring (pickup form or proof of guardianship)? I really appreciate you keeping Lily safe \u2014 I\u2019ll call if I\u2019m delayed."
+    },
+    {
+      "turn": 6,
+      "speaker": "Isabelle Martinez",
+      "content": "left the conversation"
+    }
+  ]
+}

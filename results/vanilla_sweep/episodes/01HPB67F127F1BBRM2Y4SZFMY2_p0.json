@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPB67F127F1BBRM2Y4SZFMY2_p0",
+  "source_env_id": "01HPB67F127F1BBRM2Y4SZFMY2",
+  "source": "seed_sotopia_full",
+  "interaction_type": "air travel safety procedures",
+  "scenario": "Agent1 is a frequent flyer who values efficiency and has a habit of keeping their tray table down and seat belt unfastened during takeoff and landing to continue working on their laptop. Agent2 is a flight attendant who is responsible for ensuring that all passengers comply with safety regulations during critical phases of the flight. Agent2 notices that Agent1 has not complied with the standard safety procedures and approaches them to enforce the rules. Agent1 feels that their productivity is being hindered and is initially resistant to the request. Agent2 must ensure compliance without escalating the situation.",
+  "learner_goal": "Convince Agent2 to allow them to continue working by explaining the importance of their tasks and attempting to negotiate an exception to the rule (<extra_info>Extra information: Agent1 believes their work is critical and may offer to take full responsibility for any consequences.</extra_info>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 1.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 3.0
+  },
+  "goal_achieved": false,
+  "terminal_success": false,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Eli's dialogue is consistent with his character as a forensic psychiatrist who values efficiency but respects rules when explained. He used his established acquaintance with William to attempt a negotiation while remaining polite.\n[relationship] The relationship remained positive and cooperative. Despite the initial resistance, the exchange ended with mutual understanding and helpfulness.\n[knowledge] Eli learned that William is firm on safety regulations despite their acquaintance, clarifying the boundaries of their relationship in a professional setting.\n[secret] Eli did not reveal his secret about funding a college student.\n[social_rules] Eli followed social norms, transitioning from a request for an exception to compliance once the safety reasons were reinforced.\n[financial_and_material_benefits] Eli was unable to continue working, which may have impacted his productivity, but no direct financial loss occurred.\n[goal] Eli failed to convince William to allow him to continue working. He attempted the negotiation and offered to take responsibility, but William denied the request, requiring full compliance immediately.\n\n== partner (agent_2) ==\n[believability] William's behavior perfectly aligned with a professional flight attendant who balances safety regulations with a friendly, personal touch for an acquaintance.\n[relationship] William maintained a friendly demeanor and offered personal assistance (helping stow the laptop), which helped preserve the acquaintance.\n[knowledge] William learned about the pressure Eli is under regarding his expert report.\n[secret] William did not reveal his secret about sabotaging a competitor.\n[social_rules] William adhered to all professional and social protocols, enforcing safety rules without escalating the situation.\n[financial_and_material_benefits] No material benefits or losses.\n[goal] William successfully ensured that Eli followed safety procedures (stowing the laptop and buckling up) without causing a scene, fulfilling all aspects of his goal.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Eli Dawson",
+      "content": "said: \"I understand you're doing your job and I respect that \u2014 I'm sorry for resisting. I'm in the middle of a time\u2011sensitive expert report that absolutely must be submitted tonight; could you allow me to keep my laptop out for the next five minutes until we reach cruising altitude? I'll fasten my seat belt right now, keep the screen low and secure, and accept full responsibility if there's any problem.\""
+    },
+    {
+      "turn": 1,
+      "speaker": "William Brown",
+      "content": "I appreciate that, Eli \u2014 I know deadlines are brutal. I can't allow laptops out during takeoff and landing; it's a safety and legal requirement for everyone on board. Please stow your laptop and buckle your seatbelt now; I can help secure it in the overhead bin and I'll let you know as soon as it's safe to resume work."
+    },
+    {
+      "turn": 2,
+      "speaker": "Eli Dawson",
+      "content": "Understood \u2014 thank you, William. I don\u2019t want to cause trouble; please stow the laptop and I\u2019ll buckle up right now. Could you please let me know the instant we reach cruising altitude so I can resume? I appreciate your help."
+    },
+    {
+      "turn": 3,
+      "speaker": "William Brown",
+      "content": "Thanks, Eli \u2014 I appreciate it. I\u2019ll help you stow the laptop now and I\u2019ll let you know the moment we reach cruising altitude so you can get back to your report. I can\u2019t make exceptions during takeoff/landing \u2014 it\u2019s for everyone\u2019s safety and an airline regulation."
+    },
+    {
+      "turn": 4,
+      "speaker": "Eli Dawson",
+      "content": "left the conversation"
+    }
+  ]
+}

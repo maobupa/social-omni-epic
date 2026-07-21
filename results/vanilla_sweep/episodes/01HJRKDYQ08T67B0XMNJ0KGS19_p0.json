@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJRKDYQ08T67B0XMNJ0KGS19_p0",
+  "source_env_id": "01HJRKDYQ08T67B0XMNJ0KGS19",
+  "source": "seed_sotopia_full",
+  "interaction_type": "inspired_by_prompt",
+  "scenario": "Agent1 and Agent2 are neighbors who have had minimal interaction. A local criminal has been causing trouble in their neighborhood, and Tom, a mutual acquaintance, has provided key information that led to the criminal's apprehension. Now, the neighborhood is organizing a community award ceremony to honor Tom's bravery. Agent1 is tasked with planning the event and approaches Agent2 for assistance, as Agent2 is known for having organized events in the past. The relationship between Agent1 and Agent2 is distant but respectful, and they are now collaborating to show appreciation for Tom's help.",
+  "learner_goal": "Agent1 wants to ensure that the event is successful and well-received by the community, reflecting the gratitude everyone feels towards Tom for his help (<extra_info>Extra information: Agent1 is aware of Agent2's experience with event planning and sees this as an opportunity to strengthen community bonds.</extra_info>)",
+  "scores": {
+    "believability": 8.0,
+    "relationship": 3.0,
+    "knowledge": 8.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 9.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Sophia consistently pursues her objective of organizing the ceremony and leveraging Lena's expertise. Her tone is friendly and proactive, which aligns with her spontaneous and encouraging personality description, though the backstory about being in love with Lena's husband isn't touched upon.\n[relationship] The agents successfully collaborate and reach a firm agreement on a plan. Sophia successfully bridges the distance in their relationship by being accommodating and clear in her expectations, strengthening their bond through shared work.\n[knowledge] Sophia learns Lena's availability, her specific constraints regarding time and budget, and gets a commitment for the professional services (permits/layout) she was seeking.\n[secret] Sophia kept her secret about her feelings for Lena's husband.\n[social_rules] Sophia followed all social norms and was polite throughout the interaction.\n[financial_and_material_benefits] No significant material gain or loss occurred in this interaction.\n[goal] Sophia successfully secured Lena's help for the most technical aspects of the event (permits and layout) and established a concrete meeting time and agenda to move the project forward, ensuring a high likelihood of a successful event.\n\n== partner (agent_2) ==\n[believability] Lena's behavior is consistent with her architect background (being precise about sketches and permits) and her goal of minimizing time/cost. The tension of her secret is not visible, which is expected for a secret.\n[relationship] Lena cooperates well and is appreciative of Sophia taking on the more labor-intensive tasks like refreshments, which helps foster a more collaborative relationship.\n[knowledge] Lena learns that Sophia is willing to take on the majority of the logistical burden (refreshments, tables, vendor lists) which helps Lena manage her time.\n[secret] Lena kept her secret about stealing a former boyfriend.\n[social_rules] Lena was professional and communicative throughout.\n[financial_and_material_benefits] Lena successfully avoided financial burdens by setting boundaries early.\n[goal] Lena achieved her goal perfectly: she contributed her expertise (permits/layout) while explicitly offloading time-consuming tasks (refreshments/tables) and ensuring the plan remained simple and low-cost.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Sophia James",
+      "content": "Hey Lena \u2014 the neighborhood's planning a small award ceremony to thank Tom for what he did, and I could really use your event-planning magic. I was thinking a short park ceremony with a couple of speeches, light refreshments, and a few community tables \u2014 would you take the lead on logistics/permits and layout? When are you free this week to meet and sketch a plan together?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Hi Sophia \u2014 I can take the lead on permits and the layout, but I\u2019m a bit tight on time this week. I\u2019m free Wednesday after 6:30 pm or Saturday morning around 9 for a quick hour to sketch a plan. I\u2019d prefer to keep the setup simple to avoid extra cost \u2014 could you ask someone else to coordinate refreshments and the community tables? If that works, I\u2019ll start looking into permit requirements and a basic site layout."
+    },
+    {
+      "turn": 2,
+      "speaker": "Sophia James",
+      "content": "Wednesday after 6:30 pm works for me \u2014 shall we meet at the park entrance/gazebo? I\u2019ll take on coordinating refreshments and the community tables so you can focus on permits and layout. For our hour, let\u2019s do a quick walk-through, a 20-minute sketch of the layout, and a short checklist of permit questions. Sound good?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "That works \u2014 see you Wednesday after 6:30 at the gazebo. I\u2019ll bring a simple site sketch and a short list of permit questions so we can do the walk\u2011through, the 20\u2011minute layout, and the checklist. Thanks for handling refreshments \u2014 I\u2019ll keep the setup minimal to save time and cost."
+    },
+    {
+      "turn": 4,
+      "speaker": "Sophia James",
+      "content": "Perfect \u2014 see you Wednesday after 6:30 at the gazebo. I\u2019ll bring a simple agenda, a sign-in sheet, and a tape measure for the layout, and I\u2019ll handle refreshments and the community tables. If there\u2019s anything specific you want me to prep or bring (vendor contacts, sample permit language), tell me before then."
+    },
+    {
+      "turn": 5,
+      "speaker": "Lena Goodwin",
+      "content": "Great \u2014 see you Wednesday after 6:30 at the gazebo. I\u2019ll bring the site sketch and my permit question list. If you have any vendor contacts or a sample permit form, could you bring them? Otherwise we\u2019re all set."
+    },
+    {
+      "turn": 6,
+      "speaker": "Sophia James",
+      "content": "Absolutely \u2014 I\u2019ll bring vendor contacts and a sample permit form, plus the agenda, sign-in sheet, and tape measure. Anything specific you want on the vendor list or any dietary needs I should plan for with the refreshments? See you Wednesday at 6:30 at the gazebo."
+    },
+    {
+      "turn": 7,
+      "speaker": "Lena Goodwin",
+      "content": "Thanks, Sophia \u2014 vegetarian and nut-free options would be great (a couple of each), and simple individually wrapped items to keep things easy and reduce waste. Please bring the vendor contacts and sample permit form as planned; I\u2019ll have the site sketch and permit questions ready. See you Wednesday at 6:30 at the gazebo."
+    },
+    {
+      "turn": 8,
+      "speaker": "Sophia James",
+      "content": "left the conversation"
+    }
+  ]
+}

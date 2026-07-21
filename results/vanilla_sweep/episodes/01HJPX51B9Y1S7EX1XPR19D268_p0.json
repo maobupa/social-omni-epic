@@ -1,0 +1,68 @@
+{
+  "scenario_id": "01HJPX51B9Y1S7EX1XPR19D268_p0",
+  "source_env_id": "01HJPX51B9Y1S7EX1XPR19D268",
+  "source": "seed_sotopia_full",
+  "interaction_type": "personal_growth",
+  "scenario": "At a community support group meeting, agent1 is struggling with social anxiety and feels overwhelmed by the expectations of daily interactions. Agent1 has joined the group to seek advice and coping strategies. Agent2, a long-time member of the group, has overcome similar challenges in the past and is known for providing constructive support. Agent1 hopes to learn from agent2's experiences to better navigate social situations.",
+  "learner_goal": "Learn effective coping strategies for social anxiety and ways to function better in social settings (<extra_info>Extra information: agent1 is looking for actionable advice and emotional support</extra_info>, <clarification_hint>Seek practical tips that can be applied in everyday life</clarification_hint>, <strategy_hint>Be open to sharing personal struggles and listening to agent2's experiences</strategy_hint>)",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 3.0,
+    "knowledge": 9.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 10,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Donovan's dialogue was consistent with his background as a software developer, using analytical language like 'over-analyzing' and 'rehearse,' and his requests for practical tips matched his goal perfectly.\n[relationship] The relationship strengthened through mutual support and vulnerability. Donovan explicitly expressed appreciation for Lena's help.\n[knowledge] Donovan successfully learned specific, actionable strategies including the 4-4-4 breathing technique, a grounding technique (noticing three things), a script, and micro-goal setting.\n[secret] He did not reveal his secret about classified information.\n[social_rules] Donovan followed all social norms within the context of a support group interaction.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Donovan fully achieved his goal of seeking actionable advice and emotional support. He received specific strategies for breathing, scripting, and grounding, and even practiced them with Lena.\n\n== partner (agent_2) ==\n[believability] Lena's advice was practical and structured, which aligns with her background as an architect. Her supportive tone was consistent throughout.\n[relationship] Lena successfully provided support to a friend, deepening their connection.\n[knowledge] She gained a bit of insight into the specific triggers of Donovan's anxiety but learned nothing else significant.\n[secret] She did not reveal her secret regarding her best friend's boyfriend.\n[social_rules] She followed social norms, acting as a supportive mentor figure.\n[financial_and_material_benefits] No financial or material exchange occurred.\n[goal] Lena provided concise, essential strategies without overwhelming Donovan, focused on small steps, and offered personal encouragement as planned.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Donovan Reeves",
+      "content": "Hey Lena \u2014 good to see a familiar face. Lately I\u2019ve been getting shut down by social anxiety; even small interactions like joining a conversation or chatting at events feel overwhelming and I catch myself over-analyzing every move. You\u2019ve talked about dealing with similar things before \u2014 what practical strategies helped you in the moment (breathing, short scripts, tiny goals), and how did you practice them until they felt natural?"
+    },
+    {
+      "turn": 1,
+      "speaker": "Lena Goodwin",
+      "content": "Hey Donovan \u2014 I totally get that. What helped me was three simple things I could actually do in the moment: a 4-4-4 grounding breath, a short opening script I\u2019d rehearse quietly (\u201cHi, I\u2019m Lena \u2014 nice to meet you\u201d), and tiny goals like staying for just five minutes or asking one question. I practiced by setting micro-goals at conferences \u2014 I\u2019d aim to say hello to one person, then slowly add another \u2014 and over time those actions felt more natural. Start with one small thing and build from there; I can help you pick a first micro-goal if you want."
+    },
+    {
+      "turn": 2,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Lena \u2014 that sounds doable. I\u2019ll try a micro-goal: stay for five minutes and ask one question when I join a group; can you help me rehearse a short opening line and give a quick trick for when my brain starts over-analyzing?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Lena Goodwin",
+      "content": "Try this opening: \u201cHi, I\u2019m Donovan \u2014 nice to meet you. What brought you here?\u201d If you start over\u2011analyzing, quietly label the thought (\u201cthat\u2019s anxiety\u201d), take one 4\u20114\u20114 grounding breath, then notice three things in the room to re\u2011anchor your attention. Want to run through it once now?"
+    },
+    {
+      "turn": 4,
+      "speaker": "Donovan Reeves",
+      "content": "Yes \u2014 let's run it. I'll try the opening: \"Hi, I'm Donovan \u2014 nice to meet you. What brought you here?\" If I feel the spiral, I'll label it \"that's anxiety,\" take one 4-4-4 grounding breath, then re-anchor by noticing three things (like the clock, a potted plant, and someone's lanyard). Sound OK, or any tweaks you\u2019d suggest?"
+    },
+    {
+      "turn": 5,
+      "speaker": "Lena Goodwin",
+      "content": "That script is solid \u2014 one small tweak I\u2019d offer is shortening the second line to \u201cWhat brought you here?\u201d so it feels less formal if you\u2019re nervous. If you start spiraling, label it (\u201cthat\u2019s anxiety\u201d), take one 4\u20114\u20114 breath, then ask a simple follow\u2011up (e.g., \u201cHow do you know the host?\u201d). Try it once, and tell me how it goes \u2014 I\u2019ll cheer you on and help tweak it afterward."
+    },
+    {
+      "turn": 6,
+      "speaker": "Donovan Reeves",
+      "content": "Thanks, Lena \u2014 that tweak sounds good. I\u2019ll try: \u201cHi, I\u2019m Donovan \u2014 what brought you here?\u201d and use the \u201cthat\u2019s anxiety\u201d label + a 4-4-4 breath and noticing three things if I start spiraling. Quick question: what\u2019s a short follow-up I can use if it\u2019s noisy or I can\u2019t hear someone? I really appreciate you cheering me on \u2014 it helps a lot."
+    },
+    {
+      "turn": 7,
+      "speaker": "Lena Goodwin",
+      "content": "Short follow-ups that work for me: \u201cSorry, could you say that again?\u201d or \u201cI didn\u2019t catch that \u2014 did you say X?\u201d If it\u2019s noisy, try an easy yes/no guess like \u201cWere you talking about the speaker?\u201d \u2014 it\u2019s much simpler for them to confirm. Also angle your body slightly toward the speaker or step a little closer so you can hear. You\u2019ve got this \u2014 tell me how it goes and I\u2019ll cheer you on."
+    },
+    {
+      "turn": 8,
+      "speaker": "Donovan Reeves",
+      "content": "left the conversation"
+    }
+  ]
+}

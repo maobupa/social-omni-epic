@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01H7VFHPZMXNGV8PM19WHPQ2W3_p0",
+  "source_env_id": "01H7VFHPZMXNGV8PM19WHPQ2W3",
+  "source": "seed_sotopia",
+  "interaction_type": "craigslist_bargains",
+  "scenario": "One person has put up their Bell\\'O TV Stand - Black Glass and Wood Trim for sale at $125.0, while another person is showing interest in purchasing it. The item on sale is a beautiful 42\" Bell\\'O TV Stand, featuring black glass with an elegant wood trim. The stand measures 23 inches in height and 21 1/2 inches in depth.",
+  "learner_goal": "You are the buyer for this item and your target price is $112.00. Be aware that you may be penalized if you purchase it for a significantly higher price than the target. However, if you manage to buy it for less than the target price, you will receive a bonus.",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 5.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 3.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle stays in character as an art student needing furniture for a studio and maintains a professional but friendly tone with an acquaintance.\n[relationship] The transaction was smooth and collaborative, reinforcing their existing creative and professional bond.\n[knowledge] Learned the seller's flexibility and urgency regarding pickup times.\n[secret] Giselle's secret regarding forged paintings was not revealed.\n[social_rules] Followed social norms and professional etiquette throughout the negotiation.\n[financial_and_material_benefits] Purchased the item at their exact target price, avoiding a penalty and securing the desired object.\n[goal] Giselle successfully negotiated the price down to exactly $112.00, which was their stated target price.\n\n== partner (agent_2) ==\n[believability] Zane's responses were polite, professional, and consistent with a graphic designer selling used furniture.\n[relationship] Maintained a helpful and positive tone with an acquaintance.\n[knowledge] Learned the buyer's budget constraints and studio needs.\n[secret] Zane's secret engagement remained hidden.\n[social_rules] Followed social norms and was helpful in offering to assist with loading.\n[financial_and_material_benefits] Sold the item for $112.00, which is significantly higher than the target price of $76.90, earning a bonus.\n[goal] Zane exceeded his target price of $76.90 by a substantial margin, securing a $112.00 sale.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Hi Zane \u2014 this 42\" Bell'O stand would be perfect for my studio. I'm ready to buy today: would you take $110 cash if I pick it up tomorrow? If that's too low, I'm willing to meet you at $112."
+    },
+    {
+      "turn": 1,
+      "speaker": "Zane Bennett",
+      "content": "Hi Giselle \u2014 glad it would work well in your studio. I can do $118 cash for pickup tomorrow (or $115 if you can pick it up today). Would either of those work for you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "Thanks, Zane \u2014 I can pick up today. I can do $112 cash and I\u2019ll be quick and help load it; would you accept that?"
+    },
+    {
+      "turn": 3,
+      "speaker": "Zane Bennett",
+      "content": "Thanks, Giselle \u2014 I appreciate you offering to help load. $112 cash today works for me. Can you do 3:00 PM? I\u2019ll have it ready and I\u2019ll help load it into your car."
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPQ34PNXSMR7GNE7A9C1VC6_p0",
+  "source_env_id": "01HJPQ34PNXSMR7GNE7A9C1VC6",
+  "source": "seed_sotopia_full",
+  "interaction_type": "personal_health",
+  "scenario": "Agent1 and Agent2 are roommates who often share meals. Agent1 has recently been experiencing stomach issues and recalls a conversation where Agent2 advised against eating certain foods that are now suspected to be the cause. Agent1 wants to discuss dietary changes with Agent2, who is a bit of a food enthusiast and may be resistant to altering meal plans.",
+  "learner_goal": "You want to acknowledge to Agent2 that they were right about the dietary advice. You're hoping to convince them to consider meal options that accommodate your health needs. <extra_info> Think about proposing alternative ingredients or dishes that are still enjoyable for both of you. </extra_info><clarification_hint> You should convey the seriousness of your health concerns without dismissing Agent2's preferences. </clarification_hint><strategy_hint> You can suggest a trial period for the new diet to assess its impact on your well-being. </strategy_hint>",
+  "scores": {
+    "believability": 10.0,
+    "relationship": 3.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Giselle stays in character as a student who is direct and focused on their health needs. Their tone is consistent with their persona.\n[relationship] The relationship improved significantly as they moved from simple acquaintances to collaborating on meal planning and cooking, showing mutual respect.\n[knowledge] Giselle learned that Ethan is willing to adapt his recipes and that he has specific Italian adaptations ready for their dietary needs.\n[secret] Giselle did not reveal their secret regarding the forged paintings.\n[social_rules] Giselle followed all social norms of a polite roommate discussion.\n[financial_and_material_benefits] No significant financial or material changes occurred.\n[goal] Giselle successfully acknowledged Ethan was right, proposed specific alternatives, and secured a firm commitment for a two-week trial period with a set meeting time to plan it.\n\n== partner (agent_2) ==\n[believability] Ethan's response as a chef who wants to maintain creativity while being supportive of a roommate is very believable and consistent.\n[relationship] Ethan's willingness to help and collaborate on new recipes strengthened the bond between the roommates.\n[knowledge] Ethan gained specific knowledge about Giselle's dietary restrictions and health condition.\n[secret] Ethan did not reveal his secret about being a romance novel author.\n[social_rules] Ethan followed social norms and was very accommodating.\n[financial_and_material_benefits] No significant financial or material changes occurred.\n[goal] Ethan successfully agreed to support Giselle's health while ensuring his own culinary creativity was maintained by suggesting specific Italian adaptations.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Giselle Rousseau",
+      "content": "Hey Ethan, you were right about the foods you warned me about \u2014 my stomach's been really acting up and I think they're the cause. I don't want to take away your cooking creativity, but could we try meals that avoid those culprits and use alternatives like almond/coconut milk, grilled or roasted proteins instead of fried, and aromatic herbs instead of hot peppers? I'm serious about how much this is affecting my day-to-day, so can we do a two-week trial of the adjusted meals and see if it helps? I'm happy to plan and cook some of the dishes with you so they stay tasty."
+    },
+    {
+      "turn": 1,
+      "speaker": "Ethan Johnson",
+      "content": "Hey Giselle \u2014 I'm sorry your stomach's been giving you trouble, and thanks for bringing this up. I'm happy to do a two-week trial avoiding those culprits; almond or coconut milk, grilled/roasted proteins, and aromatic herbs instead of hot peppers all sound reasonable. I still want the food to be exciting, so let's plan a small rotating menu together (I can adapt a few of my favorite Italian dishes to these constraints) and cook some nights together \u2014 when can we sit down and map out meals and a grocery list?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Giselle Rousseau",
+      "content": "Thanks, Ethan \u2014 I really appreciate you taking this seriously. Tomorrow evening around 7 works for me to sit down and map a two-week rotating menu and grocery list; I can bring a few recipe ideas (almond-milk pesto, roasted lemon-herb chicken, coconut-milk chia pudding) and we can adapt some of your favorite Italian dishes. I\u2019m glad to cook together \u2014 this trial matters a lot for my day-to-day, so let\u2019s make it tasty."
+    },
+    {
+      "turn": 3,
+      "speaker": "Ethan Johnson",
+      "content": "Perfect \u2014 tomorrow at 7 in the kitchen works for me. I\u2019ll pull a few Italian adaptations (almond-milk pesto, a grilled lemon-herb chicken, and a lighter cacio e pepe using olive oil and aromatic herbs) and we can finalize the two-week rotating menu and grocery list. I\u2019m really glad you want to cook together \u2014 excited to experiment and keep everything tasty."
+    },
+    {
+      "turn": 4,
+      "speaker": "Giselle Rousseau",
+      "content": "left the conversation"
+    }
+  ]
+}

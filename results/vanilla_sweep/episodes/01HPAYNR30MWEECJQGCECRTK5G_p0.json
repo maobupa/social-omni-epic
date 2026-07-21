@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HPAYNR30MWEECJQGCECRTK5G_p0",
+  "source_env_id": "01HPAYNR30MWEECJQGCECRTK5G",
+  "source": "seed_sotopia_full",
+  "interaction_type": "conflict_resolution",
+  "scenario": "Two individuals are assigned to collaborate on a project at work. <p viewer=\"environment\">They are both passionate about the project but have differing ideas on how to approach it. Agent1 believes in a more traditional method, while Agent2 is advocating for a new, innovative approach.</p>",
+  "learner_goal": "You believe that the traditional method has proven successful in the past and would like to convince your colleague to follow this approach. <extra_info> Consider discussing past successes and how they can be replicated. <clarification_hint> You may need to acknowledge the potential benefits of innovation but argue for a more cautious, tried-and-tested method. </extra_info> <strategy_hint> You can highlight the risks associated with untested methods and provide data supporting the reliability of your approach. </strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 4.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 7.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Miles stayed in character as a cautious, experienced chef focused on reliability and past success. He used appropriate terminology regarding catering and kitchen logistics.\n[relationship] The interaction was professional and constructive. Miles successfully negotiated his concerns with Mia, and they arrived at a compromise that respected his seniority and perspective.\n[knowledge] He learned that Mia was willing to accommodate his safety concerns and gained a detailed understanding of how she plans to mitigate risks in the pilot.\n[secret] Miles did not reveal his past gambling addiction.\n[social_rules] He followed social norms for a professional collaboration.\n[financial_and_material_benefits] No direct financial gain or loss occurred during this specific interaction.\n[goal] Miles successfully convinced Mia to use the traditional method as the 'backbone' of the project. While she is still running a pilot for her innovation, Miles secured a commitment that the core plan would follow the tried-and-tested approach he advocated for.\n\n== partner (agent_2) ==\n[believability] Mia's responses were professional and structured, fitting her role as a high school principal. Her detail-oriented approach to risk mitigation was realistic.\n[relationship] She built trust with Miles by listening to his concerns and offering concrete solutions to address them.\n[knowledge] She gained a clear list of Miles's specific technical concerns regarding the project's success.\n[secret] She did not reveal her past in a punk rock band.\n[social_rules] She maintained professional social norms throughout.\n[financial_and_material_benefits] No direct financial gain or loss occurred.\n[goal] Mia made significant progress by getting Miles to agree to a pilot of her innovative approach. However, her goal was to have the innovative approach 'yield results and make the project stand out,' whereas it is currently relegated to a small-scale pilot while the traditional method remains the primary approach. The success of the innovation is still contingent on the pilot's performance and Miles's future approval.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Miles Hawkins",
+      "content": "Mia \u2014 I\u2019m all for smart innovation, but I\u2019ve seen the traditional approach deliver when it mattered: the Riverside pop-up and last year\u2019s catering run both used it and we hit our deadlines and quality targets with very few issues. For this project the stakes are higher, so I\u2019d rather follow the tried-and-tested method for the core plan and, if you\u2019re open, run any new ideas as a small pilot alongside it. That keeps us safe and gives room to innovate without risking the whole rollout."
+    },
+    {
+      "turn": 1,
+      "speaker": "Mia Davis",
+      "content": "I hear you \u2014 I\u2019m fine keeping the traditional method as our backbone if we protect the rollout with a small, tightly scoped pilot for the innovative elements. I\u2019ll draft a one\u2011page pilot plan with clear success metrics, rollback triggers, and two short case-study summaries showing where this approach outperformed traditional-only rollouts, and bring it to our next check-in. What specific risks or failure modes worry you most so I can address them in the plan?"
+    },
+    {
+      "turn": 2,
+      "speaker": "Miles Hawkins",
+      "content": "Thanks \u2014 the biggest risks I\u2019d like you to address are: timeline/integration slips that bleed into the main rollout; quality inconsistency (taste, temperature, portion) versus our standard; supplier/sourcing failures for any new ingredients; customer complaints or safety/regulatory issues; and rollback complexity if the pilot introduces problems we can\u2019t quickly undo."
+    },
+    {
+      "turn": 3,
+      "speaker": "Mia Davis",
+      "content": "Got it \u2014 I\u2019ll address each of those in the one\u2011pager with concrete mitigations: a locked pilot scope and integration gates to prevent timeline bleed, parallel QA checks (taste panels, temp logging, portion weighing) with clear accept/reject criteria, pre\u2011qualified backup suppliers and ingredient fallbacks, a customer feedback/safety escalation path reviewed with compliance, and a rehearsed rollback plan using modular implementation and explicit rollback triggers (with a target rollback window). Do you have any hard thresholds you want me to use (e.g., % variance in portion size, acceptable temp range, max complaint rate) or any preferred backup suppliers/escalation contacts to include? I\u2019ll incorporate those and bring the draft to our check\u2011in."
+    },
+    {
+      "turn": 4,
+      "speaker": "Miles Hawkins",
+      "content": "left the conversation"
+    }
+  ]
+}

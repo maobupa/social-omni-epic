@@ -1,0 +1,48 @@
+{
+  "scenario_id": "01HJPTHMDHNAY5BM25H0R1A9TM_p0",
+  "source_env_id": "01HJPTHMDHNAY5BM25H0R1A9TM",
+  "source": "seed_sotopia_full",
+  "interaction_type": "door_dilemma",
+  "scenario": "Agent1 and Agent2 are coworkers who share an office. The office has a door that can be kept open or closed. Agent1 prefers the door closed for concentration, while Agent2 prefers it open for a more collaborative atmosphere. They need to discuss their preferences and come to a mutual agreement.",
+  "learner_goal": "You want the office door to be closed to maintain a quiet environment for concentration. <extra_info>Consider discussing periods of time when the door can be closed for focused work and when it can be open for collaboration.</extra_info> <clarification_hint>Explain how a closed door helps your productivity and work quality.</clarification_hint> <strategy_hint>You can suggest a compromise that benefits both parties, such as using a shared calendar to schedule door-open and door-closed times.</strategy_hint>",
+  "scores": {
+    "believability": 9.0,
+    "relationship": 2.0,
+    "knowledge": 2.0,
+    "secret": 0.0,
+    "social_rules": 0.0,
+    "financial_and_material_benefits": 0.0,
+    "goal": 10.0
+  },
+  "goal_achieved": true,
+  "terminal_success": true,
+  "num_turns": 6,
+  "evaluation_reasoning": "== learner (agent_1) ==\n[believability] Leo stayed perfectly in character, advocating for his needs while maintaining the friendly neighborhood connection established in the background.\n[relationship] The interaction was polite, collaborative, and strengthened their working relationship through successful conflict resolution.\n[knowledge] He learned that Noah is willing to use headphones and follow a shared calendar.\n[secret] Leo's secret about his child remains hidden.\n[social_rules] Followed all social norms for a professional workspace conversation.\n[financial_and_material_benefits] No direct financial change, though improved productivity may have indirect benefits.\n[goal] Leo successfully negotiated the specific time blocks he wanted for a closed door, explained the productivity benefits, and established a shared calendar system.\n\n== partner (agent_2) ==\n[believability] Noah acted consistently with a collaborative coach's personality, being agreeable and suggesting practical signals like a sign.\n[relationship] The relationship improved as they found a way to balance their different working styles without conflict.\n[knowledge] He learned about Leo's specific scheduling needs and productivity requirements.\n[secret] Noah's secret identity as a comedian was not revealed.\n[social_rules] Followed all social norms for a professional workspace conversation.\n[financial_and_material_benefits] No direct financial or material impact.\n[goal] Noah successfully negotiated for the door to remain open during specific collaborative times and secured a trial period with a check-in date.",
+  "transcript": [
+    {
+      "turn": 0,
+      "speaker": "Leo Williams",
+      "content": "Hey Noah, can we talk about the office door for a minute? I really focus best with it closed when I'm doing charting and paperwork \u2014 the quiet helps me avoid mistakes and stay efficient. Could we try scheduling closed blocks (for example 9\u201311 and 2\u20134) and leave it open midday and late afternoon for collaboration? We can put those blocks on a shared calendar and try it for a week to see how it works."
+    },
+    {
+      "turn": 1,
+      "speaker": "Noah Davis",
+      "content": "Hey Leo \u2014 I totally get needing quiet for charting, and I like your block idea. I'm happy to try closed 9\u201311 and 2\u20134 and leave it open midday and late afternoon for a week as a trial. Let\u2019s put those blocks on the shared calendar and check in after the week; I\u2019ll use headphones during closed blocks and we can use a small sign or leave the door slightly ajar as a clear signal when we\u2019re open to chat."
+    },
+    {
+      "turn": 2,
+      "speaker": "Leo Williams",
+      "content": "Perfect \u2014 thanks, Noah. I\u2019m happy to go with closed 9\u201311 and 2\u20134 and open midday/late afternoon for the week. I\u2019ll add those blocks to the shared calendar now and we can check in after a week; a small \u201cavailable\u201d sign or leaving the door slightly ajar works for me, and I appreciate you using headphones during closed times."
+    },
+    {
+      "turn": 3,
+      "speaker": "Noah Davis",
+      "content": "Thanks, Leo \u2014 sounds good. I appreciate you adding the blocks; I\u2019ll put a reminder for our check-in next Friday at 4:30 to see how it went. I\u2019ll use headphones during closed blocks and we\u2019ll keep the \u201cavailable\u201d sign or slightly ajar door as our cue."
+    },
+    {
+      "turn": 4,
+      "speaker": "Leo Williams",
+      "content": "left the conversation"
+    }
+  ]
+}
