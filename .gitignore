@@ -42,3 +42,6 @@ output/expel_smoke/
 nohup.out
 # R session history
 .Rhistory
+# Regenerable embedding caches (keyed on seeds-file mtime; recomputed on demand)
+*.embeddings.npy
+*.embeddings.meta.json

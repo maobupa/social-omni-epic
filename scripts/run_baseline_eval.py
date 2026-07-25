@@ -235,6 +235,10 @@ def main() -> None:
     ap.add_argument("--model", type=str, default="openai/gpt-5-mini")
     ap.add_argument("--learner-model", type=str, default=None)
     ap.add_argument("--partner-model", type=str, default=None)
+    ap.add_argument("--judge-model", type=str, default="google/gemini-3-flash-preview",
+                    help="Cross-lab scoring judge (must be a Lightning-served, non-learner-lab "
+                         "model). Required so the learner model is never used to self-score — "
+                         "critical when the learner (e.g. gpt-4.1-mini) isn't on the FM endpoint.")
     ap.add_argument("--max-turns", type=int, default=20)
     ap.add_argument("--output-dir", type=str, default=None,
                     help="Output directory (default: output/baseline_eval_<timestamp>)")
@@ -251,6 +255,13 @@ def main() -> None:
     from social_omni_epic.sotopia_bridge import scenario_to_sotopia_profiles
 
     fm = FM(model=args.model)
+    # Cross-lab judge: scoring must NOT go through the learner model (it may not exist on the
+    # FM/Lightning endpoint, e.g. gpt-4.1-mini). fm_judge overrides the self-score fallback.
+    fm_judge = FM(model=args.judge_model)
+    if str(args.judge_model).split("/")[0] == str(learner_model).split("/")[0]:
+        print(f"WARNING: judge provider matches learner ({learner_model}) — not cross-lab.",
+              file=sys.stderr)
+    print(f"Judge model: {args.judge_model}")
 
     # Output directory
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -304,6 +315,7 @@ def main() -> None:
                     rubric=None,
                     partner_profile=None,
                     judge_self_consistency_k=1,
+                    fm_judge=fm_judge,   # cross-lab judge; never self-score with the learner
                 )
             )
             scores = result.learner_scores

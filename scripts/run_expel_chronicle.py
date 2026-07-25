@@ -134,6 +134,8 @@ async def _process_seed(
     fm_judge: FM,
     K: int,
     max_turns: int,
+    partner_model: str | None = None,
+    fm_reflect: FM | None = None,
     precomputed_scores1: dict | None = None,
 ) -> tuple[dict, str, list[ExpelTrajectory], list[ExpelTrajectory]]:
     """Run ExpeL gather loop for one seed.
@@ -221,10 +223,11 @@ async def _process_seed(
         try:
             result = await run_single_episode(
                 env_profile=env_profile, agent_profiles=agent_profiles, fm=fm_learner,
-                learner_model=fm_learner.model, partner_model=fm_learner.model,
+                learner_model=fm_learner.model, partner_model=partner_model or fm_learner.model,
                 memory_prompt=memory_prompt, max_turns=max_turns,
                 learner_goal=learner_goal, rubric=None, partner_profile=None,
                 judge_self_consistency_k=1,
+                fm_judge=fm_judge,   # cross-lab judge; never self-score with the learner
             )
         except Exception as e:
             print(f"    [seed {seed_idx} attempt {attempt}] episode error: {e}")
@@ -261,7 +264,7 @@ async def _process_seed(
         # Generate Reflexion string (injected into next attempt's memory)
         if attempt < K:
             reflexion = _reflect(
-                fm_learner, scenario.scenario, learner_goal,
+                fm_reflect or fm_learner, scenario.scenario, learner_goal,
                 _format_transcript(t_clean), float(scores_j.get("goal", 0.0))
             )
             reflexion_strings.append(reflexion)
@@ -377,6 +380,13 @@ def main():
     ap.add_argument("--model", type=str, default="openai/gpt-5-mini",
                     help="Model for learner episodes and Reflexion generation")
     ap.add_argument("--learner-model", type=str, default=None)
+    ap.add_argument("--reflection-model", type=str, default="openai/gpt-5-mini",
+                    help="Model that writes the Reflexion strings (the 'teacher'). Kept on a "
+                         "Lightning-served model since it runs through FM; decoupled from the "
+                         "episode learner so the learner can be a model FM can't serve (gpt-4.1-mini).")
+    ap.add_argument("--partner-model", type=str, default=None,
+                    help="Partner (interlocutor) model. Default: same as learner (original behavior). "
+                         "Set to hold the environment fixed while varying the learner.")
     ap.add_argument("--judge-model", type=str, default="google/gemini-3-flash-preview")
     ap.add_argument("--K", type=int, default=4, help="Max Reflexion attempts per seed")
     ap.add_argument("--max-turns", type=int, default=20)
@@ -392,6 +402,7 @@ def main():
         sys.exit(1)
 
     args.learner_model = args.learner_model or args.model
+    args.partner_model = args.partner_model or args.learner_model
 
     if args.out:
         out_dir = Path(args.out)
@@ -407,6 +418,8 @@ def main():
     print(f"Baseline     : {args.baseline}")
     print(f"Judge model  : {args.judge_model}")
     print(f"Learner model: {args.learner_model}")
+    print(f"Reflection model: {args.reflection_model}")
+    print(f"Partner model: {args.partner_model}")
     print(f"K            : {args.K}")
     print()
 
@@ -415,6 +428,12 @@ def main():
     if not using_lightning and fm_model.startswith("openai/"):
         fm_model = fm_model.split("/", 1)[1]
     fm_learner = FM(model=fm_model)
+    # Reflexion-writer ("teacher"): runs through FM, so it MUST be a model the FM endpoint serves
+    # (Lightning has gpt-5-mini but NOT gpt-4.1-mini). Decoupled from the episode learner agent.
+    refl_model = args.reflection_model
+    if not using_lightning and refl_model.startswith("openai/"):
+        refl_model = refl_model.split("/", 1)[1]
+    fm_reflect = FM(model=refl_model)
     fm_judge = FM(model=args.judge_model)  # no explicit temp — matches run_phase0_calibration.py
 
     baseline_dir = Path(args.baseline)
@@ -475,6 +494,8 @@ def main():
                 seed_idx=seed_idx, ep_data=ep_data, scenario=scenario,
                 fm_learner=fm_learner, fm_judge=fm_judge,
                 K=args.K, max_turns=args.max_turns,
+                partner_model=args.partner_model,
+                fm_reflect=fm_reflect,
                 precomputed_scores1=rescored_scores.get(seed_idx),
             ))
         except Exception as e:
