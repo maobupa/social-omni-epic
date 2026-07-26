@@ -45,3 +45,5 @@ nohup.out
 # Regenerable embedding caches (keyed on seeds-file mtime; recomputed on demand)
 *.embeddings.npy
 *.embeddings.meta.json
+# Transcript reader built output (regenerable via transcript_reader/build.py)
+transcript_reader/*.html
