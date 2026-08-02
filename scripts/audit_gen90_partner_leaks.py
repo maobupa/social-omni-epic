@@ -121,6 +121,8 @@ def main():
                     help="Comma-separated subset of: leak, adherence")
     ap.add_argument("--limit", type=int, default=0, help="Audit only the first N attempts")
     ap.add_argument("--workers", type=int, default=8)
+    ap.add_argument("--resume", action="store_true",
+                    help="Skip attempts already present in the .jsonl checkpoint")
     ap.add_argument("--out", default=None)
     args = ap.parse_args()
 
@@ -142,16 +144,38 @@ def main():
     print(f"Auditing {len(jobs)} attempts from {len(gen)} scenarios · audits={sorted(audits)} "
           f"· judge={args.judge_model}")
 
-    rows = []
-    with ThreadPoolExecutor(max_workers=args.workers) as ex:
-        futs = [ex.submit(audit_attempt, fm, s, a, audits) for s, a in jobs]
-        for i, fu in enumerate(futs, 1):
-            rows.append(fu.result())
-            if i % 25 == 0 or i == len(futs):
-                print(f"  {i}/{len(futs)}")
-
     out = Path(args.out or f"{args.run_dir}/analysis/partner_fidelity_audit.json")
     out.parent.mkdir(parents=True, exist_ok=True)
+    # Checkpoint every result to JSONL as it lands. A long audit that gets killed at 80%
+    # should not lose 80% of its LLM spend; --resume picks up from here.
+    ckpt = out.with_suffix(".jsonl")
+    done = set()
+    if args.resume and ckpt.exists():
+        for line in ckpt.read_text().splitlines():
+            try:
+                r = json.loads(line)
+                done.add((r.get("id"), r.get("attempt")))
+            except Exception:
+                pass
+        jobs = [(s, a) for s, a in jobs if (s.get("id"), a.get("attempt")) not in done]
+        print(f"  resuming: {len(done)} already audited, {len(jobs)} to go")
+    elif ckpt.exists():
+        ckpt.unlink()
+
+    rows = []
+    with ckpt.open("a", encoding="utf-8") as fh:
+        with ThreadPoolExecutor(max_workers=args.workers) as ex:
+            futs = [ex.submit(audit_attempt, fm, s, a, audits) for s, a in jobs]
+            for i, fu in enumerate(futs, 1):
+                r = fu.result()
+                rows.append(r)
+                fh.write(json.dumps(r, ensure_ascii=False) + "\n")
+                fh.flush()
+                if i % 25 == 0 or i == len(futs):
+                    print(f"  {i}/{len(futs)}", flush=True)
+
+    # Final report reads the checkpoint so resumed runs summarize the whole set.
+    rows = [json.loads(l) for l in ckpt.read_text().splitlines() if l.strip()]
     out.write_text(json.dumps(rows, indent=2, ensure_ascii=False))
 
     n = len(rows)

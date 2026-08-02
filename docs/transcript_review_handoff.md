@@ -153,24 +153,71 @@ uv run scripts/audit_gen90_partner_leaks.py --limit 100    # sample
 
 Writes `results/<run>/analysis/partner_fidelity_audit.json`. Never touches the bank.
 
-**STATUS: NOT YET RUN TO COMPLETION.** The full 300-attempt pass was killed mid-flight. The
-only numbers we have are an **8-attempt smoke test** — far too small to quote, but it did flag
-3/8 leaked, 6/8 early yield, 2 solved-with-fidelity-failure. If the early-yield rate holds
-anywhere near that, Gate A is leaking badly and key_check is load-bearing. **Re-running this is
-the top open task.** Lightning rate-limits above ~3 workers.
+### RESULTS — full run, 300/300 attempts, judge `google/gemini-3-flash-preview`
+
+| | rate |
+|---|---|
+| partner **leaked** a hidden condition/trigger | **39/300 (13.0%)** |
+| partner **early yield** (softened before any condition was met) | **100/300 (33.3%)** |
+| partner **ignored** a tripped trigger (failed to harden) | 26/300 (8.7%) |
+| `key_check_passed` stored != derived from indices | 29/300 (9.7%) |
+
+**The headline: 25 of the 34 solved scenarios (74%) were solved on an attempt where the
+partner broke character.**
+
+| category | solving attempt had a fidelity failure |
+|---|---|
+| too_easy | **10/13 (77%)** |
+| frontier_solved | **15/21 (71%)** |
+| frontier_unsolved | 0/19 |
+| beyond_frontier | 0/37 |
+
+Attempt-level rates track the same gradient, monotonically:
+
+| category | leaked | early yield |
+|---|---|---|
+| too_easy (n=13) | 46.2% | 61.5% |
+| frontier_solved (n=65) | 27.7% | 47.7% |
+| frontier_unsolved (n=76) | 7.9% | 47.4% |
+| beyond_frontier (n=146) | 6.2% | 17.1% |
+
+**Reading:** Gate A leaks, and it leaks hardest exactly where scenarios came out easy. Leak rate
+runs 7.5x higher on `too_easy` than on `beyond_frontier`. This is the predicted signature if
+partner infidelity *manufactures* solves — the `too_easy` and `frontier_solved` buckets may be
+substantially inflated, and difficulty is correspondingly **understated**.
+
+**Caveats — do not over-claim from this:**
+- Direction of causation isn't established. A scenario whose key is poorly hidden would be both
+  easier *and* more likely to be judged as leaking, so some of the gradient is confounding
+  rather than causation. Establishing causality needs an intervention (e.g. re-run the tainted
+  scenarios with a hardened partner prompt and see if they stay solved).
+- `early_yield` is the softer of the two signals — the auditor is instructed to be strict
+  ("token concessions, vague openness ... all count"), so 33% is an upper bound on anything
+  you'd call a real break. `leaked` is the firmer signal: it requires the auditor to quote the
+  offending turn, and those quotes are in the artifact and spot-checkable.
+- The `beyond_frontier` rate being near-floor (6.2% leak, 17.1% early yield) is reassuring — it
+  says the auditor isn't just flagging every transcript, and that hard scenarios stayed hard.
+
+Artifact: `results/gen90_expel/analysis/partner_fidelity_audit.json` (+ `.jsonl` checkpoint).
+Per-attempt rows carry `leak_evidence` and `early_yield_evidence` quotes — **spot-check these
+before citing the numbers.** Lightning rate-limits above ~3 workers; use `--resume` if killed.
 
 ---
 
 ## Open decisions for HJ
 
-1. **Patch 12?** Derive `key_check_passed` in code (§3). Recommend: yes for future runs, plus a
+1. **Partner-prompt hardening is now the top issue** (§5). 74% of solves came on an attempt
+   where the partner broke character. Before any headline difficulty claim, either harden the
+   partner prompt and re-run, or report the tainted fraction alongside the counts.
+2. **Spot-check the leak evidence** — 39 flagged leaks with quoted turns. Read ~10 by hand and
+   confirm the auditor isn't over-calling before the number goes in the paper.
+3. **Patch 12?** Derive `key_check_passed` in code (§3). Recommend: yes for future runs, plus a
    re-derived-label robustness check for Gen-90.
-2. **Finish the fidelity audit** (§5) — top priority; everything else is measured, this isn't.
-3. **Re-judge the 29 inconsistent attempts** to confirm the indices (not the bool) are right.
-4. **Mechanism-level equivalence** in key_check for genuine alternative paths? If done, log to a
+4. **Re-judge the 29 inconsistent attempts** to confirm the indices (not the bool) are right.
+5. **Mechanism-level equivalence** in key_check for genuine alternative paths? If done, log to a
    separate `conditions_met_equivalent` field so it can be measured and ablated — don't silently
    widen `conditions_met`.
-5. **Judge parity for the 4.1-mini run.** `results/gen90_expel` predates the `fm_judge` cross-lab
+6. **Judge parity for the 4.1-mini run.** `results/gen90_expel` predates the `fm_judge` cross-lab
    fix in `0f8a6ff`; confirm the two runs are judge-matched before comparing head-to-head.
 
 ## Using the reader
