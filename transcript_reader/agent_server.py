@@ -46,6 +46,30 @@ SYSTEM = (
 
 READER_HTML = Path(__file__).parent / "reader.html"
 
+# Manual-review state, TRACKED IN GIT so reviewers can hand off to each other.
+# reader.html is gitignored (regenerable), so notes must live in their own file.
+# Shape: {scenario_id: {"notes": str, "checked": {"HX": iso8601, "HJ": iso8601}}}
+# Written with sorted keys + indent so two reviewers editing different scenarios
+# produce line-disjoint diffs that git merges cleanly.
+NOTES_PATH = Path(__file__).parent / "review_notes.json"
+
+
+def _load_notes() -> dict:
+    if not NOTES_PATH.exists():
+        return {}
+    try:
+        return json.loads(NOTES_PATH.read_text() or "{}")
+    except Exception as e:
+        print(f"  [warn] review_notes.json unreadable ({e}) — starting empty", file=sys.stderr)
+        return {}
+
+
+def _save_notes(all_notes: dict) -> None:
+    tmp = NOTES_PATH.with_suffix(".json.tmp")
+    tmp.write_text(json.dumps(all_notes, indent=2, sort_keys=True, ensure_ascii=False) + "\n",
+                   encoding="utf-8")
+    tmp.replace(NOTES_PATH)  # atomic; never leaves a half-written notes file
+
 
 def answer_chat(messages: list, context: str) -> str:
     """messages = prior chat turns [{role:user|assistant, content}]; context = current scenario."""
@@ -82,6 +106,8 @@ class Handler(BaseHTTPRequestHandler):
                 self._json(404, {"error": "reader.html not built — run transcript_reader/build.py"})
         elif path == "/health":
             self._json(200, {"ok": True, "model": MODEL})
+        elif path == "/notes":
+            self._json(200, _load_notes())
         else:
             self._json(404, {"error": "not found"})
 
@@ -94,7 +120,37 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(payload)
 
     def do_POST(self):
-        if self.path.rstrip("/") != "/ask":
+        path = self.path.rstrip("/") or "/"
+        if path == "/notes":
+            # Merge ONE scenario's entry rather than overwriting the whole file, so a stale
+            # browser tab can't clobber notes another reviewer saved since it loaded.
+            try:
+                n = int(self.headers.get("Content-Length", "0"))
+                body = json.loads(self.rfile.read(n) or b"{}")
+                sid = body.get("id")
+                if not sid:
+                    raise ValueError("missing scenario id")
+                all_notes = _load_notes()
+                entry = all_notes.get(sid) or {"notes": "", "checked": {}}
+                if "notes" in body:
+                    entry["notes"] = body["notes"] or ""
+                if "checked" in body:  # {"HX": iso|null} — null clears that reviewer's check
+                    for who, when in (body["checked"] or {}).items():
+                        if when:
+                            entry.setdefault("checked", {})[who] = when
+                        else:
+                            entry.get("checked", {}).pop(who, None)
+                if body.get("title") and not entry.get("title"):
+                    entry["title"] = body["title"]  # human-readable anchor for git diffs
+                all_notes[sid] = entry
+                _save_notes(all_notes)
+                self._json(200, {"ok": True, "entry": entry})
+                print(f"  [notes] saved {sid}")
+            except Exception as e:
+                self._json(500, {"error": str(e)})
+                print(f"  [notes error] {e}", file=sys.stderr)
+            return
+        if path != "/ask":
             self._json(404, {"error": "not found"})
             return
         try:

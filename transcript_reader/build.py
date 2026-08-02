@@ -86,6 +86,10 @@ def extract_scenario(d: dict) -> dict:
         "learner_goal": goals[tidx] if tidx < len(goals) else "",
         "partner_goal": goals[1 - tidx] if len(goals) > 1 else "",
         "rubric": d.get("success_rubric", ""),
+        # Hidden ground truth the partner is driven by (§3.3). Never shown to the learner;
+        # shown here because `solved` conjoins key_check_passed, so an attempt with GOAL 9
+        # can still read "not solved" and the key is the only way to see why.
+        "partner_key": d.get("partner_key") or None,
         "classification": classification,
         "solved": solved,
         "category": category_of(classification, solved),
@@ -261,6 +265,43 @@ details.header{padding:0}
 .drawer h4{margin:14px 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
 .chronicle{white-space:pre-wrap;font-size:13px;line-height:1.5;background:var(--bg);padding:10px;border-radius:8px;border:1px solid var(--line)}
 .insight{font-size:12.5px;line-height:1.45;padding:6px 8px;border-bottom:1px solid var(--line)}
+/* partner key (hidden ground truth) */
+.keybox{margin-top:8px;border:1px solid #d9c9a8;background:#fdf9f0;border-radius:8px;padding:8px 11px}
+.keybox{padding:0}
+.keybox>summary{cursor:pointer;list-style:none;padding:8px 11px;user-select:none}
+.keybox>summary::-webkit-details-marker{display:none}
+.keybox>summary::before{content:"▸ ";color:#8a6d3b}
+.keybox[open]>summary::before{content:"▾ "}
+.keybox[open]>summary{padding-bottom:0}
+.keybox .kbody{padding:0 11px 9px}
+.keybox .kh{display:inline;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#8a6d3b}
+.keybox .khint{font-size:11px;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0;margin-left:8px}
+.keybox .kh .mech{background:#8a6d3b;color:#fff;padding:1px 7px;border-radius:9px;margin-left:6px;text-transform:none;letter-spacing:0}
+.keybox h5{margin:7px 0 3px;font-size:11px;text-transform:uppercase;letter-spacing:.03em;color:var(--muted)}
+.keybox ol{margin:0;padding-left:20px}
+.keybox li{font-size:12.5px;line-height:1.45;margin:2px 0}
+.keybox li.trig{color:#a03a2c}
+.keybox .kmisc{font-size:12.5px;line-height:1.45;margin:3px 0;color:#444}
+/* per-attempt key-check verdict */
+.kcheck{margin-top:6px;padding-top:6px;border-top:1px dashed var(--line);font-size:11.5px}
+.kcheck .kcline{display:flex;gap:4px;flex-wrap:wrap;align-items:center;margin-bottom:3px}
+.kctag{font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:9px;cursor:help}
+.kctag.met{background:#e4f5ec;color:#1d7a45} .kctag.unmet{background:#f0eeea;color:#8a8580}
+.kctag.tripped{background:#fdecea;color:#c0392b} .kctag.repaired{background:#fff4dd;color:#b9821f}
+.kcrat{color:var(--muted);line-height:1.4;font-style:italic}
+/* review notes + reviewer checkmarks */
+.who{display:flex;gap:3px;align-items:center;font-size:11px;color:var(--muted)}
+.who button{border:1px solid var(--line);background:#fff;border-radius:6px;padding:3px 7px;cursor:pointer;font-size:11px;font-weight:700}
+.who button.me{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ckbtn{border:1px solid var(--line);background:#fff;border-radius:6px;padding:5px 9px;cursor:pointer;font-size:12px;white-space:nowrap}
+.ckbtn.on{background:#e4f5ec;border-color:#1d7a45;color:#1d7a45;font-weight:700}
+.ckwho{font-size:10px;padding:1px 5px;border-radius:8px;background:#e4f5ec;color:#1d7a45;font-weight:700;margin-left:3px}
+.ckwho.hj{background:#eef0fb;color:#3b4a9a}
+.item .cks{display:flex;gap:2px;flex:0 0 auto}
+.notes-area{width:100%;min-height:220px;padding:9px 11px;border:1px solid var(--line);border-radius:8px;
+  font:inherit;font-size:13px;line-height:1.5;resize:vertical;box-sizing:border-box}
+.notes-status{font-size:11px;color:var(--muted);margin-top:6px;min-height:14px}
+.notes-meta{font-size:11.5px;color:var(--muted);line-height:1.5;margin:8px 0 0}
 .attctl{display:flex;gap:6px;align-items:center;margin-left:auto;font-size:12px;color:var(--muted)}
 .attctl label{cursor:pointer;user-select:none}
 .empty{margin:auto;color:var(--muted);text-align:center;padding:40px}
@@ -281,7 +322,10 @@ details.header{padding:0}
       <button class="iconbtn" id="collapse" title="Toggle list">☰</button>
       <div id="crumb" style="font-size:12px;color:var(--muted)"></div>
       <div class="attctl" id="attctl"></div>
-      <button class="iconbtn" id="insbtn" title="Global insights for this run (same for all scenarios)" style="margin-left:8px">🌐 Insights</button>
+      <div class="who" id="who" title="Who is reviewing right now — stamps your checkmarks"></div>
+      <button class="ckbtn" id="ckbtn" title="Mark this scenario reviewed by you">☐ Reviewed</button>
+      <button class="iconbtn" id="notesbtn" title="Notes for this scenario (shared, committed to git)">📝 Notes</button>
+      <button class="iconbtn" id="insbtn" title="Global insights for this run (same for all scenarios)">🌐 Insights</button>
       <button class="iconbtn" id="drawerbtn" title="Ask AI about this scenario">🤖 Ask AI</button>
     </div>
     <div id="content" style="flex:1;display:flex;flex-direction:column;overflow:hidden">
@@ -298,6 +342,20 @@ details.header{padding:0}
           <code>uv run transcript_reader/agent_server.py</code> — or just open <code>http://localhost:8765</code>.
           Enter to send · Shift+Enter = newline.</div>
         <textarea id="aiq" placeholder="Ask about the scenario you're viewing…"></textarea>
+      </div>
+    </aside>
+    <aside class="drawer" id="notesdrawer">
+      <div class="drawer-h"><b>📝 Review notes</b><span class="aistatus" id="notestatus">…</span>
+        <span style="flex:1"></span>
+        <button class="iconbtn" id="notesclose">✕</button></div>
+      <div class="drawer-body">
+        <div id="notesfor" style="font-size:12.5px;font-weight:700;margin-bottom:8px"></div>
+        <textarea class="notes-area" id="notestext" placeholder="Notes on this scenario — what you checked, what looks wrong, what to follow up.&#10;&#10;Saved to transcript_reader/review_notes.json and committed, so both reviewers see them."></textarea>
+        <div class="notes-status" id="notessaved"></div>
+        <div class="notes-meta" id="notesmeta"></div>
+        <div class="notes-meta">Autosaves ~1s after you stop typing. Needs the agent server
+          (<code>uv run transcript_reader/agent_server.py</code>); with it off, notes are kept in this
+          browser only and are NOT shared — the badge above turns red.</div>
       </div>
     </aside>
     <div class="modal" id="insmodal"><div class="modal-box">
@@ -321,8 +379,15 @@ let SEL = null;
 let CATON = new Set(ORDER);
 let HIDE = new Set();          // hidden attempt indices
 let HDR_OPEN = true;           // scenario header collapsed state (persists across scenarios)
+let KEY_OPEN = true;           // partner-key block open state (persists across scenarios)
 let CHAT = [];                 // Ask-AI conversation {role:'user'|'ai', content, pending?} — persists across scenarios
 const AGENT_URL = "http://localhost:8765/ask";
+const NOTES_URL = "http://localhost:8765/notes";
+const REVIEWERS = ["HX","HJ"];          // Huanxing / Huijun — stamped on checkmarks
+let ME = localStorage.getItem("reader_me") || "HX";
+let NOTES = {};                          // {id: {notes, checked:{HX:iso,HJ:iso}, title}}
+let NOTES_OK = false;                    // false => server down, notes are browser-local only
+let saveTimer = null;
 const esc = s => (s==null?"":String(s)).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
 
 function scenarios(){ return DATA[RUN].scenarios; }
@@ -359,7 +424,8 @@ function renderList(){
       box.insertAdjacentHTML("beforeend",
         `<div class="item ${SEL===s.id?'sel':''}" data-id="${esc(s.id)}">
            <span class="dot" style="background:${CATS[c].color}"></span>
-           <span class="ttl">${esc(s.title)}</span>
+           <span class="ttl">${esc(s.title)}${noteFor(s.id).notes?' <span title="has notes">📝</span>':''}</span>
+           <span class="cks">${checkBadges(s.id)}</span>
            <span class="meta">${s.attempts.length}× ${spark(s.goal_traj)}</span>
          </div>`);
     }
@@ -370,6 +436,31 @@ function turnHtml(t, learner){
   const isAct = /^\s*\[/.test(t.content||"") || (t.content||"").length===0;
   const cls = isAct?"act":(isL?"learner":"partner");
   return `<div class="turn ${cls}"><div class="sp">${esc(t.speaker)}<span class="tn">turn ${esc(t.turn)}</span></div>${esc(t.content)}</div>`;
+}
+// Per-attempt key-check verdict. `solved` = GOAL>=7 AND REL>=0 AND judge_goal_achieved
+// AND key_check_passed — so this row is the only way to see why a high-GOAL attempt
+// still reads "not solved". Indices in the verdict are 0-based into partner_key.
+function keyCheckHtml(a, s){
+  const kc=a.key_check; if(!kc) return "";
+  const pk=s.partner_key||{};
+  const conds=pk.movement_conditions||[], trigs=pk.hardening_triggers||[];
+  const met=new Set(kc.conditions_met||[]), tripped=new Set(kc.triggers_tripped||[]),
+        repaired=new Set(kc.triggers_repaired||[]);
+  const tags=[];
+  conds.forEach((c,i)=>tags.push(
+    `<span class="kctag ${met.has(i)?'met':'unmet'}" title="${esc(c)}">C${i+1} ${met.has(i)?'✓ met':'· unmet'}</span>`));
+  trigs.forEach((t,i)=>{
+    if(!tripped.has(i)) return;
+    const rep=repaired.has(i);
+    tags.push(`<span class="kctag ${rep?'repaired':'tripped'}" title="${esc(t)}">T${i+1} ${rep?'⚠ tripped, repaired':'⚡ tripped'}</span>`);
+  });
+  const pass=kc.key_check_passed;
+  return `<div class="kcheck">
+    <div class="kcline">
+      <span class="kctag ${pass?'met':'tripped'}">🔑 key check ${pass?'PASS':'FAIL'}</span>${tags.join("")}
+    </div>
+    ${kc.rationale?`<div class="kcrat">${esc(kc.rationale)}</div>`:''}
+  </div>`;
 }
 function attemptCol(a, idx, s){
   const g=a.scores.goal, r=a.scores.relationship;
@@ -383,10 +474,29 @@ function attemptCol(a, idx, s){
         <span class="chip">GOAL <b style="color:${scoreColor(g)}">${g??'–'}</b></span>
         <span class="chip">REL <b style="color:${scoreColor(r)}">${r??'–'}</b></span>${otherChips}
       </div>
+      ${keyCheckHtml(a,s)}
     </div>
     <div class="turns">${a.transcript.map(t=>turnHtml(t,s.learner)).join("")||'<div class="empty">no transcript</div>'}</div>
     ${a.reflexion?`<details class="reflex"><summary>🧠 Reflection used this attempt (from prior try)</summary><div class="reflex-body">${esc(a.reflexion)}</div></details>`:''}
   </div>`;
+}
+// The partner's actual setup — hidden from BOTH agents at run time, but it defines what
+// "solved" means, so it's the thing you need in front of you while reading a transcript.
+function partnerKeyHtml(s){
+  const k=s.partner_key;
+  if(!k) return `<div class="kv" style="color:var(--muted)"><i>No partner_key (unkeyed scenario — key check auto-passes).</i></div>`;
+  const conds=k.movement_conditions||[], trigs=k.hardening_triggers||[];
+  return `<details class="keybox" id="keybox" ${KEY_OPEN?'open':''}>
+    <summary><span class="kh">🔒 Partner key · hidden ground truth</span>${k.key_mechanism?`<span class="mech badge">${esc(k.key_mechanism)}</span>`:''}<span class="khint">${conds.length} conditions · ${trigs.length} triggers</span></summary>
+    <div class="kbody">
+      <h5>Movement conditions — the learner must genuinely satisfy ≥1</h5>
+      <ol>${conds.map(c=>`<li>${esc(c)}</li>`).join("")||'<li><i>none</i></li>'}</ol>
+      <h5>Hardening triggers — tripping one un-repaired fails the key check</h5>
+      <ol>${trigs.map(t=>`<li class="trig">${esc(t)}</li>`).join("")||'<li><i>none</i></li>'}</ol>
+      ${k.surface_misdirection?`<div class="kmisc"><b>Surface misdirection</b> <span style="color:var(--muted)">— what the partner SAYS the problem is; injected into the partner's own prompt as their cover story. The only key field allowed to appear publicly.</span><br>${esc(k.surface_misdirection)}</div>`:''}
+      ${k.cost_coupling?`<div class="kmisc"><b>Cost coupling</b> <span style="color:var(--muted)">— what meeting the conditions costs the LEARNER's own goal. Design-time only: never injected into any agent prompt, never checked at scoring time.</span><br>${esc(k.cost_coupling)}</div>`:''}
+    </div>
+  </details>`;
 }
 function renderScenario(){
   const s=scenarios().find(x=>x.id===SEL);
@@ -410,12 +520,15 @@ function renderScenario(){
         <div class="kv"><b>Scenario:</b> ${esc(s.scenario)}</div>
         <div class="kv"><b>${esc(s.learner)} (learner):</b> ${esc(s.learner_goal)}</div>
         <div class="kv"><b>${esc(s.partner)} (partner):</b> ${esc(s.partner_goal)}</div>
+        ${partnerKeyHtml(s)}
         ${s.rubric?`<div class="kv"><b>Success rubric:</b> ${esc(s.rubric)}</div>`:''}
       </div>
     </details>
     <div class="cols">${cols||'<div class="empty">All attempts hidden.</div>'}</div>`;
   const hdr=document.getElementById("hdr");
   if(hdr) hdr.addEventListener("toggle",()=>{HDR_OPEN=hdr.open;});
+  const kb=document.getElementById("keybox");
+  if(kb) kb.addEventListener("toggle",e=>{e.stopPropagation();KEY_OPEN=kb.open;});
 }
 function renderInsights(){   // run-level, shown in the modal — NOT tied to a scenario
   const ins=DATA[RUN].insights||[];
@@ -424,7 +537,83 @@ function renderInsights(){   // run-level, shown in the modal — NOT tied to a 
     ? ins.map((r,i)=>`<div class="insight"><b>${i+1}.</b> ${esc(r)}</div>`).join("")
     : '<div class="insight">(none)</div>';
 }
-function selectScenario(id){ SEL=id; HIDE=new Set(); renderList(); renderScenario(); }
+function selectScenario(id){ SEL=id; HIDE=new Set(); renderList(); renderScenario(); renderNotes(); }
+
+// ---- review notes + checkmarks (shared via the agent server; committed to git) ----
+// Falls back to localStorage when the server is off so you never silently lose typing,
+// but that copy is NOT shared — the status badge says so.
+function noteFor(id){ return NOTES[id] || {notes:"", checked:{}}; }
+function localCache(){ try{return JSON.parse(localStorage.getItem("reader_notes")||"{}");}catch(e){return {};} }
+async function loadNotes(){
+  const st=document.getElementById("notestatus");
+  try{
+    const r=await fetch(NOTES_URL,{cache:"no-store"});
+    if(!r.ok) throw new Error(r.status);
+    NOTES=await r.json(); NOTES_OK=true;
+    st.textContent="🟢 shared"; st.className="aistatus up";
+  }catch(e){
+    NOTES=localCache(); NOTES_OK=false;
+    st.textContent="🔴 local only"; st.className="aistatus down";
+  }
+  renderList(); renderNotes();
+}
+async function saveNote(id, patch){
+  const e=noteFor(id);
+  if(patch.notes!==undefined) e.notes=patch.notes;
+  if(patch.checked!==undefined){
+    e.checked=e.checked||{};
+    for(const [w,v] of Object.entries(patch.checked)){ if(v) e.checked[w]=v; else delete e.checked[w]; }
+  }
+  NOTES[id]=e;
+  const s=document.getElementById("notessaved");
+  const title=(scenarios().find(x=>x.id===id)||{}).title||"";
+  try{
+    const r=await fetch(NOTES_URL,{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({id, title, notes:e.notes, checked:patch.checked||{}})});
+    if(!r.ok) throw new Error(r.status);
+    NOTES_OK=true;
+    if(s) s.textContent="✓ saved to review_notes.json — commit it to share";
+    document.getElementById("notestatus").textContent="🟢 shared";
+    document.getElementById("notestatus").className="aistatus up";
+  }catch(err){
+    NOTES_OK=false;
+    const c=localCache(); c[id]=e; localStorage.setItem("reader_notes",JSON.stringify(c));
+    if(s) s.textContent="⚠️ server off — saved in this browser only, NOT shared";
+    document.getElementById("notestatus").textContent="🔴 local only";
+    document.getElementById("notestatus").className="aistatus down";
+  }
+  renderList(); renderCheckBtn();
+}
+function renderWho(){
+  document.getElementById("who").innerHTML = "as " + REVIEWERS.map(w=>
+    `<button class="${w===ME?'me':''}" data-who="${w}">${w}</button>`).join("");
+}
+function checkBadges(id){
+  const c=noteFor(id).checked||{};
+  return REVIEWERS.filter(w=>c[w]).map(w=>
+    `<span class="ckwho ${w.toLowerCase()}" title="checked by ${w} on ${esc(c[w])}">✓${w}</span>`).join("");
+}
+function renderCheckBtn(){
+  const b=document.getElementById("ckbtn"); if(!b) return;
+  if(!SEL){ b.textContent="☐ Reviewed"; b.className="ckbtn"; return; }
+  const c=noteFor(SEL).checked||{};
+  const mine=!!c[ME];
+  b.className="ckbtn"+(mine?" on":"");
+  b.textContent=(mine?"☑":"☐")+` Reviewed by ${ME}`;
+  b.title=mine?`Checked ${c[ME]} — click to un-check`:`Mark reviewed as ${ME}`;
+}
+function renderNotes(){
+  const box=document.getElementById("notestext"); if(!box) return;
+  const s=scenarios().find(x=>x.id===SEL);
+  document.getElementById("notesfor").textContent = s?s.title:"(no scenario selected)";
+  box.value = s?noteFor(s.id).notes||"":"";
+  box.disabled = !s;
+  document.getElementById("notessaved").textContent="";
+  const c=s?(noteFor(s.id).checked||{}):{};
+  document.getElementById("notesmeta").innerHTML = REVIEWERS.map(w=>
+    `${w}: ${c[w]?"✓ "+esc(new Date(c[w]).toLocaleString()):"—"}`).join(" · ");
+  renderCheckBtn();
+}
 
 // ---- AI agent (talks to the local agent_server.py) ----
 function buildContext(s){
@@ -436,8 +625,20 @@ function buildContext(s){
   lines.push(`LEARNER (${s.learner}) GOAL: ${s.learner_goal}`);
   lines.push(`PARTNER (${s.partner}) GOAL: ${s.partner_goal}`);
   if(s.rubric) lines.push(`SUCCESS RUBRIC: ${s.rubric}`);
+  lines.push(`\nSOLVED = goal>=7 AND rel>=0 AND judge_goal_achieved AND key_check_passed.`);
+  const k=s.partner_key;
+  if(k){
+    lines.push(`\n--- PARTNER KEY (hidden ground truth; neither agent sees it) ---`);
+    if(k.key_mechanism) lines.push(`mechanism: ${k.key_mechanism}`);
+    (k.movement_conditions||[]).forEach((c,i)=>lines.push(`movement_condition C${i+1}: ${c}`));
+    (k.hardening_triggers||[]).forEach((t,i)=>lines.push(`hardening_trigger T${i+1}: ${t}`));
+    if(k.surface_misdirection) lines.push(`surface_misdirection: ${k.surface_misdirection}`);
+    if(k.cost_coupling) lines.push(`cost_coupling: ${k.cost_coupling}`);
+  } else lines.push(`\n(no partner_key — key check auto-passes)`);
   s.attempts.forEach((a,i)=>{
     lines.push(`\n===== ATTEMPT ${a.attempt??i+1} — ${a.solved?'SOLVED':'NOT SOLVED'} (goal=${a.scores.goal}, rel=${a.scores.relationship}) =====`);
+    const kc=a.key_check;
+    if(kc) lines.push(`[key check ${kc.key_check_passed?'PASS':'FAIL'}] conditions_met(0-based)=${JSON.stringify(kc.conditions_met||[])} triggers_tripped=${JSON.stringify(kc.triggers_tripped||[])} triggers_repaired=${JSON.stringify(kc.triggers_repaired||[])} — ${kc.rationale||''}`);
     if(a.reflexion) lines.push(`[reflection guiding this attempt]: ${a.reflexion}`);
     a.transcript.forEach(t=>lines.push(`[t${t.turn}] ${t.speaker}: ${t.content}`));
   });
@@ -495,14 +696,32 @@ document.getElementById("aiq").addEventListener("keydown",e=>{if(e.key==="Enter"
 document.getElementById("attctl").onchange=e=>{const cb=e.target.closest("[data-hide]");if(!cb)return;
   const i=+cb.dataset.hide; cb.checked?HIDE.delete(i):HIDE.add(i); renderScenario();};
 document.addEventListener("keydown",e=>{
-  if(e.target.tagName==="INPUT")return;
+  if(e.target.tagName==="INPUT"||e.target.tagName==="TEXTAREA")return;  // don't steal arrows while typing notes
   const cur=scenarios().filter(s=>CATON.has(s.category));
   const i=cur.findIndex(s=>s.id===SEL);
   if(e.key==="ArrowDown"&&i<cur.length-1)selectScenario(cur[i+1].id);
   if(e.key==="ArrowUp"&&i>0)selectScenario(cur[i-1].id);
 });
+document.getElementById("notesbtn").onclick=()=>{const d=document.getElementById("notesdrawer");
+  document.getElementById("drawer").classList.remove("open");
+  d.classList.toggle("open"); if(d.classList.contains("open")){renderNotes();document.getElementById("notestext").focus();}};
+document.getElementById("notesclose").onclick=()=>document.getElementById("notesdrawer").classList.remove("open");
+document.getElementById("who").onclick=e=>{const b=e.target.closest("button");if(!b)return;
+  ME=b.dataset.who; localStorage.setItem("reader_me",ME); renderWho(); renderCheckBtn(); renderNotes();};
+document.getElementById("ckbtn").onclick=()=>{
+  if(!SEL) return;
+  const c=noteFor(SEL).checked||{};
+  saveNote(SEL,{checked:{[ME]: c[ME]?null:new Date().toISOString()}});
+};
+document.getElementById("notestext").addEventListener("input",e=>{
+  if(!SEL) return;
+  const v=e.target.value;
+  document.getElementById("notessaved").textContent="saving…";
+  clearTimeout(saveTimer);
+  saveTimer=setTimeout(()=>saveNote(SEL,{notes:v}),900);   // debounce: one write per pause
+});
 // init
-renderRunToggle();renderCatFilter();renderList();renderChat();pingAgent();
+renderRunToggle();renderCatFilter();renderWho();renderList();renderChat();pingAgent();loadNotes();
 </script></body></html>"""
 
 

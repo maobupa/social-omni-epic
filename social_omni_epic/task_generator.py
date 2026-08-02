@@ -107,7 +107,7 @@ _PARTNER_KEY_SCHEMA = """,
     "key_mechanism": "one of: reactance | face_needs | validation_before_change | procedural_voice | reciprocity_disclosure",
     "movement_conditions": ["condition 1 (learner-action sensor form — see rules)", "condition 2"],
     "hardening_triggers": ["trigger 1 (a LEARNER move that locks the partner)", "trigger 2"],
-    "surface_misdirection": "the partner's stated objection — what they say the problem is",
+    "surface_misdirection": "the partner's stated objection, written in SECOND PERSON addressed to the partner ('You say ...') — see rule 5",
     "cost_coupling": "what satisfying movement_conditions costs the LEARNER's own stated goal"
   },
   "mutated_slots": ["the 1-3 MOST significant slot labels you changed — not an exhaustive inventory; e.g. b, d"],
@@ -140,6 +140,24 @@ PARTNER_KEY AUTHORING RULES (these make the hidden key actually hidden and winna
 
 4. The cost_coupling must leave a survivable path (see escalate/cost rules): satisfying the
    conditions makes the outcome harder or partial, never strictly unreachable.
+
+5. SURFACE_MISDIRECTION IS SECOND-PERSON, ADDRESSED TO THE PARTNER. This field is pasted verbatim
+   into the PARTNER's own turn prompt under the heading "What you say you object to (your stated
+   reason — use this when explaining yourself)". So it must read as the partner's own voice being
+   addressed: "You" = the partner, "they/them" = the learner. Do NOT narrate the partner in third
+   person and do NOT address the learner as "you" — that hands the partner a description of someone
+   else and breaks their cover story.
+     WRONG (third-person partner, second-person learner):
+       "He keeps saying you're overreacting — he's 'helping' by staying on the laptop."
+     WRONG (named partner, learner-POV narration):
+       "Cole will say, 'This isn't about receipts,' which sounds neutral but masks that he ..."
+     RIGHT (second-person partner):
+       "You say they're overreacting — you're helping by staying on the laptop so you don't fall behind."
+   State only what the partner SAYS the problem is. Do not append an analyst's gloss about what it
+   "really" signals ("...which actually hides a need to be acknowledged") — the partner does not
+   know that about themselves, and rule 1's in-character reframe depends on them not knowing it.
+   The movement_conditions and hardening_triggers keep their existing third-person "the learner ..."
+   sensor form (rule 1) — this rule applies ONLY to surface_misdirection.
 """
 
 _MECHANISM_LIBRARY_BLOCK = f"""

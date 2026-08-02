@@ -39,6 +39,22 @@ Double-click works too — it's fully self-contained (no server, no internet).
 - **Chronicle & insights** — the `📖 Chronicle` button opens a slide-over drawer with the
   scenario's reflexion chronicle and the run's global ExpeL insight rules.
 
+## Review notes & checkmarks (shared between reviewers)
+
+Pick who you are with the `as HX | HJ` toggle in the top bar (HX = Huanxing, HJ = Huijun).
+
+- **📝 Notes** opens a side drawer with a free-text notepad for the selected scenario.
+  Autosaves ~1s after you stop typing.
+- **☐ Reviewed** stamps the scenario as checked by you, with a timestamp. Click again to
+  un-check. The sidebar shows `✓HX` / `✓HJ` badges and a 📝 marker on scenarios with notes.
+
+Everything lands in **`transcript_reader/review_notes.json`**, which **is tracked in git** —
+commit it to hand your review off. Writes merge one scenario at a time and the file is written
+with sorted keys, so two reviewers working on different scenarios produce clean, mergeable diffs.
+
+> Requires the agent server. With it off, notes fall back to browser `localStorage` and are
+> **not** shared — the badge in the drawer header turns 🔴 `local only`.
+
 ## Controls
 
 - Collapse the sidebar (`☰`) for full-width reading on a small screen.

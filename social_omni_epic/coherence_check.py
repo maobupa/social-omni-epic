@@ -60,6 +60,12 @@ Check the following things:
     - PASS if EITHER holds: (a) competing_interest genuinely bites under full accommodation, OR (b) partner_default_position falls short of the learner's outcome.
     - If neither field is present, skip this check entirely.
 
+10. SURFACE_MISDIRECTION PERSPECTIVE (only when partner_key is present): This field is pasted verbatim into the PARTNER's own turn prompt under "What you say you object to (your stated reason — use this when explaining yourself)". It must therefore be written in SECOND PERSON addressed to the partner — "you" = the partner, "they/them" = the learner.
+    - Flag if the partner is referred to in the third person or by their own first name (e.g. "He keeps saying you're overreacting", "Cole will say, '...'"). The partner would be reading a description of someone else.
+    - Flag if "you"/"your" refers to the LEARNER rather than the partner — the perspective is inverted.
+    - Flag if the field appends an analyst's gloss about what the stated objection "really" masks or signals (e.g. "...which sounds permissive but hides a need to be acknowledged"). The partner does not consciously know this about themselves; stating it there breaks the in-character reframe the hidden key depends on. The field should contain ONLY what the partner says the problem is.
+    - Do NOT apply this rule to movement_conditions or hardening_triggers — those correctly use third-person "the learner ..." sensor form.
+
 Return JSON: {"passed": true/false, "issues": ["specific issue 1", "specific issue 2", ...]}
 Issues must be specific and actionable. If passed is true, issues must be empty. If passed is false, issues must contain at least one item."""
 
@@ -98,7 +104,7 @@ def _format(scenario: SocialScenario) -> str:
         out["competing_interest"] = scenario.competing_interest
     if scenario.partner_default_position:
         out["partner_default_position"] = scenario.partner_default_position
-    # Include partner_key for checks 6-9 (hidden from the scenario prompt; visible to the validator).
+    # Include partner_key for checks 5-8 and 10 (hidden from the scenario prompt; visible to the validator).
     if scenario.partner_key is not None:
         out["partner_key"] = scenario.partner_key.model_dump()
     return json.dumps(out, indent=2)
