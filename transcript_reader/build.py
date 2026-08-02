@@ -232,18 +232,6 @@ details.header{padding:0}
 .header>summary::before{content:"▾";color:var(--muted);font-size:12px}
 .header:not([open])>summary::before{content:"▸"}
 .hbody{padding:0 16px 12px;overflow:auto;resize:vertical}
-/* AI panel (in drawer) */
-/* Ask-AI chat */
-.chat{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:9px}
-.msg{padding:8px 11px;border-radius:11px;font-size:13px;line-height:1.5;white-space:pre-wrap;max-width:92%;word-wrap:break-word}
-.msg.user{align-self:flex-end;background:var(--learner-bg);border:1px solid #cfe0f3}
-.msg.ai{align-self:flex-start;background:var(--bg);border:1px solid var(--line)}
-.msg.pending{opacity:.55;font-style:italic}
-.chat-empty{margin:auto;color:var(--muted);text-align:center;font-size:12.5px;padding:20px;line-height:1.5}
-.chat-input{border-top:1px solid var(--line);padding:8px 10px;background:var(--panel)}
-.chat-input .hint{font-size:11px;color:var(--muted);margin-bottom:6px;line-height:1.4}
-.chat-input .hint code{background:#eee;padding:1px 4px;border-radius:4px}
-.chat-input textarea{width:100%;min-height:42px;max-height:150px;padding:7px 9px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:13px;resize:vertical;box-sizing:border-box}
 .aistatus{font-size:10.5px;padding:1px 7px;border-radius:9px;margin-left:8px}
 .aistatus.up{background:#e4f5ec;color:#1d7a45} .aistatus.down{background:#fdecea;color:#c0392b}
 /* global-insights modal (run-level, NOT per scenario) */
@@ -326,24 +314,10 @@ details.header{padding:0}
       <button class="ckbtn" id="ckbtn" title="Mark this scenario reviewed by you">☐ Reviewed</button>
       <button class="iconbtn" id="notesbtn" title="Notes for this scenario (shared, committed to git)">📝 Notes</button>
       <button class="iconbtn" id="insbtn" title="Global insights for this run (same for all scenarios)">🌐 Insights</button>
-      <button class="iconbtn" id="drawerbtn" title="Ask AI about this scenario">🤖 Ask AI</button>
     </div>
     <div id="content" style="flex:1;display:flex;flex-direction:column;overflow:hidden">
       <div class="empty">Select a scenario from the list.</div>
     </div>
-    <aside class="drawer" id="drawer">
-      <div class="drawer-h"><b>🤖 Ask AI</b><span class="aistatus" id="aistatus">…</span>
-        <span style="flex:1"></span>
-        <button class="iconbtn" id="aiclear" title="Clear conversation" style="font-size:11px;padding:3px 8px">Clear</button>
-        <button class="iconbtn" id="drawerclose">✕</button></div>
-      <div class="chat" id="chat"></div>
-      <div class="chat-input">
-        <div class="hint">💬 Conversation persists as you browse scenarios. Needs the agent server running:
-          <code>uv run transcript_reader/agent_server.py</code> — or just open <code>http://localhost:8765</code>.
-          Enter to send · Shift+Enter = newline.</div>
-        <textarea id="aiq" placeholder="Ask about the scenario you're viewing…"></textarea>
-      </div>
-    </aside>
     <aside class="drawer" id="notesdrawer">
       <div class="drawer-h"><b>📝 Review notes</b><span class="aistatus" id="notestatus">…</span>
         <span style="flex:1"></span>
@@ -353,9 +327,10 @@ details.header{padding:0}
         <textarea class="notes-area" id="notestext" placeholder="Notes on this scenario — what you checked, what looks wrong, what to follow up.&#10;&#10;Saved to transcript_reader/review_notes.json and committed, so both reviewers see them."></textarea>
         <div class="notes-status" id="notessaved"></div>
         <div class="notes-meta" id="notesmeta"></div>
-        <div class="notes-meta">Autosaves ~1s after you stop typing. Needs the agent server
-          (<code>uv run transcript_reader/agent_server.py</code>); with it off, notes are kept in this
-          browser only and are NOT shared — the badge above turns red.</div>
+        <div class="notes-meta">Autosaves ~1s after you stop typing, to
+          <code>transcript_reader/review_notes.json</code>. Commit that file to share your review.
+          With the server off, notes stay in this browser only and are NOT shared — the badge
+          above turns red.</div>
       </div>
     </aside>
     <div class="modal" id="insmodal"><div class="modal-box">
@@ -380,8 +355,6 @@ let CATON = new Set(ORDER);
 let HIDE = new Set();          // hidden attempt indices
 let HDR_OPEN = true;           // scenario header collapsed state (persists across scenarios)
 let KEY_OPEN = true;           // partner-key block open state (persists across scenarios)
-let CHAT = [];                 // Ask-AI conversation {role:'user'|'ai', content, pending?} — persists across scenarios
-const AGENT_URL = "http://localhost:8765/ask";
 const NOTES_URL = "http://localhost:8765/notes";
 const REVIEWERS = ["HX","HJ"];          // Huanxing / Huijun — stamped on checkmarks
 let ME = localStorage.getItem("reader_me") || "HX";
@@ -615,68 +588,6 @@ function renderNotes(){
   renderCheckBtn();
 }
 
-// ---- AI agent (talks to the local agent_server.py) ----
-function buildContext(s){
-  const lines=[];
-  lines.push(`RUN: ${RUN}`);
-  lines.push(`TITLE: ${s.title}`);
-  lines.push(`CATEGORY: ${s.category}  (classification=${s.classification}, solved=${s.solved}, lp=${s.lp_value})`);
-  lines.push(`SCENARIO: ${s.scenario}`);
-  lines.push(`LEARNER (${s.learner}) GOAL: ${s.learner_goal}`);
-  lines.push(`PARTNER (${s.partner}) GOAL: ${s.partner_goal}`);
-  if(s.rubric) lines.push(`SUCCESS RUBRIC: ${s.rubric}`);
-  lines.push(`\nSOLVED = goal>=7 AND rel>=0 AND judge_goal_achieved AND key_check_passed.`);
-  const k=s.partner_key;
-  if(k){
-    lines.push(`\n--- PARTNER KEY (hidden ground truth; neither agent sees it) ---`);
-    if(k.key_mechanism) lines.push(`mechanism: ${k.key_mechanism}`);
-    (k.movement_conditions||[]).forEach((c,i)=>lines.push(`movement_condition C${i+1}: ${c}`));
-    (k.hardening_triggers||[]).forEach((t,i)=>lines.push(`hardening_trigger T${i+1}: ${t}`));
-    if(k.surface_misdirection) lines.push(`surface_misdirection: ${k.surface_misdirection}`);
-    if(k.cost_coupling) lines.push(`cost_coupling: ${k.cost_coupling}`);
-  } else lines.push(`\n(no partner_key — key check auto-passes)`);
-  s.attempts.forEach((a,i)=>{
-    lines.push(`\n===== ATTEMPT ${a.attempt??i+1} — ${a.solved?'SOLVED':'NOT SOLVED'} (goal=${a.scores.goal}, rel=${a.scores.relationship}) =====`);
-    const kc=a.key_check;
-    if(kc) lines.push(`[key check ${kc.key_check_passed?'PASS':'FAIL'}] conditions_met(0-based)=${JSON.stringify(kc.conditions_met||[])} triggers_tripped=${JSON.stringify(kc.triggers_tripped||[])} triggers_repaired=${JSON.stringify(kc.triggers_repaired||[])} — ${kc.rationale||''}`);
-    if(a.reflexion) lines.push(`[reflection guiding this attempt]: ${a.reflexion}`);
-    a.transcript.forEach(t=>lines.push(`[t${t.turn}] ${t.speaker}: ${t.content}`));
-  });
-  return lines.join("\n");
-}
-function renderChat(){
-  const box=document.getElementById("chat");
-  if(!CHAT.length){box.innerHTML='<div class="chat-empty">Ask about the scenario you\'re viewing.<br>The conversation stays as you move between scenarios.</div>';return;}
-  box.innerHTML=CHAT.map(m=>`<div class="msg ${m.role}${m.pending?' pending':''}">${esc(m.content)}</div>`).join("");
-  box.scrollTop=box.scrollHeight;
-}
-async function pingAgent(){
-  const st=document.getElementById("aistatus");
-  try{const r=await fetch(AGENT_URL.replace(/\/ask$/,"/health"),{cache:"no-store"});
-    if(r.ok){st.textContent="🟢 connected";st.className="aistatus up";return true;}}catch(e){}
-  st.textContent="🔴 server off";st.className="aistatus down";return false;
-}
-async function askAI(){
-  const ta=document.getElementById("aiq"); const q=ta.value.trim(); if(!q)return;
-  ta.value="";
-  const s=scenarios().find(x=>x.id===SEL);
-  CHAT.push({role:"user",content:q});
-  CHAT.push({role:"ai",content:"…thinking",pending:true});
-  renderChat();
-  const history=CHAT.filter(m=>!m.pending).map(m=>({role:m.role==="ai"?"assistant":"user",content:m.content}));
-  try{
-    const r=await fetch(AGENT_URL,{method:"POST",headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({messages:history, context:s?buildContext(s):"", scenario_id:s?s.id:null, run:RUN})});
-    const j=await r.json().catch(()=>({}));
-    CHAT.pop();
-    CHAT.push({role:"ai",content: r.ok?(j.answer||"(empty response)"):("⚠️ Server error "+r.status+": "+(j.error||""))});
-  }catch(e){
-    CHAT.pop();
-    CHAT.push({role:"ai",content:"⚠️ Can't reach the agent server. Run  uv run transcript_reader/agent_server.py  in a terminal (or open http://localhost:8765), then send again."});
-  }
-  pingAgent(); renderChat();
-}
-
 // events
 document.getElementById("runtoggle").onclick=e=>{const b=e.target.closest("button");if(!b)return;
   RUN=b.dataset.run;SEL=null;renderRunToggle();renderCatFilter();renderList();renderScenario();};
@@ -684,26 +595,31 @@ document.getElementById("catfilter").onclick=e=>{const c=e.target.closest(".catc
   const k=c.dataset.cat; CATON.has(k)?CATON.delete(k):CATON.add(k); renderCatFilter(); renderList();};
 document.getElementById("search").oninput=renderList;
 document.getElementById("list").onclick=e=>{const it=e.target.closest(".item");if(it)selectScenario(it.dataset.id);};
-document.getElementById("collapse").onclick=()=>document.getElementById("sidebar").classList.toggle("collapsed");
-document.getElementById("drawerbtn").onclick=()=>{const d=document.getElementById("drawer");
-  d.classList.toggle("open"); if(d.classList.contains("open")){pingAgent();renderChat();document.getElementById("aiq").focus();}};
-document.getElementById("drawerclose").onclick=()=>document.getElementById("drawer").classList.remove("open");
+function toggleSidebar(force){
+  const sb=document.getElementById("sidebar");
+  const hidden = force===undefined ? !sb.classList.contains("collapsed") : force;
+  sb.classList.toggle("collapsed", hidden);
+  localStorage.setItem("reader_sidebar_hidden", hidden?"1":"0");
+  const b=document.getElementById("collapse");
+  b.textContent = hidden ? "▶" : "☰";
+  b.title = (hidden?"Show":"Hide")+" scenario list  (press \\ )";
+}
+document.getElementById("collapse").onclick=()=>toggleSidebar();
 document.getElementById("insbtn").onclick=()=>{renderInsights();document.getElementById("insmodal").classList.add("open");};
 document.getElementById("insclose").onclick=()=>document.getElementById("insmodal").classList.remove("open");
 document.getElementById("insmodal").onclick=e=>{if(e.target.id==="insmodal")e.currentTarget.classList.remove("open");};
-document.getElementById("aiclear").onclick=()=>{CHAT=[];renderChat();};
-document.getElementById("aiq").addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();askAI();}});
 document.getElementById("attctl").onchange=e=>{const cb=e.target.closest("[data-hide]");if(!cb)return;
   const i=+cb.dataset.hide; cb.checked?HIDE.delete(i):HIDE.add(i); renderScenario();};
 document.addEventListener("keydown",e=>{
-  if(e.target.tagName==="INPUT"||e.target.tagName==="TEXTAREA")return;  // don't steal arrows while typing notes
+  if(e.target.tagName==="INPUT"||e.target.tagName==="TEXTAREA")return;  // don't steal keys while typing notes
+  if(e.key==="\\"){ toggleSidebar(); return; }          // full-width transcript reading
+  if(e.key==="Escape"){ document.getElementById("notesdrawer").classList.remove("open"); return; }
   const cur=scenarios().filter(s=>CATON.has(s.category));
   const i=cur.findIndex(s=>s.id===SEL);
   if(e.key==="ArrowDown"&&i<cur.length-1)selectScenario(cur[i+1].id);
   if(e.key==="ArrowUp"&&i>0)selectScenario(cur[i-1].id);
 });
 document.getElementById("notesbtn").onclick=()=>{const d=document.getElementById("notesdrawer");
-  document.getElementById("drawer").classList.remove("open");
   d.classList.toggle("open"); if(d.classList.contains("open")){renderNotes();document.getElementById("notestext").focus();}};
 document.getElementById("notesclose").onclick=()=>document.getElementById("notesdrawer").classList.remove("open");
 document.getElementById("who").onclick=e=>{const b=e.target.closest("button");if(!b)return;
@@ -721,7 +637,8 @@ document.getElementById("notestext").addEventListener("input",e=>{
   saveTimer=setTimeout(()=>saveNote(SEL,{notes:v}),900);   // debounce: one write per pause
 });
 // init
-renderRunToggle();renderCatFilter();renderWho();renderList();renderChat();pingAgent();loadNotes();
+renderRunToggle();renderCatFilter();renderWho();renderList();loadNotes();
+toggleSidebar(localStorage.getItem("reader_sidebar_hidden")==="1");
 </script></body></html>"""
 
 

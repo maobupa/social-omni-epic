@@ -29,7 +29,18 @@ MODEL = os.getenv("AGENT_MODEL", "openai/gpt-5")  # Lightning-served; e.g. opena
 
 KEY = os.getenv("LIGHTNING_AI_API_KEY") or os.getenv("OPENAI_API_KEY")
 BASE = os.getenv("LIGHTNING_AI_BASE_URL") or os.getenv("OPENAI_BASE_URL")
-_client = openai.OpenAI(api_key=KEY, base_url=BASE, timeout=180)
+# Constructed lazily: openai.OpenAI() raises when there is no key, and the notes/reader
+# half of this server must work for a reviewer with no credentials.
+_client = None
+
+
+def _get_client():
+    global _client
+    if _client is None:
+        if not KEY:
+            raise RuntimeError("no LIGHTNING_AI_API_KEY / OPENAI_API_KEY — /ask is disabled")
+        _client = openai.OpenAI(api_key=KEY, base_url=BASE, timeout=180)
+    return _client
 
 SYSTEM = (
     "You are a research assistant helping a scientist read and analyze transcripts from a "
@@ -77,7 +88,7 @@ def answer_chat(messages: list, context: str) -> str:
     if context:
         sysmsgs.append({"role": "system",
                         "content": "CURRENT SCENARIO (the user is viewing this now):\n" + context})
-    resp = _client.chat.completions.create(model=MODEL, messages=sysmsgs + messages)
+    resp = _get_client().chat.completions.create(model=MODEL, messages=sysmsgs + messages)
     return resp.choices[0].message.content
 
 
@@ -142,7 +153,12 @@ class Handler(BaseHTTPRequestHandler):
                             entry.get("checked", {}).pop(who, None)
                 if body.get("title") and not entry.get("title"):
                     entry["title"] = body["title"]  # human-readable anchor for git diffs
-                all_notes[sid] = entry
+                # Don't persist empty shells — just opening a scenario shouldn't add a row
+                # to a git-tracked file. Clearing notes + unchecking removes the entry.
+                if not entry.get("notes") and not entry.get("checked"):
+                    all_notes.pop(sid, None)
+                else:
+                    all_notes[sid] = entry
                 _save_notes(all_notes)
                 self._json(200, {"ok": True, "entry": entry})
                 print(f"  [notes] saved {sid}")
@@ -178,12 +194,15 @@ class Handler(BaseHTTPRequestHandler):
 
 
 def main():
-    if not KEY:
-        print("ERROR: no LIGHTNING_AI_API_KEY / OPENAI_API_KEY found in .env", file=sys.stderr)
-        sys.exit(1)
-    print(f"Reader + agent → open  http://localhost:{PORT}/   (AI works out of the box there)")
-    print(f"  /ask endpoint · model = {MODEL} · base = {BASE}")
-    print("  (You can also double-click reader.html for reading-only; AI needs this server.)")
+    # No API key is fine: the reader + shared review notes work without one. Only the
+    # optional /ask endpoint needs credentials, so don't block a reviewer who just wants
+    # to read transcripts and take notes.
+    print(f"Reader → open  http://localhost:{PORT}/")
+    print(f"  notes  : {NOTES_PATH}  (git-tracked — commit it to share your review)")
+    if KEY:
+        print(f"  /ask   : model = {MODEL} · base = {BASE}")
+    else:
+        print("  /ask   : disabled (no LIGHTNING_AI_API_KEY / OPENAI_API_KEY) — notes still work")
     print("  Ctrl-C to stop.")
     ThreadingHTTPServer(("127.0.0.1", PORT), Handler).serve_forever()
 

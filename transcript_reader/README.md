@@ -36,8 +36,14 @@ Double-click works too — it's fully self-contained (no server, no internet).
   is one attempt's transcript (learner vs partner color-coded), with its score chips, a
   solved/not badge, and the **reflexion** written for the next attempt. A goal-per-attempt
   sparkline summarizes the trajectory.
-- **Chronicle & insights** — the `📖 Chronicle` button opens a slide-over drawer with the
-  scenario's reflexion chronicle and the run's global ExpeL insight rules.
+- **Partner key** — a collapsible block with the hidden ground truth driving the partner:
+  mechanism, numbered movement conditions, hardening triggers, `surface_misdirection`
+  (the partner's cover story) and `cost_coupling`.
+- **Key-check verdict** — per attempt: PASS/FAIL plus `C1 ✓ met` / `T3 ⚡ tripped` chips
+  (hover for the full text) and the judge's rationale. `solved` conjoins `key_check_passed`,
+  so this is how you see why a GOAL-9 attempt still reads "not solved".
+- **Insights** — the `🌐 Insights` button shows the run's global ExpeL rules (the same set is
+  injected into every scenario — they are not scenario-specific).
 
 ## Review notes & checkmarks (shared between reviewers)
 
@@ -52,14 +58,25 @@ Everything lands in **`transcript_reader/review_notes.json`**, which **is tracke
 commit it to hand your review off. Writes merge one scenario at a time and the file is written
 with sorted keys, so two reviewers working on different scenarios produce clean, mergeable diffs.
 
-> Requires the agent server. With it off, notes fall back to browser `localStorage` and are
-> **not** shared — the badge in the drawer header turns 🔴 `local only`.
+Opening a scenario does **not** create a row — empty entries are pruned, and clearing your
+notes + un-checking removes the entry again, so the file only ever contains real review state.
+
+> Requires the server (no API key needed for notes). With it off, notes fall back to browser
+> `localStorage` and are **not** shared — the badge in the drawer header turns 🔴 `local only`.
+
+### Handing off
+
+```bash
+git add transcript_reader/review_notes.json && git commit -m "review notes" && git push
+```
+
+The other reviewer pulls, restarts their server, and reloads — notes and checkmarks appear.
 
 ## Controls
 
-- Collapse the sidebar (`☰`) for full-width reading on a small screen.
+- `\` or `☰` collapses the sidebar for full-width transcript reading (remembered across reloads).
 - Show/hide individual attempts (checkboxes in the top bar).
-- `↑`/`↓` arrows move between scenarios.
+- `↑`/`↓` arrows move between scenarios · `Esc` closes the notes drawer.
 
 ## Regenerate
 
