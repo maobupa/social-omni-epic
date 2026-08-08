@@ -238,6 +238,14 @@ details.header{padding:0}
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.35);display:none;align-items:center;justify-content:center;z-index:20}
 .modal.open{display:flex}
 .modal-box{background:var(--panel);width:min(720px,92%);max-height:84vh;border-radius:12px;display:flex;flex-direction:column;box-shadow:0 14px 44px rgba(0,0,0,.28)}
+/* Ask-AI floating window: draggable, resizable, NO backdrop so the main page stays usable */
+.aiwin{position:fixed;top:78px;right:24px;width:420px;height:520px;z-index:30;background:var(--panel);
+  border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 44px rgba(0,0,0,.28);
+  display:none;flex-direction:column;min-width:300px;min-height:240px;resize:both;overflow:hidden}
+.aiwin.open{display:flex}
+.aiwin-h{display:flex;align-items:center;gap:8px;padding:9px 12px;border-bottom:1px solid var(--line);
+  cursor:move;user-select:none;background:var(--bg);border-radius:12px 12px 0 0}
+.aiwin-h .grip{color:var(--muted);font-size:13px;letter-spacing:-1px}
 .modal-h{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}
 .modal-note{padding:10px 16px;background:var(--reflex-bg);border-bottom:1px solid var(--reflex-bd);font-size:12.5px;line-height:1.45}
 .modal-body{overflow-y:auto;padding:6px 16px 14px}
@@ -251,6 +259,22 @@ details.header{padding:0}
 .drawer-h{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line)}
 .drawer-body{overflow-y:auto;padding:14px}
 .drawer h4{margin:14px 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+/* Ask-AI chat (in drawer) */
+.chat{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:9px}
+.msg{padding:8px 11px;border-radius:11px;font-size:13px;line-height:1.5;white-space:pre-wrap;max-width:92%;word-wrap:break-word}
+.msg.user{align-self:flex-end;background:var(--learner-bg);border:1px solid #cfe0f3}
+.msg.ai{align-self:flex-start;background:var(--bg);border:1px solid var(--line)}
+.msg.pending{opacity:.55;font-style:italic}
+.chat-empty{margin:auto;color:var(--muted);text-align:center;font-size:12.5px;padding:20px;line-height:1.5}
+.chat-input{border-top:1px solid var(--line);padding:8px 10px;background:var(--panel)}
+.chat-input .hint{font-size:11px;color:var(--muted);margin-bottom:6px;line-height:1.4}
+.chat-input .hint code{background:#eee;padding:1px 4px;border-radius:4px}
+.chat-input textarea{width:100%;min-height:42px;max-height:150px;padding:7px 9px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:13px;resize:vertical;box-sizing:border-box}
+/* floating Ask-AI button (opens the drawer without crowding the header) */
+.fab{position:absolute;right:18px;bottom:18px;z-index:4;border:1px solid var(--line);background:#fff;
+  border-radius:22px;padding:9px 15px;cursor:pointer;font-size:13px;font-weight:600;
+  box-shadow:0 3px 12px rgba(0,0,0,.16);display:flex;align-items:center;gap:6px}
+.fab:hover{background:var(--bg)}
 .chronicle{white-space:pre-wrap;font-size:13px;line-height:1.5;background:var(--bg);padding:10px;border-radius:8px;border:1px solid var(--line)}
 .insight{font-size:12.5px;line-height:1.45;padding:6px 8px;border-bottom:1px solid var(--line)}
 /* partner key (hidden ground truth) */
@@ -318,6 +342,21 @@ details.header{padding:0}
     <div id="content" style="flex:1;display:flex;flex-direction:column;overflow:hidden">
       <div class="empty">Select a scenario from the list.</div>
     </div>
+    <button class="fab" id="fab" title="Ask AI about this scenario">🤖 Ask AI</button>
+    <div class="aiwin" id="aiwin">
+      <div class="aiwin-h" id="aiwin-h"><span class="grip" title="Drag to move">⠿</span>
+        <b>🤖 Ask AI</b><span class="aistatus" id="aistatus">…</span>
+        <span style="flex:1"></span>
+        <button class="iconbtn" id="aiclear" title="Clear conversation" style="font-size:11px;padding:3px 8px">Clear</button>
+        <button class="iconbtn" id="aiclose">✕</button></div>
+      <div class="chat" id="chat"></div>
+      <div class="chat-input">
+        <div class="hint">💬 History persists across scenarios, closing, and reloads (stored in this browser).
+          Needs the agent server: <code>uv run transcript_reader/agent_server.py</code>.
+          Enter to send · Shift+Enter = newline · drag the title bar to move.</div>
+        <textarea id="aiq" placeholder="Ask about the scenario you're viewing…"></textarea>
+      </div>
+    </div>
     <aside class="drawer" id="notesdrawer">
       <div class="drawer-h"><b>📝 Review notes</b><span class="aistatus" id="notestatus">…</span>
         <span style="flex:1"></span>
@@ -355,6 +394,11 @@ let CATON = new Set(ORDER);
 let HIDE = new Set();          // hidden attempt indices
 let HDR_OPEN = true;           // scenario header collapsed state (persists across scenarios)
 let KEY_OPEN = true;           // partner-key block open state (persists across scenarios)
+// Ask-AI conversation {role:'user'|'ai', content} — persists across scenarios, closing, AND reloads (localStorage)
+let CHAT = [];
+try{ CHAT = JSON.parse(localStorage.getItem("reader_chat")||"[]").filter(m=>!m.pending); }catch(e){ CHAT=[]; }
+function saveChat(){ try{ localStorage.setItem("reader_chat", JSON.stringify(CHAT.filter(m=>!m.pending))); }catch(e){} }
+const AGENT_URL = "http://localhost:8765/ask";
 const NOTES_URL = "http://localhost:8765/notes";
 const REVIEWERS = ["HX","HJ"];          // Huanxing / Huijun — stamped on checkmarks
 let ME = localStorage.getItem("reader_me") || "HX";
@@ -588,6 +632,68 @@ function renderNotes(){
   renderCheckBtn();
 }
 
+// ---- AI agent (talks to the local agent_server.py) ----
+function buildContext(s){
+  const lines=[];
+  lines.push(`RUN: ${RUN}`);
+  lines.push(`TITLE: ${s.title}`);
+  lines.push(`CATEGORY: ${s.category}  (classification=${s.classification}, solved=${s.solved}, lp=${s.lp_value})`);
+  lines.push(`SCENARIO: ${s.scenario}`);
+  lines.push(`LEARNER (${s.learner}) GOAL: ${s.learner_goal}`);
+  lines.push(`PARTNER (${s.partner}) GOAL: ${s.partner_goal}`);
+  if(s.rubric) lines.push(`SUCCESS RUBRIC: ${s.rubric}`);
+  lines.push(`\nSOLVED = goal>=7 AND rel>=0 AND judge_goal_achieved AND key_check_passed.`);
+  const k=s.partner_key;
+  if(k){
+    lines.push(`\n--- PARTNER KEY (hidden ground truth; neither agent sees it) ---`);
+    if(k.key_mechanism) lines.push(`mechanism: ${k.key_mechanism}`);
+    (k.movement_conditions||[]).forEach((c,i)=>lines.push(`movement_condition C${i+1}: ${c}`));
+    (k.hardening_triggers||[]).forEach((t,i)=>lines.push(`hardening_trigger T${i+1}: ${t}`));
+    if(k.surface_misdirection) lines.push(`surface_misdirection: ${k.surface_misdirection}`);
+    if(k.cost_coupling) lines.push(`cost_coupling: ${k.cost_coupling}`);
+  } else lines.push(`\n(no partner_key — key check auto-passes)`);
+  s.attempts.forEach((a,i)=>{
+    lines.push(`\n===== ATTEMPT ${a.attempt??i+1} — ${a.solved?'SOLVED':'NOT SOLVED'} (goal=${a.scores.goal}, rel=${a.scores.relationship}) =====`);
+    const kc=a.key_check;
+    if(kc) lines.push(`[key check ${kc.key_check_passed?'PASS':'FAIL'}] conditions_met(0-based)=${JSON.stringify(kc.conditions_met||[])} triggers_tripped=${JSON.stringify(kc.triggers_tripped||[])} triggers_repaired=${JSON.stringify(kc.triggers_repaired||[])} — ${kc.rationale||''}`);
+    if(a.reflexion) lines.push(`[reflection guiding this attempt]: ${a.reflexion}`);
+    a.transcript.forEach(t=>lines.push(`[t${t.turn}] ${t.speaker}: ${t.content}`));
+  });
+  return lines.join("\n");
+}
+function renderChat(){
+  const box=document.getElementById("chat");
+  if(!CHAT.length){box.innerHTML='<div class="chat-empty">Ask about the scenario you\'re viewing.<br>The conversation stays as you move between scenarios.</div>';return;}
+  box.innerHTML=CHAT.map(m=>`<div class="msg ${m.role}${m.pending?' pending':''}">${esc(m.content)}</div>`).join("");
+  box.scrollTop=box.scrollHeight;
+}
+async function pingAgent(){
+  const st=document.getElementById("aistatus");
+  try{const r=await fetch(AGENT_URL.replace(/\/ask$/,"/health"),{cache:"no-store"});
+    if(r.ok){st.textContent="🟢 connected";st.className="aistatus up";return true;}}catch(e){}
+  st.textContent="🔴 server off";st.className="aistatus down";return false;
+}
+async function askAI(){
+  const ta=document.getElementById("aiq"); const q=ta.value.trim(); if(!q)return;
+  ta.value="";
+  const s=scenarios().find(x=>x.id===SEL);
+  CHAT.push({role:"user",content:q});
+  CHAT.push({role:"ai",content:"…thinking",pending:true});
+  renderChat();
+  const history=CHAT.filter(m=>!m.pending).map(m=>({role:m.role==="ai"?"assistant":"user",content:m.content}));
+  try{
+    const r=await fetch(AGENT_URL,{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({messages:history, context:s?buildContext(s):"", scenario_id:s?s.id:null, run:RUN})});
+    const j=await r.json().catch(()=>({}));
+    CHAT.pop();
+    CHAT.push({role:"ai",content: r.ok?(j.answer||"(empty response)"):("⚠️ Server error "+r.status+": "+(j.error||""))});
+  }catch(e){
+    CHAT.pop();
+    CHAT.push({role:"ai",content:"⚠️ Can't reach the agent server. Run  uv run transcript_reader/agent_server.py  in a terminal (or open http://localhost:8765), then send again."});
+  }
+  saveChat(); pingAgent(); renderChat();
+}
+
 // events
 document.getElementById("runtoggle").onclick=e=>{const b=e.target.closest("button");if(!b)return;
   RUN=b.dataset.run;SEL=null;renderRunToggle();renderCatFilter();renderList();renderScenario();};
@@ -605,6 +711,32 @@ function toggleSidebar(force){
   b.title = (hidden?"Show":"Hide")+" scenario list  (press \\ )";
 }
 document.getElementById("collapse").onclick=()=>toggleSidebar();
+document.getElementById("fab").onclick=()=>{const w=document.getElementById("aiwin");
+  w.classList.add("open"); pingAgent(); renderChat(); document.getElementById("aiq").focus();};
+document.getElementById("aiclose").onclick=()=>document.getElementById("aiwin").classList.remove("open");
+// drag the floating window by its title bar (buttons excepted); position remembered across reloads
+(function(){
+  const w=document.getElementById("aiwin"), h=document.getElementById("aiwin-h");
+  try{const p=JSON.parse(localStorage.getItem("reader_aiwin_pos")||"null");
+    if(p&&p.left){w.style.left=p.left;w.style.top=p.top;w.style.right="auto";}}catch(e){}
+  let ox=0,oy=0,drag=false;
+  h.addEventListener("mousedown",e=>{
+    if(e.target.closest("button"))return;                 // let Clear/✕ work
+    const r=w.getBoundingClientRect();
+    ox=e.clientX-r.left; oy=e.clientY-r.top; drag=true;
+    w.style.right="auto"; document.body.style.userSelect="none";
+  });
+  document.addEventListener("mousemove",e=>{
+    if(!drag)return;
+    const x=Math.max(0,Math.min(e.clientX-ox, innerWidth-80));
+    const y=Math.max(0,Math.min(e.clientY-oy, innerHeight-40));
+    w.style.left=x+"px"; w.style.top=y+"px";
+  });
+  document.addEventListener("mouseup",()=>{ if(!drag)return; drag=false; document.body.style.userSelect="";
+    localStorage.setItem("reader_aiwin_pos",JSON.stringify({left:w.style.left,top:w.style.top})); });
+})();
+document.getElementById("aiclear").onclick=()=>{CHAT=[];saveChat();renderChat();};
+document.getElementById("aiq").addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();askAI();}});
 document.getElementById("insbtn").onclick=()=>{renderInsights();document.getElementById("insmodal").classList.add("open");};
 document.getElementById("insclose").onclick=()=>document.getElementById("insmodal").classList.remove("open");
 document.getElementById("insmodal").onclick=e=>{if(e.target.id==="insmodal")e.currentTarget.classList.remove("open");};
@@ -613,7 +745,8 @@ document.getElementById("attctl").onchange=e=>{const cb=e.target.closest("[data-
 document.addEventListener("keydown",e=>{
   if(e.target.tagName==="INPUT"||e.target.tagName==="TEXTAREA")return;  // don't steal keys while typing notes
   if(e.key==="\\"){ toggleSidebar(); return; }          // full-width transcript reading
-  if(e.key==="Escape"){ document.getElementById("notesdrawer").classList.remove("open"); return; }
+  if(e.key==="Escape"){ document.getElementById("notesdrawer").classList.remove("open");
+    document.getElementById("aiwin").classList.remove("open"); return; }
   const cur=scenarios().filter(s=>CATON.has(s.category));
   const i=cur.findIndex(s=>s.id===SEL);
   if(e.key==="ArrowDown"&&i<cur.length-1)selectScenario(cur[i+1].id);
@@ -637,7 +770,7 @@ document.getElementById("notestext").addEventListener("input",e=>{
   saveTimer=setTimeout(()=>saveNote(SEL,{notes:v}),900);   // debounce: one write per pause
 });
 // init
-renderRunToggle();renderCatFilter();renderWho();renderList();loadNotes();
+renderRunToggle();renderCatFilter();renderWho();renderList();renderChat();pingAgent();loadNotes();
 toggleSidebar(localStorage.getItem("reader_sidebar_hidden")==="1");
 </script></body></html>"""
 
