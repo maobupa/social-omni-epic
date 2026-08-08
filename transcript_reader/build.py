@@ -436,7 +436,12 @@ function renderList(){
     const items=scenarios().filter(s=>s.category===c &&
       (!q || (s.title+" "+s.scenario).toLowerCase().includes(q)));
     if(!items.length) continue;
-    box.insertAdjacentHTML("beforeend",`<div class="grp-h" style="color:${CATS[c].color}">${CATS[c].label} · ${items.length}</div>`);
+    // Reviewed-by-anyone floats to the top of its group: with 90 scenarios and a
+    // handful checked, the alternative is scrolling every group to find them.
+    // Stable, so unreviewed items keep their original order.
+    items.sort((a,b)=>reviewed(b.id)-reviewed(a.id));
+    const done=items.filter(s=>reviewed(s.id)).length;
+    box.insertAdjacentHTML("beforeend",`<div class="grp-h" style="color:${CATS[c].color}">${CATS[c].label} · ${items.length}${done?` · ${done} reviewed`:""}</div>`);
     for(const s of items){
       box.insertAdjacentHTML("beforeend",
         `<div class="item ${SEL===s.id?'sel':''}" data-id="${esc(s.id)}">
@@ -605,6 +610,7 @@ function renderWho(){
   document.getElementById("who").innerHTML = "as " + REVIEWERS.map(w=>
     `<button class="${w===ME?'me':''}" data-who="${w}">${w}</button>`).join("");
 }
+function reviewed(id){ return REVIEWERS.some(w=>(noteFor(id).checked||{})[w]) ? 1 : 0; }
 function checkBadges(id){
   const c=noteFor(id).checked||{};
   return REVIEWERS.filter(w=>c[w]).map(w=>
