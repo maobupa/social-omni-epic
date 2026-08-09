@@ -41,6 +41,13 @@
     "notes": "In Attempt 1: Partner (Sam Park) explicitly said \"tell me what the ginger snap means to you and how you'd honor it at family visits\"\n---> that's the movement condition made explicit!!! Maybe partner shouldn't reveal movement condition so easily? it should do surface misdirection but the movement condition should or should not be revealed?\n--> we have a check to make sure the movement conditions (answer keys) are not baked into the scenarios, but maybe we don't have anything that \n\n\nSide note:\n- maybe instead of structuring the scenario this way (learner, partner, goal, etc), we can do it more like a narrative story leading up to a point (\"and now...\") and then leave it to the agents to play them out from that point on? Add a more temporal feel to it. this current scenario sounds very very ungrounded\n\nIMPORTANT:\nthis scenario should be frontier_unsolved, not beyond frontier\nFrontier unsolved = scenario tricky + some learning progress made\nBeyond frontier = scenario tricky + no learning progress made no matter what\n^IS LEARNING PROGRESS EVEN MEANINGFUL AS A METRIC? THE LEARNER CAN LEARN SOME STUFF SPECIFIC TO THIS PARTICULAR SCENARIO BUT THAT PROBABLY DOESN'T TRANSFER\nTODO: CHECK LEARNING PROGRESS EVALUATION AND RETHINK WHAT THE SIGNAL OUGHT TO BE (STILL LP BUT SLIGHTLY DIFFERENT DEFINITION OF 'LEARNINHG PROGRESS'? OR JUST DIFFERENT SIGNAL ALTOGETHER)\n",
     "title": "Allocating a single sentimental keepsake among family with unequal attachment and moral framing | skills from the younger sibling negotiating acquisition of a sentimental memento without commodifying family memory"
   },
+  "c45502a0-df0d-4087-8bfd-d66903da2a3d_p0": {
+    "checked": {
+      "HX": "2026-08-09T22:13:56.168Z"
+    },
+    "notes": "seems ok but key leaked\n-- revising schema\nalso yet another negotiation\n",
+    "title": "Allocation of a sentimental heirloom between brothers with symbolic custodianship and emotional asymmetry | skills from the proposing sibling navigating a nontransactional trade while preserving the other's dignity"
+  },
   "d280e29c-709f-4f36-8e22-425049b734f2_p0": {
     "checked": {
       "HX": "2026-08-08T23:15:12.012Z"
