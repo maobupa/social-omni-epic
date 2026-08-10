@@ -1,10 +1,46 @@
 # Social OMNI-EPIC — Handoff & Redesign Plan
 
-**Date:** 2026-08-09 · **Authors:** HX (Huanxing), with HJ (Huijun) · **Status:** design document, nothing implemented yet
+**Date:** 2026-08-09, implementation status updated 2026-08-10 · **Authors:** HX (Huanxing), with HJ (Huijun) · **Status:** design built on branch `schema-v2-matrix` — see IMPLEMENTATION STATUS below
 
 **Who this is for:** a collaborator (and their coding agent) joining now. It assumes no prior
 knowledge of the codebase. Read §1–§5 for what we're doing and why; §6–§11 for the design;
 §12–§14 for what to actually run.
+
+**IMPLEMENTATION STATUS (2026-08-10).** This document is the *design*; it is now built. Branch
+`schema-v2-matrix`, four commits. What is verified, and by what:
+
+| commit | what | verified by |
+|---|---|---|
+| `7622735` | roster probe · `generation_cell.py` extraction · FM split · **schema v2 (`internal_state`)** | a 2-iteration `run_curriculum` run is behaviour-identical; **90/90 frozen gen-90 scenarios still parse and `summary.json` rebuilds with zero diffs** (`scripts/check_schema_compat.py`) |
+| `a6d7d5f` | **oracle-solvability gate** · per-turn partner verifier | **2/2 on ground truth**: `57ed171e` (winnable, ordinary learners scored 10/9/10/10) admitted on try 1 at goal=10.0; `e7179e01` (partner defers off-scene) rejected 3/3 |
+| `66b9154` | paired-grid driver · crossplay · matrix builder | `--dry-run` gives escalate 63 / lateral 22 / relax 5 for gpt-5-mini, exactly its bands — the calibration claim audited for zero episodes; matrix builder reproduces the predicted pattern on synthetic data |
+| `dc421d9` | end-to-end ramp (`RAMP=smoke\|pilot\|full`) | dry run walks all five stages; smoke picks one seed per band, pilot picks all 5 `beyond_frontier` across 6 sources, smoke ⊂ pilot |
+
+**Five things changed from this design once contact was made with the code.** Each is recorded in
+the relevant commit message; they are listed here because they are the parts a reader would
+otherwise trust incorrectly:
+
+1. **The partner is `gpt-5.4-mini`, not Anthropic.** Probing showed Lightning returns *"credit
+   balance is too low"* for `anthropic/claude-opus-4-8` and *"failed to find the model"* for
+   `openai/gpt-5.4`. So the three-lab story is off, and the strong models are reachable only
+   direct. Lightning now carries the judge and nothing else.
+2. **`surface_misdirection` was being fed to the partner as the truth.** For v1 records with no
+   `internal_state`, both the oracle's cheat sheet and the partner's own prompt substituted that
+   field — which is *the decoy*. Combined with the new "getting what you asked for does not count"
+   rule, the partner was holding out for its own cover story. That would have made every v1 record
+   look unwinnable, and would have poisoned any v2 scenario with a thin `internal_state`.
+3. **The grading rule stayed staged, per §4.1, and it was the right call** — but the *reason* is
+   sharper than written here: we now log a `verdicts_disagree` flag per attempt, so the
+   staged-vs-state-only question is answered by data rather than argument.
+4. **`a156533b` is probably broken, not hard.** Satisfying its conditions yields "Sam feels the
+   reciprocity is real", not "Sam hands over the keepsake" — nothing in the key bridges those. It
+   is one of the four scenarios §3.2 calls *genuinely* hard, so the 76% artifact estimate is likely
+   optimistic rather than harsh.
+5. **The existing gpt-5-mini phase-0 cannot be reused as Row 0.** It ran with
+   `partner_model = gpt-5-mini` (self-play), not the frozen partner, so its bands are not
+   comparable with another learner's — and that mismatch would sit inside the saturation claim.
+   Both learners get a fresh partner-matched phase-0; the old run is used only to choose *which*
+   seeds to include.
 
 **Relationship to other docs:** `docs/PROJECT_CANON.md` is the frozen truth about the *old*
 system (Gen-90). It is still accurate as a description of what was built and run. **This
