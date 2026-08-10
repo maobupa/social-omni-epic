@@ -1,10 +1,45 @@
 {
+  "0cbdf880-46bd-4a66-937e-9e5e9aea8e20_p0": {
+    "checked": {
+      "HJ": "2026-08-10T19:41:02.883Z"
+    },
+    "notes": "Trade\nT1 is actually tripped and it's not a good solution I think",
+    "title": "Deal-or-no-deal, post-breakup symbolic property negotiation with private-evidence asymmetry and reputational signaling | skills from the claimant navigating persuasion without exploiting private messages or appearing opportunistic"
+  },
   "17946067-8654-47c4-ad18-b625ae6a887d_p0": {
     "checked": {
       "HX": "2026-08-08T22:38:56.139Z"
     },
     "notes": "Seems like a good scenario for this one:\n- genuinely beyond_frontier (first attempt checked movement condition 1 but next few fails) and not frontier_unsolved --> so no LP made\n- actually socially complex\n- not broken since when movement C1 is met in 1st attempt, actually was useful somewhat\n\nBut I wonder if this scenario's social intelligence is too scenario-specifc --> not micro social intelligence enough and not generic enough --> or maybe is a good thing? think through\n\n\n\"the learner, during the visit, explicitly acknowledges Tom's decades of service to families and asks for his judgment about protecting parents' trust rather than immediately proposing legal tactics\"\n^ can we consider social intelligence as fundamentally about 1) UNDERSTADING WHAT THE PARTNER *TRULY* FEEL OR WANT, AND 2) WITH THAT KNOWLEDGE NAVIGATE SUCH THAT WE FIND MIDDLE GROUND BETWEEN THE 2 PARTY?\n----> do we need to code in something about the partner that is not revealed to the learner about what he or she TRULY feel/want? now has partner key which implies that VIA MOVEMENT KEYS, but didn't explicitly note down ---> maybe DO THIS:\n- EXPLICITLY STATE OUT PARTNER'S INTERNAL STATE (WHAT HE/SHE FEELS/WANT)\n- MOVEMENT CONDITIONS AS 1 PARTICULAR *PATHWAY* TO GET TO SATISFYING/ACKNOWLEDGING THAT INTERNAL STATE\n- BUT: IF THE INTERNAL STATE IS REACHED *WITHOUT* GOING THROUGH THE PATHWAY, THEN IT'S ALRIGHT AS WELL --> SHOULDN'T ONLY HAVE 1 PATH TO 'SOLVING THE PRE-DEFINED SOCIAL PUZZLE'\n^ partner key should specify and make sure that at least 1 path exists, but not dictate that that is the one and only path. --> for that we need the 'goal to reach' --> internal state of partner --> hence the abstraction of social intelligence as 1) getting to the true internal state of partner + 2) finding middle ground (USEFUL!)\n\n\n\nTODO: \n- Implement internal state of partner (what they truly think and/or feel), of which the movement conditions in partner key offers ONE POSSIBLE PATH WITHOUT DICTATING THAT IT IS THE ONLY PATH (--> need to implement eval on wehther internal state is reached without movement key in a valid way)\n- Remove cost coupling --> seems useless\n- edit the surface misdirection --> seems bit weird in phrasing and also hether it really is 'misdirection' (difference between what people say and what people actually think)\n- CHECK WHETHER IT'S FAIR TO SAY THAT SOCIAL INTELLIGENCE = 1) UNDERSTANDING WHAT THE PARTNER TRULY WANTS/FEELS, AND 2) FINDING MIDDLE GROUND (most high-level abstract)\n- Use prolific and/or listen lab to get socially nuanced/intricate experiences from real humans \n",
     "title": "Co-founder crisis bargaining with mutual distrust, legal threat, and one-shot private coordination in supervised setting | skills from the co-founder navigating joint messaging and limited disclosure under legal threat"
+  },
+  "1b6dc2ba-a9d2-4c2a-94f2-2d8c05dc9c46_p0": {
+    "checked": {
+      "HJ": "2026-08-10T19:02:17.743Z"
+    },
+    "notes": "trading\n1. the goal doesn't feel contradictory",
+    "title": "Contested heirloom division between siblings with asymmetric ritual attachment and reputational stakes | skills from the sibling negotiating stewardship of a sentimental object without seeming transactional or coercive"
+  },
+  "1c6d9d3c-4373-4c26-8cbb-17d81e494ebb_p0": {
+    "checked": {
+      "HJ": "2026-08-10T18:56:52.754Z"
+    },
+    "notes": "error with key checking\npartner key is very problematic ",
+    "title": "Division of a symbolic family heirloom between siblings with equal emotional claims; transfer process signals stewardship | skills from the sibling requesting stewardship negotiating a respectful exchange that preserves the other's agency"
+  },
+  "363edd98-86b7-499d-b508-83fc6edf60ed_p0": {
+    "checked": {
+      "HJ": "2026-08-10T20:04:33.352Z"
+    },
+    "notes": "trading\nhardening trigger?\nno fundamental conflicts",
+    "title": "Heirloom claim at a memorial: old friends, public scrutiny, steward gatekeeping, reputational risk, emotional tensions | skills from the claimant navigating public optics and steward gatekeeping to secure a discreet handoff"
+  },
+  "47854056-7be4-4708-8fe6-ca71f2cd8597_p0": {
+    "checked": {
+      "HJ": "2026-08-10T19:45:25.454Z"
+    },
+    "notes": "Trade\nI feel partner key doesn't pass",
+    "title": "Dividing a single sentimental heirloom between close relatives under reputational scrutiny and ritual-ownership claims | skills from the sibling seeking custodianship while preserving the other's ritual stewardship and dignity"
   },
   "5cfeda83-d718-4db2-899a-10661ae55191_p0": {
     "checked": {
@@ -20,12 +55,26 @@
     "notes": "lol this is just a shit scenario --> no way confession of affair itself can have a REL score any above 0\n\nAlso why did it couple confession of affair with like some neighborhood leadership role negotiation... --> tries to make socially complex just for the sake of it\n\nAlso why the hell does everything 'social intelligence' resolve back to NEGOTIATION??? Broaden social intelligence definition????\n",
     "title": "Private betrayal confession between co-leaders with information asymmetry, manipulation suspicion, and scandal risk | skills from the betrayed co-leader navigating private confrontation, resisting manipulation, and protecting the group's cohesion"
   },
+  "72ada797-a087-4b00-94f9-dd1ed1f272e3_p0": {
+    "checked": {
+      "HJ": "2026-08-10T20:42:16.162Z"
+    },
+    "notes": "Trading\nso many similar scenarios like this",
+    "title": "Deal-or-no-deal division of disputed possessions after romantic breakup with ownership ambiguity and hurt feelings | skills from the claimant negotiating a contested personal item while avoiding perceptions of opportunism"
+  },
   "748649c0-571f-4134-a01f-1fe53ddd7781_p0": {
     "checked": {
       "HJ": "2026-08-08T16:57:53.641Z"
     },
     "notes": "Law, work-colleague dynamic \nshould be a too easy one\n1. The scenario is actually quite confusing, as I don't see the immediate conflict point\n2.  I don't know why the first attempt is not solved?? The second attempt is basically solving the leave early by not leaving early and staying by talking a lot of bullshit. The score doesn't increase, but decrease ",
     "title": "Allocation of scarce professional opportunities between acquaintances with reputational stakes, time pressure, and favoritism sensitivity | skills from the practice-manager negotiating allocations while preserving transparency, credibility, and colleague autonomy"
+  },
+  "76dcf3ba-ad4c-49ac-bbfe-55e6ef57d6df_p0": {
+    "checked": {
+      "HJ": "2026-08-10T19:14:38.401Z"
+    },
+    "notes": "why is this only two attempts",
+    "title": "Time-pressured persuasion balancing urgent patient advocacy and career-threatening disclosure risk with an acquaintance | skills from the implicated staff-member protecting career while making a concise, voluntary admission under pressure"
   },
   "8693b5b3-70a9-40a0-9ac9-be07e05c672b_p0": {
     "checked": {
@@ -41,12 +90,26 @@
     "notes": "In Attempt 1: Partner (Sam Park) explicitly said \"tell me what the ginger snap means to you and how you'd honor it at family visits\"\n---> that's the movement condition made explicit!!! Maybe partner shouldn't reveal movement condition so easily? it should do surface misdirection but the movement condition should or should not be revealed?\n--> we have a check to make sure the movement conditions (answer keys) are not baked into the scenarios, but maybe we don't have anything that \n\n\nSide note:\n- maybe instead of structuring the scenario this way (learner, partner, goal, etc), we can do it more like a narrative story leading up to a point (\"and now...\") and then leave it to the agents to play them out from that point on? Add a more temporal feel to it. this current scenario sounds very very ungrounded\n\nIMPORTANT:\nthis scenario should be frontier_unsolved, not beyond frontier\nFrontier unsolved = scenario tricky + some learning progress made\nBeyond frontier = scenario tricky + no learning progress made no matter what\n^IS LEARNING PROGRESS EVEN MEANINGFUL AS A METRIC? THE LEARNER CAN LEARN SOME STUFF SPECIFIC TO THIS PARTICULAR SCENARIO BUT THAT PROBABLY DOESN'T TRANSFER\nTODO: CHECK LEARNING PROGRESS EVALUATION AND RETHINK WHAT THE SIGNAL OUGHT TO BE (STILL LP BUT SLIGHTLY DIFFERENT DEFINITION OF 'LEARNINHG PROGRESS'? OR JUST DIFFERENT SIGNAL ALTOGETHER)\n",
     "title": "Allocating a single sentimental keepsake among family with unequal attachment and moral framing | skills from the younger sibling negotiating acquisition of a sentimental memento without commodifying family memory"
   },
+  "b4330cb5-6696-4055-9d9f-f1afd36928ec_p0": {
+    "checked": {
+      "HJ": "2026-08-10T19:39:04.163Z"
+    },
+    "notes": "no fundamental conflicts",
+    "title": "Deal-or-no-deal over indivisible sentimental and instrumental belongings between friends, moving-out time pressure and reputational risk | skills from the negotiating co-tenant managing reputational cost while claiming indivisible sentimental and practical items"
+  },
   "c45502a0-df0d-4087-8bfd-d66903da2a3d_p0": {
     "checked": {
       "HX": "2026-08-09T22:13:56.168Z"
     },
     "notes": "seems ok but key leaked\n-- revising schema\nalso yet another negotiation\n",
     "title": "Allocation of a sentimental heirloom between brothers with symbolic custodianship and emotional asymmetry | skills from the proposing sibling navigating a nontransactional trade while preserving the other's dignity"
+  },
+  "cc4800c0-2cdb-485d-9849-df2e95a0f839_p0": {
+    "checked": {
+      "HJ": "2026-08-10T19:35:11.300Z"
+    },
+    "notes": "trade\nemmm i still don't know how it's different from the beyond frontier trading ones",
+    "title": "Deal-or-no-deal allocation of a single high-value communal item with reputational risk between acquaintances | skills from the claimant navigating reputational risk persuading an acquaintance to concede a high-value item"
   },
   "d280e29c-709f-4f36-8e22-425049b734f2_p0": {
     "checked": {
@@ -62,12 +125,33 @@
     "notes": "Bargaining\n1. first attempt is just repetitive bargaining\n2. second attempt is a very clever trick. i actually love it. 1900 in cash and 400 for a service, so both partner get some extra things they want. And tricked the evaluator ",
     "title": "Asymmetric bargaining over used instrument with short inspection window and reputation sensitivity | skills from the buyer balancing low offer with preserving seller's professional dignity under limited inspection"
   },
+  "e00f227d-7e0b-42c9-adbb-d563e1526d47_p0": {
+    "checked": {
+      "HJ": "2026-08-10T19:01:06.727Z"
+    },
+    "notes": "",
+    "title": "Conflicted whistleblowing negotiation among acquaintances balancing public exposure urgency versus community harm and career risk | skills from the discreet mediator persuading a whistleblower toward a private documented complaint without alienation"
+  },
   "e1fa8cbe-7339-4811-9f21-94ed43d51851_p0": {
     "checked": {
       "HX": "2026-08-08T22:48:10.553Z"
     },
     "notes": "seems bit intense (the learner is getting executed) and again, negotiation as social intellignece...\n",
     "title": "High-stakes moral persuasion under severe time pressure with life-vs-career asymmetry and leverage risk, acquainted parties | skills from the reluctant professional protecting reputation while agreeing to a concise public sworn admission"
+  },
+  "f0a31b9f-0a84-4f78-89b2-de0b1e2ed912_p0": {
+    "checked": {
+      "HJ": "2026-08-10T18:54:33.913Z"
+    },
+    "notes": "Trading\n\nstill model lacks multi-stage planning ability and want to squeeze everything in a single turn \npartner key is weird, why do we have to meet one of the movement condition?\nit feels quite random across attempts \n",
+    "title": "Dividing sentimental leftovers with status signaling and asymmetric personal attachments between siblings | skills from the sibling negotiating an emotional trade without appearing transactional"
+  },
+  "f3e86172-510f-48d3-92ec-403358abfb24_p0": {
+    "checked": {
+      "HJ": "2026-08-10T19:16:19.779Z"
+    },
+    "notes": "Trading\n1. goal is not contradictory \n2. partner seems too firm with the price when it's not specified in the goal. ",
+    "title": "Single-unit price negotiation with an artisan, volume-discount signal and premium positioning, acquaintance | skills from the single-item buyer navigating polite persuasion of an artisan while avoiding deception"
   },
   "f65d56dd-e957-4586-ae25-8e5559ede5a0_p0": {
     "checked": {
@@ -76,11 +160,25 @@
     "notes": "negotiation on who is the reader\n1. the scenario is actually too complicated that makes me wonder if I'm the right one to judge it, but it's cleverly designed. Especially the movement condition\n2. solution doesn't always come in long conversations, I see that a few times already that the final attempt is short and right to the point, which is really clever \n3. I can see why attempt 4 is better, but I'm doubting if the grader is consistent, since a lot of the failure comes from making the offer in a private setting instead of in front of others, which is impossible to show \n4. repeated reflections do help the learner becomes better every time. ",
     "title": "Contested leadership coordination over shared residents with credibility, credit, and short time bargaining as strangers | skills from the external organizer negotiating joint outreach roles without displacing an incumbent leader"
   },
+  "f74f8213-00a3-4c46-a292-a563801727f5_p0": {
+    "checked": {
+      "HJ": "2026-08-10T18:48:52.763Z"
+    },
+    "notes": "Trading\nmode fails the long term planning ability and has been circular in their stance\n\n",
+    "title": "Dividing a symbolic family heirloom with reputational stakes and emotional history between siblings | skills from the sibling seeking stewardship while preserving the other's ritual authority and dignity"
+  },
   "fa39efa2-9a2c-40fd-a73a-7104dc7b4af7_p0": {
     "checked": {
       "HJ": "2026-08-08T17:22:58.847Z"
     },
     "notes": "negotiation of move-out\n1. genuine progress made by learner\n2. the final resolution looks more like that the learner finds the right way to communicate with the partner so as to not trigger him\n3. i wonder if learner can see the partner key, since it's like learner finally finds out about the partner key\n",
     "title": "Boundary negotiation with household authority, family-tie friction, two-week time pressure; acquaintance relationship | skills from the homeowner navigating assertive, face-preserving eviction timing without fracturing family ties"
+  },
+  "fb2d58e2-ae0c-4dce-b9dc-e16d8e884b2f_p0": {
+    "checked": {
+      "HJ": "2026-08-10T18:40:13.238Z"
+    },
+    "notes": "1. wondering if it's the issue with the design of partner key, which is the trigger. \n2. the learner doesn't learn that they cna't reference the private email at all. They made an attempt to soften but still recognized as triggers",
+    "title": "Coordinating access to a shared high-value donor via cautious signaling during a brief reputation-sensitive public encounter | skills from the acquaintance managing discreet confirmation of shared donor ties while preserving steward's authority"
   }
 }
