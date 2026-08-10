@@ -55,7 +55,7 @@ import numpy as np  # noqa: E402
 from social_omni_epic.adversarial_agent import AdversarialAgent          # noqa: E402
 from social_omni_epic.coherence_check import CoherenceChecker            # noqa: E402
 from social_omni_epic.expel_export import flush_aggregates               # noqa: E402
-from social_omni_epic.fm import FM                                       # noqa: E402
+from social_omni_epic.fm import make_fm                                       # noqa: E402
 from social_omni_epic.generation_cell import (                           # noqa: E402
     Services, build_grid_context, load_phase0_annotated_seeds,
     operator_for_band, run_generation_cell, write_compute_report,
@@ -251,10 +251,10 @@ async def main_async(args) -> int:
     concurrency = min(args.concurrency, MAX_CONCURRENCY)
 
     # --- FMs: one per role, so the judge can use Lightning while the rest go direct to OpenAI ----
-    fm_gen = FM(model=args.generator_model, temperature=1.0)
-    fm_reflect = FM(model=reflection_model, temperature=1.0)
-    fm_gates = FM(model=args.gates_model, temperature=0.2)
-    fm_judge = FM(model=args.judge_model, temperature=0.3)
+    fm_gen = make_fm(model=args.generator_model, temperature=1.0)
+    fm_reflect = make_fm(model=reflection_model, temperature=1.0)
+    fm_gates = make_fm(model=args.gates_model, temperature=0.2)
+    fm_judge = make_fm(model=args.judge_model, temperature=0.3)
 
     svc = Services(
         fm_generator=fm_gen, fm_judge=fm_judge,

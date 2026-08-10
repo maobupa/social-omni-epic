@@ -60,7 +60,7 @@ from social_omni_epic.expel_baseline import (
     ExpelTrajectory,
     trajectories_to_dict,
 )
-from social_omni_epic.fm import FM
+from social_omni_epic.fm import FM, make_fm
 from social_omni_epic.lp_judge import compute_lp
 from social_omni_epic.seeds import load_sotopia_seeds
 from social_omni_epic.sotopia_bridge import scenario_to_sotopia_profiles
@@ -74,11 +74,26 @@ REL_THRESHOLD = 0.0
 # Helpers
 # ---------------------------------------------------------------------------
 
+# Success rule for phase-0 banding. MUST match whatever the downstream consumer uses, or the bands
+# are labelled by a different rule than the scenarios generated from them.
+#
+# The matrix path dropped `rel >= 0` from terminal_success (episode_runner): it fired on only 6 of 84
+# goal>=7 attempts in gen-90, and it MISLABELS goals that legitimately require relational cost. If
+# phase-0 keeps it while the grid does not, a seed scoring goal=10 / rel=-2 is banded `frontier` here
+# but would be `too_easy` there — and since the band CHOOSES THE OPERATOR, that seed then gets
+# `lateral` instead of `escalate`, i.e. calibrated in the wrong direction entirely.
+#
+# Default stays "goal_rel" so results/expel_phase0_Base90_ExpeL remains reproducible; the matrix ramp
+# passes --success-rule goal.
+SUCCESS_RULE = "goal_rel"
+
+
 def _is_terminal_success(scores: dict) -> bool:
-    return (
-        float(scores.get("goal", 0.0)) >= GOAL_THRESHOLD
-        and float(scores.get("relationship", 0.0)) >= REL_THRESHOLD
-    )
+    if float(scores.get("goal", 0.0)) < GOAL_THRESHOLD:
+        return False
+    if SUCCESS_RULE == "goal":
+        return True
+    return float(scores.get("relationship", 0.0)) >= REL_THRESHOLD
 
 
 def _safe_name(s: str) -> str:
@@ -394,7 +409,13 @@ def main():
     ap.add_argument("--seed-indices", type=str, default=None,
                     help="Comma-separated indices to run (e.g. 0,3,7)")
     ap.add_argument("--resume", action="store_true", default=False)
+    ap.add_argument("--success-rule", choices=["goal", "goal_rel"], default="goal_rel",
+                    help="Attempt-success rule for banding. Use 'goal' to match the matrix "
+                         "pipeline (episode_runner dropped rel>=0); 'goal_rel' reproduces gen-90.")
     args = ap.parse_args()
+
+    global SUCCESS_RULE
+    SUCCESS_RULE = args.success_rule
 
     if not (os.getenv("LIGHTNING_AI_API_KEY") or os.getenv("OPENAI_API_KEY")
             or os.getenv("GOOGLE_API_KEY") or os.getenv("ANTHROPIC_API_KEY")):
@@ -427,14 +448,14 @@ def main():
     fm_model = args.learner_model
     if not using_lightning and fm_model.startswith("openai/"):
         fm_model = fm_model.split("/", 1)[1]
-    fm_learner = FM(model=fm_model)
+    fm_learner = make_fm(model=fm_model)
     # Reflexion-writer ("teacher"): runs through FM, so it MUST be a model the FM endpoint serves
     # (Lightning has gpt-5-mini but NOT gpt-4.1-mini). Decoupled from the episode learner agent.
     refl_model = args.reflection_model
     if not using_lightning and refl_model.startswith("openai/"):
         refl_model = refl_model.split("/", 1)[1]
-    fm_reflect = FM(model=refl_model)
-    fm_judge = FM(model=args.judge_model)  # no explicit temp — matches run_phase0_calibration.py
+    fm_reflect = make_fm(model=refl_model)
+    fm_judge = make_fm(model=args.judge_model)  # no explicit temp — matches run_phase0_calibration.py
 
     baseline_dir = Path(args.baseline)
     baseline_eps = _load_baseline_episodes(baseline_dir)
@@ -453,7 +474,11 @@ def main():
     elif args.n_seeds:
         run_indices = set(range(args.n_seeds))
     else:
-        run_indices = set(range(len(baseline_eps)))
+        # Take whatever the baseline actually contains, rather than assuming it starts at 0 and is
+        # contiguous. range(len(baseline_eps)) is only correct for a full 90-seed baseline; against
+        # a SUBSET baseline (indices 44,56,77) it yields {0,1,2}, matches nothing, and silently
+        # processes zero seeds — which looks like a successful run with empty output.
+        run_indices = {int(e.get("seed_idx", 0)) for e in baseline_eps}
 
     records: list[dict] = []
     # Experience pool — saved for use by the ExpeL extract stage

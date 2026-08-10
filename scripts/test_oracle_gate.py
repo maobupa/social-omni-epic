@@ -35,7 +35,7 @@ except Exception:
     pass
 
 from social_omni_epic.data_models import SocialScenario          # noqa: E402
-from social_omni_epic.fm import FM                                # noqa: E402
+from social_omni_epic.fm import make_fm                                # noqa: E402
 from social_omni_epic.oracle_gate import probe_solvability        # noqa: E402
 
 # The pair has to be chosen on DEMONSTRATED winnability, not on a close-read judgement of
@@ -67,8 +67,8 @@ async def main_async(args) -> int:
     bank = Path(args.bank)
     # Generation-side FM is unused by the probe beyond being passed through; the judge is what
     # scores. Kept cross-lab (judge on a different provider than the oracle learner).
-    fm = FM(model=args.oracle_model)
-    fm_judge = FM(model=args.judge_model, temperature=0.3)
+    fm = make_fm(model=args.oracle_model)
+    fm_judge = make_fm(model=args.judge_model, temperature=0.3)
 
     rows = []
     for prefix, expect_pass, why in CASES:

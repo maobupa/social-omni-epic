@@ -141,3 +141,31 @@ class FM:
             )
             return [d.embedding for d in r.data]
         return self._retry(_call)
+
+
+def route_for(model: str) -> dict:
+    """Credentials for a model id, chosen by provider prefix.
+
+    The matrix roster deliberately splits routes: the cross-lab judge is the only non-OpenAI model
+    and Lightning is the only way to reach it, while every OpenAI role goes direct (which is also
+    what keeps Lightning spend down to judge-only).
+
+    Without this, FM's default env precedence sends EVERY instance to Lightning, and Lightning does
+    not serve the OpenAI models — `gpt-4o-mini` comes back as "failed to find the model". That
+    failure is easy to misread, because learner and partner *turns* bypass FM entirely (sotopia →
+    LiteLLM → api.openai.com), so episodes succeed while the reflection/judge FMs fail.
+
+    Returns kwargs for FM(**route_for(m)); empty dict means "use the env default".
+    """
+    non_openai = ("google/", "anthropic/", "gemini", "claude")
+    if any(model.startswith(p) or p in model for p in non_openai):
+        key = os.getenv("LIGHTNING_AI_API_KEY")
+        base = os.getenv("LIGHTNING_AI_BASE_URL")
+        return {"api_key": key, "base_url": base} if key and base else {}
+    key = os.getenv("OPENAI_API_KEY")
+    return {"api_key": key, "base_url": None} if key else {}
+
+
+def make_fm(model: str, temperature: float = 1.0, **kw) -> "FM":
+    """FM with the route implied by the model id. Prefer this over FM(...) in new code."""
+    return FM(model=model, temperature=temperature, **route_for(model), **kw)

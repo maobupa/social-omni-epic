@@ -44,7 +44,7 @@ from social_omni_epic.adversarial_agent import AdversarialAgent               # 
 from social_omni_epic.coherence_check import CoherenceChecker                 # noqa: E402
 from social_omni_epic.curriculum import run_episode_two_loop                  # noqa: E402
 from social_omni_epic.data_models import SocialScenario                       # noqa: E402
-from social_omni_epic.fm import FM                                            # noqa: E402
+from social_omni_epic.fm import make_fm                                            # noqa: E402
 from social_omni_epic.meta_reflection import MetaReflectionModule             # noqa: E402
 from social_omni_epic.reflection_module import ReflectionModule               # noqa: E402
 from social_omni_epic.scenario_title import ScenarioTitleGenerator            # noqa: E402
@@ -140,9 +140,9 @@ async def run_cell(set_dir: Path, set_tag: str, args) -> dict:
 
     # Frozen everywhere except the learner. fm_reflection is pinned to the learner for the same
     # reason as at generation time: otherwise recoverability measures the teacher.
-    fm_learner = FM(model=args.learner_model, temperature=1.0)
-    fm_judge = FM(model=args.judge_model, temperature=0.3)
-    fm_aux = FM(model=args.aux_model, temperature=0.2)
+    fm_learner = make_fm(model=args.learner_model, temperature=1.0)
+    fm_judge = make_fm(model=args.judge_model, temperature=0.3)
+    fm_aux = make_fm(model=args.aux_model, temperature=0.2)
 
     svc_bits = dict(
         task_gen=TaskGenerator(fm_aux, num_examples=1, num_failed_examples=0, max_retries=1),

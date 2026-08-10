@@ -33,7 +33,7 @@ try:
 except Exception:
     pass
 
-from social_omni_epic.fm import FM
+from social_omni_epic.fm import make_fm
 from social_omni_epic.seeds import load_sotopia_seeds
 
 SOTOPIA_HARD_PKS = {
@@ -254,10 +254,10 @@ def main() -> None:
     from social_omni_epic.episode_runner import run_single_episode
     from social_omni_epic.sotopia_bridge import scenario_to_sotopia_profiles
 
-    fm = FM(model=args.model)
+    fm = make_fm(model=args.model)
     # Cross-lab judge: scoring must NOT go through the learner model (it may not exist on the
     # FM/Lightning endpoint, e.g. gpt-4.1-mini). fm_judge overrides the self-score fallback.
-    fm_judge = FM(model=args.judge_model)
+    fm_judge = make_fm(model=args.judge_model)
     if str(args.judge_model).split("/")[0] == str(learner_model).split("/")[0]:
         print(f"WARNING: judge provider matches learner ({learner_model}) — not cross-lab.",
               file=sys.stderr)
@@ -283,16 +283,24 @@ def main() -> None:
         both_perspectives=False,
     )
 
+    # Keep the ORIGINAL seed index alongside each scenario. `seed_idx` is how downstream tools
+    # (run_expel_chronicle._load_baseline_episodes) pair a baseline episode with a seed, so
+    # re-indexing a filtered subset from 0 silently breaks that join: --seed-indices 44,56,77 wrote
+    # seed_idx 0,1,2, and the chronicle stage then matched nothing and processed 0 seeds.
+    # For an UNFILTERED run this is identical to the old behaviour (i == original index), so the
+    # frozen results/baseline_eval_20260604_222545 stays reproducible.
     if args.seed_indices:
         indices = {int(i.strip()) for i in args.seed_indices.split(",")}
-        seeds = [s for i, s in enumerate(seeds) if i in indices]
-        print(f"Running {len(seeds)} seeds (filtered by --seed-indices)")
+        indexed = [(i, s) for i, s in enumerate(seeds) if i in indices]
+        print(f"Running {len(indexed)} seeds (filtered by --seed-indices; original indices kept)")
     else:
-        print(f"Running {len(seeds)} seeds")
+        indexed = list(enumerate(seeds))
+        print(f"Running {len(indexed)} seeds")
+    seeds = [s for _, s in indexed]
 
     results: list[dict] = []
 
-    for i, scenario in enumerate(seeds):
+    for _n, (i, scenario) in enumerate(indexed):
         env_profile, agent_profiles = scenario_to_sotopia_profiles(scenario)
         learner_goal = env_profile.agent_goals[0] if env_profile.agent_goals else ""
         source = scenario.interaction_type or "unknown"
@@ -337,7 +345,7 @@ def main() -> None:
         hard_tag = " [HARD]" if is_hard else ""
         status = f"goal={goal:.1f} rel={rel:.1f}" if not error else f"ERROR"
         print(
-            f"[{i+1:3d}/{len(seeds)}]{hard_tag:<7} {source:<22} | "
+            f"[{_n+1:3d}/{len(indexed)}]{hard_tag:<7} {source:<22} | "
             f"{status} | running_avg_goal={running_mean:.2f}"
         )
 

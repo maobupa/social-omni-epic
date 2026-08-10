@@ -86,6 +86,7 @@ for entry in "${LEARNERS[@]}"; do
       --seed-indices "$SEED_INDICES" \
       --learner-model "$model" --reflection-model "$model" \
       --partner-model "$PARTNER" --judge-model "$JUDGE" \
+      --success-rule goal \
       --out "$p0" --resume \
       2>&1 | tee "$LOGS/1b_phase0_${tag}_${RAMP}.log" | tail -5
 done
