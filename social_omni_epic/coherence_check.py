@@ -1,7 +1,6 @@
 import json
 import re as _re
 from dataclasses import dataclass, field
-from typing import Optional
 
 from rapidfuzz import fuzz as _fuzz
 
@@ -41,30 +40,27 @@ Check the following things:
 4. SCENARIO-INTERACTION MATCH: Does the scenario description actually describe the stated interaction_type?
    - Flag only if completely mismatched.
 
-5. KEY EXISTENCE & CONSISTENCY (only when partner_key is present): Are movement_conditions concrete, behaviorally checkable, and consistent with the partner's profile and goal? Is each condition a genuine instantiation of the declared key_mechanism? Flag if movement_conditions are vague feelings rather than observable behaviors.
+5. INTERNAL_STATE IS A STATE, NOT A REQUIREMENT (only when partner_key is present): internal_state must describe what is TRUE of the partner right now — what they feel, believe, fear, or half-suspect. Flag if it instead prescribes what the learner should do ("she needs someone to acknowledge...", "he wants to be told..."). That phrasing turns the field into an answer key and destroys the point, which is that many different behaviours could reach the same person. Also flag if it is so thin that no behavioural implication can be inferred from it.
 
-6. KEY-NARRATIVE SEPARATION (only when partner_key is present): Do any movement_conditions appear verbatim or near-verbatim in the shared scenario description, relationship_background, or either agent's goal text?
-   - movement_conditions reveal the path to success — flag if they appear in ANY public text.
-   - hardening_triggers: flag ONLY if the partner's reaction/consequence is revealed in the scenario description, relationship_background, or the partner's goal text. Do NOT flag overlap with the learner's shortcut, constraint, or secret — by design, the shortcut must mechanistically trip a hardening_trigger (check #8), so near-verbatim overlap between the learner's shortcut and a hardening_trigger is CORRECT and REQUIRED, not a leak.
-   - surface_misdirection MAY appear publicly — it is the partner's stated public stance.
-   - PARTNER_GOAL LEAK (judge semantically, not lexically): Does the partner_goal state the CONDITIONS under which the partner would move, concede, or accept? The partner_goal should state the partner's stance and what they care about, NOT the specific terms that unlock them. If the partner_goal names the movement_conditions (e.g. "you will only accept a trial with your direct oversight and public credit" when those are the movement_conditions), flag it — that hands the learner the hidden key, collapsing the partial-observability the scenario depends on. The partner's public STANCE may appear; the conditions that actually move them may not.
+6. THE KEY MUST BE DERIVABLE FROM THE STATE (only when partner_key is present): does each movement_condition plausibly PRODUCE the internal_state being addressed, and does each hardening_trigger plausibly DENY or worsen it? Flag any movement_condition that is unrelated to the internal_state — the conditions exist to prove at least one route to that state exists, so an unrelated condition witnesses nothing. Are movement_conditions concrete and behaviourally checkable (things the LEARNER does), rather than vague feelings or partner demands?
 
-7. COST COUPLING (only when partner_key is present): Does satisfying the movement_conditions genuinely cost the learner something stated in their own goal? Flag if the cost_coupling is empty, circular, or makes the learner's accommodation essentially free.
-   - SURVIVABILITY: also flag the OPPOSITE failure — if satisfying the movement_conditions makes the learner's stated outcome STRICTLY UNREACHABLE (not merely harder or partial), the scenario is cost-stuck, not hard. Example: the learner's goal requires "at least 60% volume shift" but the only conditions that move the partner cap any change at a tiny pilot — there is then no path to any meaningful version of the outcome. A skilled actor who satisfies the conditions must still be able to reach a meaningful (even if partial) version of their goal.
+7. KEY-NARRATIVE SEPARATION (only when partner_key is present): does any hidden key content appear in text the learner can see?
+   - internal_state is the graded object and must NEVER appear, in any paraphrase, in the scenario description, relationship_background, or either agent's goal text. This is the strictest rule here.
+   - movement_conditions reveal a route to success — flag if they appear in ANY public text.
+   - hardening_triggers: flag ONLY if the partner's reaction/consequence is revealed in the scenario description, relationship_background, or the partner's goal text. Do NOT flag overlap with the learner's shortcut, constraint, or secret — by design the shortcut must mechanistically trip a hardening_trigger (check #8), so near-verbatim overlap there is CORRECT and REQUIRED, not a leak.
+   - PARTNER_GOAL LEAK (judge semantically, not lexically): partner_goal should state the partner's POSITION and stake — what they are materially after and would admit to. It must NOT state the conditions under which they would move, and must not describe the internal_state. If partner_goal reads like an explanation of what would satisfy them, flag it.
 
 8. SHORTCUT-TRIGGER COUPLING (only when partner_key is present): Does the learner's tempting shortcut plausibly trip at least one hardening_trigger? The shortcut should fail mechanistically (the partner hardens), not only by judge verdict. Flag if the shortcut and the hardening_triggers are unrelated.
 
-9. COOPERATIVE ALIGNMENT: Can the learner win by simply accepting whatever the partner naturally offers, or by freely accommodating without sacrificing anything real?
-    - If `competing_interest` is present: flag if full accommodation does NOT demonstrably forfeit this competing interest.
-    - If `partner_default_position` is present: flag if the partner's default already satisfies the learner's outcome.
-    - PASS if EITHER holds: (a) competing_interest genuinely bites under full accommodation, OR (b) partner_default_position falls short of the learner's outcome.
-    - If neither field is present, skip this check entirely.
+9. STATED-VS-ACTUAL GAP (only when partner_key is present): if the partner got exactly what their partner_goal asks for, would the internal_state be addressed?
+   - If YES → FLAG IT. There is no hidden depth: the learner can win by simply handing over the stated thing, so the key is decoration. This is the single most common way these scenarios come out trivial.
+   - If NO → pass. They can get precisely what they said they wanted and still be unsatisfied, and that gap is where the difficulty lives.
+   NOTE: the gap does NOT require the two parties to want opposing things. Passing example with no opposition at all: partner_goal "get this off my chest without being managed"; internal_state "she is furious rather than sad, everyone has treated it as grief, and it makes her feel unseen." Letting her talk uninterrupted would not address that if she is still being handled. Do not flag a scenario merely for lacking a bargaining conflict.
+   Passing example with opposition: partner_goal "remain the recognised local contact for the clean-up crews"; internal_state "he has run these crews for eleven years and no one ever said it mattered; he reads every new organiser as an eventual replacement." Keeping control of outreach would not make him feel his work counted.
 
-10. SURFACE_MISDIRECTION PERSPECTIVE (only when partner_key is present): This field is pasted verbatim into the PARTNER's own turn prompt under "What you say you object to (your stated reason — use this when explaining yourself)". It must therefore be written in SECOND PERSON addressed to the partner — "you" = the partner, "they/them" = the learner.
-    - Flag if the partner is referred to in the third person or by their own first name (e.g. "He keeps saying you're overreacting", "Cole will say, '...'"). The partner would be reading a description of someone else.
-    - Flag if "you"/"your" refers to the LEARNER rather than the partner — the perspective is inverted.
-    - Flag if the field appends an analyst's gloss about what the stated objection "really" masks or signals (e.g. "...which sounds permissive but hides a need to be acknowledged"). The partner does not consciously know this about themselves; stating it there breaks the in-character reframe the hidden key depends on. The field should contain ONLY what the partner says the problem is.
-    - Do NOT apply this rule to movement_conditions or hardening_triggers — those correctly use third-person "the learner ..." sensor form.
+10. GOAL IS CONFIRMABLE: could a reader of the finished transcript confirm or deny that the learner's `outcome` actually happened? It need not be a concession, an agreement, or a number — "the partner voluntarily says why they have been avoiding you" is perfectly good. Flag only outcomes that are unfalsifiable from a transcript ("make them feel better about themselves" with no observable marker).
+
+11. WINNABLE IN CHANNEL: is the outcome reachable inside this two-party spoken conversation? Flag if it requires a decision that belongs to an absent third party (an executor, a committee, an administrator who must post something), or a numeric target below a floor the partner's own position makes immovable. These are the two ways a scenario becomes unwinnable-by-construction rather than hard.
 
 Return JSON: {"passed": true/false, "issues": ["specific issue 1", "specific issue 2", ...]}
 Issues must be specific and actionable. If passed is true, issues must be empty. If passed is false, issues must contain at least one item."""
@@ -96,8 +92,7 @@ def _format(scenario: SocialScenario) -> str:
         # sees structured_goals[1]=null + a partner_key and wrongly reports "partner_goal missing".
         if len(scenario.agent_goals) > 1 and scenario.agent_goals[1]:
             out["partner_goal"] = scenario.agent_goals[1]
-        if scenario.success_rubric:
-            out["success_rubric"] = scenario.success_rubric.model_dump()
+
     else:
         out["agent_goals"] = scenario.agent_goals
     if scenario.competing_interest:
@@ -145,6 +140,16 @@ def _fuzzy_key_leak_check(scenario: SocialScenario) -> list[str]:
     ]).lower()
 
     issues = []
+    # internal_state is the graded object in schema v2. If it appears in public text the learner is
+    # simply told the answer, so this is checked first and against the widest scope.
+    _state = (scenario.partner_key.internal_state or "").strip()
+    if _state:
+        ratio = _fuzz.partial_ratio(_state.lower(), full_public)
+        if ratio > 80:
+            issues.append(
+                f"KEY-NARRATIVE SEPARATION: internal_state appears near-verbatim in public text "
+                f"(ratio={ratio}): {_state[:80]}"
+            )
     for cond in scenario.partner_key.movement_conditions:
         ratio = _fuzz.partial_ratio(cond.lower(), full_public)
         if ratio > 85:

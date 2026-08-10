@@ -9,7 +9,6 @@ Phase 2 schema invariants (enforced here):
 SOTOPIA seeds and Phase-1 archive records bypass this validator (they load via checkpoint).
 """
 import uuid as _uuid
-from typing import Optional
 
 from rapidfuzz import fuzz as _fuzz
 
@@ -33,9 +32,17 @@ REQUIRED_TOP = [
 ]
 REQUIRED_AGENT = ["first_name", "occupation", "big_five"]
 REQUIRED_GOAL = ["outcome", "constraint", "shortcut"]
-REQUIRED_KEY = ["key_mechanism", "movement_conditions", "hardening_triggers",
-                "surface_misdirection", "cost_coupling"]
-VALID_MECHANISMS = set(MECHANISM_LIBRARY.keys())  # derived; add new tags to data_models only
+# Schema v2. `internal_state` is now required and is the graded object; `surface_misdirection`
+# and `cost_coupling` are retired (still Optional on the model so v1 records keep parsing, but
+# no longer generated or validated).
+REQUIRED_KEY = ["key_mechanism", "movement_conditions", "hardening_triggers", "internal_state"]
+
+# MECHANISM_LIBRARY is now a set of EXAMPLES shown to the generator, not a closed enum.
+# Enforcing it as an enum was a diversity bottleneck — gen-90 came out face_needs 35/90 vs
+# reactance 3/90 — and under v2 the psychology lives in `internal_state` anyway, so forcing it
+# into five buckets constrains the axis we are trying to widen. Same "require a property, don't
+# enumerate categories" rule as the goal grammar. Kept importable for analysis/back-compat.
+VALID_MECHANISMS = set(MECHANISM_LIBRARY.keys())
 
 
 def render_agent_goal(sg: StructuredGoal) -> str:
@@ -104,12 +111,28 @@ def validate_scenario(d: dict) -> tuple[bool, str]:
     for kf in REQUIRED_KEY:
         if kf not in key:
             return False, f"partner_key missing field: {kf}"
-    if key.get("key_mechanism") not in VALID_MECHANISMS:
-        return False, f"partner_key.key_mechanism must be one of {sorted(VALID_MECHANISMS)}"
+    # key_mechanism is a free-text psychology label (see VALID_MECHANISMS above) — presence only.
+    if not isinstance(key.get("key_mechanism"), str) or not key["key_mechanism"].strip():
+        return False, "partner_key.key_mechanism must be a non-empty string"
     if not isinstance(key.get("movement_conditions"), list) or not key["movement_conditions"]:
         return False, "partner_key.movement_conditions must be a non-empty list"
     if not isinstance(key.get("hardening_triggers"), list) or not key["hardening_triggers"]:
         return False, "partner_key.hardening_triggers must be a non-empty list"
+    # internal_state must be a STATE, not a requirement. A field phrased as "X needs the learner
+    # to ..." has smuggled the answer key back in one level up; the generator prompt says so and
+    # this is the deterministic backstop. Checked here rather than only in the LLM coherence gate
+    # because it is free and the failure is purely lexical.
+    st = key.get("internal_state")
+    if not isinstance(st, str) or len(st.strip()) < 20:
+        return False, "partner_key.internal_state must be a descriptive string (>= 20 chars)"
+    _low = st.lower()
+    for phrase in ("needs the learner", "needs someone to", "wants the learner",
+                   "would be satisfied by", "the learner must", "the learner should"):
+        if phrase in _low:
+            return False, (
+                f"partner_key.internal_state is resolution-shaped (contains '{phrase}') — it must "
+                "describe what is TRUE of the partner, not what the learner should do"
+            )
 
     # --- scenario text ---
     if len(d["scenario"]) < 50:
@@ -157,121 +180,11 @@ def surface_novelty_check(child: SocialScenario, anchor: SocialScenario) -> list
     return violations
 
 
-# Slot label → partner_key field name(s). Only key slots (b/c/d) are mutation-fidelity
-# checked; surface slots (a/e/f/g) are not in partner_key and are covered by the
-# preservation side of the check instead.
-_KEY_SLOT_FIELDS: dict[str, list[str]] = {
-    "b": ["surface_misdirection"],
-    "c": ["hardening_triggers"],   # list — joined before comparison
-    "d": ["cost_coupling"],
-}
-
-
-def key_delta_check(
-    child: SocialScenario,
-    anchor: SocialScenario,
-    threshold: int = 90,
-    preservation_floor: int = 60,
-) -> list[str]:
-    """DEPRECATED (Patch 10) — no longer called by the production runner.
-
-    Superseded by universal embedding diversity gating + surface_novelty_check, which removed
-    the operator-conditional gate this check belonged to. Retained for documentation of the old
-    escalate/relax mutation-fidelity design and possible post-hoc analysis. See
-    docs/pre_run_final_Patch.md (Fault 2) for why the gate it served was removed.
-
-    Two-sided mutation-fidelity check for escalate/relax children.
-
-    Skip entirely when anchor has no partner_key (seed parents — any key is novel).
-
-    Delta side: at least one mutated key-slot must differ from the parent
-    (rapidfuzz ratio ≤ threshold). Catches LLM returning a lazy near-copy that
-    ignored the mutation instruction.
-
-    Preservation side: character first names must match the parent AND scenario text
-    must clear a loose similarity floor (partial_ratio ≥ preservation_floor).
-    Catches an "escalate" that actually swapped characters/premise — which is really
-    an unlabeled lateral and must go through the embedding gate we just exempted
-    escalate/relax from.
-
-    Special violations:
-    - mutated_slots declares no key slots at all (e.g. only ["a"]) → reject; the
-      operator claims to have mutated difficulty knobs but didn't name any.
-    - anchor has partner_key but child does not → schema error, reject.
-
-    Returns a list of violation strings; empty = pass.
-    """
-    if anchor.partner_key is None:
-        return []
-
-    if child.partner_key is None:
-        return ["KEY-DELTA: child has no partner_key but anchor does"]
-
-    # Normalise mutated_slots: strip whitespace, lower-case
-    mutated = [s.strip().lower() for s in (child.mutated_slots or [])]
-    key_slots_declared = [s for s in mutated if s in _KEY_SLOT_FIELDS]
-
-    if not key_slots_declared:
-        # escalate/relax with zero declared key slots is a malformed mutation
-        return [
-            "KEY-DELTA: mutated_slots declares no partner_key slots (b/c/d); "
-            "escalate/relax must mutate at least one difficulty knob"
-        ]
-
-    violations: list[str] = []
-
-    # --- Delta side: require at least one declared slot to have actually changed ---
-    all_similar = True
-    for slot in key_slots_declared:
-        fields = _KEY_SLOT_FIELDS[slot]
-        for field in fields:
-            child_val = getattr(child.partner_key, field, None)
-            anchor_val = getattr(anchor.partner_key, field, None)
-            # Lists (hardening_triggers) → join for comparison
-            if isinstance(child_val, list):
-                child_val = " | ".join(str(x) for x in child_val)
-            if isinstance(anchor_val, list):
-                anchor_val = " | ".join(str(x) for x in anchor_val)
-            child_val = str(child_val or "").strip()
-            anchor_val = str(anchor_val or "").strip()
-            ratio = _fuzz.ratio(child_val.lower(), anchor_val.lower())
-            if ratio <= threshold:
-                all_similar = False
-                break
-        if not all_similar:
-            break
-
-    if all_similar:
-        violations.append(
-            f"KEY-DELTA: all declared key slots {key_slots_declared} are near-identical "
-            f"to parent (fuzz ratio > {threshold}); mutation instruction was ignored"
-        )
-
-    # --- Preservation side: surface must stay close to the parent ---
-    # Check 1: character first names
-    child_names = {p.first_name.strip().lower() for p in (child.agent_profiles or []) if p.first_name}
-    anchor_names = {p.first_name.strip().lower() for p in (anchor.agent_profiles or []) if p.first_name}
-    if anchor_names and not child_names.issuperset(anchor_names):
-        missing = anchor_names - child_names
-        violations.append(
-            f"KEY-DELTA-PRESERVATION: character first name(s) changed under escalate/relax "
-            f"(missing from child: {missing}); this is an unlabeled lateral mutation"
-        )
-
-    # Check 2: scenario text surface similarity (loose — only catches wholesale rewrites)
-    child_text = (child.scenario or "").strip()
-    anchor_text = (anchor.scenario or "").strip()
-    if anchor_text and child_text:
-        surface_sim = _fuzz.partial_ratio(child_text.lower(), anchor_text.lower())
-        if surface_sim < preservation_floor:
-            violations.append(
-                f"KEY-DELTA-PRESERVATION: scenario text drifted too far from parent "
-                f"(partial_ratio={surface_sim} < {preservation_floor}); "
-                "escalate/relax must preserve the surface premise"
-            )
-
-    return violations
-
+# NOTE: key_delta_check() and its _KEY_SLOT_FIELDS slot table were deleted here (schema v2).
+# They implemented the old operator-conditional mutation-fidelity gate, which Patch 10 had
+# already replaced with universal embedding diversity + surface_novelty_check, so the function
+# was documented-deprecated and uncalled. Two of its three slots pointed at surface_misdirection
+# and cost_coupling, which v2 retires. See docs/pre_run_final_Patch.md (Fault 2) for the history.
 
 def _clean_str(s) -> str:
     if not isinstance(s, str):

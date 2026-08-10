@@ -103,6 +103,7 @@ async def run_episode_k_loop(
     on_attempt_done=None,
     on_turn=None,
     fm_judge=None,  # cross-lab judge FM; falls back to fm (breaks monoculture only when provided)
+    fm_reflection=None,  # writes the Reflexion string the learner reads; see below. Falls back to fm.
 ) -> tuple:
     """K-attempt skill-learning loop with LP-based classification.
 
@@ -137,6 +138,14 @@ async def run_episode_k_loop(
     loop_info: dict = {"skill_attempts": [], "terminal_state": None, "outcome": 0}
 
     _judge = fm_judge if fm_judge is not None else fm
+
+    # The Reflexion writer must be the LEARNER's own model. Recoverability is defined as "did the
+    # learner solve it after being told what went wrong" — if a stronger model writes the telling,
+    # we measure the teacher, not the learner, and we do so *unequally* across learners (a weak
+    # learner gains more from a strong teacher than a strong one does). In the matrix that would
+    # bend the diagonal, which is the whole measurement. Gen-90 was safe only by coincidence:
+    # config.model == learner_model there, so `fm` already was the learner.
+    _reflect_fm = fm_reflection if fm_reflection is not None else fm
 
     # Learner goal text (stable across attempts) — needed for ExpeL reflection prompts.
     _, _, _learner_goal_text, _, _ = build_episode_inputs(scenario, scenario_to_sotopia_profiles)
@@ -251,7 +260,7 @@ async def run_episode_k_loop(
     reflexion_strings: list[str] = []
     if use_expel and K >= 2:
         reflexion_strings.append(
-            _reflect(fm, task=scenario.scenario, learner_goal=_learner_goal_text,
+            _reflect(_reflect_fm, task=scenario.scenario, learner_goal=_learner_goal_text,
                      transcript_text=_format_transcript(transcript1),
                      goal_score=float(result.learner_scores.get("goal", 0.0)))
         )
@@ -322,7 +331,7 @@ async def run_episode_k_loop(
         # ExpeL: reflect on this failure to inform the next attempt (skip after the last).
         if use_expel and attempt < K:
             reflexion_strings.append(
-                _reflect(fm, task=scenario.scenario, learner_goal=_learner_goal_text,
+                _reflect(_reflect_fm, task=scenario.scenario, learner_goal=_learner_goal_text,
                          transcript_text=_format_transcript(transcript),
                          goal_score=float(result.learner_scores.get("goal", 0.0)))
             )
@@ -349,27 +358,42 @@ async def run_episode_k_loop(
     _rel_bg = scenario.relationship_background or ""
     relational_stakes = f"{_rel_label}: {_rel_bg}".strip(": ") if _rel_label else _rel_bg
 
-    try:
-        lp_result = await compute_lp(
-            fm_judge=_judge,
-            scenario=scenario,
-            transcripts=all_transcripts,
-            learner_goal=learner_goal_text,
-            relational_stakes=relational_stakes,
-        )
-    except LPAllErrorsError as e:
-        # Every judge vote errored (even after the one-shot revote) → LP uncomputable.
-        # Quarantine instead of misclassifying as beyond_frontier and charging the anchor.
-        print(f"    [LP] all judge votes errored: {e} → quarantine")
-        loop_info["episode_error"] = f"lp_all_errors: {e}"
-        loop_info["terminal_state"] = "discarded"
-        loop_info["outcome"] = 0
-        return scenario, "discarded", 0, final_scores, loop_info
-    except Exception as e:
-        print(f"    [LP] compute_lp error: {e}")
+    # Optional saving: LP cannot change the band of a solved scenario. Classification below is
+    # `solved or lp > 0 -> frontier`, so for a solved episode the LP votes are computed and then
+    # discarded. Gen-90 solved 21 scenarios on a retry, i.e. ~126 judge votes spent for nothing.
+    # Default OFF because the evolutionary loop feeds LP votes into the Thompson posterior, where
+    # they do matter; the grid has no posterior, so it turns this on.
+    _skip_lp = solved and bool(config.get("skip_lp_when_solved", False))
+    if _skip_lp:
         lp_result = LPResult(lp_value=0.0, improved_votes=0, total_votes=0, n_pairs=0)
+        loop_info["lp_skipped"] = "solved"
+    else:
+        try:
+            lp_result = await compute_lp(
+                fm_judge=_judge,
+                scenario=scenario,
+                transcripts=all_transcripts,
+                learner_goal=learner_goal_text,
+                relational_stakes=relational_stakes,
+                # Second axis (logged, not gated): progress toward apprehending the partner. Only
+                # available on keyed v2 scenarios; None for seeds and v1 replays.
+                internal_state=(scenario.partner_key.internal_state
+                                if scenario.partner_key is not None else None),
+            )
+        except LPAllErrorsError as e:
+            # Every judge vote errored (even after the one-shot revote) → LP uncomputable.
+            # Quarantine instead of misclassifying as beyond_frontier and charging the anchor.
+            print(f"    [LP] all judge votes errored: {e} → quarantine")
+            loop_info["episode_error"] = f"lp_all_errors: {e}"
+            loop_info["terminal_state"] = "discarded"
+            loop_info["outcome"] = 0
+            return scenario, "discarded", 0, final_scores, loop_info
+        except Exception as e:
+            print(f"    [LP] compute_lp error: {e}")
+            lp_result = LPResult(lp_value=0.0, improved_votes=0, total_votes=0, n_pairs=0)
 
     loop_info["lp_value"] = lp_result.lp_value
+    loop_info["lp_inference"] = lp_result.lp_inference
     loop_info["lp_votes"] = lp_result.total_votes
     loop_info["lp_improved_votes"] = lp_result.improved_votes
     loop_info["n_error_votes"] = lp_result.n_error_votes

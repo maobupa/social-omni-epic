@@ -7,15 +7,25 @@ import openai
 
 class FM:
     def __init__(self, model: str = "gpt-4o", temperature: float = 1.0,
-                 embedding_model: str = "text-embedding-3-small"):
+                 embedding_model: str = "text-embedding-3-small",
+                 api_key: Optional[str] = None, base_url: Optional[str] = None):
         # Per-request timeout. The OpenAI SDK default is 600s, so a slow/hung call blocks
         # for 10 min before raising — and our _retry then tries again, compounding it. Bound
         # it so a stuck socket fails fast and _retry gets a fresh connection. Generous enough
         # for a slow reasoning-model batch generation; override via FM_TIMEOUT (seconds).
         self._timeout = float(os.getenv("FM_TIMEOUT", "240"))
-        # Chat client: prefer Lightning.ai, fall back to OpenAI.
-        chat_api_key = os.getenv("LIGHTNING_AI_API_KEY") or os.getenv("OPENAI_API_KEY")
-        chat_base_url = os.getenv("LIGHTNING_AI_BASE_URL") or os.getenv("OPENAI_BASE_URL")
+        # Chat client. Explicit api_key/base_url win; otherwise prefer Lightning.ai and fall back
+        # to OpenAI, exactly as before.
+        #
+        # Why the override exists: without it, every FM instance in a process reads the same env
+        # and is therefore forced onto the same provider. The matrix run needs one process where
+        # the cross-lab judge goes to Lightning (the only route to a non-OpenAI model) while the
+        # generator, gates and reflection writer go direct to OpenAI — which is also what keeps
+        # Lightning spend down to judge-only. Passing nothing preserves the old behaviour.
+        chat_api_key = api_key or os.getenv("LIGHTNING_AI_API_KEY") or os.getenv("OPENAI_API_KEY")
+        chat_base_url = base_url if api_key else (
+            base_url or os.getenv("LIGHTNING_AI_BASE_URL") or os.getenv("OPENAI_BASE_URL")
+        )
         self.client = openai.OpenAI(
             api_key=chat_api_key,
             base_url=chat_base_url,

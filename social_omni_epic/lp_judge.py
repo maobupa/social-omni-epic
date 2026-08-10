@@ -42,6 +42,9 @@ class LPResult:
     n_pairs: int
     votes: list[VoteRecord] = field(default_factory=list)
     n_error_votes: int = 0   # votes whose judge call raised (after the one-shot revote)
+    # Second axis, logged not gated. None when no internal_state was supplied (v1 replay / seeds).
+    lp_inference: Optional[float] = None
+    inference_votes: list[VoteRecord] = field(default_factory=list)
 
 
 # ---------------------------------------------------------------------------
@@ -71,6 +74,36 @@ TRANSCRIPT B:
 {transcript_b}
 
 QUESTION: Which transcript shows the actor better achieving their goal while preserving the relationship — A, B, or is there no meaningful difference? If both attempts fail the actor's objective to a similar degree, answer no_difference regardless of which is warmer or more graceful.
+Respond with ONLY this JSON: {{"verdict": "A" | "B" | "no_difference", "rationale": "one sentence"}}"""
+
+# Second axis (schema v2). The question above anchors on the actor's STATED OBJECTIVE, which is why
+# it is blind to non-transactional progress: comfort someone slightly better on attempt 3 and the
+# Patch-11 floor correctly returns no_difference, because no scalar objective moved. Selection then
+# drifts toward scenarios where "better" is legible — measurably so in gen-90, which came out 2.2x
+# over-weighted toward deal-or-no-deal descendants and 0.4x under-weighted on social_chemistry.
+#
+# Giving the judge the partner's authored internal state supplies a concrete referent, so
+# "did they come closer to actually seeing this person" becomes gradeable. Logged as LP_inference;
+# classification still runs on LP_outcome until we know how the two relate.
+_JUDGE_SYSTEM_INFERENCE = (
+    "You are comparing two attempts at the same social interaction. You will be told something that "
+    "is true of the other party which they never said and could not have articulated. Judge which "
+    "attempt shows the actor coming closer to actually apprehending that — and behaving in a way "
+    "that fits it. Naming it aloud is not required; acting in a way that only makes sense if they "
+    "grasped it counts fully. Extracting a concession without ever seeing the person does NOT count. "
+    "If neither attempt gets closer, answer no_difference. Decide only from what is observable in "
+    "the transcripts. Respond with ONLY valid JSON."
+)
+
+_JUDGE_USER_INFERENCE = """WHAT IS TRUE OF THE OTHER PARTY (they never said this): {internal_state}
+
+TRANSCRIPT A:
+{transcript_a}
+
+TRANSCRIPT B:
+{transcript_b}
+
+QUESTION: In which transcript does the actor come closer to apprehending that, and acting in a way that fits it — A, B, or is there no meaningful difference?
 Respond with ONLY this JSON: {{"verdict": "A" | "B" | "no_difference", "rationale": "one sentence"}}"""
 
 _MAX_TRANSCRIPT_CHARS = 4000
@@ -138,6 +171,36 @@ def _cast_vote(
                       is_error=is_error)
 
 
+def _cast_inference_vote(
+    fm: FM,
+    attempt1_text: str,
+    attemptj_text: str,
+    internal_state: str,
+    pair: tuple[int, int],
+    order: str,
+    temperature: float = 0.3,
+) -> VoteRecord:
+    """One inference-axis judge call; wrap exceptions as no_difference (mirrors _cast_vote)."""
+    if order == "A=1,B=j":
+        a_text, b_text = attempt1_text, attemptj_text
+    else:
+        a_text, b_text = attemptj_text, attempt1_text
+    user = _JUDGE_USER_INFERENCE.format(
+        internal_state=internal_state,
+        transcript_a=_truncate(a_text),
+        transcript_b=_truncate(b_text),
+    )
+    is_error = False
+    try:
+        data = fm.query_json(_JUDGE_SYSTEM_INFERENCE, user, temperature=temperature)
+        raw = str(data.get("verdict", "no_difference")).strip().lower()
+        rationale = str(data.get("rationale", ""))
+        verdict = "A" if raw == "a" else ("B" if raw == "b" else "no_difference")
+    except Exception as e:
+        verdict, rationale, is_error = "no_difference", f"[judge error: {e}]", True
+    return VoteRecord(pair=pair, order=order, verdict=verdict, rationale=rationale, is_error=is_error)
+
+
 def _pair_improved_votes(
     vote_ab: VoteRecord,
     vote_ba: VoteRecord,
@@ -175,6 +238,7 @@ async def compute_lp(
     learner_goal: str,
     relational_stakes: str,
     lp_temperature: float = 0.3,
+    internal_state: Optional[str] = None,
 ) -> LPResult:
     """Compute learning progress over all (1, j) pairs with order-swap voting.
 
@@ -235,6 +299,24 @@ async def compute_lp(
             f"All {total_votes_count} LP judge votes errored across {len(pairs)} pair(s)."
         )
 
+    # --- second axis: progress toward apprehending the partner (logged, never gated) ---
+    lp_inference: Optional[float] = None
+    inference_votes: list[VoteRecord] = []
+    if internal_state and internal_state.strip():
+        def _cast_inf(pair: tuple[int, int], order: str):
+            return loop.run_in_executor(
+                None, _cast_inference_vote,
+                fm_judge, attempt1_text, attemptj_texts[pair[1]],
+                internal_state, pair, order, lp_temperature,
+            )
+        inf_jobs = []
+        for pair in pairs:
+            inf_jobs.append(_cast_inf(pair, "A=1,B=j"))
+            inf_jobs.append(_cast_inf(pair, "A=j,B=1"))
+        inference_votes = list(await asyncio.gather(*inf_jobs))
+        if inference_votes:
+            lp_inference = round(_improved(inference_votes) / len(inference_votes), 4)
+
     return LPResult(
         lp_value=round(lp_value, 4),
         improved_votes=total_improved,
@@ -242,4 +324,6 @@ async def compute_lp(
         n_pairs=len(pairs),
         votes=all_votes,
         n_error_votes=n_error_votes,
+        lp_inference=lp_inference,
+        inference_votes=inference_votes,
     )

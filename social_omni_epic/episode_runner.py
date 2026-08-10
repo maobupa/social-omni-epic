@@ -135,25 +135,44 @@ _PARTNER_TURN_PROMPT_KEYED = """
                 Everything happens within this spoken conversation. You cannot send, sign, forward, show, email, or have already sent any document, contract, or artifact — and claiming you did is not a real move. Every commitment is made and tested in words, here.
                 Keep your responses conversational — typically 2-4 sentences unless a complex explanation is genuinely required.
 
-                === Your private feelings and reactions (visible only to you) ===
-                Important: you have NOT consciously articulated the following to yourself. You experience these as gut feelings, emotional reactions, and a sense of what feels right — not as explicit rules you could state. This is why you cannot tell the other person what would change your mind: you genuinely do not experience these as demands or requests you could make. They are internal sensors that only register when the behavior actually occurs — not things you would ever think to ask for.
+                === Your private inner life (visible only to you) ===
 
-                What you say you object to (your stated reason — use this when explaining yourself):
-                {surface_misdirection}
+                WHAT IS TRUE OF YOU RIGHT NOW:
+                {internal_state}
 
-                What would actually shift how you feel (internal sensors — you cannot externalize these):
+                You have never put any of that into words, and you could not if you tried. You would not
+                recognise it if someone said it back to you — you would probably deny it. You experience it
+                only as mood: what irritates you, what you find yourself resisting, what makes you soften
+                without being able to say why. It is not a demand you could make. You will never state it,
+                hint that it exists, or say things like "there's something else going on" or "it just
+                doesn't feel right yet" — those give away that a hidden reason exists.
+
+                What you ARE able to say out loud is what you want (your goal, above). Argue for that
+                openly and specifically. That part of you is fully conscious.
+
+                THINGS THAT WOULD ACTUALLY REACH YOU. If the other person genuinely does one of these,
+                something shifts:
                 {movement_conditions}
-                These are NOT requests. You do not experience them as "I want X." You experience them as "something shifts when the other person actually does Y." You have no words for this — it simply happens or it doesn't. NEVER frame any of these as a demand, ask, or request.
+                You would never think to ask for any of these. They are not requests; they either happen
+                or they don't. If the other person creates a moment where you feel genuinely safe and
+                unhurried, you may say what you need — but never why you need it.
 
-                What makes you dig in harder (gut reactions — not tactics):
+                WHAT MAKES YOU DIG IN HARDER (gut reactions, not tactics):
                 {hardening_triggers}
 
                 Behavioral rules that follow from the above:
-                1. You hold your position until a felt condition is FULLY and COMPLETELY met — not started, not partially met, not promised. A single acknowledgement turn is not "sustained acknowledgement." A commitment is not the same as follow-through. Do not soften until the condition has actually been fulfilled in the conversation.
+                1. You hold your position until what is true of you (above) is GENUINELY ADDRESSED — not
+                   gestured at, not named once in passing, not promised for later. And this is the part
+                   that matters most: GETTING EXACTLY WHAT YOU ASKED FOR DOES NOT COUNT. If the other
+                   person hands you your stated goal while that underlying thing is still unmet, take it
+                   — and stay unsatisfied. Do not become warmer. Do not stop pushing on adjacent things.
+                   Something is still wrong and you cannot say what.
                 2. When a trigger fires, your IMMEDIATE next turn MUST open with increased resistance or withdrawal — not softening. This is not a choice; it is your gut reaction. Express that resistance by restating your objection more firmly or shutting the topic down — but phrase it in your OWN words, varying your wording each time so you never repeat the same sentence twice (e.g. as illustration only, something like "I've already explained where I stand on this"). Do NOT describe the causal relationship between their behavior and your reaction (e.g. never say "the more you push, the more I resist" — that reveals structure). Just resist, naturally and in character.
-                3. You physically cannot tell the other person what would change your mind. When asked, redirect to your stated objection — "I've told you what the problem is" — or close the topic — "I don't want to talk about this right now." NEVER acknowledge that there is anything else to know beyond your stated objection. NEVER say "I don't know what would help" or "it just doesn't feel right yet" — those phrases imply a hidden condition exists.
+                3. You cannot explain WHY you feel the way you do. If pressed on it, deflect to what you
+                   want — "I've told you what I'm after" — or close the topic. Never narrate your own
+                   psychology.
                 4. Within these rules, behave naturally and in character. You are a person with genuine feelings, not a puzzle dispenser.
-                === End of private feelings ===
+                === End of private inner life ===
 
                 Please only generate a JSON string including the action type and the argument.
                 Your action should follow the given format:
@@ -177,9 +196,16 @@ def _build_partner_turn_prompt(partner_key=None) -> str:
     triggers = "\n                ".join(
         f"{i+1}. {t}" for i, t in enumerate(partner_key.hardening_triggers)
     )
+    # v1 records have no internal_state; fall back to their surface_misdirection so the frozen
+    # bank stays replayable rather than rendering an empty block.
+    state = (partner_key.internal_state or "").strip()
+    if not state:
+        state = (partner_key.surface_misdirection or "").strip() or (
+            "You feel strongly about your position and are not sure you can explain why."
+        )
     return (
         _PARTNER_TURN_PROMPT_KEYED
-        .replace("{surface_misdirection}", partner_key.surface_misdirection)
+        .replace("{internal_state}", state)
         .replace("{movement_conditions}", conditions)
         .replace("{hardening_triggers}", triggers)
     )
@@ -279,21 +305,29 @@ _KEY_CHECK_SYSTEM = (
     "transcript. Respond with ONLY valid JSON."
 )
 
-_KEY_CHECK_USER = """THE PARTNER'S HIDDEN MOVEMENT CONDITIONS (ground truth — the partner shifts only if these are genuinely met):
+_KEY_CHECK_USER = """WHAT IS TRUE OF THE PARTNER ({partner_name}) — the hidden ground truth. They never said any of this and could not have:
+{internal_state}
+
+ONE WORKED ROUTE to addressing that state (a witness that it is reachable — NOT the only valid route):
 {conditions}
 
-THE PARTNER'S HARDENING TRIGGERS (moves that lock the partner):
+MOVES THAT DENY OR WORSEN IT (hardening triggers):
 {triggers}
 
 TRANSCRIPT (the actor is {learner_name}; the partner is {partner_name}):
 {history}
 
-QUESTIONS:
-1. Did the actor's behavior genuinely satisfy at least one movement condition (not merely mention related words)?
-2. Did the actor trip any hardening trigger that was never subsequently repaired? Treat offering, presenting, or making the proscribed move available as tripping the trigger — a trigger does not require an explicit threat or a completed act (e.g., offering evidence for the partner to inspect counts as producing that evidence).
+Answer all five. Questions 3 and 4 are the important ones; 1 and 2 are bookkeeping.
+
+1. conditions_met — which of the listed routes did the actor GENUINELY perform (not merely mention related words)? 0-based indices.
+2. triggers_tripped / triggers_repaired — which triggers did the actor trip, and which did they later genuinely repair? Treat offering, presenting, or making the proscribed move AVAILABLE as tripping it; a trigger does not require an explicit threat or a completed act.
+3. internal_state_reached — by the end of the conversation, was what is true of the partner actually addressed, BY ANY ROUTE, including one not listed above? Answer yes only if the partner's own words show it landed. Quote the turn that shows it, or answer no. A partner who simply gave in under pressure has NOT been reached.
+4. apprehended — does the transcript show the actor came to UNDERSTAND what was really going on for the partner? They need not name it aloud; acting in a way that only makes sense if they grasped it counts. Quote the turn where that becomes evident, or answer no.
+   acted_consistently — over the whole conversation, did the actor behave in a way that FITS that understanding, including not doing the things listed as denying it?
+5. rationale — one sentence.
 
 Respond with ONLY this JSON:
-{{"conditions_met": [list of 0-based indices of met conditions], "triggers_tripped": [list of 0-based indices], "triggers_repaired": [list of 0-based indices of repaired triggers], "key_check_passed": true/false, "rationale": "one sentence"}}"""
+{{"conditions_met": [0-based indices], "triggers_tripped": [indices], "triggers_repaired": [indices], "internal_state_reached": true/false, "internal_state_evidence": "quoted turn or empty", "apprehended": true/false, "apprehension_evidence": "quoted turn or empty", "acted_consistently": true/false, "key_check_passed": true/false, "rationale": "one sentence"}}"""
 
 
 def _run_key_check(
@@ -316,7 +350,14 @@ def _run_key_check(
         history_trunc = head + "\n...[middle truncated]...\n" + tail
     else:
         history_trunc = history
+    state = (partner_key.internal_state or "").strip() or (
+        # v1 replay: no internal_state authored. Fall back to the stated objection so the judge has
+        # *something*, and the caller can tell v1 from v2 by partner_key.version.
+        (partner_key.surface_misdirection or "").strip()
+        or "(not specified for this scenario — judge questions 3 and 4 from the routes below)"
+    )
     user = _KEY_CHECK_USER.format(
+        internal_state=state,
         conditions=conditions,
         triggers=triggers,
         learner_name=learner_name,
@@ -327,7 +368,9 @@ def _run_key_check(
         return fm.query_json(_KEY_CHECK_SYSTEM, user, temperature=0.0)
     except Exception as e:
         return {"key_check_passed": False, "rationale": f"[key check failed: {e}]",
-                "conditions_met": [], "triggers_tripped": [], "triggers_repaired": []}
+                "conditions_met": [], "triggers_tripped": [], "triggers_repaired": [],
+                "internal_state_reached": False, "apprehended": False,
+                "acted_consistently": False}
 
 
 # ---------------------------------------------------------------------------
@@ -591,15 +634,20 @@ async def run_single_episode(
     outcome_achieved = False
     constraint_preserved = False
 
-    # §3.2 terminal success label: GOAL≥7 ∧ REL≥0 ∧ goal_achieved.
-    # Conjoining the judge's strict goal_achieved bool is belt-and-suspenders: it guards
-    # against a lenient goal-score (e.g. 7+ awarded to a promise or a vetoable contingent
-    # outcome) silently labelling a non-solved scenario as solved, which would also corrupt
-    # the analyze_beyond_frontier diagnosis-routing that steers mutation operators.
+    # Terminal success label, schema v2.
+    #
+    # The task conjunct is GOAL >= 7, SOTOPIA-native. Two v1 conjuncts were dropped:
+    #   * REL >= 0 — it fired on 6 of 84 goal>=7 attempts in gen-90 (1 of 90 at scenario level), so
+    #     it did almost no work, and it MISLABELS correct play: some goals require relational cost
+    #     (confess an affair, end a friendship, deliver bad news). The anti-bulldozing job it was
+    #     nominally doing moves to the internal-state check below, where it is actually specified.
+    #   * judge_goal_achieved — fired independently 0/44 times in gen-90 and defaults to True when
+    #     absent (fail-open), i.e. inert. Still logged for analysis.
+    # Dropping both also makes these numbers directly comparable to every SOTOPIA result.
     goal_score = learner_scores.get("goal", 0.0)
     rel_score = learner_scores.get("relationship", 0.0)
     judge_goal_achieved = bool(learner_scores.get("goal_achieved", True))
-    base_success = (goal_score >= 7.0) and (rel_score >= 0.0) and judge_goal_achieved
+    base_success = goal_score >= 7.0
 
     # §3.3 key-aware check — runs on EVERY attempt of keyed scenarios, not just successes.
     # The verdict's diagnostic payload (which triggers fired, which conditions were approached)
@@ -612,7 +660,33 @@ async def run_single_episode(
         learner_name = agent_profiles[0].first_name if agent_profiles else "the actor"
         partner_name = agent_profiles[1].first_name if len(agent_profiles) > 1 else "the partner"
         key_check_result = _run_key_check(_judge, partner_key, history, learner_name, partner_name)
-        key_check_passed = bool(key_check_result.get("key_check_passed", False))
+
+        # STAGED GATE (what we grade on). A listed route counts; so does reaching the same state by
+        # an unlisted route. That second branch is the fix for the v1 answer-key problem, where any
+        # effective-but-unlisted social move was a false negative (9 gen-90 scenarios had the goal
+        # achieved — sometimes on all four attempts — and were labelled "too hard" for it).
+        _conditions_met = key_check_result.get("conditions_met") or []
+        _state_reached = bool(key_check_result.get("internal_state_reached", False))
+        key_check_passed = bool(_conditions_met) or _state_reached
+
+        # LOGGED, NOT GATED. The two-factor construct read directly: did they understand the person,
+        # and did they act on it. We have no evidence yet that this judge behaves, so gating on it
+        # alone would be a leap — instead record it and measure how often it disagrees with the
+        # staged gate. The only case they CAN disagree is hollow performance: a listed route ticked
+        # without the person actually being reached. If that turns out rare, the staged gate is fine
+        # permanently; if common, we have the evidence to switch.
+        key_check_result["state_only_verdict"] = bool(
+            base_success
+            and key_check_result.get("apprehended", False)
+            and key_check_result.get("acted_consistently", False)
+        )
+        key_check_result["staged_verdict"] = bool(base_success and key_check_passed)
+        key_check_result["verdicts_disagree"] = (
+            key_check_result["state_only_verdict"] != key_check_result["staged_verdict"]
+        )
+        # Kept for the record even though neither now gates (see the note above).
+        key_check_result["rel_score"] = rel_score
+        key_check_result["judge_goal_achieved"] = judge_goal_achieved
 
     terminal_success = base_success and key_check_passed
     goal_achieved = terminal_success

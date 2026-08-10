@@ -29,7 +29,6 @@ import asyncio
 import json
 import os
 import sys
-from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
 
@@ -38,7 +37,7 @@ import numpy as np
 from omegaconf import DictConfig, OmegaConf
 from tqdm import tqdm
 
-from social_omni_epic.tracing_fm import print_info, print_section, print_step, print_warn
+from social_omni_epic.tracing_fm import print_info, print_step, print_warn
 
 try:
     from dotenv import load_dotenv
@@ -48,130 +47,40 @@ except Exception:
 
 from social_omni_epic.adversarial_agent import AdversarialAgent
 from social_omni_epic.archive import Archive
-from social_omni_epic.coherence_check import CoherenceChecker, fuzzy_key_leak_check
-from social_omni_epic.validation import surface_novelty_check
-from social_omni_epic.curriculum import run_coherence_gate, run_episode_two_loop
+from social_omni_epic.coherence_check import CoherenceChecker
 from social_omni_epic.data_models import SocialScenario, K_VOTES_EQUIV
-from social_omni_epic.embedding_utils import get_similar_scenarios
-from social_omni_epic.expel_export import write_scenario_record, write_chronicle, flush_aggregates, write_live_record
+from social_omni_epic.expel_export import flush_aggregates
 from social_omni_epic.fm import FM
 from social_omni_epic.meta_reflection import MetaReflectionModule
 from social_omni_epic.model_of_interestingness import ModelOfInterestingness
 from social_omni_epic.reflection_module import ReflectionModule
-from social_omni_epic.scenario_title import ScenarioTitleGenerator, designate_target_agent
+from social_omni_epic.scenario_title import ScenarioTitleGenerator
 from social_omni_epic.seeds import load_sotopia_seeds_with_embeddings
 from social_omni_epic.task_generator import TaskGenerator
 
 
 # ---------------------------------------------------------------------------
-# Output helpers
+# Shared machinery now lives in social_omni_epic.generation_cell so the grid driver
+# (scripts/run_grid_generate.py) can reuse it. Aliased to the old private names so every
+# call site in the main loop below is untouched — the Stage-B acceptance gate is that this
+# script still behaves identically.
 # ---------------------------------------------------------------------------
 
-def _count_generated(run_dir: Path) -> int:
-    """Count completed generated scenarios — excludes in-progress stubs and .tmp files."""
-    import json as _json
-    d = run_dir / "bank" / "generated"
-    if not d.exists():
-        return 0
-    count = 0
-    for p in d.glob("*.json"):
-        try:
-            rec = _json.loads(p.read_text())
-            if rec.get("status") != "in_progress":
-                count += 1
-        except Exception:
-            pass
-    return count
-
-
-def _write_quarantine(run_dir: Path, iteration: int, reason: str, info: dict) -> None:
-    d = run_dir / "quarantine"
-    d.mkdir(parents=True, exist_ok=True)
-    (d / f"iter_{iteration:06d}.json").write_text(
-        json.dumps({"iteration": iteration, "reason": reason, **info}, indent=2, default=str)
-    )
-
+from social_omni_epic.generation_cell import (  # noqa: E402
+    Services as _Services,
+    context_from_archive,
+    cosine as _cosine,
+    count_generated as _count_generated,
+    direction_sanity as _direction_sanity,
+    run_generation_cell,
+    write_compute_report as _write_compute_report,
+    write_lineage as _write_lineage_scenarios,
+    write_quarantine as _write_quarantine,
+)
 
 def _write_lineage(run_dir: Path, archive: Archive) -> None:
-    lineage = {
-        s.id: {
-            "parent_id": s.parent_id,
-            "root_seed_env_pk": s.root_seed_env_pk,
-            "lineage_depth": s.lineage_depth,
-            "mutation_operator": s.mutation_operator,
-            "classification": s.classification,
-            "source": s.source,
-        }
-        for s in archive.state.tasks
-    }
-    (run_dir / "lineage.json").write_text(json.dumps(lineage, indent=2))
-
-
-def _write_compute_report(run_dir: Path, fms: dict) -> None:
-    (run_dir / "compute_report.json").write_text(
-        json.dumps({name: fm.usage_report() for name, fm in fms.items()}, indent=2)
-    )
-
-
-# Direction-sanity registered stopping rule (Patch 10, §III.C). Pre-declared so it is a legitimate
-# stopping rule under the freeze, not a post-hoc edit. Arms only with enough children per operator;
-# halts only on the gross-failure signature (escalate strictly more too_easy than lateral, with a
-# floor of too_easy escalate children) — strict ">" so a tie/zero (the best case) never halts.
-_DIR_SANITY_MIN_CHILDREN = 8   # per operator before the rule arms
-_DIR_SANITY_MIN_TOO_EASY = 3   # escalate too_easy children before a halt can fire
-
-
-def _direction_sanity(run_dir: Path) -> dict:
-    """Read the just-flushed summary.json and compare escalate vs lateral too_easy-rates.
-
-    Returns {escalate_*, lateral_*, armed, halt} for logging + the stopping decision.
-    """
-    try:
-        summary = json.loads((run_dir / "summary.json").read_text())
-        op_counts = summary.get("per_operator_classification_counts", {}) or {}
-    except Exception:
-        op_counts = {}
-
-    def _stats(op: str) -> tuple[int, int, float]:
-        counts = op_counts.get(op, {}) or {}
-        total = sum(int(v) for v in counts.values())
-        too_easy = int(counts.get("too_easy", 0))
-        return too_easy, total, (too_easy / total if total else 0.0)
-
-    e_te, e_tot, e_rate = _stats("escalate")
-    l_te, l_tot, l_rate = _stats("lateral")
-    armed = (e_tot >= _DIR_SANITY_MIN_CHILDREN and l_tot >= _DIR_SANITY_MIN_CHILDREN)
-    halt = bool(armed and e_rate > l_rate and e_te >= _DIR_SANITY_MIN_TOO_EASY)
-    return {
-        "escalate_too_easy": e_te, "escalate_total": e_tot, "escalate_rate": round(e_rate, 3),
-        "lateral_too_easy": l_te, "lateral_total": l_tot, "lateral_rate": round(l_rate, 3),
-        "armed": armed, "halt": halt,
-    }
-
-
-def _cosine(a, b) -> float:
-    a = np.array(a, dtype=float); b = np.array(b, dtype=float)
-    na = np.linalg.norm(a); nb = np.linalg.norm(b)
-    return float(a @ b / (na * nb)) if na and nb else 0.0
-
-
-# ---------------------------------------------------------------------------
-# Shared stateless services
-# ---------------------------------------------------------------------------
-
-@dataclass
-class _Services:
-    fm: FM
-    fm_judge: FM
-    task_gen: TaskGenerator
-    moi: ModelOfInterestingness
-    coherence_checker: CoherenceChecker
-    title_gen: ScenarioTitleGenerator
-    reflection_mod: ReflectionModule
-    meta_mod: MetaReflectionModule
-    adversarial: AdversarialAgent
-    run_single_episode: object
-    scenario_to_sotopia_profiles: object
+    """Adapter: the shared writer takes a scenario iterable, not an Archive."""
+    _write_lineage_scenarios(run_dir, archive.state.tasks)
 
 
 # ---------------------------------------------------------------------------
@@ -186,236 +95,17 @@ async def _run_one_scenario(
     global_iter: int,
     run_dir: Path,
 ) -> tuple[str, Optional[SocialScenario], dict, int]:
-    """Generate → gates → K-loop for one scenario.
+    """Generate -> gates -> K-loop for one scenario, with archive-derived context.
 
-    Returns (terminal_state, scenario_or_None, info, anchor_idx).
-    terminal_state ∈ {too_easy, frontier, beyond_frontier, discarded, generation_failed}.
-    Completed scenarios are written to bank/generated/ here (crash-safe, unique filenames);
-    archive/posterior updates happen only in the sequential main-loop step.
+    Thin wrapper: context_from_archive() is the original header (archive-wide exemplar KNN,
+    dead-end negatives, existing_types, diversity embeddings, operator-from-band) and
+    run_generation_cell() is the original body, both moved verbatim.
     """
-    fm = svc.fm
-    anchor = archive.state.tasks[anchor_idx]
-    tag = f"[iter {global_iter:04d}]"
-    print_step(f"{tag} Generating from anchor: {anchor.scenario[:70]}...")
-
-    # --- KNN examples around anchor (context for generation) ---
-    # Exclude same-root lineage members: surface-identical siblings/ancestors are
-    # useless prompt context (same premise, different hidden keys). They remain
-    # selectable anchors — just not shown as structural exemplars.
-    n_examples = int(config.task_generator.num_examples)
-    anchor_root = anchor.root_seed_env_pk or anchor.source_env_id or anchor.id
-    all_tasks = archive.state.tasks
-    knn_pool_idxs = [
-        i for i, s in enumerate(all_tasks)
-        if (s.root_seed_env_pk or s.source_env_id or s.id) != anchor_root
-        or i == anchor_idx  # always keep the anchor itself
-    ]
-    pool_embs = [all_tasks[i].embedding for i in knn_pool_idxs]
-    all_embs = archive.get_successful_embeddings()
-    if anchor.embedding and pool_embs and len(knn_pool_idxs) >= n_examples:
-        src_ids = [all_tasks[i].source_scenario_id for i in knn_pool_idxs]
-        agt_idxs = [all_tasks[i].target_agent_idx for i in knn_pool_idxs]
-        rel_idxs = get_similar_scenarios(
-            anchor.embedding, pool_embs, num_returns=n_examples,
-            source_ids=src_ids, agent_idxs=agt_idxs,
-            preferred_agent_idx=anchor.target_agent_idx,
-        )
-        ex_idxs = [knn_pool_idxs[r] for r in rel_idxs]
-        if anchor_idx not in ex_idxs:
-            ex_idxs = [anchor_idx] + ex_idxs[:n_examples - 1]
-    else:
-        ex_idxs = [anchor_idx]
-    examples = [all_tasks[i] for i in ex_idxs]
-
-    # --- Dead-end negatives: beyond_frontier scenarios from the archive (KNN-nearest) ---
-    # (Sourced from tasks filtered by classification — the runner never populates failed_tasks.)
-    n_ep_failed = int(config.task_generator.get("num_episode_failed_examples", 2))
-    beyond = [s for s in archive.state.tasks if s.classification == "beyond_frontier"]
-    episode_failed: list[SocialScenario] = []
-    if beyond and n_ep_failed > 0:
-        if anchor.embedding and any(s.embedding for s in beyond):
-            neg_idxs = get_similar_scenarios(
-                anchor.embedding, [s.embedding for s in beyond], num_returns=n_ep_failed,
-                source_ids=[s.source_scenario_id for s in beyond],
-                agent_idxs=[s.target_agent_idx for s in beyond],
-            )
-            episode_failed = [beyond[i] for i in neg_idxs]
-        else:
-            episode_failed = beyond[-n_ep_failed:]
-
-    existing_types = (
-        list({s.interaction_type for s in archive.state.tasks if s.interaction_type})
-        if config.task_generator.get("show_existing_types", True) else None
+    ctx = context_from_archive(archive, anchor_idx, config)
+    terminal_state, scenario, info = await run_generation_cell(
+        ctx, svc, config, iteration=global_iter, run_dir=run_dir,
     )
-
-    # --- Mutation operator from anchor classification ---
-    classification = getattr(anchor, "classification", None)
-    if classification == "too_easy":
-        mutation_op = "escalate"
-    elif classification == "beyond_frontier":
-        mutation_op = "relax"
-    else:
-        mutation_op = "lateral"
-
-    # --- Generate batch ---
-    candidates = svc.task_gen.generate_batch_from_archive(
-        examples, anchor=anchor, mutation_operator=mutation_op,
-        episode_failed_examples=episode_failed, existing_types=existing_types or [],
-        batch_size=int(config.get("gen_batch_size", 3)),
-    )
-    if not candidates:
-        return "generation_failed", None, {"reason": "generation_returned_none"}, anchor_idx
-
-    # --- Free key-leak filter, then MOI ranking ---
-    pre = len(candidates)
-    candidates = [c for c in candidates if not fuzzy_key_leak_check(c)]
-    if len(candidates) < pre:
-        print_warn(f"{tag} dropped {pre - len(candidates)} key-leaking candidate(s)")
-    if not candidates:
-        return "generation_failed", None, {"reason": "all_candidates_leaked_key"}, anchor_idx
-    if config.enable_moi and len(candidates) > 1:
-        candidates = svc.moi.rank_batch(candidates)
-
-    # --- Show the generated candidate batch (MOI-ranked, best-first) ---
-    print_step(f"{tag} {len(candidates)} candidate(s) generated (op={mutation_op}), MOI-ranked best-first:")
-    for r, c in enumerate(candidates):
-        names = " & ".join(p.first_name for p in (c.agent_profiles or []) if p.first_name)
-        km = c.partner_key.key_mechanism if c.partner_key else "—"
-        print_info(f"{tag}   [{r}] {names or '?'} | mech={km} | slots={c.mutated_slots or []}")
-        print_info(f"{tag}       {c.scenario[:160]}")
-
-    # --- Walk the MOI-ranked list through embed + UNIVERSAL admission gates (Patch 10) ---
-    # Single-axis ownership: the embedding diversity gate owns surface novelty for EVERY child,
-    # every operator. Because completed children are archived, it covers siblings/parents/all.
-    # surface_novelty_check is a free deterministic pre-check (no anchor name reuse, no clone).
-    # There is no operator-conditional branch: operators set difficulty DIRECTION; whether a child
-    # landed where directed is LP's verdict, not a generation-time gate.
-    emb_threshold = float(config.get("diversity_similarity_threshold", 0.92))
-    scenario = None
-    admitted_rank = -1
-    gate_fail_log: list[dict] = []
-    for rank, cand in enumerate(candidates):
-        cand.iteration = global_iter
-        cand.parent_example_ids = [anchor.id]
-        try:
-            cand.embedding = fm.get_embeddings([cand.to_text_for_embedding()])[0]
-        except Exception as e:
-            print_warn(f"{tag} embed failed (rank {rank}): {e}")
-            gate_fail_log.append({"rank": rank, "gate": "embed", "issues": [str(e)]})
-            continue
-        cand, ok, coherence_issues = run_coherence_gate(cand, svc.coherence_checker, svc.task_gen, fm, config, anchor, global_iter)
-        if not ok or cand is None:
-            gate_fail_log.append({"rank": rank, "gate": "coherence", "issues": coherence_issues})
-            break  # best candidate failed coherence — lower-ranked candidates share the same anchor/structural issues
-        # Deterministic surface-novelty pre-check (free): reused names / clone text.
-        novelty_issues = surface_novelty_check(cand, anchor)
-        if novelty_issues:
-            print_warn(f"{tag} surface-novelty FAIL (rank {rank}): {novelty_issues[0]}")
-            gate_fail_log.append({"rank": rank, "gate": "surface_novelty", "issues": novelty_issues})
-            continue
-        # Embedding diversity gate vs the whole archive (universal — every operator).
-        if config.get("enable_diversity_gate", True) and all_embs and cand.embedding:
-            emb_arr = np.array(all_embs); s_emb = np.array(cand.embedding)
-            sims = emb_arr @ s_emb / (np.linalg.norm(emb_arr, axis=1) * np.linalg.norm(s_emb) + 1e-9)
-            max_sim = float(sims.max())
-            if max_sim > emb_threshold:
-                print_warn(f"{tag} diversity gate FAIL (rank {rank}, max_sim={max_sim:.3f})")
-                gate_fail_log.append({"rank": rank, "gate": "diversity", "max_sim": max_sim})
-                continue
-        # mutated_slots is descriptive self-report (not a contract) — warn only, never reject.
-        if not (cand.mutated_slots or []):
-            print_warn(f"{tag} note: candidate (rank {rank}) reported empty mutated_slots")
-        scenario = cand; admitted_rank = rank
-        break
-    if scenario is None:
-        print_warn(f"{tag} ALL candidates failed gates — no_candidate_passed_gates. Gate log: {gate_fail_log}")
-        return "generation_failed", None, {
-            "reason": "no_candidate_passed_gates",
-            "gate_fail_log": gate_fail_log,
-        }, anchor_idx
-    # Re-stamp the operator: the coherence-fix path (edit_scenario) rebuilds the scenario
-    # object and drops mutation_operator, which would break the per-operator diagnostics.
-    scenario.mutation_operator = mutation_op
-    _sel_names = " & ".join(p.first_name for p in (scenario.agent_profiles or []) if p.first_name)
-    print_info(f"{tag} ✓ SELECTED candidate [{admitted_rank}] ({mutation_op}) — {_sel_names or '?'}: {scenario.scenario[:120]}")
-
-    # --- Lineage (pointers; full ancestors live in the archive by id) ---
-    scenario.parent_id = anchor.id
-    scenario.parent_is_sotopia_seed = (anchor.source == "seed_sotopia")
-    scenario.parent_classification = anchor.classification   # what band the anchor was when selected
-    scenario.parent_scenario = anchor.scenario               # parent text, for quick lineage eyeballing
-    scenario.root_seed_env_pk = anchor.root_seed_env_pk or anchor.source_env_id or None
-    scenario.lineage_depth = (anchor.lineage_depth or 0) + 1
-    scenario.ancestor_ids = list(anchor.ancestor_ids or []) + [anchor.id]
-
-    # --- Target agent designation ---
-    scenario.target_agent_idx, scenario.target_agent_goal_abstract = designate_target_agent(
-        scenario, anchor, fm
-    )
-    # Resolve the _pX placeholder now that we know the real perspective index.
-    if scenario.id.endswith("_pX"):
-        scenario.id = scenario.id[:-2] + f"p{scenario.target_agent_idx}"
-
-    # --- Incremental live-write setup ---
-    # Write a stub record immediately so bank/generated/<id>.json exists as soon as
-    # the scenario is admitted. on_turn rewrites it turn-by-turn with the live transcript;
-    # on_attempt_done flushes each completed attempt. Final write_scenario_record below
-    # marks the record completed.
-    generated_dir = run_dir / "bank" / "generated"
-    generated_dir.mkdir(parents=True, exist_ok=True)
-    live_path = generated_dir / f"{scenario.id}.json"
-    _live_loop_info: dict = {"skill_attempts": []}
-    write_live_record(live_path, scenario, _live_loop_info, live_transcript=[])
-
-    def _on_turn(partial: list[dict]) -> None:
-        # partial is raw Sotopia format (Environment msgs, 'did nothing', '[private to]' prefixes).
-        # Clean it the same way completed-attempt transcripts are cleaned before persisting.
-        from social_omni_epic.episode_runner import clean_transcript
-        write_live_record(live_path, scenario, _live_loop_info, live_transcript=clean_transcript(partial))
-
-    def _on_attempt_done(loop_info: dict) -> None:
-        nonlocal _live_loop_info
-        _live_loop_info = loop_info
-        skill = loop_info.get("skill_attempts", [])
-        latest = skill[-1] if skill else None
-        if latest:
-            goal = (latest.get("diagnostics_scores") or {}).get("goal", "?")
-            status = "SOLVED ✓" if latest.get("solved") else "FAILED ✗"
-            print_info(f"{tag}   attempt {latest['attempt']}: {status}  GOAL={goal}")
-        # Flush completed attempt to disk; clear live_transcript (attempt boundary).
-        write_live_record(live_path, scenario, loop_info, live_transcript=None)
-
-    try:
-        scenario, terminal_state, _outcome, final_scores, loop_info = await run_episode_two_loop(
-            scenario=scenario, anchor=anchor, task_gen=svc.task_gen,
-            reflection_mod=svc.reflection_mod, meta_mod=svc.meta_mod, adversarial=svc.adversarial,
-            title_gen=svc.title_gen, coherence_checker=svc.coherence_checker,
-            run_single_episode=svc.run_single_episode,
-            scenario_to_sotopia_profiles=svc.scenario_to_sotopia_profiles,
-            fm=fm, config=config, on_attempt_done=_on_attempt_done, on_turn=_on_turn,
-            fm_judge=svc.fm_judge,
-        )
-    except Exception as e:
-        import traceback
-        print_warn(f"{tag} Episode exception: {e}\n{traceback.format_exc()}")
-        return "discarded", scenario, {"reason": f"episode_exception: {e}"}, anchor_idx
-
-    loop_info["final_scores"] = final_scores
-    loop_info["admitted_moi_rank"] = admitted_rank
-
-    # Episode/LP quarantine routed up from the K-loop.
-    if terminal_state == "discarded":
-        print_warn(f"{tag} ⚠ QUARANTINE (episode/LP error) → quarantine/")
-        return "discarded", scenario, loop_info, anchor_idx
-
-    # Completed (too_easy / frontier / beyond_frontier): overwrite live stub with final record.
-    write_scenario_record(scenario, loop_info, run_dir / "bank" / "generated")
-    write_chronicle(scenario, run_dir / "chronicles")
-    lp_str = f"LP={loop_info.get('lp_value', 0.0):.2f}"
-    g = final_scores.get("goal", 0.0)
-    print_info(f"{tag} → {terminal_state}  GOAL={g:.1f}  {lp_str}  "
-               f"title={scenario.scenario_title or scenario.scenario[:40]}")
-    return terminal_state, scenario, loop_info, anchor_idx
+    return terminal_state, scenario, info, anchor_idx
 
 
 # ---------------------------------------------------------------------------
@@ -554,10 +244,12 @@ def main(config: DictConfig) -> None:
     from social_omni_epic.episode_runner import run_single_episode
     from social_omni_epic.sotopia_bridge import scenario_to_sotopia_profiles
 
+    # Three generation-side FMs so the grid can point them at different models. Here they are all
+    # built from config.model, which is what gen-90 did (one shared FM), so behaviour is unchanged.
     fm = FM(model=config.model, temperature=config.temperature)
     fm_judge = FM(model=config.judge.model, temperature=float(config.judge.get("lp_temperature", 0.3)))
     svc = _Services(
-        fm=fm, fm_judge=fm_judge,
+        fm_generator=fm, fm_judge=fm_judge, fm_reflection=fm, fm_gates=fm,
         task_gen=TaskGenerator(fm, num_examples=config.task_generator.num_examples,
                                num_failed_examples=0, max_retries=config.task_generator.max_retries),
         moi=ModelOfInterestingness(fm, num_examples=config.moi.num_examples),

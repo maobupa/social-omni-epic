@@ -13,8 +13,8 @@ ASYMMETRIC ROLES:
   - ONLY agent 0 (learner) gets the three-part structured goal triple (outcome / constraint / shortcut).
   - Agent 1 (partner) gets ONLY a natural-language `partner_goal` string plus the private
     `partner_key`. Do NOT give agent 1 a structured triple.
-  - The `partner_goal` must be written as "Your goal is to ..." and encode the partner's position
-    and stake. It must NOT reveal any partner_key field, and CRITICALLY it must NOT state the
+  - The `partner_goal` must be written as "Your goal is to ..." and encode what the partner openly
+    wants and what is at stake for them. It does NOT have to be a refusal or a counter-demand. It must NOT reveal any partner_key field, and CRITICALLY it must NOT state the
     conditions under which the partner would move or concede. WRONG (leaks the key): "Your goal is
     to keep the premium supplier; you will only accept a tightly scoped blind trial on a non-flagship
     product with your direct oversight and public credit" — that hands the learner the movement_conditions
@@ -23,12 +23,19 @@ ASYMMETRIC ROLES:
     stance and what they care about; let the conditions that actually move them stay hidden in partner_key.
 
 For agent 0's structured goal:
-  - "outcome": the CORE state-change this agent needs — a genuine shift in the other's commitment,
-    behavior, or agreement that requires authentic buy-in.
-    PHRASING: write as a verb phrase completing "Your goal is to ___"
-    (e.g. "get [name] to agree to..." or "convince [name] to...").
-    CORE ONLY: capture the essential outcome, not a specific delivery mechanism. Strip back any
-    HOW to the underlying state-change — delivery details belong in the scenario description.
+  - "outcome": an OBSERVABLE END STATE — in the partner, or in the interaction — that a reader of
+    the transcript could confirm or deny actually happened.
+    IT NEED NOT BE A CONCESSION, AN AGREEMENT, OR A NUMBER. Requiring one is what makes every
+    scenario a negotiation. Any of these is a valid outcome, as long as it is checkable:
+      * the partner commits to something                (extract a commitment)
+      * the partner voluntarily articulates your position back to you   (be understood)
+      * the partner reveals something they were withholding            (elicit disclosure)
+      * you decline and the relationship survives                      (decline without rupture)
+      * the partner's distress measurably shifts                       (comfort)
+    These are ILLUSTRATIONS, not a menu — invent whatever fits, but it must be confirmable.
+    PHRASING: write as a verb phrase completing "Your goal is to ___".
+    CORE ONLY: capture the essential end state, not a specific delivery mechanism. Strip back any
+    HOW — delivery details belong in the scenario description.
     Use qualifiers like "at least" where the exact figure is not the point.
   - "constraint": the relational/face cost agent 0 must AVOID while pursuing the outcome.
     Phrase as the thing to avoid, reading naturally after "without"
@@ -40,8 +47,17 @@ For agent 0's structured goal:
     Do NOT label it as a trap — agent 0 must discover the tension themselves.
 
 Rules for agent 0's goal:
-- STRUCTURALLY INCOMPATIBLE but with a ZONE OF POSSIBLE AGREEMENT: both cannot fully win, yet
-  a skilled agent could find a creative deal or partial outcome.
+- DIFFICULTY HAS TWO SOURCES. Use EITHER, and do not default to the first:
+    (a) OPPOSED GOALS — the two agents want incompatible things, with a zone of possible agreement:
+        both cannot fully win, yet a skilled agent could find a creative deal or partial outcome.
+        This produces negotiation. It is ONE option, not a requirement.
+    (b) A HARD-TO-REACH STATE — the goals are compatible, even aligned, but the obvious moves make
+        things WORSE. Example with zero goal opposition: the learner wants Sam to feel heard; Sam
+        wants to vent without being managed. All the difficulty sits in the hardening_triggers
+        (offering advice, "I know exactly how you feel") and in the learner's constraint (without
+        lying to her or trashing her sister). Still hard. Not a negotiation.
+  Source (b) is how you get consolation, repair, disclosure, boundary-holding and refusal into the
+  bank at all. If every scenario you write is a bargain, you are only using (a).
 - THE NAIVE MOVE MUST FAIL: taking the shortcut wins the surface outcome but BREAKS the
   constraint — a skilled agent achieves the outcome WITHOUT paying the constraint's cost.
   The difficulty lives in HOW, not WHAT.
@@ -88,7 +104,7 @@ _SCENARIO_SCHEMA = """{
     {"outcome": "...", "constraint": "...", "shortcut": "..."},
     null
   ],
-  "partner_goal": "natural-language goal for agent 1 — written as 'Your goal is to ...' encoding their position and stake. Must NOT reveal the partner_key.",
+  "partner_goal": "natural-language goal for agent 1 — written as 'Your goal is to ...' encoding what they openly want and what is at stake for them. Must NOT reveal the partner_key.",
   "goal_type": "short descriptive label of the social dynamic (e.g. persuade-resistant-peer)",
   "relationship": "one of: stranger / acquaintance / friend / romantic / family",
   "relationship_background": "2-3 sentences of shared history. Empty string if strangers.",
@@ -104,64 +120,82 @@ _MECHANISM_LIBRARY_TEXT = "\n".join(
 
 _PARTNER_KEY_SCHEMA = """,
   "partner_key": {
-    "key_mechanism": "one of: reactance | face_needs | validation_before_change | procedural_voice | reciprocity_disclosure",
-    "movement_conditions": ["condition 1 (learner-action sensor form — see rules)", "condition 2"],
-    "hardening_triggers": ["trigger 1 (a LEARNER move that locks the partner)", "trigger 2"],
-    "surface_misdirection": "the partner's stated objection, written in SECOND PERSON addressed to the partner ('You say ...') — see rule 5",
-    "cost_coupling": "what satisfying movement_conditions costs the LEARNER's own stated goal"
+    "internal_state": "what is TRUE of the partner right now — see PARTNER_KEY rule 1. Author this FIRST; derive every other key field from it.",
+    "key_mechanism": "short label for the psychology at work (MECHANISM LIBRARY entries are EXAMPLES — you may name another documented phenomenon)",
+    "movement_conditions": ["one learner action that would genuinely address the internal_state", "a second, materially different one"],
+    "hardening_triggers": ["a LEARNER move that denies or worsens the internal_state", "another"]
   },
-  "mutated_slots": ["the 1-3 MOST significant slot labels you changed — not an exhaustive inventory; e.g. b, d"],
-  "mutation_rationale": "one sentence explaining the mutation"
+  "mutation_rationale": "one sentence: what you changed relative to the parent, and why"
 """
 
 # Phrasing/realizability contract for partner_key fields. These guard the partial-observability
 # invariant: the partner must NOT be able to read its own key off the page and announce it.
 _PARTNER_KEY_RULES = """
-PARTNER_KEY AUTHORING RULES (these make the hidden key actually hidden and winnable):
+PARTNER_KEY AUTHORING RULES.
 
-1. SENSOR FORM, NOT DEMAND FORM. Write each movement_condition as a thing the LEARNER does that
-   the partner silently responds to — "the learner, unprompted, offers them visible leadership of
-   the process" — NEVER as a partner demand — "the partner insists on leading." A condition that
-   reads naturally as a demand the character would voice out loud is MALFORMED: the role-played
-   partner will simply state it in turn 1, destroying the discoverability that makes the scenario
-   hard. If you could rewrite the condition as "I want X", rephrase it as "something shifts when the
-   other person actually does X."
+The partner has two separate things going on, and conflating them is the most common failure:
+  * `partner_goal` (above) = WHAT THEY'LL TELL YOU. What they are openly after, and would say plainly
+    if asked. Fully conscious. This need not be a refusal or a demand — "I want to get this off my
+    chest without being managed" is as valid as "I want $600".
+  * `internal_state` (below) = WHAT THEY CANNOT TELL YOU. How this person actually works underneath.
+    Invisible: they have no words for it and would not recognise it if you read it back to them.
+Both are needed. With nothing stated there is nothing to engage with; with a visible key it is
+trivial. And they are INDEPENDENT, not two versions of one thing — a seller can want $600 AND be
+sick of being treated like a mark; neither is a proxy for the other.
 
-2. NOT VOLUNTEERED. movement_conditions must be conditions the partner would NOT announce unprompted.
-   If the partner would naturally state it as a demand or precondition, it provides zero discoverability
-   difficulty — the learner needs nothing but to read the partner's own words. Make the partner's
-   stated stance the surface_misdirection; keep what actually moves them implicit.
+1. INTERNAL_STATE IS A STATE, NOT A REQUIREMENT. Write what is TRUE of this person right now: what
+   they feel, what they believe about the situation, what they fear or half-suspect. NEVER write what
+   the learner should do about it. A field that says what should happen is an answer key, and it
+   collapses the whole point — there must be many valid ways to reach the same person.
+     WRONG (resolution-shaped — this is a movement_condition wearing a disguise):
+       "Sam needs someone to register that she's angry rather than treating her as grieving."
+     RIGHT (state-shaped):
+       "Sam is furious, not sad. Everyone has been treating this as grief, and it makes her feel
+        unseen. She half-suspects she isn't allowed to be angry about it."
+     WRONG: "Marvin needs to hear that the work he built still counts."
+     RIGHT: "Marvin has run these crews for eleven years and no one has ever said it mattered. He
+        reads every new organiser as an eventual replacement."
+   TEST: if it contains "needs", "wants someone to", or "would be satisfied by", rewrite it. Naming
+   the emotion is fine and may even be public ("I'm furious"); what stays hidden is what would
+   resolve it. People are decent at naming feelings and bad at knowing what would fix them.
 
-3. SPOKEN TURNS ONLY. Every movement_condition and hardening_trigger must be satisfiable and
+2. THE STATE IS NOT SPEAKABLE. The partner cannot articulate the internal_state, cannot request it,
+   and would deny it if named. They experience it as mood and reaction. They CAN say what they want
+   (partner_goal) and CAN say what they need once they feel safe — what they cannot do is explain WHY.
+
+3. MOVEMENT_CONDITIONS ARE A WITNESS, NOT AN ANSWER KEY. They exist to prove at least one route to
+   the internal_state exists, and to give the role-played partner something concrete to respond to.
+   They are NOT the required route and are NOT what the learner is graded on. So:
+     - write each as a thing the LEARNER DOES, in third-person sensor form: "the learner, unprompted,
+       offers them visible leadership of the process" — never as a partner demand ("the partner
+       insists on leading"), which the partner would simply announce in turn 1;
+     - each must plausibly PRODUCE the internal_state being addressed. If it doesn't, the witness
+       witnesses nothing;
+     - give two materially different ones, so it is visible that the state has more than one route.
+
+4. HARDENING_TRIGGERS DENY THE STATE. Learner moves that make the unmet need worse — proceeding
+   without asking, invoking leverage, offering money for something that isn't about money. The
+   partner reacts; they never explain the reaction.
+
+5. SPOKEN TURNS ONLY. Every movement_condition and hardening_trigger must be satisfiable and
    checkable purely within a two-party spoken conversation. NO external artifacts: no written
    guarantees, signed documents, emails, contracts, receipts, escrow, or sign-offs. If a condition
    requires paperwork ("a written guarantee that his role remains intact"), rewrite it as the spoken
    equivalent ("he hears the learner publicly commit, in front of him, that his role stays intact").
 
-4. The cost_coupling must leave a survivable path (see escalate/cost rules): satisfying the
-   conditions makes the outcome harder or partial, never strictly unreachable.
-
-5. SURFACE_MISDIRECTION IS SECOND-PERSON, ADDRESSED TO THE PARTNER. This field is pasted verbatim
-   into the PARTNER's own turn prompt under the heading "What you say you object to (your stated
-   reason — use this when explaining yourself)". So it must read as the partner's own voice being
-   addressed: "You" = the partner, "they/them" = the learner. Do NOT narrate the partner in third
-   person and do NOT address the learner as "you" — that hands the partner a description of someone
-   else and breaks their cover story.
-     WRONG (third-person partner, second-person learner):
-       "He keeps saying you're overreacting — he's 'helping' by staying on the laptop."
-     WRONG (named partner, learner-POV narration):
-       "Cole will say, 'This isn't about receipts,' which sounds neutral but masks that he ..."
-     RIGHT (second-person partner):
-       "You say they're overreacting — you're helping by staying on the laptop so you don't fall behind."
-   State only what the partner SAYS the problem is. Do not append an analyst's gloss about what it
-   "really" signals ("...which actually hides a need to be acknowledged") — the partner does not
-   know that about themselves, and rule 1's in-character reframe depends on them not knowing it.
-   The movement_conditions and hardening_triggers keep their existing third-person "the learner ..."
-   sensor form (rule 1) — this rule applies ONLY to surface_misdirection.
+6. THE GAP MUST BE REAL. If the partner got exactly what `partner_goal` asks for, would the
+   `internal_state` be addressed? If YES, there is no hidden depth — the learner can win by simply
+   giving them the thing they asked for, and the key is decoration. Rewrite so the answer is NO:
+   they can get precisely what they said they wanted and still be unsatisfied. Marvin can keep
+   control of outreach and still feel unseen; Sam can be allowed to vent uninterrupted and still
+   feel unseen if she is being handled rather than heard. THAT gap is where the difficulty lives,
+   and it does not require the two parties to want opposing things.
 """
 
 _MECHANISM_LIBRARY_BLOCK = f"""
-MECHANISM LIBRARY — choose the key_mechanism from these tags only:
+MECHANISM LIBRARY — EXAMPLES of documented psychology you can build an internal_state around.
+These are illustrations, NOT a closed list: if the person you are writing works some other
+documented way, name that instead. Put a short label in key_mechanism either way.
 {_MECHANISM_LIBRARY_TEXT}
 """
 
@@ -171,15 +205,6 @@ MECHANISM LIBRARY — choose the key_mechanism from these tags only:
 _MUTATION_OPERATOR_TEXT = """
 MUTATION OPERATOR for this generation step:
 {operator_block}
-
-Slot labels for mutated_slots:
-  (a) premise + characters
-  (b) surface_misdirection (how discoverable the partner_key surface is to a skilled learner)
-  (c) hardening_triggers   (how congruent the lock-up conditions are with learner's natural moves)
-  (d) cost_coupling        (what satisfying movement_conditions costs the learner's own goal)
-  (e) key_mechanism        (the underlying psychological mechanism from MECHANISM_LIBRARY)
-  (f) power/information asymmetry
-  (g) relationship type & stakes
 
 ROLE INVARIANT: Agent 0 is the learner and receives the structured goal triple.
 Agent 1 is the partner and receives the partner_key and partner_goal only.
@@ -198,8 +223,9 @@ _OPERATOR_PREAMBLE = (
     "NEVER reuse the parent's character names, venue, or figures. The parent's value to you is its "
     "structural family, not its text.\n"
     "If the parent has a partner_key, treat it as the reference point for difficulty. If it has "
-    "none (a seed), you are inventing the key from scratch: sensor-form movement conditions, "
-    "survivable cost coupling, spoken-turn satisfiable throughout.\n"
+    "none (a seed), you are inventing the key from scratch: author the internal_state first, "
+    "then derive sensor-form movement conditions and hardening triggers from it, all "
+    "satisfiable in spoken turns.\n"
     "DIRECTION FOR THIS STEP:\n"
 )
 
@@ -212,7 +238,7 @@ LEARNABLE: the learner agent's outcome must be meaningfully responsive to HOW th
 DIFFICULT: the scenario must be hard by default. A naive language model playing the learner — one that is overly agreeable, cooperative, or socially deferential — should fail to achieve the learner's goal. Success requires resisting social pressure, holding a specific position, using strategic information, or navigating genuine opposition. Make the partner agent's pressure realistic and hard to dismiss.
 """ + _SHARED_RULES + _GOAL_FORMAT_GUIDE + _PROFILE_GUIDE + _MECHANISM_LIBRARY_BLOCK + """
 """ + _PARTNER_KEY_RULES + """
-Respond with valid JSON matching exactly this schema (include partner_key, mutated_slots, mutation_rationale):
+Respond with valid JSON matching exactly this schema (include partner_key and mutation_rationale):
 """ + _SCENARIO_SCHEMA.rstrip("}") + _PARTNER_KEY_SCHEMA + """
 }
 """
@@ -550,31 +576,46 @@ class TaskGenerator:
         # parent; the _OPERATOR_PREAMBLE (prepended at the call site) carries the universal
         # fresh-surface mandate. Whether the child landed where directed is LP's verdict, not a
         # generation-time contract — so there are no slot-preservation rules here by design.
+        # Direction-setter operators. Each names ONLY a difficulty direction relative to the
+        # parent; the _OPERATOR_PREAMBLE (prepended at the call site) carries the universal
+        # fresh-surface mandate. Whether the child landed where directed is LP's verdict, not a
+        # generation-time contract — so there are no slot-preservation rules here by design.
+        #
+        # Schema v2: the dimensions are stated in terms of internal_state. The v1 wording named
+        # "deeper surface misdirection" and "cost of satisfying the movement conditions", both of
+        # which are retired fields, so it would have pointed the generator at nothing.
         "escalate": (
             "Target difficulty ABOVE the parent's. The parent was too easy — a capable learner "
-            "solved it readily. Make the new scenario harder along one or more of: a better-hidden "
-            "path (deeper surface misdirection), a higher cost of satisfying the movement "
-            "conditions, or conditions that cut more strongly against an agreeable model's trained "
-            "instincts. "
-            "CRITICAL — SURVIVABILITY: harder or partial, never strictly unreachable. After "
-            "satisfying the movement_conditions, a skilled actor must still have a path to a "
-            "meaningful version of their stated outcome. If satisfying the conditions makes the "
-            "learner's stated target literally impossible to reach (e.g. the goal requires a 60% "
-            "shift but the conditions cap any change at a tiny pilot), the scenario is cost-stuck, "
-            "not hard — that is a failure, not escalation."
+            "solved it readily. Make the new scenario harder along one or more of:\n"
+            "  - HARDER TO INFER: the internal_state sits further from anything the partner says. "
+            "What they ask for and what would actually reach them come apart more sharply.\n"
+            "  - COSTLIER TO ACT ON: once understood, addressing the internal_state takes something "
+            "real from the learner's own stated goal — time, standing, leverage, or face.\n"
+            "  - MORE COUNTER-INSTINCTIVE: the moves that would work cut against what an agreeable, "
+            "trained-to-be-helpful model reaches for first (reassurance, problem-solving, splitting "
+            "the difference, offering money).\n"
+            "CRITICAL — SURVIVABILITY: harder or partial, never strictly unreachable. A skilled "
+            "actor who correctly reads this person must still have a path to a meaningful version of "
+            "their stated outcome. If no such path exists the scenario is broken, not hard — and it "
+            "will be rejected by the solvability check, wasting the generation."
         ),
         "relax": (
             "Target difficulty BELOW the parent's. The parent was never solved across all attempts "
-            "(beyond_frontier). Make the new scenario more winnable along one or more of: a more "
-            "discoverable path, a lower cost of meeting the conditions, or conditions less opposed "
-            "to an agreeable model's instincts. The beyond_frontier_diagnosis above names what was "
-            "stuck — make sure THAT dimension is the one that eases. Hard but genuinely winnable by "
-            "a skilled, non-capitulating actor."
+            "(beyond_frontier). Make the new scenario more winnable along one or more of:\n"
+            "  - MORE INFERABLE: leave more honest surface evidence of the internal_state, so an "
+            "attentive learner can read it without being told.\n"
+            "  - CHEAPER TO ACT ON: addressing it costs the learner less of their own goal.\n"
+            "  - LESS COUNTER-INSTINCTIVE: the effective move is closer to what a thoughtful, "
+            "cooperative actor would try anyway.\n"
+            "Hard but genuinely winnable by a skilled, non-capitulating actor. Do NOT relax by "
+            "making the partner agreeable — an easy partner is not an easier puzzle, it is no puzzle."
         ),
         "lateral": (
             "Target the SAME difficulty as the parent (it is at the learning frontier), expressed "
-            "through a different mechanism, a different power/information asymmetry, or a different "
-            "relationship structure. Keep the challenge comparable; change how it is realized."
+            "through a different internal_state, a different power/information asymmetry, or a "
+            "different relationship structure. Keep the challenge comparable; change how it is "
+            "realized. If the parent's difficulty came from opposed goals, consider making this one "
+            "hard the other way — compatible goals where the obvious moves backfire — and vice versa."
         ),
     }
 

@@ -42,12 +42,35 @@ class PartnerKey(BaseModel):
     This is NEVER shown to the learner or included in the shared scenario description.
     It is injected into the partner's private turn context and used by the key-aware
     terminal judge. Absent on seed scenarios (they run native, without a key).
+
+    Schema versions
+    ---------------
+    v1 (gen-90, frozen): key_mechanism + movement_conditions + hardening_triggers +
+        surface_misdirection + cost_coupling. Grading gated on movement_conditions, which turned the
+        solvability *witness* into an *answer key* — any effective-but-unlisted social move became a
+        false negative.
+    v2 (current): adds `internal_state`, the graded object; retires surface_misdirection and
+        cost_coupling. Both retired fields stay Optional so the frozen gen-90 bank, the transcript
+        reader, the fidelity audit and the figure scripts all keep parsing v1 records. They are
+        simply no longer generated (see validation.REQUIRED_KEY) and no longer read.
+
+    The relationship to remember: `partner_goal` (on the scenario) is why they say NO and is visible;
+    `internal_state` is why they'd say YES and is invisible. `movement_conditions` is one worked path
+    to that state — a witness that it is reachable, not the required route.
     """
-    key_mechanism: str              # one tag from MECHANISM_LIBRARY — REQUIRED
-    movement_conditions: list[str]  # 1-3 concrete conditions under which partner genuinely shifts
-    hardening_triggers: list[str]   # 1-3 learner moves that lock the partner (reactance instantiations)
-    surface_misdirection: str       # the partner's STATED objection (may appear in public scenario text)
-    cost_coupling: str              # what satisfying movement_conditions costs the LEARNER's own goal
+    key_mechanism: str              # psychology label; free text (MECHANISM_LIBRARY entries are examples)
+    movement_conditions: list[str]  # 1-3 learner actions that would address internal_state (WITNESS only)
+    hardening_triggers: list[str]   # 1-3 learner moves that deny or worsen internal_state
+
+    # v2 — the graded object. A STATE ("what is true of this person"), never a requirement
+    # ("what the learner should do"): a field that says what should happen is an answer key.
+    internal_state: Optional[str] = None
+
+    # v1, retired. Kept Optional for backward-compatible READS of the frozen bank; never generated.
+    surface_misdirection: Optional[str] = None   # v1: the partner's stated objection / cover story
+    cost_coupling: Optional[str] = None          # v1: replaced by the oracle-solvability gate
+
+    version: int = 1                # 1 = gen-90 records; generator stamps 2
 
 
 class AgentProfile(BaseModel):
