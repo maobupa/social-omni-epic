@@ -105,12 +105,11 @@ for entry in "${LEARNERS[@]}"; do
     echo "[$(ts)] phase0/$tag already present -- skipping"
     continue
   fi
-  if [ "$tag" = "gpt5mini" ] && [ -d results/expel_phase0_Base90_ExpeL/seeds ]; then
-    echo "[$(ts)] reusing results/expel_phase0_Base90_ExpeL for $tag (63/22/5)"
-    mkdir -p "$OUT_ROOT/phase0"
-    ln -s "$(cd results/expel_phase0_Base90_ExpeL && pwd)" "$OUT_ROOT/phase0/$tag"
-    continue
-  fi
+  # NOTE: results/expel_phase0_Base90_ExpeL is NOT reused as Row 0, even though it has all 90
+  # bands for gpt-5-mini. It ran with partner_model = gpt-5-mini (self-play) rather than the frozen
+  # gpt-5.4-mini, so its bands are not comparable with another learner's — and that mismatch would
+  # sit directly in the saturation claim. It is still used to CHOOSE which seeds to include
+  # (pick_ramp_seeds.py), which is a coverage heuristic and needs no partner matching.
   echo "[$(ts)] phase0 for $tag -- NOT YET AUTOMATED."
   echo "        run_baseline_eval.py then run_expel_chronicle.py with"
   echo "          --learner-model $model --partner-model $PARTNER --judge-model $JUDGE"

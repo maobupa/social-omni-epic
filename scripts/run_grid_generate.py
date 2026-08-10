@@ -305,6 +305,18 @@ async def main_async(args) -> int:
     if missing:
         print_warn(f"unknown env_pk(s) skipped: {missing}")
 
+    # A requested seed with no phase-0 band would fall through to operator_for_band(None) ==
+    # "lateral", i.e. silently generate an UNCALIBRATED cell that looks identical to a calibrated
+    # one in every artifact. Since phase-0 may legitimately cover only a subset (that is how the
+    # smoke/pilot ramp stays cheap), this has to be an error rather than a warning.
+    unbanded = [s.source_env_id for s in todo if not bands.get(s.source_env_id)]
+    if unbanded:
+        print(f"ERROR: {len(unbanded)} requested seed(s) have no band in {args.phase0_dir}, so no "
+              f"operator can be chosen: {unbanded[:5]}\n"
+              f"       Run phase-0 over these seeds first, or restrict --seed-ids to banded ones.",
+              file=sys.stderr)
+        return 1
+
     # --- dry run: audit the calibration claim for free -------------------------------
     if args.dry_run:
         counts: dict = {}
