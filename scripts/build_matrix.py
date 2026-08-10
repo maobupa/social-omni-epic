@@ -113,6 +113,31 @@ def band_counts(rows: list, keep: set = None) -> Counter:
     return c
 
 
+def bulldoze_rate(rows: list) -> tuple:
+    """Attempts that PASSED the gate while damaging the relationship (rel < 0).
+
+    This is the standing check on having dropped `rel >= 0` from terminal_success. That conjunct was
+    verifiably redundant in gen-90 — all 6 of its goal>=7 & rel<0 attempts were already excluded by
+    the key check, so removing it flipped zero labels. But the v2 gate (conditions_met OR
+    state_reached) is LOOSER than gen-90's key-check bool, and re-checking those 6 by hand shows 1
+    would now pass on the conditions branch, with rel as the only thing that would have stopped it.
+
+    So the exposure is real and small (~1 in 300). Rather than assume it stays small, count it. If
+    this rises materially above gen-90's 6/300, the new gate is letting extraction-by-bulldozing
+    through and reinstating rel becomes an evidence-backed decision rather than a precaution.
+    """
+    passed = bull = 0
+    for r in rows:
+        for v in (r.get("key_check_verdicts") or []):
+            if not isinstance(v, dict) or "staged_verdict" not in v:
+                continue
+            if v.get("staged_verdict"):
+                passed += 1
+                if (v.get("rel_score") is not None) and float(v["rel_score"]) < 0:
+                    bull += 1
+    return bull, passed
+
+
 def disagreement_rate(rows: list) -> tuple:
     """staged vs state-only verdict, over every attempt that recorded both."""
     n = dis = 0
@@ -231,6 +256,22 @@ def main() -> None:
     else:
         print("  no verdict data yet (needs cells generated with schema v2)")
 
+    # ----- did dropping rel>=0 let bulldozing through? -----
+    print("\nBULLDOZE CHECK: attempts that passed the gate with rel < 0")
+    tb = tp = 0
+    for (st, lt), cell in sorted(cells.items()):
+        b, pa = bulldoze_rate(cell["_rows"])
+        tb += b; tp += pa
+        if pa:
+            print(f"  {st}__{lt:<14} {b}/{pa} passing attempts had rel<0 ({b / pa:.1%})")
+    if tp:
+        print(f"  OVERALL           {tb}/{tp} ({tb / tp:.1%})")
+        print("  gen-90 reference: 6 of 300 attempts scored goal>=7 with rel<0, and ALL 6 were")
+        print("  already excluded by the key check — so rel>=0 flipped zero labels there.")
+        print("  Materially above that -> the v2 gate is admitting bulldozes; reinstate rel>=0.")
+    else:
+        print("  no gated-verdict data yet")
+
     # ----- artifacts -----
     out_dir = root / "analysis"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -248,6 +289,7 @@ def main() -> None:
                 "n": len([r for r in c["_rows"]
                           if keep is None or r.get("root_seed_env_pk") in keep]),
                 "verdict_disagreement": disagreement_rate(c["_rows"]),
+                "bulldoze": bulldoze_rate(c["_rows"]),
             }
             for (st, lt), c in cells.items()
         },
