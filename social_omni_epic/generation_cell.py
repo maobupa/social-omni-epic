@@ -453,3 +453,140 @@ def direction_sanity(run_dir: Path) -> dict:
         "lateral_too_easy": l_te, "lateral_total": l_tot, "lateral_rate": round(l_rate, 3),
         "armed": armed, "halt": halt,
     }
+
+
+# ---------------------------------------------------------------------------
+# Per-learner seed bands (the calibration input)
+# ---------------------------------------------------------------------------
+
+def load_phase0_annotated_seeds(
+    phase0_dir: Path,
+    seeds_path: str,
+    fm: FM,
+    limit: Optional[int] = None,
+) -> tuple[list, dict]:
+    """Load the SOTOPIA seeds carrying their phase-0 band FOR ONE LEARNER.
+
+    This is the calibration input the grid runs on: the band decides the mutation operator
+    (too_easy -> escalate, frontier -> lateral, beyond_frontier -> relax), so the *same* seed
+    yields a harder child for a strong learner and an easier one for a weak one. That mapping is
+    the entire mechanism by which a scenario set becomes learner-relative.
+
+    Extracted from run_curriculum.py::_seed_archive_from_phase0 minus the archive mutation and the
+    Beta-prior assignment — the grid has no posterior, so priors are meaningless there.
+
+    Returns (seeds, {env_pk: band}). Seeds missing a band are returned with classification=None;
+    the caller decides whether that is fatal (for the grid it is: no band means no operator).
+    """
+    from .seeds import load_sotopia_seeds_with_embeddings
+
+    seeds_subdir = phase0_dir / "seeds"
+    if not seeds_subdir.exists():
+        raise FileNotFoundError(f"phase-0 seeds dir not found: {seeds_subdir}")
+
+    seeds = load_sotopia_seeds_with_embeddings(
+        fm=fm, seeds_path=seeds_path, limit=limit, both_perspectives=False,
+    )
+    by_env = {s.source_env_id: s for s in seeds}
+
+    bands: dict = {}
+    for p in sorted(seeds_subdir.glob("seed_*.json")):
+        rec = json.loads(p.read_text())
+        env_pk = rec.get("env_pk")
+        scn = by_env.get(env_pk)
+        if scn is None:
+            print_warn(f"  phase-0 record {p.name} (env_pk={env_pk}) has no raw-seed match — skipped")
+            continue
+        scn.classification = rec.get("classification")
+        scn.lp_value = rec.get("lp_value")
+        scn.lp_votes = int(rec.get("lp_votes") or 0)
+        scn.terminal_success = bool(rec.get("terminal_success"))
+        scn.n_attempts = int(rec.get("n_attempts") or 0)
+        scn.scenario_title = rec.get("scenario_title") or scn.scenario_title
+        scn.social_dynamic = rec.get("social_dynamic") or scn.social_dynamic
+        scn.target_perspective = rec.get("target_perspective") or scn.target_perspective
+        scn.root_seed_env_pk = scn.source_env_id
+        scn.lineage_depth = 0
+        scn.parent_id = None
+        bands[env_pk] = scn.classification
+
+    return seeds, bands
+
+
+def build_grid_context(
+    seed,
+    all_seeds: list,
+    bands: dict,
+    n_examples: int = 3,
+    n_failed_examples: int = 2,
+    show_existing_types: bool = True,
+    child_id: Optional[str] = None,
+    rng=None,
+) -> GenerationContext:
+    """Context for one grid cell. Every field is a function of (this seed, this learner's bands,
+    the fixed 90-seed corpus) — never of another cell's child. That is the invariant the paired
+    design rests on: set A and set B must be comparable, so no cell may see another's output.
+
+    Two deliberate differences from the evolutionary context:
+
+      * EXEMPLARS ARE A LABELLED MIXTURE, not one band. The nearest too_easy + nearest frontier +
+        nearest beyond_frontier seed for this learner. The steering signal is the CONTRAST ("this
+        was too easy / just right / too hard"); filtering to a single band throws it away. Thin
+        bands degrade gracefully — gpt-5-mini has only 5 beyond_frontier seeds, and a strong
+        learner may have zero too_easy.
+      * DIVERSITY COMPARES AGAINST THE 90 SEEDS ONLY (tier 1), never against sibling children.
+        Gating on siblings would make admission order-dependent AND asymmetric across sets: a
+        stronger learner draws more relax/lateral children, so it would hit a peer gate at a
+        different rate, silently giving the two arms of a paired design different admission
+        pressure. Within-set concentration is instead REPORTED post-hoc (grid_diversity.json).
+    """
+    seed_root = seed.source_env_id or seed.id
+
+    # Exemplars: nearest seed per band, excluding this seed's own lineage.
+    by_band: dict = {"too_easy": [], "frontier": [], "beyond_frontier": []}
+    for s in all_seeds:
+        if (s.source_env_id or s.id) == seed_root:
+            continue
+        b = bands.get(s.source_env_id)
+        if b in by_band:
+            by_band[b].append(s)
+
+    exemplars = []
+    for band in ("too_easy", "frontier", "beyond_frontier"):
+        pool = by_band[band]
+        if not pool:
+            continue
+        if seed.embedding and any(s.embedding for s in pool):
+            idx = get_similar_scenarios(
+                seed.embedding, [s.embedding for s in pool], num_returns=1,
+                source_ids=[s.source_scenario_id for s in pool],
+                agent_idxs=[s.target_agent_idx for s in pool],
+            )
+            exemplars.append(pool[idx[0]])
+        else:
+            exemplars.append(pool[0])
+    exemplars = exemplars[:max(1, n_examples)] or [seed]
+
+    # Dead-end negatives = seeds that are beyond_frontier FOR THIS LEARNER. Per-learner and
+    # seed-derived, so still cell-independent. Note the semantic shift from the evolutionary
+    # loop: these are "impossible for M", not "generation dead-ends".
+    beyond = [s for s in all_seeds
+              if bands.get(s.source_env_id) == "beyond_frontier"
+              and (s.source_env_id or s.id) != seed_root]
+    episode_failed = beyond[:n_failed_examples] if n_failed_examples > 0 else []
+
+    existing_types = (
+        sorted({s.interaction_type for s in all_seeds if s.interaction_type})
+        if show_existing_types else None
+    )
+
+    return GenerationContext(
+        anchor=seed,
+        mutation_operator=operator_for_band(bands.get(seed.source_env_id)),
+        exemplars=exemplars,
+        episode_failed_examples=episode_failed,
+        existing_types=existing_types,
+        diversity_embeddings=[s.embedding for s in all_seeds if s.embedding],
+        child_id=child_id,
+        rng=rng,
+    )

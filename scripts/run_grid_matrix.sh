@@ -97,31 +97,68 @@ echo "[$(ts)] learners: ${LEARNERS[*]}"
 echo "[$(ts)] seeds: ${SEED_IDS:-all 90}  concurrency: $CONCURRENCY"
 
 # --- Stage 1: per-learner seed bands (Row 0 of the figure) --------------------
-# NOT YET WIRED. Reuses the existing scripts, one invocation per learner:
-#   run_baseline_eval.py   -> cold attempt-1 over the 90 seeds
-#   run_expel_chronicle.py -> K-loop + LP + band  (this is what produces the bands)
-# gpt5mini can reuse results/expel_phase0_Base90_ExpeL instead of re-running.
+# The bands ARE the calibration input -- the operator is chosen from them -- so this is a required
+# step, not overhead, and it doubles as Row 0. gpt5mini can reuse the existing phase-0 run.
+for entry in "${LEARNERS[@]}"; do
+  tag="${entry%%:*}"; model="${entry##*:}"
+  if [ -d "$OUT_ROOT/phase0/$tag/seeds" ]; then
+    echo "[$(ts)] phase0/$tag already present -- skipping"
+    continue
+  fi
+  if [ "$tag" = "gpt5mini" ] && [ -d results/expel_phase0_Base90_ExpeL/seeds ]; then
+    echo "[$(ts)] reusing results/expel_phase0_Base90_ExpeL for $tag (63/22/5)"
+    mkdir -p "$OUT_ROOT/phase0"
+    ln -s "$(cd results/expel_phase0_Base90_ExpeL && pwd)" "$OUT_ROOT/phase0/$tag"
+    continue
+  fi
+  echo "[$(ts)] phase0 for $tag -- NOT YET AUTOMATED."
+  echo "        run_baseline_eval.py then run_expel_chronicle.py with"
+  echo "          --learner-model $model --partner-model $PARTNER --judge-model $JUDGE"
+  echo "          --run-name matrix_phase0_$tag"
+  echo "        then point $OUT_ROOT/phase0/$tag at its output."
+done
 
-# --- Stage 2: generate one set per learner (Stage E of the plan) --------------
-# NOT YET WIRED -- scripts/run_grid_generate.py does not exist yet.
-#
-# for entry in "${LEARNERS[@]}"; do
-#   tag="${entry%%:*}"; model="${entry##*:}"
-#   $PY scripts/run_grid_generate.py \
-#     --phase0-dir "$OUT_ROOT/phase0/$tag" \
-#     --learner-tag "$tag" --learner-model "$model" \
-#     --reflection-model "$model" \
-#     --generator-model "$GENERATOR" --gates-model "$GATES" \
-#     --partner-model "$PARTNER" --judge-model "$JUDGE" \
-#     --out "$OUT_ROOT/sets/$tag" \
-#     --concurrency "$CONCURRENCY" ${SEED_IDS:+--seed-ids "$SEED_IDS"} \
-#     2>&1 | tee "$LOGS/2_generate_$tag.log"
-# done
+# --- Stage 2: audit the calibration mapping, free -----------------------------
+for entry in "${LEARNERS[@]}"; do
+  tag="${entry%%:*}"; model="${entry##*:}"
+  [ -d "$OUT_ROOT/phase0/$tag/seeds" ] || continue
+  $PY scripts/run_grid_generate.py \
+    --phase0-dir "$OUT_ROOT/phase0/$tag" \
+    --learner-tag "$tag" --learner-model "$model" \
+    --generator-model "$GENERATOR" --gates-model "$GATES" \
+    --partner-model "$PARTNER" --judge-model "$JUDGE" \
+    --out "$OUT_ROOT/sets/$tag" --dry-run 2>&1 | tail -3
+done
 
-# --- Stage 3: crossplay (Stage F) --------------------------------------------
-# NOT YET WIRED -- scripts/run_grid_crossplay.py does not exist yet.
+# --- Stage 3: generate one set per learner -----------------------------------
+# SEED_IDS is the ramp lever: smoke (3 stratified) -> pilot (20) -> full (90). Deterministic child
+# ids mean a later, larger run generates only what is missing.
+if [ "${RUN_GENERATE:-0}" = "1" ]; then
+  for entry in "${LEARNERS[@]}"; do
+    tag="${entry%%:*}"; model="${entry##*:}"
+    [ -d "$OUT_ROOT/phase0/$tag/seeds" ] || { echo "[$(ts)] no bands for $tag -- skipping"; continue; }
+    echo "[$(ts)] generating set for $tag"
+    $PY scripts/run_grid_generate.py \
+      --phase0-dir "$OUT_ROOT/phase0/$tag" \
+      --learner-tag "$tag" --learner-model "$model" \
+      --reflection-model "$model" \
+      --generator-model "$GENERATOR" --gates-model "$GATES" \
+      --partner-model "$PARTNER" --judge-model "$JUDGE" \
+      --out "$OUT_ROOT/sets/$tag" \
+      --concurrency "$CONCURRENCY" ${SEED_IDS:+--seed-ids "$SEED_IDS"} \
+      2>&1 | tee "$LOGS/3_generate_$tag.log"
+  done
+else
+  echo "[$(ts)] generation skipped (set RUN_GENERATE=1 to run it)"
+fi
 
-# --- Stage 4: matrix + figures (Stage G) ------------------------------------
-# NOT YET WIRED -- scripts/build_matrix.py does not exist yet.
+# --- Stage 4: crossplay + matrix ---------------------------------------------
+if [ "${RUN_CROSSPLAY:-0}" = "1" ]; then
+  $PY scripts/run_grid_crossplay.py --all --matrix-root "$OUT_ROOT" \
+    --partner-model "$PARTNER" --judge-model "$JUDGE" --aux-model "$GATES" \
+    --concurrency "$CONCURRENCY" 2>&1 | tee "$LOGS/4_crossplay.log"
+fi
 
-echo "[$(ts)] roster pinned; stages 1-4 land with Stages E-G of the plan."
+$PY scripts/build_matrix.py --matrix-root "$OUT_ROOT" --csv 2>&1 | tee "$LOGS/5_matrix.log" || true
+
+echo "[$(ts)] done."
