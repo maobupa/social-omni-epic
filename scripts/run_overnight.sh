@@ -41,16 +41,28 @@ report "Read the FINAL VERDICT section at the bottom first."
 report ""
 
 # --- helpers ---------------------------------------------------------------------------------
-yield_of() {   # $1 = set tag -> oracle yield, or "n/a"
+yield_of() {   # $1 = set tag -> oracle pass rate, or "n/a"
+  # Computed from ADMITTED vs ACTUALLY-REJECTED, never from a stored ratio. The first smoke run
+  # reported oracle_yield=0.333 on a set with ZERO rejections, because n_proposed counted the whole
+  # 3-candidate batch per cell while the gate walk only ever evaluates candidates until one passes.
+  # A gate armed on that number would have aborted a healthy pilot. Counting the rejected/ directory
+  # is unambiguous and survives further changes to the manifest's own accounting.
   $PY - <<PYEOF 2>/dev/null || echo "n/a"
 import json, pathlib
-p = pathlib.Path("$OUT_ROOT/sets/$1/grid_manifest.json")
-if not p.exists():
-    print("n/a")
-else:
-    d = json.loads(p.read_text())
-    y = d.get("oracle_yield")
-    print("n/a" if y is None else f"{y:.3f}")
+root = pathlib.Path("$OUT_ROOT/sets/$1")
+mf = root / "grid_manifest.json"
+if not mf.exists():
+    print("n/a"); raise SystemExit
+d = json.loads(mf.read_text())
+admitted = int(d.get("n_admitted") or 0)
+# Prefer the explicit count; fall back to counting oracle rejection files.
+rej = d.get("n_oracle_rejected")
+if rej is None:
+    rej = sum(1 for f in (root / "rejected").glob("*.json")
+              if json.loads(f.read_text()).get("gate") == "oracle") \
+          if (root / "rejected").exists() else 0
+judged = admitted + int(rej)
+print("n/a" if judged == 0 else f"{admitted / judged:.3f}")
 PYEOF
 }
 

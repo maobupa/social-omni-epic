@@ -150,7 +150,8 @@ async def run_cell(seed, all_seeds, bands, svc, config, args, run_dir, oracle_kw
     row = {
         "env_pk": env_pk, "learner_tag": args.learner_tag, "child_id": child_id,
         "band": band, "operator": operator, "terminal_state": None,
-        "n_proposed": 0, "n_rejected": 0, "oracle": None, "reason": None,
+        "n_rounds": 0, "n_rejected": 0, "n_oracle_rejected": 0,
+        "oracle": None, "reason": None,
         "started": time.strftime("%Y-%m-%dT%H:%M:%S"),
     }
 
@@ -166,7 +167,11 @@ async def run_cell(seed, all_seeds, bands, svc, config, args, run_dir, oracle_kw
         state, scenario, info = await run_generation_cell(
             ctx, svc, config, iteration=0, run_dir=run_dir, tag=tag,
         )
-        row["n_proposed"] += args.gen_batch_size
+        # NOT gen_batch_size: the gate walk admits the FIRST candidate that passes and never
+        # evaluates the rest, so counting the whole batch as "proposed" reports unused candidates as
+        # rejections. On the smoke that made a clean 0-rejection set look like 3/9 = 0.33 yield,
+        # one bad round away from tripping the 0.25 abort threshold for no reason.
+        row["n_rounds"] += 1
 
         if state == "generation_failed" or scenario is None:
             n_rejected += 1
@@ -191,6 +196,7 @@ async def run_cell(seed, all_seeds, bands, svc, config, args, run_dir, oracle_kw
             row["oracle"] = verdict.to_dict()
             if not verdict.admit:
                 n_rejected += 1
+                row["n_oracle_rejected"] = row.get("n_oracle_rejected", 0) + 1
                 write_rejection(run_dir, child_id, n_rejected, scenario, "oracle",
                                 verdict.to_dict())
                 # Remove the bank record written by run_generation_cell — it is not part of the set.
@@ -390,15 +396,17 @@ async def main_async(args) -> int:
     by_pk = {r["env_pk"]: r for r in rows}
     bands_out: dict = {}
     holes: dict = {}
-    proposed = admitted = 0
+    oracle_rejected = admitted = rounds = 0
     for r in by_pk.values():
         st = r.get("terminal_state")
-        proposed += int(r.get("n_proposed") or 0)
+        rounds += int(r.get("n_rounds") or 0)
+        oracle_rejected += int(r.get("n_oracle_rejected") or 0)
         if st in ("too_easy", "frontier", "beyond_frontier"):
             bands_out[st] = bands_out.get(st, 0) + 1
             admitted += 1
         else:
             holes[r["env_pk"]] = st or "unknown"
+    judged = admitted + oracle_rejected
 
     report = {
         "learner_tag": args.learner_tag,
@@ -413,8 +421,11 @@ async def main_async(args) -> int:
                                   if r.get("terminal_state") in
                                   ("too_easy", "frontier", "beyond_frontier")),
         "holes": holes,
-        "oracle_yield": round(admitted / proposed, 4) if proposed else None,
-        "n_proposed": proposed, "n_admitted": admitted,
+        # Of the candidates the ORACLE actually judged, how many were winnable. This is the
+        # artifact rate; it is not diluted by unused batch candidates.
+        "oracle_yield": round(admitted / judged, 4) if judged else None,
+        "n_oracle_judged": judged, "n_oracle_rejected": oracle_rejected,
+        "n_admitted": admitted, "n_generation_rounds": rounds,
         "elapsed_s": round(time.time() - t0, 1),
         "config": {k: v for k, v in vars(args).items()},
     }
@@ -427,8 +438,9 @@ async def main_async(args) -> int:
     print(f"\n=== {args.learner_tag} ===")
     print(f"  bands       {bands_out}")
     print(f"  holes       {len(holes)} {list(holes.items())[:5]}")
-    print(f"  oracle      {admitted}/{proposed} admitted "
-          f"({report['oracle_yield'] if report['oracle_yield'] is not None else 'n/a'})")
+    print(f"  oracle      {admitted}/{judged} judged-and-admitted "
+          f"(yield {report['oracle_yield'] if report['oracle_yield'] is not None else 'n/a'}); "
+          f"{oracle_rejected} rejected as unwinnable over {rounds} generation round(s)")
     print(f"  elapsed     {report['elapsed_s']}s")
     if report["oracle_yield"] is not None and report["oracle_yield"] < 0.25:
         print("\nWARNING: oracle yield below 25%. The generator is producing unwinnable scenarios "
