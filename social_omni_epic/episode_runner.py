@@ -196,12 +196,19 @@ def _build_partner_turn_prompt(partner_key=None) -> str:
     triggers = "\n                ".join(
         f"{i+1}. {t}" for i, t in enumerate(partner_key.hardening_triggers)
     )
-    # v1 records have no internal_state; fall back to their surface_misdirection so the frozen
-    # bank stays replayable rather than rendering an empty block.
+    # v1 records have no internal_state. Do NOT substitute surface_misdirection: that field is the
+    # DECOY — the cover story the character voices *instead of* their real lever — so dropping it
+    # into the "what is true of you" slot tells the partner to hold out until their own decoy is
+    # addressed, which no learner can ever do. Combined with rule 1's "getting what you asked for
+    # does not count", that makes every v1 record unwinnable. Use a neutral placeholder instead and
+    # let the movement_conditions carry the specification, as they did under v1.
     state = (partner_key.internal_state or "").strip()
     if not state:
-        state = (partner_key.surface_misdirection or "").strip() or (
-            "You feel strongly about your position and are not sure you can explain why."
+        state = (
+            "There is something underneath your stated position that you have never put into words. "
+            "You cannot say what it is. You know only that being handled, rushed, or bought off "
+            "makes it worse, and that something shifts when the other person does one of the things "
+            "listed below."
         )
     return (
         _PARTNER_TURN_PROMPT_KEYED
